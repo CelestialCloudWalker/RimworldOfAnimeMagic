@@ -1,0 +1,6 @@
+E:\Downloads\CelestialCloudWalkerWeapons-main (1)\CelestialCloudWalkerWeapons-main\src\CelestialCloudWalkerWeapons\obj\Debug\CelestialCloudWalkerWeapons.csproj.AssemblyReference.cache
+E:\Downloads\CelestialCloudWalkerWeapons-main (1)\CelestialCloudWalkerWeapons-main\src\CelestialCloudWalkerWeapons\obj\Debug\CelestialCloudWalkerWeapons.csproj.CoreCompileInputs.cache
+E:\Downloads\CelestialCloudWalkerWeapons-main (1)\CelestialCloudWalkerWeapons-main\src\CelestialCloudWalkerWeapons\bin\Debug\CelestialCloudWalkerWeapons.dll
+E:\Downloads\CelestialCloudWalkerWeapons-main (1)\CelestialCloudWalkerWeapons-main\src\CelestialCloudWalkerWeapons\bin\Debug\CelestialCloudWalkerWeapons.pdb
+E:\Downloads\CelestialCloudWalkerWeapons-main (1)\CelestialCloudWalkerWeapons-main\src\CelestialCloudWalkerWeapons\obj\Debug\CelestialCloudWalkerWeapons.dll
+E:\Downloads\CelestialCloudWalkerWeapons-main (1)\CelestialCloudWalkerWeapons-main\src\CelestialCloudWalkerWeapons\obj\Debug\CelestialCloudWalkerWeapons.pdb
