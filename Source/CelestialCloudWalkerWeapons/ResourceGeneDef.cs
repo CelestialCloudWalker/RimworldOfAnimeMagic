@@ -6,6 +6,7 @@ namespace CelestialCloudWalkerWeapons
 {
     public class ResourceGeneDef : GeneDef
     {
+        public string resourceName = "resourceName";
         public StatDef maxStat;
         public StatDef regenTicks;
         public StatDef regenStat;

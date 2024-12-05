@@ -9,7 +9,7 @@ namespace CelestialCloudWalkerWeapons
     {
         public ResourceGeneDef Def => def != null ? (ResourceGeneDef)def : null;
 
-        public bool AstralPulse = true;
+        public bool EnableResource = true;
         public Gene_Resource Resource => this;
         public Pawn Pawn => pawn;
 
@@ -34,7 +34,7 @@ namespace CelestialCloudWalkerWeapons
         }
 
         public float ValueCostMultiplied => Value * CostMult;
-        public string DisplayLabel => Label + " (" + "Gene".Translate() + ")";
+        public string DisplayLabel => Def.resourceName + " (" + "Gene".Translate() + ")";
         public float ResourceLossPerDay => def?.resourceLossPerDay ?? 0f;
         public override float InitialResourceMax => Def?.maxStat != null ? Pawn.GetStatValue(Def.maxStat) : 10f;
         public override float MinLevelForAlert => 0.15f;
@@ -62,13 +62,13 @@ namespace CelestialCloudWalkerWeapons
         public override int ValueForDisplay => Mathf.RoundToInt(Value);
         public override int MaxForDisplay => Mathf.RoundToInt(Max);
 
-        public float RegenMod => Def?.regenStat != null ? Pawn.GetStatValue(Def.regenStat, true, 100) : 0f;
-        public int RegenTicks => Def?.regenTicks != null ? Mathf.RoundToInt(Pawn.GetStatValue(Def.regenTicks, true, 100)) : 0;
-        public float CostMult => Def?.costMult != null ? Pawn.GetStatValue(Def.costMult, true, 100) : 0f;
+        public float RegenAmount => Def?.regenStat != null ? Pawn.GetStatValue(Def.regenStat, true, 100) : 1f;
+        public float RegenSpeed => Def?.regenSpeedStat != null ? Pawn.GetStatValue(Def.regenSpeedStat, true, 100) : 1f;
+        public int RegenTicks => Def?.regenTicks != null ? Mathf.RoundToInt(Pawn.GetStatValue(Def.regenTicks, true, 100)) : 1250;
+        public float CostMult => Def?.costMult != null ? Pawn.GetStatValue(Def.costMult, true, 100) : 1f;
 
         public float TotalResourceUsed = 0;
 
-        // Rest of implementation remains the same
         public override void PostAdd()
         {
             if (ModLister.CheckBiotech("Hemogen"))
@@ -83,7 +83,7 @@ namespace CelestialCloudWalkerWeapons
             this.SetMax(newMax);
         }
 
-        // The consumption methods don't use Def so they stay the same
+
         public void ConsumeAstralPulse(float Amount)
         {
             if (!ModsConfig.BiotechActive) return;
@@ -109,7 +109,7 @@ namespace CelestialCloudWalkerWeapons
             CurrentTick++;
             if (CurrentTick >= RegenTicks)
             {
-                RestoreAstralPulse(RegenMod);
+                RestoreAstralPulse(RegenAmount);
                 ResetRegenTicks();
             }
         }
@@ -144,7 +144,7 @@ namespace CelestialCloudWalkerWeapons
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref AstralPulse, "AstralPulse", defaultValue: true);
+            Scribe_Values.Look(ref EnableResource, "AstralPulse", defaultValue: true);
             Scribe_Values.Look(ref CurrentTick, "currentRegenTick", defaultValue: 0);
             Scribe_Values.Look(ref TotalResourceUsed, "TotalUsedAstralPulse", defaultValue: 0);
         }

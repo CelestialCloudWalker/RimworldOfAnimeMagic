@@ -11,10 +11,19 @@ namespace CelestialCloudWalkerWeapons
 {
     internal class GeneGizmo_ResourceAstral : GeneGizmo_Resource
     {
-        private static readonly Texture2D IchorCostTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.78f, 0.72f, 0.66f));
         private const float TotalPulsateTime = 0.85f;
         private List<Pair<IGeneResourceDrain, float>> tmpDrainGenes = new List<Pair<IGeneResourceDrain, float>>();
-
+        protected override string Title
+        {
+            get
+            {
+                if (gene is Resource_Gene resourceGene && resourceGene.Def != null)
+                {
+                    return resourceGene.Def.resourceLabel;
+                }
+                return base.Title;
+            }
+        }
         public GeneGizmo_ResourceAstral(Gene_Resource gene, List<IGeneResourceDrain> drainGenes, Color barColor, Color barHighlightColor)
             : base(gene, drainGenes, barColor, barHighlightColor)
         {
@@ -34,7 +43,6 @@ namespace CelestialCloudWalkerWeapons
 
             if (gene is Resource_Gene cursedEnergy)
             {
-                Log.Message(cursedEnergy.Def);
                 Target = num;
             }
             return result;
@@ -44,22 +52,35 @@ namespace CelestialCloudWalkerWeapons
         {
             if (gene == null || gene.pawn == null) return;
 
-            if ((gene.pawn.IsColonistPlayerControlled || gene.pawn.IsPrisonerOfColony) && gene is Resource_Gene)
+            if ((gene.pawn.IsColonistPlayerControlled || gene.pawn.IsPrisonerOfColony) && gene is Resource_Gene resourceGene)
             {
                 headerRect.xMax -= 24f;
                 Rect rect = new Rect(headerRect.xMax, headerRect.y, 24f, 24f);
-                Widgets.DefIcon(rect, FleckDefOf.Heart);
+                Widgets.DefIcon(rect, FleckDefOf.HealingCross);
                 if (Mouse.IsOver(rect))
                 {
+                    resourceGene.EnableResource = !resourceGene.EnableResource;
                     Widgets.DrawHighlight(rect);
                 }
             }
-            base.DrawHeader(headerRect, ref mouseOverElement);
+
+            base.DrawHeader(headerRect, ref mouseOverElement);  
         }
 
         protected override string GetTooltip()
         {
-            return string.Empty;
+            if (!(gene is Resource_Gene resourceGene)) return "";
+
+            string text = $"{resourceGene.Def.resourceLabel.CapitalizeFirst().Colorize(ColoredText.TipSectionTitleColor)}: {resourceGene.ValueForDisplay} / {resourceGene.MaxForDisplay}\n";
+
+            string regen = $"\nRegenerates {resourceGene.RegenAmount} every {GenDate.ToStringTicksToPeriod(resourceGene.RegenTicks)}";
+
+            if (!resourceGene.def.resourceDescription.NullOrEmpty())
+            {
+                text += $"\n\n{resourceGene.def.resourceDescription.Formatted(resourceGene.pawn.Named("PAWN")).Resolve()}";
+            }
+
+            return text + regen;
         }
     }
 }

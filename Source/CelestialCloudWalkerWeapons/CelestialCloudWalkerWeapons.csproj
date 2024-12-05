@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>D:\Games\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,6 +45,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Games\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>D:\Games\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
@@ -67,7 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AMConstants.cs" />
     <Compile Include="GeneGizmo_ResourceAstralPulse.cs" />
     <Compile Include="ResourceGeneDef.cs" />
     <Compile Include="Resource_Gene.cs" />

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <GeneCategoryDef>
-    <defName>AstralPulse</defName>
-    <label>Astral Pulse</label>
+    <defName>MagicPower</defName>
+    <label>Magic Power</label>
     <description>A reserve of cosmic energy that powers abilities.</description>
-    <displayPriorityInXenotype>820</displayPriorityInXenotype>
+    <displayPriorityInXenotype>822</displayPriorityInXenotype>
     <displayPriorityInGenepack>-45</displayPriorityInGenepack>
   </GeneCategoryDef>
 
   <CelestialCloudWalkerWeapons.ResourceGeneDef>
-    <defName>AstralPulse</defName>
-    <label>astral pulse</label>
-    <resourceName>astral pulse</resourceName>
-    <description>Carriers of this gene can harness astral energy, storing it within their bodies for various supernatural abilities.</description>
+    <defName>MagicPower</defName>
+    <label>MagicPower</label>
+    <resourceName>Magic Power</resourceName>
+    <description>Carriers of this gene can harness MagicPower, storing it within their bodies for various supernatural abilities.</description>
     <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
     <resourceLabel>Astral Energy</resourceLabel>
     <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
     <geneClass>CelestialCloudWalkerWeapons.Resource_Gene</geneClass>
     <resourceGizmoType>CelestialCloudWalkerWeapons.GeneGizmo_ResourceAstral</resourceGizmoType>
-    <maxStat>AstralPulse</maxStat>
+    <maxStat>MagicPower</maxStat>
     <regenTicks>AstralPulse_RegenTicks</regenTicks>
     <regenStat>AstralPulse_RegenAmount</regenStat>
     <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
@@ -30,7 +30,7 @@
       <li>0.5</li>
       <li>0.75</li>
     </resourceGizmoThresholds>
-    <displayCategory>AstralPulse</displayCategory>
+    <displayCategory>Magic</displayCategory>
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(3, 3, 138)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
