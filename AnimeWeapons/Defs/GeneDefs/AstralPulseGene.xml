@@ -1,50 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+<Defs>  
   <GeneCategoryDef>
   <defName>AstralPulse</defName>
       <label>Astral Pulse</label>
       <description>A reserve of cosmic energy that powers abilities.</description>
-      <geneClass>CelestialCloudWalkerWeapons.Gene_AstralPulse</geneClass>
-      <resourceGizmoType>CelestialCloudWalkerWeapons.GeneGizmo_ResourceAstralPulse</resourceGizmoType>
-    <displayPriorityInXenotype>820</displayPriorityInXenotype>
-    <displayPriorityInGenepack>-45</displayPriorityInGenepack>
+      <displayPriorityInXenotype>820</displayPriorityInXenotype>
+      <displayPriorityInGenepack>-45</displayPriorityInGenepack>
   </GeneCategoryDef>
-
-<!--  <GeneDef>
-    <defName>AstralPulseGene</defName>
-    <label>astral pulse</label>
-    <description>Carriers of this gene have a reserve of cosmic energy known as astral pulse.</description>
-    <geneClass>Gene_AstralPulse</geneClass>
-    <resourceGizmoType>CelestialCloudWalkerWeapons.GeneGizmo_ResourceAstralPulse</resourceGizmoType>
-    <geneClass>CelestialCloudWalkerWeapons.Gene_AstralPulse</geneClass>
-    <resourceLabel>astral pulse</resourceLabel>
-    <resourceGizmoThresholds>
-      <li>0.25</li>
-      <li>0.5</li>
-      <li>0.75</li>
-    </resourceGizmoThresholds>
-    <showGizmoOnWorldView>true</showGizmoOnWorldView>
-    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <resourceDescription>A reserve of cosmic energy that powers abilities.</resourceDescription>
-    <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
-    <selectionWeight>0</selectionWeight>
-    <displayCategory>AstralPulse</displayCategory>
-    <displayOrderInCategory>-2</displayOrderInCategory>
-    <customEffectDescriptions>
-      <li>Provides astral pulse reserve.</li>
-    </customEffectDescriptions>
-    <symbolPack>
-      <prefixSymbols>
-        <li><symbol>astro</symbol></li>
-      </prefixSymbols>
-    </symbolPack>
-    <minAgeActive>3</minAgeActive>
-    <resourceLossPerDay>0.02</resourceLossPerDay>
-    <biostatCpx>1</biostatCpx>
-    <biostatMet>1</biostatMet>
-  </GeneDef>
-
--->
 
   <CelestialCloudWalkerWeapons.ResourceGeneDef>
     <defName>AstralPulse</defName>
@@ -53,6 +15,8 @@
     <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
     <resourceLabel>Astral Energy</resourceLabel>
     <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
+    <geneClass>CelestialCloudWalkerWeapons.Resource_Gene</geneClass>
+    <resourceGizmoType>CelestialCloudWalkerWeapons.GeneGizmo_ResourceAstralPulse</resourceGizmoType>
     <maxStat>AstralPulse_Max</maxStat>
     <regenStat>AstralPulse_RegenTicks</regenStat>
     <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
@@ -64,6 +28,7 @@
     <barColor>(3, 3, 138)</barColor>
   </CelestialCloudWalkerWeapons.ResourceGeneDef>
 
+
   <StatDef>
   <defName>AstralPulse</defName>
   <label>Astral Pulse</label>
@@ -72,7 +37,6 @@
   <defaultBaseValue>100</defaultBaseValue>
   <minValue>0</minValue>
   <toStringStyle>PercentOne</toStringStyle>
-  <shownOnPawns>true</shownOnPawns>
   </StatDef>
 
   <StatDef>
@@ -83,7 +47,6 @@
   <defaultBaseValue>100</defaultBaseValue>
   <minValue>0</minValue>
   <toStringStyle>PercentOne</toStringStyle>
-  <shownOnPawns>true</shownOnPawns>
 </StatDef>
 
 <StatDef>
@@ -94,7 +57,6 @@
   <defaultBaseValue>1</defaultBaseValue>
   <minValue>0</minValue>
   <toStringStyle>PercentOne</toStringStyle>
-  <shownOnPawns>true</shownOnPawns>
 </StatDef>
 
 <StatDef>

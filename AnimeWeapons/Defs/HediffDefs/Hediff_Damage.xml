@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<!--  <JobDef>
-   <defName>ExtendedMeleeAttack</defName>
-   <driverClass>CelestialCloudWalkerWeapons.JobDriver_ExtendedMeleeAttack</driverClass>
-   <reportString>Melee attacking TargetA.</reportString>
-   <casualInterruptible>false</casualInterruptible>
-   <collideWithPawns>true</collideWithPawns> -->
    <DamageDef ParentName="TM_LocalInjuryBase">
     <defName>AM_FoxfireStyle</defName>
     <label>Foxfire Style</label>
@@ -124,12 +118,11 @@
     <armorCategory>Sharp</armorCategory>
     <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
     <additionalHediffs>
-  <li>
-    <hediff>Stun</hediff> <
-    <severityPerDamageDealt>1.0</severityPerDamageDealt>
-  </li>
-</additionalHediffs>
-
+        <li>
+          <hediff>Stun</hediff>
+          <severityPerDamageDealt>1.0</severityPerDamageDealt>
+        </li>
+      </additionalHediffs>
   </DamageDef>
 
 </Defs>

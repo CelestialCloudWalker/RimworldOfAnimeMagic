@@ -29,13 +29,6 @@
   </secondaryDamages>
 </CelestialCloudWalkerWeapons.MultiDamageDef>
 
-<!--  <JobDef>
- <defName>ExtendedMeleeAttack</defName>
- <driverClass>CelestialCloudWalkerWeapons.JobDriver_ExtendedMeleeAttack</driverClass>
- <reportString>Melee attacking TargetA.</reportString>
- <casualInterruptible>false</casualInterruptible>
- <collideWithPawns>true</collideWithPawns> -->
-
 <!-- Then extend it with your custom properties -->
 <CelestialCloudWalkerWeapons.MultiDamageDef>
   <defName>ManyDamageInOne</defName>

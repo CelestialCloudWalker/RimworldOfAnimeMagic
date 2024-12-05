@@ -43,7 +43,7 @@ namespace CelestialCloudWalkerWeapons
         public float ResourceLossPerDay => def.resourceLossPerDay;
 
         //changed this to reference whatever StatDef is in the ResourceGeneDef XML
-        public override float InitialResourceMax => Pawn.GetStatValue(Def.maxStat);
+        public override float InitialResourceMax => Def.maxStat != null ? Pawn.GetStatValue(Def.maxStat) : 10f;
         public override float MinLevelForAlert => 0.15f;
         public override float MaxLevelOffset => 0.1f;
 
@@ -52,7 +52,8 @@ namespace CelestialCloudWalkerWeapons
         {
             get
             {
-                float currentMax = Pawn.GetStatValue(Def.maxStat, true);
+                if (Def?.maxStat == null) return 10f;
+                float currentMax = Def.maxStat != null ? Pawn.GetStatValue(Def.maxStat, true) : 10f;
                 if (currentMax != lastMax)
                 {
                     lastMax = currentMax;
@@ -61,7 +62,7 @@ namespace CelestialCloudWalkerWeapons
                 return currentMax;
             }
         }
-        protected override Color BarColor => Def.barColor != null ? Def.barColor : new ColorInt(3, 3, 138).ToColor;
+        protected override Color BarColor => Def != null ? Def.barColor : new ColorInt(3, 3, 138).ToColor;
         protected override Color BarHighlightColor => new ColorInt(42, 42, 145).ToColor;
 
 
@@ -69,15 +70,9 @@ namespace CelestialCloudWalkerWeapons
         public override int MaxForDisplay => Mathf.RoundToInt(Max);
 
 
-        //changed this to reference whatever StatDef is in the ResourceGeneDef XML
-        public float RegenMod => Pawn.GetStatValue(Def.regenSpeedStat, true, 100);
-
-        //changed this to reference whatever StatDef is in the ResourceGeneDef XML
-        public int RegenTicks => Mathf.RoundToInt(Pawn.GetStatValue(Def.regenStat, true, 100));
-
-        //changed this to reference whatever StatDef is in the ResourceGeneDef XML
-        public float CostMult => Pawn.GetStatValue(Def.costMult, true, 100);
-
+        public float RegenMod => Def?.regenStat != null ? Pawn.GetStatValue(Def.regenStat, true, 100) : 0f;
+        public int RegenTicks => Def?.regenTicks != null ? Mathf.RoundToInt(Pawn.GetStatValue(Def.regenTicks, true, 100)) : 0;
+        public float CostMult => Def?.costMult != null ? Pawn.GetStatValue(Def.costMult, true, 100) : 0f;
 
 
         //changed this to make the name more generic
@@ -186,21 +181,6 @@ namespace CelestialCloudWalkerWeapons
             Scribe_Values.Look(ref AstralPulse, "AstralPulse", defaultValue: true);
             Scribe_Values.Look(ref CurrentTick, "currentRegenTick", defaultValue: 0);
             Scribe_Values.Look(ref TotalResourceUsed, "TotalUsedAstralPulse", defaultValue: 0);
-        }
-    }
-
-
-    public class ResourceGeneDef : GeneDef
-    {
-        public StatDef maxStat;
-        public StatDef regenStat;
-        public StatDef regenSpeedStat;
-        public StatDef costMult;
-        public Color barColor;
-
-        public ResourceGeneDef()
-        {
-            geneClass = typeof(ResourceGeneDef);
         }
     }
 }
