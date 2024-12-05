@@ -7,13 +7,10 @@ namespace CelestialCloudWalkerWeapons
 {
     public class Resource_Gene : Gene_Resource, IGeneResourceDrain
     {
-        public ResourceGeneDef Def => (ResourceGeneDef)def;
-
+        public ResourceGeneDef Def => def != null ? (ResourceGeneDef)def : null;
 
         public bool AstralPulse = true;
-
         public Gene_Resource Resource => this;
-
         public Pawn Pawn => pawn;
 
         public bool CanOffset
@@ -28,7 +25,6 @@ namespace CelestialCloudWalkerWeapons
             }
         }
 
-
         private int CurrentTick = 0;
 
         public override float Value
@@ -38,12 +34,9 @@ namespace CelestialCloudWalkerWeapons
         }
 
         public float ValueCostMultiplied => Value * CostMult;
-
         public string DisplayLabel => Label + " (" + "Gene".Translate() + ")";
-        public float ResourceLossPerDay => def.resourceLossPerDay;
-
-        //changed this to reference whatever StatDef is in the ResourceGeneDef XML
-        public override float InitialResourceMax => Def.maxStat != null ? Pawn.GetStatValue(Def.maxStat) : 10f;
+        public float ResourceLossPerDay => def?.resourceLossPerDay ?? 0f;
+        public override float InitialResourceMax => Def?.maxStat != null ? Pawn.GetStatValue(Def.maxStat) : 10f;
         public override float MinLevelForAlert => 0.15f;
         public override float MaxLevelOffset => 0.1f;
 
@@ -53,7 +46,7 @@ namespace CelestialCloudWalkerWeapons
             get
             {
                 if (Def?.maxStat == null) return 10f;
-                float currentMax = Def.maxStat != null ? Pawn.GetStatValue(Def.maxStat, true) : 10f;
+                float currentMax = Pawn.GetStatValue(Def.maxStat, true);
                 if (currentMax != lastMax)
                 {
                     lastMax = currentMax;
@@ -62,23 +55,20 @@ namespace CelestialCloudWalkerWeapons
                 return currentMax;
             }
         }
-        protected override Color BarColor => Def != null ? Def.barColor : new ColorInt(3, 3, 138).ToColor;
-        protected override Color BarHighlightColor => new ColorInt(42, 42, 145).ToColor;
 
+        protected override Color BarColor => Def?.barColor ?? new ColorInt(3, 3, 138).ToColor;
+        protected override Color BarHighlightColor => new ColorInt(42, 42, 145).ToColor;
 
         public override int ValueForDisplay => Mathf.RoundToInt(Value);
         public override int MaxForDisplay => Mathf.RoundToInt(Max);
-
 
         public float RegenMod => Def?.regenStat != null ? Pawn.GetStatValue(Def.regenStat, true, 100) : 0f;
         public int RegenTicks => Def?.regenTicks != null ? Mathf.RoundToInt(Pawn.GetStatValue(Def.regenTicks, true, 100)) : 0;
         public float CostMult => Def?.costMult != null ? Pawn.GetStatValue(Def.costMult, true, 100) : 0f;
 
-
-        //changed this to make the name more generic
         public float TotalResourceUsed = 0;
 
-
+        // Rest of implementation remains the same
         public override void PostAdd()
         {
             if (ModLister.CheckBiotech("Hemogen"))
@@ -86,67 +76,43 @@ namespace CelestialCloudWalkerWeapons
                 base.PostAdd();
                 Reset();
             }
-
-        }
-
-        public override void Notify_IngestedThing(Thing thing, int numTaken)
-        {
-  
         }
 
         private void ForceBaseMaxUpdate(float newMax)
         {
-            // Force the base class to update its max value
             this.SetMax(newMax);
         }
 
-
+        // The consumption methods don't use Def so they stay the same
         public void ConsumeAstralPulse(float Amount)
         {
-            if (!ModsConfig.BiotechActive)
-            {
-                return;
-            }
-
+            if (!ModsConfig.BiotechActive) return;
             TotalResourceUsed += Amount;
             Value -= Amount * CostMult;
         }
 
         public void RestoreAstralPulse(float Amount)
         {
-            if (!ModsConfig.BiotechActive)
-            {
-                return;
-            }
-
+            if (!ModsConfig.BiotechActive) return;
             Value += Amount;
         }
 
         public bool HasAstralPulse(float Amount)
         {
-            if (!ModsConfig.BiotechActive)
-            {
-                return false;
-            }
-
-
+            if (!ModsConfig.BiotechActive) return false;
             return Value >= Amount * CostMult;
         }
-
 
         public override void Tick()
         {
             base.Tick();
-
             CurrentTick++;
             if (CurrentTick >= RegenTicks)
             {
-                //Log.Message($"Regenerating {RegenMod} after {RegenTicks} ticks.");
                 RestoreAstralPulse(RegenMod);
                 ResetRegenTicks();
             }
         }
-
 
         public void ResetRegenTicks()
         {
