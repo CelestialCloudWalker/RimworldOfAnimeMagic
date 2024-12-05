@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneCategoryDef>
+    <defName>FlameConcentration</defName>
+    <label>Flame Concentration</label>
+    <description>Concentration channels elemental energy through precise breathing, unlocking powerful techniques.</description>
+    <displayPriorityInXenotype>823</displayPriorityInXenotype>
+    <displayPriorityInGenepack>-46</displayPriorityInGenepack>
+  </GeneCategoryDef>
+
+  <CelestialCloudWalkerWeapons.ResourceGeneDef>
+    <defName>FlameConcentration</defName>
+    <label>Flame Concentration</label>
+    <resourceName>Flame Concentration</resourceName>
+    <description>Carriers of this gene focus their concentration through breathing techniques to control elemental powers.</description>
+    <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
+    <resourceLabel>Astral Energy</resourceLabel>
+    <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
+    <geneClass>CelestialCloudWalkerWeapons.Resource_Gene</geneClass>
+    <resourceGizmoType>CelestialCloudWalkerWeapons.GeneGizmo_ResourceAstral</resourceGizmoType>
+    <maxStat>FlameConcentration</maxStat>
+    <regenTicks>AstralPulse_RegenTicks</regenTicks>
+    <regenStat>AstralPulse_RegenAmount</regenStat>
+    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
+    <costMult>AstralPulse_Cost</costMult>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>Concentration</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(255, 69, 0)</barColor>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+  </CelestialCloudWalkerWeapons.ResourceGeneDef>
+
+</Defs>
