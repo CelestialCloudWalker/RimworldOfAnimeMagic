@@ -76,7 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AMConstants.cs" />
-    <Compile Include="CompProperties_AbilityFlameBreathCost.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="GeneGizmo_ResourceAstralPulse.cs" />
     <Compile Include="ResourceGeneDef.cs" />
     <Compile Include="Resource_Gene.cs" />
@@ -87,6 +87,11 @@
     <Compile Include="MultiDamageDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verb_ExtendedMeleeAttack.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref">
+      <Version>1.5.4297</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
