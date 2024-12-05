@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Weapon Definition -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MeleeWeapon_ExtendableLongSword</defName>
+    <label>extendable longsword</label>
+    <description>An enhanced longsword that can extend its reach through special techniques. The wielder can toggle between normal and extended range combat stances.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/LongSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
+      <li>LongSword</li>
+    </weaponTags>
+    <costStuffCount>100</costStuffCount>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <relicChance>2</relicChance>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Burn</def>
+            <amount>8</amount>
+            <chance>0.5</chance>
+          </li>
+          <li>
+            <def>Blunt</def>
+            <amount>5</amount>
+            <chance>0.3</chance>
+          </li>
+          <li>
+            <def>SR_KIBlastDamage</def>
+            <amount>5</amount>
+            <chance>0.3</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>420</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+
+      <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>WadoIchimonji</defName>
+        <label>WadoIchimonji</label>
+        <description>A Katana Named WadoIchimonji.</description>
+        <graphicData>
+        <texPath>Things/Item/Equipment/WeaponMelee/WadoIchimonji</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>1.0</drawSize>
+        </graphicData>
+        <techLevel>Neolithic</techLevel>
+        <weaponTags>
+          <li>NeolithicMeleeBasic</li>
+          <li>CustomTagIfNeeded</li>
+        </weaponTags>
+        <costStuffCount>50</costStuffCount>
+        <statBases>
+          <WorkToMake>2000</WorkToMake>
+          <Mass>3.0</Mass>
+        </statBases>
+        <equippedStatOffsets>
+          <PlantWorkSpeed>0.1</PlantWorkSpeed>
+        </equippedStatOffsets>
+        <equippedAngleOffset>-45</equippedAngleOffset>
+        <stuffCategories>
+          <li>Metallic</li>
+          <li>Woody</li>
+          <li>Stony</li>
+        </stuffCategories>
+        <recipeMaker>
+          <recipeUsers>
+            <li>CraftingSpot</li>
+            <li>FueledSmithy</li>
+            <li>ElectricSmithy</li>
+          </recipeUsers>
+          <skillRequirements>
+            <Crafting>5</Crafting>
+          </skillRequirements>
+        </recipeMaker>
+         <tools>
+          <li>
+            <label>blade</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>15</power>
+            <cooldownTime>2</cooldownTime>
+            <extraMeleeDamages>
+              <li>
+                <def>ManyDamageInOne</def> <!-- here -->
+                <amount>8</amount>
+                <chance>1</chance>
+              </li>
+            </extraMeleeDamages>
+          </li>
+        </tools>
+    </ThingDef>
+
+  <!-- Then extend it with your custom properties -->
+  <CelestialCloudWalkerWeapons.MultiDamageDef>
+    <defName>ManyDamageInOne</defName>
+    <workerClass>CelestialCloudWalkerWeapons.DamageWorker_MultiDamage</workerClass>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <label>KI Blast</label>
+    <hediff>Burn</hediff>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been damaged by blast.</deathMessage>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <armorCategory>Heat</armorCategory>
+    <defaultDamage>4</defaultDamage>
+    <explosionHeatEnergyPerCell>25</explosionHeatEnergyPerCell>
+    <explosionSnowMeltAmount>1</explosionSnowMeltAmount>
+    <explosionCellFleck>BlastFlame</explosionCellFleck>
+    <explosionColorEdge>(1, 0.7, 0.7)</explosionColorEdge>
+    <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <secondaryDamages>
+      <li>
+        <damage>Burn</damage>
+      </li>
+      <li>
+        <damage>Bullet</damage>
+      </li>
+    </secondaryDamages>
+  </CelestialCloudWalkerWeapons.MultiDamageDef>
+</Defs>

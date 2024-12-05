@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<CelestialCloudWalkerWeapons.MultiDamageDef>
+  <defName>HeavensFlame</defName>
+  <workerClass>CelestialCloudWalkerWeapons.DamageWorker_MultiDamage</workerClass>
+  <hasForcefulImpact>true</hasForcefulImpact>
+  <makesBlood>false</makesBlood>
+  <label>KI Blast</label>
+  <hediff>Burn</hediff>
+  <externalViolence>true</externalViolence>
+  <deathMessage>{0} has been damaged by blast.</deathMessage>
+  <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+  <armorCategory>Heat</armorCategory>
+  <defaultDamage>4</defaultDamage>
+  <explosionHeatEnergyPerCell>25</explosionHeatEnergyPerCell>
+  <explosionSnowMeltAmount>1</explosionSnowMeltAmount>
+  <explosionCellFleck>BlastFlame</explosionCellFleck>
+  <explosionColorEdge>(1, 0.7, 0.7)</explosionColorEdge>
+  <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+  <soundExplosion>Explosion_Flame</soundExplosion>
+  <secondaryDamages>
+    <li>
+      <damage>AM_AntiMagic</damage>
+    </li>
+    <li>
+      <damage>AM_FoxfireStyle</damage>
+    </li>
+  </secondaryDamages>
+</CelestialCloudWalkerWeapons.MultiDamageDef>
+
+<!-- Then extend it with your custom properties -->
+<CelestialCloudWalkerWeapons.MultiDamageDef>
+  <defName>ManyDamageInOne</defName>
+  <workerClass>CelestialCloudWalkerWeapons.DamageWorker_MultiDamage</workerClass>
+  <hasForcefulImpact>true</hasForcefulImpact>
+  <makesBlood>false</makesBlood>
+  <label>KI Blast</label>
+  <hediff>Burn</hediff>
+  <externalViolence>true</externalViolence>
+  <deathMessage>{0} has been damaged by blast.</deathMessage>
+  <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+  <armorCategory>Heat</armorCategory>
+  <defaultDamage>4</defaultDamage>
+  <explosionHeatEnergyPerCell>25</explosionHeatEnergyPerCell>
+  <explosionSnowMeltAmount>1</explosionSnowMeltAmount>
+  <explosionCellFleck>BlastFlame</explosionCellFleck>
+  <explosionColorEdge>(1, 0.7, 0.7)</explosionColorEdge>
+  <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+  <soundExplosion>Explosion_Flame</soundExplosion>
+  <secondaryDamages>
+    <li>
+      <damage>Burn</damage>
+    </li>
+    <li>
+      <damage>Bullet</damage>
+    </li>
+  </secondaryDamages>
+</CelestialCloudWalkerWeapons.MultiDamageDef>
+
+</Defs>

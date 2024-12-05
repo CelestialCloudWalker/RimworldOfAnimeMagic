@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+   <DamageDef ParentName="TM_LocalInjuryBase">
+    <defName>AM_FoxfireStyle</defName>
+    <label>Foxfire Style</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was destroyed by fox fire.</deathMessage>
+    <hediff>AM_FoxfireStyle</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <defaultDamage>12</defaultDamage>
+    <armorCategory>Light</armorCategory>
+    <explosionSnowMeltAmount>.5</explosionSnowMeltAmount>
+    <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+    <explosionColorCenter>(.8, .9, 1)</explosionColorCenter>
+    <explosionColorEdge>(0, .4, .8)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <additionalHediffs>
+      <li>
+        <hediff>TM_Blind</hediff>
+        <severityPerDamageDealt>.03</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+
+  <HediffDef ParentName="TM_InjuryBase">
+    <defName>AM_FoxfireStyle</defName>
+    <label>Foxfire Style</label>
+    <description>Foxfire Style allows the user to generate, attack with, and cut through fire.</description>
+    <displayWound>false</displayWound>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>destroyed by Foxfire</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
+      <bleedRate>0.000</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>destroyed</destroyedLabel>
+      <destroyedOutLabel>destroyed</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <DamageDef ParentName="TM_LocalInjuryBase">
+		<defName>AM_AntiMagic</defName>
+		<label>Anti Magic</label>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} was destroyed by Anti Magic power.</deathMessage>
+		<hediff>AM_AntiMagicHD</hediff>
+		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<defaultDamage>10</defaultDamage>
+		<armorCategory>Dark</armorCategory>
+		<explosionSnowMeltAmount>.2</explosionSnowMeltAmount>
+		<explosionCellMote>Mote_ArcaneBlast</explosionCellMote>
+		<explosionColorCenter>(.8, .35, .8)</explosionColorCenter>
+		<explosionColorEdge>(1, .85, 1)</explosionColorEdge>
+		<soundExplosion>Explosion_Flame</soundExplosion>
+	</DamageDef>
+
+  <HediffDef ParentName="TM_InjuryBase">
+    <defName>AM_AntiMagicHD</defName>
+    <label>Anti Magic</label>
+	<description>Destructive Anti Magic power</description>
+    <displayWound>false</displayWound>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>destroyed by arcane power</permanentLabel>
+      </li>
+    </comps>
+	<injuryProps>
+		<painPerSeverity>0.0125</painPerSeverity>
+		<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+		<bleedRate>0.00625</bleedRate>
+		<canMerge>true</canMerge>
+			<destroyedLabel>blasted off</destroyedLabel>
+			<destroyedOutLabel>blasted out</destroyedOutLabel>
+	</injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="BurnBase">
+	<defName>HellBurn</defName>
+	<label>hellburn</label>
+	<labelNoun>a hell burn</labelNoun>
+	<description>A Hell Burn.</description>
+	<comps>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>hell burn scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <destroyedLabel>Burned off by hell Fire</destroyedLabel>
+      <destroyedOutLabel>Burned out by hell fire</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <DamageDef>
+    <defName>Paralyze</defName>
+    <label>scratch</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been killed by a tornado.</deathMessage>
+    <hediff>Scratch</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Tornado</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <additionalHediffs>
+        <li>
+          <hediff>Stun</hediff>
+          <severityPerDamageDealt>1.0</severityPerDamageDealt>
+        </li>
+      </additionalHediffs>
+  </DamageDef>
+
+</Defs>
