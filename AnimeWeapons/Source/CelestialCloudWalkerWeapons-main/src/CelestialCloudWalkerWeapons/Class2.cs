@@ -28,7 +28,7 @@ namespace CelestialCloudWalkerWeapons
         {
             GizmoResult result = base.GizmoOnGUI(topLeft, maxWidth, parms);
             float num = Mathf.Repeat(Time.time, 0.85f);
-            if (gene is Gene_AstralPulse  AstralPulse)
+            if (gene is Resource_Gene  AstralPulse)
             {
                 Target = num;
             }
@@ -37,8 +37,7 @@ namespace CelestialCloudWalkerWeapons
 
         protected override void DrawHeader(Rect headerRect, ref bool mouseOverElement)
         {
-            Gene_AstralPulse  CEGene;
-            if ((gene.pawn.IsColonistPlayerControlled || gene.pawn.IsPrisonerOfColony) && gene is Gene_AstralPulse  AstralPulse)
+            if ((gene.pawn.IsColonistPlayerControlled || gene.pawn.IsPrisonerOfColony) && gene is Resource_Gene resourceGene)
             {
                 headerRect.xMax -= 24f;
                 Rect rect = new Rect(headerRect.xMax, headerRect.y, 24f, 24f);
@@ -54,9 +53,15 @@ namespace CelestialCloudWalkerWeapons
         protected override string GetTooltip()
         {
             tmpDrainGenes.Clear();
-            int RegenRateStatValue = (int)this.gene.pawn.GetStatValue(CelestialDefof.AstralPulse_RegenTicks);
-            string Regen = $" Regenerates {RegenAmount} every {GenDate.ToStringTicksToPeriod(RegenRateStatValue)}";
 
+            int RegenRateStatValue = 1;
+
+            if (this.gene is Resource_Gene resourceGene)
+            {
+                RegenRateStatValue = (int)this.gene.pawn.GetStatValue(resourceGene.Def.regenStat);
+            }
+      
+            string Regen = $" Regenerates {RegenAmount} every {GenDate.ToStringTicksToPeriod(RegenRateStatValue)}";
             string text = "";
             if (!gene.def.resourceDescription.NullOrEmpty())
             {

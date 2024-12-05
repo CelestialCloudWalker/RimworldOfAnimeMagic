@@ -10,7 +10,7 @@
     <displayPriorityInGenepack>-45</displayPriorityInGenepack>
   </GeneCategoryDef>
 
-  <GeneDef>
+<!--  <GeneDef>
     <defName>AstralPulseGene</defName>
     <label>astral pulse</label>
     <description>Carriers of this gene have a reserve of cosmic energy known as astral pulse.</description>
@@ -43,6 +43,26 @@
     <biostatCpx>1</biostatCpx>
     <biostatMet>1</biostatMet>
   </GeneDef>
+
+-->
+
+  <CelestialCloudWalkerWeapons.ResourceGeneDef>
+    <defName>AstralPulse</defName>
+    <label>astral pulse</label>
+    <description>Carriers of this gene can harness astral energy, storing it within their bodies for various supernatural abilities.</description>
+    <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
+    <resourceLabel>Astral Energy</resourceLabel>
+    <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
+    <maxStat>AstralPulse_Max</maxStat>
+    <regenStat>AstralPulse_RegenTicks</regenStat>
+    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
+    <costMult>AstralPulse_Cost</costMult>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <displayCategory>Resource</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(3, 3, 138)</barColor>
+  </CelestialCloudWalkerWeapons.ResourceGeneDef>
 
   <StatDef>
   <defName>AstralPulse</defName>
