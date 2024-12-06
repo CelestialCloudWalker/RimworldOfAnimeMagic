@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+      <defName>ROMA_TestAbility</defName>
+      <label>ROMA_TestAbility</label>
+      <description>ROMA_TestAbility</description>
+      <iconPath>Things/Mote/SpeechSymbols/Speech</iconPath>
+      <targetRequired>true</targetRequired>
+      <verbProperties>
+        <verbClass>Verb_CastAbilityTouch</verbClass>
+        <drawAimPie>false</drawAimPie>
+        <range>-1</range>
+        <warmupTime>0.5</warmupTime>
+        <targetParams>
+          <canTargetPawns>True</canTargetPawns>
+          <canTargetLocations>false</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+      <comps>
+        <li Class="CelestialCloudWalkerWeapons.CompProperties_ResourceCost">
+          <resourceGeneDef>AstralPulse</resourceGeneDef>
+          <resourceCost>20</resourceCost>
+        </li>
+      </comps>
+  </AbilityDef>
+</Defs>

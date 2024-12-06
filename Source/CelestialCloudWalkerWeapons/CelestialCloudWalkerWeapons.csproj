@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="AMConstants.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="CompProperties_ResourceCost.cs" />
     <Compile Include="GeneGizmo_ResourceAstralPulse.cs" />
     <Compile Include="ResourceGeneDef.cs" />
     <Compile Include="Resource_Gene.cs" />
