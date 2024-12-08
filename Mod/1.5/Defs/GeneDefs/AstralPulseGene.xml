@@ -16,6 +16,11 @@
     <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
     <resourceLabel>Astral Energy</resourceLabel>
     <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
+    <abilities>
+      <li>TotalConcentrationBreathing</li>
+      <li>ROMA_Invisability</li>
+      <li>ROAM_TestAB</li>
+    </abilities>
     <geneClass>CelestialCloudWalkerWeapons.Resource_Gene</geneClass>
     <resourceGizmoType>CelestialCloudWalkerWeapons.GeneGizmo_ResourceAstral</resourceGizmoType>
     <maxStat>AstralPulse</maxStat>

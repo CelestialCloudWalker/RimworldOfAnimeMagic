@@ -125,4 +125,26 @@
       </additionalHediffs>
   </DamageDef>
 
+  <HediffDef ParentName="Metalblood" Name="TotalConcentrationBreathingEffect">
+    <defName>TotalConcentrationBreathingEffect</defName>
+    <label>Total Concentration Breathing</label>
+    <description>The user is in a state of heightened physical resilience through focused breathing techniques.</description>
+
+    <stages>
+      <li>
+        <label>Concentrated</label>
+        <statOffsets>
+          <IncomingDamageFactor>-0.3</IncomingDamageFactor>
+          <MoveSpeed>0.2</MoveSpeed>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
 </Defs>

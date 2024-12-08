@@ -16,6 +16,9 @@
     <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
     <resourceLabel>Flame Breath</resourceLabel>
     <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
+    <abilities>
+      <li>Roma_FlameBreathtest</li>
+    </abilities>
     <geneClass>CelestialCloudWalkerWeapons.Resource_Gene</geneClass>
     <resourceGizmoType>CelestialCloudWalkerWeapons.GeneGizmo_ResourceAstral</resourceGizmoType>
     <maxStat>FlameBreath</maxStat>
