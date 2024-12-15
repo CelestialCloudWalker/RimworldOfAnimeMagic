@@ -1,14 +1,23 @@
-﻿using RimWorld;
-using System;
+﻿using HarmonyLib;
+using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HarmonyLib;
 using Verse;
 
 namespace AnimeArsenal
 {
+
+    [StaticConstructorOnStartup]
+    public class CelestialPatchApply
+    {
+        static CelestialPatchApply()
+        {
+            var harmony = new Harmony("com.AnimeArsenal.patches");
+            harmony.PatchAll();
+        }
+    }
+
+
     public class HediffCompProperties_Enchant : HediffCompProperties
     {
         public DamageDef damageType;
@@ -42,16 +51,21 @@ namespace AnimeArsenal
         {
             if (__instance.EquipmentSource != null && target.Thing is Pawn targetPawn)
             {
-                //find ALL EnchantComps on this weapon
-                IEnumerable<EnchantComp> enchantments = __instance.EquipmentSource.GetComps<EnchantComp>();
-
-                //check its not null
-                if (enchantments != null)
+                if (__instance.CasterPawn != null)
                 {
-                    //loop over each one of them and call their ApplyEnchant method
-                    foreach (var item in enchantments)
+                    ///find all hediffs, then get any with an EnchantComp, then turn them all into one list
+                    IEnumerable<EnchantComp> enchantments = __instance.CasterPawn.health.hediffSet.hediffs
+                        .Select(x => x.TryGetComp<EnchantComp>())
+                        .Where(x => x != null);
+
+                    //check the list isnt nul
+                    if (enchantments != null)
                     {
-                        item.ApplyEnchant(targetPawn);
+                        //loop over each one of them and call their ApplyEnchant method
+                        foreach (var item in enchantments)
+                        {
+                            item.ApplyEnchant(targetPawn);
+                        }
                     }
                 }
             }
