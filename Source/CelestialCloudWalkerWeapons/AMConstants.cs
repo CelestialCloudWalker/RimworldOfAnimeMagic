@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace CelestialCloudWalkerWeapons
+namespace AnimeArsenal
 {
     public static class AMConstants
     {

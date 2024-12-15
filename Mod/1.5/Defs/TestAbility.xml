@@ -17,7 +17,7 @@
         </targetParams>
       </verbProperties>
       <comps>
-        <li Class="CelestialCloudWalkerWeapons.CompProperties_ResourceCost">
+        <li Class="AnimeArsenal.CompProperties_ResourceCost">
           <resourceGeneDef>AstralPulse</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>

@@ -8,7 +8,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace CelestialCloudWalkerWeapons
+namespace AnimeArsenal
 {
     public class CompProperties_RangeToggle : CompProperties
     {

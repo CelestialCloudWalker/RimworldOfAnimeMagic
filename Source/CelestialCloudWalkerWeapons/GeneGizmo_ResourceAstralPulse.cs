@@ -7,7 +7,7 @@ using Verse.Sound;
 
 
 
-namespace CelestialCloudWalkerWeapons
+namespace AnimeArsenal
 {
     internal class GeneGizmo_ResourceAstral : GeneGizmo_Resource
     {

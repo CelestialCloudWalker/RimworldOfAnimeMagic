@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Verse;
 
-namespace CelestialCloudWalkerWeapons
+namespace AnimeArsenal
 {
     public class MultiDamageDef : DamageDef
     {

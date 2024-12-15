@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace CelestialCloudWalkerWeapons
+namespace AnimeArsenal
 {
     public class CompProperties_ResourceCost : CompProperties_AbilityEffect
     {

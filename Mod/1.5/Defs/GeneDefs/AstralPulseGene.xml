@@ -21,8 +21,8 @@
       <li>ROMA_Invisability</li>
       <li>ROAM_TestAB</li>
     </abilities>
-    <geneClass>CelestialCloudWalkerWeapons.Resource_Gene</geneClass>
-    <resourceGizmoType>CelestialCloudWalkerWeapons.GeneGizmo_ResourceAstral</resourceGizmoType>
+    <geneClass>AnimeArsenal.Resource_Gene</geneClass>
+    <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
     <maxStat>AstralPulse</maxStat>
     <regenTicks>AstralPulse_RegenTicks</regenTicks>
     <regenStat>AstralPulse_RegenAmount</regenStat>

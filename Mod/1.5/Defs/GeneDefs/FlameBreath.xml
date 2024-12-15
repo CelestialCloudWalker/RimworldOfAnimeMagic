@@ -19,8 +19,8 @@
     <abilities>
       <li>Roma_FlameBreathtest</li>
     </abilities>
-    <geneClass>CelestialCloudWalkerWeapons.Resource_Gene</geneClass>
-    <resourceGizmoType>CelestialCloudWalkerWeapons.GeneGizmo_ResourceAstral</resourceGizmoType>
+    <geneClass>AnimeArsenal.Resource_Gene</geneClass>
+    <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
     <maxStat>FlameBreath</maxStat>
     <regenTicks>AstralPulse_RegenTicks</regenTicks>
     <regenStat>AstralPulse_RegenAmount</regenStat>

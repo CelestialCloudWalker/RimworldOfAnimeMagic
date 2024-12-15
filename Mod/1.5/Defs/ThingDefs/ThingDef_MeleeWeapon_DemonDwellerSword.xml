@@ -56,10 +56,5 @@
             </extraMeleeDamages>
           </li>
         </tools>
-		<comps>
-    <li Class="CompProperties_EquippableAbility">
-      <abilityDef>AM_BasicBolt</abilityDef>
-    </li>
-  </comps>
     </ThingDef>
 </Defs>

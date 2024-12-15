@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace CelestialCloudWalkerWeapons
+namespace AnimeArsenal
 {
     //public class JobDriver_ExtendedMeleeAttack : JobDriver
     //{

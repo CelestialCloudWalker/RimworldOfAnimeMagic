@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace CelestialCloudWalkerWeapons
+namespace AnimeArsenal
 {
     public class DamageWorker_MultiDamage : DamageWorker
     {

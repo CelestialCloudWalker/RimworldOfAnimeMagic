@@ -124,7 +124,7 @@
     </ThingDef>
 
   <!-- Then extend it with your custom properties -->
-  <CelestialCloudWalkerWeapons.MultiDamageDef>
+  <AnimeArsenal.MultiDamageDef>
     <defName>ManyDamageInOne</defName>
     <workerClass>CelestialCloudWalkerWeapons.DamageWorker_MultiDamage</workerClass>
     <hasForcefulImpact>true</hasForcefulImpact>
@@ -150,5 +150,5 @@
         <damage>Bullet</damage>
       </li>
     </secondaryDamages>
-  </CelestialCloudWalkerWeapons.MultiDamageDef>
+  </AnimeArsenal.MultiDamageDef>
 </Defs>

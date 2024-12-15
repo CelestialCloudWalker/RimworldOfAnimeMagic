@@ -2,7 +2,7 @@
 using Verse;
 using Verse.AI;
 
-namespace CelestialCloudWalkerWeapons
+namespace AnimeArsenal
 {
     public class Verb_ExtendedMeleeAttack : Verb_MeleeAttackDamage
     {

@@ -2,7 +2,7 @@
 using UnityEngine;
 using Verse;
 
-namespace CelestialCloudWalkerWeapons
+namespace AnimeArsenal
 {
     public class ResourceGeneDef : GeneDef
     {

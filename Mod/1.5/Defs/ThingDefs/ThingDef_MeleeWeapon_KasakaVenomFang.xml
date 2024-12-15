@@ -93,7 +93,7 @@
   </comps>
     </ThingDef>
 
-	<CelestialCloudWalkerWeapons.MultiDamageDef>
+	<AnimeArsenal.MultiDamageDef>
     <defName>SoloLeveling</defName>
     <workerClass>CelestialCloudWalkerWeapons.DamageWorker_MultiDamage</workerClass>
     <hasForcefulImpact>true</hasForcefulImpact>
@@ -119,6 +119,6 @@
         <damage>Burn</damage>
       </li>
     </secondaryDamages>
-  </CelestialCloudWalkerWeapons.MultiDamageDef>
+  </AnimeArsenal.MultiDamageDef>
 
 </Defs>
