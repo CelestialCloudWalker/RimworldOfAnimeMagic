@@ -126,7 +126,7 @@
   <!-- Then extend it with your custom properties -->
   <AnimeArsenal.MultiDamageDef>
     <defName>ManyDamageInOne</defName>
-    <workerClass>CelestialCloudWalkerWeapons.DamageWorker_MultiDamage</workerClass>
+    <workerClass>AnimeArsenal.DamageWorker_MultiDamage</workerClass>
     <hasForcefulImpact>true</hasForcefulImpact>
     <makesBlood>false</makesBlood>
     <label>KI Blast</label>

@@ -67,45 +67,6 @@
         <replaceExisting>true</replaceExisting>
       </li>
     </comps>
-    <descriptionHyperlinks>
-      <li>AstralPulse</li>
-    </descriptionHyperlinks>
-  </AbilityDef>
-
-  <AbilityDef>
-    <defName>ROAM_TestAB</defName>
-    <label>ROAM_TestAB</label>
-    <description>Focuses the user's breath to enhance physical resilience</description>
-    <iconPath>Things/Mote/SpeechSymbols/Speech</iconPath>
-    <statBases>
-      <Ability_Duration>40</Ability_Duration>
-    </statBases>
-    <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <drawAimPie>false</drawAimPie>
-      <requireLineOfSight>false</requireLineOfSight>
-      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
-      <soundCast>Pawn_Ghoul_Frenzy</soundCast>
-      <targetable>false</targetable>
-      <targetParams>
-        <canTargetSelf>true</canTargetSelf>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>AstralPulse</resourceGeneDef>
-        <resourceCost>20</resourceCost>
-      </li>
-      <li Class="CompProperties_AbilityGiveHediff">
-        <compClass>CompAbilityEffect_GiveHediff</compClass>
-        <hediffDef>ROAM_TestAB</hediffDef>
-        <onlyApplyToSelf>true</onlyApplyToSelf>
-        <replaceExisting>true</replaceExisting>
-      </li>
-    </comps>
-    <descriptionHyperlinks>
-      <li>AstralPulse</li>
-    </descriptionHyperlinks>
   </AbilityDef>
 
 </Defs>

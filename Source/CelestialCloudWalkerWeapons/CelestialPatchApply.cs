@@ -6,7 +6,6 @@ using Verse;
 
 namespace AnimeArsenal
 {
-
     [StaticConstructorOnStartup]
     public class CelestialPatchApply
     {
@@ -14,32 +13,6 @@ namespace AnimeArsenal
         {
             var harmony = new Harmony("com.AnimeArsenal.patches");
             harmony.PatchAll();
-        }
-    }
-
-
-    public class HediffCompProperties_Enchant : HediffCompProperties
-    {
-        public DamageDef damageType;
-        public float damageValue;
-        public Hediff hediffToApply;
-    }
-
-    public class EnchantComp : HediffComp
-    {
-        HediffCompProperties_Enchant Props => (HediffCompProperties_Enchant)props;
-
-        public void ApplyEnchant(Pawn TargetPawn)
-        {
-            if (Props.damageType != null && Props.damageValue > 0)
-            {
-                TargetPawn.TakeDamage(new DamageInfo(Props.damageType, Props.damageValue));
-            }
-
-            if (Props.hediffToApply != null)
-            {
-                TargetPawn.health.AddHediff(Props.hediffToApply);
-            }
         }
     }
 

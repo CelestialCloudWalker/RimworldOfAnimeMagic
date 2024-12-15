@@ -4,11 +4,11 @@
     <defName>FlameBreath</defName>
     <label>Flame Breath</label>
     <description>Breath channels elemental energy through precise control, unlocking powerful techniques.</description>
-    <displayPriorityInXenotype>823</displayPriorityInXenotype>
+    <displayPriorityInXenotype>825</displayPriorityInXenotype>
     <displayPriorityInGenepack>-46</displayPriorityInGenepack>
   </GeneCategoryDef>
 
-  <CelestialCloudWalkerWeapons.ResourceGeneDef>
+  <AnimeArsenal.ResourceGeneDef>
     <defName>FlameBreath</defName>
     <label>Flame Breath</label>
     <resourceName>Flame Breath</resourceName>
@@ -38,6 +38,6 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(255, 69, 0)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-  </CelestialCloudWalkerWeapons.ResourceGeneDef>
+  </AnimeArsenal.ResourceGeneDef>
 
 </Defs>

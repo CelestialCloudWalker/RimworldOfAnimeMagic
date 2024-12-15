@@ -55,5 +55,6 @@
               </li>
             </extraMeleeDamages>
           </li>
+        </tools>
     </ThingDef>
   </Defs>

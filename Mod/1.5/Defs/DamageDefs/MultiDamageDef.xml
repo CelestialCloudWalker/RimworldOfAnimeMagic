@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<CelestialCloudWalkerWeapons.MultiDamageDef>
+<AnimeArsenal.MultiDamageDef>
   <defName>HeavensFlame</defName>
   <workerClass>AnimeArsenal.DamageWorker_MultiDamage</workerClass>
   <hasForcefulImpact>true</hasForcefulImpact>
@@ -27,10 +27,10 @@
       <damage>AM_FoxfireStyle</damage>
     </li>
   </secondaryDamages>
-</CelestialCloudWalkerWeapons.MultiDamageDef>
+</AnimeArsenal.MultiDamageDef>
 
 <!-- Then extend it with your custom properties -->
-<CelestialCloudWalkerWeapons.MultiDamageDef>
+<AnimeArsenal.MultiDamageDef>
   <defName>ManyDamageInOne</defName>
   <workerClass>AnimeArsenal.DamageWorker_MultiDamage</workerClass>
   <hasForcefulImpact>true</hasForcefulImpact>
@@ -56,6 +56,6 @@
       <damage>Bullet</damage>
     </li>
   </secondaryDamages>
-</CelestialCloudWalkerWeapons.MultiDamageDef>
+</AnimeArsenal.MultiDamageDef>
 
 </Defs>

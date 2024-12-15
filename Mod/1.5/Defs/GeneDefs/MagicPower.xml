@@ -8,7 +8,7 @@
     <displayPriorityInGenepack>-45</displayPriorityInGenepack>
   </GeneCategoryDef>
 
-  <CelestialCloudWalkerWeapons.ResourceGeneDef>
+  <AnimeArsenal.ResourceGeneDef>
     <defName>MagicPower</defName>
     <label>MagicPower</label>
     <resourceName>Magic Power</resourceName>
@@ -34,6 +34,6 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(3, 3, 138)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-  </CelestialCloudWalkerWeapons.ResourceGeneDef>
+  </AnimeArsenal.ResourceGeneDef>
 
 </Defs>

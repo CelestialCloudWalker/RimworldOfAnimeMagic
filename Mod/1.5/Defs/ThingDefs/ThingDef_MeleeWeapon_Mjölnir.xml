@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="BaseWeapon_Bladelink">
-    <defName>Mjölnir</defName>
+    <defName>Mjolnir</defName>
     <label>Mjölnir</label>
     <description>Mjölnir is believed to protect the wielder from malevolent forces and bring blessings of fertility and abundance.</description>
     <relicChance>1</relicChance>
@@ -17,7 +17,6 @@
     <techLevel>Medieval</techLevel>
     <soundInteract>Interact_MeleeBlunt</soundInteract>
     <meleeHitSound>MeleeHit_Blunt</meleeHitSound>
-    <smeltable>true</smeltable>
     <weaponClasses>
       <li>Melee</li>
       <li>MeleeBlunt</li>

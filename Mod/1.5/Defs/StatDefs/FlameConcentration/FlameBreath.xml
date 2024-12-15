@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <StatDef>
-    <defName>FlameBreath</defName>
+    <defName>FlameConcentration</defName>
     <label>FlameBreath</label>
     <category>PawnMisc</category>
     <description>Astral Pulse a pawn can store.</description>

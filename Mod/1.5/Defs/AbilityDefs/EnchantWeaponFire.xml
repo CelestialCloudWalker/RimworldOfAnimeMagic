@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>ToggleHediff</defName>
+      <defName>EnchantWeaponFire</defName>
       <label>toggle hediff</label>
       <description>Toggles a hediff on or off.</description>
       <targetRequired>false</targetRequired>
@@ -15,16 +15,4 @@
           </li>
       </comps>
   </AbilityDef>
-
-  <HediffDef>
-        <defName>FireEnchantment</defName>
-        <label>fire enchantment</label>
-        <comps>
-            <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-                <damageType>Burn</damageType>
-                <damageValue>10</damageValue>
-            </li>
-        </comps>
-    </HediffDef>
-
 </Defs>
