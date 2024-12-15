@@ -18,6 +18,7 @@
     <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
     <abilities>
       <li>Roma_FlameBreathtest</li>
+      <li>ToggleHediff</li>
     </abilities>
     <geneClass>AnimeArsenal.Resource_Gene</geneClass>
     <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
