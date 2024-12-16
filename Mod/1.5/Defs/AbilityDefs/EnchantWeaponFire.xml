@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>EnchantWeaponFire</defName>
-      <label>toggle hediff</label>
-      <description>Toggles a hediff on or off.</description>
+      <defName>FlameBreath:IgnitionEdge</defName>
+      <label>Flame Breath: Ignition Edge</label>
+      <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
       <targetRequired>false</targetRequired>
       <verbProperties>
           <verbClass>Verb_CastAbility</verbClass>
@@ -11,7 +11,11 @@
       </verbProperties>
       <comps>
           <li Class="AnimeArsenal.CompProperties_ToggleHediff">
-              <hediffDef>FireEnchantment</hediffDef>
+              <hediffDef>IgnitionEdge</hediffDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_ResourceCost">
+            <resourceGeneDef>FlameBreath</resourceGeneDef>
+            <resourceCost>20</resourceCost>
           </li>
       </comps>
   </AbilityDef>
