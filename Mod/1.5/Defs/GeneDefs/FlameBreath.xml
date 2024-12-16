@@ -19,6 +19,7 @@
     <abilities>
       <li>Roma_FlameBreathtest</li>
       <li>FlameBreath:IgnitionEdge</li>
+      <li>TotalConcentrationBreathing</li>
     </abilities>
     <geneClass>AnimeArsenal.Resource_Gene</geneClass>
     <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
