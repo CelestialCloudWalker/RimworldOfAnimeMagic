@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>FlameBreath:IgnitionEdge</defName>
-      <label>Flame Breath: Ignition Edge</label>
-      <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
+      <defName>WindBreath:WindEdge</defName>
+      <label>Wind Breath: Wind Edge</label>
+      <description>Using the basics of Wind Breathing, imbue your weapon with razor-sharp gusts of wind that cut through enemies with ease.</description>
       <targetRequired>false</targetRequired>
       <verbProperties>
           <verbClass>Verb_CastAbility</verbClass>
@@ -11,10 +11,10 @@
       </verbProperties>
       <comps>
           <li Class="AnimeArsenal.CompProperties_ToggleHediff">
-              <hediffDef>IgnitionEdge</hediffDef>
+              <hediffDef>WindEdge</hediffDef>
           </li>
           <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>FlameBreath</resourceGeneDef>
+            <resourceGeneDef>WindBreath</resourceGeneDef>
             <resourceCost>20</resourceCost>
           </li>
       </comps>

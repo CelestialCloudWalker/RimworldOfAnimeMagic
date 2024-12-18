@@ -136,6 +136,7 @@
         <statOffsets>
           <IncomingDamageFactor>-0.3</IncomingDamageFactor>
           <MoveSpeed>0.2</MoveSpeed>
+          <PainShockThreshold>0.2</PainShockThreshold>
         </statOffsets>
         <capMods>
           <li>

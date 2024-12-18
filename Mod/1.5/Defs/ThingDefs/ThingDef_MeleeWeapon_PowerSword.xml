@@ -2,11 +2,11 @@
 <Defs>
 
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>Lostvayne</defName>
-    <label>Lostvayne</label>
-    <description>Lostvayne.</description>
+    <defName>PowerSword</defName>
+    <label>Power Sword</label>
+    <description>The Power Sword, wielded by the Red Ranger, is a legendary weapon infused with immense power, designed to deliver decisive strikes against evil.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponMelee/Lostvayne</texPath>
+      <texPath>Things/Item/Equipment/WeaponMelee/PowerSword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>2.0</drawSize>
     </graphicData>

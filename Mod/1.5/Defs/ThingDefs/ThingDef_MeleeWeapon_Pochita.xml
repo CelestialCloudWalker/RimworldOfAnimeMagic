@@ -2,11 +2,11 @@
 <Defs>
 
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>Lostvayne</defName>
-    <label>Lostvayne</label>
-    <description>Lostvayne.</description>
+    <defName>PochitaPochita</defName>
+    <label>Pochita</label>
+    <description>Pochita, the Chainsaw Devil, is a powerful weapon from another world, embodying unmatched destructive potential with his chainsaw abilities.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponMelee/Lostvayne</texPath>
+      <texPath>Things/Item/Equipment/WeaponMelee/Pochita</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>2.0</drawSize>
     </graphicData>

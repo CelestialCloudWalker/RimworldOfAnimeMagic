@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <GeneCategoryDef>
-    <defName>FlameBreath</defName>
-    <label>Flame Breath</label>
+    <defName>InsectBreath</defName>
+    <label>Insect Breath</label>
     <description>Breath channels elemental energy through precise control, unlocking powerful techniques.</description>
     <displayPriorityInXenotype>825</displayPriorityInXenotype>
     <displayPriorityInGenepack>-46</displayPriorityInGenepack>
   </GeneCategoryDef>
 
   <AnimeArsenal.ResourceGeneDef>
-    <defName>FlameBreath</defName>
-    <label>Flame Breath</label>
-    <resourceName>Flame Breath</resourceName>
-    <description>Carriers of this gene can focus intense heat into their body, unleashing powerful flame-based attacks fueled by their inner breath.</description>
+    <defName>InsectBreath</defName>
+    <label>Insect Breath</label>
+    <resourceName>Insect Breath</resourceName>
+    <description>Carriers of this gene strike with swift, venomous precision, mimicking the lethal stings of insects. Their movements conjure phantom butterflies, embodying both beauty and death.</description>
     <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
-    <resourceLabel>Flame Breath</resourceLabel>
-    <resourceDescription>Current stored Breath, ignited by inner heat. This energy fuels powerful flame-based abilities.</resourceDescription>
+    <resourceLabel>Insect Breath</resourceLabel>
+    <resourceDescription>Current stored Breath, refined for precision. This energy enables swift and venomous insect-based techniques.</resourceDescription>
     <abilities>
-      <li>Roma_FlameBreathtest</li>
-      <li>FlameBreath:IgnitionEdge</li>
       <li>TotalConcentrationBreathing</li>
+      <li>InsectBreath:VenomStrike</li>
     </abilities>
     <geneClass>AnimeArsenal.Resource_Gene</geneClass>
     <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
-    <maxStat>FlameBreath</maxStat>
+    <maxStat>AstralPulse</maxStat>
     <regenTicks>AstralPulse_RegenTicks</regenTicks>
     <regenStat>AstralPulse_RegenAmount</regenStat>
     <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
@@ -37,7 +36,7 @@
     </resourceGizmoThresholds>
     <displayCategory>Breath</displayCategory>
     <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(255, 69, 0)</barColor>
+    <barColor>(218, 112, 214)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
   </AnimeArsenal.ResourceGeneDef>
 
