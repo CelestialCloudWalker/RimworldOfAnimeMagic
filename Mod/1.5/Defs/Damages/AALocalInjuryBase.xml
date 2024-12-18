@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <DamageDef Name="AA_LocalInjuryBase" Abstract="True">
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <defaultArmorPenetration>1</defaultArmorPenetration>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>TM_ThrumboCleave</defName>
+    <label>cleaving</label>
+  </ToolCapacityDef>
+
+
+
+
+
+  <DamageDef Name="AA_LocalInjuryBase" Abstract="True">
+    <DefName>AA_Name</DefName>
+    <label>Label</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was destroyed by a.</deathMessage>
+    <hediff>AA_NameHD</hediff>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <defaultDamage>10</defaultDamage>
+    <armorCategory>Dark</armorCategory>
+    <hediffSkin>true</hediffSkin>
+    <hediffSolid>false</hediffSolid>
+  </DamageDef>
+
+
+  <HediffDef Name="AA_InjuryBase" Abstract="True">
+    <hediffClass>AA_NameHD</hediffClass>
+    <tendable>true</tendable>
+    <displayWound>true</displayWound>
+	<labelNounPretty>{0} in the {1}</labelNounPretty>
+  </HediffDef>

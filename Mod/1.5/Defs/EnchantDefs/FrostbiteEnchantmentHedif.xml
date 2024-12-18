@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>IgnitionEdge</defName>
-    <label>Ignition Edge</label>
-    <description>The weapon glows faintly with fiery energy, its strikes leaving behind smoldering burns and charred wounds.</description>
+    <defName>FrostbiteEnchantment</defName>
+    <label>frostbite enchantment</label>
+    <description>WORDS AND STUFF.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <injuryProps>
@@ -16,17 +16,9 @@
     </injuryProps>
     <comps>
         <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>Ignition</damageType>
+            <damageType>Frostbite</damageType>
             <damageValue>10</damageValue>
         </li>
     </comps>
   </HediffDef>
-
-  <DamageDef ParentName="Flame">
-    <defName>Ignition</defName>
-    <label>Ignition</label>
-    <workerClass>DamageWorker_AddInjury</workerClass>
-  </DamageDef>
-
-
 </Defs>

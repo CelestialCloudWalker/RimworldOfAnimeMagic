@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>IgnitionEdge</defName>
-    <label>Ignition Edge</label>
-    <description>The weapon glows faintly with fiery energy, its strikes leaving behind smoldering burns and charred wounds.</description>
+    <defName>WindEdge</defName>
+    <label>Wind Edge</label>
+    <description>The weapon hums with sharp gusts of wind, its strikes slicing through enemies with razor-like precision.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <injuryProps>
@@ -16,17 +16,26 @@
     </injuryProps>
     <comps>
         <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>Ignition</damageType>
+            <damageType>WindSlice</damageType>
             <damageValue>10</damageValue>
         </li>
     </comps>
   </HediffDef>
 
-  <DamageDef ParentName="Flame">
-    <defName>Ignition</defName>
-    <label>Ignition</label>
+  <DamageDef>
+    <defName>WindSlice</defName>
+    <label>Wind Slice</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been killed by a tornado.</deathMessage>
+    <hediff>Scratch</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Tornado</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
   </DamageDef>
+
 
 
 </Defs>
