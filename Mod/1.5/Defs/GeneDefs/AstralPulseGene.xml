@@ -20,6 +20,7 @@
       <li>TotalConcentrationBreathing</li>
       <li>ROMA_Invisability</li>
       <li>EnchantWeaponFire</li>
+      <li>EnchantWeaponFrostbite</li>
     </abilities>
     <geneClass>AnimeArsenal.Resource_Gene</geneClass>
     <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>

@@ -2,11 +2,11 @@
 <Defs>
 
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>Lostvayne</defName>
-    <label>Lostvayne</label>
-    <description>Lostvayne.</description>
+    <defName>TanjirosNichirinBlade</defName>
+    <label>Tanjiros Nichirin Blade</label>
+    <description>A legendary weapon forged to slay demons, adapting its power to the wielder's breath style.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponMelee/Lostvayne</texPath>
+      <texPath>Things/Item/Equipment/WeaponMelee/TanjirosNichirinBlade</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>2.0</drawSize>
     </graphicData>

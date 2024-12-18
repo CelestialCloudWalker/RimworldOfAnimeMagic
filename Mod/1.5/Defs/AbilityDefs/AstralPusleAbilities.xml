@@ -13,7 +13,6 @@
       <drawAimPie>false</drawAimPie>
       <requireLineOfSight>false</requireLineOfSight>
       <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
-      <soundCast>Pawn_Ghoul_Frenzy</soundCast>
       <targetable>false</targetable>
       <targetParams>
         <canTargetSelf>true</canTargetSelf>
@@ -29,6 +28,10 @@
         <hediffDef>TotalConcentrationBreathingEffect</hediffDef>
         <onlyApplyToSelf>true</onlyApplyToSelf>
         <replaceExisting>true</replaceExisting>
+      </li>
+      <li Class="HediffCompProperties_DisappearsDisableable">
+        <disappearsAfterTicks>1000</disappearsAfterTicks> <!-- 5 days -->
+        <showRemainingTime>true</showRemainingTime>
       </li>
     </comps>
     <descriptionHyperlinks>

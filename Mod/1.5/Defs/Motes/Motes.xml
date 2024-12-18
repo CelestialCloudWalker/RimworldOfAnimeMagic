@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="MoteBase">
+      <defName>Mote_TotalConcentrationBreathing</defName>
+      <altitudeLayer>MoteOverhead</altitudeLayer>
+      <mote>
+          <fadeInTime>0.1</fadeInTime>
+          <solidTime>999999999</solidTime>
+          <fadeOutTime>0.5</fadeOutTime>
+          <needsMaintenance>True</needsMaintenance>
+      </mote>
+      <graphicData>
+          <drawSize>1.2</drawSize>
+          <drawOffset>(0,0,0.65)</drawOffset>
+          <color>(255, 100, 0, 180)</color>
+          <texPath>Things/Mote/BrightFlash</texPath>
+          <shaderType>MoteGlow</shaderType>
+      </graphicData>
+  </ThingDef>
+
+  </Defs>

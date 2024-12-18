@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>IgnitionEdge</defName>
-    <label>Ignition Edge</label>
+    <defName>WisteriaPoison</defName>
+    <label>Wisteria Poison</label>
     <description>The weapon glows faintly with fiery energy, its strikes leaving behind smoldering burns and charred wounds.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
         <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>Burn</damageType>
+            <damageType>AcidBurn</damageType>
             <damageValue>10</damageValue>
         </li>
     </comps>

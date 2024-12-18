@@ -2,11 +2,11 @@
 <Defs>
 
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>Lostvayne</defName>
-    <label>Lostvayne</label>
-    <description>Lostvayne.</description>
+    <defName>LegendarySword</defName>
+    <label>Legendary Sword</label>
+    <description>The Legendary Sword, one of four Legendary Weapons, is imbued with a spirit from another world, summoned to unleash unparalleled power in its new realm.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponMelee/Lostvayne</texPath>
+      <texPath>Things/Item/Equipment/WeaponMelee/LegendarySword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>2.0</drawSize>
     </graphicData>
