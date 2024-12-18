@@ -4,7 +4,10 @@
       <defName>FlameBreath:IgnitionEdge</defName>
       <label>Flame Breath: Ignition Edge</label>
       <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
+<<<<<<< HEAD
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+=======
+>>>>>>> 4f2a538033ae986e732ad17ed72cbfea6165b49c
       <targetRequired>false</targetRequired>
       <verbProperties>
           <verbClass>Verb_CastAbility</verbClass>

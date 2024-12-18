@@ -13,7 +13,11 @@
     <label>Thunder Breath</label>
     <resourceName>Thunder Breath</resourceName>
     <description>Carriers of this gene can channel intense electrical energy into their body, unleashing rapid and devastating thunder-based attacks fueled by their inner breath.</description>
+<<<<<<< HEAD
     <iconPath>UI/Icons/Genes/Gene_ThunderBreath</iconPath>
+=======
+    <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
+>>>>>>> 4f2a538033ae986e732ad17ed72cbfea6165b49c
     <resourceLabel>Thunder Breath</resourceLabel>
     <resourceDescription>Current stored Breath, charged with electricity. This energy powers devastating thunder-based abilities.</resourceDescription>
     <abilities>
