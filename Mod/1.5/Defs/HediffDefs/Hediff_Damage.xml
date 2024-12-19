@@ -129,7 +129,6 @@
     <defName>TotalConcentrationBreathingEffect</defName>
     <label>Total Concentration Breathing</label>
     <description>The user is in a state of heightened physical resilience through focused breathing techniques.</description>
-
     <stages>
       <li>
         <label>Concentrated</label>

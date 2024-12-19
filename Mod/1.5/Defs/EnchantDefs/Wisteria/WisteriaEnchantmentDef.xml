@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>WisteriaEnchantment</defName>
+    <label>Wisteria Enchantment</label>
+    <description>A posion-based enchantment.</description>
+
+    <enchantHediff>WisteriaPoisonBlade</enchantHediff>
+    <!-- OR  <enchantHediff>WisteriaPoison</enchantHediff> -->
+    
+    <exhaustionHediff>WisteriaEnchantmentExhaustion</exhaustionHediff>
+    <resourceGene>InsectBreath</resourceGene>
+
+    <!-- More aggressive exhaustion -->
+    <exhaustionPerTick>0.15</exhaustionPerTick>
+    <ticksBeforeExhaustionStart>2000</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1000</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+
+    <!-- Higher resource cost -->
+    <ticksBetweenCost>1000</ticksBetweenCost>
+    <resourceCostPerTick>1.5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

@@ -13,11 +13,7 @@
     <label>Insect Breath</label>
     <resourceName>Insect Breath</resourceName>
     <description>Carriers of this gene strike with swift, venomous precision, mimicking the lethal stings of insects. Their movements conjure phantom butterflies, embodying both beauty and death.</description>
-<<<<<<< HEAD
     <iconPath>UI/Icons/Genes/Gene_InsectBreath</iconPath>
-=======
-    <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
->>>>>>> 4f2a538033ae986e732ad17ed72cbfea6165b49c
     <resourceLabel>Insect Breath</resourceLabel>
     <resourceDescription>Current stored Breath, refined for precision. This energy enables swift and venomous insect-based techniques.</resourceDescription>
     <abilities>

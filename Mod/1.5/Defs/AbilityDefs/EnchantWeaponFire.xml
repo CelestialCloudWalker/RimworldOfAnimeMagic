@@ -4,18 +4,15 @@
       <defName>FlameBreath:IgnitionEdge</defName>
       <label>Flame Breath: Ignition Edge</label>
       <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
-<<<<<<< HEAD
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
-=======
->>>>>>> 4f2a538033ae986e732ad17ed72cbfea6165b49c
       <targetRequired>false</targetRequired>
       <verbProperties>
           <verbClass>Verb_CastAbility</verbClass>
           <range>-1</range>
       </verbProperties>
       <comps>
-          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
-              <hediffDef>IgnitionEdge</hediffDef>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+              <enchantDef>FireEnchantment</enchantDef>
           </li>
           <li Class="AnimeArsenal.CompProperties_ResourceCost">
             <resourceGeneDef>FlameBreath</resourceGeneDef>

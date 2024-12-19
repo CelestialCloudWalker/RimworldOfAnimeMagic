@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- dont need a new category for each type, this is only for one UI screen -->
+  <GeneCategoryDef>
+    <defName>BreathingTechnique</defName>
+    <label>Breathing Techniques</label>
+    <description>Breath channels elemental energy through precise control, unlocking powerful techniques.</description>
+    <displayPriorityInXenotype>829</displayPriorityInXenotype>
+    <displayPriorityInGenepack>-432</displayPriorityInGenepack>
+  </GeneCategoryDef>
+</Defs>

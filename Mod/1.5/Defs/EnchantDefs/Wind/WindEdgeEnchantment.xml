@@ -21,21 +21,4 @@
         </li>
     </comps>
   </HediffDef>
-
-  <DamageDef>
-    <defName>WindSlice</defName>
-    <label>Wind Slice</label>
-    <workerClass>DamageWorker_AddInjury</workerClass>
-    <externalViolence>true</externalViolence>
-    <deathMessage>{0} has been killed by a tornado.</deathMessage>
-    <hediff>Scratch</hediff>
-    <hediffSolid>Crack</hediffSolid>
-    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-    <impactSoundType>Tornado</impactSoundType>
-    <armorCategory>Sharp</armorCategory>
-    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
-  </DamageDef>
-
-
-
 </Defs>

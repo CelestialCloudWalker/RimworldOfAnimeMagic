@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <Defs>
 
+  <!-- Abstract does not need a def name cannot be used directly-->
   <DamageDef Name="AA_LocalInjuryBase" Abstract="True">
     <workerClass>DamageWorker_AddInjury</workerClass>
     <defaultArmorPenetration>1</defaultArmorPenetration>
   </DamageDef>
 
-  <ToolCapacityDef>
-    <defName>TM_ThrumboCleave</defName>
-    <label>cleaving</label>
-  </ToolCapacityDef>
-
-
-
-
-
-  <DamageDef Name="AA_LocalInjuryBase" Abstract="True">
-    <DefName>AA_Name</DefName>
+  <!-- concrete DOES need a def name CAN be used directly inherits
+      <workerClass>
+      and
+      <defaultArmorPenetration>
+      from Name="AA_LocalInjuryBase"
+    -->
+  <DamageDef ParentName="AA_LocalInjuryBase" Name="">
     <label>Label</label>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} was destroyed by a.</deathMessage>
@@ -30,9 +26,24 @@
   </DamageDef>
 
 
+  <!-- Abstract does not need a def name cannot be used directly-->
   <HediffDef Name="AA_InjuryBase" Abstract="True">
-    <hediffClass>AA_NameHD</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass>
     <tendable>true</tendable>
     <displayWound>true</displayWound>
-	<labelNounPretty>{0} in the {1}</labelNounPretty>
+	  <labelNounPretty>{0} in the {1}</labelNounPretty>
   </HediffDef>
+
+
+  <!-- Abstract does not need a def name cannot be used directly
+        inherits all AA_InjuryBase properties
+        Is the base hediff for all burn hediffs, uses the
+      -->
+  <HediffDef ParentName="AA_InjuryBase" Name="AA_Burn" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <tendable>true</tendable>
+    <displayWound>true</displayWound>
+	  <labelNounPretty>{0} in the {1}</labelNounPretty>
+  </HediffDef>
+
+</Defs>

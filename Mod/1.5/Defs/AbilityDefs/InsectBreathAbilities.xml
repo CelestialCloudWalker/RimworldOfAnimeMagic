@@ -10,8 +10,8 @@
         <range>-1</range>
     </verbProperties>
     <comps>
-        <li Class="AnimeArsenal.CompProperties_ToggleHediff">
-            <hediffDef>WisteriaPoison</hediffDef>
+        <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+          <enchantDef>WisteriaEnchantment</enchantDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
             <resourceGeneDef>InsectBreath</resourceGeneDef>

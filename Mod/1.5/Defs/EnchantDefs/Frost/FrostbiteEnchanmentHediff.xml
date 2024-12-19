@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
         <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>Frostbite</damageType>
+            <damageType>AA_Frost</damageType>
             <damageValue>10</damageValue>
         </li>
     </comps>

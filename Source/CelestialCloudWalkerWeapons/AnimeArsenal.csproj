@@ -42,6 +42,7 @@
     <Compile Include="CelestialPatchApply.cs" />
     <Compile Include="Comps\CompProperties_ResourceCost.cs" />
     <Compile Include="Comps\CompProperties_ToggleHediff.cs" />
+    <Compile Include="Comps\EnchantDef.cs" />
     <Compile Include="GeneGizmo_ResourceAstralPulse.cs" />
     <Compile Include="Hediffs\HediffCompProperties_Enchant.cs" />
     <Compile Include="Resource Gene\ResourceGeneDef.cs" />

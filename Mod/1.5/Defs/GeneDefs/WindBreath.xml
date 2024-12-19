@@ -8,6 +8,35 @@
     <displayPriorityInGenepack>-43</displayPriorityInGenepack>
   </GeneCategoryDef>
 
+<!--
+AN EXAMPLE OF USING THE BASE RESOURCEGENDEF TO ONLY SET THE BITS YOU CARE ABOUT
+ <AnimeArsenal.ResourceGeneDef ParentName="AA_BaseBreathingGene">
+    <defName>WindBreath</defName>
+    <label>Wind Breath</label>
+    <resourceName>Wind Breath</resourceName>
+    <description>Using the basics of Wind Breathing, imbue your weapon with razor-sharp gusts of wind that cut through enemies with ease.</description>
+    <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
+    <resourceLabel>Wind Breath</resourceLabel>
+    <resourceDescription>Current stored Breath, refined for precision. This energy enables swift and venomous insect-based techniques.</resourceDescription>
+    <abilities>
+      <li>TotalConcentrationBreathing</li>
+      <li>WindBreath:WindEdge</li>
+    </abilities>
+    <geneClass>AnimeArsenal.Resource_Gene</geneClass>
+    <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
+    <maxStat>AstralPulse</maxStat>
+    <regenTicks>AstralPulse_RegenTicks</regenTicks>
+    <regenStat>AstralPulse_RegenAmount</regenStat>
+    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
+    <costMult>AstralPulse_Cost</costMult>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(50, 205, 50)</barColor>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+  </AnimeArsenal.ResourceGeneDef>
+
+-->
+
+<!-- same Def but withuot inheriting from AA_BaseBreathingGene -->
   <AnimeArsenal.ResourceGeneDef>
     <defName>WindBreath</defName>
     <label>Wind Breath</label>

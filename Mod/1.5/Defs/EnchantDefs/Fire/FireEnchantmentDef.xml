@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>FireEnchantment</defName>
+    <label>Fire Enchantment</label>
+    <description>A powerful fire-based enchantment that enhances combat abilities but causes exhaustion over time.</description>
+
+    <enchantHediff>IgnitionEdge</enchantHediff>
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <resourceGene>FlameBreath</resourceGene>
+
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>0.1</exhaustionPerTick>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1250</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>2500</exhausationCooldownTicks>
+
+    <!-- Resource Cost Settings -->
+    <ticksBetweenCost>1250</ticksBetweenCost>
+    <resourceCostPerTick>1.0</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>
