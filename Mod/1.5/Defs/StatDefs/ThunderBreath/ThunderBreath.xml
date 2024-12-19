@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <StatDef>
-    <defName>FlameBreath</defName>
-    <label>FlameBreath</label>
+    <defName>ThunderBreath</defName>
+    <label>ThunderBreath</label>
     <category>PawnMisc</category>
     <description>Breath channels elemental energy through precise control, unlocking powerful techniques.</description>
     <defaultBaseValue>100</defaultBaseValue>
