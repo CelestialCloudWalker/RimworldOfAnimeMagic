@@ -89,7 +89,6 @@ namespace AnimeArsenal
         public override void OnToggleOff()
         {
             RemoveHediff(this.parent.pawn);
-            exhaustionHediffTimer = 0;
         }
 
         public override void OnToggleOn()
@@ -135,6 +134,7 @@ namespace AnimeArsenal
                 if (exhaustionCooldownRemaining <= 0)
                 {
                     OnExhaustionEnded();
+   
                 }
             }
         }
@@ -144,6 +144,11 @@ namespace AnimeArsenal
             if (timeUntilExhaustedTimer > 0)
             {
                 timeUntilExhaustedTimer--;
+            }
+
+            if (exhaustionHediffTimer > 0)
+            {
+                exhaustionHediffTimer--;
             }
         }
 
@@ -183,6 +188,7 @@ namespace AnimeArsenal
 
         private void OnExhaustionEnded()
         {
+            exhaustionCooldownRemaining = 0;
             isExhausted = false;
         }
 
