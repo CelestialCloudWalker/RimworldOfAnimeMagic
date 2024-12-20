@@ -17,6 +17,6 @@
 
     <!-- Resource Cost Settings -->
     <ticksBetweenCost>1250</ticksBetweenCost>
-    <resourceCostPerTick>1.0</resourceCostPerTick>
+    <resourceCostPerTick>10.0</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

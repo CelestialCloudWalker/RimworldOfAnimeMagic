@@ -35,7 +35,7 @@
       <li>0.5</li>
       <li>0.75</li>
     </resourceGizmoThresholds>
-    <displayCategory>Breath</displayCategory>
+    <displayCategory>BreathingTechnique</displayCategory>
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(255, 69, 0)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>

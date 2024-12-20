@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
   <GeneCategoryDef>
-    <defName>InsectBreath</defName>
-    <label>Insect Breath</label>
+    <defName>FrostBreath</defName>
+    <label>Frost Breath</label>
     <description>Breath channels elemental energy through precise control, unlocking powerful techniques.</description>
     <displayPriorityInXenotype>825</displayPriorityInXenotype>
-    <displayPriorityInGenepack>-46</displayPriorityInGenepack>
+    <displayPriorityInGenepack>-44</displayPriorityInGenepack>
   </GeneCategoryDef>
 
   <AnimeArsenal.ResourceGeneDef>
-    <defName>InsectBreath</defName>
-    <label>Insect Breath</label>
-    <resourceName>Insect Breath</resourceName>
-    <description>Carriers of this gene strike with swift, venomous precision, mimicking the lethal stings of insects. Their movements conjure phantom butterflies, embodying both beauty and death.</description>
-    <iconPath>UI/Icons/Genes/Gene_InsectBreath</iconPath>
-    <resourceLabel>Insect Breath</resourceLabel>
-    <resourceDescription>Current stored Breath, refined for precision. This energy enables swift and venomous insect-based techniques.</resourceDescription>
+    <defName>FrostBreath</defName>
+    <label>Frost Breath</label>
+    <resourceName>Frost Breath</resourceName>
+    <description>Carriers of this gene can channel the biting chill of frost into their body, unleashing rapid and devastating ice-based attacks fueled by their inner breath. Their power brings frigid winds and piercing cold to the battlefield.</description>
+    <iconPath>UI/Icons/Genes/Gene_FrostBreath</iconPath>
+    <resourceLabel>Frost Breath</resourceLabel>
+    <resourceDescription>Current stored Breath, charged with the essence of frost. This energy powers devastating ice-based abilities, freezing enemies in their tracks.</resourceDescription>
     <abilities>
       <li>TotalConcentrationBreathing</li>
-      <li>InsectBreath:VenomStrike</li>
+      <li>FrostBreath:FrostbiteEdge</li>
     </abilities>
     <geneClass>AnimeArsenal.Resource_Gene</geneClass>
     <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
@@ -36,8 +37,9 @@
     </resourceGizmoThresholds>
     <displayCategory>BreathingTechnique</displayCategory>
     <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(218, 112, 214)</barColor>
+    <barColor>(173, 216, 230)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
   </AnimeArsenal.ResourceGeneDef>
+
 
 </Defs>
