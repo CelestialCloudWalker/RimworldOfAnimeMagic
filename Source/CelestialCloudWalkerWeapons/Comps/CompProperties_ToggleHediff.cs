@@ -80,16 +80,16 @@ namespace AnimeArsenal
     {
         new CompProperties_ToggleEnchant Props => (CompProperties_ToggleEnchant)props;
 
-        private int CurrentTickCount = 0;
-        private int CurrentExhaustionTicks = 0;
-        private bool Exhausted = false;
-        private int ExhaustionTicksRemaining = 0;
-
-        private int ExhaustionTickTimer = 0;
+        private int resourceCostTimer = 0;
+        private int timeUntilExhaustedTimer = 0;          
+        private bool isExhausted = false;                
+        private int exhaustionCooldownRemaining = 0;     
+        private int exhaustionHediffTimer = 0;            
 
         public override void OnToggleOff()
         {
             RemoveHediff(this.parent.pawn);
+            exhaustionHediffTimer = 0;
         }
 
         public override void OnToggleOn()
@@ -105,48 +105,62 @@ namespace AnimeArsenal
             base.CompTick();
             if (IsActive)
             {
-                CurrentTickCount += 1;
+                resourceCostTimer += 1;
 
-                if (CurrentTickCount >= Props.enchantDef.ticksBetweenCost)
+                if (resourceCostTimer >= Props.enchantDef.ticksBetweenCost)
                 {
                     if (ShouldCancel())
                     {
                         this.OnToggleOff();
                     }
 
-                    CurrentTickCount = 0;
+                    resourceCostTimer = 0;
                 }
 
-                TickExhaustion();
+                TickActiveExhaustion();
             }
-
-            if (Exhausted)
+            else
             {
-                ExhaustionTicksRemaining--;
+                TickExhausted();
+                ReduceExhaustionBuildup();
+            }
+        }
 
-                if (ExhaustionTicksRemaining <= 0)
+        private void TickExhausted()
+        {
+            if (isExhausted)
+            {
+                exhaustionCooldownRemaining--;
+
+                if (exhaustionCooldownRemaining <= 0)
                 {
-                   OnExhaustionEnded();
+                    OnExhaustionEnded();
                 }
             }
         }
 
-        private void TickExhaustion()
+        private void ReduceExhaustionBuildup()
         {
-            CurrentExhaustionTicks++;
-
-            if (CurrentExhaustionTicks >= Props.enchantDef.ticksBeforeExhaustionStart)
+            if (timeUntilExhaustedTimer > 0)
             {
-                CurrentExhaustionTicks = 0;
+                timeUntilExhaustedTimer--;
+            }
+        }
+
+        private void TickActiveExhaustion()
+        {
+            timeUntilExhaustedTimer++;
+
+            if (timeUntilExhaustedTimer >= Props.enchantDef.ticksBeforeExhaustionStart)
+            {
+                timeUntilExhaustedTimer = 0;
                 OnExhaustionStarted();
             }
 
+            exhaustionHediffTimer++;
 
-            ExhaustionTickTimer++;
-
-            if (ExhaustionTickTimer >= Props.enchantDef.ticksPerExhaustionIncrease)
+            if (exhaustionHediffTimer >= Props.enchantDef.ticksPerExhaustionIncrease)
             {
-                //cant add one if its not set
                 if (Props.enchantDef.exhaustionHediff != null)
                 {
                     Hediff hediff = this.parent.pawn.health.GetOrAddHediff(Props.enchantDef.exhaustionHediff);
@@ -157,21 +171,19 @@ namespace AnimeArsenal
                     }
                 }
 
-                ExhaustionTickTimer = 0;
+                exhaustionHediffTimer = 0;
             }
-
         }
-
 
         private void OnExhaustionStarted()
         {
-            Exhausted = true;
-            ExhaustionTicksRemaining = Props.enchantDef.exhausationCooldownTicks;
+            isExhausted = true;
+            exhaustionCooldownRemaining = Props.enchantDef.exhausationCooldownTicks;
         }
 
         private void OnExhaustionEnded()
         {
-            Exhausted = false;
+            isExhausted = false;
         }
 
         private Resource_Gene GetResourcGene(Pawn Pawn)
@@ -180,7 +192,6 @@ namespace AnimeArsenal
             {
                 return null;
             }
-
 
             Resource_Gene resource_Gene = (Resource_Gene)Pawn.genes.GetGene(Props.enchantDef.resourceGene);
             if (resource_Gene != null)
@@ -201,14 +212,14 @@ namespace AnimeArsenal
 
             if (rsourceGene != null)
             {
-                return  Props.enchantDef.resourceCostPerTick > 0 && rsourceGene.HasAstralPulse(GetChannelCost());
+                return Props.enchantDef.resourceCostPerTick > 0 && rsourceGene.HasAstralPulse(GetChannelCost());
             }
             return true;
         }
 
         private float GetChannelCost()
         {
-            return Props.enchantDef != null ?  Props.enchantDef.resourceCostPerTick * (Exhausted ? 2f : 1f) : 5f;
+            return Props.enchantDef != null ? Props.enchantDef.resourceCostPerTick * (isExhausted ? 2f : 1f) : 5f;
         }
 
         private bool ShouldCancel()
@@ -245,11 +256,11 @@ namespace AnimeArsenal
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look(ref CurrentTickCount, "currentTickCount", 0);
-            Scribe_Values.Look(ref CurrentExhaustionTicks, "currentExhaustionTicks", 0);
-            Scribe_Values.Look(ref Exhausted, "exhausted", false);
-            Scribe_Values.Look(ref ExhaustionTicksRemaining, "exhaustionTicksRemaining", 0);
-            Scribe_Values.Look(ref ExhaustionTickTimer, "exhaustionTickTimer", 0);
+            Scribe_Values.Look(ref resourceCostTimer, "resourceCostTimer", 0);
+            Scribe_Values.Look(ref timeUntilExhaustedTimer, "timeUntilExhaustedTimer", 0);
+            Scribe_Values.Look(ref isExhausted, "isExhausted", false);
+            Scribe_Values.Look(ref exhaustionCooldownRemaining, "exhaustionCooldownRemaining", 0);
+            Scribe_Values.Look(ref exhaustionHediffTimer, "exhaustionHediffTimer", 0);
         }
     }
 }
