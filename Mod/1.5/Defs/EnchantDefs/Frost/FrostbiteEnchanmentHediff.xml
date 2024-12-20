@@ -3,7 +3,7 @@
   <HediffDef>
     <defName>FrostbiteEnchantment</defName>
     <label>frostbite enchantment</label>
-    <description>WORDS AND STUFF.</description>
+    <description>Imbues the weapon with a chilling enchantment that freezes enemies on contact, causing frostbite and slowing their movements with the biting cold.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <injuryProps>
@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
         <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>AA_Frost</damageType>
+            <damageType>Frostbite</damageType>
             <damageValue>10</damageValue>
         </li>
     </comps>
