@@ -40,10 +40,15 @@
   <ItemGroup>
     <Compile Include="AMConstants.cs" />
     <Compile Include="CelestialPatchApply.cs" />
+    <Compile Include="Comps\CompAbilityEffect_Toggleable.cs" />
     <Compile Include="Comps\CompProperties_ResourceCost.cs" />
+    <Compile Include="Comps\CompProperties_ToggleEnchant.cs" />
     <Compile Include="Comps\CompProperties_ToggleHediff.cs" />
     <Compile Include="Comps\EnchantDef.cs" />
-    <Compile Include="GeneGizmo_ResourceAstralPulse.cs" />
+    <Compile Include="Resource Gene\BreathingTechniqueGene.cs" />
+    <Compile Include="Resource Gene\BreathingTechniqueGeneDef.cs" />
+    <Compile Include="Resource Gene\GeneGizmoBreath.cs" />
+    <Compile Include="Resource Gene\GeneGizmo_ResourceAstralPulse.cs" />
     <Compile Include="Hediffs\HediffCompProperties_Enchant.cs" />
     <Compile Include="Resource Gene\ResourceGeneDef.cs" />
     <Compile Include="Resource Gene\Resource_Gene.cs" />

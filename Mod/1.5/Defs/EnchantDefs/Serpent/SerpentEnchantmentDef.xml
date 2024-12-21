@@ -6,15 +6,7 @@
     <description>A frost-based enchantment that provides defensive benefits but drains energy quickly.</description>
 
     <enchantHediff>SerpentFangEdge</enchantHediff>
-    <exhaustionHediff>SerpentEnchantmentExhaustion</exhaustionHediff>
     <resourceGene>SerpentBreath</resourceGene>
-
-    <!-- More aggressive exhaustion -->
-    <exhaustionPerTick>0.15</exhaustionPerTick>
-    <ticksBeforeExhaustionStart>2000</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1000</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
-
     <!-- Higher resource cost -->
     <ticksBetweenCost>1000</ticksBetweenCost>
     <resourceCostPerTick>1.5</resourceCostPerTick>

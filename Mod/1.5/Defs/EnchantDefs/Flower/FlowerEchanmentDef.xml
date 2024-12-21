@@ -4,16 +4,8 @@
     <defName>EnchantRoseThornEdge</defName>
     <label>Rose Thorn Edge</label>
     <description>A thorn-based enchantment that provides offensive capabilities but drains energy quickly.</description>
-
     <enchantHediff>RoseThornEdge</enchantHediff>
     <resourceGene>FlowerBreath</resourceGene>
-
-    <!-- More aggressive exhaustion -->
-    <exhaustionPerTick>0.15</exhaustionPerTick>
-    <ticksBeforeExhaustionStart>2000</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1000</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
-
     <!-- Higher resource cost -->
     <ticksBetweenCost>1000</ticksBetweenCost>
     <resourceCostPerTick>1.5</resourceCostPerTick>

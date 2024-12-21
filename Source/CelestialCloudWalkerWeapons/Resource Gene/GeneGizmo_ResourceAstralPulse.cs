@@ -9,10 +9,11 @@ using Verse.Sound;
 
 namespace AnimeArsenal
 {
-    internal class GeneGizmo_ResourceAstral : GeneGizmo_Resource
+    public class GeneGizmo_ResourceAstral : GeneGizmo_Resource
     {
         private const float TotalPulsateTime = 0.85f;
         private List<Pair<IGeneResourceDrain, float>> tmpDrainGenes = new List<Pair<IGeneResourceDrain, float>>();
+
         protected override string Title
         {
             get
@@ -24,8 +25,8 @@ namespace AnimeArsenal
                 return base.Title;
             }
         }
-        public GeneGizmo_ResourceAstral(Gene_Resource gene, List<IGeneResourceDrain> drainGenes, Color barColor, Color barHighlightColor)
-            : base(gene, drainGenes, barColor, barHighlightColor)
+
+        public GeneGizmo_ResourceAstral(Gene_Resource gene, List<IGeneResourceDrain> drainGenes, Color barColor, Color barHighlightColor) : base(gene, drainGenes, barColor, barHighlightColor)
         {
             if (gene == null)
             {

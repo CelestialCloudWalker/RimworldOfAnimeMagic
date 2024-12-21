@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <GeneCategoryDef>
-    <defName>FlowerBreath</defName>
-    <label>Flower Breath</label>
-    <description>Breath channels elemental energy through precise control, unlocking powerful techniques.</description>
-    <displayPriorityInXenotype>825</displayPriorityInXenotype>
-    <displayPriorityInGenepack>-44</displayPriorityInGenepack>
-  </GeneCategoryDef>
-
-  <AnimeArsenal.ResourceGeneDef>
+  <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>FlowerBreath</defName>
     <label>Flower Breath</label>
     <resourceName>Flower Breath</resourceName>
@@ -21,13 +13,7 @@
       <li>TotalConcentrationBreathing</li>
       <li>FlowerBreath:RoseThornEdge</li>
     </abilities>
-    <geneClass>AnimeArsenal.Resource_Gene</geneClass>
-    <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
     <maxStat>AstralPulse</maxStat>
-    <regenTicks>AstralPulse_RegenTicks</regenTicks>
-    <regenStat>AstralPulse_RegenAmount</regenStat>
-    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
-    <costMult>AstralPulse_Cost</costMult>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
     <resourceGizmoThresholds>
@@ -39,7 +25,8 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(255, 182, 193)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-  </AnimeArsenal.ResourceGeneDef>
+    <exhaustionHediff>WisteriaEnchantmentExhaustion</exhaustionHediff>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
 
 
 </Defs>

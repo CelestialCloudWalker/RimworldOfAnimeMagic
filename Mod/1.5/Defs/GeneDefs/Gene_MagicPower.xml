@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <GeneCategoryDef>
-    <defName>MagicPower</defName>
-    <label>Magic Power</label>
-    <description>A reserve of cosmic energy that powers abilities.</description>
-    <displayPriorityInXenotype>822</displayPriorityInXenotype>
-    <displayPriorityInGenepack>-45</displayPriorityInGenepack>
-  </GeneCategoryDef>
-
-  <AnimeArsenal.ResourceGeneDef>
+  <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>MagicPower</defName>
     <label>MagicPower</label>
     <resourceName>Magic Power</resourceName>
@@ -16,13 +8,7 @@
     <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
     <resourceLabel>Astral Energy</resourceLabel>
     <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
-    <geneClass>AnimeArsenal.Resource_Gene</geneClass>
-    <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
     <maxStat>MagicPower</maxStat>
-    <regenTicks>AstralPulse_RegenTicks</regenTicks>
-    <regenStat>AstralPulse_RegenAmount</regenStat>
-    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
-    <costMult>AstralPulse_Cost</costMult>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
     <resourceGizmoThresholds>
@@ -34,6 +20,6 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(3, 3, 138)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-  </AnimeArsenal.ResourceGeneDef>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
 
 </Defs>

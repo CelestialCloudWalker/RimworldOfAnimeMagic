@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>SerpentEnchantmentExhaustion</defName>
-    <label>SerpentEnchantmentExhaustion</label>
+    <defName>SunEnchantmentExhaustion</defName>
+    <label>SunEnchantmentExhaustion</label>
     <description>WORDS AND STUFF.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>

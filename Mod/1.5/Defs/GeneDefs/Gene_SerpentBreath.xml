@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <GeneCategoryDef>
-    <defName>SerpentBreath</defName>
-    <label>Serpent Breath</label>
-    <description>Breath channels elemental energy through precise control, unlocking powerful techniques inspired by the fluidity and precision of serpents.</description>
-    <displayPriorityInXenotype>825</displayPriorityInXenotype>
-    <displayPriorityInGenepack>-44</displayPriorityInGenepack>
-  </GeneCategoryDef>
-
-  <AnimeArsenal.ResourceGeneDef>
+  <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>SerpentBreath</defName>
     <label>Serpent Breath</label>
     <resourceName>Serpent Breath</resourceName>
@@ -21,13 +12,7 @@
       <li>TotalConcentrationBreathing</li>
       <li>SerpentBreath:SerpentFangEdge</li>
     </abilities>
-    <geneClass>AnimeArsenal.Resource_Gene</geneClass>
-    <resourceGizmoType>AnimeArsenal.GeneGizmo_ResourceAstral</resourceGizmoType>
     <maxStat>AstralPulse</maxStat>
-    <regenTicks>AstralPulse_RegenTicks</regenTicks>
-    <regenStat>AstralPulse_RegenAmount</regenStat>
-    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
-    <costMult>AstralPulse_Cost</costMult>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
     <resourceGizmoThresholds>
@@ -39,7 +24,6 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(138, 43, 226)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-  </AnimeArsenal.ResourceGeneDef>
-
-
+    <exhaustionHediff>SerpentEnchantmentExhaustion</exhaustionHediff>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
 </Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- all the stuff your breathing genes have in common can be put in one place -->
+  <AnimeArsenal.BreathingTechniqueGeneDef Name="AA_BaseBreathingGene" Abstract="True">
+    <geneClass>AnimeArsenal.BreathingTechniqueGene</geneClass>
+    <resourceGizmoType>AnimeArsenal.GeneGizmoBreath</resourceGizmoType>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>BreathingTechnique</displayCategory>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+
+    <!-- Generic Stats Settings -->
+    <regenTicks>AstralPulse_RegenTicks</regenTicks>
+    <regenStat>AstralPulse_RegenAmount</regenStat>
+    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
+    <costMult>AstralPulse_Cost</costMult>
+
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>1.1</exhaustionPerTick>
+    <!-- Default to fire exhaustion -->
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1250</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>2500</exhausationCooldownTicks>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
+</Defs>
