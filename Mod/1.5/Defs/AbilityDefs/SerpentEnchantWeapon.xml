@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>SerpentBreath:SerpentFangEdge</defName>
+    <label>Serpent Breath: Serpent Fang</label>
+    <description>Harnessing the techniques of Serpent Breathing, imbue your weapon with the lethal precision of a serpent's fangs. Each strike delivers deep, bleeding wounds, leaving foes vulnerable to further attacks.</description>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+          <enchantDef>SerpentEnchantment</enchantDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>SerpentBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

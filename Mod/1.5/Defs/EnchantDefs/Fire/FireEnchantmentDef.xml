@@ -10,13 +10,13 @@
     <resourceGene>FlameBreath</resourceGene>
 
     <!-- Exhaustion Settings -->
-    <exhaustionPerTick>0.1</exhaustionPerTick>
+    <exhaustionPerTick>1.1</exhaustionPerTick>
     <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
     <ticksPerExhaustionIncrease>1250</ticksPerExhaustionIncrease>
     <exhausationCooldownTicks>2500</exhausationCooldownTicks>
 
     <!-- Resource Cost Settings -->
-    <ticksBetweenCost>1250</ticksBetweenCost>
-    <resourceCostPerTick>10.0</resourceCostPerTick>
+    <ticksBetweenCost>100</ticksBetweenCost>
+    <resourceCostPerTick>30</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>
