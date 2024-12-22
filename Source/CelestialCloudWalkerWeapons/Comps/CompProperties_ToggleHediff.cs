@@ -17,6 +17,11 @@ namespace AnimeArsenal
     {
         public new CompProperties_ToggleHediff Props => (CompProperties_ToggleHediff)props;
 
+        public override bool CanStart()
+        {
+            return true;
+        }
+
         public override void OnToggleOff()
         {
             Hediff existingHediff = this.parent.pawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffDef);

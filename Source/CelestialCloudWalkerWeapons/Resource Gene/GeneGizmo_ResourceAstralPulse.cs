@@ -35,38 +35,25 @@ namespace AnimeArsenal
             }
         }
 
-        public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
-        {
-            if (gene == null) return new GizmoResult(GizmoState.Clear);
+        //public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
+        //{
+        //    if (gene == null) return new GizmoResult(GizmoState.Clear);
 
-            GizmoResult result = base.GizmoOnGUI(topLeft, maxWidth, parms);
-            float num = Mathf.Repeat(Time.time, TotalPulsateTime);
+        //    GizmoResult result = base.GizmoOnGUI(topLeft, maxWidth, parms);
+        //    float num = Mathf.Repeat(Time.time, TotalPulsateTime);
 
-            if (gene is Resource_Gene cursedEnergy)
-            {
-                Target = num;
-            }
-            return result;
-        }
+        //    if (gene is Resource_Gene cursedEnergy)
+        //    {
+        //        Target = num;
+        //    }
+        //    return result;
+        //}
 
-        protected override void DrawHeader(Rect headerRect, ref bool mouseOverElement)
-        {
-            if (gene == null || gene.pawn == null) return;
-
-            if ((gene.pawn.IsColonistPlayerControlled || gene.pawn.IsPrisonerOfColony) && gene is Resource_Gene resourceGene)
-            {
-                headerRect.xMax -= 24f;
-                Rect rect = new Rect(headerRect.xMax, headerRect.y, 24f, 24f);
-                Widgets.DefIcon(rect, FleckDefOf.HealingCross);
-                if (Mouse.IsOver(rect))
-                {
-                    resourceGene.EnableResource = !resourceGene.EnableResource;
-                    Widgets.DrawHighlight(rect);
-                }
-            }
-
-            base.DrawHeader(headerRect, ref mouseOverElement);  
-        }
+        //protected override void DrawHeader(Rect headerRect, ref bool mouseOverElement)
+        //{
+        //    if (gene == null || gene.pawn == null) return;
+        //    base.DrawHeader(headerRect, ref mouseOverElement);  
+        //}
 
         protected override string GetTooltip()
         {

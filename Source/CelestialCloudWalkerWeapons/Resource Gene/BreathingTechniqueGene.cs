@@ -8,12 +8,27 @@ namespace AnimeArsenal
         new BreathingTechniqueGeneDef Def => (BreathingTechniqueGeneDef)def;
 
         private int timeUntilExhaustedTimer = 0;
-        private bool isExhausted = false;
+        public bool isExhausted = false;
         private int exhaustionCooldownRemaining = 0;
         private int exhaustionHediffTimer = 0;
 
 
-        public float ExhaustionProgress => Mathf.Clamp01(exhaustionCooldownRemaining / Def.exhausationCooldownTicks);
+        public float ExhaustionProgress
+        {
+            get
+            {
+                if (isExhausted)
+                {
+                   return Mathf.Clamp01((float)exhaustionCooldownRemaining / (float)Def.exhausationCooldownTicks);
+                }
+                else 
+                {
+                    return Mathf.Clamp01((float)timeUntilExhaustedTimer / (float)Def.ticksBeforeExhaustionStart);
+                }
+            }
+        }
+            
+           
 
 
         public void TickExhausted()

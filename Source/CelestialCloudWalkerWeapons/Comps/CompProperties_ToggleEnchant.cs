@@ -18,13 +18,6 @@ namespace AnimeArsenal
         new CompProperties_ToggleEnchant Props => (CompProperties_ToggleEnchant)props;
 
         private int resourceCostTimer = 0;
-        private int timeUntilExhaustedTimer = 0;
-        private bool isExhausted = false;
-        private int exhaustionCooldownRemaining = 0;
-        private int exhaustionHediffTimer = 0;
-
-
-
 
         private Resource_Gene _ResourceGene;
         private Resource_Gene ResourceGene
@@ -119,7 +112,7 @@ namespace AnimeArsenal
 
         private float GetChannelCost()
         {
-            return Props.enchantDef != null ? Props.enchantDef.resourceCostPerTick * (isExhausted ? 2f : 1f) : 5f;
+            return Props.enchantDef != null ? Props.enchantDef.resourceCostPerTick * (BreathingTechniqueGene.isExhausted ? 2f : 1f) : 5f;
         }
 
         private bool ShouldCancel()
