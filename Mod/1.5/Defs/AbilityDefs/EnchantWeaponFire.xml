@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>FlameBreath:IgnitionEdge</defName>
-      <label>Flame Breath: Ignition Edge</label>
+      <defName>FlameBreathIgnitionEdge</defName>
+      <label>Flame Breath Ignition Edge</label>
       <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>

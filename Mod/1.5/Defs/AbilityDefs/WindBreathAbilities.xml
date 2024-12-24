@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>WindBreath:WindEdge</defName>
-      <label>Wind Breath: Wind Edge</label>
+      <defName>WindBreathWindEdge</defName>
+      <label>Wind Breath Wind Edge</label>
       <description>Using the basics of Wind Breathing, imbue your weapon with razor-sharp gusts of wind that cut through enemies with ease.</description>
       <targetRequired>false</targetRequired>
       <verbProperties>

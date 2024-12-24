@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>MistBreathing</defName>
+    <label>Mist Breathing</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was enveloped by mist breathing.</deathMessage>
+    <hediff>MistWound</hediff>
+    <hediffSkin>MistWound</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>MistWound</defName>
+    <label>mist laceration</label>
+    <labelNoun>a mist breathing wound</labelNoun>
+    <description>A wound caused by the ethereal edge of mist breathing.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.72</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.20</infectionChance>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.035</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.03</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Dissipated</destroyedLabel>
+      <destroyedOutLabel>Dispersed</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

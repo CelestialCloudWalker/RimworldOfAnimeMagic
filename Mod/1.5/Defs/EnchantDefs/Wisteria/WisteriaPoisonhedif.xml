@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
         <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>AcidBurn</damageType>
+            <damageType>AA_WisteriaPosion</damageType>
             <damageValue>10</damageValue>
         </li>
     </comps>

@@ -5,11 +5,11 @@
     <label>Wisteria Enchantment</label>
     <description>A posion-based enchantment.</description>
 
-    <enchantHediff>WisteriaPoisonBlade</enchantHediff>
+    <enchantHediff>WisteriaPoison</enchantHediff>
     <resourceGene>InsectBreath</resourceGene>
 
     <!-- Higher resource cost -->
-    <ticksBetweenCost>1000</ticksBetweenCost>
-    <resourceCostPerTick>1.5</resourceCostPerTick>
+    <ticksBetweenCost>120</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

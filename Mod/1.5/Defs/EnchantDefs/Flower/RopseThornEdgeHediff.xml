@@ -15,7 +15,7 @@
     </injuryProps>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>AA_RosePetalCut</damageType>
+        <damageType>RosePetalCut</damageType>
         <damageValue>10</damageValue>
       </li>
     </comps>

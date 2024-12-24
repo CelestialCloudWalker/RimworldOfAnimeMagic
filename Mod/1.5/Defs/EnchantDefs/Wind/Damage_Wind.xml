@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>  
+<Defs>
     <DamageDef>
       <defName>WindSlice</defName>
       <label>Wind Slice</label>
       <workerClass>DamageWorker_AddInjury</workerClass>
       <externalViolence>true</externalViolence>
       <deathMessage>{0} has been killed by a tornado.</deathMessage>
-      <hediff>Scratch</hediff>
+      <hediff>WindLaceration</hediff>
       <hediffSolid>Crack</hediffSolid>
       <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
       <impactSoundType>Tornado</impactSoundType>
       <armorCategory>Sharp</armorCategory>
-      <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+      <overkillPctToDestroyPart>0.7</overkillPctToDestroyPart>
     </DamageDef>
+
+    <HediffDef ParentName="InjuryBase">
+      <defName>WindLaceration</defName>
+      <label>wind laceration</label>
+      <labelNoun>a wind cut</labelNoun>
+      <description>A clean cut caused by razor-sharp wind.</description>
+      <comps>
+        <li Class="HediffCompProperties_TendDuration">
+          <severityPerDayTended>-0.78</severityPerDayTended>
+        </li>
+      </comps>
+      <injuryProps>
+        <painPerSeverity>0.035</painPerSeverity>
+        <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+        <bleedRate>0.04</bleedRate>
+        <canMerge>true</canMerge>
+        <destroyedLabel>Sliced off</destroyedLabel>
+        <destroyedOutLabel>Sliced through</destroyedOutLabel>
+      </injuryProps>
+    </HediffDef>
 </Defs>

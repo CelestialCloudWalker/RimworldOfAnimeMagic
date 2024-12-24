@@ -47,13 +47,6 @@
             </capacities>
             <power>15</power>
             <cooldownTime>2</cooldownTime>
-            <extraMeleeDamages>
-              <li>
-                <def>HeavensFlame</def> <!-- here -->
-                <amount>8</amount>
-                <chance>1</chance>
-              </li>
-            </extraMeleeDamages>
           </li>
         </tools>
 		</ThingDef>

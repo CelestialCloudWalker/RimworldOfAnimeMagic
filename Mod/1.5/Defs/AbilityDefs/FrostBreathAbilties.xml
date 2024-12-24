@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>FrostBreath:FrostbiteEdge</defName>
-      <label>Frost Breath: Frostbite</label>
+      <defName>FrostBreathFrostbiteEdge</defName>
+      <label>Frost Breath Frostbite</label>
       <description>Using the basics of Frost Breathing, imbue your weapon with chilling frost that freezes enemies on hit, causing frostbite.</description>
       <targetRequired>false</targetRequired>
       <verbProperties>

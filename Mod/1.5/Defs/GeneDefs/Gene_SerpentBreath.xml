@@ -10,7 +10,7 @@
     <resourceDescription>Current stored Breath, charged with the essence of serpents. This energy powers devastating snake-like abilities, ensnaring and striking enemies with lethal precision.</resourceDescription>
     <abilities>
       <li>TotalConcentrationBreathing</li>
-      <li>SerpentBreath:SerpentFangEdge</li>
+      <li>SerpentBreathSerpentFangEdge</li>
     </abilities>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
@@ -24,6 +24,12 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(138, 43, 226)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <exhaustionHediff>SerpentEnchantmentExhaustion</exhaustionHediff>
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <!-- Default to fire exhaustion -->
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 </Defs>

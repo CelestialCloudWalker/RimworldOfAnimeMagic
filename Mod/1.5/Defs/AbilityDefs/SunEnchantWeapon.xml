@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AbilityDef>
-    <defName>SunBreath:RadiantSunstrike</defName>
-    <label>Sun Breath: Radiant Sunstrike</label>
+    <defName>SunBreathRadiantSunstrike</defName>
+    <label>Sun Breath Radiant Sunstrike</label>
     <description>Channel the sun's fiery energy into your weapon, delivering a powerful strike that radiates with blinding light, searing through enemies with the intense heat of the sun itself.</description>
     <targetRequired>false</targetRequired>
     <verbProperties>

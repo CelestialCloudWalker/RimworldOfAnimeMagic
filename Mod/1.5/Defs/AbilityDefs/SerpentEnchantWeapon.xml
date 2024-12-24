@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AbilityDef>
-    <defName>SerpentBreath:SerpentFangEdge</defName>
-    <label>Serpent Breath: Serpent Fang</label>
+    <defName>SerpentBreathSerpentFangEdge</defName>
+    <label>Serpent Breath Serpent Fang</label>
     <description>Harnessing the techniques of Serpent Breathing, imbue your weapon with the lethal precision of a serpent's fangs. Each strike delivers deep, bleeding wounds, leaving foes vulnerable to further attacks.</description>
     <targetRequired>false</targetRequired>
     <verbProperties>

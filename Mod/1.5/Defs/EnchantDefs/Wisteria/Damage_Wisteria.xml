@@ -4,6 +4,30 @@
     <defName>AA_WisteriaPosion</defName>
     <label>Wisteria(Poison)</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
+    <hediff>WisteriaPoisoning</hediff>
+    <hediffSkin>WisteriaPoisoning</hediffSkin>
   </DamageDef>
 
+  <HediffDef ParentName="InjuryBase">
+    <defName>WisteriaPoisoning</defName>
+    <label>wisteria poisoning</label>
+    <labelNoun>wisteria poison</labelNoun>
+    <description>Toxic damage from wisteria poison.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.5</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.40</infectionChance>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.02</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Necrotic</destroyedLabel>
+      <destroyedOutLabel>Dissolved</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
 </Defs>

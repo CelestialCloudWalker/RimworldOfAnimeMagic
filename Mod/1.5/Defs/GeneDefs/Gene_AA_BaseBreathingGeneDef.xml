@@ -19,13 +19,5 @@
     <regenStat>AstralPulse_RegenAmount</regenStat>
     <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
     <costMult>AstralPulse_Cost</costMult>
-
-    <!-- Exhaustion Settings -->
-    <exhaustionPerTick>1.1</exhaustionPerTick>
-    <!-- Default to fire exhaustion -->
-    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
-    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1250</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>2500</exhausationCooldownTicks>
-  </AnimeArsenal.BreathingTechniqueGeneDef>
+    </AnimeArsenal.BreathingTechniqueGeneDef>
 </Defs>

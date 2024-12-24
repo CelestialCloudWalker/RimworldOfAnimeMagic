@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>FireEnchantmentExhaustion</defName>
-    <label>FireEnchantmentExhaustion</label>
+    <defName>FlowerEnchantmentExhaustion</defName>
+    <label>FlowerEnchantmentExhaustion</label>
     <description>WORDS AND STUFF.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>

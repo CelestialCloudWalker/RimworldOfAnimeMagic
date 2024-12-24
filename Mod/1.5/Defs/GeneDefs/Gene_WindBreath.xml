@@ -10,7 +10,7 @@
     <resourceDescription>Current stored Breath, infused with the force of razor-sharp winds. This energy powers devastating wind-based abilities that slice through enemies with precision and speed.</resourceDescription>
     <abilities>
       <li>TotalConcentrationBreathing</li>
-      <li>WindBreath:WindEdge</li>
+      <li>WindBreathWindEdge</li>
     </abilities>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
@@ -24,7 +24,14 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(50, 205, 50)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-  </AnimeArsenal.BreathingTechniqueGeneDef>
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <!-- Default to fire exhaustion -->
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+    </AnimeArsenal.BreathingTechniqueGeneDef>
 
 
 </Defs>

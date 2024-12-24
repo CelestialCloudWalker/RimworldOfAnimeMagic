@@ -12,8 +12,6 @@
       <texPath>Things/Item/Equipment/WeaponRanged/Dominator</texPath> <!-- Texture path -->
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.7</drawSize> <!-- Slightly larger size -->
-      <rotation>0</rotation> <!-- No rotation (correct facing when shooting) -->
-      <anchor>MiddleCenter</anchor> <!-- Ensure the gun is centered relative to the pawn -->
     </graphicData>
 
     <soundInteract>Interact_Dominator</soundInteract>

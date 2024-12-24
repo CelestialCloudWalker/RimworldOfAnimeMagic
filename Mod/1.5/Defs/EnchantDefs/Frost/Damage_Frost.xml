@@ -4,6 +4,28 @@
     <defName>AA_Frost</defName>
     <label>Frost</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
+    <hediff>FrostBite</hediff>
+    <hediffSkin>FrostBite</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
   </DamageDef>
 
+  <HediffDef ParentName="InjuryBase">
+    <defName>FrostBite</defName>
+    <label>frostbite</label>
+    <labelNoun>a frostbitten area</labelNoun>
+    <description>Frozen tissue damaged by extreme cold.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.5</severityPerDayTended>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.01</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Frozen off</destroyedLabel>
+      <destroyedOutLabel>Frozen through</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
 </Defs>

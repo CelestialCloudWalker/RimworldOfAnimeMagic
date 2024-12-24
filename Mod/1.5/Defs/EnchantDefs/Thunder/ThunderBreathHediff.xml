@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
         <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>ElectricalBurn</damageType>
+            <damageType>ThunderBreathing</damageType>
             <damageValue>10</damageValue>
         </li>
     </comps>

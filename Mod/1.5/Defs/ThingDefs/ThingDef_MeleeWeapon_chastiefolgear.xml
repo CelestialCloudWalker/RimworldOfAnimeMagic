@@ -49,7 +49,7 @@
             <cooldownTime>2</cooldownTime>
             <extraMeleeDamages>
               <li>
-                <def>HeavensFlame</def> <!-- here -->
+                <def>Burn</def> <!-- here -->
                 <amount>8</amount>
                 <chance>1</chance>
               </li>
