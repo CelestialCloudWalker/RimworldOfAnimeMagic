@@ -11,7 +11,7 @@
     <resourceDescription>Current stored Breath, charged with the essence of frost. This energy powers devastating ice-based abilities, freezing enemies in their tracks.</resourceDescription>
     <abilities>
       <li>TotalConcentrationBreathing</li>
-      <li>FrostBreath:FrostbiteEdge</li>
+      <li>FrostBreathFrostbiteEdge</li>
     </abilities>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
@@ -25,7 +25,13 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(173, 216, 230)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <exhaustionHediff>IceEnchantmentExhaustion</exhaustionHediff>
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <!-- Default to fire exhaustion -->
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 

@@ -21,10 +21,10 @@
   <soundExplosion>Explosion_Flame</soundExplosion>
   <secondaryDamages>
     <li>
-      <damage>AM_AntiMagic</damage>
+      <damage>Burn</damage>
     </li>
     <li>
-      <damage>AM_FoxfireStyle</damage>
+      <damage>Bullet</damage>
     </li>
   </secondaryDamages>
 </AnimeArsenal.MultiDamageDef>

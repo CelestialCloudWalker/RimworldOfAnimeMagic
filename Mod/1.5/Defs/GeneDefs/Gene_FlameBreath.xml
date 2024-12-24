@@ -10,7 +10,7 @@
     <resourceDescription>Current stored Breath, ignited by inner heat. This energy fuels powerful flame-based abilities.</resourceDescription>
     <abilities>
       <li>Roma_FlameBreathtest</li>
-      <li>FlameBreath:IgnitionEdge</li>
+      <li>FlameBreathIgnitionEdge</li>
       <li>TotalConcentrationBreathing</li>
     </abilities>
     <maxStat>FlameBreath</maxStat>
@@ -25,6 +25,14 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(255, 69, 0)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <!-- Default to fire exhaustion -->
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
   </AnimeArsenal.BreathingTechniqueGeneDef>
+
 
 </Defs>

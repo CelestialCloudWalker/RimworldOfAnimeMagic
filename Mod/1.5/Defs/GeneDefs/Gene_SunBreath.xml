@@ -11,7 +11,7 @@
     <resourceDescription>Current stored Breath, charged with the essence of the sun. This radiant energy powers devastating solar-based abilities, unleashing searing strikes that overwhelm and scorch enemies with the power of the sun.</resourceDescription>
     <abilities>
       <li>TotalConcentrationBreathing</li>
-      <li>SunBreath:RadiantSunstrike</li>
+      <li>SunBreathRadiantSunstrike</li>
     </abilities>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
@@ -25,7 +25,13 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(255, 120, 0)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <exhaustionHediff>SunEnchantmentExhaustion</exhaustionHediff>
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <!-- Default to fire exhaustion -->
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 

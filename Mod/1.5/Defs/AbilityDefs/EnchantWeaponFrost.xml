@@ -13,6 +13,10 @@
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
               <enchantDef>IceEnchantment</enchantDef>
           </li>
+          <li Class="AnimeArsenal.CompProperties_ResourceCost">
+            <resourceGeneDef>IceBreath</resourceGeneDef>
+            <resourceCost>20</resourceCost>
+          </li>
       </comps>
   </AbilityDef>
 </Defs>

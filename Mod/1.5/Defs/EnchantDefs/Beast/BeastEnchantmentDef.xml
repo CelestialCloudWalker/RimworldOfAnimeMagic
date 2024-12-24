@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>BeastEnchantment</defName>
+    <label>Beast Enchantment</label>
+    <description>A powerful fire-based enchantment that enhances combat abilities but causes exhaustion over time.</description>
+    <enchantHediff>BeastEdge</enchantHediff>
+    <resourceGene>BeastBreath</resourceGene>
+    <!-- Resource Cost Settings -->
+    <ticksBetweenCost>120</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

@@ -7,7 +7,7 @@
     <enchantHediff>IgnitionEdge</enchantHediff>
     <resourceGene>FlameBreath</resourceGene>
     <!-- Resource Cost Settings -->
-    <ticksBetweenCost>1250</ticksBetweenCost>
-    <resourceCostPerTick>30</resourceCostPerTick>
+    <ticksBetweenCost>120</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

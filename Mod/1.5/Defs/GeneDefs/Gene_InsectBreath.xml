@@ -11,7 +11,7 @@
     <resourceDescription>Current stored Breath, refined for precision. This energy enables swift and venomous insect-based techniques.</resourceDescription>
     <abilities>
       <li>TotalConcentrationBreathing</li>
-      <li>InsectBreath:VenomStrike</li>
+      <li>InsectBreathVenomStrike</li>
     </abilities>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
@@ -25,6 +25,13 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(218, 112, 214)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <!-- Default to fire exhaustion -->
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 </Defs>

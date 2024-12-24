@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>BeastBreathing</defName>
+    <label>Beast Breathing</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was torn apart by beast breathing.</deathMessage>
+    <hediff>BeastWound</hediff>
+    <hediffSkin>BeastWound</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>BeastWound</defName>
+    <label>beast mauling</label>
+    <labelNoun>a beast breathing wound</labelNoun>
+    <description>A savage wound inflicted by beast breathing technique.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.68</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.45</infectionChance>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.06</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00825</averagePainPerSeverityPermanent>
+      <bleedRate>0.07</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Mauled</destroyedLabel>
+      <destroyedOutLabel>Ravaged</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

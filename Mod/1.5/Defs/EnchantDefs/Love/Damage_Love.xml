@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>LoveBreathing</defName>
+    <label>Love Breathing</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was overwhelmed by love breathing.</deathMessage>
+    <hediff>LoveStrike</hediff>
+    <hediffSkin>LoveStrike</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>LoveStrike</defName>
+    <label>love strike</label>
+    <labelNoun>a love breathing wound</labelNoun>
+    <description>A wound inflicted by the power of love breathing.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.78</severityPerDayTended>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.04</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Pierced</destroyedLabel>
+      <destroyedOutLabel>Pierced through</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

@@ -15,7 +15,7 @@
     </injuryProps>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Burn</damageType>
+        <damageType>SunCut</damageType>
         <damageValue>10.0</damageValue>
       </li>
     </comps>

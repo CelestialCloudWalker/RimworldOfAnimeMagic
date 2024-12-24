@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
+    <defName>StoneBreath</defName>
+    <label>Stone Breath</label>
+    <resourceName>Stone Breath</resourceName>
+    <description>Carriers of this gene embody the passion and grace of love, using techniques that blend emotion, fluidity, and overwhelming strength.</description>
+    <iconPath>UI/Icons/Genes/Gene_FlowerBreath</iconPath>
+    <resourceLabel>Stone Breath</resourceLabel>
+    <resourceDescription>Current stored Breath, charged with the power of passion. This resource energizes graceful and powerful techniques, overwhelming enemies with both elegance and force.</resourceDescription>
+    <abilities>
+      <li>TotalConcentrationBreathing</li>
+      <li>StoneBreathEdge</li>
+    </abilities>
+    <maxStat>AstralPulse</maxStat>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>BreathingTechnique</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(169, 169, 169)</barColor>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <!-- Default to fire exhaustion -->
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
+
+
+</Defs>

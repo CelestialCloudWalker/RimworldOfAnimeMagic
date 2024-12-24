@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>FlowerBreath:RoseThornEdge</defName>
-      <label>Flower Breath: Rose Thorn</label>
+      <defName>FlowerBreathRoseThornEdge</defName>
+      <label>Flower Breath Rose Thorn</label>
       <description>Using the basics of Flower Breathing, imbue your weapon with the essence of thorned roses, causing enemies to bleed with each precise strike.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>
