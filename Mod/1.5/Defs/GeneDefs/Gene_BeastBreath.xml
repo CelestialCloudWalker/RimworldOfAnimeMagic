@@ -12,6 +12,7 @@
     <abilities>
       <li>TotalConcentrationBreathing</li>
       <li>BeastBreathFangEdge</li>
+      <li>BreathingMarkAbility</li>
     </abilities>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
