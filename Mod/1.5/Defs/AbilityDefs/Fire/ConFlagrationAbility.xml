@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>MistBreathEdge</defName>
-      <label>Mist Breath Edge</label>
-      <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
-      <iconPath>UI/Abilities/MistF1</iconPath>
+      <defName>DivineConflagrationEdge</defName>
+      <label>Divine Conflagration Edge</label>
+      <description>Channel divine flames into your weapon, imbuing it with devastating conflagration that consumes enemies on contact.</description>
+      <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>
           <verbClass>Verb_CastAbility</verbClass>
@@ -12,10 +12,10 @@
       </verbProperties>
       <comps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-              <enchantDef>MistEnchantment</enchantDef>
+              <enchantDef>ConflagrationEnchantment</enchantDef>
           </li>
           <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>MistBreath</resourceGeneDef>
+            <resourceGeneDef>FlameBreath</resourceGeneDef>
             <resourceCost>20</resourceCost>
           </li>
       </comps>

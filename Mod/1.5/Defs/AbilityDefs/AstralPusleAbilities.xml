@@ -4,7 +4,7 @@
     <defName>TotalConcentrationBreathing</defName>
     <label>Total Concentration Breathing</label>
     <description>Focuses the user's breath to enhance physical resilience</description>
-    <iconPath>Things/Mote/SpeechSymbols/Speech</iconPath>
+    <iconPath>UI/Abilities/TCB</iconPath>
     <statBases>
       <Ability_Duration>40</Ability_Duration>
     </statBases>
