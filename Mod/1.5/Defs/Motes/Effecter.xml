@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EffecterDef>
+    <defName>AnimeArsenal_Deflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>15~20</burstCount>
+        <positionRadius>0</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.2~.3</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(1, 1, 1, 0.5)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>AA_RingCurve</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>.4</fadeInTime>
+    <solidTime>0</solidTime>
+    <fadeOutTime>0.4</fadeOutTime>
+    <growthRate>-.5</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <texPath>Animations/twirl_02</texPath>
+      <shaderType>Mote</shaderType>
+      <renderInstanced>false</renderInstanced>
+      <shaderParameters>
+        <_Color>(255, 255, 255, 1)</_Color>
+        <_brightnessMultiplier>1</_brightnessMultiplier>
+      </shaderParameters>
+      <drawSize>10.0</drawSize>
+    </graphicData>
+  </FleckDef>
+</Defs>

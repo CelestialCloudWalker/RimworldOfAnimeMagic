@@ -4,7 +4,7 @@
       <defName>MistBreathEdge</defName>
       <label>Mist Breath Edge</label>
       <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
-      <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+      <iconPath>UI/Abilities/MistF1</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>
           <verbClass>Verb_CastAbility</verbClass>

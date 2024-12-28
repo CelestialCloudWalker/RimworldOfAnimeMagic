@@ -35,4 +35,57 @@ namespace AnimeArsenal
             }
         }
     }
+
+    public class HediffCompProperties_ApplyFaceTattoo : HediffCompProperties
+    {
+        public TattooDef tattooDef;
+
+        public HediffCompProperties_ApplyFaceTattoo()
+        {
+            compClass = typeof(ApplyFaceTattoo);
+        }
+    }
+
+    public class ApplyFaceTattoo : HediffComp
+    {
+        HediffCompProperties_ApplyFaceTattoo Props => (HediffCompProperties_ApplyFaceTattoo)props;
+
+
+        private TattooDef OriginalTattoo = null;
+
+        public override void CompPostPostAdd(DamageInfo? dinfo)
+        {
+            base.CompPostPostAdd(dinfo);
+
+
+            if (this.Pawn.style.FaceTattoo != null)
+            {
+                OriginalTattoo = this.Pawn.style.FaceTattoo;
+            }
+
+
+            this.Pawn.style.FaceTattoo = Props.tattooDef;
+            this.Pawn.Drawer.renderer.SetAllGraphicsDirty();
+        }
+
+        public override void CompPostPostRemoved()
+        {
+            base.CompPostPostRemoved();
+
+
+            if (OriginalTattoo != null)
+            {
+
+                this.Pawn.style.FaceTattoo = OriginalTattoo;
+                this.Pawn.Drawer.renderer.SetAllGraphicsDirty();
+            }
+        }
+
+        public override void CompExposeData()
+        {
+            base.CompExposeData();
+
+            Scribe_Defs.Look(ref OriginalTattoo, "originalTattoo");
+        }
+    }
 }

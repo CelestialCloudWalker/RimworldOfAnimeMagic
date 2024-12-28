@@ -17,6 +17,9 @@ namespace AnimeArsenal
         public static StatDef AstralPulse_RegenRate;
         public static StatDef AstralPulse_RegenTicks;
         public static StatDef AstralPulse_Cost;
+
+        //public static ThingDef;
+        public static EffecterDef AnimeArsenal_Deflect;
     }
 }
 
