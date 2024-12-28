@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AnimeArsenal.BloodDemonArtsGeneDef ParentName="AA_BloodDemonArtsGene">
+    <defName>BloodDemonArtTest</defName>
+    <label>Blood Demon Art Test</label>
+    <resourceName>Blood Art</resourceName>
+    <description>Carriers of this gene channel Blood Art.</description>
+    <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+    <resourceLabel>Blood Art</resourceLabel>
+    <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
+    <abilities>
+      <li>TotalConcentrationBreathing</li>
+    </abilities>
+    <maxStat>AstralPulse</maxStat>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>BloodDemonArts</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(139, 69, 19)</barColor>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <!-- Exhaustion Settings -->
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <!-- Default to fire exhaustion -->
+    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+  </AnimeArsenal.BloodDemonArtsGeneDef>
+
+
+</Defs>

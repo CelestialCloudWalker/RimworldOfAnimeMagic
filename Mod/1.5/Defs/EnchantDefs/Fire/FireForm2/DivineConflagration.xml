@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef ParentName="Burn">
+    <defName>DivineConflagration</defName>
+    <label>Divine Conflagration</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <hediff>DivineConflagrationBurn</hediff>
+    <hediffSkin>DivineConflagrationBurn</hediffSkin>
+</DamageDef>
+
+<HediffDef ParentName="BurnBase">
+    <defName>DivineConflagrationBurn</defName>
+    <label>divine conflagration burn</label>
+    <labelNoun>a divine conflagration burn</labelNoun>
+    <description>A catastrophic burn caused by divine flames.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.78</severityPerDayTended>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Incinerated</destroyedLabel>
+      <destroyedOutLabel>Incinerated</destroyedOutLabel>
+    </injuryProps>
+</HediffDef>
+
+  <AnimeArsenal.MultiDamageDef>
+    <defName>DivineConflagration</defName>
+    <workerClass>AnimeArsenal.DamageWorker_MultiDamage</workerClass>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <label>Divine Conflagration</label>
+    <hediff>IgnitionBurn</hediff>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been consumed by divine flames.</deathMessage>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <armorCategory>Heat</armorCategory>
+    <defaultDamage>4</defaultDamage>
+    <explosionHeatEnergyPerCell>25</explosionHeatEnergyPerCell>
+    <explosionSnowMeltAmount>1</explosionSnowMeltAmount>
+    <explosionCellFleck>BlastFlame</explosionCellFleck>
+    <explosionColorEdge>(1, 0.7, 0.7)</explosionColorEdge>
+    <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <secondaryDamages>
+      <li>
+        <damage>Ignition</damage>
+      </li>
+      <li>
+        <damage>Bullet</damage>
+      </li>
+    </secondaryDamages>
+  </AnimeArsenal.MultiDamageDef>
+</Defs>

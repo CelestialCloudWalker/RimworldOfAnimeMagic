@@ -39,12 +39,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AMConstants.cs" />
+    <Compile Include="BloodDemonArtsGene.cs" />
+    <Compile Include="BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
+    <Compile Include="CompProperties_AbilityLaunchScalingProjectile.cs" />
     <Compile Include="Comps\CompAbilityEffect_Toggleable.cs" />
+    <Compile Include="Comps\CompProperties_DeflectProjectiles.cs" />
     <Compile Include="Comps\CompProperties_ResourceCost.cs" />
     <Compile Include="Comps\CompProperties_ToggleEnchant.cs" />
     <Compile Include="Comps\CompProperties_ToggleHediff.cs" />
     <Compile Include="Comps\EnchantDef.cs" />
+    <Compile Include="Damage\ChakraScalingDamageDef.cs" />
+    <Compile Include="GeneGizmoBlood.cs" />
+    <Compile Include="ProjectileUtility.cs" />
+    <Compile Include="Projectile_ScalingDoomsdayRocket.cs" />
     <Compile Include="Resource Gene\BreathingTechniqueGene.cs" />
     <Compile Include="Resource Gene\BreathingTechniqueGeneDef.cs" />
     <Compile Include="Resource Gene\GeneGizmoBreath.cs" />
@@ -58,6 +66,7 @@
     <Compile Include="Damage\DamageWorker_MultiDamage.cs" />
     <Compile Include="MultiDamageDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScalingStatDamageProjectile.cs" />
     <Compile Include="Verb_ExtendedMeleeAttack.cs" />
   </ItemGroup>
   <ItemGroup>

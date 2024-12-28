@@ -4,20 +4,90 @@
     <defName>TotalConcentrationBreathingEffect</defName>
     <label>Total Concentration Breathing</label>
     <description>The user is in a state of heightened physical resilience through focused breathing techniques.</description>
+    <hediffClass>HediffWithComps</hediffClass>
     <stages>
       <li>
-        <label>Concentrated</label>
-        <statOffsets>
-          <IncomingDamageFactor>-0.3</IncomingDamageFactor>
-          <MoveSpeed>0.2</MoveSpeed>
-          <PainShockThreshold>0.2</PainShockThreshold>
-        </statOffsets>
+        <label>Minimal</label>
+        <minSeverity>0</minSeverity>
+        <painFactor>1.05</painFactor>
+        <statFactors>
+          <IncomingDamageFactor>1.2</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>Minor</label>
+        <becomeVisible>true</becomeVisible>
+        <minSeverity>0.15</minSeverity>
+        <painFactor>1.25</painFactor>
+        <statFactors>
+          <IncomingDamageFactor>1.2</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>Moderate</label>
+        <becomeVisible>true</becomeVisible>
+        <minSeverity>0.5</minSeverity>
+        <painFactor>1.5</painFactor>
+        <hungerRateFactor>1.25</hungerRateFactor>
+        <restFallFactor>1.25</restFallFactor>
         <capMods>
           <li>
-            <capacity>Breathing</capacity>
-            <offset>0.2</offset>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
           </li>
         </capMods>
+        <statFactors>
+          <IncomingDamageFactor>1.4</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>Severe</label>
+        <becomeVisible>true</becomeVisible>
+        <minSeverity>0.75</minSeverity>
+        <painFactor>2.0</painFactor>
+        <hungerRateFactor>1.5</hungerRateFactor>
+        <restFallFactor>1.5</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <IncomingDamageFactor>1.6</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>Critical</label>
+        <becomeVisible>true</becomeVisible>
+        <minSeverity>0.9</minSeverity>
+        <painFactor>2.5</painFactor>
+        <hungerRateFactor>2.0</hungerRateFactor>
+        <restFallFactor>2.0</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <IncomingDamageFactor>2.0</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <PainShockThreshold>-0.15</PainShockThreshold>
+        </statOffsets>
       </li>
     </stages>
   </HediffDef>
