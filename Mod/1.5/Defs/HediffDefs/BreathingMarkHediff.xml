@@ -10,7 +10,7 @@
         <disappearsAfterTicks>1000~2000</disappearsAfterTicks>
       </li>
       <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
-          <tattooDef>Face_Tiger1</tattooDef>
+        <tattooDef>Face_Tiger1</tattooDef>
       </li>
     </comps>
     <statOffsets>
@@ -19,5 +19,4 @@
       <MeleeHitChance>0.2</MeleeHitChance>
     </statOffsets>
   </HediffDef>
-
 </Defs>
