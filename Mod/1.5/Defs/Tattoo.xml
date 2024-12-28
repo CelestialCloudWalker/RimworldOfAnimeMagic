@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <TattooDef>
+    <defName>Face_Tiger1</defName>
+    <label>tiger</label>
+    <texPath>Tattoo/Face_BreathingMark/Face_Tattoo1</texPath>
+    <tattooType>Face</tattooType>
+    <category>Tribal</category>
+    <styleTags>
+      <li>TattooFaceTribal</li>
+    </styleTags>
+  </TattooDef>
+</Defs>

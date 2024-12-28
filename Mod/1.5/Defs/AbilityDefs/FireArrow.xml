@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef>
+      <defName>FlameBreathingSlice</defName>
+      <label>Flame Slice</label>
+      <description>Manipulate flames for long-range attacks by forming an arrow.</description>
+      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <cooldownTicksRange>60</cooldownTicksRange>
+      <displayOrder>200</displayOrder>
+      <aiCanUse>true</aiCanUse>
+      <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+      <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+      <verbProperties>
+        <verbClass>Verb_CastAbility</verbClass>
+        <range>20</range>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>FireSpew_Resolve</soundCast>
+        <targetParams>
+          <canTargetPawns>True</canTargetPawns>
+          <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+      <comps>
+        <li Class="CompProperties_AbilityLaunchProjectile">
+          <projectileDef>Flame_Slice</projectileDef>
+        </li>
+        <li Class="AnimeArsenal.CompProperties_ResourceCost">
+          <resourceGeneDef>FlameBreath</resourceGeneDef>
+          <resourceCost>20</resourceCost>
+        </li>
+      </comps>
+    </AbilityDef>
+</Defs>

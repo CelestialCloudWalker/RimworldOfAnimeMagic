@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> <!-- every XMl will start with these two lines -->
+<!-- Weapon Definition -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality"> <!--<ThingDef> is the start of the weapon The  ParentName="BaseMeleeWeapon_Sharp_Quality is refering to base weapon more later -->
+    <defName>MeleeWeapon_ExtendableLongSword</defName>  <!--Defname Where the game will look for this code my weapons I follow this naming for the .xml file-->
+    <label>extendable longsword</label> <!--In game label the name that shows up-->
+    <description>An enhanced longsword that can extend its reach through special techniques. The wielder can toggle between normal and extended range combat stances.</description> <!-- -->
+    <possessionCount>1</possessionCount> <!-- This is just what was on the example I assume its the ammount it can stack-->
+    <graphicData> <!-- tags will start <> and will end with </>  this is telling the game what information is for the graphics-->
+      <texPath>Things/Item/Equipment/WeaponMelee/LongSword</texPath> <!-- the location of your texture for the weapon in your mod folder set up-->
+      <graphicClass>Graphic_Single</graphicClass> <!-- This tells the game that the graphic for this item is a single, static image that doesn't change based on direction-->
+    </graphicData> <!--end of tag-->
+    <techLevel>Medieval</techLevel>  <!--Tech level of the weapon -->
+    <weaponTags> <!-- what the weapon is Melee, Long sword-->
+      <li>MedievalMeleeAdvanced</li>
+      <li>LongSword</li>
+    </weaponTags>
+    <costStuffCount>100</costStuffCount> <!--It specifies how much "stuff" (material) is consumed when crafting the item-->
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li> <!--These tags determine whether an item is included in Quest Reward,Trade Stock, Random Loot -->
+    </thingSetMakerTags>
+    <statBases>
+      <WorkToMake>18000</WorkToMake> <!--time it takes to make-->
+      <Mass>2</Mass> <!--Mass of weapon-->
+    </statBases>
+    <relicChance>2</relicChance> <!-- chance of being  a relic in Ideology dlc -->
+    <equippedAngleOffset>-65</equippedAngleOffset> <!--Visually sets the offset of the weapon, helps angle it-->
+    <stuffCategories> <!--Stuff that this can be made of -->
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <tools> <!-- part of the weapon that hits-->
+      <li>
+        <label>blade</label> <!-- Label that shows up in game -->
+        <capacities>
+          <li>Cut</li> <!-- DamageDef Aka Damage type -->
+        </capacities>
+        <power>15</power> <!-- Damage power -->
+        <cooldownTime>2</cooldownTime> <!-- Ticks between hits -->
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite> <!-- what you need to research for this to show up as a craftable -->
+      <skillRequirements>
+        <Crafting>5</Crafting> <!-- Skill required -->
+      </skillRequirements>
+      <displayPriority>420</displayPriority> <!--Controls how prominently the item is displayed relative to others in the same category.Higher values mean higher priority and earlier placement.  -->
+    </recipeMaker>
+  </ThingDef> <!-- closes this thingdef-->
+</Defs> <!-- end the xml you can have multiple things defs in one xml -->
