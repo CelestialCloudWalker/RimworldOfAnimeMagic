@@ -2,15 +2,15 @@
 <Defs>
 
   <AnimeArsenal.BloodDemonArtsGeneDef ParentName="AA_BloodDemonArtsGene">
-    <defName>BloodDemonArtTest</defName>
-    <label>Blood Demon Art Test</label>
+    <defName>BloodDemonArt</defName>
+    <label>Blood Demon Art</label>
     <resourceName>Blood Art</resourceName>
     <description>Carriers of this gene channel Blood Art.</description>
     <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
     <resourceLabel>Blood Art</resourceLabel>
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
     <abilities>
-      <li>TotalConcentrationBreathing</li>
+      <li>BloodDemonArt_LightingStrike</li>
     </abilities>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
@@ -22,7 +22,7 @@
     </resourceGizmoThresholds>
     <displayCategory>BloodDemonArts</displayCategory>
     <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(139, 69, 19)</barColor>
+    <barColor>(139, 0, 0)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
     <!-- Exhaustion Settings -->
     <exhaustionPerTick>0.0004</exhaustionPerTick>

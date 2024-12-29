@@ -43,6 +43,7 @@
     <Compile Include="BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
     <Compile Include="CompProperties_AbilityLaunchScalingProjectile.cs" />
+    <Compile Include="CompProperties_AbilityLightningStrike.cs" />
     <Compile Include="Comps\CompAbilityEffect_Toggleable.cs" />
     <Compile Include="Comps\CompProperties_DeflectProjectiles.cs" />
     <Compile Include="Comps\CompProperties_ResourceCost.cs" />
