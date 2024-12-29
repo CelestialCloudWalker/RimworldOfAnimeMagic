@@ -52,20 +52,19 @@ namespace AnimeArsenal
 
 
         private TattooDef OriginalTattoo = null;
-
-        public override void CompPostPostAdd(DamageInfo? dinfo)
+    
+        public override void CompPostMake()
         {
-            base.CompPostPostAdd(dinfo);
-
-
+            Log.Message("CompPostMake running for face tattoo");
+            base.CompPostMake();
             if (this.Pawn.style.FaceTattoo != null)
             {
+                Log.Message($"Previous tattoo found: {this.Pawn.style.FaceTattoo}");
                 OriginalTattoo = this.Pawn.style.FaceTattoo;
             }
-
-
             this.Pawn.style.FaceTattoo = Props.tattooDef;
-            this.Pawn.Drawer.renderer.SetAllGraphicsDirty();
+            Log.Message($"Applied new tattoo: {Props.tattooDef}");
+            this.Pawn.style.Notify_StyleItemChanged();
         }
 
         public override void CompPostPostRemoved()
@@ -77,7 +76,7 @@ namespace AnimeArsenal
             {
 
                 this.Pawn.style.FaceTattoo = OriginalTattoo;
-                this.Pawn.Drawer.renderer.SetAllGraphicsDirty();
+                this.Pawn.style.Notify_StyleItemChanged();
             }
         }
 
