@@ -20,6 +20,8 @@ namespace AnimeArsenal
 
         //public static ThingDef;
         public static EffecterDef AnimeArsenal_Deflect;
+        public static ThingDef AnimeArsenal_Flyer;
+        public static ThingDef AnimeArsenal_TPStrikeFlyer;
     }
 }
 

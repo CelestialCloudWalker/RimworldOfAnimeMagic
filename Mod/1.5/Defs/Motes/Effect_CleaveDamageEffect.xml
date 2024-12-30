@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<EffecterDef>
+  <defName>AA_CleaveDamageEffect</defName>
+  <maintainTicks>100</maintainTicks>
+  <children>
+    <li>
+      <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+      <chancePerTick>0.8</chancePerTick>
+      <ticksBetweenMotes>5</ticksBetweenMotes>
+      <moteDef>AA_CleaveDamageMote</moteDef>
+      <spawnLocType>OnTarget</spawnLocType>
+      <burstCount>1~2</burstCount>
+      <positionRadius>0</positionRadius>
+      <positionRadiusMin>0</positionRadiusMin>
+      <maxMoteCount>25</maxMoteCount>
+      <scale>0.1~.2</scale>
+      <rotation>0~360</rotation>
+      <rotationRate>0~0</rotationRate>
+      <angle>0~360</angle>
+      <speed>0</speed>
+      <positionOffset>(0, 0, 0)</positionOffset>
+      <color>(1, 0.5, 0.5, 1)</color>
+      <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+      <rotateTowardsTargetCenter>false</rotateTowardsTargetCenter>
+      <attachToSpawnThing>true</attachToSpawnThing>
+    </li>
+  </children>
+</EffecterDef>
+
+<ThingDef ParentName="MoteBase">
+  <defName>AA_CleaveDamageMote</defName>
+  <thingClass>MoteAttached</thingClass>
+  <graphicData>
+    <texPath>Animations/CleaveDamage</texPath>
+    <graphicClass>Graphic_Mote</graphicClass>
+    <shaderType>Mote</shaderType>
+    <shaderParameters>
+      <_Color>(1, 0.3, 0.3)</_Color>
+    </shaderParameters>
+    <drawSize>10.0</drawSize>
+  </graphicData>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <mote>
+    <fadeInTime>0.1</fadeInTime>
+    <solidTime>0.61</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <growthRate>0.01</growthRate>
+  </mote>
+</ThingDef>
+</Defs>

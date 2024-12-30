@@ -39,11 +39,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AMConstants.cs" />
+    <Compile Include="BaseTraitComp.cs" />
     <Compile Include="BloodDemonArtsGene.cs" />
     <Compile Include="BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
     <Compile Include="CompProperties_AbilityLaunchScalingProjectile.cs" />
     <Compile Include="CompProperties_AbilityLightningStrike.cs" />
+    <Compile Include="CompProperties_Cleave.cs" />
+    <Compile Include="CompProperties_EquipCompApplyHediffOnHit.cs" />
+    <Compile Include="CompProperties_EquipCompRemoveHediffOnHit.cs" />
+    <Compile Include="CompProperties_EquipCompScaleableDamage.cs" />
+    <Compile Include="CompProperties_TeleportMeleeAttack.cs" />
+    <Compile Include="CompProperties_ToggleHediffEffecter.cs" />
     <Compile Include="Comps\CompAbilityEffect_Toggleable.cs" />
     <Compile Include="Comps\CompProperties_DeflectProjectiles.cs" />
     <Compile Include="Comps\CompProperties_ResourceCost.cs" />
@@ -51,6 +58,7 @@
     <Compile Include="Comps\CompProperties_ToggleHediff.cs" />
     <Compile Include="Comps\EnchantDef.cs" />
     <Compile Include="Damage\ChakraScalingDamageDef.cs" />
+    <Compile Include="DelegateFlyer.cs" />
     <Compile Include="GeneGizmoBlood.cs" />
     <Compile Include="ProjectileUtility.cs" />
     <Compile Include="Projectile_ScalingDoomsdayRocket.cs" />
@@ -68,6 +76,8 @@
     <Compile Include="MultiDamageDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScalingStatDamageProjectile.cs" />
+    <Compile Include="ThingCompExt.cs" />
+    <Compile Include="Ticker.cs" />
     <Compile Include="Verb_ExtendedMeleeAttack.cs" />
   </ItemGroup>
   <ItemGroup>

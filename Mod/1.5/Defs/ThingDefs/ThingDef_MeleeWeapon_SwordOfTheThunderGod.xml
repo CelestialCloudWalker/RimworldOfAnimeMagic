@@ -40,9 +40,6 @@
             </li>
         </tools>
 
-        <!-- Link to your custom ChakraScalingDamage -->
-        <damageDef>AnimeArsenal.ChakraScalingDamage</damageDef>
-
         <recipeMaker>
             <researchPrerequisite>LongBlades</researchPrerequisite>
             <skillRequirements>
@@ -51,14 +48,6 @@
             <displayPriority>420</displayPriority>
         </recipeMaker>
 
-        <!-- Optional: Apply extra chakra damage as a status effect (if you want) -->
-        <extraMeleeDamages>
-            <li>
-                <def>AnimeArsenal.ChakraScalingDamage</def>  <!-- Your custom Chakra Scaling Damage -->
-                <amount>10</amount>  <!-- Amount of extra chakra damage -->
-                <chance>1</chance>   <!-- 100% chance to apply this damage on hit -->
-            </li>
-        </extraMeleeDamages>
 
     </ThingDef>
 </Defs>

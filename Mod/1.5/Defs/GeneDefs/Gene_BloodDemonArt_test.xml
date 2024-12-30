@@ -11,6 +11,8 @@
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
     <abilities>
       <li>BloodDemonArt_LightingStrike</li>
+      <li>BDA_Silken_web_slash</li>
+      <li>AnimeArsenal_TPStrike</li>
     </abilities>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
