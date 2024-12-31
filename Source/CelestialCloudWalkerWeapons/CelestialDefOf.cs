@@ -28,6 +28,8 @@ namespace AnimeArsenal
         public static BackstoryDef DemonChildhoodStory;
         public static BackstoryDef DemonAdulthoodStory;
         public static HediffDef DemonWorkSlaveHediff;
+        public static DamageDef TwistDamage;
+        public static DamageDef CrushDamage;
     }
 }
 

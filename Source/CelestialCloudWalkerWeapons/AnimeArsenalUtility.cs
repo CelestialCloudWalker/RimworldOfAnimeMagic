@@ -106,5 +106,31 @@ namespace AnimeArsenal
                 .Where(p => p.Faction != null && p.Faction != Faction.OfPlayer);
         }
 
+        public static BodyPartRecord GetRandomLimb(Pawn pawn)
+        {
+            List<BodyPartRecord> limbs = pawn.health.hediffSet.GetNotMissingParts()
+                .Where(part => part.def.tags.Contains(BodyPartTagDefOf.MovingLimbCore))
+                .ToList();
+
+            return limbs.RandomElementWithFallback();
+        }
+        public static float CalcAstralPulseScalingFactor(Pawn casterPawn, Pawn targetPawn, float min = 0.5f, float max = 1.5f)
+        {
+            // Get the AstralPulse stat from both the caster and the target
+            float casterAstralPulse = casterPawn.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
+            float targetAstralPulse = targetPawn.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
+
+            // Scale the value based on the caster's and target's AstralPulse reserves
+            return Mathf.Lerp(min, max, casterAstralPulse / targetAstralPulse);
+        }
+
+        public static BodyPartRecord GetRandomPartByTagDef(Pawn pawn, List<BodyPartTagDef> PartTags)
+        {
+            List<BodyPartRecord> limbs = pawn.health.hediffSet.GetNotMissingParts()
+                .Where(part => part.def.tags.Any(x => PartTags.Contains(x)))
+                .ToList();
+            return limbs.RandomElementWithFallback();
+        }
+
     }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StatDef>
+    <defName>ThunderBreath_RegenAmount</defName>
+    <label>Thunder Breath Regen Amount Per Regen Tick</label>
+    <category>PawnMisc</category>
+    <description>Rate of Thunder Breath regeneration per tick.</description>
+    <defaultBaseValue>.5</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentOne</toStringStyle>
+  </StatDef>
+</Defs>
+z
