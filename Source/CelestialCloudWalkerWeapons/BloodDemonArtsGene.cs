@@ -11,6 +11,7 @@ namespace AnimeArsenal
         public bool isExhausted = false;
         private int exhaustionCooldownRemaining = 0;
         private int exhaustionHediffTimer = 0;
+        public float regenSpeed = 0.1f; 
 
 
         public float ExhaustionProgress

@@ -4,6 +4,5 @@
     <defName>Magic</defName>
     <label>Magic</label>
     <description>Genes related to magical abilities and powers.</description>
-    <displayCategory>Abilities</displayCategory>
   </GeneCategoryDef>
 </Defs>

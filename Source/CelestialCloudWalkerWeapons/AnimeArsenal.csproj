@@ -39,13 +39,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AMConstants.cs" />
+    <Compile Include="AnimeArsenalUtility.cs" />
+    <Compile Include="AoeDamageAtEndFlyer.cs" />
     <Compile Include="BaseTraitComp.cs" />
     <Compile Include="BloodDemonArtsGene.cs" />
     <Compile Include="BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
+    <Compile Include="CompAbilityEffect_LaunchProjectile.cs" />
+    <Compile Include="CompProperties_AbilityDemonifyWorkSlave.cs" />
     <Compile Include="CompProperties_AbilityLaunchScalingProjectile.cs" />
     <Compile Include="CompProperties_AbilityLightningStrike.cs" />
+    <Compile Include="CompProperties_BeamEffect.cs" />
     <Compile Include="CompProperties_Cleave.cs" />
+    <Compile Include="CompProperties_DamageInRect.cs" />
     <Compile Include="CompProperties_EquipCompApplyHediffOnHit.cs" />
     <Compile Include="CompProperties_EquipCompRemoveHediffOnHit.cs" />
     <Compile Include="CompProperties_EquipCompScaleableDamage.cs" />
@@ -59,8 +65,16 @@
     <Compile Include="Comps\EnchantDef.cs" />
     <Compile Include="Damage\ChakraScalingDamageDef.cs" />
     <Compile Include="DelegateFlyer.cs" />
+    <Compile Include="DemonUtility.cs" />
     <Compile Include="GeneGizmoBlood.cs" />
+    <Compile Include="HediffCompProperties_DemonWorkSlaveEffect.cs" />
+    <Compile Include="HediffCompProperties_SelectiveDamageImmunity.cs" />
+    <Compile Include="HediffCompProperties_ThinkTreeOverride.cs" />
+    <Compile Include="Hediff_DemonWorkSlave.cs" />
+    <Compile Include="MoteBeam.cs" />
+    <Compile Include="PowerBeamVisual.cs" />
     <Compile Include="ProjectileUtility.cs" />
+    <Compile Include="Projectile_ImpactAOE.cs" />
     <Compile Include="Projectile_ScalingDoomsdayRocket.cs" />
     <Compile Include="Resource Gene\BreathingTechniqueGene.cs" />
     <Compile Include="Resource Gene\BreathingTechniqueGeneDef.cs" />
@@ -75,6 +89,7 @@
     <Compile Include="Damage\DamageWorker_MultiDamage.cs" />
     <Compile Include="MultiDamageDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RotatedRectTargetFinder.cs" />
     <Compile Include="ScalingStatDamageProjectile.cs" />
     <Compile Include="ThingCompExt.cs" />
     <Compile Include="Ticker.cs" />

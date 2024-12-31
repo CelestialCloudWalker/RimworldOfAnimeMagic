@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>DBA_TestShot</defName>
+    <label>Test Shot</label>
+    <description>The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, producing a strong repelling effect rather than an attracting one. Sends the hit target flying backwards</description>
+    <iconPath>Abilities/Gojo/Red</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <category>Cursed_Energy</category>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetMechs>true</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+        <projectileDef>ReversedCursedTechnique_RedProjecitle</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <AbilityDef>
+    <defName>Flame_Breathing_Flame_Tiger</defName>
+    <label>Flame Tiger</label>
+    <description>The Flame Tiger is a fierce attack in Flame Breathing, releasing a concentrated wave of fire that sends enemies flying backwards, engulfed in flames.</description>
+    <iconPath>Abilities/FlameBreathing/FlameTiger</iconPath> <!-- Make sure this icon exists -->
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <category>Cursed_Energy</category>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime> <!-- Adjust warmup if necessary -->
+      <soundCast>FireSpew_Resolve</soundCast> <!-- Check if this sound effect exists -->
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetMechs>true</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+        <projectileDef>ReversedCursedTechnique_RedProjecitle</projectileDef> <!-- Ensure this matches your projectile definition -->
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+</Defs>

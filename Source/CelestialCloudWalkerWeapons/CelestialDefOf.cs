@@ -17,11 +17,17 @@ namespace AnimeArsenal
         public static StatDef AstralPulse_RegenRate;
         public static StatDef AstralPulse_RegenTicks;
         public static StatDef AstralPulse_Cost;
+        public static StatDef AnimeArsenal_BloodDemonArtsRegenSpeed;
 
         //public static ThingDef;
         public static EffecterDef AnimeArsenal_Deflect;
         public static ThingDef AnimeArsenal_Flyer;
         public static ThingDef AnimeArsenal_TPStrikeFlyer;
+        public static ThingDef Mote_PowerBeam;
+        public static ThingDef AnimeArsenal_BeamMote;
+        public static BackstoryDef DemonChildhoodStory;
+        public static BackstoryDef DemonAdulthoodStory;
+        public static HediffDef DemonWorkSlaveHediff;
     }
 }
 
