@@ -23,5 +23,6 @@
             <MaxShotsToReflect>20</MaxShotsToReflect>
             <effecterDef>AnimeArsenal_Deflect</effecterDef>
            </li>
+      </comps>
   </AbilityDef>
 </Defs>
