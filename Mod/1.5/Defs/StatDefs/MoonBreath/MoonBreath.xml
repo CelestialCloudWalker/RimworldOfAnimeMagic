@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <StatDef>
-    <defName>FlameBreath</defName>
-    <label>FlameBreath</label>
+    <defName>MoonBreath</defName>
+    <label>MoonBreath</label>
     <category>PawnMisc</category>
     <description>Breath channels elemental energy through precise control, unlocking powerful techniques.</description>
-    <defaultBaseValue>10000</defaultBaseValue>
+    <defaultBaseValue>100</defaultBaseValue>
     <minValue>0</minValue>
     <toStringStyle>Integer</toStringStyle>
   </StatDef>

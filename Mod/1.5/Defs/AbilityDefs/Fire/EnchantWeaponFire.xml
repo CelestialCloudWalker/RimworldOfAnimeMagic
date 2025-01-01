@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AbilityDef>
-      <defName>FlameBreathIgnitionEdge</defName>
-      <label>Flame Breath Ignition Edge</label>
-      <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
+      <defName>FirstFromFlameSurge</defName>
+      <label>First From Flame’s Surge</label>
+      <description>The user ignites their body in flames, empowering their strikes with raw fire, increasing their attack power and speed for a limited time.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>
@@ -20,8 +20,8 @@
           </li>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
             <Radius>5</Radius>
-            <MaxShotsToReflect>10000</MaxShotsToReflect>
-          </li>
-      </comps>
+            <MaxShotsToReflect>20</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_Deflect</effecterDef>
+           </li>
   </AbilityDef>
 </Defs>

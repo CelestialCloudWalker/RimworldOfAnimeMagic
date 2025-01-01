@@ -14,7 +14,7 @@
       <li>BeastBreathFangEdge</li>
       <li>BreathingMarkAbility</li>
     </abilities>
-    <maxStat>AstralPulse</maxStat>
+    <maxStat>BeastBreath</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
     <resourceGizmoThresholds>

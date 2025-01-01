@@ -6,7 +6,6 @@
     <description>The physical and mental toll of using powerful breathing techniques. Extended use strains the body and mind, leading to decreased combat effectiveness and eventual system failure if pushed too far. The user must rest to recover their strength.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
-
     <injuryProps>
       <painPerSeverity>0.05</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
@@ -34,7 +33,7 @@
       </li>
       <li>
         <label>Breathing Fatigue</label>
-        <minSeverity>.1</minSeverity>
+        <minSeverity>0.10</minSeverity>
         <painFactor>1.20</painFactor>
         <hungerRateFactor>1.25</hungerRateFactor>
         <capMods>
@@ -90,54 +89,6 @@
         <statFactors>
           <ShootingAccuracyPawn>0.75</ShootingAccuracyPawn>
           <MeleeHitChance>0.75</MeleeHitChance>
-        </statFactors>
-      </li>
-      <li>
-        <label>Breath Control Failure</label>
-        <minSeverity>0.75</minSeverity>
-        <painFactor>1.70</painFactor>
-        <hungerRateFactor>2.00</hungerRateFactor>
-        <capMods>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-0.70</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.65</offset>
-          </li>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.35</offset>
-          </li>
-        </capMods>
-        <statFactors>
-          <ShootingAccuracyPawn>0.50</ShootingAccuracyPawn>
-          <MeleeHitChance>0.50</MeleeHitChance>
-        </statFactors>
-      </li>
-      <li>
-        <label>Complete Exhaustion</label>
-        <minSeverity>0.9</minSeverity>
-        <painFactor>1.90</painFactor>
-        <hungerRateFactor>2.50</hungerRateFactor>
-        <capMods>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-0.90</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.85</offset>
-          </li>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.50</offset>
-          </li>
-        </capMods>
-        <statFactors>
-          <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
-          <MeleeHitChance>0.25</MeleeHitChance>
         </statFactors>
       </li>
     </stages>

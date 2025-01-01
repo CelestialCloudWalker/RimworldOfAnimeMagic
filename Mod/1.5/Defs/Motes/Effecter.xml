@@ -26,6 +26,31 @@
     </children>
   </EffecterDef>
 
+  <EffecterDef>
+    <defName>AnimeArsenal_WaterDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>15~20</burstCount>
+        <positionRadius>0</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.2~.3</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.1, 0.3, 0.9, 0.8)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
   <FleckDef ParentName="FleckBase_Thrown">
     <defName>AA_RingCurve</defName>
     <altitudeLayer>MoteOverhead</altitudeLayer>
