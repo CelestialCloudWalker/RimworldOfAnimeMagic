@@ -18,6 +18,11 @@
             <resourceGeneDef>WaterBreath</resourceGeneDef>
             <resourceCost>20</resourceCost>
           </li>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <Radius>5</Radius>
+            <MaxShotsToReflect>20</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_WaterDeflect</effecterDef>
+           </li>
       </comps>
   </AbilityDef>
 </Defs>

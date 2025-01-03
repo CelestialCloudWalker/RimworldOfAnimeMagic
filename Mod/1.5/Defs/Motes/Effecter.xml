@@ -9,16 +9,340 @@
         <chancePeriodTicks>6</chancePeriodTicks>
         <fleckDef>AA_RingCurve</fleckDef>
         <spawnLocType>OnTarget</spawnLocType>
-        <burstCount>15~20</burstCount>
-        <positionRadius>0</positionRadius>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
         <positionRadiusMin>0</positionRadiusMin>
-        <scale>.2~.3</scale>
+        <scale>.25~.35</scale>
         <rotation>50~240</rotation>
         <rotationRate>50~250</rotationRate>
         <angle>0~0</angle>
         <speed>0</speed>
-        <!-- Brighter red with higher opacity -->
         <color>(1, 0.2, 0.2, 0.8)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_ThunderDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(1.0, 1.0, 0.0, 0.9)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_WindDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.4, 0.9, 0.5, 0.7)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_StoneDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.5, 0.4, 0.3, 0.9)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_MoonDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.4, 0.4, 0.7, 0.7)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_SoundDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.8, 0.6, 0.2, 0.9)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_MistDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.6, 0.6, 0.7, 0.5)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_LoveDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(1.0, 0.3, 0.6, 0.8)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_FrostDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.4, 0.8, 1.0, 0.8)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_FlowerDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.9, 0.5, 0.7, 0.7)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_SerpentDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.2, 0.8, 0.4, 0.7)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_SunDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(1.0, 0.8, 0.1, 0.9)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_BeastDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.6, 0.4, 0.2, 0.8)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AnimeArsenal_InsectDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(0.7, 0.9, 0.6, 0.7)</color>
         <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
         <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
         <attachToSpawnThing>true</attachToSpawnThing>
@@ -35,15 +359,15 @@
         <chancePeriodTicks>6</chancePeriodTicks>
         <fleckDef>AA_RingCurve</fleckDef>
         <spawnLocType>OnTarget</spawnLocType>
-        <burstCount>15~20</burstCount>
-        <positionRadius>0</positionRadius>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
         <positionRadiusMin>0</positionRadiusMin>
-        <scale>.2~.3</scale>
+        <scale>.25~.35</scale>
         <rotation>50~240</rotation>
         <rotationRate>50~250</rotationRate>
         <angle>0~0</angle>
         <speed>0</speed>
-        <color>(0.1, 0.3, 0.9, 0.8)</color>
+        <color>(0.1, 0.3, 0.9, 0.5)</color>
         <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
         <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
         <attachToSpawnThing>true</attachToSpawnThing>
@@ -53,22 +377,21 @@
 
   <FleckDef ParentName="FleckBase_Thrown">
     <defName>AA_RingCurve</defName>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <altitudeLayer>MoteBelowPawns</altitudeLayer>
     <fadeInTime>.4</fadeInTime>
     <solidTime>0</solidTime>
     <fadeOutTime>0.4</fadeOutTime>
     <growthRate>-.5</growthRate>
     <graphicData>
       <graphicClass>Graphic_FleckPulse</graphicClass>
-      <texPath>Animations/Slash3</texPath>
+      <texPath>Animations/Ring_ShockwaveLiquidy</texPath>
       <shaderType>Mote</shaderType>
       <renderInstanced>false</renderInstanced>
       <shaderParameters>
-        <!-- Brighter red with full opacity -->
-        <_Color>(1, 0.2, 0.2, 1)</_Color>
-        <_brightnessMultiplier>1</_brightnessMultiplier>
+        <_Color>(1, 0.2, 0.2, 0.6)</_Color>
+        <_brightnessMultiplier>0.2</_brightnessMultiplier>
       </shaderParameters>
-      <drawSize>10.0</drawSize>
+      <drawSize>10.5</drawSize>
     </graphicData>
   </FleckDef>
 </Defs>

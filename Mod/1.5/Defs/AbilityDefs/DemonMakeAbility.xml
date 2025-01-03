@@ -6,7 +6,7 @@
   <description>Turn a pawn into a Demon-like work slave.</description>
   <iconPath>UI/Abilities/ShapeFlesh</iconPath>
   <jobDef>CastAbilityOnThing</jobDef>
-  <category>Cursed_Energy</category>
+  <category>BloodDemonArts</category>
   <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
   <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
   <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>

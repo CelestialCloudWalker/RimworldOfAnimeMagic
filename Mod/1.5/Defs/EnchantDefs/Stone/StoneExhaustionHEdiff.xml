@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>FireEnchantmentExhaustion</defName>
+    <defName>StoneEnchantmentExhaustion</defName>
     <label>Breathing Technique Exhaustion</label>
     <description>The physical and mental toll of using powerful breathing techniques. Extended use strains the body and mind, leading to decreased combat effectiveness and eventual system failure if pushed too far. The user must rest to recover their strength.</description>
     <displayWound>false</displayWound>

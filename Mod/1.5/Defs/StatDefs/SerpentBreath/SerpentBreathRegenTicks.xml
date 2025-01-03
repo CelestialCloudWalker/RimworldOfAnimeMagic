@@ -7,8 +7,9 @@
   <category>PawnMisc</category>
   <description>Number of ticks between Serpent Breath regeneration cycles.</description>
   <defaultBaseValue>100</defaultBaseValue>
-   <minValue>0</minValue>
-   <maxValue>1000</maxValue>
-   <toStringStyle>Integer</toStringStyle>
+  <minValue>0</minValue>
+  <maxValue>1000</maxValue>
+  <toStringStyle>Integer</toStringStyle>
 </StatDef>
+
 </Defs>

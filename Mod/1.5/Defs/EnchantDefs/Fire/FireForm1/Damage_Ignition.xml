@@ -8,7 +8,7 @@
     <hediff>BurnHediff</hediff>
   </DamageDef>
 
-  <DamageDef ParentName="Burn">
+  <DamageDef>
     <defName>Ignition</defName>
     <label>Ignition</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
@@ -16,15 +16,15 @@
     <hediffSkin>IgnitionBurn</hediffSkin>
   </DamageDef>
 
-  <HediffDef ParentName="BurnBase">
+  <HediffDef>
     <defName>IgnitionBurn</defName>
     <label>ignition burn</label>
     <labelNoun>an ignition burn</labelNoun>
     <description>A severe burn caused by supernatural ignition.</description>
     <comps>
-      <li Class="HediffCompProperties_TendDuration">
+      <comp Class="HediffCompProperties_TendDuration">
         <severityPerDayTended>-0.78</severityPerDayTended>
-      </li>
+      </comp>
     </comps>
     <injuryProps>
       <painPerSeverity>0.04</painPerSeverity>
@@ -35,4 +35,5 @@
       <destroyedOutLabel>Burned out</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

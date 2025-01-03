@@ -11,7 +11,7 @@
     <resourceDescription>Current stored Breath, charged with electricity. This energy powers devastating thunder-based abilities.</resourceDescription>
     <abilities>
       <li>TotalConcentrationBreathing</li>
-      <li>ThunderBreath:ThunderEdge</li>
+      <li>ThunderBreathThunderEdge</li>
     </abilities>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>

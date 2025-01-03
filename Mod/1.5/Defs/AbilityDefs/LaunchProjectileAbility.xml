@@ -6,11 +6,11 @@
     <description>The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, producing a strong repelling effect rather than an attracting one. Sends the hit target flying backwards</description>
     <iconPath>Abilities/Gojo/Red</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
-    <category>Cursed_Energy</category>
+    <category>BloodDemonArts</category>
     <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>True</disableGizmoWhileUndrafted>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>20</range>
@@ -35,7 +35,7 @@
     <description>The Flame Tiger is a fierce attack in Flame Breathing, releasing a concentrated wave of fire that sends enemies flying backwards, engulfed in flames.</description>
     <iconPath>Abilities/FlameBreathing/FlameTiger</iconPath> <!-- Make sure this icon exists -->
     <cooldownTicksRange>60</cooldownTicksRange>
-    <category>Cursed_Energy</category>
+    <category>BloodDemonArts</category>
     <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
