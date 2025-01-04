@@ -71,6 +71,7 @@
     <Compile Include="HediffCompProperties_SelectiveDamageImmunity.cs" />
     <Compile Include="HediffCompProperties_ThinkTreeOverride.cs" />
     <Compile Include="Hediff_DemonWorkSlave.cs" />
+    <Compile Include="JobGiver_AICastOffensiveAbility.cs" />
     <Compile Include="MoteBeam.cs" />
     <Compile Include="PowerBeamVisual.cs" />
     <Compile Include="ProjectileUtility.cs" />

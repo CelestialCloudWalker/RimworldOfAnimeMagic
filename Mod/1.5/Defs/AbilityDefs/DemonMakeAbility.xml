@@ -12,6 +12,7 @@
   <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
   <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
   <hostile>true</hostile>
+  <aiCanUse>true</aiCanUse>
   <cooldownTicksRange>
     <min>300</min>
     <max>300</max>

@@ -15,9 +15,9 @@
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
 
     <!-- Generic Stats Settings -->
-    <regenTicks>AstralPulse_RegenTicks</regenTicks>
-    <regenStat>AstralPulse_RegenAmount</regenStat>
-    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
-    <costMult>AstralPulse_Cost</costMult>
+    <regenTicks>BloodDemonArts_RegenTicks</regenTicks>
+    <regenStat>BloodDemonArts_RegenAmount</regenStat>
+    <regenSpeedStat>BloodDemonArts_RegenRate</regenSpeedStat>
+    <costMult>BloodDemonArts_Cost</costMult>
     </AnimeArsenal.BloodDemonArtsGeneDef>
 </Defs>

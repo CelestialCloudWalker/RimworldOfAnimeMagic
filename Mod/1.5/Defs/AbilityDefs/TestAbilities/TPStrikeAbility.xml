@@ -5,8 +5,7 @@
       <label>TP Strike</label>
       <description>Instantly teleport to a target and perform a melee attack.</description>
       <iconPath>UI/Abilities/TeleportStrike</iconPath>
-      <hotKey>Misc4</hotKey>
-      <cooldownTicksRange>6000</cooldownTicksRange>
+      <aiCanUse>true</aiCanUse>
       <targetRequired>True</targetRequired>
       <verbProperties>
         <verbClass>Verb_CastAbility</verbClass>

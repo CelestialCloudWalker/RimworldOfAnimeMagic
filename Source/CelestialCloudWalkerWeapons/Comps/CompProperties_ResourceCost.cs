@@ -24,7 +24,11 @@ namespace AnimeArsenal
                 return (CompProperties_ResourceCost)this.props;
             }
         }
+        public override bool AICanTargetNow(LocalTargetInfo target)
+        {
 
+            return true;
+        }
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);

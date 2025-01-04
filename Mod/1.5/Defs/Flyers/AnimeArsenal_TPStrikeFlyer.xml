@@ -3,7 +3,7 @@
   <ThingDef ParentName="PawnFlyerBase">
     <defName>AnimeArsenal_TPStrikeFlyer</defName>
     <label>flying</label>
-    <thingClass>AnimeArsenal.DelegateFlyer</thingClass>
+    <thingClass>AnimeArsenal.DelegateFlyer</thingClass> <!-- here -->
     <useHitPoints>false</useHitPoints>
     <drawOffscreen>true</drawOffscreen>
     <tickerType>Normal</tickerType>
@@ -11,13 +11,13 @@
     <drawerType>RealtimeOnly</drawerType>
     <pawnFlyer>
       <flightDurationMin>0.1</flightDurationMin>
-      <flightSpeed>150</flightSpeed>
+      <flightSpeed>12</flightSpeed>
       <workerClass>PawnFlyerWorker</workerClass>
       <heightFactor>1</heightFactor>
       <progressCurve>
         <points>
           <li>(0, 0)</li>
-          <li>(0.75, 0.75)</li>
+          <li>(0.85, 0.85)</li>
           <li>(1, 1)</li>
         </points>
       </progressCurve>

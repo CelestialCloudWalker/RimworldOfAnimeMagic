@@ -23,6 +23,11 @@ namespace AnimeArsenal
             base.Apply(target, dest);
             LaunchProjectile(target, dest);
         }
+        public override bool AICanTargetNow(LocalTargetInfo target)
+        {
+
+            return true;
+        }
 
         private void LaunchProjectile(LocalTargetInfo target, LocalTargetInfo dest)
         {

@@ -112,6 +112,11 @@ namespace AnimeArsenal
                 }
             }
         }
+        public override bool AICanTargetNow(LocalTargetInfo target)
+        {
+
+            return true;
+        }
 
         private void CreatePowerBeam(IntVec3 source, IntVec3 target, Map map)
         {

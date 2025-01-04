@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ <AlienRace.ThingDef_AlienRace ParentName="AA_DemonBase">
+   <defName>Demon</defName>
+   <label>Demon</label>
+   <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+   <alienRace>
+     <generalSettings>
+       <immuneToAge>true</immuneToAge>
+       <corpseCategory>DemonCorpse</corpseCategory>
+       <raceGenes>
+         <li>
+           <defName>WoundHealing_Fast</defName>
+           <chance>100</chance>
+         </li>
+       </raceGenes>
+       <xenotypeList>
+         <li>AA_DemonBloodArts_User</li>
+       </xenotypeList>
+     </generalSettings>
+     <alienPartGenerator>
+       <bodyAddons>
+         <!-- Body addons are listed here -->
+       </bodyAddons>
+     </alienPartGenerator>
+   </alienRace>
+ </AlienRace.ThingDef_AlienRace>
+</Defs>

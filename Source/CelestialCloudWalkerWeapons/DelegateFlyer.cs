@@ -18,8 +18,8 @@ namespace AnimeArsenal
 
         protected override void RespawnPawn()
         {
-            base.RespawnPawn();
             OnRespawnPawn?.Invoke(this.FlyingPawn, this);
+            base.RespawnPawn();
         }
     }
 }

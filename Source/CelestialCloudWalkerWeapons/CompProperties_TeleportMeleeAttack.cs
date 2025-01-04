@@ -29,6 +29,11 @@ namespace AnimeArsenal
                 flyer.OnRespawnPawn += Flyer_OnRespawnPawn;
             }
         }
+        public override bool AICanTargetNow(LocalTargetInfo target)
+        {
+
+            return true;
+        }
 
         private void Flyer_OnRespawnPawn(Pawn arg1, PawnFlyer arg2)
         {
@@ -38,7 +43,6 @@ namespace AnimeArsenal
             if (TargetThing != null)
             {
                 parent.pawn.SetPositionDirect(TargetThing.RandomAdjacentCell8Way());
-                parent.pawn.Notify_Teleported();
                 parent.pawn.meleeVerbs.TryMeleeAttack(TargetThing, null, false);
             }
 
