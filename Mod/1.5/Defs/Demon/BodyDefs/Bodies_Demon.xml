@@ -114,7 +114,7 @@
           </groups>
           <parts>
             <li>
-              <def>DemonHead</def>
+              <def>Head</def>
               <coverage>0.80</coverage>
               <groups>
                 <li>UpperHead</li>

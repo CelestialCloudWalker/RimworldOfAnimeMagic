@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AlienRace.ThingDef_AlienRace ParentName="Human">
+		<defName>AA_DemonRace</defName>
+		<label>saiyan</label>
+		<description>demon race.</description>
+		<statBases>
+			<MarketValue>4375</MarketValue>
+			<PainShockThreshold>0.9</PainShockThreshold>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.3</ArmorRating_Heat>
+			<MaxNutrition>2.5</MaxNutrition>
+		</statBases>
+		<tools Inherit="False">
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.1</armorPenetration>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<armorPenetration>0.1</armorPenetration>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>12</power>
+				<armorPenetration>0.1</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.07</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<armorPenetration>0.1</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<lifeExpectancy>190</lifeExpectancy>
+			<body>Demon</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>1</baseHealthScale>
+			<baseHungerRate>1.5</baseHungerRate>
+			<alwaysViolent>true</alwaysViolent>
+		</race>
+
+		<recipes>
+		</recipes>
+
+		<alienRace>
+			<raceRestriction>
+				<whiteGeneList>
+				</whiteGeneList>
+				<onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
+				<whiteXenotypeList>
+				</whiteXenotypeList>
+				<xenotypeList>
+					<li>AA_DemonBloodArts_User</li>
+				</xenotypeList>
+			</raceRestriction>
+			<generalSettings>
+				<humanRecipeImport>true</humanRecipeImport>
+				<allowHumanBios>true</allowHumanBios>
+				<alienPartGenerator Inherit="False">
+					<bodyTypes>
+						<li>Male</li>
+						<li>Hulk</li>
+						<li>Female</li>
+					</bodyTypes>
+					<headTypes>
+						<li>Male_AverageNormal</li>
+						<li>Female_AverageNormal</li>
+					</headTypes>
+				</alienPartGenerator>
+				<reproduction>
+        <maleFertilityAgeFactor>
+          <points>
+            <li>(14, 0)</li>
+            <li>(18, 1)</li>
+            <li>(70, 1)</li>
+            <li>(90, 0)</li>
+          </points>
+        </maleFertilityAgeFactor>
+        <femaleFertilityAgeFactor>
+          <points>
+            <li>(14, 0)</li>
+            <li>(20, 1)</li>
+            <li>(35, 1)</li>
+            <li>(50, 0.5)</li>
+            <li>(60, 0.1)</li>
+            <li>(65, 0.02)</li>
+            <li>(70, 0)</li>
+          </points>
+        </femaleFertilityAgeFactor>
+				</reproduction>
+			</generalSettings>
+		</alienRace>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>
