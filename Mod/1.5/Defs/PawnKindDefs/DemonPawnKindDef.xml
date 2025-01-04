@@ -3,7 +3,7 @@
   <PawnKindDef ParentName="BasePlayerPawnKind">
     <defName>AA_DemonColonist</defName>
     <label>Demon</label>
-    <race>Demon</race>
+    <race>AA_DemonRace</race>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <xenotypeSet>
       <xenotypeChances>
@@ -16,7 +16,7 @@
   </PawnKindDef>
 
   <PawnKindDef Name="DemonBase" Abstract="True">
-    <race>Demon</race>
+    <race>AA_DemonRace</race>
     <defaultFactionType>Pirate</defaultFactionType>
     <xenotypeSet>
       <xenotypeChances>
@@ -36,7 +36,7 @@
   <!-- Low merc tier - grenadiers -->
 
   <PawnKindDef Abstract="True" Name="LowDemonBase" ParentName="DemonBase">
-    <race>Demon</race>
+    <race>AA_DemonRace</race>
     <gearHealthRange>0.7~2.3</gearHealthRange>
     <initialWillRange>1~3</initialWillRange>
     <apparelTags>
