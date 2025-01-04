@@ -31,7 +31,7 @@
         <TicksBetweenCuts>15</TicksBetweenCuts>
         <DamageDef>Cut</DamageDef>
         <CleaveDamageEffecter>AA_CleaveDamageEffect</CleaveDamageEffecter>
-        <ScaleStat>AA_BloodDemonArtsDamageBouns</ScaleStat>
+        <ScaleStat>BloodDemonArtsDamageBouns</ScaleStat>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>BloodDemonArt</resourceGeneDef>

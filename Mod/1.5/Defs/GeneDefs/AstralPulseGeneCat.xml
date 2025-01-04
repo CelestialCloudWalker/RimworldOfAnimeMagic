@@ -2,10 +2,10 @@
 <Defs>
   <!-- dont need a new category for each type, this is only for one UI screen -->
   <GeneCategoryDef>
-    <defName>BloodDemonArts</defName>
-    <label>Blood Demon Art</label>
+    <defName>AstralPulse</defName>
+    <label>Astral Pulse</label>
     <description>Blood Demon Arts.</description>
-    <displayPriorityInXenotype>827</displayPriorityInXenotype>
-    <displayPriorityInGenepack>-431</displayPriorityInGenepack>
+    <displayPriorityInXenotype>828</displayPriorityInXenotype>
+    <displayPriorityInGenepack>-435</displayPriorityInGenepack>
   </GeneCategoryDef>
 </Defs>

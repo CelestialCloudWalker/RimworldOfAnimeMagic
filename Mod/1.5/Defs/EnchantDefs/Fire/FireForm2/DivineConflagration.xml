@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DamageDef>
-    <defName>DivineConflagration</defName>
+    <defName>DivineConflagrationDD</defName>
     <label>Divine Conflagration</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <hediff>DivineConflagrationBurn</hediff>
@@ -11,8 +11,9 @@
 <HediffDef ParentName="BurnBase">
     <defName>DivineConflagrationBurn</defName>
     <label>divine conflagration burn</label>
-    <labelNoun>a divine conflagration burn</labelNoun>
+    <hediffClass>Hediff_Burn</hediffClass>
     <description>A catastrophic burn caused by divine flames.</description>
+    <tendable>true</tendable>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <severityPerDayTended>-0.78</severityPerDayTended>

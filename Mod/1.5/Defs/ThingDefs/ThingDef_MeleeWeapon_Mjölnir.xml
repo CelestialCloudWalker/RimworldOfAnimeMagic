@@ -12,7 +12,7 @@
     <equippedAngleOffset>-70</equippedAngleOffset>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-     <texPath>Things/Item/Equipment/WeaponMelee/Mjölnir</texPath>
+      <texPath>Things/Item/Equipment/WeaponMelee/Mjölnir</texPath>
     </graphicData>
     <techLevel>Medieval</techLevel>
     <soundInteract>Interact_MeleeBlunt</soundInteract>
@@ -41,5 +41,15 @@
         <armorPenetration>0.4</armorPenetration>
       </li>
     </tools>
+    <smeltable>true</smeltable>
+    <smeltProducts>
+      <li>
+        <thingDef>Steel</thingDef>
+      </li>
+      <li>
+        <thingDef>Components</thingDef>
+      </li>
+    </smeltProducts>
+
   </ThingDef>
 </Defs>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>DivineConflagrationEdge</defName>
+    <defName>DivineConflagrationEdgeHD</defName>
     <label>Divine Conflagration Edge</label>
     <description>The weapon blazes with divine fire, its strikes unleashing devastating conflagrations that consume flesh and armor alike.</description>
     <displayWound>false</displayWound>
@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
         <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>DivineConflagration</damageType>
+            <damageType>DivineConflagrationDD</damageType>
             <damageValue>10</damageValue>
         </li>
     </comps>

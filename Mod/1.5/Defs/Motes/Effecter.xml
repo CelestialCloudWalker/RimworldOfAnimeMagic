@@ -377,7 +377,7 @@
 
   <FleckDef ParentName="FleckBase_Thrown">
     <defName>AA_RingCurve</defName>
-    <altitudeLayer>MoteBelowPawns</altitudeLayer>
+    <altitudeLayer>Pawn</altitudeLayer>
     <fadeInTime>.4</fadeInTime>
     <solidTime>0</solidTime>
     <fadeOutTime>0.4</fadeOutTime>

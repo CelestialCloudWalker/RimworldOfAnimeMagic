@@ -4,7 +4,7 @@
     <defName>SoundEnchantment</defName>
     <label>Sound Enchantment</label>
     <description>A powerful fire-based enchantment that enhances combat abilities but causes exhaustion over time.</description>
-    <enchantHediff>SoundEdge</enchantHediff>
+    <enchantHediff>SoundEdgeHD</enchantHediff>
     <resourceGene>SoundBreath</resourceGene>
     <!-- Resource Cost Settings -->
     <ticksBetweenCost>120</ticksBetweenCost>

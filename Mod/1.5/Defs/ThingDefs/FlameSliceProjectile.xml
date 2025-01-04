@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<ThingDef ParentName="BaseBullet">
-  <defName>Flame_Slice</defName>
-  <label>Flame Slice</label>
-  <graphicData>
-    <texPath>Things/Projectile/FlameSliceP</texPath>
-    <graphicClass>Graphic_Single</graphicClass>
-    <shaderType>TransparentPostLight</shaderType>
-    <drawSize>4</drawSize>
-  </graphicData>
-  <thingClass>Projectile_DoomsdayRocket</thingClass>
-  <projectile>
-    <damageDef>Cut</damageDef>
-    <explosionRadius>10</explosionRadius>
-    <speed>50</speed>
-  </projectile>
-</ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Flame_Slice</defName>
+    <label>Flame Slice</label>
+    <graphicData>
+      <texPath>Things/Projectile/FlameSliceP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>4</drawSize>
+    </graphicData>
+    <thingClass>Projectile</thingClass>
+    <projectile>
+      <damageDef>Burn</damageDef>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
 </Defs>

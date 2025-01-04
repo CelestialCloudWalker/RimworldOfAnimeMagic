@@ -11,7 +11,7 @@
   </graphicData>
   <thingClass>Projectile_DoomsdayRocket</thingClass>
   <projectile>
-    <damageDef>Cut</damageDef>
+    <DamageDef>Cut</DamageDef>
     <explosionRadius>1</explosionRadius>
     <speed>50</speed>
   </projectile>

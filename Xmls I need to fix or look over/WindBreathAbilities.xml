@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AbilityDef>
+      <defName>WindBreathWindEdge</defName>
+      <label>Wind Breath Wind Edge</label>
+      <description>Using the basics of Wind Breathing, imbue your weapon with razor-sharp gusts of wind that cut through enemies with ease.</description>
+      <targetRequired>false</targetRequired>
+      <verbProperties>
+          <verbClass>Verb_CastAbility</verbClass>
+          <range>-1</range>
+      </verbProperties>
+      <comps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+              <hediffDef>WindEdge</hediffDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_ResourceCost">
+            <resourceGeneDef>WindBreath</resourceGeneDef>
+            <resourceCost>20</resourceCost>
+          </li>
+      </comps>
+  </AbilityDef>
+</Defs>

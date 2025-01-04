@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <StatDef>
-  <defName>AA_BloodDemonArtsDamageBouns</defName>
+  <defName>BloodDemonArtsDamageBouns</defName>
   <label>Blood Demon arts Damage Bonus</label>
   <category>PawnMisc</category>
   <description>Blood demon arts Damage Bonus</description>

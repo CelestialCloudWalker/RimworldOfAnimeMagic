@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DamageDef>
-    <defName>SoundBreathing</defName>
-    <label>Sound Breathing</label>
+    <defName>WaterBreathingDD</defName>
+    <label>Water Breathing</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} was slain by Sound breathing.</deathMessage>
-    <hediff>SoundSlash</hediff>
-    <hediffSkin>SoundSlash</hediffSkin>
+    <hediff>WaterSlash</hediff>
+    <hediffSkin>WaterSlash</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Sharp</armorCategory>
     <impactSoundType>Slice</impactSoundType>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
-    <defName>SoundSlash</defName>
+    <defName>WaterSlash</defName>
     <label>Sound slash</label>
     <labelNoun>a sound breathing wound</labelNoun>
     <description>A clean cut inflicted by sound breathing technique.</description>

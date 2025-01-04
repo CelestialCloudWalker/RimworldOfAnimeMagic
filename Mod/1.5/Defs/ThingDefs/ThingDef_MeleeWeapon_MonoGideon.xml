@@ -12,7 +12,7 @@
     <equippedAngleOffset>-70</equippedAngleOffset> <!-- Modify to align with texture -->
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-     <texPath>Things/Item/Equipment/WeaponMelee/Gideon</texPath> <!-- Replace with the correct texture path -->
+      <texPath>Things/Item/Equipment/WeaponMelee/Gideon</texPath> <!-- Replace with the correct texture path -->
     </graphicData>
     <techLevel>Medieval</techLevel> <!-- Tech level: adjust if necessary -->
     <soundInteract>Interact_MeleeBlunt</soundInteract> <!-- Generic blunt sound -->
@@ -44,5 +44,13 @@
         <armorPenetration>0.4</armorPenetration> <!-- Lower penetration -->
       </li>
     </tools>
+    <smeltProducts>
+      <li>
+        <thingDef>Steel</thingDef>
+      </li>
+      <li>
+        <thingDef>Components</thingDef>
+      </li>
+    </smeltProducts>
   </ThingDef>
 </Defs>

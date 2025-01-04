@@ -4,7 +4,7 @@
     <defName>ConflagrationEnchantment</defName>
     <label>Fire Enchantment</label>
     <description>A powerful fire-based enchantment that enhances combat abilities but causes exhaustion over time.</description>
-    <enchantHediff>DivineConflagrationEdge</enchantHediff>
+    <enchantHediff>DivineConflagrationEdgeHD</enchantHediff>
     <resourceGene>FlameBreath</resourceGene>
     <!-- Resource Cost Settings -->
     <ticksBetweenCost>120</ticksBetweenCost>

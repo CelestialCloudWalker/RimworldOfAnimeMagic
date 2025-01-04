@@ -14,7 +14,7 @@
               <enchantDef>IceEnchantment</enchantDef>
           </li>
           <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>IceBreath</resourceGeneDef>
+            <resourceGeneDef>FrostBreath</resourceGeneDef>
             <resourceCost>20</resourceCost>
           </li>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">

@@ -30,9 +30,6 @@
         <replaceExisting>true</replaceExisting>
       </li>
     </comps>
-    <descriptionHyperlinks>
-      <li>AstralPulse</li>
-    </descriptionHyperlinks>
   </AbilityDef>
 
   <AbilityDef>
