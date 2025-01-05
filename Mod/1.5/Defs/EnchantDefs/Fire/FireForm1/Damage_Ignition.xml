@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Damage Definition for Burn -->
-  <DamageDef>
-    <defName>Burn</defName>
-    <workerClass>DamageWorker_AddInjury</workerClass>
-    <label>burn</label>
-    <hediff>BurnHediff</hediff>
-  </DamageDef>
-
   <!-- Damage Definition for Ignition -->
   <DamageDef>
     <defName>IgnitionBurn</defName>
     <label>Ignition</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
-    <hediff>IgnitionBurn</hediff>
+    <hediff>IgnitionBurnHD</hediff>
   </DamageDef>
 
   <!-- Hediff Definition for IgnitionBurn -->
   <HediffDef>
-    <defName>IgnitionBurn</defName>
-    <label>ignition burn</label>
-    <hediffClass>Hediff_Burn</hediffClass>
+    <defName>IgnitionBurnHD</defName>
+    <label>Ignition Burn</label>
+    <hediffClass>Hediff_Injury</hediffClass>
     <description>A severe burn caused by supernatural ignition.</description>
     <tendable>true</tendable>
     <comps>

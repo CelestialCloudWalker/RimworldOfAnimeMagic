@@ -33,7 +33,7 @@
     <defName>Flame_Breathing_Flame_Tiger</defName>
     <label>Flame Tiger</label>
     <description>The Flame Tiger is a fierce attack in Flame Breathing, releasing a concentrated wave of fire that sends enemies flying backwards, engulfed in flames.</description>
-    <iconPath>Abilities/FlameBreathing/FlameTiger</iconPath> <!-- Make sure this icon exists -->
+    <iconPath>UI/Abilities/IgnitionEdge</iconPath> <!-- Make sure this icon exists -->
     <cooldownTicksRange>60</cooldownTicksRange>
     <category>BloodDemonArts</category>
     <displayOrder>200</displayOrder>

@@ -2,7 +2,7 @@
 <Defs>
   <AlienRace.ThingDef_AlienRace ParentName="Human">
 		<defName>AA_DemonRace</defName>
-		<label>saiyan</label>
+		<label>Demon</label>
 		<description>demon race.</description>
 		<statBases>
 			<MarketValue>4375</MarketValue>
@@ -75,7 +75,7 @@
 		</tools>
 		<race>
 			<lifeExpectancy>190</lifeExpectancy>
-			<body>Demon</body>
+			<body>AA_DemonBody</body>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>
 			<baseHungerRate>1.5</baseHungerRate>

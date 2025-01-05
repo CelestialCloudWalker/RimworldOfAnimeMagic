@@ -5,7 +5,7 @@
     <defName>AstralPulse</defName>
     <label>Astral Pulse</label>
     <description>Blood Demon Arts.</description>
-    <displayPriorityInXenotype>828</displayPriorityInXenotype>
+    <displayPriorityInXenotype>1118</displayPriorityInXenotype>
     <displayPriorityInGenepack>-435</displayPriorityInGenepack>
   </GeneCategoryDef>
 </Defs>

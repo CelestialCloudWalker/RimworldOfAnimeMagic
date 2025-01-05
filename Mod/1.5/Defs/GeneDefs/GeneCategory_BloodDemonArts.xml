@@ -5,7 +5,7 @@
     <defName>BloodDemonArts</defName>
     <label>Blood Demon Art</label>
     <description>Blood Demon Arts.</description>
-    <displayPriorityInXenotype>827</displayPriorityInXenotype>
+    <displayPriorityInXenotype>1117</displayPriorityInXenotype>
     <displayPriorityInGenepack>-431</displayPriorityInGenepack>
   </GeneCategoryDef>
 </Defs>

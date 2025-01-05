@@ -5,7 +5,7 @@
     <defName>BreathingTechnique</defName>
     <label>Breathing Techniques</label>
     <description>Breath channels elemental energy through precise control, unlocking powerful techniques.</description>
-    <displayPriorityInXenotype>829</displayPriorityInXenotype>
+    <displayPriorityInXenotype>1119</displayPriorityInXenotype>
     <displayPriorityInGenepack>-432</displayPriorityInGenepack>
   </GeneCategoryDef>
 </Defs>

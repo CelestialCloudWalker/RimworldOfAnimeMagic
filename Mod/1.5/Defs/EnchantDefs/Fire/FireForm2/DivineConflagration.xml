@@ -6,19 +6,14 @@
     <workerClass>DamageWorker_AddInjury</workerClass>
     <hediff>DivineConflagrationBurn</hediff>
     <hediffSkin>DivineConflagrationBurn</hediffSkin>
-</DamageDef>
+  </DamageDef>
 
-<HediffDef ParentName="BurnBase">
+  <HediffDef ParentName="BurnBase">
     <defName>DivineConflagrationBurn</defName>
     <label>divine conflagration burn</label>
-    <hediffClass>Hediff_Burn</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass>
     <description>A catastrophic burn caused by divine flames.</description>
     <tendable>true</tendable>
-    <comps>
-      <li Class="HediffCompProperties_TendDuration">
-        <severityPerDayTended>-0.78</severityPerDayTended>
-      </li>
-    </comps>
     <injuryProps>
       <painPerSeverity>0.04</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
@@ -27,7 +22,7 @@
       <destroyedLabel>Incinerated</destroyedLabel>
       <destroyedOutLabel>Incinerated</destroyedOutLabel>
     </injuryProps>
-</HediffDef>
+  </HediffDef>
 
   <AnimeArsenal.MultiDamageDef>
     <defName>DivineConflagration</defName>
@@ -35,7 +30,7 @@
     <hasForcefulImpact>true</hasForcefulImpact>
     <makesBlood>false</makesBlood>
     <label>Divine Conflagration</label>
-    <hediff>IgnitionBurn</hediff>
+    <hediff>IgnitionBurnHD</hediff>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has been consumed by divine flames.</deathMessage>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
@@ -49,7 +44,7 @@
     <soundExplosion>Explosion_Flame</soundExplosion>
     <secondaryDamages>
       <li>
-        <damage>Ignition</damage>
+        <damage>IgnitionBurn</damage>
       </li>
       <li>
         <damage>Bullet</damage>
