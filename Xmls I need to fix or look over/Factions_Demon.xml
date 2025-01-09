@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef ParentName="FactionBase">
+    <defName>WildDemon</defName>
+    <label>wild demon band</label>
+    <description>Roaming bands of demons who prey upon the living. These creatures are driven
+      by pure malice and hunger, attacking settlements and travelers without
+      mercy or reason.</description>
+    <pawnSingular>demon</pawnSingular>
+    <pawnsPlural>demons</pawnsPlural>
+    <listOrderPriority>10</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>demon lord</leaderTitle>
+    <factionNameMaker>NamerFactionPirate</factionNameMaker>
+    <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+    <colorSpectrum>
+      <li>(0.7, 0, 0)</li>
+      <li>(0.9, 0.2, 0)</li>
+    </colorSpectrum>
+    <permanentEnemy>true</permanentEnemy>
+    <techLevel>Medieval</techLevel>
+
+    <backstoryCategories>
+      <li>Raider</li>
+      <li>Tribal</li>
+      <li>Offworld</li>
+    </backstoryCategories>
+
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0, 35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Demon_Basic>10</Demon_Basic>
+          <Demon_Warrior>7</Demon_Warrior>
+          <Demon_Elite>3</Demon_Elite>
+          <DemonLord>1</DemonLord>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Demon_Basic>5</Demon_Basic>
+          <Demon_Warrior>10</Demon_Warrior>
+          <Demon_Elite>5</Demon_Elite>
+          <DemonLord>3</DemonLord>
+        </options>
+      </li>
+    </pawnGroupMakers>
+
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+  </FactionDef>
+</Defs>

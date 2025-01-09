@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <BodyPartDef>
+    <defName>DemonHead</defName>
+    <label>demon head</label>
+    <hitPoints>80</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0.5</bleedRate>
+    <executionPartPriority>500</executionPartPriority>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonSkull</defName>
+    <label>demon skull</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonBrain</defName>
+    <label>demon brain</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0.5</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonEye</defName>
+    <label>demon eye</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <canScarify>false</canScarify>
+    <socketed>true</socketed>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonEar</defName>
+    <label>demon ear</label>
+    <hitPoints>80</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonNose</defName>
+    <label>demon nose</label>
+    <hitPoints>80</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <beautyRelated>true</beautyRelated>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonJaw</defName>
+    <label>demon jaw</label>
+    <hitPoints>80</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <beautyRelated>true</beautyRelated>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonNeck</defName>
+    <label>demon neck</label>
+    <hitPoints>80</hitPoints>
+    <bleedRate>0.5</bleedRate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>BreathingPathway</li>
+      <li>EatingPathway</li>
+      <li>TalkingPathway</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <executionPartPriority>1000</executionPartPriority>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonRibcage</defName>
+    <label>demon ribcage</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>BreathingSourceCage</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonSpine</defName>
+    <label>demon spine</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>6</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <tags>
+      <li>Spine</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonLeg</defName>
+    <label>demon leg</label>
+    <hitPoints>80</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonFoot</defName>
+    <label>demon foot</label>
+    <hitPoints>80</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonTongue</defName>
+    <label>demon tongue</label>
+    <skinCovered>false</skinCovered>
+    <bleedRate>0</bleedRate>
+    <beautyRelated>true</beautyRelated>
+    <forceAlwaysRemovable>true</forceAlwaysRemovable>
+    <removeRecipeLabelOverride>remove</removeRecipeLabelOverride>
+    <tags>
+      <li>Tongue</li>
+    </tags>
+  </BodyPartDef>
+
+</Defs>

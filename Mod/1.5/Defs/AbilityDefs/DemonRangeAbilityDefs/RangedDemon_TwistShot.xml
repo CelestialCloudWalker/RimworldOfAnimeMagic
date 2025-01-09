@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef ParentName="RangedDemonBase">
+    <defName>RangedShot_Twist</defName>
+    <label>Demon Twist</label>
+    <description>Command a random limb on the target to twist into a bloody mess.</description>
+        <category>BloodDemonArts</category>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_TwistEffect">
+        <baseDamage>30</baseDamage>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

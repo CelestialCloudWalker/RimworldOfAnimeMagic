@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef ParentName="RangedDemonBase">
+    <defName>RangedShot_Crush</defName>
+    <label>Demon Crush</label>
+    <description>Causes an overwhelming force to bear down on pawns in the target area, dealing crushing damage.</description>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <displayOrder>10</displayOrder>
+    <warmupSound>Ability_PsychicPulse</warmupSound>
+    <category>BloodDemonArts</category>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>20</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Crush">
+        <baseDamage>10</baseDamage>
+        <maxTargets>5</maxTargets>
+        <radius>8</radius>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

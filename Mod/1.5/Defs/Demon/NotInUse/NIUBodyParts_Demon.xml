@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartDef>
+    <defName>DemonTorso</defName>
+    <label>demon torso</label>
+    <hitPoints>80</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <executionPartPriority>400</executionPartPriority>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonShoulder</defName>
+    <label>demon shoulder</label>
+    <hitPoints>80</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonArm</defName>
+    <label>demon arm</label>
+    <hitPoints>80</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <tags>
+      <li>ManipulationLimbCore</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonHand</defName>
+    <label>demon hand</label>
+    <hitPoints>80</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonFinger</defName>
+    <label>demon finger</label>
+    <hitPoints>80</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbDigit</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonWaist</defName>
+    <label>utility slot</label>
+    <conceptual>true</conceptual>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonToe</defName>
+    <label>demon toe</label>
+    <hitPoints>80</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbDigit</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <!-- Bones -->
+
+  <BodyPartDef>
+    <defName>DemonClavicle</defName>
+    <label>demon clavicle</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonSternum</defName>
+    <label>demon sternum</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>BreathingSourceCage</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonHumerus</defName>
+    <label>demon humerus</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonRadius</defName>
+    <label>demon radius</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonPelvis</defName>
+    <label>demon pelvis</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>Pelvis</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonFemur</defName>
+    <label>demon femur</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>DemonTibia</defName>
+    <label>demon tibia</label>
+    <hitPoints>80</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbSegment</li>
+      <li>Mirrored</li>
+    </tags>
+  </BodyPartDef>
+
+</Defs>

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AlienRace">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\294100\839005762\Assemblies\AlienRace.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +49,7 @@
     <Compile Include="BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
     <Compile Include="CompAbilityEffect_LaunchProjectile.cs" />
+    <Compile Include="CompProperties_AACrush.cs" />
     <Compile Include="CompProperties_AbilityDemonifyWorkSlave.cs" />
     <Compile Include="CompProperties_AbilityLaunchScalingProjectile.cs" />
     <Compile Include="CompProperties_AbilityLightningStrike.cs" />
@@ -57,6 +61,8 @@
     <Compile Include="CompProperties_EquipCompScaleableDamage.cs" />
     <Compile Include="CompProperties_TeleportMeleeAttack.cs" />
     <Compile Include="CompProperties_ToggleHediffEffecter.cs" />
+    <Compile Include="CompProperties_TwistAreaEffect.cs" />
+    <Compile Include="CompProperties_TwistEffect.cs" />
     <Compile Include="Comps\CompAbilityEffect_Toggleable.cs" />
     <Compile Include="Comps\CompProperties_DeflectProjectiles.cs" />
     <Compile Include="Comps\CompProperties_ResourceCost.cs" />

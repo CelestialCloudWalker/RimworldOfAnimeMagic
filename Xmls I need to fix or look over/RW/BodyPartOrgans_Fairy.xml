@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartDef>
+    <defName>RW_FairyHeart</defName>
+    <label>Fairy heart</label>
+    <hitPoints>50</hitPoints>
+    <bleedRate>0</bleedRate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BloodPumpingSource</li>
+    </tags>
+    <spawnThingOnRemoved>Heart</spawnThingOnRemoved>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyLung</defName>
+    <label>Fairy lung</label>
+    <hitPoints>50</hitPoints>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BreathingSource</li>
+    </tags>
+    <spawnThingOnRemoved>Lung</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyKidney</defName>
+    <label>Fairy kidney</label>
+    <hitPoints>50</hitPoints>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BloodFiltrationKidney</li>
+    </tags>
+    <spawnThingOnRemoved>Kidney</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyLiver</defName>
+    <label>Fairy liver</label>
+    <hitPoints>80</hitPoints>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BloodFiltrationLiver</li>
+      <li>MetabolismSource</li>
+    </tags>
+    <spawnThingOnRemoved>Liver</spawnThingOnRemoved>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyStomach</defName>
+    <label>Fairy stomach</label>
+    <hitPoints>80</hitPoints>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>MetabolismSource</li>
+    </tags>
+  </BodyPartDef>
+
+</Defs>

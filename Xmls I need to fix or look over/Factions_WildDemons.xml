@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef Name="WildDemonBase" Abstract="True">
+    <race>AA_DemonRace</race>
+    <defaultFactionType>WildDemon</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <biocodeWeaponChance>0</biocodeWeaponChance>
+  </PawnKindDef>
+
+  <!-- Low merc tier - grenadiers -->
+
+  <PawnKindDef Abstract="True" Name="DemonPawnBase" ParentName="WildDemonBase">
+    <race>AA_DemonRace</race>
+    <gearHealthRange>0.7~2.3</gearHealthRange>
+    <initialWillRange>1~3</initialWillRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>400~700</apparelMoney>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <weaponMoney>500~500</weaponMoney>
+    <techHediffsChance>0.05</techHediffsChance>
+    <techHediffsMoney>500~500</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <inventoryOptions>
+      <skipChance>0.95</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DemonPawnBase">
+    <defName>Demon_Basic</defName>
+    <label>lesser demon</label>
+    <combatPower>70</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <isGoodBreacher>true</isGoodBreacher>
+    <weaponTags>
+    </weaponTags>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DemonPawnBase">
+    <defName>Demon_Warrior</defName>
+    <label>demon warrior</label>
+    <combatPower>55</combatPower>
+    <weaponTags>
+    </weaponTags>
+    <initialResistanceRange>15~24</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DemonPawnBase">
+    <defName>Demon_Elite</defName>
+    <label>greater demon</label>
+    <combatPower>55</combatPower>
+    <weaponTags>
+    </weaponTags>
+    <weaponMoney>400~400</weaponMoney>
+    <initialResistanceRange>18~28</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DemonPawnBase">
+    <defName>DemonLord</defName>
+    <label>demon lord</label>
+    <combatPower>100</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <isGoodBreacher>true</isGoodBreacher>
+    <weaponTags>
+      <li>GrenadeDestructive</li>
+    </weaponTags>
+    <initialResist
+  </PawnKindDef>
+
+</Defs>

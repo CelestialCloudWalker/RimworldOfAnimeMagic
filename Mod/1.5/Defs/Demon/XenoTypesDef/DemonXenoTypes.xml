@@ -23,6 +23,20 @@
       <li>AptitudeStrong_Intellectual</li>
       <li>ArchiteMetabolism</li>
       <li>Aggression_Aggressive</li>
+      <li>Pain_Reduced</li>
+      <li>Unstoppable</li>
+      <li>LowSleep</li>
+      <li>Skin_InkBlack</li>
+      <li>Skin_SlateGray</li>
+      <li>Skin_LightGray</li>
+      <li>Skin_SheerWhite</li>
+      <li>Skin_Blue</li>
+      <li>Skin_Purple</li>
+      <li>Skin_PaleRed</li>
+      <li>Skin_DeepRed</li>
+      <li>Skin_DeepYellow</li>
+      <li>Skin_Orange</li>
+      <li>Skin_Green</li>
     </genes>
   </XenotypeDef>
 </Defs>

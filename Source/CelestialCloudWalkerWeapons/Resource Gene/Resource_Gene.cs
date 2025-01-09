@@ -14,6 +14,52 @@ namespace AnimeArsenal
         public Gene_Resource Resource => this;
         public Pawn Pawn => pawn;
 
+        private Color? originalSkinColor;
+
+        public override void PostAdd()
+        {
+            base.PostAdd();
+            ApplyCustomColor(Pawn);
+            Reset();
+        }
+
+        public override void PostRemove()
+        {
+            base.PostRemove();
+            RestoreOriginalColor(Pawn);
+        }
+
+        private void ApplyCustomColor(Pawn pawn)
+        {
+            if (Def?.skinTintChoices == null || Def.skinTintChoices.Count == 0)
+                return;
+
+            
+            if (originalSkinColor == null)
+            {
+                originalSkinColor = pawn.story.skinColorOverride ?? pawn.story.SkinColorBase;
+            }
+
+            
+            pawn.story.skinColorOverride = Def.skinTintChoices.RandomElement();
+        }
+
+        private void RestoreOriginalColor(Pawn pawn)
+        {
+            if (originalSkinColor != null)
+            {
+                pawn.story.skinColorOverride = originalSkinColor;
+                originalSkinColor = null; 
+            }
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref originalSkinColor, "originalSkinColor", null);
+        }
+
+        
         public bool CanOffset
         {
             get
@@ -70,20 +116,10 @@ namespace AnimeArsenal
 
         public float TotalResourceUsed = 0;
 
-        public override void PostAdd()
-        {
-            if (ModLister.CheckBiotech("Hemogen"))
-            {
-                base.PostAdd();
-                Reset();
-            }
-        }
-
         private void ForceBaseMaxUpdate(float newMax)
         {
             this.SetMax(newMax);
         }
-
 
         public void ConsumeAstralPulse(float Amount)
         {
@@ -140,14 +176,6 @@ namespace AnimeArsenal
             {
                 yield return resourceDrainGizmo;
             }
-        }
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref EnableResource, "AstralPulse", defaultValue: true);
-            Scribe_Values.Look(ref CurrentTick, "currentRegenTick", defaultValue: 0);
-            Scribe_Values.Look(ref TotalResourceUsed, "TotalUsedAstralPulse", defaultValue: 0);
         }
     }
 }

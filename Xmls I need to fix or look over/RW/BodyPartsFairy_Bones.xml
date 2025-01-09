@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <BodyPartDef>
+    <defName>RW_FairyHead</defName>
+    <label>Fairy head</label>
+    <hitPoints>100</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <executionPartPriority>500</executionPartPriority>
+    <tags>
+      <li>SightSource</li>
+      <li>HearingSource</li>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+      <li>ConsciousnessSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairySkull</defName>
+    <label>Fairy skull</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyBrain</defName>
+    <label>Fairy brain</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyEye</defName>
+    <label>Fairy eye</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <canScarify>false</canScarify>
+    <socketed>true</socketed>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyEar</defName>
+    <label>Fairy ear</label>
+    <hitPoints>100</hitPoints>
+    <frostbiteVulnerability>0</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyNose</defName>
+    <label>Fairy nose</label>
+    <hitPoints>100</hitPoints>
+    <frostbiteVulnerability>0</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <beautyRelated>true</beautyRelated>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyJaw</defName>
+    <label>Fairy jaw</label>
+    <hitPoints>100</hitPoints>
+    <frostbiteVulnerability>0</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <beautyRelated>true</beautyRelated>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyNeck</defName>
+    <label>Fairy neck</label>
+    <hitPoints>100</hitPoints>
+    <bleedRate>0</bleedRate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>BreathingPathway</li>
+      <li>EatingPathway</li>
+      <li>TalkingPathway</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <executionPartPriority>1000</executionPartPriority>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyRibcage</defName>
+    <label>Fairy ribcage</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>BreathingSourceCage</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairySpine</defName>
+    <label>Fairy spine</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <tags>
+      <li>Spine</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyLeg</defName>
+    <label>Fairy leg</label>
+    <hitPoints>100</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyFoot</defName>
+    <label>Fairy foot</label>
+    <hitPoints>100</hitPoints>
+    <frostbiteVulnerability>0</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RW_FairyTongue</defName>
+    <label>Fairy tongue</label>
+    <skinCovered>false</skinCovered>
+    <bleedRate>0</bleedRate>
+    <beautyRelated>true</beautyRelated>
+    <forceAlwaysRemovable>true</forceAlwaysRemovable>
+    <removeRecipeLabelOverride>remove</removeRecipeLabelOverride>
+    <tags>
+      <li>Tongue</li>
+    </tags>
+  </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyTorso</defName>
+      <label>Fairy torso</label>
+      <hitPoints>100</hitPoints>
+      <skinCovered>true</skinCovered>
+      <canScarify>false</canScarify>
+      <canSuggestAmputation>false</canSuggestAmputation>
+      <executionPartPriority>400</executionPartPriority>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyShoulder</defName>
+      <label>Fairy shoulder</label>
+      <hitPoints>100</hitPoints>
+      <skinCovered>true</skinCovered>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyArm</defName>
+      <label>Fairy arm</label>
+      <hitPoints>100</hitPoints>
+      <skinCovered>true</skinCovered>
+      <canScarify>false</canScarify>
+      <tags>
+        <li>ManipulationLimbCore</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyHand</defName>
+      <label>Fairy hand</label>
+      <hitPoints>100</hitPoints>
+      <frostbiteVulnerability>0</frostbiteVulnerability>
+      <skinCovered>true</skinCovered>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyFinger</defName>
+      <label>Fairy finger</label>
+      <hitPoints>100</hitPoints>
+      <frostbiteVulnerability>0</frostbiteVulnerability>
+      <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+      <skinCovered>true</skinCovered>
+      <tags>
+        <li>ManipulationLimbDigit</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyWaist</defName>
+      <label>utility slot</label>
+      <conceptual>true</conceptual>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyToe</defName>
+      <label>Fairy toe</label>
+      <hitPoints>100</hitPoints>
+      <frostbiteVulnerability>0</frostbiteVulnerability>
+      <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+      <skinCovered>true</skinCovered>
+      <tags>
+        <li>MovingLimbDigit</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <!-- Bones -->
+
+    <BodyPartDef>
+      <defName>RW_FairyClavicle</defName>
+      <label>Fairy clavicle</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+      <destroyableByDamage>false</destroyableByDamage>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairySternum</defName>
+      <label>Fairy sternum</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>BreathingSourceCage</li>
+      </tags>
+      <destroyableByDamage>false</destroyableByDamage>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyHumerus</defName>
+      <label>Fairy humerus</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyRadius</defName>
+      <label>Fairy radius</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyPelvis</defName>
+      <label>Fairy pelvis</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>Pelvis</li>
+      </tags>
+      <destroyableByDamage>false</destroyableByDamage>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyFemur</defName>
+      <label>Fairy femur</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>MovingLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>RW_FairyTibia</defName>
+      <label>Fairy tibia</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>MovingLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+</Defs>

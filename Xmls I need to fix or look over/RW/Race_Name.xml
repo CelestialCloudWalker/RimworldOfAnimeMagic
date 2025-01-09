@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <AlienRace.ThingDef_AlienRace ParentName="Human">
-        <defName>AA_DemonRace</defName>
-        <label>Demon</label>
-        <description>demon race.</description>
+        <defName>RW_FairyRace</defName>
+        <label>Fairy</label>
+        <description>Fairy Race.</description>
         <statBases>
             <MarketValue>4375</MarketValue>
             <PainShockThreshold>0.9</PainShockThreshold>
@@ -75,46 +75,23 @@
         </tools>
         <race>
             <lifeExpectancy>190</lifeExpectancy>
-            <body>AA_DemonBody</body>
+            <body>RW_FairyBody</body>
             <baseBodySize>1</baseBodySize>
-            <baseHealthScale>3</baseHealthScale>
-            <baseHungerRate>1</baseHungerRate>
+            <baseHealthScale>1</baseHealthScale>
+            <baseHungerRate>1.5</baseHungerRate>
             <alwaysViolent>true</alwaysViolent>
         </race>
         <recipes>
         </recipes>
         <alienRace>
             <raceRestriction>
+                <whiteGeneList>
+                </whiteGeneList>
                 <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
                 <whiteXenotypeList>
                 </whiteXenotypeList>
                 <xenotypeList>
-                    <li>AA_DemonBloodArts_User</li>
                 </xenotypeList>
-                <whiteGeneList>
-                    <li>BloodDemonArt</li>
-                    <li>Ageless</li>
-                    <li>Deathless</li>
-                    <li>MeleeDamage_Strong</li>
-                    <li>DarkVision</li>
-                    <li>TotalHealing</li>
-                    <li>PerfectImmunity</li>
-                    <li>DiseaseFree</li>
-                    <li>ToxResist_Total</li>
-                    <li>WoundHealing_SuperFast</li>
-                    <li>AptitudeStrong_Melee</li>
-                    <li>AptitudeStrong_Social</li>
-                    <li>AptitudeStrong_Intellectual</li>
-                    <li>ArchiteMetabolism</li>
-                    <li>Aggression_Aggressive</li>
-                </whiteGeneList>
-                <apparelList>
-                    <li>Apparel_CollarShirt</li>
-                    <li>Apparel_Pants</li>
-                    <li>Apparel_Duster</li>
-                    <li>Apparel_FlakVest</li>
-                    <li>Apparel_CowboyHat</li>
-                </apparelList>
             </raceRestriction>
             <generalSettings>
                 <humanRecipeImport>true</humanRecipeImport>
@@ -151,6 +128,8 @@
                         </points>
                     </femaleFertilityAgeFactor>
                 </reproduction>
+                <forcedRaceTraitEntries>
+                </forcedRaceTraitEntries>
             </generalSettings>
         </alienRace>
     </AlienRace.ThingDef_AlienRace>

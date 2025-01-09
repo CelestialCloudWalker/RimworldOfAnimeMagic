@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -13,6 +14,8 @@ namespace AnimeArsenal
         public StatDef regenSpeedStat;
         public StatDef costMult;
         public Color barColor;
+
+        public List<Color> skinTintChoices;
 
         public ResourceGeneDef()
         {

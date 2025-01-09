@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>RW_FairyColonist</defName>
+    <label>Fairy</label>
+    <race>RW_FairyRace</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <xenotypeSet>
+      <xenotypeChances>
+      </xenotypeChances>
+    </xenotypeSet>
+
+    <!-- This is a required field. 13~21 is the default value for Crashlanded player colonists. -->
+    <initialResistanceRange>13~21</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef Name="FairyBase" ParentName="BasePlayerPawnKind" Abstract="True">
+    <race>RW_FairyRace</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <xenotypeSet>
+      <xenotypeChances>
+      </xenotypeChances>
+    </xenotypeSet>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+    <maxGenerationAge>65</maxGenerationAge>
+    <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <biocodeWeaponChance>0.1</biocodeWeaponChance>
+  </PawnKindDef>
+
+</Defs>
