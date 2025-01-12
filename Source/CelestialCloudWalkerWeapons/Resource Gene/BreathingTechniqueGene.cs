@@ -19,16 +19,16 @@ namespace AnimeArsenal
             {
                 if (isExhausted)
                 {
-                   return Mathf.Clamp01((float)exhaustionCooldownRemaining / (float)Def.exhausationCooldownTicks);
+                    return Mathf.Clamp01((float)exhaustionCooldownRemaining / (float)Def.exhausationCooldownTicks);
                 }
-                else 
+                else
                 {
                     return Mathf.Clamp01((float)timeUntilExhaustedTimer / (float)Def.ticksBeforeExhaustionStart);
                 }
             }
         }
-            
-           
+
+
 
 
         public void TickExhausted()

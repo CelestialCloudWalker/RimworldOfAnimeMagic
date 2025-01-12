@@ -34,13 +34,13 @@ namespace AnimeArsenal
             if (Def?.skinTintChoices == null || Def.skinTintChoices.Count == 0)
                 return;
 
-            
+
             if (originalSkinColor == null)
             {
                 originalSkinColor = pawn.story.skinColorOverride ?? pawn.story.SkinColorBase;
             }
 
-            
+
             pawn.story.skinColorOverride = Def.skinTintChoices.RandomElement();
         }
 
@@ -49,7 +49,7 @@ namespace AnimeArsenal
             if (originalSkinColor != null)
             {
                 pawn.story.skinColorOverride = originalSkinColor;
-                originalSkinColor = null; 
+                originalSkinColor = null;
             }
         }
 
@@ -59,7 +59,7 @@ namespace AnimeArsenal
             Scribe_Values.Look(ref originalSkinColor, "originalSkinColor", null);
         }
 
-        
+
         public bool CanOffset
         {
             get
