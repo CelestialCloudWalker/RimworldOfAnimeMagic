@@ -25,7 +25,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
-        <projectileDef>ReversedCursedTechnique_RedProjecitle</projectileDef>
+        <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
       </li>
     </comps>
   </AbilityDef>
@@ -54,7 +54,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
-        <projectileDef>ReversedCursedTechnique_RedProjecitle</projectileDef> <!-- Ensure this matches your projectile definition -->
+        <projectileDef>PleaseLordEmoForgiveMe</projectileDef> <!-- Ensure this matches your projectile definition -->
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>FlameBreath</resourceGeneDef>

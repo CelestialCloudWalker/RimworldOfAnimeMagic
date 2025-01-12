@@ -8,18 +8,55 @@ namespace AnimeArsenal
     {
         public event Action<PawnFlyer> OnSpawn;
         public event Action<Pawn, PawnFlyer> OnRespawnPawn;
-
+        private bool respawnQueued = false;
 
         public override void PostMake()
         {
             base.PostMake();
-            OnSpawn?.Invoke(this);
+            try
+            {
+                LongEventHandler.ExecuteWhenFinished(() => OnSpawn?.Invoke(this));
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"DelegateFlyer - Error in PostMake: {ex}");
+            }
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+            if (respawnQueued)
+            {
+                respawnQueued = false;
+                try
+                {
+                    OnRespawnPawn?.Invoke(FlyingPawn, this);
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"DelegateFlyer - Error in queued respawn: {ex}");
+                }
+            }
         }
 
         protected override void RespawnPawn()
         {
-            OnRespawnPawn?.Invoke(this.FlyingPawn, this);
-            base.RespawnPawn();
+            if (FlyingPawn == null)
+            {
+                Log.Error("DelegateFlyer - FlyingPawn is null during RespawnPawn");
+                return;
+            }
+
+            try
+            {
+                base.RespawnPawn();
+                respawnQueued = true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"DelegateFlyer - Error in RespawnPawn: {ex}");
+            }
         }
     }
 }

@@ -30,6 +30,8 @@ namespace AnimeArsenal
         public static HediffDef DemonWorkSlaveHediff;
         public static DamageDef TwistDamage;
         public static DamageDef CrushDamage;
+        public static EffecterDef SunlightBurningEffect;
+        public static EffecterDef SunlightDeathEffect;
 
     }
 }

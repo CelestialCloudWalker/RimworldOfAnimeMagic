@@ -1,8 +1,6 @@
 ﻿using RimWorld;
-using System.Collections.Generic;
-using System.Linq;
 using Verse;
-using Verse.AI.Group;
+using System.Linq;
 
 namespace AnimeArsenal
 {
@@ -10,47 +8,59 @@ namespace AnimeArsenal
     {
         public CompProperties_AbilityDemonifyWorkSlave()
         {
-            compClass = typeof(CompAbilityEffect_DemonifyWorkSlave);
+            compClass = typeof(CompAbility_DemonifyWorkSlave);
         }
     }
 
-    public class CompAbilityEffect_DemonifyWorkSlave : CompAbilityEffect
+    public class CompAbility_DemonifyWorkSlave : CompAbilityEffect
     {
-        public new CompProperties_AbilityDemonifyWorkSlave Props => (CompProperties_AbilityDemonifyWorkSlave)props;
+        private const string BLOOD_DEMON_ART_GENE = "BloodDemonArt";
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
 
-            Pawn targetPawn = target.Pawn;
-            if (targetPawn != null)
+            if (target.Pawn != null)
             {
-                DemonUtility.ForceIntoDemonSlave(targetPawn, this.parent.pawn);
+                Pawn targetPawn = target.Pawn;
 
-                Hediff zombieHediff = HediffMaker.MakeHediff(CelestialDefof.DemonWorkSlaveHediff, targetPawn);
-                targetPawn.health.AddHediff(zombieHediff);
+                // Add the demon work slave hediff
+                Hediff demonSlaveHediff = HediffMaker.MakeHediff(DefDatabase<HediffDef>.GetNamed("DemonWorkSlaveHediff"), targetPawn);
+                targetPawn.health.AddHediff(demonSlaveHediff);
 
-
-                Hediff addedHeDiff = targetPawn.health.hediffSet.GetFirstHediffOfDef(CelestialDefof.DemonWorkSlaveHediff);
-
-
-                if (addedHeDiff != null)
+                // Get the comp and set the master
+                if (demonSlaveHediff.TryGetComp<HediffComp_DemonWorkSlaveEffect>() is HediffComp_DemonWorkSlaveEffect slaveComp)
                 {
-                    HediffComp_DemonWorkSlaveEffect zombieWorkSlaveEffect = addedHeDiff.TryGetComp<HediffComp_DemonWorkSlaveEffect>();
-                    if (zombieWorkSlaveEffect != null)
-                    {
-                        zombieWorkSlaveEffect.SetSlaveMaster(parent.pawn);
-                        Log.Message($"Zombify: Master set for {targetPawn.LabelShort} to {parent.pawn.LabelShort}");
-                    }
-                    else
-                    {
-                        Log.Error($"Zombify: Failed to get HediffComp_ZombieWorkSlaveEffect for {targetPawn.LabelShort}");
-                    }
+                    slaveComp.SetSlaveMaster(parent.pawn);
                 }
 
+                // Add the Blood Demon Art gene if the pawn doesn't already have it
+                if (targetPawn.genes != null)
+                {
+                    GeneDef bloodDemonArtGene = DefDatabase<GeneDef>.GetNamed(BLOOD_DEMON_ART_GENE);
 
+                    // Check if pawn already has the gene
+                    if (!targetPawn.genes.HasGene(bloodDemonArtGene))
+                    {
+                        // Add the Blood Demon Art gene
+                        Gene gene = targetPawn.genes.AddGene(bloodDemonArtGene, true);
+
+                        // Initialize gene resource if it exists
+                        if (gene is Resource_Gene resourceGene)
+                        {
+                            // Enable the resource
+                            resourceGene.EnableResource = true;
+
+                            // Set initial value to 50% of max
+                            float maxResource = resourceGene.Max;
+                            resourceGene.Value = maxResource * 0.5f;
+
+                            // Reset regeneration ticks
+                            resourceGene.ResetRegenTicks();
+                        }
+                    }
+                }
             }
         }
     }
-
 }

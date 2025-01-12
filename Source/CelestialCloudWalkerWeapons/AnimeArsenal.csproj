@@ -39,6 +39,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="Talented">
+      <HintPath>..\..\..\Downloads\Talented-main\Talented-main\Talent\1.5\Assemblies\Talented.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AMConstants.cs" />
@@ -59,7 +62,9 @@
     <Compile Include="CompProperties_EquipCompApplyHediffOnHit.cs" />
     <Compile Include="CompProperties_EquipCompRemoveHediffOnHit.cs" />
     <Compile Include="CompProperties_EquipCompScaleableDamage.cs" />
+    <Compile Include="CompProperties_GeneSunlightDamage.cs" />
     <Compile Include="CompProperties_TeleportMeleeAttack.cs" />
+    <Compile Include="CompProperties_ToggleEnchantDemon.cs" />
     <Compile Include="CompProperties_ToggleHediffEffecter.cs" />
     <Compile Include="CompProperties_TwistAreaEffect.cs" />
     <Compile Include="CompProperties_TwistEffect.cs" />

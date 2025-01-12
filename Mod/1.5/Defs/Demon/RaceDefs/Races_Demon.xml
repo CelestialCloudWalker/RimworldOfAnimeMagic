@@ -108,13 +108,7 @@
                     <li>ArchiteMetabolism</li>
                     <li>Aggression_Aggressive</li>
                 </whiteGeneList>
-                <apparelList>
-                    <li>Apparel_CollarShirt</li>
-                    <li>Apparel_Pants</li>
-                    <li>Apparel_Duster</li>
-                    <li>Apparel_FlakVest</li>
-                    <li>Apparel_CowboyHat</li>
-                </apparelList>
+                <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
             </raceRestriction>
             <generalSettings>
                 <humanRecipeImport>true</humanRecipeImport>

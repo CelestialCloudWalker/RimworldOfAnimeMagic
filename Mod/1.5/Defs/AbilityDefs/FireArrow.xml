@@ -22,7 +22,7 @@
       </verbProperties>
       <comps>
         <li Class="CompProperties_AbilityLaunchProjectile">
-          <projectileDef>ReversedCursedTechnique_RedProjecitle</projectileDef>
+          <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
           <resourceGeneDef>FlameBreath</resourceGeneDef>

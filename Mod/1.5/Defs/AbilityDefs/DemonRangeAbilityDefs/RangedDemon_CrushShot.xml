@@ -4,7 +4,7 @@
     <defName>RangedShot_Crush</defName>
     <label>Demon Crush</label>
     <description>Causes an overwhelming force to bear down on pawns in the target area, dealing crushing damage.</description>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <displayOrder>10</displayOrder>
     <warmupSound>Ability_PsychicPulse</warmupSound>
     <category>BloodDemonArts</category>
