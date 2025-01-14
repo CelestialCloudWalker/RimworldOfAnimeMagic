@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using Talented;
+using UnityEngine;
 using Verse;
 
 namespace AnimeArsenal
 {
-    public class BloodDemonArtsGene : Resource_Gene
+    public class BloodDemonArtsGene : Gene_TalentBase
     {
         new BloodDemonArtsGeneDef Def => (BloodDemonArtsGeneDef)def;
 

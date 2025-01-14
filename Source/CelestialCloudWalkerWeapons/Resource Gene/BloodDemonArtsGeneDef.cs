@@ -1,8 +1,9 @@
-﻿using Verse;
+﻿using Talented;
+using Verse;
 
 namespace AnimeArsenal
 {
-    public class BloodDemonArtsGeneDef : ResourceGeneDef
+    public class BloodDemonArtsGeneDef : TalentedGeneDef
     {
         public HediffDef exhaustionHediff;
         //how much exhaustaion severity is gained every ticksPerExhaustionIncrease ticks (if appropiate)

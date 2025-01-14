@@ -40,7 +40,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="Talented">
-      <HintPath>..\..\..\Downloads\Talented-main\Talented-main\Talent\1.5\Assemblies\Talented.dll</HintPath>
+      <HintPath>D:\Games\RimWorld\Mods\Talented\1.5\Assemblies\Talented.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -48,26 +49,26 @@
     <Compile Include="AnimeArsenalUtility.cs" />
     <Compile Include="AoeDamageAtEndFlyer.cs" />
     <Compile Include="BaseTraitComp.cs" />
-    <Compile Include="BloodDemonArtsGene.cs" />
-    <Compile Include="BloodDemonArtsGeneDef.cs" />
+    <Compile Include="Resource Gene\BloodDemonArtsGene.cs" />
+    <Compile Include="Resource Gene\BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
-    <Compile Include="CompAbilityEffect_LaunchProjectile.cs" />
-    <Compile Include="CompProperties_AACrush.cs" />
-    <Compile Include="CompProperties_AbilityDemonifyWorkSlave.cs" />
-    <Compile Include="CompProperties_AbilityLaunchScalingProjectile.cs" />
-    <Compile Include="CompProperties_AbilityLightningStrike.cs" />
-    <Compile Include="CompProperties_BeamEffect.cs" />
-    <Compile Include="CompProperties_Cleave.cs" />
-    <Compile Include="CompProperties_DamageInRect.cs" />
-    <Compile Include="CompProperties_EquipCompApplyHediffOnHit.cs" />
-    <Compile Include="CompProperties_EquipCompRemoveHediffOnHit.cs" />
-    <Compile Include="CompProperties_EquipCompScaleableDamage.cs" />
-    <Compile Include="CompProperties_GeneSunlightDamage.cs" />
-    <Compile Include="CompProperties_TeleportMeleeAttack.cs" />
-    <Compile Include="CompProperties_ToggleEnchantDemon.cs" />
-    <Compile Include="CompProperties_ToggleHediffEffecter.cs" />
-    <Compile Include="CompProperties_TwistAreaEffect.cs" />
-    <Compile Include="CompProperties_TwistEffect.cs" />
+    <Compile Include="Comps\CompAbilityEffect_LaunchProjectile.cs" />
+    <Compile Include="Comps\CompProperties_AACrush.cs" />
+    <Compile Include="Comps\CompProperties_AbilityDemonifyWorkSlave.cs" />
+    <Compile Include="Comps\CompProperties_AbilityLaunchScalingProjectile.cs" />
+    <Compile Include="Comps\CompProperties_AbilityLightningStrike.cs" />
+    <Compile Include="Comps\CompProperties_BeamEffect.cs" />
+    <Compile Include="Comps\CompProperties_Cleave.cs" />
+    <Compile Include="Comps\CompProperties_DamageInRect.cs" />
+    <Compile Include="Comps\CompProperties_EquipCompApplyHediffOnHit.cs" />
+    <Compile Include="Comps\CompProperties_EquipCompRemoveHediffOnHit.cs" />
+    <Compile Include="Comps\CompProperties_EquipCompScaleableDamage.cs" />
+    <Compile Include="Comps\CompProperties_GeneSunlightDamage.cs" />
+    <Compile Include="Comps\CompProperties_TeleportMeleeAttack.cs" />
+    <Compile Include="Comps\CompProperties_ToggleEnchantDemon.cs" />
+    <Compile Include="Comps\CompProperties_ToggleHediffEffecter.cs" />
+    <Compile Include="Comps\CompProperties_TwistAreaEffect.cs" />
+    <Compile Include="Comps\CompProperties_TwistEffect.cs" />
     <Compile Include="Comps\CompAbilityEffect_Toggleable.cs" />
     <Compile Include="Comps\CompProperties_DeflectProjectiles.cs" />
     <Compile Include="Comps\CompProperties_ResourceCost.cs" />
@@ -77,7 +78,7 @@
     <Compile Include="Damage\ChakraScalingDamageDef.cs" />
     <Compile Include="DelegateFlyer.cs" />
     <Compile Include="DemonUtility.cs" />
-    <Compile Include="GeneGizmoBlood.cs" />
+    <Compile Include="Resource Gene\GeneGizmoBlood.cs" />
     <Compile Include="HediffCompProperties_DemonWorkSlaveEffect.cs" />
     <Compile Include="HediffCompProperties_SelectiveDamageImmunity.cs" />
     <Compile Include="HediffCompProperties_ThinkTreeOverride.cs" />

@@ -82,6 +82,11 @@ namespace AnimeArsenal
             DamageInfo damageInfo = new DamageInfo(Props.DamageDef, actualDamage);
             TargetPawn.TakeDamage(damageInfo);
         }
+        public override bool AICanTargetNow(LocalTargetInfo target)
+        {
+
+            return true;
+        }
         public override void PostExposeData()
         {
             base.PostExposeData();
@@ -90,6 +95,7 @@ namespace AnimeArsenal
             Scribe_Values.Look(ref DamagePerCut, "damagePerCut");
             Scribe_Deep.Look(ref DamageTicker, "damageTicker");
         }
+
     }
 
 }
