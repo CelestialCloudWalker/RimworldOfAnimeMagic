@@ -15,15 +15,15 @@
     <apparelMoney>5000~10000</apparelMoney>
     <initialWillRange>10</initialWillRange>
     <initialResistanceRange>10</initialResistanceRange>
-    <apparelTags>
-      <li>Fletchling</li>
-    </apparelTags>
     <inventoryOptions />
     <xenotypeSet>
       <xenotypeChances>
         <AA_DemonBloodArts_User>999</AA_DemonBloodArts_User>
       </xenotypeChances>
     </xenotypeSet>
+    <apparelRequired>
+        <li>Apparel_Duster</li>
+    </apparelRequired>
   </PawnKindDef>
 
   <PawnKindDef ParentName="FletchlingDemonBase">
