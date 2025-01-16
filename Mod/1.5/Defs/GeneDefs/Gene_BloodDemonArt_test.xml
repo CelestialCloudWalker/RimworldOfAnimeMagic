@@ -27,11 +27,15 @@
     <experienceGainSettings>
         <experienceTypes>
             <!-- Combat XP -->
-            <li Class="Talented.DamageExperienceTypeDef">
+            <li Class="Talented.DamageTakenExperienceTypeDef">
                 <baseXP>10</baseXP>
                 <damageFactor>0.1</damageFactor>
             </li>
-
+            
+            <li Class="Talented.DamageDealtExperienceTypeDef">
+                <baseXP>10</baseXP>
+                <damageFactor>0.1</damageFactor>
+            </li>
             <!-- Skill XP -->
             <li Class="Talented.SkillExperienceTypeDef">
                 <SkillDef>Shooting</SkillDef>
