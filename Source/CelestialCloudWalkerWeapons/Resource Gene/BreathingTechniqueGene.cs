@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using Talented;
+using UnityEngine;
 using Verse;
 
 namespace AnimeArsenal
 {
-    public class BreathingTechniqueGene : Resource_Gene
+    public class BreathingTechniqueGene : Gene_BasicResource
     {
         new BreathingTechniqueGeneDef Def => (BreathingTechniqueGeneDef)def;
 
@@ -71,7 +72,7 @@ namespace AnimeArsenal
 
             if (exhaustionHediffTimer >= Def.ticksPerExhaustionIncrease)
             {
-                if (Def.exhaustionHediff != null)
+                if (Def.exhaustionHediff != null && ShouldApplyExhausation())
                 {
                     Hediff hediff = this.pawn.health.GetOrAddHediff(Def.exhaustionHediff);
 
@@ -83,6 +84,11 @@ namespace AnimeArsenal
 
                 exhaustionHediffTimer = 0;
             }
+        }
+
+        public virtual bool ShouldApplyExhausation()
+        {
+            return true;
         }
 
         private void OnExhaustionStarted()

@@ -1,10 +1,11 @@
-﻿using Talented;
+﻿using RimWorld;
+using Talented;
 using UnityEngine;
 using Verse;
 
 namespace AnimeArsenal
 {
-    public class BloodDemonArtsGene : Gene_TalentBase
+    public class BloodDemonArtsGene : BreathingTechniqueGene
     {
         new BloodDemonArtsGeneDef Def => (BloodDemonArtsGeneDef)def;
 
@@ -14,96 +15,56 @@ namespace AnimeArsenal
         private int exhaustionHediffTimer = 0;
         public float regenSpeed = 0.1f;
 
+        private Color? originalSkinColor;
 
-        public float ExhaustionProgress
+        public override void PostAdd()
         {
-            get
+            base.PostAdd();
+            ApplyCustomColor(Pawn);
+            Reset();
+        }
+
+        public override void PostRemove()
+        {
+            base.PostRemove();
+            RestoreOriginalColor(Pawn);
+        }
+
+        private void ApplyCustomColor(Pawn pawn)
+        {
+            if (Def?.skinTintChoices == null || Def.skinTintChoices.Count == 0)
+                return;
+
+
+            if (originalSkinColor == null)
             {
-                if (isExhausted)
-                {
-                    return Mathf.Clamp01((float)exhaustionCooldownRemaining / (float)Def.exhausationCooldownTicks);
-                }
-                else
-                {
-                    return Mathf.Clamp01((float)timeUntilExhaustedTimer / (float)Def.ticksBeforeExhaustionStart);
-                }
+                originalSkinColor = pawn.story.skinColorOverride ?? pawn.story.SkinColorBase;
+            }
+
+
+            pawn.story.skinColorOverride = Def.skinTintChoices.RandomElement();
+        }
+
+        private void RestoreOriginalColor(Pawn pawn)
+        {
+            if (originalSkinColor != null)
+            {
+                pawn.story.skinColorOverride = originalSkinColor;
+                originalSkinColor = null;
             }
         }
 
 
-
-
-        public void TickExhausted()
+        public override bool ShouldApplyExhausation()
         {
-            if (isExhausted)
-            {
-                exhaustionCooldownRemaining--;
-
-                if (exhaustionCooldownRemaining <= 0)
-                {
-                    OnExhaustionEnded();
-
-                }
-            }
+            return false;
         }
-
-        public void ReduceExhaustionBuildup()
-        {
-            if (timeUntilExhaustedTimer > 0)
-            {
-                timeUntilExhaustedTimer--;
-            }
-
-            if (exhaustionHediffTimer > 0)
-            {
-                exhaustionHediffTimer--;
-            }
-        }
-
-        public void TickActiveExhaustion()
-        {
-            timeUntilExhaustedTimer++;
-
-            if (timeUntilExhaustedTimer >= Def.ticksBeforeExhaustionStart)
-            {
-                timeUntilExhaustedTimer = 0;
-                OnExhaustionStarted();
-            }
-            exhaustionHediffTimer++;
-
-            if (exhaustionHediffTimer >= Def.ticksPerExhaustionIncrease)
-            {
-                if (Def.exhaustionHediff != null)
-                {
-                    Hediff hediff = this.pawn.health.GetOrAddHediff(Def.exhaustionHediff);
-
-                    if (hediff != null)
-                    {
-                        hediff.Severity += Def.exhaustionPerTick;
-                    }
-                }
-
-                exhaustionHediffTimer = 0;
-            }
-        }
-
-        private void OnExhaustionStarted()
-        {
-            isExhausted = true;
-            exhaustionCooldownRemaining = Def.exhausationCooldownTicks;
-        }
-
-        private void OnExhaustionEnded()
-        {
-            exhaustionCooldownRemaining = 0;
-            isExhausted = false;
-        }
-
 
         public override void ExposeData()
         {
             base.ExposeData();
 
+            Scribe_Values.Look(ref originalSkinColor, "originalSkinColor", null);
             Scribe_Values.Look(ref timeUntilExhaustedTimer, "timeUntilExhaustedTimer", 0);
             Scribe_Values.Look(ref isExhausted, "isExhausted", false);
             Scribe_Values.Look(ref exhaustionCooldownRemaining, "exhaustionCooldownRemaining", 0);

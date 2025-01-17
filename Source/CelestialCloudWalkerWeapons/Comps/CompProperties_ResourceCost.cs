@@ -1,11 +1,12 @@
 ﻿using RimWorld;
+using Talented;
 using Verse;
 
 namespace AnimeArsenal
 {
     public class CompProperties_ResourceCost : CompProperties_AbilityEffect
     {
-        public ResourceGeneDef resourceGeneDef;
+        public BasicResourceGeneDef resourceGeneDef;
         public float resourceCost = 20f;
 
         public CompProperties_ResourceCost()
@@ -36,12 +37,12 @@ namespace AnimeArsenal
 
             Gene foundGene = this.parent.pawn.genes.GetGene(Props.resourceGeneDef);
 
-            if (foundGene != null && foundGene is Resource_Gene resourceGene)
+            if (foundGene != null && foundGene is Gene_BasicResource resourceGene)
             {
 
-                if (resourceGene.HasAstralPulse(Props.resourceCost))
+                if (resourceGene.Has(Props.resourceCost))
                 {
-                    resourceGene.ConsumeAstralPulse(Props.resourceCost);
+                    resourceGene.Consume(Props.resourceCost);
                 }
                 else
                 {

@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 using System.Linq;
+using Talented;
 
 namespace AnimeArsenal
 {
@@ -46,7 +47,7 @@ namespace AnimeArsenal
                         Gene gene = targetPawn.genes.AddGene(bloodDemonArtGene, true);
 
                         // Initialize gene resource if it exists
-                        if (gene is Resource_Gene resourceGene)
+                        if (gene is Gene_BasicResource resourceGene)
                         {
                             // Enable the resource
                             resourceGene.EnableResource = true;

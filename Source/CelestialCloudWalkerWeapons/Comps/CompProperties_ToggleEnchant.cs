@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using Talented;
 using Verse;
 
 namespace AnimeArsenal
@@ -19,8 +20,8 @@ namespace AnimeArsenal
 
         private int resourceCostTimer = 0;
 
-        private Resource_Gene _ResourceGene;
-        private Resource_Gene ResourceGene
+        private Gene_BasicResource _ResourceGene;
+        private Gene_BasicResource ResourceGene
         {
             get
             {
@@ -29,12 +30,12 @@ namespace AnimeArsenal
 
                 if (Props.enchantDef.resourceGene != null)
                 {
-                    _ResourceGene = (Resource_Gene)parent.pawn.genes.GetGene(Props.enchantDef.resourceGene);
+                    _ResourceGene = (Gene_BasicResource)parent.pawn.genes.GetGene(Props.enchantDef.resourceGene);
                     if (_ResourceGene != null)
                         return _ResourceGene;
                 }
 
-                _ResourceGene = parent.pawn.genes.GetFirstGeneOfType<Resource_Gene>();
+                _ResourceGene = parent.pawn.genes.GetFirstGeneOfType<Gene_BasicResource>();
                 return _ResourceGene;
             }
         }
@@ -64,7 +65,7 @@ namespace AnimeArsenal
                     if (ResourceGene != null)
                     {
                         //actually consume the resource 
-                        ResourceGene.ConsumeAstralPulse(Props.enchantDef.resourceCostPerTick);
+                        ResourceGene.Consume(Props.enchantDef.resourceCostPerTick);
                     }
 
 
@@ -105,7 +106,7 @@ namespace AnimeArsenal
 
             if (ResourceGene != null)
             {
-                return Props.enchantDef.resourceCostPerTick > 0 && ResourceGene.HasAstralPulse(GetChannelCost());
+                return Props.enchantDef.resourceCostPerTick > 0 && ResourceGene.Has(GetChannelCost());
             }
             return true;
         }
@@ -119,7 +120,7 @@ namespace AnimeArsenal
         {
             if (ResourceGene != null)
             {
-                return Props.enchantDef.resourceCostPerTick > 0 && !ResourceGene.HasAstralPulse(GetChannelCost());
+                return Props.enchantDef.resourceCostPerTick > 0 && !ResourceGene.Has(GetChannelCost());
             }
 
             return false;

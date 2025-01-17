@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using Talented;
+using Verse;
 
 namespace AnimeArsenal
 {
@@ -6,7 +7,7 @@ namespace AnimeArsenal
     {
         public HediffDef enchantHediff;
         //the ResourceGeneDef if any that powers this
-        public ResourceGeneDef resourceGene;
+        public BasicResourceGeneDef resourceGene;
         //how often resource is deducted
         public int ticksBetweenCost = 1250;
         //how much is deducted

@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using Talented;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -18,7 +19,7 @@ namespace AnimeArsenal
         {
             get
             {
-                if (gene is Resource_Gene resourceGene && resourceGene.Def != null)
+                if (gene is Gene_BasicResource resourceGene && resourceGene.Def != null)
                 {
                     return resourceGene.Def.resourceLabel;
                 }
@@ -57,7 +58,7 @@ namespace AnimeArsenal
 
         protected override string GetTooltip()
         {
-            if (!(gene is Resource_Gene resourceGene)) return "";
+            if (!(gene is Gene_BasicResource resourceGene)) return "";
 
             string text = $"{resourceGene.Def.resourceLabel.CapitalizeFirst().Colorize(ColoredText.TipSectionTitleColor)}: {resourceGene.ValueForDisplay} / {resourceGene.MaxForDisplay}\n";
 

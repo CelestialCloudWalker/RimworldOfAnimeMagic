@@ -1,4 +1,6 @@
-﻿using Talented;
+﻿using System.Collections.Generic;
+using Talented;
+using UnityEngine;
 using Verse;
 
 namespace AnimeArsenal
@@ -14,7 +16,7 @@ namespace AnimeArsenal
         public int ticksPerExhaustionIncrease = 1250;
         //how long before exhaustion stops
         public int exhausationCooldownTicks = 2500;
-
+        public List<Color> skinTintChoices;
         public BloodDemonArtsGeneDef()
         {
             geneClass = typeof(BloodDemonArtsGene);
