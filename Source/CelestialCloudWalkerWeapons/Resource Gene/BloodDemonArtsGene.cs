@@ -10,12 +10,27 @@ namespace AnimeArsenal
         new BloodDemonArtsGeneDef Def => (BloodDemonArtsGeneDef)def;
 
         private int timeUntilExhaustedTimer = 0;
-        public bool isExhausted = false;
         private int exhaustionCooldownRemaining = 0;
         private int exhaustionHediffTimer = 0;
         public float regenSpeed = 0.1f;
 
         private Color? originalSkinColor;
+
+        public override float ExhaustionProgress
+        {
+            get
+            {
+                if (isExhausted)
+                {
+                    return Mathf.Clamp01((float)exhaustionCooldownRemaining / (float)Def.exhausationCooldownTicks);
+                }
+                else
+                {
+                    return Mathf.Clamp01((float)timeUntilExhaustedTimer / (float)Def.ticksBeforeExhaustionStart);
+                }
+            }
+        }
+
 
         public override void PostAdd()
         {
@@ -66,7 +81,6 @@ namespace AnimeArsenal
 
             Scribe_Values.Look(ref originalSkinColor, "originalSkinColor", null);
             Scribe_Values.Look(ref timeUntilExhaustedTimer, "timeUntilExhaustedTimer", 0);
-            Scribe_Values.Look(ref isExhausted, "isExhausted", false);
             Scribe_Values.Look(ref exhaustionCooldownRemaining, "exhaustionCooldownRemaining", 0);
             Scribe_Values.Look(ref exhaustionHediffTimer, "exhaustionHediffTimer", 0);
         }

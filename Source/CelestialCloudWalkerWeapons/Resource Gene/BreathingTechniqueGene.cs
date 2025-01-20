@@ -14,7 +14,7 @@ namespace AnimeArsenal
         private int exhaustionHediffTimer = 0;
 
 
-        public float ExhaustionProgress
+        public virtual float ExhaustionProgress
         {
             get
             {

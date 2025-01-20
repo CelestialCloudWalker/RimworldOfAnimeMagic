@@ -20,7 +20,7 @@ namespace AnimeArsenal
         public BloodDemonArtsGeneDef()
         {
             geneClass = typeof(BloodDemonArtsGene);
-            this.resourceGizmoType = typeof(GeneGizmoBreath);
+            this.resourceGizmoType = typeof(GeneGizmoBlood);
         }
     }
 }
