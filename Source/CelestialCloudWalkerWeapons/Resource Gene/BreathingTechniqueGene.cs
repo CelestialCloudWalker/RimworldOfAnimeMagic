@@ -4,7 +4,7 @@ using Verse;
 
 namespace AnimeArsenal
 {
-    public class BreathingTechniqueGene : Gene_BasicResource
+    public class BreathingTechniqueGene : Gene_TalentBase
     {
         new BreathingTechniqueGeneDef Def => (BreathingTechniqueGeneDef)def;
 
