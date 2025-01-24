@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <Talented.TalentTreeDef>
+    <defName>DemonUpgradeTree</defName>
+    <dimensions>(400,400)</dimensions>
+    <handlerClass>Talented.Talented.ActiveTreeHandler</handlerClass>
+    <skin>DefaultTreeSkin</skin>
+    <nodes>
+      <li>Node_1737752116034_7587</li>
+    </nodes>
+    <availablePaths>
+      <li>CrimsonVeins</li>
+      <li>BodyoftheKizuki</li>
+      <li>KizukiAscension</li>
+    </availablePaths>
+    <displayStrategy>FixedPosition</displayStrategy>
+    <talentPointFormula>PerLevel</talentPointFormula>
+  </Talented.TalentTreeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1737752116034_7587</defName>
+    <label>Start</label>
+    <position>(192,298)</position>
+    <type>Start</type>
+    <upgrades>
+      <li>MentalFortificationUpgrade</li>
+    </upgrades>
+    <connections>
+      <li>Node_1737752116034_5042</li>
+      <li>Node_1737752116034_3961</li>
+      <li>Node_1737752116034_5071</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1737752116034_3961</defName>
+    <label>PoolUpgrade</label>
+    <position>(191,257)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>BloodDemonArtsUpgrade</li>
+    </upgrades>
+    <path>CrimsonVeins</path>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1737752116034_5042</defName>
+    <label>DemonArmor</label>
+    <position>(167,257)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>DemonArmorUpgrade</li>
+    </upgrades>
+    <path>BodyoftheKizuki</path>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1737752116034_5071</defName>
+    <label>WebSlash</label>
+    <position>(216,252)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>SilkenWebSlashUnlock</li>
+    </upgrades>
+    <path>KizukiAscension</path>
+  </Talented.TalentTreeNodeDef>
+
+</Defs>

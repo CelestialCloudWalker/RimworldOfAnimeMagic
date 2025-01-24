@@ -10,7 +10,6 @@
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
     <abilities>
       <li>BloodDemonArt_LightingStrike</li>
-      <li>BDA_Silken_web_slash</li>
       <li>DBA_TestShot</li>
       <li>DemonifyWorkSlave</li>
       <li>RangedShot_Twist</li>
@@ -18,9 +17,10 @@
       <li>EnchantWeaponDemon</li>
       <li>AnimeArsenal_TPStrike</li>
     </abilities>
-
-    <MainTreeDef>GenericUpgradeTree</MainTreeDef>
-    <SecondaryTreeDef>GenericUpgradeTree</SecondaryTreeDef>
+    <!-- Tree Configuration -->
+    <TalentTrees>
+      <li>DemonUpgradeTree</li>
+    </TalentTrees>
 
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
@@ -31,7 +31,7 @@
                 <baseXP>10</baseXP>
                 <damageFactor>0.1</damageFactor>
             </li>
-            
+
             <li Class="Talented.DamageDealtExperienceTypeDef">
                 <baseXP>10</baseXP>
                 <damageFactor>0.1</damageFactor>
@@ -106,5 +106,7 @@
           <ticksBetweenDamage>250</ticksBetweenDamage>
         </li>
     </modExtensions>
+    <!-- UI Configuration -->
+    <TabLabel>Talents</TabLabel>
   </AnimeArsenal.BloodDemonArtsGeneDef>
 </Defs>

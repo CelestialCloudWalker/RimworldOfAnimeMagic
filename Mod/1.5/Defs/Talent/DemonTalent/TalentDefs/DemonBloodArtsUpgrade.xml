@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <Talented.TalentDef>
+      <defName>BloodPoolUpgrade</defName>
+      <label>BloodArts Enhancement</label>
+      <description>Improves overall armor effectiveness by 25%.</description>
+      <levelRequired>2</levelRequired>
+      <statEffects>
+          <li>
+              <statDef>BloodDemonArts</statDef>
+              <value>1.25</value>
+              <operation>Multiply</operation>
+          </li>
+      </statEffects>
+  </Talented.TalentDef>
+</Defs>
