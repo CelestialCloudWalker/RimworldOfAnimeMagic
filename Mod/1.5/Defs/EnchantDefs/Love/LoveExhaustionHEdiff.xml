@@ -17,7 +17,7 @@
     </injuryProps>
     <stages>
       <li>
-        <label>Initial Strain</label>
+        <label>Tender Strain</label>
         <becomeVisible>true</becomeVisible>
         <minSeverity>0.05</minSeverity>
         <painFactor>1.10</painFactor>
@@ -33,7 +33,7 @@
         </capMods>
       </li>
       <li>
-        <label>Breathing Fatigue</label>
+        <label>Heartfelt Weariness</label>
         <minSeverity>.1</minSeverity>
         <painFactor>1.20</painFactor>
         <hungerRateFactor>1.25</hungerRateFactor>
@@ -49,7 +49,7 @@
         </capMods>
       </li>
       <li>
-        <label>Technique Strain</label>
+        <label>Fragile Resilience</label>
         <minSeverity>0.25</minSeverity>
         <painFactor>1.35</painFactor>
         <hungerRateFactor>1.50</hungerRateFactor>
@@ -69,7 +69,7 @@
         </capMods>
       </li>
       <li>
-        <label>Total Concentration Decline</label>
+        <label>Wounded Spirit</label>
         <minSeverity>0.35</minSeverity>
         <painFactor>1.50</painFactor>
         <hungerRateFactor>1.75</hungerRateFactor>
@@ -93,7 +93,7 @@
         </statFactors>
       </li>
       <li>
-        <label>Breath Control Failure</label>
+        <label>Soul's Dimming</label>
         <minSeverity>0.75</minSeverity>
         <painFactor>1.70</painFactor>
         <hungerRateFactor>2.00</hungerRateFactor>
@@ -117,7 +117,7 @@
         </statFactors>
       </li>
       <li>
-        <label>Complete Exhaustion</label>
+        <label>Crushed Devotion</label>
         <minSeverity>0.9</minSeverity>
         <painFactor>1.90</painFactor>
         <hungerRateFactor>2.50</hungerRateFactor>

@@ -6,7 +6,7 @@
   <label>Flower Breath Regen Ticks</label>
   <category>PawnMisc</category>
   <description>Number of ticks between Flower Breath regeneration cycles.</description>
-  <defaultBaseValue>100</defaultBaseValue>
+  <defaultBaseValue>140</defaultBaseValue>
    <minValue>0</minValue>
    <maxValue>1000</maxValue>
    <toStringStyle>Integer</toStringStyle>

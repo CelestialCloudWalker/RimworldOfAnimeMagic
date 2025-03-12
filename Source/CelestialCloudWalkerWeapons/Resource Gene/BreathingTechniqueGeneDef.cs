@@ -3,7 +3,7 @@ using Verse;
 
 namespace AnimeArsenal
 {
-    public class BreathingTechniqueGeneDef : BasicResourceGeneDef
+    public class BreathingTechniqueGeneDef : TalentedGeneDef
     {
         public HediffDef exhaustionHediff;
         //how much exhaustaion severity is gained every ticksPerExhaustionIncrease ticks (if appropiate)

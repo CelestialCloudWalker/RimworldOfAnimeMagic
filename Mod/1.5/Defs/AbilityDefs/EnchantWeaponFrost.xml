@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<AbilityDef>
-      <defName>EnchantWeaponFrostbite</defName>
-      <label>toggle hediff</label>
-      <description>Toggles a hediff on or off.</description>
-      <targetRequired>false</targetRequired>
-      <verbProperties>
-          <verbClass>Verb_CastAbility</verbClass>
-          <range>-1</range>
-      </verbProperties>
-      <comps>
-          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-              <enchantDef>IceEnchantment</enchantDef>
-          </li>
-          <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>FrostBreath</resourceGeneDef>
-            <resourceCost>20</resourceCost>
-          </li>
-          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-            <Radius>5</Radius>
-            <MaxShotsToReflect>20</MaxShotsToReflect>
-            <effecterDef>AnimeArsenal_FrostDeflect</effecterDef>
-           </li>
-      </comps>
+  <AbilityDef>
+    <defName>FirstForm_IcyClaw</defName>
+    <label>First Form: Icy Claw</label>
+    <description>The user channels their Frost Breathing technique into their weapon, imbuing it with the power of ice. Strikes with this form freeze enemies on contact, slowing them and causing frostbite.</description>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+        <enchantDef>FrozenBlightEnchantment</enchantDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>FrostBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <Radius>5</Radius>
+        <MaxShotsToReflect>20</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_FrostDeflect</effecterDef>
+      </li>
+    </comps>
   </AbilityDef>
 </Defs>

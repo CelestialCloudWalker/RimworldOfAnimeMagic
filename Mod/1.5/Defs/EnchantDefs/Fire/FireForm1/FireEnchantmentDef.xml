@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AnimeArsenal.EnchantDef>
-    <defName>FireEnchantment</defName>
-    <label>Fire Enchantment</label>
-    <description>A powerful fire-based enchantment that enhances combat abilities but causes exhaustion over time.</description>
-    <enchantHediff>IgnitionEdge</enchantHediff>
+    <defName>BlazeInfernoEnchantment</defName>
+    <label>Blaze of the Inferno Enchantment</label>
+    <description>An intense fire-based enchantment that imbues weapons with the searing power of the First Form: Blaze of the Inferno. Strikes leave behind charred wounds, but the relentless heat drains the user's stamina over time.</description>
+    <enchantHediff>BlazeInfernoEdge</enchantHediff>
     <resourceGene>FlameBreath</resourceGene>
     <!-- Resource Cost Settings -->
     <ticksBetweenCost>120</ticksBetweenCost>

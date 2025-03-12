@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <TraitDef>
+    <defName>LunarPower</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Lunar Power</label>
+        <description>{PAWN_nameDef} channels the quiet power of the moon, striking with calm yet undeniable force. {PAWN_pronoun}’s attacks are deliberate and precise, bypassing defenses with an aura of serene strength.</description>
+        <statFactors>
+          <MeleeDPS>0.04</MeleeDPS>
+          <MeleeHitChance>0.04</MeleeHitChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>EclipsingSteps</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Eclipsing Steps</label>
+        <description>{PAWN_nameDef} moves with the silent grace of the moon's shadow, stepping lightly and disappearing into the darkness. {PAWN_pronoun} strikes with the subtlety of an eclipse, evading enemy detection.</description>
+        <statFactors>
+          <MoveSpeed>0.04</MoveSpeed>
+          <MeleeDodgeChance>0.04</MeleeDodgeChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>LunarAuthority</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Lunar Authority</label>
+        <description>{PAWN_nameDef} commands the respect of those around {PAWN_pronoun}, like the moon's pull on the tides. {PAWN_pronoun}’s presence is calming, yet demands unwavering loyalty, drawing others to {PAWN_possessive} cause.</description>
+        <statFactors>
+          <AnimalsLearningFactor>0.04</AnimalsLearningFactor>
+          <TameAnimalChance>0.04</TameAnimalChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>EternalNightsStrength</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Eternal Night’s Strength</label>
+        <description>{PAWN_nameDef} thrives in the quiet of night, drawing strength from the stillness of the dark. {PAWN_pronoun} endures hardship with unwavering patience, calmly facing pain and exhaustion as though under the protection of the moon.</description>
+        <statFactors>
+          <PainShockThreshold>0.04</PainShockThreshold>
+          <RestFallRateFactor>0.04</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>MidnightsProtection</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Midnight’s Protection</label>
+        <description>{PAWN_nameDef} moves through even the darkest of situations untouched, much like the moon’s quiet light in the night sky. {PAWN_pronoun} emerges from the harshest conditions unscathed, protected by the serenity of the moon’s embrace.</description>
+        <statFactors>
+          <FilthRate>0.04</FilthRate>
+          <ToxicResistance>0.04</ToxicResistance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>LunarBanquet</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Lunar Banquet</label>
+        <description>{PAWN_nameDef} creates meals that glow with the delicate radiance of moonlight, nourishing those around {PAWN_pronoun} with subtle, celestial flavors. {PAWN_pronoun} ensures that every meal is infused with the calm essence of the night sky.</description>
+        <statFactors>
+          <CookSpeed>0.04</CookSpeed>
+          <ButcheryFleshEfficiency>0.04</ButcheryFleshEfficiency>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>EclipsesGaze</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Eclipse’s Gaze</label>
+        <description>{PAWN_nameDef} has a captivating presence, drawing others like the moon pulls the tides. {PAWN_pronoun}’s aura ignites a quiet devotion, leaving others entranced by {PAWN_pronoun}’s calm but powerful influence.</description>
+        <statFactors>
+          <SocialImpact>0.04</SocialImpact>
+          <RestRateMultiplier>0.04</RestRateMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>LunarRestoration</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Lunar Restoration</label>
+        <description>{PAWN_nameDef} heals with the soothing light of the moon, restoring both body and spirit. {PAWN_pronoun}’s care is gentle, nurturing, and almost ethereal, ensuring that no ally falls to the darkness.</description>
+        <statFactors>
+          <MedicalTendQuality>0.04</MedicalTendQuality>
+          <MedicalTendSpeed>0.04</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>LunarGardens</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Lunar Gardens</label>
+        <description>{PAWN_nameDef} cultivates the land with the patience of the moon’s cycles, nurturing life with a tender touch. Wherever {PAWN_pronoun} walks, the land flourishes in the soft glow of lunar influence.</description>
+        <statFactors>
+          <PlantWorkSpeed>0.04</PlantWorkSpeed>
+          <PlantHarvestYield>0.04</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

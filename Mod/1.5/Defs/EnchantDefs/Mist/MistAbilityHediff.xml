@@ -3,20 +3,20 @@
   <HediffDef>
     <defName>MistEdge</defName>
     <label>Mist Edge</label>
-    <description>The weapon glows faintly with fiery energy, its strikes leaving behind smoldering burns and charred wounds.</description>
+    <description>The weapon glows faintly with ethereal energy, its strikes leaving behind wounds shrouded in mist and confusion.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <injuryProps>
-      <painPerSeverity>0.05</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
-      <bleedRate>0.000</bleedRate>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.035</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>destroyed</destroyedLabel>
-      <destroyedOutLabel>destroyed</destroyedOutLabel>
+      <destroyedLabel>Dissipated</destroyedLabel>
+      <destroyedOutLabel>Completely dissipated</destroyedOutLabel>
     </injuryProps>
     <comps>
         <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>MistBreathing</damageType>
+            <damageType>VeilStrike</damageType>
             <damageValue>10</damageValue>
         </li>
     </comps>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>BeastBreathFangEdge</defName>
-      <label>Beast Breath Fang Edge</label>
-      <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
+      <defName>FirstFormFangOfTheWild</defName>
+      <label>First Form Fang of the Wild</label>
+      <description>The Pawn channels their primal instincts and breathing technique into their blade, enabling them to strike with feral power. Hits deal additional damage and reflect projectiles within a short radius.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>
@@ -12,7 +12,7 @@
       </verbProperties>
       <comps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-              <enchantDef>BeastEnchantment</enchantDef>
+              <enchantDef>PrimalEnchantment</enchantDef>
           </li>
           <li Class="AnimeArsenal.CompProperties_ResourceCost">
             <resourceGeneDef>BeastBreath</resourceGeneDef>

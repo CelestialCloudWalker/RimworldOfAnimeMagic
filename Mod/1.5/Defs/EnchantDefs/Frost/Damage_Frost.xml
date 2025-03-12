@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DamageDef>
-    <defName>AA_Frost</defName>
-    <label>Frost</label>
+    <defName>BreathFrost</defName>
+    <label>Frost Rend</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
-    <hediff>FrostBite</hediff>
-    <hediffSkin>FrostBite</hediffSkin>
+    <hediff>ChillingWound</hediff>
+    <hediffSkin>ChillingWound</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Heat</armorCategory>
+    <defaultDamage>10</defaultDamage>
+    <impactSoundType>Blunt</impactSoundType>
   </DamageDef>
-
   <HediffDef ParentName="InjuryBase">
-    <defName>FrostBite</defName>
-    <label>frostbite</label>
-    <labelNoun>a frostbitten area</labelNoun>
-    <description>Frozen tissue damaged by extreme cold.</description>
+    <defName>ChillingWound</defName>
+    <label>Chilled Laceration</label>
+    <labelNoun>a chilled wound</labelNoun>
+    <description>A wound inflicted with an icy blade, leaving frostbitten tissue.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
-        <severityPerDayTended>-0.5</severityPerDayTended>
+        <severityPerDayTended>-0.3</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>Stun</damageDefIncoming>
       </li>
     </comps>
     <injuryProps>
-      <painPerSeverity>0.01</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <painPerSeverity>0.02</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.01</averagePainPerSeverityPermanent>
       <bleedRate>0</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Frozen off</destroyedLabel>
-      <destroyedOutLabel>Frozen through</destroyedOutLabel>
+      <destroyedLabel>Shattered by frost</destroyedLabel>
+      <destroyedOutLabel>Frostbitten beyond recovery</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
 </Defs>

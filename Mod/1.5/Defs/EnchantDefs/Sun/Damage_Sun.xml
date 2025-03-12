@@ -7,7 +7,6 @@
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} was scorched and cut to death.</deathMessage>
-    <!-- Change this to point to your custom hediff -->
     <hediff>SunCutWound</hediff>
     <hediffSkin>SunCutWound</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
@@ -26,7 +25,6 @@
     <cutCleaveBonus>1.4</cutCleaveBonus>
   </DamageDef>
 
-  <!-- Add your custom Hediff definition -->
   <HediffDef ParentName="InjuryBase">
     <defName>SunCutWound</defName>
     <label>solar laceration</label>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <TraitDef>
+    <defName>SolarFury</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Solar Fury</label>
+        <description>{PAWN_nameDef} channels the searing might of the sun, striking with the intensity of solar flares. {PAWN_pronoun}'s attacks pierce through defenses, scorching enemies with the pure force of sunlight.</description>
+        <statFactors>
+          <MeleeDPS>0.04</MeleeDPS>
+          <MeleeHitChance>0.04</MeleeHitChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>DawnsAcceleration</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Dawn’s Acceleration</label>
+        <description>{PAWN_nameDef} moves with the swiftness of the first rays of sunlight, bright and untouchable. {PAWN_pronoun} strikes quickly, leaving a trail of light as enemies fall in {PAWN_possessive} wake.</description>
+        <statFactors>
+          <MoveSpeed>0.04</MoveSpeed>
+          <MeleeDodgeChance>0.04</MeleeDodgeChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RadiantHarmony</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Radiant Harmony</label>
+        <description>{PAWN_nameDef} radiates the warmth and brilliance of the sun, drawing others to {PAWN_possessive} side like moths to a flame. {PAWN_pronoun} inspires loyalty and strength in others, much like the sun fuels life itself.</description>
+        <statFactors>
+          <AnimalsLearningFactor>0.04</AnimalsLearningFactor>
+          <TameAnimalChance>0.04</TameAnimalChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RadiantDetermination</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Radiant Determination</label>
+        <description>{PAWN_nameDef} endures hardship with the resoluteness of the sun, shining through even the darkest moments. {PAWN_pronoun} stands firm, burning with an unyielding will to prevail, no matter the odds.</description>
+        <statFactors>
+          <PainShockThreshold>0.04</PainShockThreshold>
+          <RestFallRateFactor>0.04</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>SolarImmunity</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Solar Immunity</label>
+        <description>{PAWN_nameDef} thrives in the heat of battle, unaffected by toxins or filth. {PAWN_pronoun} emerges from the harshest conditions, as unscathed as the sun at noon.</description>
+        <statFactors>
+          <FilthRate>0.04</FilthRate>
+          <ToxicResistance>0.04</ToxicResistance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>BlazingCuisine</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Blazing Cuisine</label>
+        <description>{PAWN_nameDef} wields the heat of the sun in the kitchen, crafting meals with blazing speed and warmth. {PAWN_pronoun} ensures that all are sustained by the nourishing power of sunlight.</description>
+        <statFactors>
+          <CookSpeed>0.04</CookSpeed>
+          <ButcheryFleshEfficiency>0.04</ButcheryFleshEfficiency>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RadiantAuthority</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Radiant Authority</label>
+        <description>{PAWN_nameDef} commands with the brilliance of the sun, drawing others into {PAWN_possessive} orbit. {PAWN_pronoun} ignites passion and loyalty in those who stand under {PAWN_possessive} shining influence.</description>
+        <statFactors>
+          <SocialImpact>0.04</SocialImpact>
+          <RestRateMultiplier>0.04</RestRateMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>SolarBlessing</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Solar Blessing</label>
+        <description>{PAWN_nameDef} heals with the warmth of the sun, treating the wounded with swift and revitalizing care. {PAWN_pronoun} ensures that no one falls to the cold of death, bringing them back to the light.</description>
+        <statFactors>
+          <MedicalTendQuality>0.04</MedicalTendQuality>
+          <MedicalTendSpeed>0.04</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>SunKissedCrops</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Sun-Kissed Crops</label>
+        <description>{PAWN_nameDef} understands the life-giving force of sunlight, causing crops to flourish and thrive under {PAWN_possessive} touch. {PAWN_pronoun} nurtures the land like the sun nurtures the earth, ensuring bountiful harvests for all.</description>
+        <statFactors>
+          <PlantWorkSpeed>0.04</PlantWorkSpeed>
+          <PlantHarvestYield>0.04</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

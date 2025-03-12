@@ -11,8 +11,46 @@
     <resourceDescription>Current stored Breath, charged with the essence of frost. This energy powers devastating ice-based abilities, freezing enemies in their tracks.</resourceDescription>
     <abilities>
       <li>TotalConcentrationBreathing</li>
-      <li>FlowerBreathRoseThornEdge</li>
+      <li>FlowerBreathPetalDance</li>
     </abilities>
+    <!-- Tree Configuration -->
+    <TalentTrees>
+      <li>DemonUpgradeTree2</li>
+    </TalentTrees>
+
+    <!-- Experience System -->
+    <experienceFormula>Basic_LinearXP</experienceFormula>
+    <experienceGainSettings>
+        <experienceTypes>
+            <!-- Combat XP -->
+            <li Class="Talented.DamageTakenExperienceTypeDef">
+                <baseXP>10</baseXP>
+                <damageFactor>0.1</damageFactor>
+            </li>
+
+            <li Class="Talented.DamageDealtExperienceTypeDef">
+                <baseXP>10</baseXP>
+                <damageFactor>0.1</damageFactor>
+            </li>
+            <!-- Skill XP -->
+            <li Class="Talented.SkillExperienceTypeDef">
+                <SkillDef>Shooting</SkillDef>
+                <baseXP>2</baseXP>
+            </li>
+
+            <!-- Job XP -->
+            <li Class="Talented.JobExperienceTypeDef">
+                <SkillDef>HaulToCell</SkillDef>
+                <baseXP>1</baseXP>
+            </li>
+
+            <!-- Verb XP -->
+            <li Class="Talented.VerbExperienceTypeDef">
+                <VerbClassName>Verb_BeatFire</VerbClassName>
+                <baseXP>1</baseXP>
+            </li>
+        </experienceTypes>
+    </experienceGainSettings>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
@@ -26,12 +64,14 @@
     <barColor>(255, 182, 193)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
     <!-- Exhaustion Settings -->
-    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <exhaustionPerTick>0.0005</exhaustionPerTick>
     <!-- Default to fire exhaustion -->
-    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
-    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+    <exhaustionHediff>FlowerEnchantmentExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2200</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1600</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3500</exhausationCooldownTicks>
+    <!-- UI Configuration -->
+    <TabLabel>Talents</TabLabel>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>FlowerBreathRoseThornEdge</defName>
-      <label>Flower Breath Rose Thorn</label>
-      <description>Using the basics of Flower Breathing, imbue your weapon with the essence of thorned roses, causing enemies to bleed with each precise strike.</description>
+      <defName>FlowerBreathPetalDance</defName>
+      <label>Flower Breath Petal Dance</label>
+      <description>The pawn channels their breathing into their blade, enabling them to deal extra damage on hit. Each precise strike with the blade enhances the flow of energy, leaving the enemy vulnerable to further attacks.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>

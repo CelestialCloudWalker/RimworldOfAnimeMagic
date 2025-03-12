@@ -13,6 +13,44 @@
       <li>TotalConcentrationBreathing</li>
       <li>MoonBreathEdge</li>
     </abilities>
+    <!-- Tree Configuration -->
+    <TalentTrees>
+      <li>DemonUpgradeTree2</li>
+    </TalentTrees>
+
+    <!-- Experience System -->
+    <experienceFormula>Basic_LinearXP</experienceFormula>
+    <experienceGainSettings>
+        <experienceTypes>
+            <!-- Combat XP -->
+            <li Class="Talented.DamageTakenExperienceTypeDef">
+                <baseXP>10</baseXP>
+                <damageFactor>0.1</damageFactor>
+            </li>
+
+            <li Class="Talented.DamageDealtExperienceTypeDef">
+                <baseXP>10</baseXP>
+                <damageFactor>0.1</damageFactor>
+            </li>
+            <!-- Skill XP -->
+            <li Class="Talented.SkillExperienceTypeDef">
+                <SkillDef>Shooting</SkillDef>
+                <baseXP>2</baseXP>
+            </li>
+
+            <!-- Job XP -->
+            <li Class="Talented.JobExperienceTypeDef">
+                <SkillDef>HaulToCell</SkillDef>
+                <baseXP>1</baseXP>
+            </li>
+
+            <!-- Verb XP -->
+            <li Class="Talented.VerbExperienceTypeDef">
+                <VerbClassName>Verb_BeatFire</VerbClassName>
+                <baseXP>1</baseXP>
+            </li>
+        </experienceTypes>
+    </experienceGainSettings>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
@@ -28,10 +66,12 @@
     <!-- Exhaustion Settings -->
     <exhaustionPerTick>0.0004</exhaustionPerTick>
     <!-- Default to fire exhaustion -->
-    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
+    <exhaustionHediff>FlowerEnchantmentExhaustion</exhaustionHediff>
     <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
     <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
     <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+    <!-- UI Configuration -->
+    <TabLabel>Talents</TabLabel>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 

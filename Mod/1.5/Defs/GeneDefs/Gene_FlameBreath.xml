@@ -9,7 +9,7 @@
     <resourceLabel>Flame Breath</resourceLabel>
     <resourceDescription>Current stored Breath, ignited by inner heat. This energy fuels powerful flame-based abilities.</resourceDescription>
     <abilities>
-      <li>FirstFromFlameSurge</li>
+      <li>FirstFormBlazeInferno</li>
       <li>TotalConcentrationBreathing</li>
       <li>FlameBreathingSlice</li>
       <li>Flame_Breathing_Flame_Tiger</li>
@@ -27,12 +27,14 @@
     <barColor>(255, 69, 0)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
     <!-- Exhaustion Settings -->
-    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <exhaustionPerTick>0.0005</exhaustionPerTick>
     <!-- Default to fire exhaustion -->
-    <exhaustionHediff>FireEnchantmentExhaustion</exhaustionHediff>
-    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+    <exhaustionHediff>FlameBreathingExhaustion</exhaustionHediff>
+    <ticksBeforeExhaustionStart>1500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1250</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3500</exhausationCooldownTicks>
+    <!-- UI Configuration -->
+    <TabLabel>Talents</TabLabel>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 

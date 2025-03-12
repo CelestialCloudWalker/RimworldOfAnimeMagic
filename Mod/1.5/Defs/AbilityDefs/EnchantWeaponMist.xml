@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>MistBreathEdge</defName>
-      <label>Mist Breath Edge</label>
-      <description>Using the basics of Flame Breathing, imbue your weapon with searing flames that burn enemies on hit.</description>
+      <defName>VeilofMist</defName>
+      <label>Veil of Mist</label>
+      <description>Channel the essence of mist to envelop your weapon in an ethereal shroud, striking with an elusive and precise force.</description>
       <iconPath>UI/Abilities/MistF1</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>
@@ -12,7 +12,7 @@
       </verbProperties>
       <comps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-              <enchantDef>MistEnchantment</enchantDef>
+              <enchantDef>VeilEnchantment</enchantDef>
           </li>
           <li Class="AnimeArsenal.CompProperties_ResourceCost">
             <resourceGeneDef>MistBreath</resourceGeneDef>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>BeastEnchantmentExhaustion</defName>
-    <label>Breathing Technique Exhaustion</label>
-    <description>The physical and mental toll of using powerful breathing techniques. Extended use strains the body and mind, leading to decreased combat effectiveness and eventual system failure if pushed too far. The user must rest to recover their strength.</description>
+    <defName>PrimalExhaustion</defName>
+    <label>Primal Technique Exhaustion</label>
+    <description>The relentless strain of tapping into primal instincts and raw power. Extended use erodes the body’s limits, forcing the wielder into a vulnerable state until they can recover.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
 
@@ -12,12 +12,12 @@
       <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
       <bleedRate>0.000</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>destroyed</destroyedLabel>
-      <destroyedOutLabel>destroyed</destroyedOutLabel>
+      <destroyedLabel>broken</destroyedLabel>
+      <destroyedOutLabel>shattered</destroyedOutLabel>
     </injuryProps>
     <stages>
       <li>
-        <label>Initial Strain</label>
+        <label>Primal Strain</label>
         <becomeVisible>true</becomeVisible>
         <minSeverity>0.05</minSeverity>
         <painFactor>1.10</painFactor>
@@ -33,7 +33,7 @@
         </capMods>
       </li>
       <li>
-        <label>Breathing Fatigue</label>
+        <label>Feral Fatigue</label>
         <minSeverity>.1</minSeverity>
         <painFactor>1.20</painFactor>
         <hungerRateFactor>1.25</hungerRateFactor>
@@ -49,7 +49,7 @@
         </capMods>
       </li>
       <li>
-        <label>Technique Strain</label>
+        <label>Instinctive Overload</label>
         <minSeverity>0.25</minSeverity>
         <painFactor>1.35</painFactor>
         <hungerRateFactor>1.50</hungerRateFactor>
@@ -69,7 +69,7 @@
         </capMods>
       </li>
       <li>
-        <label>Total Concentration Decline</label>
+        <label>Wild Collapse</label>
         <minSeverity>0.35</minSeverity>
         <painFactor>1.50</painFactor>
         <hungerRateFactor>1.75</hungerRateFactor>
@@ -93,7 +93,7 @@
         </statFactors>
       </li>
       <li>
-        <label>Breath Control Failure</label>
+        <label>Primal Breakdown</label>
         <minSeverity>0.75</minSeverity>
         <painFactor>1.70</painFactor>
         <hungerRateFactor>2.00</hungerRateFactor>
@@ -117,7 +117,7 @@
         </statFactors>
       </li>
       <li>
-        <label>Complete Exhaustion</label>
+        <label>Beast’s Ruin</label>
         <minSeverity>0.9</minSeverity>
         <painFactor>1.90</painFactor>
         <hungerRateFactor>2.50</hungerRateFactor>

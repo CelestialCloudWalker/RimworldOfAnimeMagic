@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <TraitDef>
+    <defName>TitansGrip</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Titan’s Grip</label>
+        <description>{PAWN_nameDef} grips their weapon with the unyielding strength of a mountain, striking with immense power. {PAWN_pronoun}’s attacks crush through defenses as if they were made of sand, leaving only rubble in their wake.</description>
+        <statFactors>
+          <MeleeDPS>0.04</MeleeDPS>
+          <MeleeHitChance>0.04</MeleeHitChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>ImmovableStride</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Immovable Stride</label>
+        <description>{PAWN_nameDef} moves with the steady, powerful steps of the earth itself. {PAWN_pronoun}’s stride is firm and unwavering, leaving no ground unclaimed. {PAWN_pronoun} charges forward, unstoppable like an avalanche.</description>
+        <statFactors>
+          <MoveSpeed>0.04</MoveSpeed>
+          <MeleeDodgeChance>0.04</MeleeDodgeChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>MountainsBond</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Mountain’s Bond</label>
+        <description>{PAWN_nameDef} shares a deep connection with the earth, drawing strength from the mountains and the rock beneath. {PAWN_pronoun} bends nature to {PAWN_possessive} will, commanding the creatures of the land with the power of stone.</description>
+        <statFactors>
+          <AnimalsLearningFactor>0.04</AnimalsLearningFactor>
+          <TameAnimalChance>0.04</TameAnimalChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>UnshakableWill</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Unshakable Will</label>
+        <description>{PAWN_nameDef} is as unmovable as the foundations of the earth. {PAWN_pronoun} resists all attempts to disrupt their focus, standing firm against pain and fatigue like a mountain that never falters.</description>
+        <statFactors>
+          <PainShockThreshold>0.04</PainShockThreshold>
+          <RestFallRateFactor>0.04</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>UnyieldingStance</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Unyielding Stance</label>
+        <description>{PAWN_nameDef} stands like an immovable stone, immune to the filth and toxins that might harm others. No matter the conditions, {PAWN_pronoun} remains standing, solid and unaffected by the harshest of environments.</description>
+        <statFactors>
+          <FilthRate>0.04</FilthRate>
+          <ToxicResistance>0.04</ToxicResistance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RockHewnRecipes</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Rock-Hewn Recipes</label>
+        <description>{PAWN_nameDef} crafts meals with the enduring strength of the earth itself. {PAWN_pronoun} ensures that every ingredient is used efficiently, sustaining the troops like the heart of a mountain that never runs dry.</description>
+        <statFactors>
+          <CookSpeed>0.04</CookSpeed>
+          <ButcheryFleshEfficiency>0.04</ButcheryFleshEfficiency>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>ColossalPresence</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Colossal Presence</label>
+        <description>{PAWN_nameDef} carries the weight of mountains in their presence. {PAWN_pronoun} exudes power and determination, inspiring those around {PAWN_pronoun} to stand firm and follow with unwavering loyalty.</description>
+        <statFactors>
+          <SocialImpact>0.04</SocialImpact>
+          <RestRateMultiplier>0.04</RestRateMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>UnshakableAid</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Unshakable Aid</label>
+        <description>{PAWN_nameDef} helps others with the steady and firm touch of the earth. {PAWN_pronoun} heals and comforts others with unwavering patience, never letting the wounded suffer for long.</description>
+        <statFactors>
+          <MedicalTendQuality>0.04</MedicalTendQuality>
+          <MedicalTendSpeed>0.04</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>EarthenGrowth</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Earthen Growth</label>
+        <description>{PAWN_nameDef} taps into the power of the earth to promote growth. {PAWN_pronoun} can nurture the land with an almost mystical touch, ensuring that crops grow and yield plentiful harvests, like a mountain rich with resources.</description>
+        <statFactors>
+          <PlantWorkSpeed>0.04</PlantWorkSpeed>
+          <PlantHarvestYield>0.04</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

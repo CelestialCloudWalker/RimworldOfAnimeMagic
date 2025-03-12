@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DamageDef>
-    <defName>MistBreathing</defName>
-    <label>Mist Breathing</label>
+    <defName>VeilStrike</defName>
+    <label>veil strike</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was enveloped by mist breathing.</deathMessage>
-    <hediff>MistWound</hediff>
-    <hediffSkin>MistWound</hediffSkin>
+    <deathMessage>{0} was lost within the deadly veil of mist breathing.</deathMessage>
+    <hediff>VeilWound</hediff>
+    <hediffSkin>VeilWound</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Sharp</armorCategory>
     <impactSoundType>Slice</impactSoundType>
   </DamageDef>
-
   <HediffDef ParentName="InjuryBase">
-    <defName>MistWound</defName>
-    <label>mist laceration</label>
-    <labelNoun>a mist breathing wound</labelNoun>
-    <description>A wound caused by the ethereal edge of mist breathing.</description>
+    <defName>VeilWound</defName>
+    <label>veil wound</label>
+    <labelNoun>a wound shrouded in mist</labelNoun>
+    <description>A wound inflicted by the elusive and enchanting strikes of Mist Breathing techniques, leaving behind an ethereal pain.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <severityPerDayTended>-0.72</severityPerDayTended>
       </li>
-      <li Class="HediffCompProperties_Infecter">
-        <infectionChance>0.20</infectionChance>
+      <li Class="HediffCompProperties_CauseMentalState">
+        <humanMentalState>Wander_Psychotic</humanMentalState>
+        <animalMentalState>Manhunter</animalMentalState>
+        <mtbDaysToCauseMentalState>0.1</mtbDaysToCauseMentalState>
+        <minSeverity>0.2</minSeverity>
+        <endMentalStateOnCure>true</endMentalStateOnCure>
       </li>
     </comps>
     <injuryProps>
-      <painPerSeverity>0.035</painPerSeverity>
+      <painPerSeverity>0.04</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
-      <bleedRate>0.03</bleedRate>
+      <bleedRate>0.035</bleedRate>
       <canMerge>true</canMerge>
       <destroyedLabel>Dissipated</destroyedLabel>
-      <destroyedOutLabel>Dispersed</destroyedOutLabel>
+      <destroyedOutLabel>Completely dissipated</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
 </Defs>

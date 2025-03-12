@@ -9,17 +9,11 @@
     <resourceLabel>Blood Art</resourceLabel>
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
     <abilities>
-      <li>BloodDemonArt_LightingStrike</li>
-      <li>DBA_TestShot</li>
-      <li>DemonifyWorkSlave</li>
-      <li>RangedShot_Twist</li>
-      <li>RangedShot_Crush</li>
-      <li>EnchantWeaponDemon</li>
       <li>AnimeArsenal_TPStrike</li>
     </abilities>
     <!-- Tree Configuration -->
     <TalentTrees>
-      <li>DemonUpgradeTree</li>
+      <li>DemonUpgradeTree2</li>
     </TalentTrees>
 
     <!-- Experience System -->
@@ -101,9 +95,9 @@
     </skinTintChoices>
     <modExtensions>
         <li Class="AnimeArsenal.SunlightDamageExtension">
-          <damagePerTick>.01</damagePerTick>
+          <damagePerTick>1</damagePerTick>
           <damageThresholdBeforeDeath>10</damageThresholdBeforeDeath>
-          <ticksBetweenDamage>250</ticksBetweenDamage>
+          <ticksBetweenDamage>100</ticksBetweenDamage>
         </li>
     </modExtensions>
     <!-- UI Configuration -->

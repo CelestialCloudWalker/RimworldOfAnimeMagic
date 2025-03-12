@@ -40,8 +40,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="Talented">
-      <HintPath>D:\Games\RimWorld\Mods\Talented\1.5\Assemblies\Talented.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>D:\SteamLibrary\steamapps\common\RimWorld\Mods\Talent\1.5\Assemblies\Talented.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <DamageDef>
+        <defName>AA_InsectBreathing_PoisonSting</defName>
+        <label>Insect Breathing Poison (Wisteria)</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <hediff>InsectBreathing_WisteriaPoison</hediff>
+        <hediffSkin>InsectBreathing_WisteriaPoison</hediffSkin>
+        <armorCategory>Sharp</armorCategory>
+        <defaultDamage>8</defaultDamage>
+        <defaultArmorPenetration>0.5</defaultArmorPenetration>
+        <buildingDamageFactor>0.2</buildingDamageFactor>
+        <harmsHealth>true</harmsHealth>
+        <canInterruptJobs>true</canInterruptJobs>
+        <makesBlood>true</makesBlood>
+        <externalViolence>true</externalViolence>
+      </DamageDef>
+
+    <HediffDef ParentName="InjuryBase">
+        <defName>InsectBreathing_WisteriaPoison</defName>
+        <label>Wisteria Poison (Insect Breathing)</label>
+        <labelNoun>wisteria poison</labelNoun>
+        <description>Venomous damage caused by the Wisteria-like poison from the sting of Insect Breathing. This toxin disables the target's movements and weakens their overall combat ability over time.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.6</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_Infecter">
+                <infectionChance>0.50</infectionChance>
+            </li>
+        </comps>
+        <injuryProps>
+            <painPerSeverity>0.06</painPerSeverity>
+            <averagePainPerSeverityPermanent>0.008</averagePainPerSeverityPermanent>
+            <bleedRate>0.03</bleedRate>
+            <canMerge>true</canMerge>
+            <destroyedLabel>Necrotic</destroyedLabel>
+            <destroyedOutLabel>Dissolved</destroyedOutLabel>
+        </injuryProps>
+    </HediffDef>
+</Defs>

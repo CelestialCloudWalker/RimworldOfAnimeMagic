@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <TraitDef>
+    <defName>PhantomBlow</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Phantom Blow</label>
+        <description>{PAWN_nameDef} strikes with the silence of mist, evading detection until the last moment. {PAWN_pronoun}’s attacks land with precision, cutting through defenses like a shadow passing unnoticed.</description>
+        <statFactors>
+          <MeleeDPS>0.04</MeleeDPS>
+          <MeleeHitChance>0.04</MeleeHitChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>Shifting Mirage</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Shifting Mirage</label>
+        <description>{PAWN_nameDef} moves with an elusive grace, like mist dissipating on the wind. {PAWN_pronoun} strikes quickly and disappears into the fog, leaving foes unable to react or track {PAWN_pronoun} movements.</description>
+        <statFactors>
+          <MoveSpeed>0.04</MoveSpeed>
+          <MeleeDodgeChance>0.04</MeleeDodgeChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>ElusiveControl</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Elusive Control</label>
+        <description>{PAWN_nameDef} seems to vanish into thin air, evoking the mysterious presence of mist. {PAWN_pronoun} manipulates {PAWN_possessive} surroundings with deceptive cunning, guiding both beasts and allies through the unseen air.</description>
+        <statFactors>
+          <AnimalsLearningFactor>0.04</AnimalsLearningFactor>
+          <TameAnimalChance>0.04</TameAnimalChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>FadingResolve</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Fading Resolve</label>
+        <description>{PAWN_nameDef} stands like a mist, resilient against all odds. Even when the world around {PAWN_pronoun} fades and the darkness threatens to consume, {PAWN_pronoun} remains—silent, subtle, and unwavering.</description>
+        <statFactors>
+          <PainShockThreshold>0.04</PainShockThreshold>
+          <RestFallRateFactor>0.04</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>IllusiveGuard</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Illusive Guard</label>
+        <description>{PAWN_nameDef} moves through the battlefield like mist through the trees, impossible to pin down. {PAWN_pronoun}’s presence is elusive, slipping through harm, never fully caught in one place.</description>
+        <statFactors>
+          <FilthRate>0.04</FilthRate>
+          <ToxicResistance>0.04</ToxicResistance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>PhantomFlavors</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Phantom Flavors</label>
+        <description>{PAWN_nameDef} uses the ethereal nature of mist to craft subtle, but unforgettable meals. {PAWN_pronoun}’s culinary skills blend ingredients with the lightness of mist, creating flavors that linger in the mind, elusive and mysterious.</description>
+        <statFactors>
+          <CookSpeed>0.04</CookSpeed>
+          <ButcheryFleshEfficiency>0.04</ButcheryFleshEfficiency>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>EnigmaticPresence</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Enigmatic Presence</label>
+        <description>{PAWN_nameDef} emits an aura of mystery, like a mist that wraps the world in its obscurity. {PAWN_pronoun}’s presence is felt, but never fully understood, igniting curiosity and devotion in those around {PAWN_pronoun}.</description>
+        <statFactors>
+          <SocialImpact>0.04</SocialImpact>
+          <RestRateMultiplier>0.04</RestRateMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>PhantomHealer</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Phantom Healer</label>
+        <description>{PAWN_nameDef} heals with the gentleness of mist, restoring the spirit and body with a light touch. {PAWN_pronoun}’s healing powers are subtle, barely noticeable yet profound, like mist that quietly nurtures life back into existence.</description>
+        <statFactors>
+          <MedicalTendQuality>0.04</MedicalTendQuality>
+          <MedicalTendSpeed>0.04</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>EphemeralHarvest</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Ephemeral Harvest</label>
+        <description>{PAWN_nameDef} nurtures the land with the fleeting grace of mist, aiding in the rapid growth of plants and crops. Wherever {PAWN_pronoun} walks, new life sprouts as if summoned by the passing fog.</description>
+        <statFactors>
+          <PlantWorkSpeed>0.04</PlantWorkSpeed>
+          <PlantHarvestYield>0.04</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>
