@@ -44,7 +44,6 @@
       <verbClass>Verb_CastAbility</verbClass>
       <range>20</range>
       <warmupTime>0.5</warmupTime> <!-- Adjust warmup if necessary -->
-      <soundCast>FireSpew_Resolve</soundCast> <!-- Check if this sound effect exists -->
       <targetParams>
         <canTargetLocations>true</canTargetLocations>
         <canTargetPawns>true</canTargetPawns>

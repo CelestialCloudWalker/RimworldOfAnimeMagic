@@ -5,7 +5,7 @@
     <label>Wind Breath</label>
     <resourceName>Wind Breath</resourceName>
     <description>Current stored Breath, infused with the force of razor-sharp winds. This energy powers devastating wind-based abilities that slice through enemies with precision and speed.</description>
-    <iconPath>UI/Icons/Genes/Gene_WindBreath</iconPath>
+    <iconPath>UI/Icons/Genes/wind</iconPath>
     <resourceLabel>Wind Breath</resourceLabel>
     <resourceDescription>Current stored Breath, infused with the force of razor-sharp winds. This energy powers devastating wind-based abilities that slice through enemies with precision and speed.</resourceDescription>
     <abilities>

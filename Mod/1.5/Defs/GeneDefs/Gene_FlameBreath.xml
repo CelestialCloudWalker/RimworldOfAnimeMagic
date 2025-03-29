@@ -5,7 +5,7 @@
     <label>Flame Breath</label>
     <resourceName>Flame Breath</resourceName>
     <description>Carriers of this gene can focus intense heat into their body, unleashing powerful flame-based attacks fueled by their inner breath.</description>
-    <iconPath>UI/Icons/Genes/Gene_FlameBreath</iconPath>
+    <iconPath>UI/Icons/Genes/flame</iconPath>
     <resourceLabel>Flame Breath</resourceLabel>
     <resourceDescription>Current stored Breath, ignited by inner heat. This energy fuels powerful flame-based abilities.</resourceDescription>
     <abilities>

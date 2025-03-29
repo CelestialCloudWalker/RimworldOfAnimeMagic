@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+      <defName>FirstFormWaterSurfaceSlash</defName>
+      <label>Surface Slash</label>
+      <description>The user releases a singular, horizontal slash aiming to decapitate their target.</description>
+      <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
+      <cooldownTicksRange>6000</cooldownTicksRange>
+      <targetRequired>True</targetRequired>
+      <verbProperties>
+        <verbClass>Verb_CastAbility</verbClass>
+        <range>20</range>
+        <warmupTime>0.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <requireLineOfSight>True</requireLineOfSight>
+        <targetParams>
+          <canTargetSelf>false</canTargetSelf>
+          <canTargetPawns>True</canTargetPawns>
+          <canTargetLocations>false</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+      <comps>
+        <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack"/>
+      </comps>
+  </AbilityDef>
+</Defs>
