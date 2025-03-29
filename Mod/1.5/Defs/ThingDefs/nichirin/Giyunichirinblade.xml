@@ -8,7 +8,7 @@
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_TomiokaGiyu</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.1</drawSize>
+      <drawSize>1.5</drawSize>
     </graphicData>
     <techLevel>Medieval</techLevel>
     <weaponTags>
@@ -24,6 +24,7 @@
       <Mass>2</Mass>
     </statBases>
     <relicChance>2</relicChance>
+    <equippedAngleOffset>-65</equippedAngleOffset>
     <tools>
       <li>
         <label>blade</label>
