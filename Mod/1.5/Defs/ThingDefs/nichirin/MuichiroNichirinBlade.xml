@@ -6,7 +6,7 @@
     <description>An enhanced longsword that can extend its reach through special techniques. The wielder can toggle between normal and extended range combat stances.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_TomiokaGiyu</texPath>
+      <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_TokitoMuichiro</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.5</drawSize>
     </graphicData>
