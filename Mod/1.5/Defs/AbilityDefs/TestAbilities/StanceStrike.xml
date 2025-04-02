@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+      <defName>AnimeArsenal_StanceJump</defName>
+      <label>StanceStrike</label>
+      <description>Instantly teleport to a target and perform a melee attack.</description>
+      <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+      <aiCanUse>true</aiCanUse>
+      <targetRequired>True</targetRequired>
+      <verbProperties>
+        <verbClass>Verb_CastAbility</verbClass>
+        <range>20</range>
+        <warmupTime>0.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <requireLineOfSight>True</requireLineOfSight>
+        <targetParams>
+          <canTargetSelf>false</canTargetSelf>
+          <canTargetPawns>True</canTargetPawns>
+          <canTargetLocations>false</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+      <comps>
+        <li Class="AnimeArsenal.CompProperties_BaseStance"/>
+      </comps>
+  </AbilityDef>
+</Defs>
