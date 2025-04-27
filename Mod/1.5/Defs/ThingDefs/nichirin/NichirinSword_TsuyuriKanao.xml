@@ -8,7 +8,7 @@
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_TsuyuriKanao</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.5</drawSize>
+      <drawSize>1.2</drawSize>
     </graphicData>
     <techLevel>Medieval</techLevel>
     <weaponTags>
@@ -16,6 +16,14 @@
       <li>LongSword</li>
     </weaponTags>
     <costStuffCount>100</costStuffCount>
+    <smeltProducts>
+      <li>
+        <thingDef>Steel</thingDef>
+      </li>
+      <li>
+        <thingDef>Components</thingDef>
+      </li>
+    </smeltProducts>
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>

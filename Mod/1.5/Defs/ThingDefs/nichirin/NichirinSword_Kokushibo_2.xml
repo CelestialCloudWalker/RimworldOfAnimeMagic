@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>NichirinSword_Kokushibo_2</defName>
+    <defName>NichirinSword_Kokushibo_two</defName>
     <label>Full Flesh Nichirin</label>
     <description>A warped version of a Nichirin.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_Kokushibo_2</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.5</drawSize>
+      <drawSize>1.2</drawSize>
     </graphicData>
     <techLevel>Medieval</techLevel>
     <weaponTags>
@@ -16,6 +16,14 @@
       <li>LongSword</li>
     </weaponTags>
     <costStuffCount>100</costStuffCount>
+    <smeltProducts>
+      <li>
+        <thingDef>Steel</thingDef>
+      </li>
+      <li>
+        <thingDef>Components</thingDef>
+      </li>
+    </smeltProducts>
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>

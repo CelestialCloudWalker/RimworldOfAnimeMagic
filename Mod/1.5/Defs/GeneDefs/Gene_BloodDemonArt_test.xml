@@ -12,10 +12,6 @@
       <li>AnimeArsenal_TPStrike</li>
     </abilities>
     <!-- Tree Configuration -->
-    <TalentTrees>
-      <li></li>
-    </TalentTrees>
-
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>

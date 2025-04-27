@@ -15,9 +15,6 @@
       <li>BreathingMarkAbility</li>
     </abilities>
     <!-- Tree Configuration -->
-    <TalentTrees>
-      <li>DemonUpgradeTree2</li>
-    </TalentTrees>
 
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>

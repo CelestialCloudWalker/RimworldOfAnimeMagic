@@ -11,6 +11,7 @@
       <displayPriority>205</displayPriority>
     </recipeMaker>
     <graphicData>
+      <shaderType>CutoutComplex</shaderType>
       <texPath>DemonSlayerCorp_UniformNormal/DemonSlayerCorp_UniformNormal_Hulk_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>

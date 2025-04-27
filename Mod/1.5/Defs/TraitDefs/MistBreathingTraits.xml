@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
   <TraitDef>
     <defName>PhantomBlow</defName>
     <commonality>1</commonality>
@@ -17,7 +17,7 @@
   </TraitDef>
 
   <TraitDef>
-    <defName>Shifting Mirage</defName>
+    <defName>ShiftingMirage</defName>
     <commonality>1</commonality>
     <degreeDatas>
       <li>
