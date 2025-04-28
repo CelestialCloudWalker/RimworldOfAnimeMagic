@@ -6,8 +6,6 @@ using Verse;
 
 namespace AnimeArsenal
 {
-
-
     public class CompAbilityEffect_BaseStance : CompAbilityEffect
     {
         private int maxJumps = 4;
@@ -93,8 +91,6 @@ namespace AnimeArsenal
         }
     }
 
-
-
     public class CompProperties_BaseStance : CompProperties_AbilityEffect
     {
         public List<IntVec3> jumpOffsets;
@@ -110,72 +106,6 @@ namespace AnimeArsenal
                 new IntVec3(0, 0, -5),  // South
                 new IntVec3(-5, 0, 0)   // West
             };
-        }
-    }
-
-    public class DashTrailManager
-    {
-        private List<TrackedMotePos> activeEffects = new List<TrackedMotePos>();
-        private static readonly int MoteLifetime = 120;
-        private static readonly ThingDef TrailMoteDef = DefDatabase<ThingDef>.GetNamed("MagicAndMyths_DashTrailMote");
-
-        public void CreateTrailBetween(Thing source, Thing target, Map map)
-        {
-            if (source == null || target == null || !source.Spawned || !target.Spawned || map == null)
-                return;
-
-            MoteDualAttached mote = MoteMaker.MakeInteractionOverlay(
-                TrailMoteDef,
-                source,
-                new TargetInfo(target.Position, map, false));
-
-            if (mote == null)
-                return;
-
-            TrackedMotePos trackedMote = new TrackedMotePos(mote, Source, Target, MoteLifetime);
-            activeEffects.Add(trackedMote);
-        }
-
-        public void Tick()
-        {
-            for (int i = activeEffects.Count - 1; i >= 0; i--)
-            {
-                TrackedMotePos trackedMote  = activeEffects[i];
-                trackedMote.RemainingTicks--;
-
-                if (trackedMote.RemainingTicks <= 0 ||
-                    trackedMote.Mote == null ||
-                    trackedMote.Mote.Destroyed ||
-                    trackedMote.SourceThing == null ||
-                    !trackedMote.SourceThing.Spawned ||
-                    trackedMote.TargetThing == null ||
-                    !trackedMote.TargetThing.Spawned)
-                {
-                    if (trackedMote.Mote != null && !trackedMote.Mote.Destroyed)
-                        trackedMote.Mote.Destroy();
-                    activeEffects.RemoveAt(i);
-                }
-                else
-                {
-                    trackedMote.Mote.Maintain();
-                    trackedMote.Mote.UpdateTargets(
-                        trackedMote.SourceThing,
-                        trackedMote.TargetThing,
-                        Vector3.zero,
-                        Vector3.zero
-                    );
-                }
-            }
-        }
-
-        public void Clear()
-        {
-            foreach (TrackedMotePos trackedMote in activeEffects)
-            {
-                if (trackedMote.Mote != null && !trackedMote.Mote.Destroyed)
-                    trackedMote.Mote.Destroy();
-            }
-            activeEffects.Clear();
         }
     }
 
@@ -202,11 +132,9 @@ namespace AnimeArsenal
                 onJumpStart: (pos) => CreateJumpEffect(pos),
                 onJumpComplete: (pos) => { },
                 onDashComplete: () => SpawnTrailingEffects(),
-                // Pass the custom offsets from CompProperties
                 customJumpOffsets: Props.jumpOffsets
             );
 
-            // Start the dash
             activeDash.Start();
         }
 
@@ -223,7 +151,7 @@ namespace AnimeArsenal
 
         private void SpawnTrailingEffects()
         {
-            // Implement trailing effects here if needed
+           
         }
 
         public override void PostExposeData()
