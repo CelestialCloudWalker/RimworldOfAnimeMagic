@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="PawnFlyerBase">
-    <defName>MagicAndMyths_DelegateFlyer</defName>
+    <defName>AnimeArsenal_DelegateFlyer</defName>
     <label>flying</label>
     <thingClass>AnimeArsenal.DelegateFlyer</thingClass>
     <useHitPoints>false</useHitPoints>

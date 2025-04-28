@@ -1,26 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AbilityDef>
-      <defName>AnimeArsenal_StanceJump</defName>
-      <label>StanceStrike</label>
-      <description>Instantly teleport to a target and perform a melee attack.</description>
-      <iconPath>UI/Abilities/IgnitionEdge</iconPath>
-      <aiCanUse>true</aiCanUse>
-      <targetRequired>True</targetRequired>
-      <verbProperties>
-        <verbClass>Verb_CastAbility</verbClass>
-        <range>20</range>
-        <warmupTime>0.5</warmupTime>
-        <noiseRadius>4</noiseRadius>
-        <requireLineOfSight>True</requireLineOfSight>
-        <targetParams>
-          <canTargetSelf>false</canTargetSelf>
-          <canTargetPawns>True</canTargetPawns>
-          <canTargetLocations>false</canTargetLocations>
-        </targetParams>
-      </verbProperties>
-      <comps>
-        <li Class="AnimeArsenal.CompProperties_BaseStance"/>
-      </comps>
+    <defName>AnimeArsenal_StanceJump</defName>
+    <label>StanceStrike</label>
+    <description>Instantly teleport to a target and perform a melee attack.</description>
+    <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>True</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityEffect">
+        <compClass>AnimeArsenal.CompAbilityEffect_BaseStance</compClass>
+      </li>
+    </comps>
+  </AbilityDef>
+  <AbilityDef>
+    <defName>DashStance</defName>
+    <label>DashStance</label>
+    <description>Leap to a DashStanceDashStanceDashStanceDashStanceg a series of dramatic lightning teleportations.</description>
+    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <targetRequired>True</targetRequired>
+    <targetMode>Location</targetMode>
+    <rangeRadius>15</rangeRadius>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <range>15</range>
+      <requireLineOfSight>True</requireLineOfSight>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <jumpOffsets>
+          <!-- This will create a clockwise circle around the initial target point -->
+          <!-- When facing North, these positions are absolute, but they will rotate based on facing direction -->
+          <li>(0, 0, 5)</li>    <!-- North -->
+          <li>(3, 0, 4)</li>    <!-- Northeast -->
+          <li>(5, 0, 0)</li>    <!-- East -->
+          <li>(3, 0, -4)</li>   <!-- Southeast -->
+          <li>(0, 0, -5)</li>   <!-- South -->
+          <li>(-3, 0, -4)</li>  <!-- Southwest -->
+          <li>(-5, 0, 0)</li>   <!-- West -->
+          <li>(-3, 0, 4)</li>   <!-- Northwest -->
+        </jumpOffsets>
+      </li>
+    </comps>
+    <castTime>0.5</castTime>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
   </AbilityDef>
 </Defs>

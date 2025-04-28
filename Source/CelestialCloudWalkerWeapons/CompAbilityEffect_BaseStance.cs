@@ -107,4 +107,6 @@ namespace AnimeArsenal
             return jumps < maxJumps;
         }
     }
+
 }
+
