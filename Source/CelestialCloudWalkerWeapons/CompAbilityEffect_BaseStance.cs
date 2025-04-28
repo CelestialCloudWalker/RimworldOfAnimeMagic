@@ -1,20 +1,18 @@
-﻿using Mono.Unix.Native;
+﻿using AnimeArsenal;
 using RimWorld;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
 namespace AnimeArsenal
 {
+
+
     public class CompAbilityEffect_BaseStance : CompAbilityEffect
     {
         private int maxJumps = 4;
         private int jumps = 0;
-        private int jumpDistance = 5; // Distance in cells for each additional jump
+        private int jumpDistance = 5;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
@@ -22,7 +20,6 @@ namespace AnimeArsenal
             if (parent.pawn?.Map == null)
                 return;
 
-            // Reset the jump counter each time the ability is used
             jumps = 0;
 
             Map map = parent.pawn.Map;
@@ -44,24 +41,18 @@ namespace AnimeArsenal
             if (CanJumpAgain())
             {
                 jumps++;
-
-                // Pick a random cardinal direction (north, east, south, west)
                 IntVec3 currentPosition = pawn.Position;
                 IntVec3 nextPosition = GetNextPositionInRandomCardinalDirection(currentPosition, map);
-
-                // Create a new flyer to the next position
                 CreateFlyerToTargetPosition(currentPosition, nextPosition, map);
             }
             else
             {
-                // Reset jumps for next usage of the ability
                 jumps = 0;
             }
         }
 
         private IntVec3 GetNextPositionInRandomCardinalDirection(IntVec3 currentPosition, Map map)
         {
-            // Define the four cardinal directions
             IntVec3[] cardinalDirections = new IntVec3[]
             {
             new IntVec3(0, 0, jumpDistance),  // North
@@ -70,14 +61,9 @@ namespace AnimeArsenal
             new IntVec3(-jumpDistance, 0, 0)  // West
             };
 
-            // Pick a random direction
             int directionIndex = Rand.Range(0, cardinalDirections.Length);
             IntVec3 direction = cardinalDirections[directionIndex];
-
-            // Calculate the target position
             IntVec3 targetPosition = currentPosition + direction;
-
-            // Ensure the position is valid within the map
             targetPosition = EnsurePositionIsValid(targetPosition, map);
 
             return targetPosition;
@@ -85,11 +71,10 @@ namespace AnimeArsenal
 
         private IntVec3 EnsurePositionIsValid(IntVec3 position, Map map)
         {
-            // Clamp the position to be within map bounds
             position.x = Mathf.Clamp(position.x, 0, map.Size.x - 1);
             position.z = Mathf.Clamp(position.z, 0, map.Size.z - 1);
 
-            // Check if the position is walkable, if not, find the nearest walkable cell
+
             if (!position.Walkable(map))
             {
                 IntVec3 fallbackPosition = CellFinder.StandableCellNear(position, map, jumpDistance / 2);
@@ -108,5 +93,143 @@ namespace AnimeArsenal
         }
     }
 
-}
 
+
+    public class CompProperties_BaseStance : CompProperties_AbilityEffect
+    {
+        public List<IntVec3> jumpOffsets;
+
+        public CompProperties_BaseStance()
+        {
+            compClass = typeof(CompAbilityEffect_DashStance);
+
+            jumpOffsets = new List<IntVec3>
+            {
+                new IntVec3(0, 0, 5),   // North
+                new IntVec3(5, 0, 0),   // East
+                new IntVec3(0, 0, -5),  // South
+                new IntVec3(-5, 0, 0)   // West
+            };
+        }
+    }
+
+    public class DashTrailManager
+    {
+        private List<TrackedMotePos> activeEffects = new List<TrackedMotePos>();
+        private static readonly int MoteLifetime = 120;
+        private static readonly ThingDef TrailMoteDef = DefDatabase<ThingDef>.GetNamed("MagicAndMyths_DashTrailMote");
+
+        public void CreateTrailBetween(Thing source, Thing target, Map map)
+        {
+            if (source == null || target == null || !source.Spawned || !target.Spawned || map == null)
+                return;
+
+            MoteDualAttached mote = MoteMaker.MakeInteractionOverlay(
+                TrailMoteDef,
+                source,
+                new TargetInfo(target.Position, map, false));
+
+            if (mote == null)
+                return;
+
+            TrackedMotePos trackedMote = new TrackedMotePos(mote, Source, Target, MoteLifetime);
+            activeEffects.Add(trackedMote);
+        }
+
+        public void Tick()
+        {
+            for (int i = activeEffects.Count - 1; i >= 0; i--)
+            {
+                TrackedMotePos trackedMote  = activeEffects[i];
+                trackedMote.RemainingTicks--;
+
+                if (trackedMote.RemainingTicks <= 0 ||
+                    trackedMote.Mote == null ||
+                    trackedMote.Mote.Destroyed ||
+                    trackedMote.SourceThing == null ||
+                    !trackedMote.SourceThing.Spawned ||
+                    trackedMote.TargetThing == null ||
+                    !trackedMote.TargetThing.Spawned)
+                {
+                    if (trackedMote.Mote != null && !trackedMote.Mote.Destroyed)
+                        trackedMote.Mote.Destroy();
+                    activeEffects.RemoveAt(i);
+                }
+                else
+                {
+                    trackedMote.Mote.Maintain();
+                    trackedMote.Mote.UpdateTargets(
+                        trackedMote.SourceThing,
+                        trackedMote.TargetThing,
+                        Vector3.zero,
+                        Vector3.zero
+                    );
+                }
+            }
+        }
+
+        public void Clear()
+        {
+            foreach (TrackedMotePos trackedMote in activeEffects)
+            {
+                if (trackedMote.Mote != null && !trackedMote.Mote.Destroyed)
+                    trackedMote.Mote.Destroy();
+            }
+            activeEffects.Clear();
+        }
+    }
+
+    public class CompAbilityEffect_DashStance : CompAbilityEffect_BaseStance
+    {
+        private DashBehaviour activeDash;
+
+        public new CompProperties_BaseStance Props => (CompProperties_BaseStance)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            if (parent.pawn?.Map == null || !target.Cell.IsValid)
+                return;
+
+            if (activeDash != null && activeDash.IsRunning)
+                return;
+
+            activeDash = new DashBehaviour(parent.pawn, target.Cell);
+            activeDash.Initialize(
+                maxJumps: 10,
+                jumpDistance: 5,
+                delayBetweenJumps: 5,
+                actionDuration: 30,
+                onJumpStart: (pos) => CreateJumpEffect(pos),
+                onJumpComplete: (pos) => { },
+                onDashComplete: () => SpawnTrailingEffects(),
+                // Pass the custom offsets from CompProperties
+                customJumpOffsets: Props.jumpOffsets
+            );
+
+            // Start the dash
+            activeDash.Start();
+        }
+
+        public override void CompTick()
+        {
+            base.CompTick();
+            activeDash?.Tick();
+        }
+
+        private void CreateJumpEffect(IntVec3 position)
+        {
+            FleckMaker.ThrowDustPuff(position.ToVector3Shifted(), parent.pawn.Map, 1.0f);
+        }
+
+        private void SpawnTrailingEffects()
+        {
+            // Implement trailing effects here if needed
+        }
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Deep.Look(ref activeDash, "activeDash");
+        }
+    }
+}

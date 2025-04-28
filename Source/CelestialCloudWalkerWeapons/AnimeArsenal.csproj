@@ -49,9 +49,6 @@
     <Compile Include="AoeDamageAtEndFlyer.cs" />
     <Compile Include="BaseTraitComp.cs" />
     <Compile Include="CompAbilityEffect_BaseStance.cs" />
-    <Compile Include="CompProperties_BaseStance.cs" />
-    <Compile Include="DashBehaviour.cs" />
-    <Compile Include="DashTrailEffect.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
