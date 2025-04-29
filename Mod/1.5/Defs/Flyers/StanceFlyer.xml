@@ -10,8 +10,8 @@
     <altitudeLayer>Skyfaller</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <pawnFlyer>
-      <flightDurationMin>0.5</flightDurationMin>
-      <flightSpeed>12</flightSpeed>
+      <flightDurationMin>0</flightDurationMin>
+      <flightSpeed>45</flightSpeed>
       <workerClass>PawnFlyerWorker</workerClass>
       <heightFactor>1</heightFactor>
       <progressCurve>

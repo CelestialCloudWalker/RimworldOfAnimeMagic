@@ -25,16 +25,21 @@
           <jumpDistance>5</jumpDistance>
           <duration>15</duration>
           <jumpOffsets>
-            <!-- This will create a clockwise circle around the initial target point -->
-            <!-- When facing North, these positions are absolute, but they will rotate based on facing direction -->
-            <li>(0, 0, 5)</li>    <!-- North -->
-            <li>(3, 0, 4)</li>    <!-- Northeast -->
-            <li>(5, 0, 0)</li>    <!-- East -->
-            <li>(3, 0, -4)</li>   <!-- Southeast -->
-            <li>(0, 0, -5)</li>   <!-- South -->
-            <li>(-3, 0, -4)</li>  <!-- Southwest -->
-            <li>(-5, 0, 0)</li>   <!-- West -->
-            <li>(-3, 0, 4)</li>   <!-- Northwest -->
+            <!-- 6-point star pattern with integer coordinates -->
+            <li>(0, 0, 5)</li>    <!-- First point (North) -->
+            <li>(0, 0, -5)</li>   <!-- Return to center (reverse of North) -->
+            <li>(4, 0, 3)</li>    <!-- Second point (Northeast) -->
+            <li>(-4, 0, -3)</li>  <!-- Return to center (reverse of Northeast) -->
+            <li>(4, 0, -3)</li>   <!-- Third point (Southeast) -->
+            <li>(-4, 0, 3)</li>   <!-- Return to center (reverse of Southeast) -->
+            <li>(0, 0, -5)</li>   <!-- Fourth point (South) -->
+            <li>(0, 0, 5)</li>    <!-- Return to center (reverse of South) -->
+            <li>(-4, 0, -3)</li>  <!-- Fifth point (Southwest) -->
+            <li>(4, 0, 3)</li>    <!-- Return to center (reverse of Southwest) -->
+            <li>(-4, 0, 3)</li>   <!-- Sixth point (Northwest) -->
+            <li>(4, 0, -3)</li>   <!-- Return to center (reverse of Northwest) -->
+            <li>(-4, 0, 0)</li>
+            <li>(4, 0, 0)</li>
           </jumpOffsets>
         </li>
       </comps>
