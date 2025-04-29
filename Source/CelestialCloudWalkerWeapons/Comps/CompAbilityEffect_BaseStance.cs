@@ -94,6 +94,10 @@ namespace AnimeArsenal
     public class CompProperties_BaseStance : CompProperties_AbilityEffect
     {
         public List<IntVec3> jumpOffsets;
+        public int maxJumps = 10;
+        public int ticksBetweenJumps = 5;
+        public int jumpDistance = 5;
+        public int duration = 30;
 
         public CompProperties_BaseStance()
         {
@@ -108,6 +112,10 @@ namespace AnimeArsenal
             };
         }
     }
+
+
+
+
 
     public class CompAbilityEffect_DashStance : CompAbilityEffect_BaseStance
     {
@@ -125,10 +133,10 @@ namespace AnimeArsenal
 
             activeDash = new DashBehaviour(parent.pawn, target.Cell);
             activeDash.Initialize(
-                maxJumps: 10,
-                jumpDistance: 5,
-                delayBetweenJumps: 5,
-                actionDuration: 30,
+                maxJumps: Props.maxJumps,
+                jumpDistance: Props.jumpDistance,
+                delayBetweenJumps: Props.ticksBetweenJumps,
+                actionDuration: Props.duration,
                 onJumpStart: (pos) => CreateJumpEffect(pos),
                 onJumpComplete: (pos) => { },
                 onDashComplete: () => SpawnTrailingEffects(),

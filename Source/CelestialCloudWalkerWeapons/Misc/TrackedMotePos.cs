@@ -390,7 +390,6 @@ namespace AnimeArsenal
             pawnFlyer.OnRespawnPawn += OnFlyerLand;
             GenSpawn.Spawn(pawnFlyer, start, map);
 
-            // Create trail from last position to current position
             trailEffect.CreateTrailBetween(lastPosition, target);
         }
 
@@ -401,7 +400,6 @@ namespace AnimeArsenal
                 delegateFlyer.OnRespawnPawn -= OnFlyerLand;
             }
 
-            // Update last position
             lastPosition = pawn.Position;
 
             isFlyerActive = false;
