@@ -1,5 +1,6 @@
 ﻿using AnimeArsenal;
 using RimWorld;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
@@ -99,6 +100,10 @@ namespace AnimeArsenal
         public int jumpDistance = 5;
         public int duration = 30;
 
+
+        public DamageDef jumpDamageDef;
+        public FloatRange jumpDamage = new FloatRange(1f, 2f);
+
         public CompProperties_BaseStance()
         {
             compClass = typeof(CompAbilityEffect_DashStance);
@@ -112,10 +117,6 @@ namespace AnimeArsenal
             };
         }
     }
-
-
-
-
 
     public class CompAbilityEffect_DashStance : CompAbilityEffect_BaseStance
     {
@@ -144,12 +145,39 @@ namespace AnimeArsenal
             );
 
             activeDash.Start();
+            activeDash.onJumpComplete = OnDashLand;
+        }
+
+
+        private void OnDashLand(IntVec3 vec)
+        {
+            //do something with the cell, find the tthings in it, do an aoe centered around it, whatever
+
+            Pawn firstPawn = vec.GetFirstPawn(this.parent.pawn.Map);
+
+            if (firstPawn == null) 
+                return;
+
+            if (Props.jumpDamageDef != null)
+            {
+                firstPawn.TakeDamage(new DamageInfo(Props.jumpDamageDef, Props.jumpDamage.RandomInRange));
+            }
         }
 
         public override void CompTick()
         {
             base.CompTick();
-            activeDash?.Tick();
+            if (activeDash != null)
+            {
+                activeDash?.Tick();
+                if (activeDash.IsFinished)
+                {
+
+                    //always make sure if subscribe to an event that unsubscribe from it properly, it will cause memory leaks otherwise
+                    activeDash.onJumpComplete -= OnDashLand;
+                    activeDash = null;
+                }
+            }         
         }
 
         private void CreateJumpEffect(IntVec3 position)

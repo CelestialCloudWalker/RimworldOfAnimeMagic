@@ -108,9 +108,9 @@ namespace AnimeArsenal
         protected List<IntVec3> jumpOffsets = new List<IntVec3>();
         protected DashTrailEffect trailEffect;
 
-        protected Action<IntVec3> onJumpStart;
-        protected Action<IntVec3> onJumpComplete;
-        protected Action onDashComplete;
+        public Action<IntVec3> onJumpStart;
+        public Action<IntVec3> onJumpComplete;
+        public Action onDashComplete;
 
         protected int currentTick = 0;
         protected bool isRunning = false;

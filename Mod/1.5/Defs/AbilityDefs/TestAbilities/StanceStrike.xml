@@ -24,6 +24,8 @@
           <ticksBetweenJumps>1</ticksBetweenJumps>
           <jumpDistance>5</jumpDistance>
           <duration>15</duration>
+          <jumpDamageDef>Burn</jumpDamageDef>
+          <jumpDamage>3~4</jumpDamage>
           <jumpOffsets>
             <!-- 6-point star pattern with integer coordinates -->
             <li>(0, 0, 5)</li>    <!-- First point (North) -->
