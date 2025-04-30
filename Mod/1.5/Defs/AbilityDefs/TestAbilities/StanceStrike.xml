@@ -6,7 +6,6 @@
       <description>Leap to a DashStanceDashStanceDashStanceDashStanceg a series of dramatic lightning teleportations.</description>
       <iconPath>UI/Abilities/LightningLeap</iconPath>
       <cooldownTicksRange>600~600</cooldownTicksRange>
-      <rangeRadius>15</rangeRadius>
       <verbProperties>
         <verbClass>Verb_CastAbility</verbClass>
         <drawAimPie>True</drawAimPie>
@@ -43,7 +42,6 @@
           </jumpOffsets>
         </li>
       </comps>
-      <castTime>0.5</castTime>
       <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     </AbilityDef>
 </Defs>

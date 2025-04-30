@@ -15,13 +15,18 @@
       <li>MedievalMeleeAdvanced</li>
       <li>LongSword</li>
     </weaponTags>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
     <costStuffCount>100</costStuffCount>
     <smeltProducts>
       <li>
         <thingDef>Steel</thingDef>
+        <count>75</count>
       </li>
       <li>
         <thingDef>Components</thingDef>
+        <count>1</count>
       </li>
     </smeltProducts>
     <thingSetMakerTags>
@@ -30,10 +35,27 @@
     <statBases>
       <WorkToMake>18000</WorkToMake>
       <Mass>2</Mass>
+      <MeleeWeapon_AverageArmorPenetration>1</MeleeWeapon_AverageArmorPenetration>
     </statBases>
     <relicChance>2</relicChance>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2.3</cooldownTime>
+      </li>
       <li>
         <label>blade</label>
         <capacities>

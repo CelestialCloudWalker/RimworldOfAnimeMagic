@@ -22,6 +22,7 @@
     <statBases>
       <WorkToMake>18000</WorkToMake> <!--time it takes to make-->
       <Mass>2</Mass> <!--Mass of weapon-->
+      <MeleeWeapon_AverageArmorPenetration>1</MeleeWeapon_AverageArmorPenetration>
     </statBases>
     <relicChance>2</relicChance> <!-- chance of being  a relic in Ideology dlc -->
     <equippedAngleOffset>-65</equippedAngleOffset> <!--Visually sets the offset of the weapon, helps angle it-->

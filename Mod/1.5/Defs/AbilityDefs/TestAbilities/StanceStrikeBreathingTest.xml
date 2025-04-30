@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>StanceStrikeWater</defName>
+    <label>WaterStance</label>
+    <description>Execute flowing water-like movements in a wave pattern, striking with fluid grace and precision.</description>
+    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <range>15</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>18</maxJumps>
+        <ticksBetweenJumps>1</ticksBetweenJumps>
+        <jumpDistance>6</jumpDistance>
+        <duration>16</duration>
+        <jumpOffsets>
+          <!-- Water Breathing: Flowing movement with wave-like pattern -->
+          <li>(0, 0, 5)</li>     <!-- Starting position (first strike) -->
+          <li>(3, 0, -2)</li>    <!-- Flowing right curve (3,0,3) -->
+          <li>(1, 0, -3)</li>    <!-- Continue curve right (4,0,0) -->
+          <li>(-1, 0, -3)</li>   <!-- Continue downward curve (3,0,-3) -->
+          <li>(-3, 0, -1)</li>   <!-- Bottom of first wave (0,0,-4) -->
+          <li>(-3, 0, 1)</li>    <!-- Begin left upward curve (-3,0,-3) -->
+          <li>(-1, 0, 3)</li>    <!-- Continue left curve (-4,0,0) -->
+          <li>(1, 0, 3)</li>     <!-- Continue upward curve (-3,0,3) -->
+          <li>(3, 0, -0)</li>    <!-- Top of second wave (0,0,4) -->
+          <li>(2, 0, -2)</li>    <!-- Smaller right curve (2,0,2) -->
+          <li>(1, 0, -2)</li>    <!-- Continue smaller curve (3,0,0) -->
+          <li>(-1, 0, -2)</li>   <!-- Continue downward smaller curve (2,0,-2) -->
+          <li>(-2, 0, -1)</li>   <!-- Bottom of third wave (0,0,-3) -->
+          <li>(-2, 0, 1)</li>    <!-- Begin left smaller curve (-2,0,-2) -->
+          <li>(-1, 0, 2)</li>    <!-- Continue left smaller curve (-3,0,0) -->
+          <li>(1, 0, 2)</li>     <!-- Continue upward smaller curve (-2,0,2) -->
+          <li>(2, 0, 1)</li>     <!-- Rising up for final strike (0,0,3) -->
+          <li>(0, 0, 2)</li>     <!-- Return to first position (-2,0,5) -->
+        </jumpOffsets>
+      </li>
+    </comps>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>StanceStrikeThunder</defName>
+    <label>ThunderStance</label>
+    <description>Unleash lightning-fast strikes with sudden direction changes, mimicking the unpredictable path of thunder.</description>
+    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <range>15</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLightningStrike">
+        <compClass>AnimeArsenal.CompAbilityEffect_LightningStrike</compClass>
+        <lightning>True</lightning>
+        <explosionRadius>1</explosionRadius>
+        <explosionDamage>10</explosionDamage>
+        <soundOnImpact>Thunder_OnMap</soundOnImpact>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>12</maxJumps>
+        <ticksBetweenJumps>1</ticksBetweenJumps>
+        <jumpDistance>9</jumpDistance>
+        <duration>10</duration>
+        <jumpOffsets>
+          <!-- Thunder Breathing: Lightning-fast straight lines with sudden direction changes -->
+          <li>(0, 0, 8)</li>     <!-- Initial strike position (distant) -->
+        </jumpOffsets>
+      </li>
+    </comps>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>StanceStrikeFlame</defName>
+    <label>FlameStance</label>
+    <description>Perform explosive, aggressive movements resembling dancing flames, enveloping enemies in a fiery assault.</description>
+    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <range>15</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>16</maxJumps>
+        <ticksBetweenJumps>1</ticksBetweenJumps>
+        <jumpDistance>7</jumpDistance>
+        <duration>14</duration>
+        <jumpOffsets>
+          <!-- Flame Breathing: Explosive, aggressive movements resembling dancing flames -->
+          <li>(0, 0, 6)</li>     <!-- Initial flaming strike position -->
+          <li>(3, 0, -2)</li>    <!-- Flame spreading right -->
+          <li>(2, 0, -4)</li>    <!-- Flame extending rightward -->
+          <li>(-2, 0, -4)</li>   <!-- Flame curling down -->
+          <li>(-5, 0, -1)</li>   <!-- Flame spreading left and down -->
+          <li>(-3, 0, 4)</li>    <!-- Flame curling left -->
+          <li>(2, 0, 5)</li>     <!-- Flame rising left -->
+          <li>(3, 0, 2)</li>     <!-- Flame peak (return to first position) -->
+          <li>(0, 0, -6)</li>    <!-- Small embers -->
+          <li>(-4, 0, -2)</li>   <!-- Small embers -->
+          <li>(6, 0, -1)</li>    <!-- Flame burst right -->
+          <li>(-8, 0, 0)</li>    <!-- Flame burst left -->
+          <li>(4, 0, -2)</li>    <!-- Downward flame -->
+          <li>(0, 0, 7)</li>     <!-- Rising flame -->
+          <li>(0, 0, 3)</li>     <!-- Higher rising flame -->
+          <li>(0, 0, -5)</li>    <!-- Return to initial strike position for final burst -->
+        </jumpOffsets>
+      </li>
+    </comps>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>StanceStrikeBeast</defName>
+    <label>BeastStance</label>
+    <description>Adopt wild, unpredictable movements like a predatory animal, striking with the ferocity of a beast.</description>
+    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <range>15</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>14</maxJumps>
+        <ticksBetweenJumps>1</ticksBetweenJumps>
+        <jumpDistance>8</jumpDistance>
+        <duration>12</duration>
+        <jumpOffsets>
+          <!-- Beast Breathing: Wild, unpredictable movements like a predatory animal -->
+          <li>(0, 0, 7)</li>     <!-- Initial pounce position -->
+          <li>(-4, 0, -7)</li>   <!-- First claw swipe left -->
+          <li>(12, 0, 0)</li>    <!-- Quick swipe right -->
+          <li>(-8, 0, -6)</li>   <!-- Downward pounce -->
+          <li>(-5, 0, 3)</li>    <!-- Low prowl left -->
+          <li>(12, 0, 1)</li>    <!-- Leap across right -->
+          <li>(-10, 0, 6)</li>   <!-- Upward claw left -->
+          <li>(9, 0, 1)</li>     <!-- Upward claw right -->
+          <li>(-15, 0, 0)</li>   <!-- Circling prey left -->
+          <li>(6, 0, -10)</li>   <!-- Downward strike -->
+          <li>(0, 0, 8)</li>     <!-- Lifting upward -->
+          <li>(-4, 0, 3)</li>    <!-- Circling for final strike -->
+          <li>(8, 0, 0)</li>     <!-- Circling for final strike -->
+          <li>(-1, 0, -6)</li>   <!-- Return to initial position for final pounce -->
+        </jumpOffsets>
+      </li>
+    </comps>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>StanceStrikeDance</defName>
+    <label>DanceStance</label>
+    <description>Master the Dance of the Fire God, combining elements of all breathing styles into a harmonious deadly performance.</description>
+    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <range>15</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>20</maxJumps>
+        <ticksBetweenJumps>1</ticksBetweenJumps>
+        <jumpDistance>8</jumpDistance>
+        <duration>20</duration>
+        <jumpOffsets>
+          <!-- Dance of the Fire God: Combines elements of all breathing styles -->
+          <li>(0, 0, 8)</li>     <!-- Initial sun position -->
+          <!-- Water-like flowing movement -->
+          <li>(4, 0, -2)</li>     <!-- Flowing curve right -->
+          <li>(2, 0, -6)</li>     <!-- Horizontal flow right -->
+          <li>(-2, 0, -6)</li>    <!-- Downward flow right -->
+          <!-- Thunder-like straight movement -->
+          <li>(-10, 0, 2)</li>   <!-- Sudden diagonal strike left -->
+          <li>(2, 0, 10)</li>    <!-- Quick upward strike left -->
+          <!-- Flame-like explosive movement -->
+          <li>(8, 0, 2)</li>     <!-- Upper flame burst right -->
+          <li>(3, 0, -4)</li>    <!-- Flame spread right -->
+          <li>(-10, 0, -4)</li>  <!-- Center return -->
+          <!-- Beast-like movements -->
+          <li>(-5, 0, -5)</li>   <!-- Beast lunge left -->
+          <li>(12, 0, 2)</li>    <!-- Beast lunge right -->
+          <li>(-7, 0, -4)</li>   <!-- Downward strike -->
+          <!-- Wind-like circular movement -->
+          <li>(-4, 0, 3)</li>    <!-- Wind circle left -->
+          <li>(-2, 0, 4)</li>    <!-- Wind circular left -->
+          <li>(2, 0, 4)</li>     <!-- Wind circle left up -->
+          <li>(4, 0, 2)</li>     <!-- Wind circle top -->
+          <li>(4, 0, -2)</li>    <!-- Wind circle right up -->
+          <li>(2, 0, -4)</li>    <!-- Wind circle right -->
+          <li>(-2, 0, -4)</li>   <!-- Wind circle right down -->
+          <li>(-4, 0, 0)</li>    <!-- Return to initial sun position -->
+        </jumpOffsets>
+      </li>
+    </comps>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+  </AbilityDef>
+</Defs>

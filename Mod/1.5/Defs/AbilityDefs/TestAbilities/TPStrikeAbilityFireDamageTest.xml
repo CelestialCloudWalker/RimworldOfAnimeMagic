@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AbilityDef>
-      <defName>AnimeArsenal_TPStrike</defName>
-      <label>TP Strike</label>
+      <defName>AnimeArsenal_TPStrikeFD</defName>
+      <label>TP StrikeFDT</label>
       <description>Instantly teleport to a target and perform a devastating melee attack that deals 15 cut damage with 30% armor penetration.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <aiCanUse>true</aiCanUse>
@@ -23,7 +23,7 @@
         <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
           <!-- Damage parameters -->
           <damageAmount>15</damageAmount>
-          <damageType>Cut</damageType>
+          <damageType>FlameStrike</damageType>
           <armorPenetration>0.3</armorPenetration>
           <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
           <!-- Optional stun effect -->

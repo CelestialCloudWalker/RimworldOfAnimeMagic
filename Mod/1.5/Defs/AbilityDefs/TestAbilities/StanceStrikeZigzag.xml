@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>StanceStrikeZigzag</defName>
+    <label>ZigzagStance</label>
+    <description>Leap to a DashStanceDashStanceDashStanceDashStanceg a series of dramatic lightning teleportations.</description>
+    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <range>15</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>18</maxJumps>
+        <ticksBetweenJumps>1</ticksBetweenJumps>
+        <jumpDistance>6</jumpDistance>
+        <duration>15</duration>
+        <jumpOffsets>
+          <!-- Zigzag pattern that creates a lightning bolt effect, ending at the position of the first jump -->
+          <li>(0, 0, 6)</li>     <!-- Start at top (first position) -->
+          <li>(3, 0, 4)</li>     <!-- Diagonal right -->
+          <li>(-3, 0, 2)</li>    <!-- Diagonal left -->
+          <li>(3, 0, 0)</li>     <!-- Diagonal right -->
+          <li>(-3, 0, -2)</li>   <!-- Diagonal left -->
+          <li>(3, 0, -4)</li>    <!-- Diagonal right -->
+          <li>(0, 0, -6)</li>    <!-- Bottom point -->
+          <li>(0, 0, -3)</li>    <!-- Move up -->
+          <li>(-3, 0, 0)</li>    <!-- Move left -->
+          <li>(0, 0, 3)</li>     <!-- Move up -->
+          <li>(3, 0, 6)</li>     <!-- Move up right -->
+          <li>(0, 0, 0)</li>     <!-- Return to center -->
+          <li>(-6, 0, 0)</li>    <!-- Left -->
+          <li>(6, 0, 0)</li>     <!-- Right -->
+          <li>(0, 0, 6)</li>     <!-- Up -->
+          <li>(0, 0, -6)</li>    <!-- Down -->
+          <li>(0, 0, 0)</li>     <!-- Return to center -->
+          <li>(0, 0, 6)</li>     <!-- Return to first position (top) -->
+        </jumpOffsets>
+      </li>
+    </comps>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+  </AbilityDef>
+</Defs>
