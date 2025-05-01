@@ -1,0 +1,28 @@
+Tenth Form: Eternal Bond of Devotion<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>Tenth_Form_Eternal_Bond_of_Devotion</defName>
+    <label>Tenth Form: Eternal Bond of Devotion</label>
+    <description>An enchantment technique that infuses the blade with the user's passionate breathing, causing wounds to resonate with a deep emotional connection that continues to damage opponents long after the initial strike, as if bound by an unbreakable oath of love.</description>
+    <iconPath>UI/Abilities/HeartDesire</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+        <enchantDef>HeartDesireEnchantment</enchantDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>LoveBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <Radius>5</Radius>
+        <MaxShotsToReflect>20</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

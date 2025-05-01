@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>Seventh_Form_Granite_Piercer</defName>
+    <label>Seventh Form: Granite Piercer</label>
+    <description>A precision thrust where the user channels their breathing to make their blade as hard and sharp as diamond-tipped stone. </description>
+    <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
+    <cooldownTicksRange>6000</cooldownTicksRange>
+    <targetRequired>True</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+        <!-- Damage parameters -->
+        <damageAmount>15</damageAmount>
+        <damageType>WaterBreathingDD</damageType>
+        <armorPenetration>0.3</armorPenetration>
+        <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
+        <!-- Optional stun effect -->
+        <stunDuration>2</stunDuration>
+        <!-- Set to 0 for single target, >0 for AOE -->
+        <effectRadius>0</effectRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

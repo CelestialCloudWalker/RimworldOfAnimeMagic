@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+      <defName>Twelfth_Fang_Boar_Rush</defName>
+      <label>Twelfth Fang: Boar Rush</label>
+      <description>Leap to a DashStanceDashStanceDashStanceDashStanceg a series of dramatic lightning teleportations.</description>
+      <iconPath>UI/Abilities/LightningLeap</iconPath>
+      <cooldownTicksRange>600~600</cooldownTicksRange>
+      <verbProperties>
+        <verbClass>Verb_CastAbility</verbClass>
+        <drawAimPie>True</drawAimPie>
+        <warmupTime>0.5</warmupTime>
+        <range>15</range>
+        <requireLineOfSight>True</requireLineOfSight>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>true</canTargetPawns>
+        </targetParams>
+      </verbProperties>
+      <comps>
+        <li Class="AnimeArsenal.CompProperties_BaseStance">
+          <maxJumps>10</maxJumps>
+          <ticksBetweenJumps>1</ticksBetweenJumps>
+          <jumpDistance>5</jumpDistance>
+          <duration>15</duration>
+          <jumpDamageDef>Burn</jumpDamageDef>
+          <jumpDamage>3~4</jumpDamage>
+          <jumpOffsets>
+            <!-- 6-point star pattern with integer coordinates -->
+            <li>(0, 0, 5)</li>    <!-- First point (North) -->
+            <li>(0, 0, -5)</li>   <!-- Return to center (reverse of North) -->
+            <li>(4, 0, 3)</li>    <!-- Second point (Northeast) -->
+            <li>(-4, 0, -3)</li>  <!-- Return to center (reverse of Northeast) -->
+            <li>(4, 0, -3)</li>   <!-- Third point (Southeast) -->
+            <li>(-4, 0, 3)</li>   <!-- Return to center (reverse of Southeast) -->
+            <li>(0, 0, -5)</li>   <!-- Fourth point (South) -->
+            <li>(0, 0, 5)</li>    <!-- Return to center (reverse of South) -->
+            <li>(-4, 0, -3)</li>  <!-- Fifth point (Southwest) -->
+            <li>(4, 0, 3)</li>    <!-- Return to center (reverse of Southwest) -->
+            <li>(-4, 0, 3)</li>   <!-- Sixth point (Northwest) -->
+            <li>(4, 0, -3)</li>   <!-- Return to center (reverse of Northwest) -->
+            <li>(-4, 0, 0)</li>
+            <li>(4, 0, 0)</li>
+          </jumpOffsets>
+        </li>
+      </comps>
+      <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    </AbilityDef>
+</Defs>

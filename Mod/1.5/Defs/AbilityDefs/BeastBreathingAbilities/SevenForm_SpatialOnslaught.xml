@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AbilityDef>
+      <defName>SevenForm_SpatialOnslaught</defName>
+      <label>Seventh Form: Spatial Onslaught</label>
+      <description>The user channels primal instinct into their blades, enhancing each strike with feral precision and raw sensory power.</description>
+      <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+      <targetRequired>false</targetRequired>
+      <verbProperties>
+          <verbClass>Verb_CastAbility</verbClass>
+          <range>-1</range>
+      </verbProperties>
+      <comps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+              <enchantDef>PrimalEnchantment</enchantDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_ResourceCost">
+            <resourceGeneDef>BeastBreath</resourceGeneDef>
+            <resourceCost>20</resourceCost>
+          </li>
+      </comps>
+  </AbilityDef>
+</Defs>

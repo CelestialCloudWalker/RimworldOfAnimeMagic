@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>Dance_of_the_Cicada_Resonant_Cut</defName>
+    <label>Dance of the Cicada: Resonant Cut</label>
+    <description>The user channels their breathing into their blade and performs a slashing motion that releases an invisible cutting wave, traveling through the air with vibrating force capable of slicing through distant targets.</description>
+    <iconPath>UI/Abilities/BlazeInferno</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <Radius>5</Radius>
+        <MaxShotsToReflect>20</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_InsectDeflect</effecterDef>
+       </li>
+    </comps>
+  </AbilityDef>
+</Defs>

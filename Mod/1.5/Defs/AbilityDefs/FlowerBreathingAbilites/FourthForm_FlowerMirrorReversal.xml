@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AbilityDef>
+      <defName>FourthForm_FlowerMirrorReversal</defName>
+      <label>Fourth Form: Blossoming Mirror Reversal</label>
+      <description>The pawn channels their breathing into their blade, enabling them to deal extra damage on hit. Each precise strike with the blade enhances the flow of energy, leaving the enemy vulnerable to further attacks.</description>
+      <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+      <targetRequired>false</targetRequired>
+      <verbProperties>
+          <verbClass>Verb_CastAbility</verbClass>
+          <range>-1</range>
+      </verbProperties>
+      <comps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+              <enchantDef>EnchantRoseThornEdge</enchantDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_ResourceCost">
+            <resourceGeneDef>FlowerBreath</resourceGeneDef>
+            <resourceCost>20</resourceCost>
+          </li>
+      </comps>
+  </AbilityDef>
+</Defs>

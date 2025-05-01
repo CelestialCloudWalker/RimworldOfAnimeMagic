@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>Third_Form_Scattering_Mist_Splash</defName>
+    <label>Third Form: Scattering Mist Splash</label>
+    <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
+    <iconPath>UI/Abilities/BlazeInferno</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <Radius>5</Radius>
+        <MaxShotsToReflect>20</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_BeastDeflect</effecterDef>
+       </li>
+    </comps>
+  </AbilityDef>
+</Defs>

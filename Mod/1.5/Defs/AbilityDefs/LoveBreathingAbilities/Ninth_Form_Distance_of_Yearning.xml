@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef>
+      <defName>Ninth_Form_Distance_of_Yearning</defName>
+      <label>Ninth Form: Distance of Yearning</label>
+      <description>The user channels their breathing into a powerful slash that releases a crescent-shaped projectile of energy, capable of cutting through enemies at a distance as if reaching out to a faraway love.</description>
+      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <cooldownTicksRange>60</cooldownTicksRange>
+      <displayOrder>200</displayOrder>
+      <aiCanUse>true</aiCanUse>
+      <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+      <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+      <verbProperties>
+        <verbClass>Verb_CastAbility</verbClass>
+        <range>20</range>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>FireSpew_Resolve</soundCast>
+        <targetParams>
+          <canTargetPawns>True</canTargetPawns>
+          <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+      <comps>
+        <li Class="CompProperties_AbilityLaunchProjectile">
+          <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
+        </li>
+        <li Class="AnimeArsenal.CompProperties_ResourceCost">
+          <resourceGeneDef>FlameBreath</resourceGeneDef>
+          <resourceCost>20</resourceCost>
+        </li>
+      </comps>
+    </AbilityDef>
+</Defs>

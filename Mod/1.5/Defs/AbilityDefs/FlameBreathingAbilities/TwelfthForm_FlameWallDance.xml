@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>TwelfthForm_FlameWallDance</defName>
+    <label>Twelfth Form: Flame Wall Dance</label>
+    <description>With precise movements and burning resolve, the user deflects incoming projectiles in a wave of radiant fire.</description>
+    <iconPath>UI/Abilities/FlameDeflect</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <Radius>5</Radius>
+        <MaxShotsToReflect>20</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_Deflect</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

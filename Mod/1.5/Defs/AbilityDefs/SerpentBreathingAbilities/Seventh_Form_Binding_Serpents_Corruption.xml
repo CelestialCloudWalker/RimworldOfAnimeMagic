@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>Seventh_Form_Binding_Serpents_Corruption</defName>
+    <label>Seventh Form: Binding Serpent's Corruption</label>
+    <description>An advanced technique where the user's blade becomes imbued with a malevolent serpentine aura that transfers into wounds upon contact.</description>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+          <enchantDef>SerpentEnchantment</enchantDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>SerpentBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <Radius>5</Radius>
+        <MaxShotsToReflect>20</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_SerpentDeflect</effecterDef>
+       </li>
+    </comps>
+  </AbilityDef>
+</Defs>

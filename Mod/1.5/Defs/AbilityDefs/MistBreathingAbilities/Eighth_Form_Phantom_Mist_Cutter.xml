@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef>
+      <defName>Eighth_Form_Phantom_Mist_Cutter</defName>
+      <label>Eighth Form: Phantom Mist Cutter</label>
+      <description>The user performs a precise diagonal slash that releases a nearly invisible wave of concentrated mist energy. This spectral projection travels silently through the air, appearing only as a subtle distortion before cleaving through targets with devastating precision. The projectile can split into multiple smaller blades that converge on a single point, making it nearly impossible to dodge completely.</description>
+      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <cooldownTicksRange>60</cooldownTicksRange>
+      <displayOrder>200</displayOrder>
+      <aiCanUse>true</aiCanUse>
+      <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+      <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+      <verbProperties>
+        <verbClass>Verb_CastAbility</verbClass>
+        <range>20</range>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>FireSpew_Resolve</soundCast>
+        <targetParams>
+          <canTargetPawns>True</canTargetPawns>
+          <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+      <comps>
+        <li Class="CompProperties_AbilityLaunchProjectile">
+          <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
+        </li>
+        <li Class="AnimeArsenal.CompProperties_ResourceCost">
+          <resourceGeneDef>FlameBreath</resourceGeneDef>
+          <resourceCost>20</resourceCost>
+        </li>
+      </comps>
+    </AbilityDef>
+</Defs>

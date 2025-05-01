@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>Twelfth_Form_Reversing_Tempest</defName>
+    <label>Twelfth Form: Reversing Tempest</label>
+    <description>The user creates a rotating wall of wind with their blade that catches and reverses incoming attacks, turning the opponent's force back against them.</description>
+    <iconPath>UI/Abilities/BlazeInferno</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <Radius>5</Radius>
+        <MaxShotsToReflect>20</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_BeastDeflect</effecterDef>
+       </li>
+    </comps>
+  </AbilityDef>
+</Defs>
