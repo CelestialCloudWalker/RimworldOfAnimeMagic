@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Second_Form_Echo_Percussion</defName>
     <label>Second Form: Echo Percussion</label>
-    <description>The user delivers a lightning-fast thrust with one sword while simultaneously striking with the flat of their second blade.</description>
+    <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
@@ -22,8 +22,8 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <!-- Damage parameters -->
-        <damageAmount>15</damageAmount>
-        <damageType>WaterBreathingDD</damageType>
+        <damageAmount>7</damageAmount>
+        <damageType>SoundBreathing</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <!-- Optional stun effect -->

@@ -7,9 +7,9 @@
     <texPath>VFX/ScorchMark</texPath>
     <graphicClass>Graphic_Mote</graphicClass>
     <shaderType>MoteGlow</shaderType>
-    <color>(0.7, 0.5, 0.9)</color>
+    <color>(179, 128, 230)</color>
     <shaderParameters>
-      <_Color>(0.7, 0.5, 0.9, 1.0)</_Color>
+      <_Color>(179, 128, 230, 255)</_Color>
       <_brightnessMultiplier>1</_brightnessMultiplier>
     </shaderParameters>
     <drawSize>1</drawSize>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="MoteBase">
-  <defName>Mist_Projectile_Mote</defName>
+  <defName>Wind_Projectile_Mote</defName>
   <thingClass>MoteAttached</thingClass>
   <graphicData>
     <texPath>VFX/ScorchMark</texPath>
     <graphicClass>Graphic_Mote</graphicClass>
     <shaderType>MoteGlow</shaderType>
-    <color>(191, 191, 218)</color>
+    <color>(0, 102, 204)</color>
     <shaderParameters>
-      <_Color>(191, 191, 218, 255)</_Color>
+      <_Color>(0, 102, 204, 255)</_Color>
       <_brightnessMultiplier>1</_brightnessMultiplier>
     </shaderParameters>
     <drawSize>1</drawSize>

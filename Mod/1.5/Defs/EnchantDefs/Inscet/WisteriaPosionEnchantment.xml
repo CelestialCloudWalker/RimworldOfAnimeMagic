@@ -50,7 +50,7 @@
           <shaderParameters>
             <_OverlayTex>/noise/Noise94</_OverlayTex>
             <!-- <_OverlayMask></_OverlayMask> -->
-            <_FireColor>(0.7, 0.5, 0.9, 1.0)</_FireColor>
+            <_FireColor>(179, 128, 230, 255)</_FireColor>
             <_Opacity>1</_Opacity>
             <_ShowEffect>1</_ShowEffect>
             <_OutlineOnly>1</_OutlineOnly>

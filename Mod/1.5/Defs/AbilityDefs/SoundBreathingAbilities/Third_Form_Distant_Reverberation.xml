@@ -22,10 +22,10 @@
       </verbProperties>
       <comps>
         <li Class="CompProperties_AbilityLaunchProjectile">
-          <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
+          <projectileDef>Third_Form_Distant_Reverberation_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>FlameBreath</resourceGeneDef>
+          <resourceGeneDef>SoundBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

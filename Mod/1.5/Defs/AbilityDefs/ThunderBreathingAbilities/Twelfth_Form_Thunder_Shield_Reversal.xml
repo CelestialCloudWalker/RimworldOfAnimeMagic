@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Twelfth_Form_Thunder_Shield_Reversal</defName>
     <label>Twelfth Form: Thunder Shield Reversal</label>
-    <description>The user rapidly rotates their blade in a circular pattern while channeling their breathing, creating a disc-like barrier of electrical energy.</description>
+    <description>A instinctive counter that deflects incoming projectiles.</description>
     <iconPath>UI/Abilities/BlazeInferno</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -12,13 +12,13 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceGeneDef>ThunderBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
       <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
         <Radius>5</Radius>
         <MaxShotsToReflect>20</MaxShotsToReflect>
-        <effecterDef>AnimeArsenal_BeastDeflect</effecterDef>
+        <effecterDef>AnimeArsenal_ThunderDeflect</effecterDef>
        </li>
     </comps>
   </AbilityDef>

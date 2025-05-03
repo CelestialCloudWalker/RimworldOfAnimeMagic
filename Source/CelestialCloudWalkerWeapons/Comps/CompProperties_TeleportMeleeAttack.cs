@@ -9,7 +9,7 @@ namespace AnimeArsenal
     {
         // Damage parameters
         public int damageAmount = 15;
-        public DamageDef damageType = DamageDefOf.Cut;
+        public DamageDef damageType; // No default initialization, will be set by XML
         public float armorPenetration = 0.3f;
         public int stunDuration = 0;
         public float effectRadius = 0f;
@@ -19,8 +19,11 @@ namespace AnimeArsenal
         {
             compClass = typeof(CompAbilityEffect_TeleportMeleeAttack);
         }
+
+        // No ResolveReferences method needed if damageType is always set in XML
     }
 
+    // Rest of your code remains unchanged
     public class CompAbilityEffect_TeleportMeleeAttack : CompAbilityEffect
     {
         private Thing TargetThing;
@@ -133,9 +136,12 @@ namespace AnimeArsenal
                 finalDamage += (int)(meleeSkill * Props.additionalDamageFactorFromMeleeSkill * Props.damageAmount);
             }
 
+            // Check if damageType is null and handle it
+            DamageDef damageToUse = Props.damageType ?? DamageDefOf.Cut;
+
             // Create damage info
             DamageInfo dinfo = new DamageInfo(
-                Props.damageType,
+                damageToUse,
                 finalDamage,
                 Props.armorPenetration,
                 -1f,

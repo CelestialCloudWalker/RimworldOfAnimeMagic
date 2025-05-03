@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Seventh_Form_Drop_Ripple_Thrust</defName>
     <label>Seventh Form: Drop Ripple Thrust</label>
-    <description>The user performs a precise, fast and accurate thrust with their blade.</description>
+    <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
@@ -22,7 +22,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <!-- Damage parameters -->
-        <damageAmount>15</damageAmount>
+        <damageAmount>7</damageAmount>
         <damageType>WaterBreathingDD</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
@@ -30,6 +30,10 @@
         <stunDuration>2</stunDuration>
         <!-- Set to 0 for single target, >0 for AOE -->
         <effectRadius>0</effectRadius>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>WaterBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
       </li>
     </comps>
   </AbilityDef>

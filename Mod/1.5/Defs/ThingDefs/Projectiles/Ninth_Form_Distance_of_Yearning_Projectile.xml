@@ -11,7 +11,7 @@
       <shaderType>Transparent</shaderType>
       <drawSize>1.5</drawSize>
       <shaderParameters>
-        <_Color>(1.0, 0.6, 0.7, 1.0)</_Color>
+        <_Color>(255, 153, 179, 255)</_Color>
         <_brightnessMultiplier>1</_brightnessMultiplier>
       </shaderParameters>
     </graphicData>
@@ -29,7 +29,7 @@
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>15</glowRadius>
-        <glowColor>(1.0, 0.6, 0.7, 1.0)</glowColor>
+        <glowColor>(255, 153, 179, 255)</glowColor>
       </li>
       <li Class="AnimeArsenal.CompProperties_BeamEffect">
         <TrailMote>Love_Projectile_Mote</TrailMote>

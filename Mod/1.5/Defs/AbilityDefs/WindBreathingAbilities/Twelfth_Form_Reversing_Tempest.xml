@@ -12,13 +12,13 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceGeneDef>WindBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
       <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
         <Radius>5</Radius>
         <MaxShotsToReflect>20</MaxShotsToReflect>
-        <effecterDef>AnimeArsenal_BeastDeflect</effecterDef>
+        <effecterDef>AnimeArsenal_WindDeflect</effecterDef>
        </li>
     </comps>
   </AbilityDef>

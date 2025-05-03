@@ -3,7 +3,7 @@
 <AbilityDef>
       <defName>Ninth_Form_Petrifying_Edge</defName>
       <label>Ninth Form: Petrifying Edge</label>
-      <description>An advanced technique where the user's blade becomes imbued with stone-like energy that transfers into wounds upon contact. </description>
+      <description>The user channels thier breathing style into their weapon.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>
@@ -18,11 +18,6 @@
             <resourceGeneDef>StoneBreath</resourceGeneDef>
             <resourceCost>20</resourceCost>
           </li>
-          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-            <Radius>5</Radius>
-            <MaxShotsToReflect>20</MaxShotsToReflect>
-            <effecterDef>AnimeArsenal_StoneDeflect</effecterDef>
-           </li>
       </comps>
   </AbilityDef>
 </Defs>

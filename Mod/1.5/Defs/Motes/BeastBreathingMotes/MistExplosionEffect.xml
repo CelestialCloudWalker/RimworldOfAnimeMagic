@@ -21,7 +21,7 @@
       <angle>0~360</angle>
       <speed>0</speed>
       <positionOffset>(0, 0, 0)</positionOffset>
-      <color>(0.75, 0.75, 0.85)</color>
+      <color>(191, 191, 218)</color>
       <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
       <rotateTowardsTargetCenter>false</rotateTowardsTargetCenter>
       <attachToSpawnThing>false</attachToSpawnThing>
@@ -37,7 +37,7 @@
       <graphicClass>Graphic_Mote</graphicClass>
       <shaderType>MoteGlow</shaderType>
       <shaderParameters>
-        <_Color>(0.75, 0.75, 0.85)</_Color>
+        <_Color>(191, 191, 218)</_Color>
       </shaderParameters>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>

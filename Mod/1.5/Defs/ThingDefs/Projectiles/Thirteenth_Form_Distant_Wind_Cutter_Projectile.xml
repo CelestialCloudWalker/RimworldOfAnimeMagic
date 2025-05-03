@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="BaseBullet">
-    <defName>Fourth_Fang_SlicenDice_Projectile</defName>
+    <defName>Thirteenth_Form_Distant_Wind_Cutter_Projectile</defName>
     <label>HelpMe</label>
     <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
     <tickerType>Normal</tickerType>
@@ -11,17 +11,17 @@
       <shaderType>Transparent</shaderType>
       <drawSize>1.5</drawSize>
       <shaderParameters>
-        <_Color>(77, 153, 230, 255)</_Color>
+        <_Color>(153, 255, 153, 255)</_Color>
         <_brightnessMultiplier>1</_brightnessMultiplier>
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>PrimalFang</damageDef>
+      <damageDef>WindSlice</damageDef>
       <BaseDamage>7</BaseDamage>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>
-      <ExplosionEffect>BeastBreathingExplosionEffect</ExplosionEffect>
+      <ExplosionEffect>WaterBreathingExplosionEffect</ExplosionEffect>
       <speed>25</speed>
       <CanHitFriendly>true</CanHitFriendly>
       <CanHitCaster>false</CanHitCaster>
@@ -29,10 +29,10 @@
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>15</glowRadius>
-        <glowColor>(77, 153, 230, 255)</glowColor>
+        <glowColor>(153, 255, 153, 255)</glowColor>
       </li>
       <li Class="AnimeArsenal.CompProperties_BeamEffect">
-        <TrailMote>Beast_Projectile_Mote</TrailMote>
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
         <MoteInterval>0.25</MoteInterval>
         <MoteDuration>30</MoteDuration>
         <AlignWithMovement>true</AlignWithMovement>

@@ -15,10 +15,31 @@
       <destroyedOutLabel>destroyed</destroyedOutLabel>
     </injuryProps>
     <comps>
-        <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>SoundBreathing</damageType>
-            <damageValue>10</damageValue>
-        </li>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>SoundBreathing</damageType>
+        <damageValue>10</damageValue>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_Overlay">
+        <overlayGraphic Class="AnimeArsenal.GraphicDataWithShader">
+          <drawSize>1.1</drawSize>
+          <texPath>Starscourgedual</texPath>
+          <graphicClass>AnimeArsenal.Graphic_SingleWithShader</graphicClass>
+          <customShaderName>Shader Forge/EnchantShader_Additive</customShaderName>
+          <shaderParameters>
+            <_OverlayTex>/noise/Noise94</_OverlayTex>
+            <!-- <_OverlayMask></_OverlayMask> -->
+            <_FireColor>(204, 102, 204, 255)</_FireColor>
+            <_Opacity>1</_Opacity>
+            <_ShowEffect>1</_ShowEffect>
+            <_OutlineOnly>1</_OutlineOnly>
+            <_PanSpeedX>0</_PanSpeedX>
+            <_PanSpeedY>-0.15</_PanSpeedY>
+            <_FresnelColor>(1, 1, 1, 1)</_FresnelColor>
+            <_FresnelExpo>0</_FresnelExpo>
+            <_EdgeWidth>0.09</_EdgeWidth>
+          </shaderParameters>
+        </overlayGraphic>
+      </li>
     </comps>
   </HediffDef>
 </Defs>

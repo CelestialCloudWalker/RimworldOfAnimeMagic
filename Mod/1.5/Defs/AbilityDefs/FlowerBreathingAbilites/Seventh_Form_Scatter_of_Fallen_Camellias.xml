@@ -34,10 +34,10 @@
           <li>(-2, 0, 0)</li>
 
           <!-- Diagonal petals -->
-          <li>(1.4, 0, 1.4)</li>
-          <li>(-1.4, 0, 1.4)</li>
-          <li>(-1.4, 0, -1.4)</li>
-          <li>(1.4, 0, -1.4)</li>
+          <li>(1, 0, 1)</li>
+          <li>(-1, 0, 1)</li>
+          <li>(-1, 0, -1)</li>
+          <li>(1, 0, -1)</li>
         </jumpOffsets>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">

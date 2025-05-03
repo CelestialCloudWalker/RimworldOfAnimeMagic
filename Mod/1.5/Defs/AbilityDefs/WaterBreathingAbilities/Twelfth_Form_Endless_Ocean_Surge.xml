@@ -3,7 +3,7 @@
 <AbilityDef>
       <defName>Twelfth_Form_Endless_Ocean_Surge</defName>
       <label>Twelfth Form: Endless Ocean Surge</label>
-      <description>This form imbues the blade with condensed water energy that surges with each strike, creating waves of cutting force that extend beyond the physical reach of the sword.</description>
+      <description>The user channels thier breathing style into their weapon.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>

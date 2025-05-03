@@ -3,7 +3,7 @@
     <AbilityDef>
       <defName>Ninth_Form_Thunderbolt_Arrow</defName>
       <label>Ninth Form: Thunderbolt Arrow</label>
-      <description>The user performs a precise diagonal slash that releases a concentrated projectile of lightning energy.</description>
+      <description>The user delivers A diagonal slash with its sword.</description>
       <iconPath>UI/Icons/FlameSlice</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
@@ -22,10 +22,10 @@
       </verbProperties>
       <comps>
         <li Class="CompProperties_AbilityLaunchProjectile">
-          <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
+          <projectileDef>Ninth_Form_Thunderbolt_Arrow_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>FlameBreath</resourceGeneDef>
+          <resourceGeneDef>ThunderBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

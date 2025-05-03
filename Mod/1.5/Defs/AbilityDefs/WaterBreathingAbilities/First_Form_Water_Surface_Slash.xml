@@ -3,7 +3,7 @@
     <AbilityDef>
       <defName>First_Form_Water_Surface_Slash</defName>
       <label>First Form: Water Surface Slash</label>
-      <description>The user releases a singular, horizontal slash aiming to decapitate their target.</description>
+      <description>The user delivers A diagonal slash with its sword.</description>
       <iconPath>UI/Icons/FlameSlice</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
@@ -22,10 +22,10 @@
       </verbProperties>
       <comps>
         <li Class="CompProperties_AbilityLaunchProjectile">
-          <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
+          <projectileDef>First_Form_Water_Surface_Slash_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>FlameBreath</resourceGeneDef>
+          <resourceGeneDef>WaterBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

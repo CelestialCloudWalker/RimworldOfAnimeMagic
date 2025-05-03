@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Fourth_Form_Constant_Resounding_Slashes</defName>
     <label>Fourth Form: Constant Resounding Slashes</label>
-    <description>The user holds their twin swords apart and spins them rapidly around themselves, enabling the blades to destroy anything it makes contact with for powerful defensive capabilities around the user.</description>
+    <description>An instinctive counter that deflects incoming projectiles.</description>
     <iconPath>UI/Abilities/BlazeInferno</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -12,13 +12,13 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceGeneDef>SoundBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
       <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
         <Radius>5</Radius>
         <MaxShotsToReflect>20</MaxShotsToReflect>
-        <effecterDef>AnimeArsenal_BeastDeflect</effecterDef>
+        <effecterDef>AnimeArsenal_SoundDeflect</effecterDef>
        </li>
     </comps>
   </AbilityDef>

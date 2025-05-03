@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Seventh_Form_Granite_Piercer</defName>
     <label>Seventh Form: Granite Piercer</label>
-    <description>A precision thrust where the user channels their breathing to make their blade as hard and sharp as diamond-tipped stone. </description>
+    <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
@@ -22,14 +22,18 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <!-- Damage parameters -->
-        <damageAmount>15</damageAmount>
-        <damageType>WaterBreathingDD</damageType>
+        <damageAmount>7</damageAmount>
+        <damageType>StoneBreathing</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <!-- Optional stun effect -->
         <stunDuration>2</stunDuration>
         <!-- Set to 0 for single target, >0 for AOE -->
         <effectRadius>0</effectRadius>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>StoneBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
       </li>
     </comps>
   </AbilityDef>
