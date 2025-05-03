@@ -3,7 +3,7 @@
     <AbilityDef>
       <defName>First_Form_Winding_Serpent_Slash</defName>
       <label>First Form: Winding Serpent Slash</label>
-      <description>The user releases a singular frontal horizontal slash aimed at their target in a winding motion.</description>
+      <description>The user delivers A diagonal slash with its sword.</description>
       <iconPath>UI/Icons/FlameSlice</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
@@ -22,10 +22,10 @@
       </verbProperties>
       <comps>
         <li Class="CompProperties_AbilityLaunchProjectile">
-          <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
+          <projectileDef>First_Form_Winding_Serpent_Slash_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>FlameBreath</resourceGeneDef>
+          <resourceGeneDef>SerpentBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

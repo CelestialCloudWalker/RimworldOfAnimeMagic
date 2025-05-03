@@ -22,8 +22,8 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <!-- Damage parameters -->
-        <damageAmount>15</damageAmount>
-        <damageType>WaterBreathingDD</damageType>
+        <damageAmount>7</damageAmount>
+        <damageType>AA_SerpentCut</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <!-- Optional stun effect -->

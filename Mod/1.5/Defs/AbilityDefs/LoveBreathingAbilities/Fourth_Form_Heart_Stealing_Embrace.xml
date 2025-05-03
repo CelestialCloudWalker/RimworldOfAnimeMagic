@@ -23,13 +23,17 @@
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <!-- Damage parameters -->
         <damageAmount>15</damageAmount>
-        <damageType>WaterBreathingDD</damageType>
+        <damageType>HeartStrike</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <!-- Optional stun effect -->
         <stunDuration>2</stunDuration>
         <!-- Set to 0 for single target, >0 for AOE -->
         <effectRadius>0</effectRadius>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>LoveBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
       </li>
     </comps>
   </AbilityDef>

@@ -10,8 +10,6 @@
     <resourceLabel>Sun Breath</resourceLabel>
     <resourceDescription>Current stored Breath, charged with the essence of the sun. This radiant energy powers devastating solar-based abilities, unleashing searing strikes that overwhelm and scorch enemies with the power of the sun.</resourceDescription>
     <abilities>
-      <li>TotalConcentrationBreathing</li>
-      <li>SunBreathRadiantSunstrike</li>
     </abilities>
     <!-- Tree Configuration -->
 

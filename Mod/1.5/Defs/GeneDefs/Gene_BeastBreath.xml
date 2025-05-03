@@ -10,9 +10,6 @@
     <resourceLabel>Beast Breath</resourceLabel>
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
     <abilities>
-      <li>TotalConcentrationBreathing</li>
-      <li>FirstFormFangOfTheWild</li>
-      <li>BreathingMarkAbility</li>
     </abilities>
     <!-- Tree Configuration -->
 

@@ -9,11 +9,6 @@
     <resourceLabel>Flame Breath</resourceLabel>
     <resourceDescription>Current stored Breath, ignited by inner heat. This energy fuels powerful flame-based abilities.</resourceDescription>
     <abilities>
-      <li>FirstFormBlazeInferno</li>
-      <li>TotalConcentrationBreathing</li>
-      <li>FlameBreathingSlice</li>
-      <li>Flame_Breathing_Flame_Tiger</li>
-      <li>AnimeArsenal_StanceJump</li>
     </abilities>
     <maxStat>FlameBreath</maxStat>
     <biostatCpx>2</biostatCpx>

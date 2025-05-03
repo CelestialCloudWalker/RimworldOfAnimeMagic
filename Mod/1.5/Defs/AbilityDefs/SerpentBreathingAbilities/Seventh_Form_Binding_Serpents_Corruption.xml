@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Seventh_Form_Binding_Serpents_Corruption</defName>
     <label>Seventh Form: Binding Serpent's Corruption</label>
-    <description>An advanced technique where the user's blade becomes imbued with a malevolent serpentine aura that transfers into wounds upon contact.</description>
+    <description>The user channels thier breathing style into their weapon.</description>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -17,11 +17,6 @@
         <resourceGeneDef>SerpentBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
-      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-        <Radius>5</Radius>
-        <MaxShotsToReflect>20</MaxShotsToReflect>
-        <effecterDef>AnimeArsenal_SerpentDeflect</effecterDef>
-       </li>
     </comps>
   </AbilityDef>
 </Defs>

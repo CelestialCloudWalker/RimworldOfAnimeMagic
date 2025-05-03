@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <AbilityDef>
-      <defName>FlameBreathingSlice</defName>
-      <label>Flame Slice</label>
-      <description>Manipulate flames for long-range attacks by forming an arrow.</description>
+      <defName>Dance_of_the_Cicada_Resonant_Cut</defName>
+      <label>Dance of the Cicada Resonant Cut</label>
+      <description>The user delivers A diagonal slash with its sword.</description>
       <iconPath>UI/Icons/FlameSlice</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
@@ -22,10 +22,10 @@
       </verbProperties>
       <comps>
         <li Class="CompProperties_AbilityLaunchProjectile">
-          <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
+          <projectileDef>Dance_of_the_Cicada_Resonant_Cut_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>FlameBreath</resourceGeneDef>
+          <resourceGeneDef>InsectBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

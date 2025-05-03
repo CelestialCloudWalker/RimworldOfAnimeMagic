@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Dance_of_the_Mantis_Stillness_Before_Strike</defName>
     <label>Dance of the Mantis: Stillness Before Strike</label>
-    <description>A precise technique where the user appears motionless, conserving energy before unleashing a lightning-fast singular strike aimed at the target's vital point.</description>
+    <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
@@ -23,7 +23,7 @@
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <!-- Damage parameters -->
         <damageAmount>15</damageAmount>
-        <damageType>WaterBreathingDD</damageType>
+        <damageType>AA_InsectBreathing_PoisonSting</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <!-- Optional stun effect -->

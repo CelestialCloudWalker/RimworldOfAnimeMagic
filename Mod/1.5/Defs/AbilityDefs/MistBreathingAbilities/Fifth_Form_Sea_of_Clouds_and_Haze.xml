@@ -3,7 +3,7 @@
   <AbilityDef>
       <defName>Fifth_Form_Sea_of_Clouds_and_Haze</defName>
       <label>Fifth Form: Sea of Clouds and Haze</label>
-      <description>The user charges at their target at blistering speeds in a zig-zag motion while performing a barrage of continuous slashes in front and/or around them.</description>
+      <description>The user vanishes in a blitz of dashes.</description>
       <iconPath>UI/Abilities/LightningLeap</iconPath>
       <cooldownTicksRange>600~600</cooldownTicksRange>
       <verbProperties>

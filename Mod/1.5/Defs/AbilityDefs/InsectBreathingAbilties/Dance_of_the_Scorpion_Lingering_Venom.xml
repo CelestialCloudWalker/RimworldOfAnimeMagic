@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Dance_of_the_Scorpion_Lingering_Venom</defName>
     <label>Dance of the Scorpion: Lingering Venom</label>
-    <description>Channeling the deadly essence of Insect Breathing, the user strikes with a venomous blow that injects toxic Wisteria poison into the enemy, weakening and debilitating them upon contact.</description>
+    <description>The user channels thier breathing style into their weapon.</description>
     <targetRequired>false</targetRequired>
     <verbProperties>
         <verbClass>Verb_CastAbility</verbClass>

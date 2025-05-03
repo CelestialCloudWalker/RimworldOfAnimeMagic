@@ -7,7 +7,7 @@
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <injuryProps>
-      <painPerSeverity>0.05</painPerSeverity> 
+      <painPerSeverity>0.05</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
       <bleedRate>0.10</bleedRate>
       <canMerge>true</canMerge>
@@ -18,6 +18,27 @@
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
         <damageType>RosePetalCut</damageType>
         <damageValue>10</damageValue>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_Overlay">
+        <overlayGraphic Class="AnimeArsenal.GraphicDataWithShader">
+          <drawSize>1.1</drawSize>
+          <texPath>Starscourgedual</texPath>
+          <graphicClass>AnimeArsenal.Graphic_SingleWithShader</graphicClass>
+          <customShaderName>Shader Forge/EnchantShader_Additive</customShaderName>
+          <shaderParameters>
+            <_OverlayTex>/noise/Noise94</_OverlayTex>
+            <!-- <_OverlayMask></_OverlayMask> -->
+            <_FireColor>(0.9, 0.5, 0.7, 1.0)</_FireColor>
+            <_Opacity>1</_Opacity>
+            <_ShowEffect>1</_ShowEffect>
+            <_OutlineOnly>1</_OutlineOnly>
+            <_PanSpeedX>0</_PanSpeedX>
+            <_PanSpeedY>-0.15</_PanSpeedY>
+            <_FresnelColor>(1, 1, 1, 1)</_FresnelColor>
+            <_FresnelExpo>0</_FresnelExpo>
+            <_EdgeWidth>0.09</_EdgeWidth>
+          </shaderParameters>
+        </overlayGraphic>
       </li>
     </comps>
   </HediffDef>

@@ -151,11 +151,9 @@ namespace AnimeArsenal
 
         private void OnDashLand(IntVec3 vec)
         {
-            //do something with the cell, find the tthings in it, do an aoe centered around it, whatever
-
             Pawn firstPawn = vec.GetFirstPawn(this.parent.pawn.Map);
 
-            if (firstPawn == null) 
+            if (firstPawn == null || firstPawn == this.parent.pawn)
                 return;
 
             if (Props.jumpDamageDef != null)

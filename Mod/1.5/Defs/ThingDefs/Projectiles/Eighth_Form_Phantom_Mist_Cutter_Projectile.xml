@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="BaseBullet">
-    <defName>PleaseLordEmoForgiveMe</defName>
+    <defName>Eighth_Form_Phantom_Mist_Cutter_Projectile</defName>
     <label>HelpMe</label>
     <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Projectile/FlameSliceP</texPath>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>Transparent</shaderType>
-      <drawSize>0.7</drawSize>
+      <drawSize>1.5</drawSize>
       <shaderParameters>
-        <_Color>(255, 0, 0, 1)</_Color>
+        <_Color>(0.75, 0.75, 0.85, 1.0)</_Color>
         <_brightnessMultiplier>1</_brightnessMultiplier>
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>Bomb</damageDef>
-      <BaseDamage>30</BaseDamage>
+      <damageDef>VeilStrike</damageDef>
+      <BaseDamage>7</BaseDamage>
       <armorPenetrationBase>0.3</armorPenetrationBase>
-      <ExplosionRadius>5</ExplosionRadius>
+      <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>
-      <ExplosionEffect>JJK_RedExplosionEffect</ExplosionEffect>
+      <ExplosionEffect>InsectBreathingExplosionEffect</ExplosionEffect>
       <speed>25</speed>
       <CanHitFriendly>true</CanHitFriendly>
       <CanHitCaster>false</CanHitCaster>
@@ -29,10 +29,10 @@
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>15</glowRadius>
-        <glowColor>(255,0,0,0)</glowColor>
+        <glowColor>(0.75, 0.75, 0.85, 1.0)</glowColor>
       </li>
       <li Class="AnimeArsenal.CompProperties_BeamEffect">
-        <TrailMote>JJK_Mote_ScorchMarkRed</TrailMote>
+        <TrailMote>Mist_Projectile_Mote</TrailMote>
         <MoteInterval>0.25</MoteInterval>
         <MoteDuration>30</MoteDuration>
         <AlignWithMovement>true</AlignWithMovement>

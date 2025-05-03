@@ -46,11 +46,18 @@
   <ItemGroup>
     <Compile Include="AMConstants.cs" />
     <Compile Include="AnimeArsenalUtility.cs" />
+    <Compile Include="AssetBundleShaderManager.cs" />
+    <Compile Include="CompProperties_AbilityDamage.cs" />
+    <Compile Include="Comps\HediffCompProperties_Overlay.cs" />
+    <Compile Include="DrawOffsetExt.cs" />
+    <Compile Include="GraphicDataWithShader.cs" />
+    <Compile Include="Graphic_SingleWithShader.cs" />
     <Compile Include="Misc\AoeDamageAtEndFlyer.cs" />
     <Compile Include="Comps\BaseTraitComp.cs" />
     <Compile Include="Comps\CompAbilityEffect_BaseStance.cs" />
     <Compile Include="Comps\DashTrailManager.cs" />
     <Compile Include="Comps\TrackedMote.cs" />
+    <Compile Include="PawnRenderNodeWorker_WeaponOverlay.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AbilityDef>
-    <defName>EighthForm_Explosive_Rush</defName>
-    <label>Explosive Rush</label>
-    <description>Temporarily channels Beast Breathing into your strikes, empowering each blow with feral might.</description>
+    <defName>Eighth_Fang_Explosive_Rush</defName>
+    <label>Eighth Fang: Explosive Rush</label>
+    <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
@@ -22,14 +22,16 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <!-- Damage parameters -->
-        <damageAmount>15</damageAmount>
-        <damageType>WaterBreathingDD</damageType>
-        <armorPenetration>0.3</armorPenetration>
-        <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
+        <damageAmount>7</damageAmount>
+        <damageType>PrimalFang</damageType>
         <!-- Optional stun effect -->
         <stunDuration>2</stunDuration>
         <!-- Set to 0 for single target, >0 for AOE -->
         <effectRadius>0</effectRadius>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>BeastBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
       </li>
     </comps>
   </AbilityDef>

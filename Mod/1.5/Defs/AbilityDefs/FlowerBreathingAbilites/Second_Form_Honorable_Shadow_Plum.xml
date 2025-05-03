@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Second_Form_Honorable_Shadow_Plum</defName>
     <label>Second Form: Honorable Shadow Plum</label>
-    <description>The user channels the devastating power of flames, igniting their body in a fiery blaze. Their strikes become superheated, dealing immense fire damage and burning all enemies caught in the inferno. The technique also grants temporary defensive prowess, deflecting projectiles in its vicinity.</description>
+    <description>An instinctive counter that deflects incoming projectiles.</description>
     <iconPath>UI/Abilities/BlazeInferno</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -12,7 +12,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceGeneDef>FlowerBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
       <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">

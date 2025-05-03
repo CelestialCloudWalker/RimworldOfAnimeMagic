@@ -3,7 +3,7 @@
   <AbilityDef>
       <defName>Dance_of_the_Grasshopper_Ascending_Steps</defName>
       <label>Dance of the Grasshopper: Ascending Steps</label>
-      <description>The user performs a series of rapid vertical leaps, attacking from different angles with each landing, creating a disorienting pattern of strikes that overwhelms the opponent.</description>
+      <description>The user vanishes in a blitz of dashes.</description>
       <iconPath>UI/Abilities/LightningLeap</iconPath>
       <cooldownTicksRange>600~600</cooldownTicksRange>
       <verbProperties>

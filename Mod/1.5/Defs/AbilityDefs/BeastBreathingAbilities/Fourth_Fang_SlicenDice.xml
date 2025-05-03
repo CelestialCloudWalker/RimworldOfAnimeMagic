@@ -3,7 +3,7 @@
     <AbilityDef>
       <defName>Fourth_Fang_SlicenDice</defName>
       <label>Fourth Fang: Slice 'n' Dice</label>
-      <description>he user delivers multiple diagonal double slashes with both swords.</description>
+      <description>The user delivers A diagonal slash with its sword.</description>
       <iconPath>UI/Icons/FlameSlice</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
@@ -21,7 +21,7 @@
       </verbProperties>
       <comps>
         <li Class="CompProperties_AbilityLaunchProjectile">
-          <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
+          <projectileDef>Fourth_Fang_SlicenDice_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
           <resourceGeneDef>BeastBreath</resourceGeneDef>

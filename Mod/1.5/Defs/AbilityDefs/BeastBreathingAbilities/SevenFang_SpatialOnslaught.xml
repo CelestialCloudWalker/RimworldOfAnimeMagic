@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>SevenForm_SpatialOnslaught</defName>
-      <label>Seventh Form: Spatial Onslaught</label>
-      <description>The user channels primal instinct into their blades, enhancing each strike with feral precision and raw sensory power.</description>
+      <defName>SevenFang_SpatialOnslaught</defName>
+      <label>Seventh Fang: Spatial Onslaught</label>
+      <description>The user channels thier breathing style into their weapon.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>

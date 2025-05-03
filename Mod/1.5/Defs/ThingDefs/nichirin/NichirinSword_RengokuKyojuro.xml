@@ -6,6 +6,9 @@
     <description>forged from a unique metal that absorbs sunlight, making them effective against demons, and they change color when drawn by their owner, reflecting the wielder's skill and personality.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_RengokuKyojuro</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <techLevel>Medieval</techLevel>
     <weaponTags>
       <li>MedievalMeleeAdvanced</li>

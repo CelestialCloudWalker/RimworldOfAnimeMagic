@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <AbilityDef>
-      <defName>FourthForm_FlowerMirrorReversal</defName>
-      <label>Fourth Form: Blossoming Mirror Reversal</label>
-      <description>The pawn channels their breathing into their blade, enabling them to deal extra damage on hit. Each precise strike with the blade enhances the flow of energy, leaving the enemy vulnerable to further attacks.</description>
+      <defName>Eleventh_Form_FlowerMirrorReversal</defName>
+      <label>Eleventh Form: Blossoming Mirror Reversal</label>
+      <description>The user channels thier breathing style into their weapon.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>

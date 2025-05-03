@@ -1,4 +1,4 @@
-Tenth Form: Eternal Bond of Devotion<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AbilityDef>
     <defName>Tenth_Form_Eternal_Bond_of_Devotion</defName>
@@ -17,11 +17,6 @@ Tenth Form: Eternal Bond of Devotion<?xml version="1.0" encoding="utf-8" ?>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>LoveBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
-      </li>
-      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-        <Radius>5</Radius>
-        <MaxShotsToReflect>20</MaxShotsToReflect>
-        <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
       </li>
     </comps>
   </AbilityDef>

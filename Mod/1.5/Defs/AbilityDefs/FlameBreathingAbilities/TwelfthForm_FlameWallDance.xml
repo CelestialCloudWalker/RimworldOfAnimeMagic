@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>TwelfthForm_FlameWallDance</defName>
     <label>Twelfth Form: Flame Wall Dance</label>
-    <description>With precise movements and burning resolve, the user deflects incoming projectiles in a wave of radiant fire.</description>
+    <description>The user sweeps their blade in a blazing arc, scattering projectiles.</description>
     <iconPath>UI/Abilities/FlameDeflect</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>

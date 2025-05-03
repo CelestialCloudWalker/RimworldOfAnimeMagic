@@ -9,8 +9,6 @@
     <resourceLabel>Serpent Breath</resourceLabel>
     <resourceDescription>Current stored Breath, charged with the essence of serpents. This energy powers devastating snake-like abilities, ensnaring and striking enemies with lethal precision.</resourceDescription>
     <abilities>
-      <li>TotalConcentrationBreathing</li>
-      <li>SerpentBreathSerpentFangEdge</li>
     </abilities>
     <!-- Tree Configuration -->
 

@@ -1,49 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AbilityDef>
-      <defName>Thirteenth_Form_Scorching_Trail</defName>
-      <label>Thirteenth Form: Scorching Trail</label>
-      <description>Leap to a DashStanceDashStanceDashStanceDashStanceg a series of dramatic lightning teleportations.</description>
-      <iconPath>UI/Abilities/LightningLeap</iconPath>
-      <cooldownTicksRange>600~600</cooldownTicksRange>
-      <verbProperties>
-        <verbClass>Verb_CastAbility</verbClass>
-        <drawAimPie>True</drawAimPie>
-        <warmupTime>0.5</warmupTime>
-        <range>15</range>
-        <requireLineOfSight>True</requireLineOfSight>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-          <canTargetPawns>true</canTargetPawns>
-        </targetParams>
-      </verbProperties>
-      <comps>
-        <li Class="AnimeArsenal.CompProperties_BaseStance">
-          <maxJumps>10</maxJumps>
-          <ticksBetweenJumps>1</ticksBetweenJumps>
-          <jumpDistance>5</jumpDistance>
-          <duration>15</duration>
-          <jumpDamageDef>Burn</jumpDamageDef>
-          <jumpDamage>3~4</jumpDamage>
-          <jumpOffsets>
-            <!-- 6-point star pattern with integer coordinates -->
-            <li>(0, 0, 5)</li>    <!-- First point (North) -->
-            <li>(0, 0, -5)</li>   <!-- Return to center (reverse of North) -->
-            <li>(4, 0, 3)</li>    <!-- Second point (Northeast) -->
-            <li>(-4, 0, -3)</li>  <!-- Return to center (reverse of Northeast) -->
-            <li>(4, 0, -3)</li>   <!-- Third point (Southeast) -->
-            <li>(-4, 0, 3)</li>   <!-- Return to center (reverse of Southeast) -->
-            <li>(0, 0, -5)</li>   <!-- Fourth point (South) -->
-            <li>(0, 0, 5)</li>    <!-- Return to center (reverse of South) -->
-            <li>(-4, 0, -3)</li>  <!-- Fifth point (Southwest) -->
-            <li>(4, 0, 3)</li>    <!-- Return to center (reverse of Southwest) -->
-            <li>(-4, 0, 3)</li>   <!-- Sixth point (Northwest) -->
-            <li>(4, 0, -3)</li>   <!-- Return to center (reverse of Northwest) -->
-            <li>(-4, 0, 0)</li>
-            <li>(4, 0, 0)</li>
-          </jumpOffsets>
-        </li>
-      </comps>
-      <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-    </AbilityDef>
+    <defName>Thirteenth_Form_Scorching_Trail</defName>
+    <label>Thirteenth Form: Scorching Trail</label>
+    <description>The user vanishes in a blitz of dashes.</description>
+    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <range>15</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>10</maxJumps>
+        <ticksBetweenJumps>1</ticksBetweenJumps>
+        <jumpDistance>5</jumpDistance>
+        <duration>15</duration>
+        <jumpDamageDef>Burn</jumpDamageDef>
+        <jumpDamage>3~4</jumpDamage>
+        <jumpOffsets>
+          <!-- Flame-like flickers with more vertical and erratic behavior -->
+          <li>(0, 0, 6)</li>     <!-- Straight up burst -->
+          <li>(2, 0, 4)</li>     <!-- Flick to upper right -->
+          <li>(-2, 0, 5)</li>    <!-- Flick to upper left -->
+          <li>(1, 0, 3)</li>     <!-- Mid-high flare -->
+          <li>(-1, 0, 4)</li>    <!-- Another flick -->
+          <li>(3, 0, 2)</li>     <!-- Lower, outward puff -->
+          <li>(-3, 0, 2)</li>    <!-- Opposite puff -->
+          <li>(0, 0, 1)</li>     <!-- Low central ember -->
+          <li>(2, 0, 0)</li>     <!-- Horizontal burst -->
+          <li>(-2, 0, 0)</li>    <!-- Horizontal burst other side -->
+          <li>(1, 0, -1)</li>    <!-- Slight downward flicker -->
+          <li>(-1, 0, -1)</li>   <!-- Flicker other side -->
+          <li>(0, 0, -2)</li>    <!-- Ash drop / reverse flame -->
+        </jumpOffsets>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceCost>25</resourceCost>
+      </li>
+    </comps>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+  </AbilityDef>
 </Defs>

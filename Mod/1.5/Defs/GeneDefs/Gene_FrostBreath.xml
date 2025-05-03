@@ -10,8 +10,6 @@
     <resourceLabel>Frost Breath</resourceLabel>
     <resourceDescription>Current stored Breath, charged with the essence of frost. This energy powers devastating ice-based abilities, freezing enemies in their tracks.</resourceDescription>
     <abilities>
-      <li>TotalConcentrationBreathing</li>
-      <li>FirstForm_IcyClaw</li>
     </abilities>
     <!-- Tree Configuration -->
 
