@@ -2,6 +2,7 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using Verse;
 
 namespace AnimeArsenal
@@ -30,7 +31,6 @@ namespace AnimeArsenal
                     IEnumerable<EnchantComp> enchantments = __instance.CasterPawn.health.hediffSet.hediffs
                         .Select(x => x.TryGetComp<EnchantComp>())
                         .Where(x => x != null);
-
                     //check the list isnt nul
                     if (enchantments != null)
                     {
@@ -41,6 +41,19 @@ namespace AnimeArsenal
                         }
                     }
                 }
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(PawnRenderUtility), "DrawEquipmentAiming")]
+    public static class Patch_PawnRenderUtility_DrawEquipmentAiming
+    {
+        [HarmonyPrefix]
+        public static void Prefix(Thing eq, ref Vector3 drawLoc, ref float aimAngle)
+        {
+            if (eq != null && eq.def != null && eq.def.HasModExtension<DrawOffsetExt>())
+            {
+                drawLoc += eq.def.GetModExtension<DrawOffsetExt>().GetOffsetForRot(eq.Rotation);
             }
         }
     }
