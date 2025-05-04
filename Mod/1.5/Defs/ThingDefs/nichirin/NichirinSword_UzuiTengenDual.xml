@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>NichirinSword_ShinazugawaGenya</defName>
-    <label>Genya's Nichirin Blade</label>
+    <defName>NichirinSword_UzuiTengenDual</defName>
+    <label>Uzui's Nichirin Blade</label>
     <description>forged from a unique metal that absorbs sunlight, making them effective against demons, and they change color when drawn by their owner, reflecting the wielder's skill and personality.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_ShinazugawaGenya</texPath>
+      <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_UzuiTengenDual</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.2</drawSize>
     </graphicData>
@@ -45,10 +45,5 @@
         <cooldownTime>1.1</cooldownTime>
       </li>
     </tools>
-    <modExtensions>
-      <li Class="AnimeArsenal.DrawOffsetExt">
-        <offset>(0.4, 0, 0.4)</offset>
-      </li>
-    </modExtensions>
   </ThingDef>
 </Defs>

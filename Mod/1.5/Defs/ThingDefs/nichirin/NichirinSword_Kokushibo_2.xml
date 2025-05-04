@@ -10,72 +10,45 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.2</drawSize>
     </graphicData>
-    <techLevel>Medieval</techLevel>
-    <weaponTags>
-      <li>MedievalMeleeAdvanced</li>
-      <li>LongSword</li>
-    </weaponTags>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costStuffCount>100</costStuffCount>
-    <smeltProducts>
-      <li>
-        <thingDef>Steel</thingDef>
-        <count>75</count>
-      </li>
-      <li>
-        <thingDef>Components</thingDef>
-        <count>1</count>
-      </li>
-    </smeltProducts>
-    <thingSetMakerTags>
-      <li>RewardStandardQualitySuper</li>
-    </thingSetMakerTags>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <recipeMaker>
+    </recipeMaker>
+    <equipmentType>Primary</equipmentType>
+    <costList>
+      <Steel>1000</Steel>
+      <Plasteel>50</Plasteel>
+    </costList>
+    <techLevel>Spacer</techLevel>
+    <costStuffCount>120</costStuffCount>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
-      <WorkToMake>18000</WorkToMake>
-      <Mass>2</Mass>
-      <MeleeWeapon_AverageArmorPenetration>1</MeleeWeapon_AverageArmorPenetration>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>1.5</Mass>
     </statBases>
-    <relicChance>2</relicChance>
-    <equippedAngleOffset>-65</equippedAngleOffset>
+    <equippedAngleOffset>-50</equippedAngleOffset>
+    <equippedDistanceOffset>0</equippedDistanceOffset>
     <tools>
       <li>
-        <label>handle</label>
+        <label>blade back</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>8</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>point</label>
-        <capacities>
-          <li>Stab</li>
-        </capacities>
         <power>14</power>
-        <cooldownTime>2.3</cooldownTime>
+        <cooldownTime>1.8</cooldownTime>
       </li>
       <li>
         <label>blade</label>
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>15</power>
-        <cooldownTime>2</cooldownTime>
+        <power>25</power>
+        <cooldownTime>1.1</cooldownTime>
       </li>
     </tools>
-    <recipeMaker>
-      <researchPrerequisite>LongBlades</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
-      <displayPriority>420</displayPriority>
-    </recipeMaker>
     <modExtensions>
-    <li Class="AnimeArsenal.DrawOffsetExt">
-      <offset>(0, 0, 0.15)</offset>
-    </li>
-  </modExtensions>
+      <li Class="AnimeArsenal.DrawOffsetExt">
+        <offset>(0.4, 0, 0.4)</offset>
+      </li>
+    </modExtensions>
   </ThingDef>
 </Defs>

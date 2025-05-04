@@ -17,14 +17,15 @@
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
       <damageDef>VeilStrike</damageDef>
-      <BaseDamage>7</BaseDamage>
+      <damageAmountBase>1</damageAmountBase> <!-- REQUIRED FOR DEF VALIDATION -->
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>
-      <ExplosionEffect>InsectBreathingExplosionEffect</ExplosionEffect>
+      <ExplosionEffect>MistBreathingExplosionEffect</ExplosionEffect>
       <speed>25</speed>
       <CanHitFriendly>true</CanHitFriendly>
       <CanHitCaster>false</CanHitCaster>
+      <BaseDamage>7</BaseDamage>
     </projectile>
     <comps>
       <li Class="CompProperties_Glower">
@@ -39,5 +40,4 @@
       </li>
     </comps>
   </ThingDef>
-
 </Defs>
