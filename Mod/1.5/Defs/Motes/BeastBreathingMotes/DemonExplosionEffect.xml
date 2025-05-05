@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- EffecterDef -->
+  <EffecterDef>
+    <defName>DemonBreathingExplosionEffect</defName>
+    <maintainTicks>1250</maintainTicks>
+    <children>
+    <li>
+      <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+      <chancePerTick>1</chancePerTick>
+      <ticksBetweenMotes>1000</ticksBetweenMotes>
+      <moteDef>Mote_ExpandingRingBeast</moteDef>
+      <spawnLocType>OnTarget</spawnLocType>
+      <burstCount>1~1</burstCount>
+      <positionRadius>0</positionRadius>
+      <positionRadiusMin>0</positionRadiusMin>
+      <maxMoteCount>1</maxMoteCount>
+      <scale>1~1</scale>
+      <rotation>0~360</rotation>
+      <rotationRate>0</rotationRate>
+      <angle>0~360</angle>
+      <speed>0</speed>
+      <positionOffset>(0, 0, 0)</positionOffset>
+      <color>(77, 153, 230)</color>
+      <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+      <rotateTowardsTargetCenter>false</rotateTowardsTargetCenter>
+      <attachToSpawnThing>false</attachToSpawnThing>
+    </li>
+    </children>
+  </EffecterDef>
+
+  <!-- MoteDef -->
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_ExpandingRingDemon</defName>
+    <graphicData>
+      <texPath>Animations/twirl_02</texPath>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <shaderParameters>
+        <_Color>(77, 153, 230)</_Color>
+      </shaderParameters>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.08</fadeInTime>
+      <solidTime>0.1</solidTime>
+      <fadeOutTime>0.1</fadeOutTime>
+      <growthRate>20</growthRate>
+    </mote>
+  </ThingDef>
+
+</Defs>

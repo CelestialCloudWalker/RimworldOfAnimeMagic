@@ -8,42 +8,42 @@
     <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
     <resourceLabel>Blood Art</resourceLabel>
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
-    <abilities>
-      <li>AnimeArsenal_TPStrike</li>
-    </abilities>
     <!-- Tree Configuration -->
+    <TalentTrees>
+      <li>DemonTalentTree</li>
+    </TalentTrees>
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>
-        <experienceTypes>
-            <!-- Combat XP -->
-            <li Class="Talented.DamageTakenExperienceTypeDef">
-                <baseXP>10</baseXP>
-                <damageFactor>0.1</damageFactor>
-            </li>
+      <experienceTypes>
+        <!-- Combat XP -->
+        <li Class="Talented.DamageTakenExperienceTypeDef">
+          <baseXP>10</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
 
-            <li Class="Talented.DamageDealtExperienceTypeDef">
-                <baseXP>10</baseXP>
-                <damageFactor>0.1</damageFactor>
-            </li>
-            <!-- Skill XP -->
-            <li Class="Talented.SkillExperienceTypeDef">
-                <SkillDef>Shooting</SkillDef>
-                <baseXP>2</baseXP>
-            </li>
+        <li Class="Talented.DamageDealtExperienceTypeDef">
+          <baseXP>10</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <!-- Skill XP -->
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Shooting</SkillDef>
+          <baseXP>2</baseXP>
+        </li>
 
-            <!-- Job XP -->
-            <li Class="Talented.JobExperienceTypeDef">
-                <SkillDef>HaulToCell</SkillDef>
-                <baseXP>1</baseXP>
-            </li>
+        <!-- Job XP -->
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>HaulToCell</SkillDef>
+          <baseXP>1</baseXP>
+        </li>
 
-            <!-- Verb XP -->
-            <li Class="Talented.VerbExperienceTypeDef">
-                <VerbClassName>Verb_BeatFire</VerbClassName>
-                <baseXP>1</baseXP>
-            </li>
-        </experienceTypes>
+        <!-- Verb XP -->
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_BeatFire</VerbClassName>
+          <baseXP>1</baseXP>
+        </li>
+      </experienceTypes>
     </experienceGainSettings>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
@@ -90,11 +90,11 @@
       <li>(0.9, 0.9, 0.1, 1.0)</li>
     </skinTintChoices>
     <modExtensions>
-        <li Class="AnimeArsenal.SunlightDamageExtension">
-          <damagePerTick>1</damagePerTick>
-          <damageThresholdBeforeDeath>10</damageThresholdBeforeDeath>
-          <ticksBetweenDamage>100</ticksBetweenDamage>
-        </li>
+      <li Class="AnimeArsenal.SunlightDamageExtension">
+        <damagePerTick>1</damagePerTick>
+        <damageThresholdBeforeDeath>10</damageThresholdBeforeDeath>
+        <ticksBetweenDamage>100</ticksBetweenDamage>
+      </li>
     </modExtensions>
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>

@@ -4,7 +4,7 @@
     <defName>Thirteenth_Form_Dividing_Riverbed</defName>
     <label>Thirteenth Form: Dividing Riverbed</label>
     <description>A wild, instinctive counter that deflects incoming projectiles.</description>
-    <iconPath>UI/Abilities/BlazeInferno</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

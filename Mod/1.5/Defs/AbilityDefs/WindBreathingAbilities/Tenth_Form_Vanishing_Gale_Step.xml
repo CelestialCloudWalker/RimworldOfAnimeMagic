@@ -4,7 +4,7 @@
     <defName>Tenth_Form_Vanishing_Gale_Step</defName>
     <label>Tenth Form: Vanishing Gale Step</label>
     <description>The user charges towards their opponent at blinding speeds.</description>
-    <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
     <verbProperties>

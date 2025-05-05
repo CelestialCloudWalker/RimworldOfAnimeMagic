@@ -4,7 +4,7 @@
     <defName>Seventh_Form_Granite_Piercer</defName>
     <label>Seventh Form: Granite Piercer</label>
     <description>The user charges towards their opponent at blinding speeds.</description>
-    <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
     <verbProperties>

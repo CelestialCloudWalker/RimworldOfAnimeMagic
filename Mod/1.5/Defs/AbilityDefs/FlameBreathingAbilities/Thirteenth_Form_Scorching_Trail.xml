@@ -4,7 +4,7 @@
     <defName>Thirteenth_Form_Scorching_Trail</defName>
     <label>Thirteenth Form: Scorching Trail</label>
     <description>The user vanishes in a blitz of dashes.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

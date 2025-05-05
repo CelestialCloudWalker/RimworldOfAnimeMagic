@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AbilityDef>
-    <defName>DemonifyWorkSlave</defName>
-    <label>Demonify Work Slave</label>
+    <defName>Blood_Demon_Arts_Demons_Embrace</defName>
+    <label>Blood Demon Arts: Demon's Embrace</label>
     <description>Turn a pawn into a Demon-like work slave, granting them the power of Blood Demon Art.</description>
     <iconPath>UI/Abilities/ShapeFlesh</iconPath>
     <jobDef>CastAbilityOnThing</jobDef>

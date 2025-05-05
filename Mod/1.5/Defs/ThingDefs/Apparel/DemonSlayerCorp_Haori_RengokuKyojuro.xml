@@ -10,6 +10,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.05</drawSize>
     </graphicData>
+    <smeltable>false</smeltable>
     <costStuffCount>80</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>

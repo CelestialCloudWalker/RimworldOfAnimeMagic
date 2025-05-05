@@ -2,9 +2,9 @@
 <Defs>
   <AbilityDef>
     <defName>Dance_of_the_Firefly_Guiding_Light</defName>
-    <label>Dance of the Firefly Guiding Light</label>
+    <label>Dance of the Firefly: Guiding Light</label>
     <description>An instinctive counter that deflects incoming projectiles.</description>
-    <iconPath>UI/Abilities/BlazeInferno</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

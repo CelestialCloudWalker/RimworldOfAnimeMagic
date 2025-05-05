@@ -4,7 +4,7 @@
     <defName>Dance_of_the_Mantis_Stillness_Before_Strike</defName>
     <label>Dance of the Mantis: Stillness Before Strike</label>
     <description>The user charges towards their opponent at blinding speeds.</description>
-    <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
     <verbProperties>

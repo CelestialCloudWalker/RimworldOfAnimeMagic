@@ -4,7 +4,7 @@
     <defName>Eleventh_Form_Soul_Ignition</defName>
     <label>Eleventh Form: Soul Ignition</label>
     <description>The user channels thier breathing style into their weapon.</description>
-    <iconPath>UI/Abilities/BlazeInferno</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

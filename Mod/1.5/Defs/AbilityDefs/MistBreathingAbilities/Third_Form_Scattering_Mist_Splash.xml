@@ -4,7 +4,7 @@
     <defName>Third_Form_Scattering_Mist_Splash</defName>
     <label>Third Form: Scattering Mist Splash</label>
     <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
-    <iconPath>UI/Abilities/BlazeInferno</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AbilityDef>
-      <defName>AnimeArsenal_TPStrike</defName>
-      <label>TP Strike</label>
+      <defName>Blood_Demon_Arts_Vicious_Rush</defName>
+      <label>Blood Demon Arts: Vicious Rush</label>
       <description>Instantly teleport to a target and perform a devastating melee attack that deals 15 cut damage with 30% armor penetration.</description>
       <iconPath>UI/Abilities/IgnitionEdge</iconPath>
       <aiCanUse>true</aiCanUse>

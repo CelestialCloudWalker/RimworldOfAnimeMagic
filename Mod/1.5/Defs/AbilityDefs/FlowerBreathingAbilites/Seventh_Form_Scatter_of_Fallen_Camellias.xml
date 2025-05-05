@@ -4,7 +4,7 @@
     <defName>Seventh_Form_Scatter_of_Fallen_Camellias</defName>
     <label>Seventh Form: Scatter of Fallen Camellias</label>
     <description>The user vanishes in a blitz of dashes.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

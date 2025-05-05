@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <Talented.TalentTreeDef>
+    <defName>WindBreathingUpgradeTree</defName>
+    <treeName>WindBreathingUpgradeTree</treeName>
+    <dimensions>(600,400)</dimensions>
+    <handlerClass>Talented.ActiveTreeHandler</handlerClass>
+    <skin>DefaultTreeSkin</skin>
+    <nodes>
+      <li>Node_1746412447224_690</li>
+    </nodes>
+    <availablePaths>
+      <li>
+        <name>Stat Upgrade (TBD)</name>
+        <pathDescription></pathDescription>
+        <exclusiveWith>
+        </exclusiveWith>
+      </li>
+      <li>
+        <name>Abilties(TBD)</name>
+        <pathDescription></pathDescription>
+        <exclusiveWith>
+        </exclusiveWith>
+      </li>
+    </availablePaths>
+    <displayStrategy>FixedPosition</displayStrategy>
+    <talentPointFormula>PerLevel</talentPointFormula>
+  </Talented.TalentTreeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746412447224_690</defName>
+    <label>TBD</label>
+    <style>DefaultNodeStyle</style>
+    <position>(154,298)</position>
+    <type>Start</type>
+    <upgrades>
+      <li>Fourteenth_Form_Howling_Blade_Infusion_Talent</li>
+    </upgrades>
+    <connections>
+      <li>Node_1746412447224_1035</li>
+      <li>Node_1746412447224_8084</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746412447224_1035</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(155,239)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>WindBreath_Breath_Increase</li>
+      <li>WindBreath_Breath_Increase2</li>
+      <li>WindBreath_Breath_Increase3</li>
+      <li>WindBreath_Breath_Increase4</li>
+    </upgrades>
+    <path>Stat Upgrade (TBD)</path>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746412447224_8084</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(226,288)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Twelfth_Form_Reversing_Tempest_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+    <connections>
+      <li>Node_1746412447224_5514</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746412447224_5514</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(231,239)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Thirteenth_Form_Distant_Wind_Cutter_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+    <connections>
+      <li>Node_1746412447224_6471</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746412447224_6471</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(321,240)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Eleventh_Form_Dancing_Wind_Current_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+    <connections>
+      <li>Node_1746412447224_1053</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746412447224_1053</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(321,290)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Tenth_Form_Vanishing_Gale_Step_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+  </Talented.TalentTreeNodeDef>
+
+</Defs>

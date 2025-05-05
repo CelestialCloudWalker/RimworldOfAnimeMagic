@@ -4,7 +4,7 @@
     <defName>TwelfthForm_FlameWallDance</defName>
     <label>Twelfth Form: Flame Wall Dance</label>
     <description>The user sweeps their blade in a blazing arc, scattering projectiles.</description>
-    <iconPath>UI/Abilities/FlameDeflect</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

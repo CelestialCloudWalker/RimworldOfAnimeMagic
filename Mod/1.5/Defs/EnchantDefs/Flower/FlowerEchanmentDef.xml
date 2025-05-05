@@ -7,7 +7,7 @@
     <enchantHediff>RoseThornEdge</enchantHediff>
     <resourceGene>FlowerBreath</resourceGene>
     <!-- Higher resource cost due to the offensive nature -->
-    <ticksBetweenCost>120</ticksBetweenCost>
+    <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

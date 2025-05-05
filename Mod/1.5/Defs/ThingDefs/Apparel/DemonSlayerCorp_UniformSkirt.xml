@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>DemonSlayerCorp_UniformSkirt</defName>
     <label>Demon Slayer Corp Skirt</label>
@@ -15,11 +14,10 @@
       <texPath>DemonSlayerCorp_UniformSkirt/DemonSlayerCorp_UniformSkirt_Female_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <costStuffCount>40</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-    </stuffCategories>
+    <costList>
+      <Cloth>75</Cloth>
+    </costList>
+    <smeltable>false</smeltable>
     <thingCategories>
       <li>ApparelMisc</li>
     </thingCategories>
@@ -34,15 +32,15 @@
     </statBases>
     <apparel>
       <bodyPartGroups>
-				<li>Torso</li>
-				<li>Neck</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>DemonSlayerCorp_UniformSkirt/DemonSlayerCorp_UniformSkirt</wornGraphicPath>
       <layers>
-        <li>OnSkin</li>
+        <li>Middle</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>

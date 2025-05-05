@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AbilityDef ParentName="RangedDemonBase">
-    <defName>RangedShot_Crush</defName>
-    <label>Demon Crush</label>
+    <defName>Blood_Demon_Arts_Graviton_Crush</defName>
+    <label>Blood Demon Arts: Graviton Crush</label>
     <description>Causes an overwhelming force to bear down on pawns in the target area, dealing crushing damage.</description>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <displayOrder>10</displayOrder>

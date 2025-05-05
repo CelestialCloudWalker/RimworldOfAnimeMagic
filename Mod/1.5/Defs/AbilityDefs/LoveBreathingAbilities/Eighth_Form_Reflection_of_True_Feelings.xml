@@ -4,7 +4,7 @@
     <defName>Eighth_Form_Reflection_of_True_Feelings</defName>
     <label>Eighth Form: Reflection of True Feelings</label>
     <description>The user channels the devastating power of flames, igniting their body in a fiery blaze. Their strikes become superheated, dealing immense fire damage and burning all enemies caught in the inferno. The technique also grants temporary defensive prowess, deflecting projectiles in its vicinity.</description>
-    <iconPath>UI/Abilities/BlazeInferno</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

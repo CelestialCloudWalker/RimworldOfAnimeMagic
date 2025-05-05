@@ -4,7 +4,7 @@
     <defName>FirstFormWaterSurfaceSlash</defName>
     <label>Surface Slash</label>
     <description>The user releases a singular, horizontal slash aiming to decapitate their target.</description>
-    <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
     <verbProperties>

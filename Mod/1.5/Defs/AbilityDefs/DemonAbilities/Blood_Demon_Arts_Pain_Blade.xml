@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AbilityDef>
-    <defName>DBA_TestShot</defName>
-    <label>Test Shot</label>
+    <defName>Blood_Demon_Arts_Pain_Blade</defName>
+    <label>Blood Demon Arts: Pain Blade</label>
     <description>The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, producing a strong repelling effect rather than an attracting one. Sends the hit target flying backwards</description>
     <iconPath>Abilities/Gojo/Red</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
@@ -25,7 +25,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
-        <projectileDef>PleaseLordEmoForgiveMe</projectileDef>
+        <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile</projectileDef>
       </li>
     </comps>
   </AbilityDef>

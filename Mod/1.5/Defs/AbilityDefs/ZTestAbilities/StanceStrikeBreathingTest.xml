@@ -4,7 +4,7 @@
     <defName>StanceStrikeWater</defName>
     <label>WaterStance</label>
     <description>Execute flowing water-like movements in a wave pattern, striking with fluid grace and precision.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -53,7 +53,7 @@
     <defName>StanceStrikeThunder</defName>
     <label>ThunderStance</label>
     <description>Unleash lightning-fast strikes with sudden direction changes, mimicking the unpredictable path of thunder.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -92,7 +92,7 @@
     <defName>StanceStrikeFlame</defName>
     <label>FlameStance</label>
     <description>Perform explosive, aggressive movements resembling dancing flames, enveloping enemies in a fiery assault.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -139,7 +139,7 @@
     <defName>StanceStrikeBeast</defName>
     <label>BeastStance</label>
     <description>Adopt wild, unpredictable movements like a predatory animal, striking with the ferocity of a beast.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -184,7 +184,7 @@
     <defName>StanceStrikeDance</defName>
     <label>DanceStance</label>
     <description>Master the Dance of the Fire God, combining elements of all breathing styles into a harmonious deadly performance.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

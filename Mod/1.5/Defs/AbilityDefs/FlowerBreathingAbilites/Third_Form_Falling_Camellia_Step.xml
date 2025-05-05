@@ -4,7 +4,7 @@
     <defName>Third_Form_Falling_Camellia_Step</defName>
     <label>Third Form: Falling Camellia Step</label>
     <description>The user charges towards their opponent at blinding speeds.</description>
-    <iconPath>UI/Icons/Gene_WaterBreath</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>
     <verbProperties>

@@ -4,7 +4,7 @@
     <defName>Tenth_Form_Storm_Cloud_Steps</defName>
     <label>Tenth Form: Storm Cloud Steps</label>
     <description>The user vanishes in a blitz of dashes.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

@@ -4,7 +4,7 @@
     <defName>StanceStrikeCircle</defName>
     <label>CircleStance</label>
     <description>Leap to a DashStanceDashStanceDashStanceDashStanceg a series of dramatic lightning teleportations.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

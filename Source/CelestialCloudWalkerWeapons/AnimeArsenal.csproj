@@ -62,7 +62,7 @@
     <Compile Include="Resource Gene\BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
     <Compile Include="Comps\CompAbilityEffect_LaunchProjectile.cs" />
-    <Compile Include="Comps\CompProperties_AACrush.cs" />
+    <Compile Include="Comps\CompProperties_Crush.cs" />
     <Compile Include="Comps\CompProperties_AbilityDemonifyWorkSlave.cs" />
     <Compile Include="Comps\CompProperties_AbilityLaunchScalingProjectile.cs" />
     <Compile Include="Comps\CompProperties_AbilityLightningStrike.cs" />

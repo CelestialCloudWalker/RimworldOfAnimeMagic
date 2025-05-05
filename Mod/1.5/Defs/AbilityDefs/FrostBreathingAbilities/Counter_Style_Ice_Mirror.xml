@@ -4,7 +4,7 @@
     <defName>Counter_Style_Ice_Mirror</defName>
     <label>Counter Style: Ice Mirror</label>
     <description>The user channels the devastating power of flames, igniting their body in a fiery blaze. Their strikes become superheated, dealing immense fire damage and burning all enemies caught in the inferno. The technique also grants temporary defensive prowess, deflecting projectiles in its vicinity.</description>
-    <iconPath>UI/Abilities/BlazeInferno</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

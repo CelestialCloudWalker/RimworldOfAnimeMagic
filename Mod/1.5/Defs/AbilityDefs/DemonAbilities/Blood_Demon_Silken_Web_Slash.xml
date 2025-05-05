@@ -2,8 +2,8 @@
 <Defs>
 
   <AbilityDef ParentName="AbilityTouchBase">
-    <defName>BDA_Silken_web_slash</defName>
-    <label>Silken Web Slash</label>
+    <defName>Blood_Demon_Silken_Web_Slash</defName>
+    <label>Blood Demon Arts: Silken Web Slash</label>
     <description>A slashing attack that adjusts itself depending on the target's toughness and cursed energy level to cut them down in one fell swoop.</description>
     <iconPath>UI/Icons/Gene_Cleave</iconPath>
     <displayOrder>100</displayOrder>

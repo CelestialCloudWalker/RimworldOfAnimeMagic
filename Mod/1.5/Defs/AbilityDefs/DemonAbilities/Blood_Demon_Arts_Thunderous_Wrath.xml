@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AbilityDef>
-  <defName>BloodDemonArt_LightingStrike</defName>
-  <label>Thunder Strike</label>
+  <defName>Blood_Demon_Arts_Thunderous_Wrath</defName>
+  <label>Blood Demon Arts: Thunderous Wrath</label>
   <description>Summons a powerful lightning strike at the target location.</description>
   <verbProperties>
     <verbClass>Verb_CastAbility</verbClass>

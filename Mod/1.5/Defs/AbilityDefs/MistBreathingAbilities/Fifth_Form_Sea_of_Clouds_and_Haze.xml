@@ -4,7 +4,7 @@
       <defName>Fifth_Form_Sea_of_Clouds_and_Haze</defName>
       <label>Fifth Form: Sea of Clouds and Haze</label>
       <description>The user vanishes in a blitz of dashes.</description>
-      <iconPath>UI/Abilities/LightningLeap</iconPath>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
       <cooldownTicksRange>600~600</cooldownTicksRange>
       <verbProperties>
         <verbClass>Verb_CastAbility</verbClass>

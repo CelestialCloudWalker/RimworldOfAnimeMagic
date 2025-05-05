@@ -4,7 +4,7 @@
     <defName>Eleventh_Form_Dancing_Wind_Current</defName>
     <label>Eleventh Form: Dancing Wind Current</label>
     <description>The user vanishes in a blitz of dashes.</description>
-    <iconPath>UI/Abilities/LightningLeap</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

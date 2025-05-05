@@ -2,7 +2,7 @@
 <Defs>
     <AbilityDef>
       <defName>Dance_of_the_Cicada_Resonant_Cut</defName>
-      <label>Dance of the Cicada Resonant Cut</label>
+      <label>Dance of the Cicada: Resonant Cut</label>
       <description>The user delivers A diagonal slash with its sword.</description>
       <iconPath>UI/Icons/FlameSlice</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
