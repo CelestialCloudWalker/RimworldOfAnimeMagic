@@ -47,6 +47,7 @@
     <Compile Include="AMConstants.cs" />
     <Compile Include="AnimeArsenalUtility.cs" />
     <Compile Include="AssetBundleShaderManager.cs" />
+    <Compile Include="BodyDisappearExtension.cs" />
     <Compile Include="CompProperties_AbilityDamage.cs" />
     <Compile Include="Comps\HediffCompProperties_Overlay.cs" />
     <Compile Include="DrawOffsetExt.cs" />

@@ -19,28 +19,23 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_BaseStance">
-        <maxJumps>10</maxJumps>
+        <maxJumps>5</maxJumps>
         <ticksBetweenJumps>1</ticksBetweenJumps>
-        <jumpDistance>5</jumpDistance>
-        <duration>15</duration>
-        <jumpDamageDef>Burn</jumpDamageDef>
-        <jumpDamage>3~4</jumpDamage>
+        <jumpDistance>6</jumpDistance>
+        <duration>11</duration>
+        <jumpDamageDef>Blunt</jumpDamageDef>
+        <jumpDamage>3~5</jumpDamage>
         <jumpOffsets>
-          <!-- 6-point star pattern with integer coordinates -->
-          <li>(0, 0, 5)</li>    <!-- First point (North) -->
-          <li>(0, 0, -5)</li>   <!-- Return to center (reverse of North) -->
-          <li>(4, 0, 3)</li>    <!-- Second point (Northeast) -->
-          <li>(-4, 0, -3)</li>  <!-- Return to center (reverse of Northeast) -->
-          <li>(4, 0, -3)</li>   <!-- Third point (Southeast) -->
-          <li>(-4, 0, 3)</li>   <!-- Return to center (reverse of Southeast) -->
-          <li>(0, 0, -5)</li>   <!-- Fourth point (South) -->
-          <li>(0, 0, 5)</li>    <!-- Return to center (reverse of South) -->
-          <li>(-4, 0, -3)</li>  <!-- Fifth point (Southwest) -->
-          <li>(4, 0, 3)</li>    <!-- Return to center (reverse of Southwest) -->
-          <li>(-4, 0, 3)</li>   <!-- Sixth point (Northwest) -->
-          <li>(4, 0, -3)</li>   <!-- Return to center (reverse of Northwest) -->
-          <li>(-4, 0, 0)</li>
-          <li>(4, 0, 0)</li>
+          <li>(3, 0, 5)</li>
+          <li>(-3, 0, -5)</li>
+          <li>(6, 0, 0)</li>
+          <li>(-6, 0, 0)</li>
+          <li>(3, 0, -5)</li>
+          <li>(-3, 0, 5)</li>
+          <li>(-4, 0, -2)</li>
+          <li>(4, 0, 2)</li>
+          <li>(0, 0, 6)</li>
+          <li>(0, 0, -6)</li>
         </jumpOffsets>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">

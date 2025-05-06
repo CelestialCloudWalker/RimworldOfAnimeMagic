@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<AbilityDef>
+  <AbilityDef>
     <defName>Third_Form_Flowing_Dance</defName>
     <label>Third Form: Flowing Dance</label>
     <description>The user vanishes in a blitz of dashes.</description>
@@ -19,28 +19,23 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_BaseStance">
-        <maxJumps>10</maxJumps>
-        <ticksBetweenJumps>1</ticksBetweenJumps>
-        <jumpDistance>5</jumpDistance>
-        <duration>15</duration>
-        <jumpDamageDef>Burn</jumpDamageDef>
-        <jumpDamage>3~4</jumpDamage>
+        <maxJumps>5</maxJumps>
+        <ticksBetweenJumps>2</ticksBetweenJumps>
+        <jumpDistance>4</jumpDistance>
+        <duration>12</duration>
+        <jumpDamageDef>Cut</jumpDamageDef>
+        <jumpDamage>3~5</jumpDamage>
         <jumpOffsets>
-          <!-- 6-point star pattern with integer coordinates -->
-          <li>(0, 0, 5)</li>    <!-- First point (North) -->
-          <li>(0, 0, -5)</li>   <!-- Return to center (reverse of North) -->
-          <li>(4, 0, 3)</li>    <!-- Second point (Northeast) -->
-          <li>(-4, 0, -3)</li>  <!-- Return to center (reverse of Northeast) -->
-          <li>(4, 0, -3)</li>   <!-- Third point (Southeast) -->
-          <li>(-4, 0, 3)</li>   <!-- Return to center (reverse of Southeast) -->
-          <li>(0, 0, -5)</li>   <!-- Fourth point (South) -->
-          <li>(0, 0, 5)</li>    <!-- Return to center (reverse of South) -->
-          <li>(-4, 0, -3)</li>  <!-- Fifth point (Southwest) -->
-          <li>(4, 0, 3)</li>    <!-- Return to center (reverse of Southwest) -->
-          <li>(-4, 0, 3)</li>   <!-- Sixth point (Northwest) -->
-          <li>(4, 0, -3)</li>   <!-- Return to center (reverse of Northwest) -->
+          <li>(3, 0, 2)</li>
+          <li>(-3, 0, -2)</li>
+          <li>(0, 0, 4)</li>
+          <li>(0, 0, -4)</li>
+          <li>(3, 0, -2)</li>
+          <li>(-3, 0, 2)</li>
           <li>(-4, 0, 0)</li>
           <li>(4, 0, 0)</li>
+          <li>(2, 0, 3)</li>
+          <li>(-2, 0, -3)</li>
         </jumpOffsets>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">

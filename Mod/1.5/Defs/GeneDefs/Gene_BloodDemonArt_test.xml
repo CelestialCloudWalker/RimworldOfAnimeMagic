@@ -95,6 +95,13 @@
         <damageThresholdBeforeDeath>10</damageThresholdBeforeDeath>
         <ticksBetweenDamage>100</ticksBetweenDamage>
       </li>
+
+      <li Class="AnimeArsenal.BodyDisappearExtension">
+        <leaveAshFilth>true</leaveAshFilth>
+        <filthAmount>3</filthAmount>
+        <disappearMessage>Body turned to ash!</disappearMessage>
+        <playEffect>true</playEffect>
+      </li>
     </modExtensions>
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>

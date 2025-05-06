@@ -23,28 +23,23 @@
         <resourceCost>20</resourceCost>
       </li>
       <li Class="AnimeArsenal.CompProperties_BaseStance">
-        <maxJumps>10</maxJumps>
+        <maxJumps>5</maxJumps>
         <ticksBetweenJumps>1</ticksBetweenJumps>
         <jumpDistance>5</jumpDistance>
-        <duration>15</duration>
-        <jumpDamageDef>Burn</jumpDamageDef>
-        <jumpDamage>3~4</jumpDamage>
+        <duration>12</duration>
+        <jumpDamageDef>Scratch</jumpDamageDef>
+        <jumpDamage>4~5</jumpDamage>
         <jumpOffsets>
-          <!-- Wild boar attack pattern - unpredictable, aggressive charges with quick direction changes -->
-          <li>(6, 0, 8)</li>     <!-- Initial aggressive charge forward -->
-          <li>(-2, 0, -3)</li>   <!-- Quick partial retreat/reposition -->
-          <li>(5, 0, -2)</li>    <!-- Side lunge right -->
-          <li>(-4, 0, 4)</li>    <!-- Diagonal retreat left -->
-          <li>(7, 0, 0)</li>     <!-- Fast sideways charge right -->
-          <li>(-3, 0, 6)</li>    <!-- Diagonal forward lunge left -->
-          <li>(0, 0, -5)</li>    <!-- Quick backward movement -->
-          <li>(4, 0, 7)</li>     <!-- Forward right charge -->
-          <li>(-5, 0, -1)</li>   <!-- Sidestep left with slight retreat -->
-          <li>(3, 0, -6)</li>    <!-- Backward diagonal movement right -->
-          <li>(-6, 0, 2)</li>    <!-- Left charge with slight forward -->
-          <li>(2, 0, 5)</li>     <!-- Forward right short charge -->
-          <li>(-7, 0, -4)</li>   <!-- Sharp retreat to left -->
-          <li>(8, 0, 3)</li>     <!-- Powerful final charge -->
+          <li>(4, 0, 3)</li>
+          <li>(-2, 0, -5)</li>
+          <li>(5, 0, -1)</li>
+          <li>(-4, 0, 2)</li>
+          <li>(0, 0, 5)</li>
+          <li>(3, 0, -4)</li>
+          <li>(-5, 0, 0)</li>
+          <li>(2, 0, 4)</li>
+          <li>(-3, 0, -3)</li>
+          <li>(4, 0, 1)</li>
         </jumpOffsets>
       </li>
     </comps>

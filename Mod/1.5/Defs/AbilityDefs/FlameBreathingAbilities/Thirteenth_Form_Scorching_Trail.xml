@@ -19,27 +19,23 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_BaseStance">
-        <maxJumps>10</maxJumps>
+        <maxJumps>5</maxJumps>
         <ticksBetweenJumps>1</ticksBetweenJumps>
         <jumpDistance>5</jumpDistance>
-        <duration>15</duration>
+        <duration>10</duration>
         <jumpDamageDef>Burn</jumpDamageDef>
-        <jumpDamage>3~4</jumpDamage>
+        <jumpDamage>4~6</jumpDamage>
         <jumpOffsets>
-          <!-- Flame-like flickers with more vertical and erratic behavior -->
-          <li>(0, 0, 6)</li>     <!-- Straight up burst -->
-          <li>(2, 0, 4)</li>     <!-- Flick to upper right -->
-          <li>(-2, 0, 5)</li>    <!-- Flick to upper left -->
-          <li>(1, 0, 3)</li>     <!-- Mid-high flare -->
-          <li>(-1, 0, 4)</li>    <!-- Another flick -->
-          <li>(3, 0, 2)</li>     <!-- Lower, outward puff -->
-          <li>(-3, 0, 2)</li>    <!-- Opposite puff -->
-          <li>(0, 0, 1)</li>     <!-- Low central ember -->
-          <li>(2, 0, 0)</li>     <!-- Horizontal burst -->
-          <li>(-2, 0, 0)</li>    <!-- Horizontal burst other side -->
-          <li>(1, 0, -1)</li>    <!-- Slight downward flicker -->
-          <li>(-1, 0, -1)</li>   <!-- Flicker other side -->
-          <li>(0, 0, -2)</li>    <!-- Ash drop / reverse flame -->
+          <li>(5, 0, 0)</li>
+          <li>(-5, 0, 0)</li>
+          <li>(0, 0, 5)</li>
+          <li>(0, 0, -5)</li>
+          <li>(4, 0, 4)</li>
+          <li>(-4, 0, -4)</li>
+          <li>(-4, 0, 4)</li>
+          <li>(4, 0, -4)</li>
+          <li>(3, 0, -3)</li>
+          <li>(-3, 0, 3)</li>
         </jumpOffsets>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
