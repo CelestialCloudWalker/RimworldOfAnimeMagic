@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
   <TraitDef>
     <defName>AffectionateStrength</defName>
     <commonality>1</commonality>
     <degreeDatas>
       <li>
         <label>Affectionate Strength</label>
-        <description>{PAWN_nameDef} channels the overwhelming power of love into every strike, inflicting damage not only with force but with the purest of intentions. {PAWN_pronoun}’s attacks resonate with the strength of devotion, breaking through defenses with tenderness and power.</description>
+        <description>{PAWN_nameDef} channels the overwhelming power of love into every strike, inflicting damage not only with force but with the purest of intentions. {PAWN_pronoun}'s attacks resonate with the strength of devotion, breaking through defenses with tenderness and power.</description>
         <statFactors>
-          <MeleeDPS>0.04</MeleeDPS>
-          <MeleeHitChance>0.04</MeleeHitChance>
+          <MeleeDPS>1.15</MeleeDPS>
+          <MeleeHitChance>1.10</MeleeHitChance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -24,8 +24,8 @@
         <label>Heartfelt Leap</label>
         <description>{PAWN_nameDef} moves with the speed and grace of a heart filled with passion, leaping across the battlefield to protect those dear. {PAWN_pronoun} strikes with precision, leaving nothing but the warmth of love in {PAWN_possessive} wake.</description>
         <statFactors>
-          <MoveSpeed>0.04</MoveSpeed>
-          <MeleeDodgeChance>0.04</MeleeDodgeChance>
+          <MoveSpeed>1.12</MoveSpeed>
+          <MeleeDodgeChance>1.18</MeleeDodgeChance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -37,10 +37,10 @@
     <degreeDatas>
       <li>
         <label>Soothing Presence</label>
-        <description>{PAWN_nameDef} radiates warmth and compassion, calming the spirits of those nearby. {PAWN_pronoun}’s presence brings peace and harmony, fostering love and trust among allies.</description>
+        <description>{PAWN_nameDef} radiates warmth and compassion, calming the spirits of those nearby. {PAWN_pronoun}'s presence brings peace and harmony, fostering love and trust among allies.</description>
         <statFactors>
-          <AnimalsLearningFactor>0.04</AnimalsLearningFactor>
-          <TameAnimalChance>0.04</TameAnimalChance>
+          <AnimalsLearningFactor>1.20</AnimalsLearningFactor>
+          <TameAnimalChance>1.15</TameAnimalChance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -52,10 +52,10 @@
     <degreeDatas>
       <li>
         <label>Unwavering Devotion</label>
-        <description>{PAWN_nameDef} stands resolute in the face of hardship, driven by an unshakable devotion to those {PAWN_pronoun} holds dear. No matter the challenges faced, {PAWN_pronoun}’s resolve remains unbroken, standing firm to protect what {PAWN_pronoun} loves.</description>
+        <description>{PAWN_nameDef} stands resolute in the face of hardship, driven by an unshakable devotion to those {PAWN_pronoun} holds dear. No matter the challenges faced, {PAWN_pronoun}'s resolve remains unbroken, standing firm to protect what {PAWN_pronoun} loves.</description>
         <statFactors>
-          <PainShockThreshold>0.04</PainShockThreshold>
-          <RestFallRateFactor>0.04</RestFallRateFactor>
+          <PainShockThreshold>1.20</PainShockThreshold>
+          <RestFallRateFactor>0.85</RestFallRateFactor>
         </statFactors>
       </li>
     </degreeDatas>
@@ -66,11 +66,11 @@
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Affection’s Aegis</label>
+        <label>Affection's Aegis</label>
         <description>{PAWN_nameDef} creates a protective barrier around {PAWN_pronoun}self and allies, as love acts as an unbreakable shield. Whether under fire or assault, {PAWN_pronoun} remains untouched by harm, offering the warmth of safety and protection.</description>
         <statFactors>
-          <FilthRate>0.04</FilthRate>
-          <ToxicResistance>0.04</ToxicResistance>
+          <FilthRate>0.80</FilthRate>
+          <ToxicResistance>1.25</ToxicResistance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -82,10 +82,10 @@
     <degreeDatas>
       <li>
         <label>Romantic Feast</label>
-        <description>{PAWN_nameDef} prepares meals infused with love, offering both sustenance and joy to those gathered around. {PAWN_pronoun}’s cooking nourishes the body and soul, ensuring that everyone feels cherished and cared for.</description>
+        <description>{PAWN_nameDef} prepares meals infused with love, offering both sustenance and joy to those gathered around. {PAWN_pronoun}'s cooking nourishes the body and soul, ensuring that everyone feels cherished and cared for.</description>
         <statFactors>
-          <CookSpeed>0.04</CookSpeed>
-          <ButcheryFleshEfficiency>0.04</ButcheryFleshEfficiency>
+          <CookSpeed>1.15</CookSpeed>
+          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
         </statFactors>
       </li>
     </degreeDatas>
@@ -97,10 +97,10 @@
     <degreeDatas>
       <li>
         <label>Irresistible Charm</label>
-        <description>{PAWN_nameDef} exudes an undeniable aura of affection, captivating everyone in {PAWN_possessive} presence. {PAWN_pronoun}’s charm and warmth draw others close, forging powerful bonds of love and trust.</description>
+        <description>{PAWN_nameDef} exudes an undeniable aura of affection, captivating everyone in {PAWN_possessive} presence. {PAWN_pronoun}'s charm and warmth draw others close, forging powerful bonds of love and trust.</description>
         <statFactors>
-          <SocialImpact>0.04</SocialImpact>
-          <RestRateMultiplier>0.04</RestRateMultiplier>
+          <SocialImpact>1.18</SocialImpact>
+          <RestRateMultiplier>1.10</RestRateMultiplier>
         </statFactors>
       </li>
     </degreeDatas>
@@ -112,10 +112,10 @@
     <degreeDatas>
       <li>
         <label>Heartfelt Care</label>
-        <description>{PAWN_nameDef} heals with the compassion of a devoted lover, mending wounds and offering solace to those in need. {PAWN_pronoun}’s care restores both body and spirit, ensuring that no one is left to suffer alone.</description>
+        <description>{PAWN_nameDef} heals with the compassion of a devoted lover, mending wounds and offering solace to those in need. {PAWN_pronoun}'s care restores both body and spirit, ensuring that no one is left to suffer alone.</description>
         <statFactors>
-          <MedicalTendQuality>0.04</MedicalTendQuality>
-          <MedicalTendSpeed>0.04</MedicalTendSpeed>
+          <MedicalTendQuality>1.15</MedicalTendQuality>
+          <MedicalTendSpeed>1.12</MedicalTendSpeed>
         </statFactors>
       </li>
     </degreeDatas>
@@ -126,11 +126,11 @@
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Love’s Bloom</label>
+        <label>Love's Bloom</label>
         <description>{PAWN_nameDef} nurtures the world around {PAWN_pronoun} with a heart full of affection, encouraging the growth of life in all its forms. Wherever {PAWN_pronoun} treads, the land flourishes, and love blooms in the wake of {PAWN_possessive} steps.</description>
         <statFactors>
-          <PlantWorkSpeed>0.04</PlantWorkSpeed>
-          <PlantHarvestYield>0.04</PlantHarvestYield>
+          <PlantWorkSpeed>1.18</PlantWorkSpeed>
+          <PlantHarvestYield>1.12</PlantHarvestYield>
         </statFactors>
       </li>
     </degreeDatas>

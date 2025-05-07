@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
   <TraitDef>
     <defName>FlowingMight</defName>
     <commonality>1</commonality>
@@ -9,8 +9,8 @@
         <label>Flowing Might</label>
         <description>{PAWN_nameDef} harnesses the flowing power of water, striking with calm precision but overwhelming force. {PAWN_pronoun}'s attacks break through defenses with the relentless power of a raging river.</description>
         <statFactors>
-          <MeleeDPS>0.04</MeleeDPS>
-          <MeleeHitChance>0.04</MeleeHitChance>
+          <MeleeDPS>1.15</MeleeDPS>
+          <MeleeHitChance>1.10</MeleeHitChance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -24,8 +24,8 @@
         <label>Rushing Current</label>
         <description>{PAWN_nameDef} moves with the swiftness of a rushing river, striking with incredible speed and precision. {PAWN_pronoun} avoids attacks effortlessly, leaving nothing but the gentle ebb and flow of {PAWN_possessive} wake.</description>
         <statFactors>
-          <MoveSpeed>0.04</MoveSpeed>
-          <MeleeDodgeChance>0.04</MeleeDodgeChance>
+          <MoveSpeed>1.12</MoveSpeed>
+          <MeleeDodgeChance>1.18</MeleeDodgeChance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -39,8 +39,8 @@
         <label>Tidal Tamer</label>
         <description>{PAWN_nameDef} radiates a calming presence, like the stillness of the ocean, drawing even the fiercest creatures to {PAWN_possessive} command. {PAWN_pronoun} bends the will of beasts, controlling them with the serenity of flowing water.</description>
         <statFactors>
-          <AnimalsLearningFactor>0.04</AnimalsLearningFactor>
-          <TameAnimalChance>0.04</TameAnimalChance>
+          <AnimalsLearningFactor>1.20</AnimalsLearningFactor>
+          <TameAnimalChance>1.15</TameAnimalChance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -54,8 +54,8 @@
         <label>Endless Flow</label>
         <description>{PAWN_nameDef} endures hardship like the endless tide, flowing around obstacles and never breaking. Even in the face of adversity, {PAWN_pronoun} presses on, unwavering in {PAWN_possessive} resolve.</description>
         <statFactors>
-          <PainShockThreshold>0.04</PainShockThreshold>
-          <RestFallRateFactor>0.04</RestFallRateFactor>
+          <PainShockThreshold>1.15</PainShockThreshold>
+          <RestFallRateFactor>0.85</RestFallRateFactor>
         </statFactors>
       </li>
     </degreeDatas>
@@ -69,8 +69,8 @@
         <label>Flowing Defense</label>
         <description>{PAWN_nameDef} adapts to the flow of battle, resisting toxins and filth as the river shapes its path around obstacles. {PAWN_pronoun} remains unyielding, emerging from even the harshest conditions calm and intact.</description>
         <statFactors>
-          <FilthRate>0.04</FilthRate>
-          <ToxicResistance>0.04</ToxicResistance>
+          <FilthRate>0.80</FilthRate>
+          <ToxicResistance>1.20</ToxicResistance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -81,11 +81,11 @@
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Ocean’s Harvest</label>
-        <description>{PAWN_nameDef} uses water’s nourishing properties to craft meals that sustain the body and mind. {PAWN_pronoun} creates food that rejuvenates and replenishes all who stand beside {PAWN_pronoun}, much like the sea provides abundance.</description>
+        <label>Ocean's Harvest</label>
+        <description>{PAWN_nameDef} uses water's nourishing properties to craft meals that sustain the body and mind. {PAWN_pronoun} creates food that rejuvenates and replenishes all who stand beside {PAWN_pronoun}, much like the sea provides abundance.</description>
         <statFactors>
-          <CookSpeed>0.04</CookSpeed>
-          <ButcheryFleshEfficiency>0.04</ButcheryFleshEfficiency>
+          <CookSpeed>1.15</CookSpeed>
+          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
         </statFactors>
       </li>
     </degreeDatas>
@@ -99,8 +99,8 @@
         <label>Tidal Influence</label>
         <description>{PAWN_nameDef} exudes a calming aura, like the tides that shape the shore. {PAWN_pronoun} draws others in with {PAWN_possessive} peaceful yet commanding presence, fostering loyalty and unity.</description>
         <statFactors>
-          <SocialImpact>0.04</SocialImpact>
-          <RestRateMultiplier>0.04</RestRateMultiplier>
+          <SocialImpact>1.15</SocialImpact>
+          <RestRateMultiplier>1.10</RestRateMultiplier>
         </statFactors>
       </li>
     </degreeDatas>
@@ -112,10 +112,10 @@
     <degreeDatas>
       <li>
         <label>Soothing Current</label>
-        <description>{PAWN_nameDef} heals with the gentle but persistent touch of water, bringing comfort and relief to the wounded. {PAWN_pronoun} ensures that allies recover swiftly, using water’s nurturing power to restore vitality.</description>
+        <description>{PAWN_nameDef} heals with the gentle but persistent touch of water, bringing comfort and relief to the wounded. {PAWN_pronoun} ensures that allies recover swiftly, using water's nurturing power to restore vitality.</description>
         <statFactors>
-          <MedicalTendQuality>0.04</MedicalTendQuality>
-          <MedicalTendSpeed>0.04</MedicalTendSpeed>
+          <MedicalTendQuality>1.18</MedicalTendQuality>
+          <MedicalTendSpeed>1.12</MedicalTendSpeed>
         </statFactors>
       </li>
     </degreeDatas>
@@ -126,11 +126,11 @@
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Ocean’s Plenty</label>
-        <description>{PAWN_nameDef} understands the balance of water’s power, fostering growth wherever {PAWN_pronoun} goes. Like the tides that replenish the earth, {PAWN_pronoun} nurtures the land, ensuring bountiful harvests and prosperity.</description>
+        <label>Ocean's Plenty</label>
+        <description>{PAWN_nameDef} understands the balance of water's power, fostering growth wherever {PAWN_pronoun} goes. Like the tides that replenish the earth, {PAWN_pronoun} nurtures the land, ensuring bountiful harvests and prosperity.</description>
         <statFactors>
-          <PlantWorkSpeed>0.04</PlantWorkSpeed>
-          <PlantHarvestYield>0.04</PlantHarvestYield>
+          <PlantWorkSpeed>1.15</PlantWorkSpeed>
+          <PlantHarvestYield>1.12</PlantHarvestYield>
         </statFactors>
       </li>
     </degreeDatas>

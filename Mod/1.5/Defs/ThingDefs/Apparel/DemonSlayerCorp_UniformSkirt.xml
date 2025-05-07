@@ -39,6 +39,7 @@
         <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>DemonSlayerCorp_UniformSkirt/DemonSlayerCorp_UniformSkirt</wornGraphicPath>
+      <gender>Female</gender>
       <layers>
         <li>Middle</li>
       </layers>

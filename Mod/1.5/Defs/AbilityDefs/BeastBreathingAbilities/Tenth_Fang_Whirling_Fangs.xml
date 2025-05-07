@@ -17,6 +17,7 @@
       </li>
       <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
         <Radius>5</Radius>
+        <TicksActive>1250</TicksActive>
         <MaxShotsToReflect>20</MaxShotsToReflect>
         <effecterDef>AnimeArsenal_BeastDeflect</effecterDef>
       </li>

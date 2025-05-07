@@ -7,10 +7,10 @@
     <degreeDatas>
       <li>
         <label>Petal Strike</label>
-        <description>{PAWN_nameDef} strikes with the grace of a falling petal, each attack blooming into a deadly dance. {PAWN_pronoun}'s blade moves with fluid elegance, overwhelming foes with nature’s beauty and lethality.</description>
+        <description>{PAWN_nameDef} strikes with the grace of a falling petal, each attack blooming into a deadly dance. {PAWN_pronoun}'s blade moves with fluid elegance, overwhelming foes with nature's beauty and lethality.</description>
         <statFactors>
-          <MeleeDPS>0.04</MeleeDPS>
-          <MeleeHitChance>0.04</MeleeHitChance>
+          <MeleeDPS>1.12</MeleeDPS>
+          <MeleeHitChance>1.15</MeleeHitChance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -24,8 +24,8 @@
         <label>Fluttering Steps</label>
         <description>{PAWN_nameDef} glides across the battlefield like a petal on the wind, evading attacks with effortless poise. {PAWN_pronoun} moves with ethereal swiftness, striking before enemies can react.</description>
         <statFactors>
-          <MoveSpeed>0.04</MoveSpeed>
-          <MeleeDodgeChance>0.04</MeleeDodgeChance>
+          <MoveSpeed>1.15</MoveSpeed>
+          <MeleeDodgeChance>1.18</MeleeDodgeChance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -36,11 +36,11 @@
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Nature’s Whisper</label>
+        <label>Nature's Whisper</label>
         <description>{PAWN_nameDef} exudes an aura of tranquility, harmonizing with the natural world. Animals feel drawn to {PAWN_possessive} presence, recognizing the gentle strength that flows through {PAWN_pronoun} like a quiet breeze.</description>
         <statFactors>
-          <AnimalsLearningFactor>0.04</AnimalsLearningFactor>
-          <TameAnimalChance>0.04</TameAnimalChance>
+          <AnimalsLearningFactor>1.18</AnimalsLearningFactor>
+          <TameAnimalChance>1.20</TameAnimalChance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -51,11 +51,11 @@
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Blossom’s Resilience</label>
+        <label>Blossom's Resilience</label>
         <description>Like a flower weathering the storm, {PAWN_nameDef} endures hardship with unyielding grace. Even when battered by adversity, {PAWN_pronoun} stands tall, unwavering in determination.</description>
         <statFactors>
-          <PainShockThreshold>0.04</PainShockThreshold>
-          <RestFallRateFactor>0.04</RestFallRateFactor>
+          <PainShockThreshold>1.12</PainShockThreshold>
+          <RestFallRateFactor>0.82</RestFallRateFactor>
         </statFactors>
       </li>
     </degreeDatas>
@@ -69,8 +69,8 @@
         <label>Floral Fortitude</label>
         <description>{PAWN_nameDef} flourishes even in the harshest conditions, immune to the toxins that wilt lesser beings. Like a lotus rising from the mud, {PAWN_pronoun} remains pure and unshaken.</description>
         <statFactors>
-          <FilthRate>0.04</FilthRate>
-          <ToxicResistance>0.04</ToxicResistance>
+          <FilthRate>0.75</FilthRate>
+          <ToxicResistance>1.22</ToxicResistance>
         </statFactors>
       </li>
     </degreeDatas>
@@ -84,8 +84,8 @@
         <label>Botanical Cuisine</label>
         <description>{PAWN_nameDef} understands the delicate balance of nature, crafting meals infused with the nourishing essence of flowers. With {PAWN_possessive} skills, no ingredient is wasted, and every dish is a masterpiece.</description>
         <statFactors>
-          <CookSpeed>0.04</CookSpeed>
-          <ButcheryFleshEfficiency>0.04</ButcheryFleshEfficiency>
+          <CookSpeed>1.20</CookSpeed>
+          <ButcheryFleshEfficiency>1.15</ButcheryFleshEfficiency>
         </statFactors>
       </li>
     </degreeDatas>
@@ -99,8 +99,8 @@
         <label>Floral Magnetism</label>
         <description>{PAWN_nameDef} possesses an enchanting presence, drawing others in like bees to a blossoming flower. {PAWN_pronoun}'s very spirit inspires devotion and admiration.</description>
         <statFactors>
-          <SocialImpact>0.04</SocialImpact>
-          <RestRateMultiplier>0.04</RestRateMultiplier>
+          <SocialImpact>1.18</SocialImpact>
+          <RestRateMultiplier>1.12</RestRateMultiplier>
         </statFactors>
       </li>
     </degreeDatas>
@@ -111,11 +111,11 @@
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Petal’s Healing Touch</label>
+        <label>Petal's Healing Touch</label>
         <description>{PAWN_nameDef} mends wounds with the tender touch of a blossoming flower, easing pain with natural grace. {PAWN_pronoun} embodies both beauty and restoration, ensuring none wither under {PAWN_possessive} care.</description>
         <statFactors>
-          <MedicalTendQuality>0.04</MedicalTendQuality>
-          <MedicalTendSpeed>0.04</MedicalTendSpeed>
+          <MedicalTendQuality>1.20</MedicalTendQuality>
+          <MedicalTendSpeed>1.15</MedicalTendSpeed>
         </statFactors>
       </li>
     </degreeDatas>
@@ -129,8 +129,8 @@
         <label>Floral Abundance</label>
         <description>{PAWN_nameDef} nurtures the land with every step, leaving lush growth in {PAWN_possessive} wake. From decay, new life flourishes, ensuring that nature always finds a way to bloom again.</description>
         <statFactors>
-          <PlantWorkSpeed>0.04</PlantWorkSpeed>
-          <PlantHarvestYield>0.04</PlantHarvestYield>
+          <PlantWorkSpeed>1.20</PlantWorkSpeed>
+          <PlantHarvestYield>1.15</PlantHarvestYield>
         </statFactors>
       </li>
     </degreeDatas>
