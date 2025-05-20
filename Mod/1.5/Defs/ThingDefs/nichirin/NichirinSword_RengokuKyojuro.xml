@@ -44,6 +44,14 @@
         <cooldownTime>1.1</cooldownTime>
       </li>
     </tools>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DemonSlayerWeapon">
+        <breathingStyleGenes>
+          <li>FlameBreath</li>
+        </breathingStyleGenes>
+        <randomGene>true</randomGene>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="AnimeArsenal.DrawOffsetExt">
         <offset>(0.4, 0, 0.3)</offset>

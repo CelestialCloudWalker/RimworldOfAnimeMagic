@@ -3,8 +3,8 @@
     <AbilityDef>
       <defName>Eleventh_Form_Flying_Shale_Cutter</defName>
       <label>Eleventh Form: Flying Shale Cutter</label>
-      <description>The user performs a powerful horizontal slash while channeling stone energy into their blade.</description>
-      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <description>The user delivers A diagonal slash with its sword.</description>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
       <aiCanUse>true</aiCanUse>

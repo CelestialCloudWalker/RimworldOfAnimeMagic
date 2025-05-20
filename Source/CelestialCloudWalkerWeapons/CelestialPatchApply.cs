@@ -57,4 +57,27 @@ namespace AnimeArsenal
             }
         }
     }
+    // Harmony patch to catch weapon usage
+    [HarmonyPatch(typeof(Verb_MeleeAttack), "TryCastShot")]
+    public static class Patch_Verb_MeleeAttack_TryCastShot
+    {
+        public static void Postfix(Verb_MeleeAttack __instance)
+        {
+            // Get the weapon being used
+            ThingWithComps weapon = __instance.EquipmentSource;
+            if (weapon == null) return;
+
+            // Get the pawn using the weapon
+            Pawn pawn = __instance.CasterPawn;
+            if (pawn == null) return;
+
+            // Check if the weapon has our component
+            CompDemonSlayerWeapon comp = weapon.GetComp<CompDemonSlayerWeapon>();
+            if (comp != null)
+            {
+                // Trigger our check method
+                comp.CheckOnWeaponUse(pawn);
+            }
+        }
+    }
 }

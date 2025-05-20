@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Dance_of_the_Firefly_Guiding_Light</defName>
     <label>Dance of the Firefly: Guiding Light</label>
-    <description>An instinctive counter that deflects incoming projectiles.</description>
+    <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>

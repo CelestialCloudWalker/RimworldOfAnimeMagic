@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Tenth_Form_Eternal_Bond_of_Devotion</defName>
     <label>Tenth Form: Eternal Bond of Devotion</label>
-    <description>An enchantment technique that infuses the blade with the user's passionate breathing, causing wounds to resonate with a deep emotional connection that continues to damage opponents long after the initial strike, as if bound by an unbreakable oath of love.</description>
+    <description>The user channels thier breathing style into their weapon.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>

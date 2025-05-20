@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DamageDef>
-    <defName>BreathFrost</defName>
+    <defName>BreathFrost_Damage</defName>
     <label>Frost Rend</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <hediff>ChillingWound</hediff>

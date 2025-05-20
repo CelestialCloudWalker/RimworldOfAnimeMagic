@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>First_Form_Elemental_Convergence_Blade</defName>
+    <label>First Form: Elemental Convergence Blade</label>
+    <description>The user channels their Breathing technique into their weapon.</description>
+    <targetRequired>false</targetRequired>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+        <enchantDef>NaturalEnchantment</enchantDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>NatureBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

@@ -16,35 +16,35 @@
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>
-        <experienceTypes>
-            <!-- Combat XP -->
-            <li Class="Talented.DamageTakenExperienceTypeDef">
-                <baseXP>10</baseXP>
-                <damageFactor>0.1</damageFactor>
-            </li>
+      <experienceTypes>
+        <!-- Combat XP -->
+        <li Class="Talented.DamageTakenExperienceTypeDef">
+          <baseXP>50</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
 
-            <li Class="Talented.DamageDealtExperienceTypeDef">
-                <baseXP>10</baseXP>
-                <damageFactor>0.1</damageFactor>
-            </li>
-            <!-- Skill XP -->
-            <li Class="Talented.SkillExperienceTypeDef">
-                <SkillDef>Shooting</SkillDef>
-                <baseXP>2</baseXP>
-            </li>
+        <li Class="Talented.DamageDealtExperienceTypeDef">
+          <baseXP>100</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <!-- Skill XP -->
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Shooting</SkillDef>
+          <baseXP>2</baseXP>
+        </li>
 
-            <!-- Job XP -->
-            <li Class="Talented.JobExperienceTypeDef">
-                <SkillDef>HaulToCell</SkillDef>
-                <baseXP>1</baseXP>
-            </li>
+        <!-- Job XP -->
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>HaulToCell</SkillDef>
+          <baseXP>1</baseXP>
+        </li>
 
-            <!-- Verb XP -->
-            <li Class="Talented.VerbExperienceTypeDef">
-                <VerbClassName>Verb_BeatFire</VerbClassName>
-                <baseXP>1</baseXP>
-            </li>
-        </experienceTypes>
+        <!-- Verb XP -->
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_BeatFire</VerbClassName>
+          <baseXP>1</baseXP>
+        </li>
+      </experienceTypes>
     </experienceGainSettings>
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>

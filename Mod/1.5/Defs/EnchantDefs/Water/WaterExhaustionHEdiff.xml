@@ -8,23 +8,39 @@
     <hediffClass>HediffWithComps</hediffClass>
 
     <injuryProps>
-      <painPerSeverity>0.05</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
+      <painPerSeverity>0.02</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00015</averagePainPerSeverityPermanent>
       <bleedRate>0.000</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>destroyed</destroyedLabel>
-      <destroyedOutLabel>destroyed</destroyedOutLabel>
+      <destroyedLabel>broken</destroyedLabel>
+      <destroyedOutLabel>shattered</destroyedOutLabel>
     </injuryProps>
     <stages>
       <li>
-        <label>Initial Strain</label>
+        <label>Rippling Form Strain</label>
         <becomeVisible>true</becomeVisible>
         <minSeverity>0.05</minSeverity>
-        <painFactor>1.10</painFactor>
+        <painFactor>1.03</painFactor>
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.10</offset>
+            <offset>-0.03</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.02</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Fluid Motion Fatigue</label>
+        <minSeverity>.1</minSeverity>
+        <painFactor>1.07</painFactor>
+        <hungerRateFactor>1.10</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.07</offset>
           </li>
           <li>
             <capacity>Manipulation</capacity>
@@ -33,25 +49,77 @@
         </capMods>
       </li>
       <li>
-        <label>Breathing Fatigue</label>
-        <minSeverity>.1</minSeverity>
-        <painFactor>1.20</painFactor>
+        <label>Current Control Lapse</label>
+        <minSeverity>0.25</minSeverity>
+        <painFactor>1.10</painFactor>
+        <hungerRateFactor>1.15</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.12</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.09</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.03</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Tidal Form Disruption</label>
+        <minSeverity>0.35</minSeverity>
+        <painFactor>1.15</painFactor>
         <hungerRateFactor>1.25</hungerRateFactor>
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.20</offset>
+            <offset>-0.18</offset>
           </li>
           <li>
             <capacity>Manipulation</capacity>
             <offset>-0.15</offset>
           </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.07</offset>
+          </li>
         </capMods>
+        <statFactors>
+          <ShootingAccuracyPawn>0.90</ShootingAccuracyPawn>
+          <MeleeHitChance>0.90</MeleeHitChance>
+        </statFactors>
       </li>
       <li>
-        <label>Technique Strain</label>
-        <minSeverity>0.25</minSeverity>
-        <painFactor>1.35</painFactor>
+        <label>Whirlpool Stance Wavering</label>
+        <minSeverity>0.75</minSeverity>
+        <painFactor>1.20</painFactor>
+        <hungerRateFactor>1.35</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.22</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <ShootingAccuracyPawn>0.80</ShootingAccuracyPawn>
+          <MeleeHitChance>0.80</MeleeHitChance>
+        </statFactors>
+      </li>
+      <li>
+        <label>Flow Technique Dissolution</label>
+        <minSeverity>0.9</minSeverity>
+        <painFactor>1.30</painFactor>
         <hungerRateFactor>1.50</hungerRateFactor>
         <capMods>
           <li>
@@ -64,80 +132,12 @@
           </li>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.10</offset>
-          </li>
-        </capMods>
-      </li>
-      <li>
-        <label>Total Concentration Decline</label>
-        <minSeverity>0.35</minSeverity>
-        <painFactor>1.50</painFactor>
-        <hungerRateFactor>1.75</hungerRateFactor>
-        <capMods>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-0.50</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.45</offset>
-          </li>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.20</offset>
+            <offset>-0.15</offset>
           </li>
         </capMods>
         <statFactors>
-          <ShootingAccuracyPawn>0.75</ShootingAccuracyPawn>
-          <MeleeHitChance>0.75</MeleeHitChance>
-        </statFactors>
-      </li>
-      <li>
-        <label>Breath Control Failure</label>
-        <minSeverity>0.75</minSeverity>
-        <painFactor>1.70</painFactor>
-        <hungerRateFactor>2.00</hungerRateFactor>
-        <capMods>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-0.70</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.65</offset>
-          </li>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.35</offset>
-          </li>
-        </capMods>
-        <statFactors>
-          <ShootingAccuracyPawn>0.50</ShootingAccuracyPawn>
-          <MeleeHitChance>0.50</MeleeHitChance>
-        </statFactors>
-      </li>
-      <li>
-        <label>Complete Exhaustion</label>
-        <minSeverity>0.9</minSeverity>
-        <painFactor>1.90</painFactor>
-        <hungerRateFactor>2.50</hungerRateFactor>
-        <capMods>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-0.90</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.85</offset>
-          </li>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.50</offset>
-          </li>
-        </capMods>
-        <statFactors>
-          <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
-          <MeleeHitChance>0.25</MeleeHitChance>
+          <ShootingAccuracyPawn>0.70</ShootingAccuracyPawn>
+          <MeleeHitChance>0.70</MeleeHitChance>
         </statFactors>
       </li>
     </stages>

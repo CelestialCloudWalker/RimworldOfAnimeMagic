@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Fourth_Form_Shifting_Flow_Slash</defName>
     <label>Fourth Form: Shifting Flow Slash</label>
-    <description>The user releases a singular, horizontal slash aiming to decapitate their target.</description>
+    <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>

@@ -19,7 +19,7 @@
       <experienceTypes>
         <!-- Combat XP -->
         <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>10</baseXP>
+          <baseXP>50</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
 

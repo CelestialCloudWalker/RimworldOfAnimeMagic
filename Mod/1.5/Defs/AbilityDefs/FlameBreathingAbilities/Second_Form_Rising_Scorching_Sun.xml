@@ -3,7 +3,7 @@
     <AbilityDef>
       <defName>Second_Form_Rising_Scorching_Sun</defName>
       <label>Second Form: Rising Scorching Sun</label>
-      <description>Manipulate flames for long-range attacks by forming an arrow.</description>
+      <description>The user delivers A diagonal slash with its sword.</description>
       <iconPath>UI/Icons/FlameSlice</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>

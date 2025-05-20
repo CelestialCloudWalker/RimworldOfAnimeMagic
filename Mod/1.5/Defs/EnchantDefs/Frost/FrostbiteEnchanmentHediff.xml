@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>BreathFrost</damageType>
+        <damageType>BreathFrost_Damage</damageType>
         <damageValue>10</damageValue>
       </li>
     </comps>

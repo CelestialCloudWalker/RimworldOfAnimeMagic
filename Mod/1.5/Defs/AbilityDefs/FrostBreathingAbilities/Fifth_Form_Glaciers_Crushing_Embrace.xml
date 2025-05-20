@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>Fifth_Form_Glaciers_Crushing_Embrace</defName>
+    <label>Fifth Form: Glacier's Crushing Embrace</label>
+    <description>The user vanishes in a blitz of dashes.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <range>15</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>5</maxJumps>
+        <ticksBetweenJumps>2</ticksBetweenJumps>
+        <jumpDistance>4</jumpDistance>
+        <duration>13</duration>
+        <jumpDamageDef>Cut</jumpDamageDef>
+        <jumpDamage>3~5</jumpDamage>
+        <jumpOffsets>
+          <li>(0, 0, 4)</li>
+          <li>(3, 0, 3)</li>
+          <li>(4, 0, 0)</li>
+          <li>(3, 0, -3)</li>
+          <li>(0, 0, -4)</li>
+          <li>(-3, 0, -3)</li>
+          <li>(-4, 0, 0)</li>
+          <li>(-3, 0, 3)</li>
+          <li>(2, 0, 2)</li>
+          <li>(-2, 0, -2)</li>
+        </jumpOffsets>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>FrostBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+  </AbilityDef>
+</Defs>

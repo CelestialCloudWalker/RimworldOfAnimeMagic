@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Fourth_Form_Twin_Headed_Reptile</defName>
     <label>Fourth Form: Twin-Headed Reptile</label>
-    <description>The user leaps forward and performs a horizontal slash that slices through the target.</description>
+    <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>

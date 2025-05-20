@@ -3,8 +3,8 @@
     <AbilityDef>
       <defName>Ninth_Form_Distance_of_Yearning</defName>
       <label>Ninth Form: Distance of Yearning</label>
-      <description>The user channels their breathing into a powerful slash that releases a crescent-shaped projectile of energy, capable of cutting through enemies at a distance as if reaching out to a faraway love.</description>
-      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <description>The user delivers A diagonal slash with its sword.</description>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
       <aiCanUse>true</aiCanUse>

@@ -3,8 +3,8 @@
     <AbilityDef>
       <defName>Third_Form_Distant_Reverberation</defName>
       <label>Third Form: Distant Reverberation</label>
-      <description>The user rapidly crosses their twin blades and then separates them with explosive force, releasing a concentrated sound wave projectile that cuts through the air.</description>
-      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <description>The user delivers A diagonal slash with its sword.</description>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
       <aiCanUse>true</aiCanUse>

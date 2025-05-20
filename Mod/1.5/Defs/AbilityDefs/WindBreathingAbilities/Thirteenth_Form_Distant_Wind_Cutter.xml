@@ -3,8 +3,8 @@
     <AbilityDef>
       <defName>Thirteenth_Form_Distant_Wind_Cutter</defName>
       <label>Thirteenth Form: Distant Wind Cutter</label>
-      <description>Manipulate flames for long-range attacks by forming an arrow.</description>
-      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <description>The user delivers A diagonal slash with its sword.</description>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
       <aiCanUse>true</aiCanUse>

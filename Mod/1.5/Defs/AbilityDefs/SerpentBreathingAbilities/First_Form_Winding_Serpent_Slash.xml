@@ -4,7 +4,7 @@
       <defName>First_Form_Winding_Serpent_Slash</defName>
       <label>First Form: Winding Serpent Slash</label>
       <description>The user delivers A diagonal slash with its sword.</description>
-      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
       <aiCanUse>true</aiCanUse>

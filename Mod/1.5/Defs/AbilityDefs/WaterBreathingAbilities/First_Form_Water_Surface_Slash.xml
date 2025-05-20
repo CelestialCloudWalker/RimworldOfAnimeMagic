@@ -4,7 +4,7 @@
       <defName>First_Form_Water_Surface_Slash</defName>
       <label>First Form: Water Surface Slash</label>
       <description>The user delivers A diagonal slash with its sword.</description>
-      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
       <aiCanUse>true</aiCanUse>

@@ -50,6 +50,7 @@
     <Compile Include="BodyDisappearExtension.cs" />
     <Compile Include="CompProperties_AbilityDamage.cs" />
     <Compile Include="Comps\HediffCompProperties_Overlay.cs" />
+    <Compile Include="DemonSlayerWeaponComp.cs" />
     <Compile Include="DrawOffsetExt.cs" />
     <Compile Include="GraphicDataWithShader.cs" />
     <Compile Include="Graphic_SingleWithShader.cs" />

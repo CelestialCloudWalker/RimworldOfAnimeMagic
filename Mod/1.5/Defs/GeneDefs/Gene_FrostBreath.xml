@@ -12,6 +12,9 @@
     <abilities>
     </abilities>
     <!-- Tree Configuration -->
+    <TalentTrees>
+      <li>FrostBreathingUpgradeTree</li>
+    </TalentTrees>
 
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
@@ -19,12 +22,12 @@
         <experienceTypes>
             <!-- Combat XP -->
             <li Class="Talented.DamageTakenExperienceTypeDef">
-                <baseXP>10</baseXP>
+                <baseXP>50</baseXP>
                 <damageFactor>0.1</damageFactor>
             </li>
 
             <li Class="Talented.DamageDealtExperienceTypeDef">
-                <baseXP>10</baseXP>
+                <baseXP>100</baseXP>
                 <damageFactor>0.1</damageFactor>
             </li>
             <!-- Skill XP -->
@@ -46,7 +49,7 @@
             </li>
         </experienceTypes>
     </experienceGainSettings>
-    <maxStat>AstralPulse</maxStat>
+    <maxStat>FrostBreath</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
     <resourceGizmoThresholds>

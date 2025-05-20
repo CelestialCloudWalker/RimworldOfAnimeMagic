@@ -5,6 +5,7 @@
     <label>Dance of the Scorpion: Lingering Venom</label>
     <description>The user channels thier breathing style into their weapon.</description>
     <targetRequired>false</targetRequired>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <verbProperties>
         <verbClass>Verb_CastAbility</verbClass>
         <range>-1</range>

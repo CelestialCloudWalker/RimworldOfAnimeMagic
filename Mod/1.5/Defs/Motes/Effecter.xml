@@ -26,6 +26,31 @@
   </EffecterDef>
 
   <EffecterDef>
+    <defName>AnimeArsenal_NatureDeflect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <chancePerTick>.3</chancePerTick>
+        <chancePeriodTicks>6</chancePeriodTicks>
+        <fleckDef>AA_RingCurve</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>12~16</burstCount>
+        <positionRadius>0.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.25~.35</scale>
+        <rotation>50~240</rotation>
+        <rotationRate>50~250</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <color>(170, 255, 170, 255)</color>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
     <defName>AnimeArsenal_ThunderDeflect</defName>
     <children>
       <li>

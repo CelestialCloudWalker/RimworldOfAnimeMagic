@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Sixth_Form_Serpents_Scale_Shield</defName>
     <label>Sixth Form: Serpent's Scale Shield</label>
-    <description>An instinctive counter that deflects incoming projectiles.</description>
+    <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>

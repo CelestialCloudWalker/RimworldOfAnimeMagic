@@ -4,7 +4,7 @@
       <defName>Ninth_Form_Petrifying_Edge</defName>
       <label>Ninth Form: Petrifying Edge</label>
       <description>The user channels thier breathing style into their weapon.</description>
-      <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
       <targetRequired>false</targetRequired>
       <verbProperties>
           <verbClass>Verb_CastAbility</verbClass>

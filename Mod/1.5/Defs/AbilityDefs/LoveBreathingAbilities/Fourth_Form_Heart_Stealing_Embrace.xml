@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Fourth_Form_Heart_Stealing_Embrace</defName>
     <label>Fourth Form: Heart-Stealing Embrace</label>
-    <description>The user performs a graceful step forward with their sword held close to their body, before executing a precise thrust that appears to pass through the target like an embrace, striking a vital point with devastating efficiency.</description>
+    <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>6000</cooldownTicksRange>
     <targetRequired>True</targetRequired>

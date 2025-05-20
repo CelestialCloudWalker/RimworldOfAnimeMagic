@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Seventh_Form_Fluttering_Petals_of_Affection</defName>
     <label>Seventh Form: Fluttering Petals of Affection</label>
-    <description>A defensive technique where the user rotates their blade in a sweeping motion that creates a shield-like barrier, deflecting incoming attacks while maintaining a graceful stance that prepares them for an immediate counterattack.</description>
+    <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>

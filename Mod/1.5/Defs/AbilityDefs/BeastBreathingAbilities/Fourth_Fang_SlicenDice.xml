@@ -4,7 +4,7 @@
       <defName>Fourth_Fang_SlicenDice</defName>
       <label>Fourth Fang: Slice 'n' Dice</label>
       <description>The user delivers A diagonal slash with its sword.</description>
-      <iconPath>UI/Icons/FlameSlice</iconPath>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>
       <displayOrder>200</displayOrder>
       <aiCanUse>true</aiCanUse>

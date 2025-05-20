@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>TwelfthForm_FlameWallDance</defName>
     <label>Twelfth Form: Flame Wall Dance</label>
-    <description>The user sweeps their blade in a blazing arc, scattering projectiles.</description>
+    <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>

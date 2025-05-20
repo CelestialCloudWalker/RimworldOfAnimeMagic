@@ -1822,4 +1822,276 @@
       </li>
     </statEffects>
   </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fifth_Form_Glaciers_Crushing_Embrace_Talent</defName>
+    <label>Fifth Form: Glacier's Crushing Embrace</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fifth_Form_Glaciers_Crushing_Embrace</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>First_Form_Crystalline_Reflection_Talent</defName>
+    <label>First_Form_Crystalline_Reflection</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>First_Form_Crystalline_Reflection</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Form_Blizzard_Flash_Step_Talent</defName>
+    <label>Fourth Form: Blizzard Flash Step</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Form_Blizzard_Flash_Step</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Second_Form_Frozen_Edge_Enchantment_Talent</defName>
+    <label>Second Form: Frozen Edge Enchantment</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Second_Form_Frozen_Edge_Enchantment</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Third_Form_Winters_Piercing_Shard_Talent</defName>
+    <label>Third Form: Winter's Piercing Shard</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Third_Form_Winters_Piercing_Shard</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fifth_Form_Thundering_Forest_Wave_Talent</defName>
+    <label>Firth Form: Thundering Forest Wave</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fifth_Form_Thundering_Forest_Wave</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>First_Form_Elemental_Convergence_Blade_Talent</defName>
+    <label>First Form: Elemental Convergence Blade</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>First_Form_Elemental_Convergence_Blade</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Form_Tempest_Mountain_Dance_Talent</defName>
+    <label>Fourth Form:Tempest Mountain Dance</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Form_Tempest_Mountain_Dance</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Second_Form_Earthen_Storm_Reflection_Talent</defName>
+    <label>Second Form: Earthen Storm Reflection</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Second_Form_Earthen_Storm_Reflection</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Third_Form_Blazing_Current_Step_Talent</defName>
+    <label>Third Form: Blazing Current Step</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Third_Form_Blazing_Current_Step</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Nature_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>NatureBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Nature_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>NatureBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Nature_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>NatureBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Nature_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>NatureBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Frost_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FrostBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Frost_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FrostBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Frost_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FrostBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Frost_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FrostBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
 </Defs>

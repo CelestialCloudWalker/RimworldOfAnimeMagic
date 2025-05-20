@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>Twelfth_Form_Reversing_Tempest</defName>
     <label>Twelfth Form: Reversing Tempest</label>
-    <description>The user creates a rotating wall of wind with their blade that catches and reverses incoming attacks, turning the opponent's force back against them.</description>
+    <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
