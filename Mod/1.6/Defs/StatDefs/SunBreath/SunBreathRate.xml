@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StatDef>
+    <defName>SunBreath_RegenRate</defName>
+    <label>Sun Breath Regen Rate</label>
+    <category>PawnMisc</category>
+    <description>Rate of Sun Breath regeneration per tick.</description>
+    <defaultBaseValue>.7</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentOne</toStringStyle>
+  </StatDef>
+</Defs>

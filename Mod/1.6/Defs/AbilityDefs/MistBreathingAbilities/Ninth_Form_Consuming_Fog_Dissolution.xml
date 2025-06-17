@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AbilityDef>
+      <defName>Ninth_Form_Consuming_Fog_Dissolution</defName>
+      <label>Ninth Form: Consuming Fog Dissolution</label>
+      <description>The user channels thier breathing style into their weapon.</description>
+      <iconPath>UI/Abilities/MistF1</iconPath>
+      <targetRequired>false</targetRequired>
+      <verbProperties>
+          <verbClass>Verb_CastAbility</verbClass>
+          <range>-1</range>
+      </verbProperties>
+      <comps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+              <enchantDef>VeilEnchantment</enchantDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_ResourceCost">
+            <resourceGeneDef>MistBreath</resourceGeneDef>
+            <resourceCost>20</resourceCost>
+          </li>
+      </comps>
+  </AbilityDef>
+</Defs>

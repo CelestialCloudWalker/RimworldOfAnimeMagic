@@ -19,24 +19,13 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_BaseStance">
-        <maxJumps>5</maxJumps>
-        <ticksBetweenJumps>3</ticksBetweenJumps>
-        <jumpDistance>3</jumpDistance>
-        <duration>15</duration>
-        <jumpDamageDef>Blunt</jumpDamageDef>
-        <jumpDamage>6~8</jumpDamage>
-        <jumpOffsets>
-          <li>(3, 0, 0)</li>
-          <li>(-3, 0, 0)</li>
-          <li>(0, 0, 3)</li>
-          <li>(0, 0, -3)</li>
-          <li>(2, 0, 2)</li>
-          <li>(-2, 0, -2)</li>
-          <li>(3, 0, -1)</li>
-          <li>(-3, 0, 1)</li>
-          <li>(-2, 0, 2)</li>
-          <li>(2, 0, -2)</li>
-        </jumpOffsets>
+        <maxJumps>6</maxJumps>
+        <ticksBetweenJumps>1</ticksBetweenJumps>
+        <jumpDistance>5</jumpDistance>
+        <duration>12</duration>
+        <targetSearchRadius>18</targetSearchRadius>
+        <jumpDamageDef>Cut</jumpDamageDef>
+        <jumpDamage>4~5</jumpDamage>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>StoneBreath</resourceGeneDef>

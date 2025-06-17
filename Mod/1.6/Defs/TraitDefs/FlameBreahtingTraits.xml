@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TraitDef>
+    <defName>BlazingMight</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Blazing Might</label>
+        <description>{PAWN_nameDef} harnesses the fury of an unrelenting inferno, striking with the scorching power of flames. {PAWN_pronoun}'s attacks burn through defenses, embodying the essence of destruction.</description>
+        <statFactors>
+          <MeleeDPS>1.15</MeleeDPS>
+          <MeleeHitChance>1.10</MeleeHitChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>InfernalDash</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Infernal Dash</label>
+        <description>{PAWN_nameDef} moves with the speed of a wildfire, blazing across the battlefield before enemies can react. {PAWN_pronoun} strikes with precision, leaving only embers in {PAWN_possessive} wake.</description>
+        <statFactors>
+          <MoveSpeed>1.12</MoveSpeed>
+          <MeleeDodgeChance>1.15</MeleeDodgeChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>InfernalCommand</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Infernal Command</label>
+        <description>{PAWN_nameDef} radiates the presence of a roaring blaze, drawing even the fiercest creatures to {PAWN_possessive} command. {PAWN_pronoun} bends the will of beasts with the unwavering force of fire.</description>
+        <statFactors>
+          <AnimalsLearningFactor>1.20</AnimalsLearningFactor>
+          <TameAnimalChance>1.15</TameAnimalChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>BurningWill</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Burning Will</label>
+        <description>{PAWN_nameDef} endures hardship like tempered steel in the forge, standing firm against pain and exhaustion. Even when all seems lost, {PAWN_pronoun} fights on, burning with indomitable resolve.</description>
+        <statFactors>
+          <PainShockThreshold>1.15</PainShockThreshold>
+          <RestFallRateFactor>0.85</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>InfernalResistance</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Infernal Resistance</label>
+        <description>{PAWN_nameDef} thrives in the heart of the fire, unshaken by toxins and filth. {PAWN_pronoun} emerges from even the harshest conditions, unburnt and unwavering.</description>
+        <statFactors>
+          <FilthRate>0.80</FilthRate>
+          <ToxicResistance>1.20</ToxicResistance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>EmberChef</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Ember Chef</label>
+        <description>{PAWN_nameDef} wields fire as both a weapon and a tool, expertly crafting meals infused with the essence of flame. {PAWN_pronoun} ensures that nothing goes to waste, sustaining all who fight beside {PAWN_pronoun}.</description>
+        <statFactors>
+          <CookSpeed>1.18</CookSpeed>
+          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>BlazingCharisma</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Blazing Charisma</label>
+        <description>{PAWN_nameDef} burns with an undeniable presence, drawing others in like moths to a flame. {PAWN_pronoun}'s spirit ignites passion and loyalty in those who stand by {PAWN_pronoun}.</description>
+        <statFactors>
+          <SocialImpact>1.15</SocialImpact>
+          <RestRateMultiplier>1.10</RestRateMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>FieryCompassion</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Fiery Compassion</label>
+        <description>{PAWN_nameDef} treats the wounded with the warmth of a nurturing flame, ensuring swift recovery. {PAWN_pronoun} wields both destruction and healing, never allowing an ally to fall to the cold grasp of death.</description>
+        <statFactors>
+          <MedicalTendQuality>1.15</MedicalTendQuality>
+          <MedicalTendSpeed>1.12</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>InfernalGrowth</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Infernal Growth</label>
+        <description>{PAWN_nameDef} understands the cycle of destruction and rebirth, nurturing the land like volcanic soil. Wherever {PAWN_pronoun} treads, new life rises from the ashes.</description>
+        <statFactors>
+          <PlantWorkSpeed>1.15</PlantWorkSpeed>
+          <PlantHarvestYield>1.10</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

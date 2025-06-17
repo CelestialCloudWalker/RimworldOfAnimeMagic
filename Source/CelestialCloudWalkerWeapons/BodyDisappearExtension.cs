@@ -32,7 +32,7 @@ namespace AnimeArsenal
         // Helper method to check if pawn has the BloodDemonArt gene
         private static bool HasBloodDemonGene(Pawn pawn)
         {
-            return pawn.genes?.HasGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) ?? false;
+            return pawn.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) ?? false;
         }
     }
 

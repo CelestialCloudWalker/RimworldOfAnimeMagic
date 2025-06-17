@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingCategoryDef>
+  <defName>CorpsesDemon</defName>
+  <label>Demon corpses</label>
+    <parent>Corpses</parent>
+  </ThingCategoryDef>
+
+
+</Defs>

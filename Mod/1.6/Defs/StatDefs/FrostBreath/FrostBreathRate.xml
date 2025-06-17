@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StatDef>
+    <defName>FrostBreath_RegenRate</defName>
+    <label>Frost Breath Regen Rate</label>
+    <category>PawnMisc</category>
+    <description>Rate of Frost Breath regeneration per tick.</description>
+    <defaultBaseValue>.9</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentOne</toStringStyle>
+  </StatDef>
+</Defs>

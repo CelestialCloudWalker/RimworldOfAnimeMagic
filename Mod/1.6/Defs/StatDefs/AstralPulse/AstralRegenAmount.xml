@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StatDef>
+    <defName>AstralPulse_RegenAmount</defName>
+    <label>Astral Pulse Regen Amount Per Regen Tick</label>
+    <category>PawnMisc</category>
+    <description>Rate of Astral Pulse regeneration per tick.</description>
+    <defaultBaseValue>.5</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentOne</toStringStyle>
+  </StatDef>
+</Defs>

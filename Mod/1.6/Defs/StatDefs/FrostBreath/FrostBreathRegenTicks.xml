@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<StatDef>
+  <defName>FrostBreath_RegenTicks</defName>
+  <label>Frost Breath Regen Ticks</label>
+  <category>PawnMisc</category>
+  <description>Number of ticks between Frost Breath regeneration cycles.</description>
+  <defaultBaseValue>170</defaultBaseValue>
+   <minValue>0</minValue>
+   <maxValue>1000</maxValue>
+   <toStringStyle>Integer</toStringStyle>
+</StatDef>
+</Defs>

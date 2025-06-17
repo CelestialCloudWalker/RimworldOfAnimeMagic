@@ -41,7 +41,7 @@ namespace AnimeArsenal
                     GeneDef bloodDemonArtGene = DefDatabase<GeneDef>.GetNamed(BLOOD_DEMON_ART_GENE);
 
                     // Check if pawn already has the gene
-                    if (!targetPawn.genes.HasGene(bloodDemonArtGene))
+                    if (!targetPawn.genes.HasActiveGene(bloodDemonArtGene))
                     {
                         // Add the Blood Demon Art gene
                         Gene gene = targetPawn.genes.AddGene(bloodDemonArtGene, true);

@@ -7,6 +7,7 @@ using Verse;
 
 namespace AnimeArsenal
 {
+    [StaticConstructorOnStartup]
     public class GeneGizmoBreath : GeneGizmo_ResourceAstral
     {
         private BreathingTechniqueGene BreathingTechniqueGene => (BreathingTechniqueGene)gene;

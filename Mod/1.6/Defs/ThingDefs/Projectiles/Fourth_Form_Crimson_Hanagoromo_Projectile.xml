@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Fourth_Form_Crimson_Hanagoromo_Projectile</defName>
+    <label>HelpMe</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.5</drawSize>
+      <shaderParameters>
+        <_Color>(230, 128, 179, 255)</_Color>
+        <_brightnessMultiplier>1</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>RosePetalCut</damageDef>
+      <damageAmountBase>1</damageAmountBase> <!-- REQUIRED FOR DEF VALIDATION -->
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <ExplosionRadius>2</ExplosionRadius>
+      <stoppingPower>1</stoppingPower>
+      <ExplosionEffect>FlowerBreathingExplosionEffect</ExplosionEffect>
+      <speed>25</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <BaseDamage>7</BaseDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(230, 128, 179, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Flower_Projectile_Mote</TrailMote>
+        <MoteInterval>0.25</MoteInterval>
+        <MoteDuration>30</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

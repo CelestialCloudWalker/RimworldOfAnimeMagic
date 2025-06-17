@@ -26,7 +26,7 @@ namespace AnimeArsenal
 
     public class CompAbilityEffect_Damage : CompAbilityEffect
     {
-        public CompProperties_AbilityDamage Props => (CompProperties_AbilityDamage)props;
+        public new CompProperties_AbilityDamage Props => (CompProperties_AbilityDamage)props;
 
         // Cache for damage def lookup
         private DamageDef cachedDamageDef = null;

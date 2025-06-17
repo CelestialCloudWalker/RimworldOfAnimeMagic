@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <Talented.TalentTreeDef>
+    <defName>FlameBreathingUpgradeTree</defName>
+    <treeName>FlameBreathingUpgradeTree</treeName>
+    <dimensions>(600,400)</dimensions>
+    <handlerClass>Talented.ActiveTreeHandler</handlerClass>
+    <skin>DefaultTreeSkin</skin>
+    <nodes>
+      <li>Node_1746408709719_30</li>
+    </nodes>
+    <availablePaths>
+      <li>
+        <name>Stat Upgrade (TBD)</name>
+        <pathDescription></pathDescription>
+        <exclusiveWith>
+        </exclusiveWith>
+      </li>
+      <li>
+        <name>Abilties(TBD)</name>
+        <pathDescription></pathDescription>
+        <exclusiveWith>
+        </exclusiveWith>
+      </li>
+    </availablePaths>
+    <displayStrategy>FixedPosition</displayStrategy>
+    <talentPointFormula>PerLevel</talentPointFormula>
+  </Talented.TalentTreeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746408709719_30</defName>
+    <label>TBD</label>
+    <style>DefaultNodeStyle</style>
+    <position>(154,298)</position>
+    <type>Start</type>
+    <upgrades>
+      <li>Eleventh_Form_Soul_Ignition_Talent</li>
+    </upgrades>
+    <connections>
+      <li>Node_1746408709719_6159</li>
+      <li>Node_1746408709719_8717</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746408709719_6159</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(155,239)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>FlameBreath_Breath_Increase</li>
+      <li>FlameBreath_Breath_Increase2</li>
+      <li>FlameBreath_Breath_Increase3</li>
+      <li>FlameBreath_Breath_Increase4</li>
+    </upgrades>
+    <path>Stat Upgrade (TBD)</path>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746408709719_8717</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(226,288)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>TwelfthForm_FlameWallDance_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+    <connections>
+      <li>Node_1746408709719_5199</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746408709719_5199</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(231,239)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Second_Form_Rising_Scorching_Sun_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+    <connections>
+      <li>Node_1746408709719_4141</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746408709719_4141</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(321,240)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>First_Form_Unknowing_Fire_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+    <connections>
+      <li>Node_1746408709719_8438</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746408709719_8438</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(321,290)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Thirteenth_Form_Scorching_Trail_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+  </Talented.TalentTreeNodeDef>
+
+</Defs>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>Blood_Demon_Arts_Demons_Embrace</defName>
+    <label>Blood Demon Arts: Demon's Embrace</label>
+    <description>Turn a pawn into a Demon-like work slave, granting them the power of Blood Demon Art.</description>
+    <iconPath>UI/Abilities/ShapeFlesh</iconPath>
+    <jobDef>CastAbilityOnThing</jobDef>
+    <category>BloodDemonArts</category>
+    <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
+    <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <hostile>true</hostile>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>
+      <min>300</min>
+      <max>300</max>
+    </cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>True</drawAimPie>
+      <range>4.9</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
+    </comps>
+  </AbilityDef>
+</Defs>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.BloodDemonArtsGeneDef ParentName="AA_BloodDemonArtsGene">
+    <defName>BloodDemonArt</defName>
+    <label>Blood Demon Art</label>
+    <resourceName>Blood Art</resourceName>
+    <description>Carriers of this gene channel Blood Art.</description>
+    <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+    <resourceLabel>Blood Art</resourceLabel>
+    <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
+    <!-- Tree Configuration -->
+    <TalentTrees>
+      <li>DemonTalentTree</li>
+    </TalentTrees>
+    <!-- Experience System -->
+    <experienceFormula>Basic_LinearXP</experienceFormula>
+    <experienceGainSettings>
+      <experienceTypes>
+        <!-- Combat XP -->
+        <li Class="Talented.DamageTakenExperienceTypeDef">
+          <baseXP>10</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+
+        <li Class="Talented.DamageDealtExperienceTypeDef">
+          <baseXP>10</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <!-- Skill XP -->
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Shooting</SkillDef>
+          <baseXP>2</baseXP>
+        </li>
+
+        <!-- Job XP -->
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>HaulToCell</SkillDef>
+          <baseXP>1</baseXP>
+        </li>
+
+        <!-- Verb XP -->
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_BeatFire</VerbClassName>
+          <baseXP>1</baseXP>
+        </li>
+      </experienceTypes>
+    </experienceGainSettings>
+    <maxStat>AstralPulse</maxStat>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>BloodDemonArts</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(0.545, 0.0, 0.0, 1.0)</barColor> <!-- Adjusted to correct RGBA float format -->
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <makeImmuneTo>
+      <li>Flu</li>
+      <li>Malaria</li>
+      <li>SleepingSickness</li>
+      <li>Plague</li>
+      <li>WoundInfection</li>
+      <li>LungRot</li>
+      <li>GutWorms</li>
+      <li>MuscleParasites</li>
+      <li>OrganDecay</li>
+    </makeImmuneTo>
+    <hediffGiversCannotGive>
+      <li>Carcinoma</li>
+      <li>HeartAttack</li>
+      <li>BadBack</li>
+      <li>Frail</li>
+      <li>Cataract</li>
+      <li>Dementia</li>
+      <li>Alzheimers</li>
+      <li>Asthma</li>
+      <li>HeartArteryBlockage</li>
+    </hediffGiversCannotGive>
+    <skinTintChoices>
+      <li>(0.8, 0.1, 0.1, 1.0)</li> <!-- Deep Crimson -->
+      <li>(0.5, 0.0, 0.5, 1.0)</li> <!-- Dark Purple -->
+      <li>(0.2, 0.2, 0.2, 1.0)</li> <!-- Charcoal Grey -->
+      <li>(0.9, 0.5, 0.1, 1.0)</li> <!-- Fiery Orange -->
+      <li>(0.1, 0.6, 0.2, 1.0)</li> <!-- Toxic Green -->
+      <li>(0.3, 0.0, 0.7, 1.0)</li> <!-- Abyssal Blue -->
+      <li>(0.6, 0.0, 0.0, 1.0)</li> <!-- Blood Red -->
+      <li>(0.9, 0.9, 0.1, 1.0)</li>
+    </skinTintChoices>
+    <modExtensions>
+      <li Class="AnimeArsenal.SunlightDamageExtension">
+        <damagePerTick>1</damagePerTick>
+        <damageThresholdBeforeDeath>10</damageThresholdBeforeDeath>
+        <ticksBetweenDamage>100</ticksBetweenDamage>
+      </li>
+
+      <li Class="AnimeArsenal.BodyDisappearExtension">
+        <leaveAshFilth>true</leaveAshFilth>
+        <filthAmount>3</filthAmount>
+        <disappearMessage>Body turned to ash!</disappearMessage>
+        <playEffect>true</playEffect>
+      </li>
+    </modExtensions>
+    <!-- UI Configuration -->
+    <TabLabel>Talents</TabLabel>
+  </AnimeArsenal.BloodDemonArtsGeneDef>
+</Defs>

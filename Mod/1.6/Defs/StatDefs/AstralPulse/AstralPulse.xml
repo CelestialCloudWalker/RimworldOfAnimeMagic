@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StatDef>
+    <defName>AstralPulse</defName>
+    <label>Astral Pulse</label>
+    <category>PawnMisc</category>
+    <description>Astral Pulse a pawn can store.</description>
+    <defaultBaseValue>100</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>Integer</toStringStyle>
+  </StatDef>
+
+</Defs>

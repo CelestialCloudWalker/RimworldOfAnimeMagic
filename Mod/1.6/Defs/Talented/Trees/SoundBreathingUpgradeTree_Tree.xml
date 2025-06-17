@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <Talented.TalentTreeDef>
+    <defName>SoundBreathingUpgradeTree</defName>
+    <treeName>SoundBreathingUpgradeTree</treeName>
+    <dimensions>(600,400)</dimensions>
+    <handlerClass>Talented.ActiveTreeHandler</handlerClass>
+    <skin>DefaultTreeSkin</skin>
+    <nodes>
+      <li>Node_1746405250375_3314</li>
+    </nodes>
+    <availablePaths>
+      <li>
+        <name>Stat Upgrade (TBD)</name>
+        <pathDescription></pathDescription>
+        <exclusiveWith>
+        </exclusiveWith>
+      </li>
+      <li>
+        <name>Abilties(TBD)</name>
+        <pathDescription></pathDescription>
+        <exclusiveWith>
+        </exclusiveWith>
+      </li>
+    </availablePaths>
+    <displayStrategy>FixedPosition</displayStrategy>
+    <talentPointFormula>PerLevel</talentPointFormula>
+  </Talented.TalentTreeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746405250375_3314</defName>
+    <label>TBD</label>
+    <style>DefaultNodeStyle</style>
+    <position>(154,298)</position>
+    <type>Start</type>
+    <upgrades>
+      <li>Seventh_Form_Lingering_Vibrato_Talent</li>
+    </upgrades>
+    <connections>
+      <li>Node_1746405250375_2579</li>
+      <li>Node_1746405250375_7714</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746405250375_2579</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(155,239)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>SoundBreath_Breath_Increase</li>
+      <li>SoundBreath_Breath_Increase2</li>
+      <li>SoundBreath_Breath_Increase3</li>
+      <li>SoundBreath_Breath_Increase4</li>
+    </upgrades>
+    <path>Stat Upgrade (TBD)</path>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746405250375_7714</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(226,288)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Third_Form_Distant_Reverberation_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+    <connections>
+      <li>Node_1746405250375_1833</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746405250375_1833</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(231,239)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Sixth_Form_Symphony_of_Dancing_Steps_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+    <connections>
+      <li>Node_1746405250375_9847</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746405250375_9847</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(321,240)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Second_Form_Echo_Percussion_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+    <connections>
+      <li>Node_1746405250375_2527</li>
+    </connections>
+  </Talented.TalentTreeNodeDef>
+
+  <Talented.TalentTreeNodeDef>
+    <defName>Node_1746405250375_2527</defName>
+    <label>New Node</label>
+    <style>DefaultNodeStyle</style>
+    <position>(321,290)</position>
+    <type>Normal</type>
+    <upgrades>
+      <li>Fourth_Form_Constant_Resounding_Slashes_Talent</li>
+    </upgrades>
+    <path>Abilties(TBD)</path>
+  </Talented.TalentTreeNodeDef>
+
+</Defs>

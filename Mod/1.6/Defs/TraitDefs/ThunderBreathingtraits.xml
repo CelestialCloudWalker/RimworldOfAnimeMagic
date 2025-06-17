@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TraitDef>
+    <defName>ElectricPower</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Electric Power</label>
+        <description>{PAWN_nameDef} channels the raw force of a thunderstorm, delivering lightning-fast attacks that crackle with power. {PAWN_pronoun}'s strikes bypass defenses, like lightning splitting the sky.</description>
+        <statFactors>
+          <MeleeDPS>1.20</MeleeDPS>
+          <MeleeHitChance>1.15</MeleeHitChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>LightningReflexes</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Lightning Reflexes</label>
+        <description>{PAWN_nameDef} moves with the speed and unpredictability of a thunderstrike, reacting in the blink of an eye. {PAWN_pronoun} dodges and strikes with the force of an electric storm.</description>
+        <statFactors>
+          <MoveSpeed>1.20</MoveSpeed>
+          <MeleeDodgeChance>1.20</MeleeDodgeChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>StormcallersBond</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Stormcaller's Bond</label>
+        <description>{PAWN_nameDef} commands the elements with the strength of a storm, drawing animals to {PAWN_possessive} side with the raw power of nature. {PAWN_pronoun} bends beasts to {PAWN_possessive} will as thunder commands the sky.</description>
+        <statFactors>
+          <AnimalsLearningFactor>1.15</AnimalsLearningFactor>
+          <TameAnimalChance>1.18</TameAnimalChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>StormsPersistence</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Storm's Persistence</label>
+        <description>{PAWN_nameDef} endures pain and hardship with the resilience of a thunderstorm. Like the storm that never ceases, {PAWN_pronoun} fights on through exhaustion and suffering, unyielding.</description>
+        <statFactors>
+          <PainShockThreshold>1.18</PainShockThreshold>
+          <RestFallRateFactor>0.85</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>StormbornShield</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Stormborn Shield</label>
+        <description>{PAWN_nameDef} draws strength from the storm, unshaken by toxins and filth. Like a shield of lightning, {PAWN_pronoun} endures, emerging from battle unharmed and unbroken.</description>
+        <statFactors>
+          <FilthRate>0.82</FilthRate>
+          <ToxicResistance>1.18</ToxicResistance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>ElectrifiedDishes</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Electrified Dishes</label>
+        <description>{PAWN_nameDef} uses the crackling power of lightning in the kitchen, creating dishes that are infused with electric energy. {PAWN_pronoun} ensures every meal is charged with vitality and power.</description>
+        <statFactors>
+          <CookSpeed>1.18</CookSpeed>
+          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CracklingDominance</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Crackling Dominance</label>
+        <description>{PAWN_nameDef} commands the room with an undeniable presence, radiating power like a thunderclap. {PAWN_pronoun}'s aura instills both fear and respect, drawing others to {PAWN_possessive} side.</description>
+        <statFactors>
+          <SocialImpact>1.20</SocialImpact>
+          <RestRateMultiplier>1.12</RestRateMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>StormcallersCare</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Stormcaller's Care</label>
+        <description>{PAWN_nameDef} heals with the fierce energy of a storm, restoring vitality with the speed and intensity of a lightning strike. {PAWN_pronoun} ensures that no ally falls to the storm's chaos.</description>
+        <statFactors>
+          <MedicalTendQuality>1.15</MedicalTendQuality>
+          <MedicalTendSpeed>1.20</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>StormsFertility</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Storm's Fertility</label>
+        <description>{PAWN_nameDef} understands the balance of destruction and creation, fostering growth and renewal like the nourishing rains of a storm. {PAWN_pronoun} brings new life wherever {PAWN_pronoun} treads, much like the storm rejuvenates the earth.</description>
+        <statFactors>
+          <PlantWorkSpeed>1.15</PlantWorkSpeed>
+          <PlantHarvestYield>1.18</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TraitDef>
+    <defName>ResonantImpact</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Resonant Impact</label>
+        <description>{PAWN_nameDef} strikes with the power of a sonic boom, delivering blows that resonate with devastating frequency. {PAWN_pronoun}'s attacks shatter defenses, causing a ripple of damage that reverberates through the battlefield.</description>
+        <statFactors>
+          <MeleeDPS>1.18</MeleeDPS>
+          <MeleeHitChance>1.12</MeleeHitChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>EchoingFootwork</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Echoing Footwork</label>
+        <description>{PAWN_nameDef} moves with the speed of a reverberating soundwave, darting across the battlefield as if carried by the wind. {PAWN_pronoun}'s steps create a shockwave that confuses and disorients enemies.</description>
+        <statFactors>
+          <MoveSpeed>1.15</MoveSpeed>
+          <MeleeDodgeChance>1.18</MeleeDodgeChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>HarmonicInfluence</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Harmonic Influence</label>
+        <description>{PAWN_nameDef} radiates a harmonious aura, using the resonance of sound to influence the environment. {PAWN_pronoun} bends the will of others with the subtle frequencies of sound, controlling emotions and behaviors with ease.</description>
+        <statFactors>
+          <AnimalsLearningFactor>1.22</AnimalsLearningFactor>
+          <TameAnimalChance>1.18</TameAnimalChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>VibrationalEndurance</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Vibrational Endurance</label>
+        <description>{PAWN_nameDef} endures with the strength of resonant vibrations, standing firm even in the face of overwhelming pressure. {PAWN_pronoun}'s spirit is as unshakable as a deep, steady bass.</description>
+        <statFactors>
+          <PainShockThreshold>1.20</PainShockThreshold>
+          <RestFallRateFactor>0.82</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>SoundBarrier</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Sound Barrier</label>
+        <description>{PAWN_nameDef} shields themselves with sound, creating barriers of sonic energy that nullify toxins and filth. {PAWN_pronoun} vibrates at such a frequency that harmful substances cannot touch {PAWN_possessive} body.</description>
+        <statFactors>
+          <FilthRate>0.78</FilthRate>
+          <ToxicResistance>1.22</ToxicResistance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>ResonantCooking</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Resonant Cooking</label>
+        <description>{PAWN_nameDef} cooks with the power of sound, using vibrations to perfectly heat and cook food. {PAWN_pronoun} ensures that every meal resonates with flavor, using harmonic frequencies to enhance taste.</description>
+        <statFactors>
+          <CookSpeed>1.18</CookSpeed>
+          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>SonorousCommand</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Sonorous Command</label>
+        <description>{PAWN_nameDef} speaks with the weight of a deep, resonant voice, commanding attention and loyalty with each word. {PAWN_pronoun}'s presence reverberates in the hearts of those nearby, inspiring them to follow {PAWN_pronoun} with unshakeable devotion.</description>
+        <statFactors>
+          <SocialImpact>1.20</SocialImpact>
+          <RestRateMultiplier>1.12</RestRateMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>VibrationalHealing</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Vibrational Healing</label>
+        <description>{PAWN_nameDef} heals through sonic vibrations, resonating with the body's natural frequencies to speed up recovery. {PAWN_pronoun} soothes wounds and pain with a gentle hum that accelerates the healing process.</description>
+        <statFactors>
+          <MedicalTendQuality>1.18</MedicalTendQuality>
+          <MedicalTendSpeed>1.15</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>ResonantHarvest</defName>
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Resonant Harvest</label>
+        <description>{PAWN_nameDef} nurtures the land with harmonic frequencies, encouraging crops to grow at an accelerated rate. {PAWN_pronoun} resonates with the earth, coaxing forth bountiful harvests with minimal effort.</description>
+        <statFactors>
+          <PlantWorkSpeed>1.16</PlantWorkSpeed>
+          <PlantHarvestYield>1.12</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

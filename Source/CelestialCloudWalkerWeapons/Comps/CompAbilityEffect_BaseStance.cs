@@ -2,6 +2,7 @@
 using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -12,6 +13,10 @@ namespace AnimeArsenal
         private int maxJumps = 4;
         private int jumps = 0;
         private int jumpDistance = 5;
+        private float targetSearchRadius = 18f;
+        private List<Pawn> alreadyTargeted = new List<Pawn>();
+
+        public virtual CompProperties_BaseStance Props => (CompProperties_BaseStance)props;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
@@ -20,6 +25,10 @@ namespace AnimeArsenal
                 return;
 
             jumps = 0;
+            alreadyTargeted.Clear();
+            maxJumps = Props.maxJumps;
+            jumpDistance = Props.jumpDistance;
+            targetSearchRadius = Props.targetSearchRadius;
 
             Map map = parent.pawn.Map;
             if (target.Cell.IsValid)
@@ -37,42 +46,100 @@ namespace AnimeArsenal
 
         private void OnFlyerLand(Pawn pawn, PawnFlyer flyer, Map map)
         {
+            // Deal damage at landing position
+            DealDamageAtPosition(pawn.Position);
+
             if (CanJumpAgain())
             {
                 jumps++;
                 IntVec3 currentPosition = pawn.Position;
-                IntVec3 nextPosition = GetNextPositionInRandomCardinalDirection(currentPosition, map);
-                CreateFlyerToTargetPosition(currentPosition, nextPosition, map);
+
+                // Find the next target instead of random direction
+                IntVec3 nextPosition = FindNextTargetPosition(currentPosition, map);
+
+                if (nextPosition.IsValid)
+                {
+                    CreateFlyerToTargetPosition(currentPosition, nextPosition, map);
+                }
+                else
+                {
+                    // If no targets found, end the dash
+                    jumps = maxJumps;
+                }
             }
             else
             {
                 jumps = 0;
+                alreadyTargeted.Clear();
             }
         }
 
-        private IntVec3 GetNextPositionInRandomCardinalDirection(IntVec3 currentPosition, Map map)
+        private IntVec3 FindNextTargetPosition(IntVec3 currentPosition, Map map)
         {
-            IntVec3[] cardinalDirections = new IntVec3[]
-            {
-            new IntVec3(0, 0, jumpDistance),  // North
-            new IntVec3(jumpDistance, 0, 0),  // East
-            new IntVec3(0, 0, -jumpDistance), // South
-            new IntVec3(-jumpDistance, 0, 0)  // West
-            };
+            // Find all hostile pawns within search radius that haven't been targeted yet
+            List<Pawn> potentialTargets = new List<Pawn>();
 
-            int directionIndex = Rand.Range(0, cardinalDirections.Length);
-            IntVec3 direction = cardinalDirections[directionIndex];
-            IntVec3 targetPosition = currentPosition + direction;
-            targetPosition = EnsurePositionIsValid(targetPosition, map);
+            foreach (Pawn mapPawn in map.mapPawns.AllPawnsSpawned)
+            {
+                if (mapPawn == parent.pawn) continue; // Skip self
+                if (mapPawn.Dead || mapPawn.Downed) continue; // Skip dead/downed
+                if (alreadyTargeted.Contains(mapPawn)) continue; // Skip already targeted
+
+                float distance = currentPosition.DistanceTo(mapPawn.Position);
+                if (distance > targetSearchRadius) continue; // Too far
+
+                // Check if hostile
+                if (mapPawn.HostileTo(parent.pawn))
+                {
+                    potentialTargets.Add(mapPawn);
+                }
+            }
+
+            if (potentialTargets.Count == 0)
+            {
+                return IntVec3.Invalid; // No targets found
+            }
+
+            // Sort by distance and pick the closest
+            Pawn closestTarget = potentialTargets.OrderBy(p => currentPosition.DistanceTo(p.Position)).First();
+            alreadyTargeted.Add(closestTarget);
+
+            // Calculate position near the target
+            IntVec3 targetPosition = GetPositionNearTarget(closestTarget.Position, currentPosition, map);
 
             return targetPosition;
+        }
+
+        private IntVec3 GetPositionNearTarget(IntVec3 targetPos, IntVec3 currentPos, Map map)
+        {
+            // Calculate direction to target
+            Vector3 direction = (targetPos - currentPos).ToVector3();
+            float distance = direction.magnitude;
+
+            if (distance <= jumpDistance)
+            {
+                // Can reach the target directly
+                return EnsurePositionIsValid(targetPos, map);
+            }
+            else
+            {
+                // Jump toward the target at max jump distance
+                Vector3 normalized = direction.normalized;
+                IntVec3 jumpVector = new IntVec3(
+                    Mathf.RoundToInt(normalized.x * jumpDistance),
+                    0,
+                    Mathf.RoundToInt(normalized.z * jumpDistance)
+                );
+
+                IntVec3 newTargetPos = currentPos + jumpVector;
+                return EnsurePositionIsValid(newTargetPos, map);
+            }
         }
 
         private IntVec3 EnsurePositionIsValid(IntVec3 position, Map map)
         {
             position.x = Mathf.Clamp(position.x, 0, map.Size.x - 1);
             position.z = Mathf.Clamp(position.z, 0, map.Size.z - 1);
-
 
             if (!position.Walkable(map))
             {
@@ -84,6 +151,36 @@ namespace AnimeArsenal
             }
 
             return position;
+        }
+
+        private void DealDamageAtPosition(IntVec3 position)
+        {
+            Pawn targetPawn = position.GetFirstPawn(parent.pawn.Map);
+
+            if (targetPawn == null || targetPawn == parent.pawn)
+                return;
+
+            if (Props.jumpDamageDef != null)
+            {
+                DamageInfo damageInfo = new DamageInfo(
+                    def: Props.jumpDamageDef,
+                    amount: Props.jumpDamage.RandomInRange,
+                    armorPenetration: 0f,
+                    angle: -1f,
+                    instigator: parent.pawn,
+                    hitPart: null,
+                    weapon: null,
+                    category: DamageInfo.SourceCategory.ThingOrUnknown,
+                    intendedTarget: targetPawn,
+                    instigatorGuilty: true,
+                    spawnFilth: true,
+                    weaponQuality: QualityCategory.Normal,
+                    checkForJobOverride: true,
+                    preventCascade: false
+                );
+
+                targetPawn.TakeDamage(damageInfo);
+            }
         }
 
         private bool CanJumpAgain()
@@ -99,7 +196,7 @@ namespace AnimeArsenal
         public int ticksBetweenJumps = 5;
         public int jumpDistance = 5;
         public int duration = 30;
-
+        public float targetSearchRadius = 18f;
 
         public DamageDef jumpDamageDef;
         public FloatRange jumpDamage = new FloatRange(1f, 2f);
@@ -107,14 +204,6 @@ namespace AnimeArsenal
         public CompProperties_BaseStance()
         {
             compClass = typeof(CompAbilityEffect_DashStance);
-
-            jumpOffsets = new List<IntVec3>
-            {
-                new IntVec3(0, 0, 5),   // North
-                new IntVec3(5, 0, 0),   // East
-                new IntVec3(0, 0, -5),  // South
-                new IntVec3(-5, 0, 0)   // West
-            };
         }
     }
 
@@ -132,34 +221,8 @@ namespace AnimeArsenal
             if (activeDash != null && activeDash.IsRunning)
                 return;
 
-            activeDash = new DashBehaviour(parent.pawn, target.Cell);
-            activeDash.Initialize(
-                maxJumps: Props.maxJumps,
-                jumpDistance: Props.jumpDistance,
-                delayBetweenJumps: Props.ticksBetweenJumps,
-                actionDuration: Props.duration,
-                onJumpStart: (pos) => CreateJumpEffect(pos),
-                onJumpComplete: (pos) => { },
-                onDashComplete: () => SpawnTrailingEffects(),
-                customJumpOffsets: Props.jumpOffsets
-            );
-
-            activeDash.Start();
-            activeDash.onJumpComplete = OnDashLand;
-        }
-
-
-        private void OnDashLand(IntVec3 vec)
-        {
-            Pawn firstPawn = vec.GetFirstPawn(this.parent.pawn.Map);
-
-            if (firstPawn == null || firstPawn == this.parent.pawn)
-                return;
-
-            if (Props.jumpDamageDef != null)
-            {
-                firstPawn.TakeDamage(new DamageInfo(Props.jumpDamageDef, Props.jumpDamage.RandomInRange));
-            }
+            // Use the base class implementation which now has proper targeting
+            base.Apply(target, dest);
         }
 
         public override void CompTick()
@@ -170,12 +233,41 @@ namespace AnimeArsenal
                 activeDash?.Tick();
                 if (activeDash.IsFinished)
                 {
-
                     //always make sure if subscribe to an event that unsubscribe from it properly, it will cause memory leaks otherwise
                     activeDash.onJumpComplete -= OnDashLand;
                     activeDash = null;
                 }
-            }         
+            }
+        }
+
+        private void OnDashLand(IntVec3 vec)
+        {
+            Pawn firstPawn = vec.GetFirstPawn(this.parent.pawn.Map);
+
+            if (firstPawn == null || firstPawn == this.parent.pawn)
+                return;
+
+            if (Props.jumpDamageDef != null)
+            {
+                DamageInfo damageInfo = new DamageInfo(
+                    def: Props.jumpDamageDef,
+                    amount: Props.jumpDamage.RandomInRange,
+                    armorPenetration: 0f,
+                    angle: -1f,
+                    instigator: this.parent.pawn,
+                    hitPart: null,
+                    weapon: null,
+                    category: DamageInfo.SourceCategory.ThingOrUnknown,
+                    intendedTarget: firstPawn,
+                    instigatorGuilty: true,
+                    spawnFilth: true,
+                    weaponQuality: QualityCategory.Normal,
+                    checkForJobOverride: true,
+                    preventCascade: false
+                );
+
+                firstPawn.TakeDamage(damageInfo);
+            }
         }
 
         private void CreateJumpEffect(IntVec3 position)
@@ -185,7 +277,7 @@ namespace AnimeArsenal
 
         private void SpawnTrailingEffects()
         {
-           
+
         }
 
         public override void PostExposeData()

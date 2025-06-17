@@ -31,7 +31,7 @@ namespace AnimeArsenal
         private IntVec3 queuedDestination;
 
         // Accessor for the properties
-        private CompProperties_TeleportMeleeAttack Props => (CompProperties_TeleportMeleeAttack)props;
+        private new CompProperties_TeleportMeleeAttack Props => (CompProperties_TeleportMeleeAttack)props;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
+    <defName>AstralPulse</defName>
+    <label>astral pulse</label>
+    <resourceName>astral pulse</resourceName>
+    <description>Carriers of this gene can harness astral energy, storing it within their bodies for various supernatural abilities.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceLabel>Astral Energy</resourceLabel>
+    <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
+    <abilities>
+      <li>TotalConcentrationBreathing</li>
+      <li>ROMA_Invisability</li>
+    </abilities>
+    <maxStat>AstralPulse</maxStat>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>AstralPulse</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(3, 3, 138)</barColor>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
+
+</Defs>

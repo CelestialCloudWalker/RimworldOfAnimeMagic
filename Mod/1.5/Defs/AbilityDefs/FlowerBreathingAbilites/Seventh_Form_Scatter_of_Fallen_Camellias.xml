@@ -19,24 +19,13 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_BaseStance">
-        <maxJumps>5</maxJumps>
-        <ticksBetweenJumps>2</ticksBetweenJumps>
-        <jumpDistance>4</jumpDistance>
-        <duration>13</duration>
+        <maxJumps>6</maxJumps>
+        <ticksBetweenJumps>1</ticksBetweenJumps>
+        <jumpDistance>5</jumpDistance>
+        <duration>12</duration>
+        <targetSearchRadius>18</targetSearchRadius>
         <jumpDamageDef>Cut</jumpDamageDef>
-        <jumpDamage>3~5</jumpDamage>
-        <jumpOffsets>
-          <li>(0, 0, 4)</li>
-          <li>(3, 0, 3)</li>
-          <li>(4, 0, 0)</li>
-          <li>(3, 0, -3)</li>
-          <li>(0, 0, -4)</li>
-          <li>(-3, 0, -3)</li>
-          <li>(-4, 0, 0)</li>
-          <li>(-3, 0, 3)</li>
-          <li>(2, 0, 2)</li>
-          <li>(-2, 0, -2)</li>
-        </jumpOffsets>
+        <jumpDamage>4~5</jumpDamage>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>FlowerBreath</resourceGeneDef>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RoyalTitleDef Abstract="True" Name="BaseDemonTitle">
+		<tags>
+			<li>DemonTitle</li>
+		</tags>
+		<awardThought>GainedTitle</awardThought>
+		<lostThought>LostTitle</lostThought>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_Demon</defName>
+		<label>Demon</label>
+		<description>Demon Title Test.</description>
+		<seniority>0</seniority>
+		<favorCost>1</favorCost>
+		<changeHeirQuestPoints>1000</changeHeirQuestPoints>
+		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_LowerMoon</defName>
+		<label>Lower Moon</label>
+		<description>Lower Moon.</description>
+		<seniority>400</seniority>
+		<favorCost>10</favorCost>
+		<changeHeirQuestPoints>2200</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>40</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<canBeInherited>True</canBeInherited>
+		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMentalBreakCommonality>4</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+		</permits>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_UpperMoon</defName>
+		<label>Upper Moon</label>
+		<description>Upper Moon.</description>
+		<seniority>500</seniority>
+		<favorCost>14</favorCost>
+		<changeHeirQuestPoints>2800</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<canBeInherited>True</canBeInherited>
+		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+			<li>AA_TradeOrbital</li>
+		</permits>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_DemonKing</defName>
+		<label>Demon King</label>
+		<description>Demon King.</description>
+		<seniority>600</seniority>
+		<favorCost>20</favorCost>
+		<changeHeirQuestPoints>3500</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>75</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<canBeInherited>True</canBeInherited>
+		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMentalBreakCommonality>12</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+			<li>AA_TradeOrbital</li>
+		</permits>
+	</RoyalTitleDef>
+
+
+</Defs>

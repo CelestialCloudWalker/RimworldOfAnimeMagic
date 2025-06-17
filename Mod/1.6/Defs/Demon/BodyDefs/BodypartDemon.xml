@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <BodyPartDef>
+    <defName>AA_DemonHead</defName>
+    <label>Demon head</label>
+    <hitPoints>100</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <executionPartPriority>500</executionPartPriority>
+    <tags>
+      <li>SightSource</li>
+      <li>HearingSource</li>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+      <li>ConsciousnessSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonSkull</defName>
+    <label>Demon skull</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonBrain</defName>
+    <label>Demon brain</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonEye</defName>
+    <label>Demon eye</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <canScarify>false</canScarify>
+    <socketed>true</socketed>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonEar</defName>
+    <label>Demon ear</label>
+    <hitPoints>100</hitPoints>
+    <frostbiteVulnerability>0</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonNose</defName>
+    <label>Demon nose</label>
+    <hitPoints>100</hitPoints>
+    <frostbiteVulnerability>0</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <beautyRelated>true</beautyRelated>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonJaw</defName>
+    <label>Demon jaw</label>
+    <hitPoints>100</hitPoints>
+    <frostbiteVulnerability>0</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <beautyRelated>true</beautyRelated>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonNeck</defName>
+    <label>Demon neck</label>
+    <hitPoints>100</hitPoints>
+    <bleedRate>0</bleedRate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>BreathingPathway</li>
+      <li>EatingPathway</li>
+      <li>TalkingPathway</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <executionPartPriority>1000</executionPartPriority>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonRibcage</defName>
+    <label>Demon ribcage</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>BreathingSourceCage</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonSpine</defName>
+    <label>Demon spine</label>
+    <hitPoints>100</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <tags>
+      <li>Spine</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonLeg</defName>
+    <label>Demon leg</label>
+    <hitPoints>100</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonFoot</defName>
+    <label>Demon foot</label>
+    <hitPoints>100</hitPoints>
+    <frostbiteVulnerability>0</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>AA_DemonTongue</defName>
+    <label>Demon tongue</label>
+    <skinCovered>false</skinCovered>
+    <bleedRate>0</bleedRate>
+    <beautyRelated>true</beautyRelated>
+    <forceAlwaysRemovable>true</forceAlwaysRemovable>
+    <removeRecipeLabelOverride>remove</removeRecipeLabelOverride>
+    <tags>
+      <li>Tongue</li>
+    </tags>
+  </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonTorso</defName>
+      <label>Demon torso</label>
+      <hitPoints>100</hitPoints>
+      <skinCovered>true</skinCovered>
+      <canScarify>false</canScarify>
+      <canSuggestAmputation>false</canSuggestAmputation>
+      <executionPartPriority>400</executionPartPriority>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonShoulder</defName>
+      <label>Demon shoulder</label>
+      <hitPoints>100</hitPoints>
+      <skinCovered>true</skinCovered>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonArm</defName>
+      <label>Demon arm</label>
+      <hitPoints>100</hitPoints>
+      <skinCovered>true</skinCovered>
+      <canScarify>false</canScarify>
+      <tags>
+        <li>ManipulationLimbCore</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonHand</defName>
+      <label>Demon hand</label>
+      <hitPoints>100</hitPoints>
+      <frostbiteVulnerability>0</frostbiteVulnerability>
+      <skinCovered>true</skinCovered>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonFinger</defName>
+      <label>Demon finger</label>
+      <hitPoints>100</hitPoints>
+      <frostbiteVulnerability>0</frostbiteVulnerability>
+      <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+      <skinCovered>true</skinCovered>
+      <tags>
+        <li>ManipulationLimbDigit</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonWaist</defName>
+      <label>utility slot</label>
+      <conceptual>true</conceptual>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonToe</defName>
+      <label>Demon toe</label>
+      <hitPoints>100</hitPoints>
+      <frostbiteVulnerability>0</frostbiteVulnerability>
+      <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+      <skinCovered>true</skinCovered>
+      <tags>
+        <li>MovingLimbDigit</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <!-- Bones -->
+
+    <BodyPartDef>
+      <defName>AA_DemonClavicle</defName>
+      <label>Demon clavicle</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+      <destroyableByDamage>false</destroyableByDamage>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonSternum</defName>
+      <label>Demon sternum</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>BreathingSourceCage</li>
+      </tags>
+      <destroyableByDamage>false</destroyableByDamage>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonHumerus</defName>
+      <label>Demon humerus</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonRadius</defName>
+      <label>Demon radius</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>ManipulationLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonPelvis</defName>
+      <label>Demon pelvis</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>Pelvis</li>
+      </tags>
+      <destroyableByDamage>false</destroyableByDamage>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonFemur</defName>
+      <label>Demon femur</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>MovingLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+    <BodyPartDef>
+      <defName>AA_DemonTibia</defName>
+      <label>Demon tibia</label>
+      <hitPoints>100</hitPoints>
+      <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+      <skinCovered>false</skinCovered>
+      <solid>true</solid>
+      <bleedRate>0</bleedRate>
+      <tags>
+        <li>MovingLimbSegment</li>
+        <li>Mirrored</li>
+      </tags>
+    </BodyPartDef>
+
+</Defs>

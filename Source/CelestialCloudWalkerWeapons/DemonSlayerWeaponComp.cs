@@ -104,7 +104,7 @@ namespace AnimeArsenal
             foreach (string geneName in Props.breathingStyleGenes)
             {
                 GeneDef existingGeneDef = DefDatabase<GeneDef>.GetNamedSilentFail(geneName);
-                if (existingGeneDef != null && pawn.genes.HasGene(existingGeneDef))
+                if (existingGeneDef != null && pawn.genes.HasActiveGene(existingGeneDef))
                 {
                     alreadyHasBreathingStyle = true;
                     break;

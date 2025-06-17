@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>Twelfth_Form_Thunder_Shield_Reversal</defName>
+    <label>Twelfth Form: Thunder Shield Reversal</label>
+    <description>A instinctive counter that deflects incoming projectiles.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>ThunderBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <Radius>5</Radius>
+        <MaxShotsToReflect>20</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_ThunderDeflect</effecterDef>
+       </li>
+    </comps>
+  </AbilityDef>
+</Defs>

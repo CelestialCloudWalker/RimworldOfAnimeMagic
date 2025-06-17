@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>GlacialEdge</defName>
+    <label>Glacial Edge</label>
+    <description>This enchantment imbues the weapon with the essence of frost, chilling enemies on contact. Strikes cause severe frostbite and sap their strength, slowing their movements as if frozen in time.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
+      <bleedRate>0.0</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Shattered by ice</destroyedLabel>
+      <destroyedOutLabel>Frozen beyond repair</destroyedOutLabel>
+    </injuryProps>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>BreathFrost_Damage</damageType>
+        <damageValue>10</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

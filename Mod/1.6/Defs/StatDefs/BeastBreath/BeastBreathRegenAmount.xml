@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StatDef>
+    <defName>BeastBreath_RegenAmount</defName>
+    <label>Beast Breath Regen Amount Per Regen Tick</label>
+    <category>PawnMisc</category>
+    <description>Rate of Beast Breath regeneration per tick.</description>
+    <defaultBaseValue>.15</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentOne</toStringStyle>
+  </StatDef>
+</Defs>

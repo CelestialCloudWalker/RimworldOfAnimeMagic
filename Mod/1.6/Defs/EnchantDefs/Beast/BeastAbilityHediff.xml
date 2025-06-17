@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>PrimalEdge</defName>
+    <label>Primal Edge</label>
+    <description>The weapon emanates a primal, feral energy. Its strikes leave behind deep, savage wounds and an aura of raw power.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <injuryProps>
+      <painPerSeverity>0.06</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00035</averagePainPerSeverityPermanent>
+      <bleedRate>0.000</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>shattered</destroyedLabel>
+      <destroyedOutLabel>ravaged</destroyedOutLabel>
+    </injuryProps>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>PrimalFang</damageType>
+        <damageValue>7</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

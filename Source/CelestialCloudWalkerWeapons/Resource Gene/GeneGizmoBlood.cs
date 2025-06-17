@@ -7,17 +7,17 @@ using Verse;
 
 namespace AnimeArsenal
 {
+    [StaticConstructorOnStartup]
     public class GeneGizmoBlood : GeneGizmo_ResourceAstral
     {
         private BloodDemonArtsGene BloodDemonArtsGene => (BloodDemonArtsGene)gene;
         protected override bool IsDraggable => false;
         private static readonly Texture2D DragBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.74f, 0.97f, 0.8f));
-
+        
         public GeneGizmoBlood(BloodDemonArtsGene gene, List<IGeneResourceDrain> drainGenes, Color barColor, Color barHighlightColor) : base(gene, drainGenes, barColor, barHighlightColor)
         {
-
         }
-
+        
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
         {
             var result = base.GizmoOnGUI(topLeft, maxWidth, parms);
@@ -25,7 +25,7 @@ namespace AnimeArsenal
             DrawDraggableBarTarget(barRect, progress, DragBarTex);
             return result;
         }
-
+        
         private static void DrawDraggableBarTarget(Rect rect, float percent, Texture2D targetTex)
         {
             float num = Mathf.Round((rect.width - 8f) * percent);
@@ -50,6 +50,5 @@ namespace AnimeArsenal
             position.y = rect.yMax - 2f;
             GUI.DrawTexture(position, targetTex);
         }
-
     }
 }

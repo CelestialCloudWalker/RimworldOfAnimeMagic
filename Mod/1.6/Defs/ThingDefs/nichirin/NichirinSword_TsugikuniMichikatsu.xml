@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>NichirinSword_TsugikuniMichikatsu</defName>
+    <label>Michikatsu's Nichirin Blade</label>
+    <description>forged from a unique metal that absorbs sunlight, making them effective against demons, and they change color when drawn by their owner, reflecting the wielder's skill and personality.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_TsugikuniMichikatsu</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <recipeMaker>
+    </recipeMaker>
+    <equipmentType>Primary</equipmentType>
+    <costList>
+      <Steel>1000</Steel>
+      <Plasteel>50</Plasteel>
+    </costList>
+    <techLevel>Spacer</techLevel>
+    
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>1.5</Mass>
+    </statBases>
+    <equippedAngleOffset>-50</equippedAngleOffset>
+    <equippedDistanceOffset>0</equippedDistanceOffset>
+    <tools>
+      <li>
+        <label>blade back</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>1.1</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="AnimeArsenal.DrawOffsetExt">
+        <offset>(0.4, 0, 0.4)</offset>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

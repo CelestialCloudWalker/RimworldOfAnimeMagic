@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>SunEnchantment</defName>
+    <label>Sun Enchantment</label>
+    <description>A frost-based enchantment that provides defensive benefits but drains energy quickly.</description>
+
+    <enchantHediff>RadiantSunstrike</enchantHediff>
+    <resourceGene>SunBreath</resourceGene>
+
+    <!-- Higher resource cost -->
+    <ticksBetweenCost>120</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

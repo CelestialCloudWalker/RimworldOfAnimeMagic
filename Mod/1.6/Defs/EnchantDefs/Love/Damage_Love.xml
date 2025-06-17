@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>HeartStrike</defName>
+    <label>heart strike</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was overwhelmed by the power of love breathing.</deathMessage>
+    <hediff>HeartWound</hediff>
+    <hediffSkin>HeartWound</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>HeartWound</defName>
+    <label>heart wound</label>
+    <labelNoun>a love-infused wound</labelNoun>
+    <description>A wound inflicted by the emotional and precise strikes of Love Breathing.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.72</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_CauseMentalState">
+        <humanMentalState>Wander_Psychotic</humanMentalState>
+        <animalMentalState>Manhunter</animalMentalState>
+        <mtbDaysToCauseMentalState>0.1</mtbDaysToCauseMentalState>
+        <minSeverity>0.2</minSeverity>
+        <endMentalStateOnCure>true</endMentalStateOnCure>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.04</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Severed</destroyedLabel>
+      <destroyedOutLabel>Completely severed</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

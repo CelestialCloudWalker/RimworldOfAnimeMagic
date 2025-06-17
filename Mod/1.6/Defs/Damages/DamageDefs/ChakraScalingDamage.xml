@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.ChakraScalingDamageDef ParentName="CutBase">
+    <defName>ChakraScalingDamage</defName>
+    <label>cursed</label>
+    <workerClass>AnimeArsenal.DamageWorker_ChakraScaling</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has died to chakra damage.</deathMessage>
+    <defaultDamage>10</defaultDamage>
+  </AnimeArsenal.ChakraScalingDamageDef>
+
+  <DamageDef ParentName="StunBase">
+    <defName>ElectricDamage</defName>
+    <label>Electric Damage</label>
+    <workerClass>DamageWorker_Stun</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been stunned to death.</deathMessage>
+    <defaultDamage>20</defaultDamage>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+    <combatLogRules>Damage_Stun</combatLogRules>
+    <causeStun>true</causeStun>
+    <hediff>ElectricalBurn</hediff>
+  </DamageDef>
+</Defs>

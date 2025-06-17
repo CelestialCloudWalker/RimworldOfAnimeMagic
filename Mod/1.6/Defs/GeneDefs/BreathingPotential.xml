@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneDef>
+    <defName>BreathingPotential</defName>
+    <label>Breathing Potential</label>
+    <description>BreathingPotential.</description>
+    <customEffectDescriptions>
+      <li>BreathingPotential.</li>
+    </customEffectDescriptions>
+    <iconPath>Skills/BreathingPotential</iconPath>
+    <selectionWeight>0.2</selectionWeight>
+    <displayOrderInCategory>-2</displayOrderInCategory>
+    <minAgeActive>3</minAgeActive>
+  </GeneDef>
+
+</Defs>

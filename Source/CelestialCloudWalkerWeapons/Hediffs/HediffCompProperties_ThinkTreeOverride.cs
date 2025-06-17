@@ -16,7 +16,7 @@ namespace AnimeArsenal
     {
         public ThinkTreeDef overrideThinkTreeDef;
 
-        new HediffCompProperties_ThinkTreeOverride Props => (HediffCompProperties_ThinkTreeOverride)props;
+        HediffCompProperties_ThinkTreeOverride Props => (HediffCompProperties_ThinkTreeOverride)props;
 
         public override void CompExposeData()
         {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>VeilEnchantment</defName>
+    <label>Veil Enchantment</label>
+    <description>An enchantment that imbues the weapon with the elusive and deadly power of mist, enhancing combat precision while steadily draining stamina.</description>
+    <enchantHediff>MistEdge</enchantHediff>
+    <resourceGene>MistBreath</resourceGene>
+    <!-- Resource Cost Settings -->
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef>
+      <defName>Thirteenth_Form_Distant_Wind_Cutter</defName>
+      <label>Thirteenth Form: Distant Wind Cutter</label>
+      <description>The user delivers A diagonal slash with its sword.</description>
+      <iconPath>UI/Icons/ComingSoon</iconPath>
+      <cooldownTicksRange>60</cooldownTicksRange>
+      <displayOrder>200</displayOrder>
+      <aiCanUse>true</aiCanUse>
+      <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+      <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+      <verbProperties>
+        <verbClass>Verb_CastAbility</verbClass>
+        <range>20</range>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>FireSpew_Resolve</soundCast>
+        <targetParams>
+          <canTargetPawns>True</canTargetPawns>
+          <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+      <comps>
+        <li Class="CompProperties_AbilityLaunchProjectile">
+          <projectileDef>Thirteenth_Form_Distant_Wind_Cutter_Projectile</projectileDef>
+        </li>
+        <li Class="AnimeArsenal.CompProperties_ResourceCost">
+          <resourceGeneDef>WindBreath</resourceGeneDef>
+          <resourceCost>20</resourceCost>
+        </li>
+      </comps>
+    </AbilityDef>
+</Defs>

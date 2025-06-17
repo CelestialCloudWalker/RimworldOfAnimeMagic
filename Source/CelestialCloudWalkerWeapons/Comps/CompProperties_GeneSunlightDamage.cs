@@ -65,7 +65,7 @@ namespace AnimeArsenal
 
         private bool HasBloodDemonArt(Pawn pawn)
         {
-            return pawn.genes?.HasGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) ?? false;
+            return pawn.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) ?? false;
         }
 
         private bool IsExposedToSunlight(Pawn pawn)
@@ -89,7 +89,12 @@ namespace AnimeArsenal
                 null,
                 null,
                 DamageInfo.SourceCategory.ThingOrUnknown,
-                null
+                null,
+                true,
+                true,
+                QualityCategory.Normal,
+                true,
+                false
             );
 
             pawn.TakeDamage(damageInfo);
