@@ -65,6 +65,10 @@
     <Compile Include="AnimeArsenalUtility.cs" />
     <Compile Include="AssetBundleShaderManager.cs" />
     <Compile Include="BodyDisappearExtension.cs" />
+    <Compile Include="CompAbilityEffect_CauseSleep.cs" />
+    <Compile Include="CompAbilityEffect_DreamManipulation.cs" />
+    <Compile Include="CompAbilityEffect_GroundLaunch.cs" />
+    <Compile Include="CompProjectileEffect_CauseSleep.cs" />
     <Compile Include="CompProperties_AbilityDamage.cs" />
     <Compile Include="Comps\HediffCompProperties_Overlay.cs" />
     <Compile Include="DemonSlayerWeaponComp.cs" />
@@ -77,6 +81,7 @@
     <Compile Include="Comps\DashTrailManager.cs" />
     <Compile Include="Comps\TrackedMote.cs" />
     <Compile Include="PawnRenderNodeWorker_WeaponOverlay.cs" />
+    <Compile Include="Projectile_SleepEffect _ScalingStatDamageProjectile.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />

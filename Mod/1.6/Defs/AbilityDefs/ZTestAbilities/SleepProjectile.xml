@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>Ninth_Form_Sleep_Arrow</defName>
+    <label>Sleep Projectile</label>
+    <description>The user fires a sleep arrow that puts targets to sleep on impact.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetLocations>True</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Sleep_Projectile</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Sleep Projectile Definition -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Sleep_Projectile</defName>
+    <label>sleep arrow</label>
+    <thingClass>AnimeArsenal.Projectile_WithSleepComp</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/projectile_enmu</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>55</speed>
+      <stoppingPower>1.5</stoppingPower>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(128, 128, 128, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ProjectileEffect_CauseSleep">
+        <useSleepHediff>true</useSleepHediff>
+        <sleepHediffDef>Anesthetic</sleepHediffDef>
+        <sleepSeverity>0.8</sleepSeverity>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <areaEffect>true</areaEffect>
+        <effectRadius>1</effectRadius>
+        <!-- Optional: Add sound effect -->
+        <!-- <effectSound>YourSoundDefName</effectSound> -->
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

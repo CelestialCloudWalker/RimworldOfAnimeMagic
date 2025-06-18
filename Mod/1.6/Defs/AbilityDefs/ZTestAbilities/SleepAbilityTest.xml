@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Example ability that uses the sleep comp -->
+  <AbilityDef>
+    <defName>YourMod_SleepSpell</defName>
+    <label>Demon Sleep Test</label>
+    <description>Causes the target to fall asleep instantly.</description>
+    <iconPath>UI/Icons/YourSleepIcon</iconPath> <!-- Replace with your icon path -->
+    <cooldownTicksRange>1000</cooldownTicksRange> <!-- 50 seconds -->
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>1.5</warmupTime>
+      <soundCast>YourSleepSound</soundCast> <!-- Optional sound -->
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <useSleepHediff>false</useSleepHediff>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <!-- Optional: Use a specific hediff instead of just setting rest to 0 -->
+        <!-- <sleepHediffDef>Anesthetic</sleepHediffDef> -->
+        <!-- <sleepSeverity>0.8</sleepSeverity> -->
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+</Defs>

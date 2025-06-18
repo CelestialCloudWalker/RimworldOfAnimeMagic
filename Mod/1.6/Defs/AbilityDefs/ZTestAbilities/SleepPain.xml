@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Custom Thought Definitions for Dream Manipulation -->
+
+  <!-- Nightmare Thoughts -->
+  <ThoughtDef>
+    <defName>NightmareDream</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>3</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>nightmare</label>
+        <description>I had terrible nightmares that felt so real. The images still haunt me.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Pleasant Dream Thoughts -->
+  <ThoughtDef>
+    <defName>PleasantDream</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>2</durationDays>
+    <stackLimit>2</stackLimit>
+    <stages>
+      <li>
+        <label>pleasant dreams</label>
+        <description>I had the most wonderful dreams. I feel refreshed and optimistic.</description>
+        <baseMoodEffect>+12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Memory Implantation Thoughts -->
+  <ThoughtDef>
+    <defName>ImplantedMemory_Betrayal</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>10</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>betrayed by friend</label>
+        <description>I remember being betrayed by someone I trusted. The memory feels so real.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ImplantedMemory_Victory</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>7</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>glorious victory</label>
+        <description>I remember achieving a great victory. It fills me with confidence.</description>
+        <baseMoodEffect>+10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ImplantedMemory_Loss</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>8</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>terrible loss</label>
+        <description>I remember losing something precious. The grief feels overwhelming.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Mood Manipulation Thoughts -->
+  <ThoughtDef>
+    <defName>DreamMoodPositive</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>manipulated dreams</label>
+        <description>My dreams were unusually positive and uplifting. I feel strangely optimistic.</description>
+        <baseMoodEffect>+15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DreamMoodNegative</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>disturbing dreams</label>
+        <description>My dreams were filled with anxiety and dread. I can't shake the feeling.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Hediff Definitions for Dream Effects -->
+
+  <!-- Nightmare Hediff -->
+  <HediffDef>
+    <defName>NightmareTrauma</defName>
+    <label>nightmare trauma</label>
+    <description>Psychological trauma from experiencing terrifying nightmares.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.2</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <label>mild</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <label>severe</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Pleasant Dream Hediff -->
+  <HediffDef>
+    <defName>DreamBliss</defName>
+    <label>dream bliss</label>
+    <description>A state of enhanced well-being from pleasant dreams.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.8, 0.4)</defaultLabelColor>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.3</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.10</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Memory Extraction Hediff -->
+  <HediffDef>
+    <defName>MemoryConfusion</defName>
+    <label>memory confusion</label>
+    <description>Confusion and disorientation from having memories extracted.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 0.8)</defaultLabelColor>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.25</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Memory Implantation Hediff -->
+  <HediffDef>
+    <defName>MemoryDisorientation</defName>
+    <label>memory disorientation</label>
+    <description>Disorientation from having false memories implanted.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.6, 0.8)</defaultLabelColor>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.15</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.08</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Updated Ability Definitions with Custom Thoughts and Hediffs -->
+
+  <!-- Nightmare Manipulation -->
+  <AbilityDef>
+    <defName>Dream_Nightmare</defName>
+    <label>Nightmare</label>
+    <description>Inflict terrifying nightmares on a sleeping target, causing psychological trauma and reducing rest quality.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <displayOrder>210</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5</range>
+      <warmupTime>2.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>Nightmare</dreamEffectType>
+        <effectSeverity>0.8</effectSeverity>
+        <restPenalty>0.4</restPenalty>
+        <nightmareThought>NightmareDream</nightmareThought>
+        <nightmareHediff>NightmareTrauma</nightmareHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Pleasant Dream -->
+  <AbilityDef>
+    <defName>Dream_Pleasant</defName>
+    <label>Pleasant Dreams</label>
+    <description>Grant peaceful, restorative dreams to a sleeping target, improving their mood and rest quality.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <displayOrder>211</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5</range>
+      <warmupTime>2.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>PleasantDream</dreamEffectType>
+        <effectSeverity>0.6</effectSeverity>
+        <restBonus>0.5</restBonus>
+        <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+        <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Memory Extraction - FIXED -->
+  <AbilityDef>
+    <defName>Dream_MemoryExtraction</defName>
+    <label>Extract Dreams</label>
+    <description>Dive into a sleeping target's dreams to extract valuable information about their faction, skills, and background.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <displayOrder>212</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3</range>
+      <warmupTime>3.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>MemoryExtraction</dreamEffectType>
+        <effectSeverity>0.5</effectSeverity>
+        <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Memory Implantation - FIXED -->
+  <AbilityDef>
+    <defName>Dream_MemoryImplantation</defName>
+    <label>Implant Dreams</label>
+    <description>Plant false memories and thoughts into a sleeping target's mind through dream manipulation.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <displayOrder>213</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3</range>
+      <warmupTime>4.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>MemoryImplantation</dreamEffectType>
+        <effectSeverity>0.7</effectSeverity>
+        <memoryImplantHediff>MemoryDisorientation</memoryImplantHediff>
+        <implantedMemoryThoughts>
+          <li>ImplantedMemory_Betrayal</li>
+          <li>ImplantedMemory_Victory</li>
+          <li>ImplantedMemory_Loss</li>
+        </implantedMemoryThoughts>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Skill Transfer -->
+  <AbilityDef>
+    <defName>Dream_SkillDrain</defName>
+    <label>Dream Skill Drain</label>
+    <description>Enter a sleeping target's dreams and steal their knowledge and skills for yourself. The skill and amount transferred is unpredictable.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2400</cooldownTicksRange>
+    <displayOrder>214</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>2</range>
+      <warmupTime>5.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>SkillTransfer</dreamEffectType>
+        <effectSeverity>0.5</effectSeverity>
+        <transferFromTarget>true</transferFromTarget>
+        <showMessage>true</showMessage>
+        <!-- Remove skillToTransfer and skillTransferAmount - will be random -->
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Mood Manipulation - FIXED -->
+  <AbilityDef>
+    <defName>Dream_MoodControl</defName>
+    <label>Dream Mood Control</label>
+    <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <displayOrder>215</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>4</range>
+      <warmupTime>2.5</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>MoodManipulation</dreamEffectType>
+        <effectSeverity>0.6</effectSeverity>
+        <moodChange>15</moodChange>
+        <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+        <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>
