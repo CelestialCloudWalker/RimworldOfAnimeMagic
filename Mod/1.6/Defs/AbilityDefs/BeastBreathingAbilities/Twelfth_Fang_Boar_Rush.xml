@@ -29,6 +29,10 @@
         <targetSearchRadius>18</targetSearchRadius>
         <jumpDamageDef>Cut</jumpDamageDef>
         <jumpDamage>4~5</jumpDamage>
+        <!-- Custom effecter that plays when ability is first activated -->
+        <casterEffecter>BoarRush_Activation</casterEffecter>
+        <!-- Custom effecter that plays on each hit/jump -->
+        <impactEffecter>BoarRush_Impact</impactEffecter>
       </li>
     </comps>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>

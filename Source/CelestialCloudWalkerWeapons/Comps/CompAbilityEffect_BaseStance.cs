@@ -24,6 +24,14 @@ namespace AnimeArsenal
             if (parent.pawn?.Map == null)
                 return;
 
+            // Play initial activation effecter
+            if (Props.casterEffecter != null)
+            {
+                Effecter effecter = Props.casterEffecter.Spawn();
+                effecter.Trigger(new TargetInfo(parent.pawn.Position, parent.pawn.Map), new TargetInfo(parent.pawn.Position, parent.pawn.Map));
+                effecter.Cleanup();
+            }
+
             jumps = 0;
             alreadyTargeted.Clear();
             maxJumps = Props.maxJumps;
@@ -48,6 +56,14 @@ namespace AnimeArsenal
         {
             // Deal damage at landing position
             DealDamageAtPosition(pawn.Position);
+
+            // Play impact effecter on each hit
+            if (Props.impactEffecter != null)
+            {
+                Effecter effecter = Props.impactEffecter.Spawn();
+                effecter.Trigger(new TargetInfo(pawn.Position, map), new TargetInfo(pawn.Position, map));
+                effecter.Cleanup();
+            }
 
             if (CanJumpAgain())
             {
@@ -201,6 +217,10 @@ namespace AnimeArsenal
         public DamageDef jumpDamageDef;
         public FloatRange jumpDamage = new FloatRange(1f, 2f);
 
+        // Effecter properties
+        public EffecterDef casterEffecter;  // Plays when ability is first activated
+        public EffecterDef impactEffecter;  // Plays on each hit/jump
+
         public CompProperties_BaseStance()
         {
             compClass = typeof(CompAbilityEffect_DashStance);
@@ -209,81 +229,7 @@ namespace AnimeArsenal
 
     public class CompAbilityEffect_DashStance : CompAbilityEffect_BaseStance
     {
-        private DashBehaviour activeDash;
-
-        public new CompProperties_BaseStance Props => (CompProperties_BaseStance)props;
-
-        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
-        {
-            if (parent.pawn?.Map == null || !target.Cell.IsValid)
-                return;
-
-            if (activeDash != null && activeDash.IsRunning)
-                return;
-
-            // Use the base class implementation which now has proper targeting
-            base.Apply(target, dest);
-        }
-
-        public override void CompTick()
-        {
-            base.CompTick();
-            if (activeDash != null)
-            {
-                activeDash?.Tick();
-                if (activeDash.IsFinished)
-                {
-                    //always make sure if subscribe to an event that unsubscribe from it properly, it will cause memory leaks otherwise
-                    activeDash.onJumpComplete -= OnDashLand;
-                    activeDash = null;
-                }
-            }
-        }
-
-        private void OnDashLand(IntVec3 vec)
-        {
-            Pawn firstPawn = vec.GetFirstPawn(this.parent.pawn.Map);
-
-            if (firstPawn == null || firstPawn == this.parent.pawn)
-                return;
-
-            if (Props.jumpDamageDef != null)
-            {
-                DamageInfo damageInfo = new DamageInfo(
-                    def: Props.jumpDamageDef,
-                    amount: Props.jumpDamage.RandomInRange,
-                    armorPenetration: 0f,
-                    angle: -1f,
-                    instigator: this.parent.pawn,
-                    hitPart: null,
-                    weapon: null,
-                    category: DamageInfo.SourceCategory.ThingOrUnknown,
-                    intendedTarget: firstPawn,
-                    instigatorGuilty: true,
-                    spawnFilth: true,
-                    weaponQuality: QualityCategory.Normal,
-                    checkForJobOverride: true,
-                    preventCascade: false
-                );
-
-                firstPawn.TakeDamage(damageInfo);
-            }
-        }
-
-        private void CreateJumpEffect(IntVec3 position)
-        {
-            FleckMaker.ThrowDustPuff(position.ToVector3Shifted(), parent.pawn.Map, 1.0f);
-        }
-
-        private void SpawnTrailingEffects()
-        {
-
-        }
-
-        public override void PostExposeData()
-        {
-            base.PostExposeData();
-            Scribe_Deep.Look(ref activeDash, "activeDash");
-        }
+        // This class inherits all functionality from the base class
+        // No overrides needed - the base class handles everything correctly
     }
 }

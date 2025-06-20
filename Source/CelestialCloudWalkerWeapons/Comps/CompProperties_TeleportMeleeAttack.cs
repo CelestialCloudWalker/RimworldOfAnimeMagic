@@ -15,6 +15,10 @@ namespace AnimeArsenal
         public float effectRadius = 0f;
         public float additionalDamageFactorFromMeleeSkill = 0f;
 
+        // Effecter properties
+        public EffecterDef casterEffecter;  // Plays when ability is first activated (on cast)
+        public EffecterDef impactEffecter;  // Plays on hit/damage
+
         public CompProperties_TeleportMeleeAttack()
         {
             compClass = typeof(CompAbilityEffect_TeleportMeleeAttack);
@@ -41,6 +45,15 @@ namespace AnimeArsenal
                 Log.Warning("TeleportMeleeAttack - Invalid target or state");
                 return;
             }
+
+            // Play initial activation effecter (on cast)
+            if (Props.casterEffecter != null)
+            {
+                Effecter effecter = Props.casterEffecter.Spawn();
+                effecter.Trigger(new TargetInfo(parent.pawn.Position, parent.pawn.Map), new TargetInfo(parent.pawn.Position, parent.pawn.Map));
+                effecter.Cleanup();
+            }
+
             TargetThing = target.Thing;
             queuedDestination = TargetThing.Position;
             teleportQueued = true;
@@ -153,6 +166,14 @@ namespace AnimeArsenal
 
             // Apply damage
             target.TakeDamage(dinfo);
+
+            // Play impact effecter on hit
+            if (Props.impactEffecter != null)
+            {
+                Effecter effecter = Props.impactEffecter.Spawn();
+                effecter.Trigger(new TargetInfo(target.Position, target.Map), new TargetInfo(target.Position, target.Map));
+                effecter.Cleanup();
+            }
 
             // Apply stun if configured
             if (Props.stunDuration > 0 && target is Pawn targetPawn)

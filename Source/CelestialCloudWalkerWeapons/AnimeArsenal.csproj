@@ -71,6 +71,7 @@
     <Compile Include="CompProjectileEffect_CauseSleep.cs" />
     <Compile Include="CompProperties_AbilityDamage.cs" />
     <Compile Include="Comps\HediffCompProperties_Overlay.cs" />
+    <Compile Include="DemonConsumeandHeal.cs" />
     <Compile Include="DemonSlayerWeaponComp.cs" />
     <Compile Include="DrawOffsetExt.cs" />
     <Compile Include="GraphicDataWithShader.cs" />

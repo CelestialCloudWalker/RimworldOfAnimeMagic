@@ -27,7 +27,6 @@
     </comps>
   </AbilityDef>
 
-  <!-- Sleep Projectile Definition -->
   <ThingDef ParentName="BaseBullet">
     <defName>Sleep_Projectile</defName>
     <label>sleep arrow</label>
@@ -39,7 +38,7 @@
     <projectile>
       <damageDef>Cut</damageDef>
       <damageAmountBase>25</damageAmountBase>
-      <speed>55</speed>
+      <speed>35</speed>
       <stoppingPower>1.5</stoppingPower>
     </projectile>
     <comps>
@@ -55,8 +54,6 @@
         <showMessage>true</showMessage>
         <areaEffect>true</areaEffect>
         <effectRadius>1</effectRadius>
-        <!-- Optional: Add sound effect -->
-        <!-- <effectSound>YourSoundDefName</effectSound> -->
       </li>
     </comps>
   </ThingDef>
