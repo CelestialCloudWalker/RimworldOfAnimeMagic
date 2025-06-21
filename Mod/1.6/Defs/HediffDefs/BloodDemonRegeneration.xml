@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Regeneration Hediff -->
+  <HediffDef>
+    <defName>BloodDemonRegeneration</defName>
+    <label>demonic regeneration</label>
+    <description>Enhanced healing capabilities from demonic blood. Wounds heal faster and scars fade over time.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 1.0, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <initialSeverity>1.0</initialSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="HediffCompProperties_HealPermanentWounds">
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>regenerating</label>
+        <naturalHealingFactor>3.0</naturalHealingFactor>
+        <totalBleedFactor>0.5</totalBleedFactor>
+        <painFactor>0.8</painFactor>
+        <statOffsets>
+          <InjuryHealingFactor>2.0</InjuryHealingFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+
+</Defs>

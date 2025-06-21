@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Simple Retreat Dash Ability -->
+  <AbilityDef>
+    <defName>AA_RetreatDash</defName>
+    <label>retreat dash</label>
+    <description>Quickly dash away from the target to a safe position.</description>
+    <iconPath>UI/Icons/ThingCategories/BodyPartsNatural</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <targetRequired>true</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>30</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityRetreatDash">
+        <minDashDistance>8</minDashDistance>
+        <maxDashDistance>15</maxDashDistance>
+        <avoidEnemies>true</avoidEnemies>
+        <enemyAvoidanceRadius>5</enemyAvoidanceRadius>
+        <grantTemporaryImmunity>false</grantTemporaryImmunity>
+        <grantSpeedBoost>false</grantSpeedBoost>
+        <grantMoodBoost>false</grantMoodBoost>
+        <restoreStamina>false</restoreStamina>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

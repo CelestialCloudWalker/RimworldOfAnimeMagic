@@ -23,24 +23,14 @@ namespace AnimeArsenal
     {
         public static void Postfix(Verb_MeleeAttack __instance, LocalTargetInfo target, ref DamageWorker.DamageResult __result)
         {
-            if (__instance.EquipmentSource != null && target.Thing is Pawn targetPawn)
+            if (__instance.EquipmentSource != null && target.Thing is Pawn targetPawn && __instance.CasterPawn != null)
             {
-                if (__instance.CasterPawn != null)
-                {
-                    ///find all hediffs, then get any with an EnchantComp, then turn them all into one list
-                    IEnumerable<EnchantComp> enchantments = __instance.CasterPawn.health.hediffSet.hediffs
-                        .Select(x => x.TryGetComp<EnchantComp>())
-                        .Where(x => x != null);
-                    //check the list isnt nul
-                    if (enchantments != null)
-                    {
-                        //loop over each one of them and call their ApplyEnchant method
-                        foreach (var item in enchantments)
-                        {
-                            item.ApplyEnchant(targetPawn);
-                        }
-                    }
-                }
+                IEnumerable<EnchantComp> enchantments = __instance.CasterPawn.health.hediffSet.hediffs
+                    .Select(x => x.TryGetComp<EnchantComp>())
+                    .Where(x => x != null);
+
+                foreach (var item in enchantments)
+                    item.ApplyEnchant(targetPawn);
             }
         }
     }
@@ -51,32 +41,76 @@ namespace AnimeArsenal
         [HarmonyPrefix]
         public static void Prefix(Thing eq, ref Vector3 drawLoc, ref float aimAngle)
         {
-            if (eq != null && eq.def != null && eq.def.HasModExtension<DrawOffsetExt>())
+            if (eq?.def?.HasModExtension<DrawOffsetExt>() == true)
             {
                 drawLoc += eq.def.GetModExtension<DrawOffsetExt>().GetOffsetForRot(eq.Rotation);
             }
         }
     }
-    // Harmony patch to catch weapon usage
+
     [HarmonyPatch(typeof(Verb_MeleeAttack), "TryCastShot")]
     public static class Patch_Verb_MeleeAttack_TryCastShot
     {
         public static void Postfix(Verb_MeleeAttack __instance)
         {
-            // Get the weapon being used
             ThingWithComps weapon = __instance.EquipmentSource;
-            if (weapon == null) return;
-
-            // Get the pawn using the weapon
             Pawn pawn = __instance.CasterPawn;
-            if (pawn == null) return;
 
-            // Check if the weapon has our component
+            if (weapon == null || pawn == null) return;
+
             CompDemonSlayerWeapon comp = weapon.GetComp<CompDemonSlayerWeapon>();
-            if (comp != null)
+            comp?.CheckOnWeaponUse(pawn);
+        }
+    }
+
+    [HarmonyPatch(typeof(Pawn_HealthTracker), "CheckForStateChange")]
+    public static class Patch_PreventVitalDeath
+    {
+        private static readonly AccessTools.FieldRef<Pawn_HealthTracker, Pawn> pawnField = AccessTools.FieldRefAccess<Pawn_HealthTracker, Pawn>("pawn");
+
+        static bool Prefix(Pawn_HealthTracker __instance)
+        {
+            Pawn pawn = pawnField(__instance);
+            if (pawn == null || pawn.Dead || pawn.health?.hediffSet == null) return true;
+
+            if (!(pawn.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) ?? false))
+                return true;
+
+            var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
+                p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
+
+            if (neck != null && pawn.health.hediffSet.PartIsMissing(neck))
+                return true;
+
+            bool vitalMissing = pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
             {
-                // Trigger our check method
-                comp.CheckOnWeaponUse(pawn);
+                string defName = part.Part.def.defName;
+                return defName == "Head" || defName == "Skull" || defName == "Brain" || defName == "Heart" ||
+                       defName == "AA_DemonHead" || defName == "AA_DemonSkull" ||
+                       defName == "AA_DemonBrain" || defName == "AA_DemonHeart";
+            });
+
+            return !vitalMissing;
+        }
+    }
+
+    [HarmonyPatch(typeof(Pawn_HealthTracker), nameof(Pawn_HealthTracker.ShouldBeDead))]
+    public static class Patch_ShouldBeDead
+    {
+        private static readonly AccessTools.FieldRef<Pawn_HealthTracker, Pawn> pawnField = AccessTools.FieldRefAccess<Pawn_HealthTracker, Pawn>("pawn");
+
+        static void Postfix(Pawn_HealthTracker __instance, ref bool __result)
+        {
+            Pawn pawn = pawnField(__instance);
+            if (pawn?.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) == true)
+            {
+                var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
+                    p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
+
+                if (neck != null && !pawn.health.hediffSet.PartIsMissing(neck))
+                {
+                    __result = false;
+                }
             }
         }
     }

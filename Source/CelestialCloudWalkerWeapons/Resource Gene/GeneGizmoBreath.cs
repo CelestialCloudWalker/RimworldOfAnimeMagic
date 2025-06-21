@@ -11,6 +11,7 @@ namespace AnimeArsenal
     public class GeneGizmoBreath : GeneGizmo_ResourceAstral
     {
         private BreathingTechniqueGene BreathingTechniqueGene => (BreathingTechniqueGene)gene;
+        private DeathTimerManager.DeathTimerData DeathTimer => gene.GetDeathTimer();
         protected override bool IsDraggable => false;
         private static readonly Texture2D DragBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.74f, 0.97f, 0.8f));
 

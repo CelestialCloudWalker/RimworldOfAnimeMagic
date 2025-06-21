@@ -8,46 +8,41 @@
     <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
     <resourceLabel>Blood Art</resourceLabel>
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
-    <!-- Tree Configuration -->
+
     <TalentTrees>
       <li>DemonTalentTree</li>
     </TalentTrees>
-    <!-- Experience System -->
+
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>
       <experienceTypes>
-        <!-- Combat XP -->
         <li Class="Talented.DamageTakenExperienceTypeDef">
           <baseXP>10</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
-
         <li Class="Talented.DamageDealtExperienceTypeDef">
           <baseXP>10</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
-        <!-- Skill XP -->
         <li Class="Talented.SkillExperienceTypeDef">
           <SkillDef>Shooting</SkillDef>
           <baseXP>2</baseXP>
         </li>
-
-        <!-- Job XP -->
         <li Class="Talented.JobExperienceTypeDef">
           <SkillDef>HaulToCell</SkillDef>
           <baseXP>1</baseXP>
         </li>
-
-        <!-- Verb XP -->
         <li Class="Talented.VerbExperienceTypeDef">
           <VerbClassName>Verb_BeatFire</VerbClassName>
           <baseXP>1</baseXP>
         </li>
       </experienceTypes>
     </experienceGainSettings>
+
     <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
+
     <resourceGizmoThresholds>
       <li>0.25</li>
       <li>0.5</li>
@@ -55,8 +50,9 @@
     </resourceGizmoThresholds>
     <displayCategory>BloodDemonArts</displayCategory>
     <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(0.545, 0.0, 0.0, 1.0)</barColor> <!-- Adjusted to correct RGBA float format -->
+    <barColor>(0.545, 0.0, 0.0, 1.0)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+
     <makeImmuneTo>
       <li>Flu</li>
       <li>Malaria</li>
@@ -68,6 +64,7 @@
       <li>MuscleParasites</li>
       <li>OrganDecay</li>
     </makeImmuneTo>
+
     <hediffGiversCannotGive>
       <li>Carcinoma</li>
       <li>HeartAttack</li>
@@ -79,17 +76,39 @@
       <li>Asthma</li>
       <li>HeartArteryBlockage</li>
     </hediffGiversCannotGive>
+
     <skinTintChoices>
-      <li>(0.8, 0.1, 0.1, 1.0)</li> <!-- Deep Crimson -->
-      <li>(0.5, 0.0, 0.5, 1.0)</li> <!-- Dark Purple -->
-      <li>(0.2, 0.2, 0.2, 1.0)</li> <!-- Charcoal Grey -->
-      <li>(0.9, 0.5, 0.1, 1.0)</li> <!-- Fiery Orange -->
-      <li>(0.1, 0.6, 0.2, 1.0)</li> <!-- Toxic Green -->
-      <li>(0.3, 0.0, 0.7, 1.0)</li> <!-- Abyssal Blue -->
-      <li>(0.6, 0.0, 0.0, 1.0)</li> <!-- Blood Red -->
+      <li>(0.8, 0.1, 0.1, 1.0)</li>
+      <li>(0.5, 0.0, 0.5, 1.0)</li>
+      <li>(0.2, 0.2, 0.2, 1.0)</li>
+      <li>(0.9, 0.5, 0.1, 1.0)</li>
+      <li>(0.1, 0.6, 0.2, 1.0)</li>
+      <li>(0.3, 0.0, 0.7, 1.0)</li>
+      <li>(0.6, 0.0, 0.0, 1.0)</li>
       <li>(0.9, 0.9, 0.1, 1.0)</li>
     </skinTintChoices>
+
     <modExtensions>
+      <li Class="AnimeArsenal.RegenerationExtension">
+        <!-- Healing -->
+        <healingMultiplier>3.0</healingMultiplier>
+        <ticksBetweenHealing>60</ticksBetweenHealing>
+        <healingPerTick>1.0</healingPerTick>
+
+        <!-- Instant regeneration -->
+        <instantLimbRegeneration>true</instantLimbRegeneration>
+        <instantOrganRegeneration>true</instantOrganRegeneration>
+
+        <!-- Organ control -->
+        <canRegenerateOrgans>true</canRegenerateOrgans>
+        <canRegenerateBrain>true</canRegenerateBrain>
+        <canRegenerateHeart>true</canRegenerateHeart>
+
+        <!-- Scar healing -->
+        <scarHealChance>0.2</scarHealChance>
+        <scarHealInterval>1500</scarHealInterval>
+      </li>
+
       <li Class="AnimeArsenal.SunlightDamageExtension">
         <damagePerTick>1</damagePerTick>
         <damageThresholdBeforeDeath>10</damageThresholdBeforeDeath>
@@ -103,7 +122,7 @@
         <playEffect>true</playEffect>
       </li>
     </modExtensions>
-    <!-- UI Configuration -->
+
     <TabLabel>Talents</TabLabel>
   </AnimeArsenal.BloodDemonArtsGeneDef>
 </Defs>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>BeastBreath</defName>
     <label>Beast Breath</label>
@@ -22,7 +21,6 @@
           <baseXP>50</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
-
         <li Class="Talented.DamageDealtExperienceTypeDef">
           <baseXP>10</baseXP>
           <damageFactor>0.1</damageFactor>
@@ -32,13 +30,11 @@
           <SkillDef>Shooting</SkillDef>
           <baseXP>2</baseXP>
         </li>
-
         <!-- Job XP -->
         <li Class="Talented.JobExperienceTypeDef">
           <SkillDef>HaulToCell</SkillDef>
           <baseXP>1</baseXP>
         </li>
-
         <!-- Verb XP -->
         <li Class="Talented.VerbExperienceTypeDef">
           <VerbClassName>Verb_BeatFire</VerbClassName>
@@ -46,6 +42,25 @@
         </li>
       </experienceTypes>
     </experienceGainSettings>
+    <!-- your normal gene properties -->
+    <modExtensions>
+      <li Class="DeathTimerExtension">
+        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <activationMessage>{0} has unleashed the forbidden beast power! Their life force begins to drain.</activationMessage>
+        <deathMessage>{0} has succumbed to the primal curse, their body consumed by bestial power.</deathMessage>
+        <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>
+        <curseHediffDescription>This person is cursed by unleashing forbidden beast power. Their primal instincts will consume them before their 25th birthday.</curseHediffDescription>
+        <curseStageLabel>Breathing Mark Curse</curseStageLabel>
+        <deathCause>OrganFailure</deathCause>
+        <maxAgeInYears>25</maxAgeInYears>
+        <minDaysEarlyDeath>1</minDaysEarlyDeath>
+        <maxDaysEarlyDeath>365</maxDaysEarlyDeath>
+        <immediateDeathMinDays>1</immediateDeathMinDays>
+        <immediateDeathMaxDays>30</immediateDeathMaxDays>
+        <createCurseHediff>true</createCurseHediff>
+        <activateOnGeneAdd>false</activateOnGeneAdd>
+      </li>
+    </modExtensions>
     <maxStat>BeastBreath</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
@@ -68,6 +83,4 @@
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>
   </AnimeArsenal.BreathingTechniqueGeneDef>
-
-
 </Defs>

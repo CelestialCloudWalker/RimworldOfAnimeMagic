@@ -68,9 +68,11 @@
     <Compile Include="CompAbilityEffect_CauseSleep.cs" />
     <Compile Include="CompAbilityEffect_DreamManipulation.cs" />
     <Compile Include="CompAbilityEffect_GroundLaunch.cs" />
+    <Compile Include="CompAbilityEffect_RetreatDash.cs" />
     <Compile Include="CompProjectileEffect_CauseSleep.cs" />
     <Compile Include="CompProperties_AbilityDamage.cs" />
     <Compile Include="Comps\HediffCompProperties_Overlay.cs" />
+    <Compile Include="DeathTimerExtension.cs" />
     <Compile Include="DemonConsumeandHeal.cs" />
     <Compile Include="DemonSlayerWeaponComp.cs" />
     <Compile Include="DrawOffsetExt.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Comps\TrackedMote.cs" />
     <Compile Include="PawnRenderNodeWorker_WeaponOverlay.cs" />
     <Compile Include="Projectile_SleepEffect _ScalingStatDamageProjectile.cs" />
+    <Compile Include="RegenerationExtension.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
