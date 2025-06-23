@@ -105,7 +105,7 @@
         <canRegenerateHeart>true</canRegenerateHeart>
 
         <!-- Scar healing -->
-        <scarHealChance>0.2</scarHealChance>
+        <scarHealChance>1</scarHealChance>
         <scarHealInterval>1500</scarHealInterval>
       </li>
 

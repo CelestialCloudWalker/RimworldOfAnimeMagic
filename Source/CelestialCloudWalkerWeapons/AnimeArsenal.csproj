@@ -76,6 +76,7 @@
     <Compile Include="DemonConsumeandHeal.cs" />
     <Compile Include="DemonSlayerWeaponComp.cs" />
     <Compile Include="DrawOffsetExt.cs" />
+    <Compile Include="EmosGraphic_MoteWithAgeSecsCustom.cs" />
     <Compile Include="GraphicDataWithShader.cs" />
     <Compile Include="Graphic_SingleWithShader.cs" />
     <Compile Include="Misc\AoeDamageAtEndFlyer.cs" />

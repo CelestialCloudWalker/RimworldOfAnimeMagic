@@ -32,7 +32,7 @@
         <!-- Custom effecter that plays when ability is first activated -->
         <casterEffecter>BoarRush_Activation</casterEffecter>
         <!-- Custom effecter that plays on each hit/jump -->
-        <impactEffecter>BoarRush_Impact</impactEffecter>
+        <impactEffecter>AnimeArsenal_FlameSlash</impactEffecter>
       </li>
     </comps>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>

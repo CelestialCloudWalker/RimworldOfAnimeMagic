@@ -57,11 +57,6 @@ namespace AnimeArsenal
             return pawn.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt", false)) ?? false;
         }
 
-        private BloodDemonArtsGene GetBloodDemonGene(Pawn pawn)
-        {
-            return pawn?.genes?.GenesListForReading?.OfType<BloodDemonArtsGene>()?.FirstOrDefault();
-        }
-
         private void ProcessRegeneration(Pawn pawn, RegenerationExtension extension)
         {
             if (IsNeckDestroyed(pawn))
@@ -122,14 +117,15 @@ namespace AnimeArsenal
 
         private bool IsNeckDestroyed(Pawn pawn)
         {
-            var neck = pawn.RaceProps.body.AllParts.FirstOrDefault(p => p.def.defName == "Neck");
+            var neck = pawn.RaceProps.body.AllParts.FirstOrDefault(p =>
+                GetBasePartName(p.def.defName) == "Neck");
             return neck != null && pawn.health.hediffSet.PartIsMissing(neck);
         }
 
         private bool CanRegenerateLimb(BodyPartRecord part)
         {
-            string partName = part.def.defName;
-            return partName != "Head" && partName != "Torso" && partName != "Neck"
+            string basePartName = GetBasePartName(part.def.defName);
+            return basePartName != "Head" && basePartName != "Torso" && basePartName != "Neck"
                 && !part.def.tags.Contains(BodyPartTagDefOf.BloodPumpingSource)
                 && !IsOrgan(part);
         }
@@ -138,17 +134,19 @@ namespace AnimeArsenal
         {
             if (!extension.canRegenerateOrgans || !IsOrgan(part)) return false;
 
-            string partName = part.def.defName;
+            string basePartName = GetBasePartName(part.def.defName);
 
-            if (partName == "Brain" && !extension.canRegenerateBrain) return false;
-            if (partName == "Heart" && !extension.canRegenerateHeart) return false;
-            if (partName == "Neck") return false;
+            if (basePartName == "Brain" && !extension.canRegenerateBrain) return false;
+            if (basePartName == "Heart" && !extension.canRegenerateHeart) return false;
+            if (basePartName == "Neck") return false;
 
             return true;
         }
 
         private bool IsOrgan(BodyPartRecord part)
         {
+            string basePartName = GetBasePartName(part.def.defName);
+
             return part.def.tags.Any(tag =>
                        tag == BodyPartTagDefOf.BloodPumpingSource ||
                        tag == BodyPartTagDefOf.BloodFiltrationSource ||
@@ -157,7 +155,17 @@ namespace AnimeArsenal
                        tag == BodyPartTagDefOf.HearingSource ||
                        tag == BodyPartTagDefOf.SightSource ||
                        tag == BodyPartTagDefOf.ConsciousnessSource) ||
-                   new[] { "Brain", "Heart", "Liver", "Kidney", "Lung", "Stomach" }.Contains(part.def.defName);
+                   new[] { "Brain", "Heart", "Liver", "Kidney", "Lung", "Stomach" }.Contains(basePartName);
+        }
+
+        // Helper method to get the base part name, stripping AA_Demon prefix if present
+        private string GetBasePartName(string partDefName)
+        {
+            if (partDefName.StartsWith("AA_Demon"))
+            {
+                return partDefName.Substring(8); // Remove "AA_Demon" prefix
+            }
+            return partDefName;
         }
 
         private void RegenerateLimb(Pawn pawn, BodyPartRecord part)
@@ -175,7 +183,11 @@ namespace AnimeArsenal
             freshWound.Severity = 0.1f;
             pawn.health.AddHediff(freshWound);
 
-            Messages.Message($"{pawn.LabelShort} has instantly regenerated their {part.LabelCap}!", pawn, MessageTypeDefOf.PositiveEvent);
+            // Fix head texture and refresh graphics
+            RefreshPawnAfterRegeneration(pawn);
+
+            string partDisplayName = GetDisplayPartName(part.def.defName);
+            Messages.Message($"{pawn.LabelShort} has instantly regenerated their {partDisplayName}!", pawn, MessageTypeDefOf.PositiveEvent);
             MoteMaker.ThrowText(pawn.DrawPos, map, "Limb Regenerated!", Color.green, 4f);
         }
 
@@ -190,13 +202,61 @@ namespace AnimeArsenal
                 pawn.health.RemoveHediff(missingPart);
             }
 
-            Messages.Message($"{pawn.LabelShort} has instantly regenerated their {part.LabelCap}!", pawn, MessageTypeDefOf.PositiveEvent);
+            // Fix heart and other organ regeneration
+            RefreshPawnAfterRegeneration(pawn);
+
+            string partDisplayName = GetDisplayPartName(part.def.defName);
+            string basePartName = GetBasePartName(part.def.defName);
+
+            Messages.Message($"{pawn.LabelShort} has instantly regenerated their {partDisplayName}!", pawn, MessageTypeDefOf.PositiveEvent);
             MoteMaker.ThrowText(pawn.DrawPos, map, "Organ Regenerated!", Color.magenta, 4f);
 
-            if (part.def.defName == "Heart")
+            if (basePartName == "Heart")
+            {
                 MoteMaker.ThrowText(pawn.DrawPos, map, "Heart beats again!", Color.red, 5f);
-            else if (part.def.defName == "Brain")
+                // Force immediate health update for heart
+                pawn.health.capacities.Notify_CapacityLevelsDirty();
+                pawn.health.summaryHealth.Notify_HealthChanged();
+            }
+            else if (basePartName == "Brain")
+            {
                 MoteMaker.ThrowText(pawn.DrawPos, map, "Mind restored!", Color.blue, 5f);
+            }
+        }
+
+        // Helper method to get display name for messages (keeps AA_Demon prefix for flavor)
+        private string GetDisplayPartName(string partDefName)
+        {
+            if (partDefName.StartsWith("AA_Demon"))
+            {
+                string baseName = partDefName.Substring(8);
+                return $"Demon {baseName}";
+            }
+            return partDefName;
+        }
+
+        // Simple refresh method - just what we need for head texture and health updates
+        private void RefreshPawnAfterRegeneration(Pawn pawn)
+        {
+            try
+            {
+                // Refresh health calculations
+                pawn.health.capacities.Notify_CapacityLevelsDirty();
+                pawn.health.summaryHealth.Notify_HealthChanged();
+
+                // Simple visual refresh for head texture fix
+                if (pawn.Spawned)
+                {
+                    pawn.Notify_ColorChanged();
+                }
+
+                // Refresh the pawn's portrait
+                PortraitsCache.SetDirty(pawn);
+            }
+            catch (System.Exception ex)
+            {
+                Log.Error($"Error refreshing pawn {pawn.LabelShort} after regeneration: {ex}");
+            }
         }
 
         private void KillPawnFromNeckDestruction(Pawn pawn)
