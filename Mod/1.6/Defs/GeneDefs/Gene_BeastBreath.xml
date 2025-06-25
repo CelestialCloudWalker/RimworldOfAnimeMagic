@@ -42,14 +42,14 @@
         </li>
       </experienceTypes>
     </experienceGainSettings>
-    <!-- your normal gene properties -->
+
     <modExtensions>
       <li Class="DeathTimerExtension">
         <hediffToWatch>BreathingMarkApply</hediffToWatch>
-        <activationMessage>{0} has unleashed the forbidden beast power! Their life force begins to drain.</activationMessage>
-        <deathMessage>{0} has succumbed to the primal curse, their body consumed by bestial power.</deathMessage>
+        <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
+        <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
         <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>
-        <curseHediffDescription>This person is cursed by unleashing forbidden beast power. Their primal instincts will consume them before their 25th birthday.</curseHediffDescription>
+        <curseHediffDescription>Grants immense power in exchange for a shortened lifespan. Their body burns with strength, but their time is now limited—death before the age of 25 is inevitable.</curseHediffDescription>
         <curseStageLabel>Breathing Mark Curse</curseStageLabel>
         <deathCause>OrganFailure</deathCause>
         <maxAgeInYears>25</maxAgeInYears>

@@ -19,36 +19,55 @@
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>
-        <experienceTypes>
-            <!-- Combat XP -->
-            <li Class="Talented.DamageTakenExperienceTypeDef">
-                <baseXP>50</baseXP>
-                <damageFactor>0.1</damageFactor>
-            </li>
+      <experienceTypes>
+        <!-- Combat XP -->
+        <li Class="Talented.DamageTakenExperienceTypeDef">
+          <baseXP>50</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
 
-            <li Class="Talented.DamageDealtExperienceTypeDef">
-                <baseXP>100</baseXP>
-                <damageFactor>0.1</damageFactor>
-            </li>
-            <!-- Skill XP -->
-            <li Class="Talented.SkillExperienceTypeDef">
-                <SkillDef>Shooting</SkillDef>
-                <baseXP>2</baseXP>
-            </li>
+        <li Class="Talented.DamageDealtExperienceTypeDef">
+          <baseXP>100</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <!-- Skill XP -->
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Shooting</SkillDef>
+          <baseXP>2</baseXP>
+        </li>
 
-            <!-- Job XP -->
-            <li Class="Talented.JobExperienceTypeDef">
-                <SkillDef>HaulToCell</SkillDef>
-                <baseXP>1</baseXP>
-            </li>
+        <!-- Job XP -->
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>HaulToCell</SkillDef>
+          <baseXP>1</baseXP>
+        </li>
 
-            <!-- Verb XP -->
-            <li Class="Talented.VerbExperienceTypeDef">
-                <VerbClassName>Verb_BeatFire</VerbClassName>
-                <baseXP>1</baseXP>
-            </li>
-        </experienceTypes>
+        <!-- Verb XP -->
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_BeatFire</VerbClassName>
+          <baseXP>1</baseXP>
+        </li>
+      </experienceTypes>
     </experienceGainSettings>
+
+    <modExtensions>
+      <li Class="DeathTimerExtension">
+        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
+        <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
+        <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>
+        <curseHediffDescription>Grants immense power in exchange for a shortened lifespan. Their body burns with strength, but their time is now limited—death before the age of 25 is inevitable.</curseHediffDescription>
+        <curseStageLabel>Breathing Mark Curse</curseStageLabel>
+        <deathCause>OrganFailure</deathCause>
+        <maxAgeInYears>25</maxAgeInYears>
+        <minDaysEarlyDeath>1</minDaysEarlyDeath>
+        <maxDaysEarlyDeath>365</maxDaysEarlyDeath>
+        <immediateDeathMinDays>1</immediateDeathMinDays>
+        <immediateDeathMaxDays>30</immediateDeathMaxDays>
+        <createCurseHediff>true</createCurseHediff>
+        <activateOnGeneAdd>false</activateOnGeneAdd>
+      </li>
+    </modExtensions>
     <maxStat>FrostBreath</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>

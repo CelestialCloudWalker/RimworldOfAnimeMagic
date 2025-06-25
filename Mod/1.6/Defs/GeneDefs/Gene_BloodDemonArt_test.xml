@@ -39,7 +39,7 @@
       </experienceTypes>
     </experienceGainSettings>
 
-    <maxStat>AstralPulse</maxStat>
+    <maxStat>BloodDemonArts</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
 
@@ -64,16 +64,9 @@
       <li>MuscleParasites</li>
       <li>OrganDecay</li>
     </makeImmuneTo>
-
     <hediffGiversCannotGive>
       <li>Carcinoma</li>
       <li>HeartAttack</li>
-      <li>BadBack</li>
-      <li>Frail</li>
-      <li>Cataract</li>
-      <li>Dementia</li>
-      <li>Alzheimers</li>
-      <li>Asthma</li>
       <li>HeartArteryBlockage</li>
     </hediffGiversCannotGive>
 
@@ -90,23 +83,75 @@
 
     <modExtensions>
       <li Class="AnimeArsenal.RegenerationExtension">
-        <!-- Healing -->
+        <!-- Basic healing settings -->
         <healingMultiplier>3.0</healingMultiplier>
         <ticksBetweenHealing>60</ticksBetweenHealing>
         <healingPerTick>1.0</healingPerTick>
 
-        <!-- Instant regeneration -->
+        <!-- Instant regeneration toggles -->
         <instantLimbRegeneration>true</instantLimbRegeneration>
         <instantOrganRegeneration>true</instantOrganRegeneration>
 
-        <!-- Organ control -->
+        <!-- What can be regenerated -->
         <canRegenerateOrgans>true</canRegenerateOrgans>
-        <canRegenerateBrain>true</canRegenerateBrain>
+        <canRegenerateBrain>false</canRegenerateBrain>
         <canRegenerateHeart>true</canRegenerateHeart>
+        <canRegenerateHead>false</canRegenerateHead>
 
-        <!-- Scar healing -->
-        <scarHealChance>1</scarHealChance>
+        <!-- Scar healing settings -->
+        <scarHealChance>0.2</scarHealChance>
         <scarHealInterval>1500</scarHealInterval>
+
+        <!-- Resource consumption settings -->
+        <consumeResourcesOnRegeneration>true</consumeResourcesOnRegeneration>
+        <resourceCostPerHeal>1</resourceCostPerHeal>
+        <resourceCostPerLimbRegen>50</resourceCostPerLimbRegen>
+        <resourceCostPerOrganRegen>10</resourceCostPerOrganRegen>
+        <resourceCostPerScarHeal>25</resourceCostPerScarHeal>
+
+        <!-- Resource management -->
+        <preventRegenIfInsufficientResources>true</preventRegenIfInsufficientResources>
+        <minimumResourcesRequired>0.1</minimumResourcesRequired>
+        <showResourceWarnings>true</showResourceWarnings>
+
+        <!-- Death prevention settings -->
+        <preventDeathFromVitalLoss>true</preventDeathFromVitalLoss>
+        <fatalBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </fatalBodyParts>
+
+        <!-- Customizable text settings -->
+        <!-- General regeneration text -->
+        <resourceWarningCooldownTicks>2500</resourceWarningCooldownTicks> <!-- Time between warnings -->
+        <resourceWarningChance>0.01</resourceWarningChance> <!-- Chance to show warning -->
+        <regeneratingText>Regenerating...</regeneratingText>
+        <lowResourceText>Low {0}!</lowResourceText>
+
+        <!-- Limb regeneration text -->
+        <limbRegeneratedText>Limb Regenerated!</limbRegeneratedText>
+        <limbRegeneratedMessage>{0} has instantly regenerated their {1}!</limbRegeneratedMessage>
+        <insufficientResourcesLimbMessage>{0} cannot regenerate limb - insufficient {1}!</insufficientResourcesLimbMessage>
+
+        <!-- Organ regeneration text -->
+        <organRegeneratedText>Organ Regenerated!</organRegeneratedText>
+        <organRegeneratedMessage>{0} has instantly regenerated their {1}!</organRegeneratedMessage>
+        <insufficientResourcesOrganMessage>{0} cannot regenerate organ - insufficient {1}!</insufficientResourcesOrganMessage>
+
+        <!-- Special organ text -->
+        <heartRegeneratedText>Heart beats again!</heartRegeneratedText>
+        <brainRegeneratedText>Mind restored!</brainRegeneratedText>
+
+        <!-- Scar healing text -->
+        <scarHealedText>{0} healed</scarHealedText>
+        <importantScarHealedMessage>{0}'s {1} has been completely healed by regeneration!</importantScarHealedMessage>
+
+        <!-- Death text -->
+        <fatalDamageMessage>{0} dies from catastrophic {1} damage - even regeneration cannot save them.</fatalDamageMessage>
+        <fatalDamageText>Fatal {0} Damage!</fatalDamageText>
+
+        <!-- Resource name for messages -->
+        <resourceName>Blood Art</resourceName>
       </li>
 
       <li Class="AnimeArsenal.SunlightDamageExtension">
