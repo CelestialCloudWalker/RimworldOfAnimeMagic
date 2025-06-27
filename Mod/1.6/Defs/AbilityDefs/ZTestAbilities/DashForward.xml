@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- Simple Retreat Dash Ability -->
+  <!-- Forward Dash Ability -->
   <AbilityDef>
-    <defName>AA_RetreatDash</defName>
-    <label>retreat dash</label>
-    <description>Quickly dash away from the target to a safe position.</description>
+    <defName>AA_ForwardDash</defName>
+    <label>forward dash</label>
+    <description>Quickly dash forward toward the target to close the distance.</description>
     <iconPath>UI/Icons/ThingCategories/BodyPartsNatural</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -15,21 +15,24 @@
       <range>30</range>
       <warmupTime>0.5</warmupTime>
       <targetParams>
-        <canTargetLocations>false</canTargetLocations>
+        <canTargetLocations>true</canTargetLocations>
         <canTargetPawns>true</canTargetPawns>
         <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="AnimeArsenal.CompProperties_AbilityRetreatDash">
+      <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
         <minDashDistance>8</minDashDistance>
         <maxDashDistance>15</maxDashDistance>
-        <avoidEnemies>true</avoidEnemies>
+        <avoidEnemies>false</avoidEnemies>
         <enemyAvoidanceRadius>5</enemyAvoidanceRadius>
-        <numberOfDashes>2</numberOfDashes>  <!-- Add this line - controls how many dashes -->
+        <numberOfDashes>2</numberOfDashes>
+        <allowRandomDirection>false</allowRandomDirection>
+        <maintainMinDistanceFromTarget>false</maintainMinDistanceFromTarget>
+        <minDistanceFromTarget>2</minDistanceFromTarget>
         <castEffecter>AnimeArsenal_BeastJump</castEffecter>
         <landEffecter>AnimeArsenal_DashBack</landEffecter>
-        <retryEffecter>AnimeArsenal_DashBack</retryEffecter>  <!-- Optional - effect for 2nd+ dashes -->
+        <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
         <grantTemporaryImmunity>false</grantTemporaryImmunity>
         <grantSpeedBoost>false</grantSpeedBoost>
         <grantMoodBoost>false</grantMoodBoost>

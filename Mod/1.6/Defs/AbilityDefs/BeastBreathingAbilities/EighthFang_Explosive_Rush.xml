@@ -29,8 +29,8 @@
         <!-- Set to 0 for single target, >0 for AOE -->
         <effectRadius>0</effectRadius>
         <!-- Effecter definitions -->
-        <casterEffecter>BoarRush_Activation</casterEffecter>
-        <impactEffecter>BoarRush_Impact</impactEffecter>
+        <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>BeastBreath</resourceGeneDef>

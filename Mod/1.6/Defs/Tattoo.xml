@@ -3,7 +3,7 @@
   <TattooDef>
     <defName>Face_Tiger1</defName>
     <label>tiger</label>
-    <texPath>Tattoo/Face_BreathingMark/Face_Tattoo1</texPath>
+    <texPath>Tattoo/Test_Mark/TestMark</texPath>
     <tattooType>Face</tattooType>
     <category>Tribal</category>
     <styleTags>

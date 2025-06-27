@@ -30,9 +30,9 @@
         <jumpDamageDef>Cut</jumpDamageDef>
         <jumpDamage>4~5</jumpDamage>
         <!-- Custom effecter that plays when ability is first activated -->
-        <casterEffecter>BoarRush_Activation</casterEffecter>
+        <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
         <!-- Custom effecter that plays on each hit/jump -->
-        <impactEffecter>AnimeArsenal_FlameSlash</impactEffecter>
+        <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
       </li>
     </comps>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
