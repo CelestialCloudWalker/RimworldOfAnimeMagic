@@ -30,6 +30,8 @@
         <stunDuration>2</stunDuration>
         <!-- Set to 0 for single target, >0 for AOE -->
         <effectRadius>0</effectRadius>
+        <casterEffecter>AnimeArsenal_StoneJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_StoneHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>StoneBreath</resourceGeneDef>

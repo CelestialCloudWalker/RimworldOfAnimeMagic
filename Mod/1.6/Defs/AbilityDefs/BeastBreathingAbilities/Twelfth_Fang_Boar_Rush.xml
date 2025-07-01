@@ -29,9 +29,7 @@
         <targetSearchRadius>18</targetSearchRadius>
         <jumpDamageDef>Cut</jumpDamageDef>
         <jumpDamage>4~5</jumpDamage>
-        <!-- Custom effecter that plays when ability is first activated -->
         <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
-        <!-- Custom effecter that plays on each hit/jump -->
         <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
       </li>
     </comps>

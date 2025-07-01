@@ -25,6 +25,8 @@
         <targetSearchRadius>18</targetSearchRadius>
         <jumpDamageDef>Cut</jumpDamageDef>
         <jumpDamage>4~5</jumpDamage>
+        <casterEffecter>AnimeArsenal_FlowerJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_FlowerHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>FlowerBreath</resourceGeneDef>

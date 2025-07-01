@@ -30,6 +30,8 @@
         <stunDuration>2</stunDuration>
         <!-- Set to 0 for single target, >0 for AOE -->
         <effectRadius>0</effectRadius>
+        <casterEffecter>AnimeArsenal_InsectJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
       </li>
     </comps>
   </AbilityDef>

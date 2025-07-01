@@ -178,6 +178,136 @@ namespace AnimeArsenal
             }
         }
     }
+    // Main Harmony patch - handles all weapon/projectile damage
+    [HarmonyPatch(typeof(Thing), "TakeDamage")]
+    public static class TakeDamage_GeneDamage_Patch
+    {
+        // Flag to prevent infinite recursion
+        private static bool isProcessingGeneDamage = false;
 
+        public static void Postfix(Thing __instance, DamageInfo dinfo, DamageWorker.DamageResult __result)
+        {
+            // Prevent infinite recursion
+            if (isProcessingGeneDamage)
+                return;
 
+            // Only process if the target is a pawn with genes
+            if (!(__instance is Pawn victim) || victim.genes == null)
+                return;
+
+            // Only process if there was actual damage dealt
+            if (__result.totalDamageDealt <= 0)
+                return;
+
+            try
+            {
+                isProcessingGeneDamage = true;
+                ProcessGeneDamageFromWeapon(victim, dinfo, __result.totalDamageDealt);
+            }
+            finally
+            {
+                isProcessingGeneDamage = false;
+            }
+        }
+
+        private static void ProcessGeneDamageFromWeapon(Pawn victim, DamageInfo dinfo, float totalDamageDealt)
+        {
+            List<GeneDamageModExtension> modExtensions = new List<GeneDamageModExtension>();
+
+            // 1. Check weapon for mod extensions
+            if (dinfo.Weapon != null)
+            {
+                var weaponExt = dinfo.Weapon.GetModExtension<GeneDamageModExtension>();
+                if (weaponExt != null && weaponExt.damageOnHit)
+                    modExtensions.Add(weaponExt);
+            }
+
+            // 2. Check instigator's equipped weapon
+            if (dinfo.Instigator is Pawn attacker && attacker.equipment?.Primary != null)
+            {
+                var weaponExt = attacker.equipment.Primary.def.GetModExtension<GeneDamageModExtension>();
+                if (weaponExt != null && weaponExt.damageOnHit)
+                    modExtensions.Add(weaponExt);
+            }
+
+            // 3. Check damage def itself
+            if (dinfo.Def != null)
+            {
+                var damageExt = dinfo.Def.GetModExtension<GeneDamageModExtension>();
+                if (damageExt != null && damageExt.damageOnHit)
+                    modExtensions.Add(damageExt);
+            }
+
+            // 4. Check attacker's genes for mod extensions
+            if (dinfo.Instigator is Pawn attackerPawn && attackerPawn.genes != null)
+            {
+                foreach (var gene in attackerPawn.genes.GenesListForReading)
+                {
+                    var geneExt = gene.def.GetModExtension<GeneDamageModExtension>();
+                    if (geneExt != null && geneExt.damageOnHit)
+                        modExtensions.Add(geneExt);
+                }
+            }
+
+            // Apply damage for each relevant mod extension
+            foreach (var modExt in modExtensions)
+            {
+                // Check if victim has the target gene for this mod extension
+                bool hasTargetGene = victim.genes.GenesListForReading.Any(gene => gene.def.defName == modExt.targetGene);
+                if (hasTargetGene)
+                {
+                    ApplyGeneDamage(victim, modExt, dinfo, totalDamageDealt);
+                }
+            }
+        }
+
+        private static void ApplyGeneDamage(Pawn victim, GeneDamageModExtension modExt, DamageInfo originalDinfo, float totalDamageDealt)
+        {
+            // Calculate extra damage
+            float extraDamage = modExt.useMultiplier ?
+                totalDamageDealt * modExt.damageMultiplier :
+                modExt.damageAmount;
+
+            // Apply the extra damage
+            if (modExt.targetBodyParts != null && modExt.targetBodyParts.Count > 0)
+            {
+                // Target specific body parts
+                foreach (BodyPartDef bodyPartDef in modExt.targetBodyParts)
+                {
+                    BodyPartRecord bodyPart = victim.RaceProps.body.AllParts.FirstOrDefault(p => p.def == bodyPartDef);
+                    if (bodyPart != null)
+                    {
+                        DamageInfo extraDamageInfo = new DamageInfo(
+                            modExt.damageType,
+                            extraDamage,
+                            modExt.armorPenetration,
+                            originalDinfo.Angle,
+                            originalDinfo.Instigator,
+                            bodyPart,
+                            originalDinfo.Weapon
+                        );
+
+                        // Use DamageWorker directly to avoid triggering patches again
+                        modExt.damageType.Worker.Apply(extraDamageInfo, victim);
+                    }
+                }
+            }
+            else
+            {
+                // Apply to same hit part as original damage
+                DamageInfo extraDamageInfo = new DamageInfo(
+                    modExt.damageType,
+                    extraDamage,
+                    modExt.armorPenetration,
+                    originalDinfo.Angle,
+                    originalDinfo.Instigator,
+                    originalDinfo.HitPart,
+                    originalDinfo.Weapon
+                );
+
+                // Use DamageWorker directly to avoid triggering patches again
+                modExt.damageType.Worker.Apply(extraDamageInfo, victim);
+            }
+        }
+    }
 }

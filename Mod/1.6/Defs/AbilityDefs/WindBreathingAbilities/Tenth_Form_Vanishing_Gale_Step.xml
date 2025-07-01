@@ -30,6 +30,8 @@
         <stunDuration>2</stunDuration>
         <!-- Set to 0 for single target, >0 for AOE -->
         <effectRadius>0</effectRadius>
+        <casterEffecter>AnimeArsenal_WindJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>WindBreath</resourceGeneDef>

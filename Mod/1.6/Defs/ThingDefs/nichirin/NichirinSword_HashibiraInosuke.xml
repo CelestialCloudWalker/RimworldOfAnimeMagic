@@ -19,7 +19,7 @@
       <Plasteel>50</Plasteel>
     </costList>
     <techLevel>Spacer</techLevel>
-    
+
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <WorkToMake>25000</WorkToMake>
@@ -54,8 +54,27 @@
       </li>
     </comps>
     <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>5000</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+
+        <!-- CRITICAL: These control when damage is applied -->
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
       <li Class="AnimeArsenal.DrawOffsetExt">
-        <offset>(0.4, 0, 0.4)</offset>
+        <offsetEast>(0.2, 0, 0.5)</offsetEast>
+        <offsetWest>(-0.05, 0, -0.3)</offsetWest>
+        <offsetNorth>(0, 0, 0.05)</offsetNorth>
+        <offsetSouth>(0, -0.1, 0.15)</offsetSouth>
       </li>
     </modExtensions>
   </ThingDef>

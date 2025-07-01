@@ -25,6 +25,8 @@
         <targetSearchRadius>18</targetSearchRadius>
         <jumpDamageDef>Cut</jumpDamageDef>
         <jumpDamage>4~5</jumpDamage>
+        <casterEffecter>AnimeArsenal_InsectJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
       </li>
     </comps>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>

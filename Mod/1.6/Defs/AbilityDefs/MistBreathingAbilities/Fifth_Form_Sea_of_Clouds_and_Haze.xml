@@ -25,6 +25,8 @@
         <targetSearchRadius>18</targetSearchRadius>
         <jumpDamageDef>Cut</jumpDamageDef>
         <jumpDamage>4~5</jumpDamage>
+        <casterEffecter>AnimeArsenal_MistJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>MistBreath</resourceGeneDef>

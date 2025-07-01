@@ -79,6 +79,7 @@
     <Compile Include="DemonSlayerWeaponComp.cs" />
     <Compile Include="DrawOffsetExt.cs" />
     <Compile Include="EmosGraphic_MoteWithAgeSecsCustom.cs" />
+    <Compile Include="GeneDamageModExtension.cs" />
     <Compile Include="GraphicDataWithShader.cs" />
     <Compile Include="Graphic_SingleWithShader.cs" />
     <Compile Include="Misc\AoeDamageAtEndFlyer.cs" />
@@ -144,6 +145,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Misc\RotatedRectTargetFinder.cs" />
     <Compile Include="Misc\ScalingStatDamageProjectile.cs" />
+    <Compile Include="StatDef_GeneDependent.cs" />
+    <Compile Include="StatWorker_GeneDependent.cs" />
     <Compile Include="ThingCompExt.cs" />
     <Compile Include="Misc\Ticker.cs" />
     <Compile Include="Misc\TrackedMotePos.cs" />

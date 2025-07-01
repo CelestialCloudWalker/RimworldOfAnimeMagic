@@ -25,6 +25,8 @@
         <targetSearchRadius>18</targetSearchRadius>
         <jumpDamageDef>Cut</jumpDamageDef>
         <jumpDamage>4~5</jumpDamage>
+        <casterEffecter>AnimeArsenal_FrostJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_FrostHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>FrostBreath</resourceGeneDef>

@@ -23,7 +23,7 @@
     <graphicData>
       <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
       <shaderType>GlowAnimated</shaderType>
-      <texPath>Animations/Beast/3x3BeastImpact</texPath>
+      <texPath>Animations/Beast/3x3Beast4</texPath>
       <shaderParameters>
         <_NumFrames>9</_NumFrames>
         <_Loop>0</_Loop>
