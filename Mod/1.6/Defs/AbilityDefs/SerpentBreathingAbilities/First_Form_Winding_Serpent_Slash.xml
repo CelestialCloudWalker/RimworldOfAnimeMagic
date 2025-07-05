@@ -25,7 +25,7 @@
           <projectileDef>First_Form_Winding_Serpent_Slash_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>SerpentBreath</resourceGeneDef>
+          <resourceGeneDef>Gene_SerpentBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

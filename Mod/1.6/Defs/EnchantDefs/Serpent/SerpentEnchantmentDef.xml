@@ -6,7 +6,7 @@
     <description>A frost-based enchantment that provides defensive benefits but drains energy quickly.</description>
 
     <enchantHediff>SerpentFangEdge</enchantHediff>
-    <resourceGene>SerpentBreath</resourceGene>
+    <resourceGene>Gene_SerpentBreath</resourceGene>
     <!-- Higher resource cost -->
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>

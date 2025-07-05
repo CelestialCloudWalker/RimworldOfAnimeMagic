@@ -15,7 +15,7 @@
               <enchantDef>StoneEnchantment</enchantDef>
           </li>
           <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>StoneBreath</resourceGeneDef>
+            <resourceGeneDef>Gene_StoneBreath</resourceGeneDef>
             <resourceCost>20</resourceCost>
           </li>
       </comps>

@@ -25,7 +25,7 @@
           <projectileDef>Eighth_Form_Phantom_Mist_Cutter_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>MistBreath</resourceGeneDef>
+          <resourceGeneDef>Gene_MistBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

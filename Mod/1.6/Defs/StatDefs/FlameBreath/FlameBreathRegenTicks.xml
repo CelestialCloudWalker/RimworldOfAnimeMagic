@@ -11,7 +11,7 @@
     <maxValue>1000</maxValue>
     <toStringStyle>Integer</toStringStyle>
     <requiredGenes>
-      <li>FlameBreath</li>
+      <li>Gene_FlameBreath</li>
     </requiredGenes>
   </StatDef_GeneDependent>
 </Defs>

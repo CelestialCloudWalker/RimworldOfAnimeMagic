@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef Name="SlayerCorpsBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>AA_Slayer_Corps</defaultFactionType>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <invNutrition>5.10</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <backstoryCryptosleepCommonality>0.02</backstoryCryptosleepCommonality>
+    <maxGenerationAge>15</maxGenerationAge>
+    <combatEnhancingDrugsChance>0.25</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>1~3</combatEnhancingDrugsCount>
+    <biocodeWeaponChance>0.15</biocodeWeaponChance>
+    <apparelAllowHeadgearChance>0.8</apparelAllowHeadgearChance>
+    <apparelMoney>1000~3000</apparelMoney>
+    <initialWillRange>15~25</initialWillRange>
+    <initialResistanceRange>15~25</initialResistanceRange>
+    <inventoryOptions />
+    <apparelRequired>
+      <li>DemonSlayerCorp_NormalUniform</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Mizunoto_PK</defName>
+    <label>Mizunoto</label>
+    <combatPower>100</combatPower>
+    <apparelMoney>500~1000</apparelMoney>
+    <titleSelectOne>
+      <li>AA_Mizunoto</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BreathingPotential_Xeno>1</AA_BreathingPotential_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Mizunoe_PK</defName>
+    <label>Mizunoe</label>
+    <combatPower>140</combatPower>
+    <apparelMoney>600~1200</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Mizunoe</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Kanoto_PK</defName>
+    <label>Kanoto</label>
+    <combatPower>140</combatPower>
+    <apparelMoney>600~1200</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Kanoto</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Kanoe_PK</defName>
+    <label>Kanoe</label>
+    <apparelMoney>2000~4000</apparelMoney>
+    <combatPower>300</combatPower>
+    <factionLeader>true</factionLeader>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Kanoe</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Tsuchinoto_PK</defName>
+    <label>Tsuchinoto</label>
+    <combatPower>800</combatPower>
+    <apparelMoney>3000~5000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Tsuchinoto</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Tsuchinoe_PK</defName>
+    <label>Tsuchinoe</label>
+    <combatPower>1000</combatPower>
+    <apparelMoney>3500~6000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Tsuchinoe</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Hinoto_PK</defName>
+    <label>Hinoto</label>
+    <combatPower>1300</combatPower>
+    <apparelMoney>4000~7000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Hinoto</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Hinoe_PK</defName>
+    <label>Hinoe</label>
+    <combatPower>1600</combatPower>
+    <apparelMoney>4500~8000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Hinoe</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Kinoto_PK</defName>
+    <label>Kinoto</label>
+    <combatPower>2000</combatPower>
+    <apparelMoney>5000~9000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Kinoto</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Kinoe_PK</defName>
+    <label>Kinoe</label>
+    <combatPower>2500</combatPower>
+    <apparelMoney>6000~10000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Kinoe</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_Tsuguko_PK</defName>
+    <label>Tsuguko</label>
+    <combatPower>2500</combatPower>
+    <apparelMoney>6000~10000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_Tsuguko</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_FlameHashira_PK</defName>
+    <label>Flame Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_FlameHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_FlameBreath_Xeno>1</AA_FlameBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori_RengokuKyojuro</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_WaterHashira_PK</defName>
+    <label>Water Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_WaterHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_WaterBreath_Xeno>1</AA_WaterBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori_TomiokaGiyu</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_WindHashira_PK</defName>
+    <label>Wind Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_WindHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_WindBreath_Xeno>1</AA_WindBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori_ShinazugawaSanemi</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_StoneHashira_PK</defName>
+    <label>Stone Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_StoneHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_StoneBreath_Xeno>1</AA_StoneBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori_HimejimaGyomei</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_InsectHashira_PK</defName>
+    <label>Insect Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_InsectHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_InsectBreath_Xeno>1</AA_InsectBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori_KochoKanae</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_LoveHashira_PK</defName>
+    <label>Love Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_LoveHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_LoveBreath_Xeno>1</AA_LoveBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_MistHashira_PK</defName>
+    <label>Mist Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_MistHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_MistBreath_Xeno>1</AA_MistBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_SerpentHashira_PK</defName>
+    <label>Serpent Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_SerpentHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_SerpentBreath_Xeno>1</AA_SerpentBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori_IguroObanai</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_SoundHashira_PK</defName>
+    <label>Sound Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_SoundHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_SoundBreath_Xeno>1</AA_SoundBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_ForestHashira_PK</defName>
+    <label>Forest Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_ForestHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_ForestBreath_Xeno>1</AA_ForestBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+</Defs>

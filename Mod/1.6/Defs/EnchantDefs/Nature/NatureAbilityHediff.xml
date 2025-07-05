@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>NatureEdge</defName>
-    <label>Nature Edge</label>
+    <defName>ForestEdge</defName>
+    <label>Forest Edge</label>
     <description>The weapon emanates Natural Engery.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>NatureFang</damageType>
+        <damageType>ForestFang</damageType>
         <damageValue>7</damageValue>
       </li>
     </comps>

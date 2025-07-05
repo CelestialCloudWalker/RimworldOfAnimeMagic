@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <XenotypeDef>
+    <defName>AA_BreathingPotential_Xeno</defName>
+    <label>Breathing Potential User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/breathing_potential</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_BreathingPotential</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_BeastBreath_Xeno</defName>
+    <label> Beast Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/beast</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_BeastBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_FlameBreath_Xeno</defName>
+    <label>Flame Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/flame</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_FlameBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_FlowerBreath_Xeno</defName>
+    <label>Flower Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/flower</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_FlowerBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_FrostBreath_Xeno</defName>
+    <label>Frost Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/frost</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_FrostBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_InsectBreath_Xeno</defName>
+    <label>Insect Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/insect</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_InsectBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_LoveBreath_Xeno</defName>
+    <label>Love Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/love</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_LoveBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_MistBreath_Xeno</defName>
+    <label>Mist Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/mist</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_MistBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_ForestBreath_Xeno</defName>
+    <label>Forest Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/forest</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_ForestBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_SerpentBreath_Xeno</defName>
+    <label>Serpent Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/serpent</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_SerpentBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_SoundBreath_Xeno</defName>
+    <label>Sound Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/sound</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_SoundBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_StoneBreath_Xeno</defName>
+    <label>Stone Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/stone</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_StoneBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_ThunderBreath_Xeno</defName>
+    <label>Thunder Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/thunder</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_ThunderBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_WaterBreath_Xeno</defName>
+    <label>Water Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/water</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_WaterBreath</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>AA_WindBreath_Xeno</defName>
+    <label>Wind Breath User</label>
+    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a thirst for human flesh.</description>
+    <iconPath>UI/Icons/Genes/wind</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Gene_WindBreath</li>
+    </genes>
+  </XenotypeDef>
+</Defs>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DamageDef>
-    <defName>NatureFang</defName>
-    <label>Nature Fang</label>
+    <defName>ForestFang</defName>
+    <label>Forest Fang</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was ruthlessly torn apart by the primal force of Nature Fang.</deathMessage>
+    <deathMessage>{0} was ruthlessly torn apart by the primal force of Forest Fang.</deathMessage>
     <hediff>VerdantWound</hediff>
     <hediffSkin>VerdantWound</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
@@ -17,8 +17,8 @@
   <HediffDef ParentName="InjuryBase">
     <defName>VerdantWound</defName>
     <label>Verdant Wound</label>
-    <labelNoun>a nature breathing wound</labelNoun>
-    <description>A deep wound inflicted by nature breathing technique, infused with the force of wild harmony.</description>
+    <labelNoun>a Forest breathing wound</labelNoun>
+    <description>A deep wound inflicted by Forest breathing technique, infused with the force of wild harmony.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <severityPerDayTended>-0.68</severityPerDayTended>
@@ -32,7 +32,7 @@
       <averagePainPerSeverityPermanent>0.00825</averagePainPerSeverityPermanent>
       <bleedRate>0.09</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Torn by nature</destroyedLabel>
+      <destroyedLabel>Torn by Forest</destroyedLabel>
       <destroyedOutLabel>Overgrown</destroyedOutLabel>
     </injuryProps>
   </HediffDef>

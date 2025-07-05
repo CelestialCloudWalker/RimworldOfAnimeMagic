@@ -15,7 +15,7 @@
               <enchantDef>SoundEnchantment</enchantDef>
           </li>
           <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>SoundBreath</resourceGeneDef>
+            <resourceGeneDef>Gene_SoundBreath</resourceGeneDef>
             <resourceCost>20</resourceCost>
           </li>
       </comps>

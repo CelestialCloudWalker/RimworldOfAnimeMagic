@@ -2,7 +2,7 @@
 <Defs>
 
 <StatDef_GeneDependent>
-  <defName>NatureBreath_RegenTicks</defName>
+  <defName>ForestBreath_RegenTicks</defName>
   <label>Nature Breath Regen Ticks</label>
   <category>PawnMisc</category>
   <description>Number of ticks between Nature Breath regeneration cycles.</description>
@@ -11,7 +11,7 @@
    <maxValue>1000</maxValue>
    <toStringStyle>Integer</toStringStyle>
    <requiredGenes>
-     <li>NatureBreath</li>
+     <li>Gene_ForestBreath</li>
    </requiredGenes>
 </StatDef_GeneDependent>
 </Defs>

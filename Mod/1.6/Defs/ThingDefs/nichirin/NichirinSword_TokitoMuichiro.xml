@@ -48,12 +48,26 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_DemonSlayerWeapon">
         <breathingStyleGenes>
-          <li>MistBreath</li>
+          <li>Gene_MistBreath</li>
         </breathingStyleGenes>
         <randomGene>true</randomGene>
       </li>
     </comps>
     <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>30</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
       <li Class="AnimeArsenal.DrawOffsetExt">
         <offsetEast>(0.2, 0, 0.5)</offsetEast>
         <offsetWest>(-0.05, 0, -0.3)</offsetWest>

@@ -25,7 +25,7 @@
           <projectileDef>Third_Form_Distant_Reverberation_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>SoundBreath</resourceGeneDef>
+          <resourceGeneDef>Gene_SoundBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

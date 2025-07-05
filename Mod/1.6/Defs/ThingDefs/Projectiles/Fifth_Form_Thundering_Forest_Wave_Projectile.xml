@@ -15,12 +15,12 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>NatureFang</damageDef>
+      <damageDef>ForestFang</damageDef>
       <damageAmountBase>1</damageAmountBase> <!-- REQUIRED FOR DEF VALIDATION -->
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>
-      <ExplosionEffect>NatureBreathingExplosionEffect</ExplosionEffect>
+      <ExplosionEffect>ForestBreathingExplosionEffect</ExplosionEffect>
       <speed>25</speed>
       <CanHitFriendly>true</CanHitFriendly>
       <CanHitCaster>false</CanHitCaster>

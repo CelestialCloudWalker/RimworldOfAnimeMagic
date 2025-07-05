@@ -29,7 +29,7 @@
         <impactEffecter>AnimeArsenal_NatureHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>NatureBreath</resourceGeneDef>
+        <resourceGeneDef>Gene_ForestBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
     </comps>

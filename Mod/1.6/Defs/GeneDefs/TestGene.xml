@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
-    <defName>MagicPower</defName>
-    <label>MagicPower</label>
+    <defName>AA_TestGene</defName>
+    <label>TestGene</label>
     <resourceName>Magic Power</resourceName>
     <description>Carriers of this gene can harness MagicPower, storing it within their bodies for various supernatural abilities.</description>
     <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
     <resourceLabel>Astral Energy</resourceLabel>
     <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
-    <maxStat>MagicPower</maxStat>
+    <maxStat>AstralPulse</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
     <resourceGizmoThresholds>
@@ -16,10 +16,15 @@
       <li>0.5</li>
       <li>0.75</li>
     </resourceGizmoThresholds>
-    <displayCategory>Magic</displayCategory>
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(3, 3, 138)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+
+    <!-- Generic Stats Settings -->
+    <regenTicks>AstralPulse_RegenTicks</regenTicks>
+    <regenStat>AstralPulse_RegenAmount</regenStat>
+    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
+    <costMult>AstralPulse_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 </Defs>

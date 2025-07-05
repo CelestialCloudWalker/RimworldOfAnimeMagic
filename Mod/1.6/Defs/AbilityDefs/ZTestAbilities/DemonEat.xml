@@ -4,7 +4,7 @@
     <defName>DemonConsume</defName>
     <label>demon consume</label>
     <description>Devour a target to heal wounds and restore blood demon arts energy. Can target corpses or living enemies.</description>
-    <iconPath>UI/Abilities/DemonConsume</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>3600</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <hostile>true</hostile>

@@ -2,7 +2,7 @@
 <Defs>
   <!-- EffecterDef -->
   <EffecterDef>
-    <defName>NatureBreathingExplosionEffect</defName>
+    <defName>ForestBreathingExplosionEffect</defName>
     <maintainTicks>1250</maintainTicks>
     <children>
     <li>

@@ -5,6 +5,7 @@
     <defName>Gene_BreathingPotential</defName>
     <label>Breathing Potential</label>
     <description>A gene with talent tree mechanics.</description>
+    <iconPath>UI/Icons/Genes/breathing_potential</iconPath>
     <!-- Tree Configuration -->
     <TalentTrees>
       <li>GenericExampleTree</li>
@@ -44,6 +45,23 @@
         </li>
       </experienceTypes>
     </experienceGainSettings>
+
+    <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>10</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
+    </modExtensions>
 
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>

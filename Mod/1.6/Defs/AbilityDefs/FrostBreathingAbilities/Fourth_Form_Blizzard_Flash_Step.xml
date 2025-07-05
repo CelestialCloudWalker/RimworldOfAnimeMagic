@@ -34,7 +34,7 @@
         <impactEffecter>AnimeArsenal_FrostHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>FrostBreath</resourceGeneDef>
+        <resourceGeneDef>Gene_FrostBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
     </comps>

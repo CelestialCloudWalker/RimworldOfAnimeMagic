@@ -5,7 +5,7 @@
     <defName>AA_ForwardDash</defName>
     <label>forward dash</label>
     <description>Quickly dash forward toward the target to close the distance.</description>
-    <iconPath>UI/Icons/ThingCategories/BodyPartsNatural</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>

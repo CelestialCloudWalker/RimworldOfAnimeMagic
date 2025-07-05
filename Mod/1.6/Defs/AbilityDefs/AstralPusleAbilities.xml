@@ -19,10 +19,6 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>AstralPulse</resourceGeneDef>
-        <resourceCost>20</resourceCost>
-      </li>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>TotalConcentrationBreathingEffect</hediffDef>
@@ -52,10 +48,6 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>AstralPulse</resourceGeneDef>
-        <resourceCost>20</resourceCost>
-      </li>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>HoraxianInvisibility</hediffDef>

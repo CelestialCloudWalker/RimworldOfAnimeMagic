@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
-    <defName>WindBreath</defName>
+    <defName>Gene_WindBreath</defName>
     <label>Wind Breath</label>
     <resourceName>Wind Breath</resourceName>
     <description>Current stored Breath, infused with the force of razor-sharp winds. This energy powers devastating wind-based abilities that slice through enemies with precision and speed.</description>
@@ -10,7 +10,6 @@
     <resourceDescription>Current stored Breath, infused with the force of razor-sharp winds. This energy powers devastating wind-based abilities that slice through enemies with precision and speed.</resourceDescription>
     <!-- Tree Configuration -->
     <TalentTrees>
-      <li>WindBreathingUpgradeTree</li>
     </TalentTrees>
 
     <!-- Experience System -->
@@ -48,6 +47,20 @@
     </experienceGainSettings>
 
     <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>30</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
       <li Class="DeathTimerExtension">
         <hediffToWatch>BreathingMarkApply</hediffToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
@@ -86,6 +99,12 @@
     <exhausationCooldownTicks>3000</exhausationCooldownTicks>
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>
+
+    <!-- Generic Stats Settings -->
+    <regenTicks>WindBreath_RegenTicks</regenTicks>
+    <regenStat>WindBreath_RegenAmount</regenStat>
+    <regenSpeedStat>WindBreath_RegenRate</regenSpeedStat>
+    <costMult>WindBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 

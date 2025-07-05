@@ -34,7 +34,7 @@
         <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>MistBreath</resourceGeneDef>
+        <resourceGeneDef>Gene_MistBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
     </comps>

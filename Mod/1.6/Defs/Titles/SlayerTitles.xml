@@ -295,6 +295,22 @@
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="BaseSlayerTitle">
+		<defName>AA_ForestHashira</defName>
+		<label>Forest Hashira</label>
+		<description>A guardian fighter whose soul is rooted in forest wisdom, striking with the quiet force of nature itself.</description>
+		<seniority>600</seniority>
+		<favorCost>14</favorCost>
+		<changeHeirQuestPoints>2800</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<canBeInherited>True</canBeInherited>
+		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseSlayerTitle">
 		<defName>AA_UbuyashikiKagaya</defName>
 		<label>Ubuyashiki Kagaya</label>
 		<description>The wise and compassionate leader of the Demon Slayer Corps, guiding its warriors with strategy and foresight.</description>

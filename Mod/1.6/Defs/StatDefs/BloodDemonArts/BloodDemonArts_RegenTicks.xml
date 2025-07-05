@@ -5,7 +5,7 @@
     <label>blood demon regeneration interval</label>
     <description>Ticks between regeneration pulses.</description>
     <category>BasicsPawn</category>
-    <defaultBaseValue>600</defaultBaseValue>
+    <defaultBaseValue>30</defaultBaseValue>
     <minValue>1</minValue>
     <requiredGenes>
       <li>BloodDemonArt</li>

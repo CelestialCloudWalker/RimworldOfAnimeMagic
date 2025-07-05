@@ -15,7 +15,7 @@
               <enchantDef>EnchantRoseThornEdge</enchantDef>
           </li>
           <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>FlowerBreath</resourceGeneDef>
+            <resourceGeneDef>Gene_FlowerBreath</resourceGeneDef>
             <resourceCost>20</resourceCost>
           </li>
       </comps>

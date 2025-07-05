@@ -34,7 +34,7 @@
         <impactEffecter>AnimeArsenal_ThunderHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>ThunderBreath</resourceGeneDef>
+        <resourceGeneDef>Gene_ThunderBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
     </comps>

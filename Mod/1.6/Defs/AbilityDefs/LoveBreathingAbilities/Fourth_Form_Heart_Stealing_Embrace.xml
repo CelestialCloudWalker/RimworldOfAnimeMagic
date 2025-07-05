@@ -34,7 +34,7 @@
         <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>LoveBreath</resourceGeneDef>
+        <resourceGeneDef>Gene_LoveBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
     </comps>

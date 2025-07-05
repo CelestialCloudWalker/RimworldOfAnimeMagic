@@ -4,7 +4,7 @@
     <defName>GroundFlingTest</defName>
     <label>ground fling test</label>
     <description>Test version of ground launch ability.</description>
-    <iconPath>UI/Icons/ThingCategories/ItemsMisc</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>300</cooldownTicksRange>
     <aiCanUse>false</aiCanUse>
     <targetRequired>true</targetRequired>

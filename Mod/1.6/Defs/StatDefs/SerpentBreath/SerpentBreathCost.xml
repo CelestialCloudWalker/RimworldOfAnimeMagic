@@ -10,7 +10,7 @@
     <maxValue>2</maxValue>
     <toStringStyle>PercentOne</toStringStyle>
     <requiredGenes>
-      <li>SerpentBreath</li>
+      <li>Gene_SerpentBreath</li>
     </requiredGenes>
   </StatDef_GeneDependent>
 

@@ -5,7 +5,7 @@
     <label>Water Enchantment</label>
     <description>A powerful fire-based enchantment that enhances combat abilities but causes exhaustion over time.</description>
     <enchantHediff>WaterEdge</enchantHediff>
-    <resourceGene>WaterBreath</resourceGene>
+    <resourceGene>Gene_WaterBreath</resourceGene>
     <!-- Resource Cost Settings -->
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>

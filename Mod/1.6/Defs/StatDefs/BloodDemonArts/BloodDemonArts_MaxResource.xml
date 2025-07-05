@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <StatDef_GeneDependent>
-    <defName>BloodDemonArts_MaxResource</defName>
+    <defName>BloodDemonArts</defName>
     <label>blood demon arts max resource</label>
     <category>PawnMisc</category>
     <description>Maximum blood demon arts resource amount.</description>

@@ -5,7 +5,7 @@
     <defName>AA_RetreatDash</defName>
     <label>retreat dash</label>
     <description>Quickly dash away from the target to a safe position.</description>
-    <iconPath>UI/Icons/ThingCategories/BodyPartsNatural</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>

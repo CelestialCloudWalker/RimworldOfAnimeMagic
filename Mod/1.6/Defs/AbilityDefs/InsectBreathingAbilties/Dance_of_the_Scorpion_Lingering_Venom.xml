@@ -15,7 +15,7 @@
           <enchantDef>InsectBreathingWisteriaEnchantment</enchantDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>InsectBreath</resourceGeneDef>
+            <resourceGeneDef>Gene_InsectBreath</resourceGeneDef>
             <resourceCost>20</resourceCost>
         </li>
     </comps>

@@ -2,7 +2,7 @@
 <Defs>
 
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
-    <defName>FlowerBreath</defName>
+    <defName>Gene_FlowerBreath</defName>
     <label>Flower Breath</label>
     <resourceName>Flower Breath</resourceName>
     <description>Carriers of this gene embody the elegance and fluidity of blooming flowers, unleashing techniques that blend agility and vision with deadly precision. Their attacks are a mesmerizing dance of petals and blossoms, with enhanced perception at the cost of potential strain on their eyesight.</description>
@@ -11,7 +11,6 @@
     <resourceDescription>Current stored Breath, charged with the essence of frost. This energy powers devastating ice-based abilities, freezing enemies in their tracks.</resourceDescription>
     <!-- Tree Configuration -->
     <TalentTrees>
-      <li>FlowerBreathingUpgradeTree</li>
     </TalentTrees>
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
@@ -48,6 +47,20 @@
     </experienceGainSettings>
 
     <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>30</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
       <li Class="DeathTimerExtension">
         <hediffToWatch>BreathingMarkApply</hediffToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
@@ -86,6 +99,12 @@
     <exhausationCooldownTicks>3500</exhausationCooldownTicks>
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>
+
+    <!-- Generic Stats Settings -->
+    <regenTicks>FlowerBreath_RegenTicks</regenTicks>
+    <regenStat>FlowerBreath_RegenAmount</regenStat>
+    <regenSpeedStat>FlowerBreath_RegenRate</regenSpeedStat>
+    <costMult>FlowerBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 

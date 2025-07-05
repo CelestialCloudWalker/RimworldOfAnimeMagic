@@ -48,25 +48,39 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_DemonSlayerWeapon">
         <breathingStyleGenes>
-          <li>WaterBreath</li>
-          <li>FlameBreath</li>
-          <li>ThunderBreath</li>
-          <li>WindBreath</li>
-          <li>StoneBreath</li>
-          <li>BeastBreath</li>
-          <li>FlowerBreath</li>
-          <li>InsectBreath</li>
-          <li>LoveBreath</li>
-          <li>SerpentBreath</li>
-          <li>SoundBreath</li>
-          <li>MistBreath</li>
-          <li>FrostBreath</li>
-          <li>NatureBreath</li>
+          <li>Gene_WaterBreath</li>
+          <li>Gene_FlameBreath</li>
+          <li>Gene_ThunderBreath</li>
+          <li>Gene_WindBreath</li>
+          <li>Gene_StoneBreath</li>
+          <li>Gene_BeastBreath</li>
+          <li>Gene_FlowerBreath</li>
+          <li>Gene_InsectBreath</li>
+          <li>Gene_LoveBreath</li>
+          <li>Gene_SerpentBreath</li>
+          <li>Gene_SoundBreath</li>
+          <li>Gene_MistBreath</li>
+          <li>Gene_Gene_FrostBreath</li>
+          <li>Gene_ForestBreath</li>
         </breathingStyleGenes>
         <randomGene>true</randomGene>
       </li>
     </comps>
     <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>30</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
       <li Class="AnimeArsenal.DrawOffsetExt">
         <offsetEast>(0.2, 0, 0.5)</offsetEast>
         <offsetWest>(-0.05, 0, -0.3)</offsetWest>

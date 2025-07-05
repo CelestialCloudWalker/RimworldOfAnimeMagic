@@ -3,9 +3,9 @@
   <StatDef_GeneDependent>
     <defName>BloodDemonArts_RegenAmount</defName>
     <label>blood demon regeneration amount</label>
-    <description>Amount of health regenerated per regeneration pulse.</description>
+    <description>Amount regeneration pulse.</description>
     <category>BasicsPawn</category>
-    <defaultBaseValue>3.0</defaultBaseValue>
+    <defaultBaseValue>5.0</defaultBaseValue>
     <minValue>0</minValue>
     <requiredGenes>
       <li>BloodDemonArt</li>

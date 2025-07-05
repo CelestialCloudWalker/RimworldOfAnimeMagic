@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
-    <defName>BeastBreath</defName>
+    <defName>Gene_BeastBreath</defName>
     <label>Beast Breath</label>
     <resourceName>Beast Breath</resourceName>
     <description>Carriers of this gene channel the primal instincts and raw strength of a beast, unleashing techniques that emphasize ferocity, speed, and relentless pursuit.</description>
@@ -10,7 +10,6 @@
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
     <!-- Tree Configuration -->
     <TalentTrees>
-      <li>BeastBreathingUpgradeTree</li>
     </TalentTrees>
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
@@ -46,15 +45,13 @@
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>
-        <damageAmount>5000</damageAmount>
+        <damageAmount>20</damageAmount>
         <targetGene>BloodDemonArt</targetGene>
         <armorPenetration>0.8</armorPenetration>
         <targetBodyParts>
           <li>Neck</li>
           <li>AA_DemonNeck</li>
         </targetBodyParts>
-
-        <!-- CRITICAL: These control when damage is applied -->
         <damageOnHit>true</damageOnHit>
       </li>
       <li Class="DeathTimerExtension">
@@ -95,5 +92,11 @@
     <exhausationCooldownTicks>3500</exhausationCooldownTicks>
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>
+
+    <!-- Generic Stats Settings -->
+    <regenTicks>BeastBreath_RegenTicks</regenTicks>
+    <regenStat>BeastBreath_RegenAmount</regenStat>
+    <regenSpeedStat>BeastBreath_RegenRate</regenSpeedStat>
+    <costMult>BeastBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 </Defs>

@@ -66,7 +66,7 @@
     <defName>GroundLaunch</defName>
     <label>ground launch</label>
     <description>Erupts the ground in a targeted area, launching all nearby pawns into the air and dealing damage.</description>
-    <iconPath>UI/Icons/ThingCategories/ItemsMisc</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
@@ -144,7 +144,7 @@
     <defName>GroundLaunchTest</defName>
     <label>ground launch test</label>
     <description>Test version of ground launch ability.</description>
-    <iconPath>UI/Icons/ThingCategories/ItemsMisc</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>300</cooldownTicksRange>
     <aiCanUse>false</aiCanUse>
     <targetRequired>true</targetRequired>

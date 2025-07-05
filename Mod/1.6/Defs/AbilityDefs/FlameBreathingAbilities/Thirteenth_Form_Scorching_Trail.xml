@@ -29,7 +29,7 @@
         <impactEffecter>AnimeArsenal_FlameHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>FlameBreath</resourceGeneDef>
+        <resourceGeneDef>Gene_FlameBreath</resourceGeneDef>
         <resourceCost>25</resourceCost>
       </li>
     </comps>

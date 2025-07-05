@@ -24,7 +24,7 @@
           <projectileDef>Fourth_Fang_SlicenDice_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>BeastBreath</resourceGeneDef>
+          <resourceGeneDef>Gene_BeastBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

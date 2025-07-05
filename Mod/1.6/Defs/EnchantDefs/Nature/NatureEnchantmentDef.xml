@@ -4,8 +4,8 @@
     <defName>NaturalEnchantment</defName>
     <label>Natural Enchantment</label>
     <description>An enchantment that enhances weapon. However, prolonged use drains the wielder’s stamina rapidly.</description>
-    <enchantHediff>NatureEdge</enchantHediff>
-    <resourceGene>NatureBreath</resourceGene>
+    <enchantHediff>ForestEdge</enchantHediff>
+    <resourceGene>Gene_ForestBreath</resourceGene>
     <!-- Resource Cost Settings -->
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
-    <defName>SerpentBreath</defName>
+    <defName>Gene_SerpentBreath</defName>
     <label>Serpent Breath</label>
     <resourceName>Serpent Breath</resourceName>
     <description>Carriers of this gene embody the elegance and fluidity of blooming flowers, unleashing techniques that blend agility and vision with deadly precision. Their attacks are a mesmerizing dance of petals and blossoms, with enhanced perception at the cost of potential strain on their eyesight.</description>
@@ -10,7 +10,6 @@
     <resourceDescription>Current stored Breath, charged with the essence of serpents. This energy powers devastating snake-like abilities, ensnaring and striking enemies with lethal precision.</resourceDescription>
     <!-- Tree Configuration -->
     <TalentTrees>
-      <li>SerpentBreathingUpgradeTree</li>
     </TalentTrees>
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
@@ -47,6 +46,20 @@
     </experienceGainSettings>
 
     <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>30</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
       <li Class="DeathTimerExtension">
         <hediffToWatch>BreathingMarkApply</hediffToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
@@ -85,5 +98,11 @@
     <exhausationCooldownTicks>3000</exhausationCooldownTicks>
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>
+
+    <!-- Generic Stats Settings -->
+    <regenTicks>SerpentBreath_RegenTicks</regenTicks>
+    <regenStat>SerpentBreath_RegenAmount</regenStat>
+    <regenSpeedStat>SerpentBreath_RegenRate</regenSpeedStat>
+    <costMult>SerpentBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 </Defs>

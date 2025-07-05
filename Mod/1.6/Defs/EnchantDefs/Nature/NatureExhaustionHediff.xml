@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <HediffDef>
-    <defName>NatureExhaustion</defName>
-    <label>Nature Technique Exhaustion</label>
-    <description>The relentless strain of tapping into Nature. Extended use erodes the body’s limits, forcing the wielder into a vulnerable state until they can recover.</description>
+    <defName>ForestExhaustion</defName>
+    <label>Forest Technique Exhaustion</label>
+    <description>The relentless strain of tapping into Forest. Extended use erodes the body’s limits, forcing the wielder into a vulnerable state until they can recover.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
 

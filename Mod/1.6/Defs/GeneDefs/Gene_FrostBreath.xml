@@ -2,7 +2,7 @@
 <Defs>
 
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
-    <defName>FrostBreath</defName>
+    <defName>Gene_FrostBreath</defName>
     <label>Frost Breath</label>
     <resourceName>Frost Breath</resourceName>
     <description>Carriers of this gene can channel the biting chill of frost into their body, unleashing rapid and devastating ice-based attacks fueled by their inner breath. Their power brings frigid winds and piercing cold to the battlefield.</description>
@@ -13,7 +13,6 @@
     </abilities>
     <!-- Tree Configuration -->
     <TalentTrees>
-      <li>FrostBreathingUpgradeTree</li>
     </TalentTrees>
 
     <!-- Experience System -->
@@ -51,6 +50,20 @@
     </experienceGainSettings>
 
     <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>30</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
       <li Class="DeathTimerExtension">
         <hediffToWatch>BreathingMarkApply</hediffToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
@@ -89,6 +102,12 @@
     <exhausationCooldownTicks>3000</exhausationCooldownTicks>
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>
+
+    <!-- Generic Stats Settings -->
+    <regenTicks>FrostBreath_RegenTicks</regenTicks>
+    <regenStat>FrostBreath_RegenAmount</regenStat>
+    <regenSpeedStat>FrostBreath_RegenRate</regenSpeedStat>
+    <costMult>FrostBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 

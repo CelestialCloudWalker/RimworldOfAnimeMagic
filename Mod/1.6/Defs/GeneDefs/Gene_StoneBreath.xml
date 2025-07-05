@@ -2,7 +2,7 @@
 <Defs>
 
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
-    <defName>StoneBreath</defName>
+    <defName>Gene_StoneBreath</defName>
     <label>Stone Breath</label>
     <resourceName>Stone Breath</resourceName>
     <description>Carriers of this gene embody the passion and grace of love, using techniques that blend emotion, fluidity, and overwhelming strength.</description>
@@ -11,7 +11,6 @@
     <resourceDescription>Current stored Breath, charged with the power of passion. This resource energizes graceful and powerful techniques, overwhelming enemies with both elegance and force.</resourceDescription>
     <!-- Tree Configuration -->
     <TalentTrees>
-      <li>StoneBreathingUpgradeTree</li>
     </TalentTrees>
     <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
@@ -48,6 +47,20 @@
     </experienceGainSettings>
 
     <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>30</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
       <li Class="DeathTimerExtension">
         <hediffToWatch>BreathingMarkApply</hediffToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
@@ -86,6 +99,12 @@
     <exhausationCooldownTicks>3000</exhausationCooldownTicks>
     <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>
+
+    <!-- Generic Stats Settings -->
+    <regenTicks>StoneBreath_RegenTicks</regenTicks>
+    <regenStat>StoneBreath_RegenAmount</regenStat>
+    <regenSpeedStat>StoneBreath_RegenRate</regenSpeedStat>
+    <costMult>StoneBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 
 

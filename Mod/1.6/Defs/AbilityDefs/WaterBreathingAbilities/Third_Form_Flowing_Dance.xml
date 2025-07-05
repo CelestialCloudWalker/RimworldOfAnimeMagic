@@ -29,7 +29,7 @@
         <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>WaterBreath</resourceGeneDef>
+        <resourceGeneDef>Gene_WaterBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
     </comps>

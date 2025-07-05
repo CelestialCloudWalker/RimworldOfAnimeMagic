@@ -25,7 +25,7 @@
           <projectileDef>Third_Form_Winters_Piercing_Shard_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>FrostBreath</resourceGeneDef>
+          <resourceGeneDef>Gene_FrostBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

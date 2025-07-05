@@ -5,8 +5,8 @@
     <label>Rose Thorn Edge</label>
     <description>A thorn-based enchantment that imbues the weapon with the grace of rose thorns, dealing painful cuts that cause bleeding and reduce the target's combat effectiveness. This enchantment drains energy with each use.</description>
     <enchantHediff>RoseThornEdge</enchantHediff>
-    <resourceGene>FlowerBreath</resourceGene>
-    <!-- Higher resource cost due to the offensive nature -->
+    <resourceGene>Gene_FlowerBreath</resourceGene>
+    <!-- Higher resource cost due to the offensive Forest -->
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

@@ -48,7 +48,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_DemonSlayerWeapon">
         <breathingStyleGenes>
-          <li>BeastBreath</li>
+          <li>Gene_BeastBreath</li>
         </breathingStyleGenes>
         <randomGene>true</randomGene>
       </li>
@@ -56,15 +56,13 @@
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>
-        <damageAmount>5000</damageAmount>
+        <damageAmount>30</damageAmount>
         <targetGene>BloodDemonArt</targetGene>
         <armorPenetration>0.8</armorPenetration>
         <targetBodyParts>
           <li>Neck</li>
           <li>AA_DemonNeck</li>
         </targetBodyParts>
-
-        <!-- CRITICAL: These control when damage is applied -->
         <damageOnHit>true</damageOnHit>
         <continuousDamage>false</continuousDamage>
         <applyOnGeneAdd>false</applyOnGeneAdd>

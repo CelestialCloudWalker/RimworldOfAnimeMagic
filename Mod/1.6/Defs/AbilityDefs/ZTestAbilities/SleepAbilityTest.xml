@@ -4,7 +4,7 @@
     <defName>YourMod_SleepSpell</defName>
     <label>Demon Sleep Test</label>
     <description>Causes the target to fall asleep instantly.</description>
-    <iconPath>UI/Icons/YourSleepIcon</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1000</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

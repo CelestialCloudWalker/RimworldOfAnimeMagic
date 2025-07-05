@@ -23,7 +23,7 @@
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <!-- Damage parameters -->
         <damageAmount>15</damageAmount>
-        <damageType>NatureFang</damageType>
+        <damageType>ForestFang</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <!-- Optional stun effect -->
@@ -34,7 +34,7 @@
         <impactEffecter>AnimeArsenal_NatureHit</impactEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>NatureBreath</resourceGeneDef>
+        <resourceGeneDef>Gene_ForestBreath</resourceGeneDef>
         <resourceCost>20</resourceCost>
       </li>
     </comps>

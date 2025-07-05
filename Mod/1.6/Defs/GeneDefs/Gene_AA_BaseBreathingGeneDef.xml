@@ -13,11 +13,5 @@
     </resourceGizmoThresholds>
     <displayCategory>BreathingTechnique</displayCategory>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-
-    <!-- Generic Stats Settings -->
-    <regenTicks>AstralPulse_RegenTicks</regenTicks>
-    <regenStat>AstralPulse_RegenAmount</regenStat>
-    <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>
-    <costMult>AstralPulse_Cost</costMult>
-    </AnimeArsenal.BreathingTechniqueGeneDef>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
 </Defs>

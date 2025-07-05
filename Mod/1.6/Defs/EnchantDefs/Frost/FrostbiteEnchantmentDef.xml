@@ -5,7 +5,7 @@
     <label>Frozen Blight Enchantment</label>
     <description>A chilling enchantment imbued with the breath of frost. It enhances the wielder's weapon with glacial power, freezing enemies on impact but at the cost of rapidly depleting energy reserves.</description>
     <enchantHediff>GlacialEdge</enchantHediff>
-    <resourceGene>FrostBreath</resourceGene>
+    <resourceGene>Gene_FrostBreath</resourceGene>
     <ticksBetweenCost>120</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

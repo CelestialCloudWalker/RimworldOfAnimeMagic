@@ -19,7 +19,7 @@
       <Plasteel>50</Plasteel>
     </costList>
     <techLevel>Spacer</techLevel>
-    
+
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <WorkToMake>25000</WorkToMake>
@@ -48,7 +48,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_DemonSlayerWeapon">
         <breathingStyleGenes>
-          <li>BeastBreath</li>
+          <li>Gene_BeastBreath</li>
         </breathingStyleGenes>
         <randomGene>true</randomGene>
       </li>

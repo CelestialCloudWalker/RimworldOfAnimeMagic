@@ -25,7 +25,7 @@
           <projectileDef>Thirteenth_Form_Distant_Wind_Cutter_Projectile</projectileDef>
         </li>
         <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>WindBreath</resourceGeneDef>
+          <resourceGeneDef>Gene_WindBreath</resourceGeneDef>
           <resourceCost>20</resourceCost>
         </li>
       </comps>

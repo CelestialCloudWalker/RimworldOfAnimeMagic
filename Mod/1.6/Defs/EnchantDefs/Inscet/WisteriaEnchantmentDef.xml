@@ -6,7 +6,7 @@
     <description>A poison-based enchantment that mimics the effects of Wisteria, weakening targets over time with each strike. It saps the target's strength and hampers their movements.</description>
 
     <enchantHediff>InsectBreathing_WisteriaPoisonBlade</enchantHediff>
-    <resourceGene>InsectBreath</resourceGene>
+    <resourceGene>Gene_InsectBreath</resourceGene>
 
     <!-- Higher resource cost -->
     <ticksBetweenCost>450</ticksBetweenCost>

@@ -17,7 +17,7 @@
     <!-- Generic Stats Settings -->
     <regenTicks>BloodDemonArts_RegenTicks</regenTicks>
     <regenStat>BloodDemonArts_RegenAmount</regenStat>
-    <regenSpeedStat>BloodDemonArts_RegenRate</regenSpeedStat>
+    <regenSpeedStat>AnimeArsenal_BloodDemonArtsRegenSpeed</regenSpeedStat>
     <costMult>BloodDemonArts_Cost</costMult>
     </AnimeArsenal.BloodDemonArtsGeneDef>
 </Defs>
