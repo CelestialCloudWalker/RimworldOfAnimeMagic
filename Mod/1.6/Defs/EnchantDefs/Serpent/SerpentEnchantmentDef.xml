@@ -7,7 +7,7 @@
 
     <enchantHediff>SerpentFangEdge</enchantHediff>
     <resourceGene>Gene_SerpentBreath</resourceGene>
-    <!-- Higher resource cost -->
+    
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

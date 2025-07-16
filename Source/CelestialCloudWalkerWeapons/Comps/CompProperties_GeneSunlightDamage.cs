@@ -20,7 +20,6 @@ namespace AnimeArsenal
 
         public MapComponent_SunlightDamage(Map map) : base(map)
         {
-            // Initialize effecters
             burningEffecter = CelestialDefof.SunlightBurningEffect.Spawn();
             deathEffecter = CelestialDefof.SunlightDeathEffect.Spawn();
         }
@@ -79,7 +78,6 @@ namespace AnimeArsenal
                 .GetModExtension<SunlightDamageExtension>();
             if (extension == null) return;
 
-            // Apply damage
             DamageInfo damageInfo = new DamageInfo(
                 DamageDefOf.Burn,
                 extension.damagePerTick,
@@ -99,7 +97,6 @@ namespace AnimeArsenal
 
             pawn.TakeDamage(damageInfo);
 
-            // Show burning effect
             if (burningEffecter != null)
             {
                 burningEffecter.Trigger(new TargetInfo(pawn.Position, map), new TargetInfo(pawn.Position, map));
@@ -120,19 +117,15 @@ namespace AnimeArsenal
 
         private void KillPawn(Pawn pawn)
         {
-            // Trigger death effect
             if (deathEffecter != null)
             {
                 deathEffecter.Trigger(new TargetInfo(pawn.Position, map), new TargetInfo(pawn.Position, map));
             }
 
-            // Create blood filth
             FilthMaker.TryMakeFilth(pawn.Position, map, ThingDefOf.Filth_Blood, 3);
 
-            // Kill the pawn
             pawn.Kill(null);
 
-            // Clear accumulated damage
             accumulatedDamage.Remove(pawn.thingIDNumber);
         }
 

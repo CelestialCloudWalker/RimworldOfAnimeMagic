@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- unused but you could put the common things between all exhaustion types here -->
+  
   <HediffDef Name="AA_BaseExhaustion" Abstract="True">
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>

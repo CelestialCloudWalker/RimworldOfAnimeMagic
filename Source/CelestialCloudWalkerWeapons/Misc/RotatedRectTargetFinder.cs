@@ -35,13 +35,13 @@ namespace AnimeArsenal
             float halfHeight = height;
 
             Vector3[] corners = new Vector3[4];
-            //topright
+            
             corners[0] = new Vector3(-halfWidth, 0f, 0);
-            //topleft
+            
             corners[1] = new Vector3(halfWidth, 0f, 0);
-            //bottom left
+            
             corners[2] = new Vector3(halfWidth, 0f, height);
-            //bottom right
+            
             corners[3] = new Vector3(-halfWidth, 0f, height);
 
             for (int i = 0; i < 4; i++)

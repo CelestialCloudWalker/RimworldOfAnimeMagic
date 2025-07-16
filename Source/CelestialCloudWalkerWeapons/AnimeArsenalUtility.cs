@@ -21,7 +21,6 @@ namespace AnimeArsenal
             WeatherEvent_LightningStrike lightningStrike = new WeatherEvent_LightningStrike(Map, Position);
             lightningStrike.FireEvent();
 
-            // Apply additional effects
             if (radius > 0f)
             {
                 GenExplosion.DoExplosion(
@@ -116,11 +115,9 @@ namespace AnimeArsenal
         }
         public static float CalcAstralPulseScalingFactor(Pawn casterPawn, Pawn targetPawn, float min = 0.5f, float max = 1.5f)
         {
-            // Get the AstralPulse stat from both the caster and the target
             float casterAstralPulse = casterPawn.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
             float targetAstralPulse = targetPawn.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
 
-            // Scale the value based on the caster's and target's AstralPulse reserves
             return Mathf.Lerp(min, max, casterAstralPulse / targetAstralPulse);
         }
 

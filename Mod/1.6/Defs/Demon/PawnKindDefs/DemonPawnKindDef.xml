@@ -13,7 +13,7 @@
     <apparelRequired>
         <li>Apparel_Duster</li>
     </apparelRequired>
-    <!-- This is a required field. 13~21 is the default value for Crashlanded player colonists. -->
+    
     <initialResistanceRange>13~21</initialResistanceRange>
   </PawnKindDef>
 

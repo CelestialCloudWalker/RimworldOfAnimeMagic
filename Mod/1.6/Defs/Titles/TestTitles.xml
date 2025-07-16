@@ -28,7 +28,7 @@
 		<recruitmentResistanceOffset>40</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>4</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<decreeTags>
@@ -50,7 +50,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<decreeTags>
@@ -73,7 +73,7 @@
 		<recruitmentResistanceOffset>75</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>12</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<decreeTags>

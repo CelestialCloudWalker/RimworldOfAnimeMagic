@@ -10,7 +10,7 @@
       <verbClass>Verb_CastAbility</verbClass>
       <range>12</range>
       <warmupTime>1.5</warmupTime>
-      <soundCast>YourSleepSound</soundCast> 
+      <soundCast>YourSleepSound</soundCast>
       <targetParams>
         <canTargetPawns>true</canTargetPawns>
         <canTargetSelf>false</canTargetSelf>
@@ -23,9 +23,6 @@
         <useSleepHediff>false</useSleepHediff>
         <forceImmediateSleep>true</forceImmediateSleep>
         <showMessage>true</showMessage>
-        <!-- Optional: Use a specific hediff instead of just setting rest to 0 -->
-        <!-- <sleepHediffDef>Anesthetic</sleepHediffDef> -->
-        <!-- <sleepSeverity>0.8</sleepSeverity> -->
       </li>
     </comps>
   </AbilityDef>

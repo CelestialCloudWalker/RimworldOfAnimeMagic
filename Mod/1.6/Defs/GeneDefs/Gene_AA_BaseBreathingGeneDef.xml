@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- all the stuff your breathing genes have in common can be put in one place -->
   <AnimeArsenal.BreathingTechniqueGeneDef Name="AA_BaseBreathingGene" Abstract="True">
     <geneClass>AnimeArsenal.BreathingTechniqueGene</geneClass>
     <resourceGizmoType>AnimeArsenal.GeneGizmoBreath</resourceGizmoType>

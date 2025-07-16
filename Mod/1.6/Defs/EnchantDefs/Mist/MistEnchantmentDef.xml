@@ -6,7 +6,6 @@
     <description>An enchantment that imbues the weapon with the elusive and deadly power of mist, enhancing combat precision while steadily draining stamina.</description>
     <enchantHediff>MistEdge</enchantHediff>
     <resourceGene>Gene_MistBreath</resourceGene>
-    <!-- Resource Cost Settings -->
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- Regeneration Hediff -->
   <HediffDef>
     <defName>BloodDemonRegeneration</defName>
     <label>demonic regeneration</label>
@@ -28,7 +27,4 @@
       </li>
     </stages>
   </HediffDef>
-
-
-
 </Defs>

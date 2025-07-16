@@ -9,7 +9,7 @@ namespace AnimeArsenal
     {
         public int damageAmount = 15;
 
-        // Changed from DamageDef with default to string that can be set in XML
+        
         public string damageDef = "Cut";
 
         public float armorPenetration = 0.3f;
@@ -28,10 +28,10 @@ namespace AnimeArsenal
     {
         public new CompProperties_AbilityDamage Props => (CompProperties_AbilityDamage)props;
 
-        // Cache for damage def lookup
+        
         private DamageDef cachedDamageDef = null;
 
-        // Helper to get the proper DamageDef from the string
+        
         private DamageDef GetDamageDef()
         {
             if (cachedDamageDef == null)
@@ -40,7 +40,7 @@ namespace AnimeArsenal
                 {
                     cachedDamageDef = DefDatabase<DamageDef>.GetNamed(Props.damageDef, false);
 
-                    // Fallback to Cut if not found
+                   
                     if (cachedDamageDef == null)
                     {
                         Log.Error($"AnimeArsenal: Could not find DamageDef named '{Props.damageDef}'. Using Cut damage instead.");
@@ -67,7 +67,7 @@ namespace AnimeArsenal
 
             if (targetThing == null || map == null || parent?.pawn == null)
                 return;
-            // Calculate final damage based on melee skill if configured
+            
             int finalDamage = Props.damageAmount;
             if (Props.meleeSkillFactor > 0)
             {
@@ -75,21 +75,20 @@ namespace AnimeArsenal
                 int skillBonus = (int)(meleeSkill * Props.meleeSkillFactor);
                 finalDamage += skillBonus;
 
-                // Debug logging
+                
                 Log.Message($"AbilityDamage - Base damage: {Props.damageAmount}, Melee skill: {meleeSkill}, Bonus: {skillBonus}, Final: {finalDamage}");
             }
-            // Apply area damage if radius > 0
+            
             if (Props.radius > 0f)
             {
                 ApplyAreaDamage(targetThing.Position, map, finalDamage);
             }
-            // Otherwise apply to single target
+            
             else if (Props.applyToTarget)
             {
                 ApplyDamage(targetThing, finalDamage);
             }
 
-            // Visual effect
             FleckMaker.Static(targetThing.Position, map, FleckDefOf.ExplosionFlash, 12f);
             FleckMaker.ThrowMicroSparks(targetThing.DrawPos, map);
         }
@@ -99,7 +98,7 @@ namespace AnimeArsenal
             if (target == null) return;
 
             DamageInfo dinfo = new DamageInfo(
-                GetDamageDef(),  // Using the helper method instead of Props.damageDef
+                GetDamageDef(),  
                 amount,
                 Props.armorPenetration,
                 -1f,
@@ -110,13 +109,10 @@ namespace AnimeArsenal
                 target
             );
 
-            // Log for debugging
             Log.Message($"AbilityDamage - Applying {amount} {GetDamageDef().label} damage to {target.Label}");
 
-            // Apply damage
             target.TakeDamage(dinfo);
 
-            // Apply stun if configured and target is a pawn
             if (Props.stunTicks > 0 && target is Pawn targetPawn)
             {
                 targetPawn.stances?.stunner?.StunFor(Props.stunTicks, parent.pawn);
@@ -127,7 +123,6 @@ namespace AnimeArsenal
         {
             if (map == null) return;
 
-            // Get all pawns in radius except self
             foreach (Thing thing in GenRadial.RadialDistinctThingsAround(center, map, Props.radius, true))
             {
                 if (thing != parent.pawn)

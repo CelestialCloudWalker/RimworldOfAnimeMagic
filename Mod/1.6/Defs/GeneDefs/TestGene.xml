@@ -19,8 +19,6 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(3, 3, 138)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-
-    <!-- Generic Stats Settings -->
     <regenTicks>AstralPulse_RegenTicks</regenTicks>
     <regenStat>AstralPulse_RegenAmount</regenStat>
     <regenSpeedStat>AstralPulse_RegenRate</regenSpeedStat>

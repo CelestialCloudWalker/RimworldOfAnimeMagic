@@ -7,7 +7,7 @@
     <description>.</description>
     <iconPath>UI/Abilities/PiercingSpine</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
-    <category>Sanguophage</category> <!-- This can be changed -->
+    <category>Sanguophage</category> 
     <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>
 

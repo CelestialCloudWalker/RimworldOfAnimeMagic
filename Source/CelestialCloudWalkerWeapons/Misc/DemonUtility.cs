@@ -77,14 +77,14 @@ namespace AnimeArsenal
 
             if (Pawn.playerSettings != null)
             {
-                // Disable health care
+                
                 Pawn.playerSettings.medCare = MedicalCareCategory.NoCare;
             }
 
 
             if (Pawn.mindState != null)
             {
-                // Modify behavior to focus on work
+                
                 Pawn.mindState.mentalStateHandler.Reset();
             }
         }
@@ -93,7 +93,7 @@ namespace AnimeArsenal
         {
             foreach (SkillRecord skill in pawn.skills.skills)
             {
-                skill.Level = Level; // Set to a moderate skill level
+                skill.Level = Level;
                 skill.passion = Passion.None;
             }
         }

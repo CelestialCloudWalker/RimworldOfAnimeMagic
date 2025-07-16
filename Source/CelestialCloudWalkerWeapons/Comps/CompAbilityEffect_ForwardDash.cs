@@ -22,12 +22,12 @@ namespace AnimeArsenal
 
             IntVec3 targetCell = target.Cell;
 
-            // Perform multiple dashes
+            
             for (int dashCount = 0; dashCount < Props.numberOfDashes; dashCount++)
             {
                 IntVec3 currentPos = caster.Position;
 
-                // Cast effect at current position (first dash gets cast effect, others get retry effect)
+                
                 if (dashCount == 0 && Props.castEffecter != null)
                 {
                     Effecter castEffect = Props.castEffecter.Spawn();
@@ -41,16 +41,16 @@ namespace AnimeArsenal
                     retryEffect.Cleanup();
                 }
 
-                // Calculate next dash position (toward target)
+                
                 IntVec3 dashTarget = CalculateForwardPosition(caster, targetCell);
 
                 if (dashTarget.IsValid)
                 {
-                    // Move the pawn
+                   
                     caster.Position = dashTarget;
                     caster.Notify_Teleported(false, false);
 
-                    // Landing effect at new position
+                   
                     if (Props.landEffecter != null)
                     {
                         Effecter landEffect = Props.landEffecter.Spawn();
@@ -58,7 +58,7 @@ namespace AnimeArsenal
                         landEffect.Cleanup();
                     }
 
-                    // Play sounds
+                    
                     if (dashCount == 0 && Props.castSound != null)
                     {
                         Props.castSound.PlayOneShot(new TargetInfo(currentPos, caster.Map));
@@ -69,16 +69,15 @@ namespace AnimeArsenal
                         Props.landSound.PlayOneShot(new TargetInfo(dashTarget, caster.Map));
                     }
 
-                    // Short delay between dashes for visual effect
+                    
                     if (dashCount < Props.numberOfDashes - 1 && Props.dashDelay > 0)
                     {
-                        // Note: In RimWorld, we can't easily add delays in the middle of ability execution
-                        // The visual effects will play rapidly in sequence
+                       
                     }
                 }
                 else
                 {
-                    // If we can't find a valid position, stop dashing
+                    
                     break;
                 }
             }
@@ -89,10 +88,10 @@ namespace AnimeArsenal
             Map map = caster.Map;
             IntVec3 casterPos = caster.Position;
 
-            // Find direction toward target
+            
             Vector3 forwardDirection = (targetCell - casterPos).ToVector3Shifted().normalized;
 
-            // Try to find valid cells in forward direction
+           
             for (int dist = Props.minDashDistance; dist <= Props.maxDashDistance; dist++)
             {
                 Vector3 targetVector = casterPos.ToVector3Shifted() + (forwardDirection * dist);
@@ -103,7 +102,7 @@ namespace AnimeArsenal
                     return candidate;
                 }
 
-                // Try slight variations if direct path doesn't work
+                
                 for (int angle = -30; angle <= 30; angle += 10)
                 {
                     Vector3 rotatedDir = forwardDirection.RotatedBy(angle);
@@ -117,7 +116,7 @@ namespace AnimeArsenal
                 }
             }
 
-            // If forward direction fails and Props.allowRandomDirection is true, try random directions
+            
             if (Props.allowRandomDirection)
             {
                 for (int i = 0; i < 20; i++)
@@ -149,11 +148,11 @@ namespace AnimeArsenal
             if (cell.GetEdifice(map)?.def.passability == Traversability.Impassable)
                 return false;
 
-            // Don't dash too close to the original target if specified
+            
             if (Props.maintainMinDistanceFromTarget && cell.DistanceTo(originalTarget) < Props.minDistanceFromTarget)
                 return false;
 
-            // Optional: avoid enemies (might be less relevant for forward dash)
+            
             if (Props.avoidEnemies)
             {
                 var enemies = map.mapPawns.AllPawnsSpawned.Where(p =>
@@ -174,7 +173,7 @@ namespace AnimeArsenal
             if (caster == null)
                 return false;
 
-            // Check if there are valid forward positions for at least the first dash
+            
             IntVec3 forwardPos = CalculateForwardPosition(caster, target.Cell);
             if (!forwardPos.IsValid)
             {
@@ -191,24 +190,24 @@ namespace AnimeArsenal
     {
         public int minDashDistance = 3;
         public int maxDashDistance = 8;
-        public bool avoidEnemies = false; // Usually false for forward dash since you might want to dash toward enemies
+        public bool avoidEnemies = false; 
         public float enemyAvoidanceRadius = 5f;
-        public int numberOfDashes = 1; // Number of consecutive dashes to perform
-        public int dashDelay = 0; // Delay between dashes (limited effectiveness in RimWorld)
+        public int numberOfDashes = 1; 
+        public int dashDelay = 0; 
 
-        // Forward dash specific properties
-        public bool allowRandomDirection = false; // If true, will try random directions if forward path blocked
-        public bool maintainMinDistanceFromTarget = false; // Prevent dashing too close to target
-        public float minDistanceFromTarget = 2f; // Minimum distance to maintain from target
+        
+        public bool allowRandomDirection = false;
+        public bool maintainMinDistanceFromTarget = false; 
+        public float minDistanceFromTarget = 2f; 
 
-        // Visual and audio effects
-        public EffecterDef castEffecter; // Effect for the first dash
-        public EffecterDef landEffecter; // Effect for each landing
-        public EffecterDef retryEffecter; // Effect for subsequent dashes (2nd, 3rd, etc.)
+        
+        public EffecterDef castEffecter; 
+        public EffecterDef landEffecter; 
+        public EffecterDef retryEffecter; 
         public SoundDef castSound;
         public SoundDef landSound;
 
-        // Disabled features (keeping properties for potential future use)
+        
         public bool grantTemporaryImmunity = false;
         public bool grantSpeedBoost = false;
         public bool grantMoodBoost = false;

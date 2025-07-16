@@ -6,39 +6,30 @@
     <label>Breathing Potential</label>
     <description>A gene with talent tree mechanics.</description>
     <iconPath>UI/Icons/Genes/breathing_potential</iconPath>
-    <!-- Tree Configuration -->
     <TalentTrees>
-      <li>GenericExampleTree</li>
+      <li>Test</li>
     </TalentTrees>
 
-    <!-- Experience System -->
+
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>
       <experienceTypes>
-        <!-- Combat XP -->
         <li Class="Talented.DamageDealtExperienceTypeDef">
           <baseXP>10</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
-
         <li Class="Talented.DamageTakenExperienceTypeDef">
           <baseXP>10</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
-
-        <!-- Skill XP -->
         <li Class="Talented.SkillExperienceTypeDef">
           <SkillDef>Shooting</SkillDef>
           <baseXP>2</baseXP>
         </li>
-
-        <!-- Job XP -->
         <li Class="Talented.JobExperienceTypeDef">
           <SkillDef>HaulToCell</SkillDef>
           <baseXP>1</baseXP>
         </li>
-
-        <!-- Verb XP -->
         <li Class="Talented.VerbExperienceTypeDef">
           <VerbClassName>Verb_BeatFire</VerbClassName>
           <baseXP>1</baseXP>
@@ -62,8 +53,6 @@
         <applyOnGeneRemove>false</applyOnGeneRemove>
       </li>
     </modExtensions>
-
-    <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>
   </Talented.TalentedGeneDef>
 </Defs>

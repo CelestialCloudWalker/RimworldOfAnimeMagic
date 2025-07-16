@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- Slayer Corps Faction Implementation -->
+
   <FactionDef>
     <defName>AA_Slayer_Corps</defName>
     <label>Demon Slayer Corps</label>
@@ -62,9 +62,8 @@
       <li>(0.3, 0.4, 0.7)</li>
     </colorSpectrum>
 
-    <!-- Slayer Corps Pawn Groups -->
+
     <pawnGroupMakers>
-      <!-- Basic Slayer Ranks -->
       <li>
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
@@ -76,7 +75,6 @@
           <AA_Kanoe_PK>8</AA_Kanoe_PK>
         </options>
       </li>
-      <!-- Intermediate Slayer Ranks -->
       <li>
         <kindDef>Combat</kindDef>
         <commonality>70</commonality>
@@ -88,7 +86,6 @@
           <AA_Hinoe_PK>4</AA_Hinoe_PK>
         </options>
       </li>
-      <!-- Advanced Slayer Ranks -->
       <li>
         <kindDef>Combat</kindDef>
         <commonality>50</commonality>
@@ -99,7 +96,6 @@
           <AA_Tsuguko_PK>2</AA_Tsuguko_PK>
         </options>
       </li>
-      <!-- Hashira (Pillars) - Ultra Elite -->
       <li>
         <kindDef>Combat</kindDef>
         <commonality>15</commonality>
@@ -117,7 +113,6 @@
           <AA_ForestHashira_PK>1</AA_ForestHashira_PK>
         </options>
       </li>
-      <!-- Peaceful/Settlement groups -->
       <li>
         <kindDef>Peaceful</kindDef>
         <commonality>100</commonality>
@@ -129,7 +124,6 @@
           <AA_Kanoe_PK>5</AA_Kanoe_PK>
         </options>
       </li>
-      <!-- Trader groups -->
       <li>
         <kindDef>Trader</kindDef>
         <commonality>100</commonality>
@@ -164,7 +158,7 @@
 
   </FactionDef>
 
-  <!-- Slayer Culture Definition -->
+  
   <CultureDef>
     <defName>AA_SlayerCulture</defName>
     <label>Slayer</label>

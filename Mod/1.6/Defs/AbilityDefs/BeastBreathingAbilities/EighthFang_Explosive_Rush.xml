@@ -21,14 +21,10 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
-        <!-- Damage parameters -->
         <damageAmount>7</damageAmount>
         <damageType>PrimalFang</damageType>
-        <!-- Optional stun effect -->
         <stunDuration>2</stunDuration>
-        <!-- Set to 0 for single target, >0 for AOE -->
         <effectRadius>0</effectRadius>
-        <!-- Effecter definitions -->
         <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
         <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
       </li>

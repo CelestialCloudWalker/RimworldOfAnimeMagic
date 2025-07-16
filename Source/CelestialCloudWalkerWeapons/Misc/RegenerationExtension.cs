@@ -25,31 +25,25 @@ namespace AnimeArsenal
         public float scarHealChance = 0.2f;
         public int scarHealInterval = 1500;
 
-        // Resource consumption settings
         public bool consumeResourcesOnRegeneration = false;
         public float resourceCostPerHeal = 1f;
         public float resourceCostPerLimbRegen = 50f;
         public float resourceCostPerOrganRegen = 100f;
         public float resourceCostPerScarHeal = 25f;
 
-        // Regeneration behavior when out of resources
         public bool preventRegenIfInsufficientResources = true;
         public float minimumResourcesRequired = 0.1f;
         public bool showResourceWarnings = true;
         public int resourceWarningCooldownTicks = 2500;
 
-        // Death prevention settings
         public bool preventDeathFromVitalLoss = true;
         public List<string> fatalBodyParts = new List<string> { "Neck", "AA_DemonNeck" };
 
-        // Notification settings
         public bool onlyNotifyMajorParts = true;
 
-        // Text settings (simplified)
         public string resourceName = "Blood Art";
     }
 
-    // Centralized helper class for all regeneration logic
     public static class RegenerationHelper
     {
         private static readonly HashSet<string> OrganTags = new HashSet<string>
@@ -214,7 +208,6 @@ namespace AnimeArsenal
         {
             var missingParts = pawn.health.hediffSet.GetMissingPartsCommonAncestors().ToList();
 
-            // Process limbs first
             if (extension.instantLimbRegeneration)
             {
                 var limbToRegenerate = missingParts.FirstOrDefault(x => CanRegeneratePart(x.Part, extension, false));
@@ -224,7 +217,6 @@ namespace AnimeArsenal
                 }
             }
 
-            // Process organs
             if (extension.instantOrganRegeneration)
             {
                 var organToRegenerate = missingParts.FirstOrDefault(x => CanRegeneratePart(x.Part, extension, true));
@@ -237,11 +229,9 @@ namespace AnimeArsenal
 
         private bool CanRegeneratePart(BodyPartRecord part, RegenerationExtension extension, bool isOrgan)
         {
-            // Check fatal parts
             if (extension.fatalBodyParts.Any(fatalPart => RegenerationHelper.IsPartType(part.def.defName, fatalPart)))
                 return false;
 
-            // Check head regeneration
             if (RegenerationHelper.IsPartType(part.def.defName, "Head") && !extension.canRegenerateHead)
                 return false;
 
@@ -253,7 +243,7 @@ namespace AnimeArsenal
                 return true;
             }
 
-            return !RegenerationHelper.IsOrgan(part); // Limbs are non-organs
+            return !RegenerationHelper.IsOrgan(part); 
         }
 
         private void RegeneratePart(Pawn pawn, BodyPartRecord part, RegenerationExtension extension, string moteText, Color moteColor)
@@ -263,7 +253,6 @@ namespace AnimeArsenal
             {
                 pawn.health.RemoveHediff(missingPart);
 
-                // Add minor wound
                 var freshWound = HediffMaker.MakeHediff(HediffDefOf.Cut, pawn, part);
                 freshWound.Severity = 0.01f;
                 pawn.health.AddHediff(freshWound);
@@ -271,7 +260,6 @@ namespace AnimeArsenal
 
             RefreshPawn(pawn);
 
-            // Show notifications for major parts only
             if (!extension.onlyNotifyMajorParts || RegenerationHelper.IsMajorPart(part))
             {
                 var partName = RegenerationHelper.GetBasePartName(part.def.defName);
@@ -295,7 +283,6 @@ namespace AnimeArsenal
 
                 if (consciousness > 0.3f && moving > 0.2f && bloodPumping > 0.3f)
                 {
-                    // Reduce major injuries
                     var majorInjuries = pawn.health.hediffSet.hediffs.OfType<Hediff_Injury>()
                         .Where(injury => injury.Severity > 15f).ToList();
 
@@ -407,7 +394,6 @@ namespace AnimeArsenal
                     var healedType = permanentInjury.def.label ?? "Permanent Injury";
                     MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, $"{healedType} healed", Color.blue, 2f);
 
-                    // Show message for important injuries
                     var defName = permanentInjury.def.defName.ToLower();
                     if (defName.Contains("blindness") || defName.Contains("hearing") || defName.Contains("dementia"))
                     {

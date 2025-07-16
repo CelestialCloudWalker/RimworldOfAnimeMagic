@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <Talented.TalentDef>
+    <defName>Blood_Demon_Arts_Blood_Ascension_Talent</defName>
+    <label>Blood Demon Arts: Blood Ascension</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Blood_Demon_Arts_Blood_Ascension</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Blood_Demon_Arts_Demons_Embrace_Talent</defName>
+    <label>Blood Demon Arts: Demon's Embrace</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Blood_Demon_Arts_Demons_Embrace</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Blood_Demon_Arts_Graviton_Crush_Talent</defName>
+    <label>Blood Demon Arts: Graviton Crush</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Blood_Demon_Arts_Graviton_Crush</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Blood_Demon_Arts_Pain_Blade_Talent</defName>
+    <label>Blood Demon Arts: Pain Blade</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Blood_Demon_Arts_Pain_Blade</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Blood_Demon_Arts_Spiral_of_Torment_Talent</defName>
+    <label>Blood Demon Arts: Spiral of Torment</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Blood_Demon_Arts_Spiral_of_Torment</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Blood_Demon_Arts_Thunderous_Wrath_Talent</defName>
+    <label>Blood Demon Arts: Thunderous Wrath</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Blood_Demon_Arts_Thunderous_Wrath</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Blood_Demon_Arts_Vicious_Rush_Talent</defName>
+    <label>Blood Demon Arts: Vicious Rush</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Blood_Demon_Arts_Vicious_Rush</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Blood_Demon_Silken_Web_Slash_Talent</defName>
+    <label>Blood Demon Arts: Silken Web Slash</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Blood_Demon_Silken_Web_Slash</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eighth_Fang_Explosive_Rush_Talent</defName>
+    <label>Eighth Fang: Explosive Rush</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eighth_Fang_Explosive_Rush</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Fang_SlicenDice_Talent</defName>
+    <label>Fourth Fang: Slice 'n' Dice</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Fang_SlicenDice</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>SevenFang_SpatialOnslaught_Talent</defName>
+    <label>Seventh Fang: Spatial Onslaught</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>SevenFang_SpatialOnslaught</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Tenth_Fang_Whirling_Fangs_Talent</defName>
+    <label>Tenth Fang: Whirling Fangs</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Tenth_Fang_Whirling_Fangs</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Twelfth_Fang_Boar_Rush_Talent</defName>
+    <label>Twelfth Fang: Boar Rush</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Twelfth_Fang_Boar_Rush</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eleventh_Form_Soul_Ignition_Talent</defName>
+    <label>Eleventh Form: Soul Ignition</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eleventh_Form_Soul_Ignition</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>First_Form_Unknowing_Fire_Talent</defName>
+    <label>First Form: Unknowing Fire</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>First_Form_Unknowing_Fire</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Second_Form_Rising_Scorching_Sun_Talent</defName>
+    <label>Second Form: Rising Scorching Sun</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Second_Form_Rising_Scorching_Sun</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Thirteenth_Form_Scorching_Trail_Talent</defName>
+    <label>Thirteenth Form: Scorching Trail</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Thirteenth_Form_Scorching_Trail</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>TwelfthForm_FlameWallDance_Talent</defName>
+    <label>Twelfth Form: Flame Wall Dance</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>TwelfthForm_FlameWallDance</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eleventh_Form_FlowerMirrorReversal_Talent</defName>
+    <label>Eleventh Form: Blossoming Mirror Reversal</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eleventh_Form_FlowerMirrorReversal</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Form_Crimson_Hanagoromo_Talent</defName>
+    <label>Fourth Form: Crimson Hanagoromo</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Form_Crimson_Hanagoromo</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Second_Form_Honorable_Shadow_Plum_Talent</defName>
+    <label>Second Form: Honorable Shadow Plum</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Second_Form_Honorable_Shadow_Plum</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Seventh_Form_Scatter_of_Fallen_Camellias_Talent</defName>
+    <label>Seventh Form: Scatter of Fallen Camellias</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Seventh_Form_Scatter_of_Fallen_Camellias</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Third_Form_Falling_Camellia_Step_Talent</defName>
+    <label>Third Form: Falling Camellia Step</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Third_Form_Falling_Camellia_Step</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Dance_of_the_Cicada_Resonant_Cut_Talent</defName>
+    <label>Dance of the Cicada: Resonant Cut</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Dance_of_the_Cicada_Resonant_Cut</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Dance_of_the_Firefly_Guiding_Light_Talent</defName>
+    <label>Dance of the Firefly: Guiding Light</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Dance_of_the_Firefly_Guiding_Light</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Dance_of_the_Grasshopper_Ascending_Steps_Talent</defName>
+    <label>Dance of the Grasshopper: Ascending Steps</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Dance_of_the_Grasshopper_Ascending_Steps</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Dance_of_the_Mantis_Stillness_Before_Strike_Talent</defName>
+    <label>Dance of the Mantis: Stillness Before Strike</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Dance_of_the_Mantis_Stillness_Before_Strike</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Dance_of_the_Scorpion_Lingering_Venom_Talent</defName>
+    <label>Dance of the Scorpion: Lingering Venom</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Dance_of_the_Scorpion_Lingering_Venom</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eighth_Form_Reflection_of_True_Feelings_Talent</defName>
+    <label>Eighth Form: Reflection of True Feelings</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eighth_Form_Reflection_of_True_Feelings</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Form_Heart_Stealing_Embrace_Talent</defName>
+    <label>Fourth Form: Heart-Stealing Embrace</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Form_Heart_Stealing_Embrace</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Ninth_Form_Distance_of_Yearning_Talent</defName>
+    <label>Ninth Form: Distance of Yearning</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Ninth_Form_Distance_of_Yearning</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Seventh_Form_Fluttering_Petals_of_Affection_Talent</defName>
+    <label>Seventh Form: Fluttering Petals of Affection</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Seventh_Form_Fluttering_Petals_of_Affection</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Tenth_Form_Eternal_Bond_of_Devotion_Talent</defName>
+    <label>Tenth Form: Eternal Bond of Devotion</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Tenth_Form_Eternal_Bond_of_Devotion</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eighth_Form_Phantom_Mist_Cutter_Talent</defName>
+    <label>Eighth Form: Phantom Mist Cutter</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eighth_Form_Phantom_Mist_Cutter</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fifth_Form_Sea_of_Clouds_and_Haze_Talent</defName>
+    <label>Fifth Form: Sea of Clouds and Haze</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fifth_Form_Sea_of_Clouds_and_Haze</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Form_Shifting_Flow_Slash_Talent</defName>
+    <label>Fourth Form: Shifting Flow Slash</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Form_Shifting_Flow_Slash</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Ninth_Form_Consuming_Fog_Dissolution_Talent</defName>
+    <label>Ninth Form: Consuming Fog Dissolution</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Ninth_Form_Consuming_Fog_Dissolution</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Third_Form_Scattering_Mist_Splash_Talent</defName>
+    <label>Third Form: Scattering Mist Splash</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Third_Form_Scattering_Mist_Splash</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fifth_Form_Slithering_Serpent_Talent</defName>
+    <label>Fifth Form: Slithering Serpent</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fifth_Form_Slithering_Serpent</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>First_Form_Winding_Serpent_Slash_Talent</defName>
+    <label>First Form: Winding Serpent Slash</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>First_Form_Winding_Serpent_Slash</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Form_Twin_Headed_Reptile_Talent</defName>
+    <label>Fourth Form: Twin-Headed Reptile</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Form_Twin_Headed_Reptile</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Seventh_Form_Binding_Serpents_Corruption_talent</defName>
+    <label>Seventh Form: Binding Serpent's Corruption</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Seventh_Form_Binding_Serpents_Corruption</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Sixth_Form_Serpents_Scale_Shield_Talent</defName>
+    <label>Sixth Form: Serpent's Scale Shield</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Sixth_Form_Serpents_Scale_Shield</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Form_Constant_Resounding_Slashes_Talent</defName>
+    <label>Fourth Form: Constant Resounding Slashes</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Form_Constant_Resounding_Slashes</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Second_Form_Echo_Percussion_Talent</defName>
+    <label>Second Form: Echo Percussion</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Second_Form_Echo_Percussion</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Seventh_Form_Lingering_Vibrato_Talent</defName>
+    <label>Seventh Form: Lingering Vibrato</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Seventh_Form_Lingering_Vibrato</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Sixth_Form_Symphony_of_Dancing_Steps_Talent</defName>
+    <label>Sixth Form: Symphony of Dancing Steps</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Sixth_Form_Symphony_of_Dancing_Steps</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Third_Form_Distant_Reverberation_Talent</defName>
+    <label>Third Form: Distant Reverberation</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Third_Form_Distant_Reverberation</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eighth_Form_Stalactite_Rain_Talent</defName>
+    <label>Eighth Form: Stalactite Rain</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eighth_Form_Stalactite_Rain</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eleventh_Form_Flying_Shale_Cutter_Talent</defName>
+    <label>Eleventh Form: Flying Shale Cutter</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eleventh_Form_Flying_Shale_Cutter</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Ninth_Form_Petrifying_Edge_Talent</defName>
+    <label>Ninth Form: Petrifying Edge</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Ninth_Form_Petrifying_Edge</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Seventh_Form_Granite_Piercer_Talent</defName>
+    <label>Seventh Form: Granite Piercer</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Seventh_Form_Granite_Piercer</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Sixth_Form_Mountains_Rejection_Talent</defName>
+    <label>Sixth Form: Mountain's Rejection</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Sixth_Form_Mountains_Rejection</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eighth_Form_Lightning_Piercer_Talent</defName>
+    <label>Eighth Form: Lightning Piercer</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eighth_Form_Lightning_Piercer</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eleventh_Form_Lingering_Static_Shock_Talent</defName>
+    <label>Eleventh Form: Lingering Static Shock</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eleventh_Form_Lingering_Static_Shock</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Ninth_Form_Thunderbolt_Arrow_Talent</defName>
+    <label>Ninth Form: Thunderbolt Arrow</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Ninth_Form_Thunderbolt_Arrow</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Tenth_Form_Storm_Cloud_Steps_Talent</defName>
+    <label>Tenth Form: Storm Cloud Steps</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Tenth_Form_Storm_Cloud_Steps</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Twelfth_Form_Thunder_Shield_Reversal_Talent</defName>
+    <label>Twelfth Form: Thunder Shield Reversal</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Twelfth_Form_Thunder_Shield_Reversal</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>First_Form_Water_Surface_Slash_Talent</defName>
+    <label>First Form: Water Surface Slash</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>First_Form_Water_Surface_Slash</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Seventh_Form_Drop_Ripple_Thrust_Talent</defName>
+    <label>Seventh Form: Drop Ripple Thrust</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Seventh_Form_Drop_Ripple_Thrust</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Third_Form_Flowing_Dance_Talent</defName>
+    <label>Third Form: Flowing Dance</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Third_Form_Flowing_Dance</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Thirteenth_Form_Dividing_Riverbed_Talent</defName>
+    <label>Thirteenth Form: Dividing Riverbed</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Thirteenth_Form_Dividing_Riverbed</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Twelfth_Form_Endless_Ocean_Surge_Talent</defName>
+    <label>Twelfth Form: Endless Ocean Surge</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Twelfth_Form_Endless_Ocean_Surge</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Eleventh_Form_Dancing_Wind_Current_Talent</defName>
+    <label>Eleventh Form: Dancing Wind Current</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Eleventh_Form_Dancing_Wind_Current</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourteenth_Form_Howling_Blade_Infusion_Talent</defName>
+    <label>Fourteenth Form: Howling Blade Infusion</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourteenth_Form_Howling_Blade_Infusion</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Tenth_Form_Vanishing_Gale_Step_Talent</defName>
+    <label>Tenth Form: Vanishing Gale Step</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Tenth_Form_Vanishing_Gale_Step</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Thirteenth_Form_Distant_Wind_Cutter_Talent</defName>
+    <label>Thirteenth Form: Distant Wind Cutter</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Thirteenth_Form_Distant_Wind_Cutter</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Twelfth_Form_Reversing_Tempest_Talent</defName>
+    <label>Twelfth Form: Reversing Tempest</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Twelfth_Form_Reversing_Tempest</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>NewTalent_1746401667784</defName>
+    <label>undefined</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Beast_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>BeastBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Beast_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>BeastBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Beast_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>BeastBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Beast_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>BeastBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>FlameBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FlameBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>FlameBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FlameBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>FlameBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FlameBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>FlameBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FlameBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>FlowerBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FlowerBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>FlowerBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FlowerBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>FlowerBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FlowerBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>FlowerBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FlowerBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>InsectBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>InsectBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>InsectBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>InsectBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>InsectBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>InsectBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>InsectBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>InsectBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>LoveBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>LoveBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>LoveBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>LoveBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>LoveBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>LoveBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>LoveBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>LoveBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>MistBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>MistBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>MistBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>MistBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>MistBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>MistBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>MistBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>MistBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>SerpentBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>SerpentBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>SerpentBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>SerpentBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>SerpentBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>SerpentBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>SerpentBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>SerpentBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>SoundBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>SoundBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>SoundBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>SoundBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>SoundBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>SoundBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>SoundBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>SoundBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>StoneBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>StoneBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>StoneBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>StoneBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>StoneBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>StoneBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>StoneBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>StoneBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>ThunderBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>ThunderBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>ThunderBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>ThunderBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>ThunderBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>ThunderBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>ThunderBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>ThunderBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>WaterBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>WaterBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>WaterBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>WaterBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>WaterBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>WaterBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>WaterBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>WaterBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>WindBreath_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>WindBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>WindBreath_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>WindBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>WindBreath_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>WindBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>WindBreath_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>WindBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>BloodDemonArts_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>BloodDemonArts</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>BloodDemonArts_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>BloodDemonArts</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>BloodDemonArts_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>BloodDemonArts</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>BloodDemonArts_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>BloodDemonArts</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fifth_Form_Glaciers_Crushing_Embrace_Talent</defName>
+    <label>Fifth Form: Glacier's Crushing Embrace</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fifth_Form_Glaciers_Crushing_Embrace</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>First_Form_Crystalline_Reflection_Talent</defName>
+    <label>First_Form_Crystalline_Reflection</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>First_Form_Crystalline_Reflection</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Form_Blizzard_Flash_Step_Talent</defName>
+    <label>Fourth Form: Blizzard Flash Step</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Form_Blizzard_Flash_Step</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Second_Form_Frozen_Edge_Enchantment_Talent</defName>
+    <label>Second Form: Frozen Edge Enchantment</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Second_Form_Frozen_Edge_Enchantment</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Third_Form_Winters_Piercing_Shard_Talent</defName>
+    <label>Third Form: Winter's Piercing Shard</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Third_Form_Winters_Piercing_Shard</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fifth_Form_Thundering_Forest_Wave_Talent</defName>
+    <label>Firth Form: Thundering Forest Wave</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fifth_Form_Thundering_Forest_Wave</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>First_Form_Elemental_Convergence_Blade_Talent</defName>
+    <label>First Form: Elemental Convergence Blade</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>First_Form_Elemental_Convergence_Blade</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Fourth_Form_Tempest_Mountain_Dance_Talent</defName>
+    <label>Fourth Form:Tempest Mountain Dance</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Fourth_Form_Tempest_Mountain_Dance</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Second_Form_Earthen_Storm_Reflection_Talent</defName>
+    <label>Second Form: Earthen Storm Reflection</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Second_Form_Earthen_Storm_Reflection</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Third_Form_Blazing_Current_Step_Talent</defName>
+    <label>Third Form: Blazing Current Step</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <abilityEffects>
+      <li>
+        <abilities>
+          <li>
+            <abilityDef>Third_Form_Blazing_Current_Step</abilityDef>
+          </li>
+        </abilities>
+      </li>
+    </abilityEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Nature_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>NatureBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Nature_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>NatureBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Nature_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>NatureBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Nature_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>NatureBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Frost_Breath_Increase</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FrostBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Frost_Breath_Increase2</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FrostBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Frost_Breath_Increase3</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FrostBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Frost_Breath_Increase4</defName>
+    <label>Increase Breath Capacity</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>FrostBreath</statDef>
+        <value>20</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>NewTalent_1751855868378</defName>
+    <label>undefined</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+  </Talented.TalentDef>
+
+  
+</Defs>

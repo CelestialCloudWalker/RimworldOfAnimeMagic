@@ -16,7 +16,7 @@ namespace AnimeArsenal
         private float targetSearchRadius = 18f;
         private List<Pawn> alreadyTargeted = new List<Pawn>();
 
-        public virtual CompProperties_BaseStance Props => (CompProperties_BaseStance)props;
+        public new virtual CompProperties_BaseStance Props => (CompProperties_BaseStance)props;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
@@ -24,7 +24,7 @@ namespace AnimeArsenal
             if (parent.pawn?.Map == null)
                 return;
 
-            // Play initial activation effecter
+            
             if (Props.casterEffecter != null)
             {
                 Effecter effecter = Props.casterEffecter.Spawn();
@@ -54,10 +54,10 @@ namespace AnimeArsenal
 
         private void OnFlyerLand(Pawn pawn, PawnFlyer flyer, Map map)
         {
-            // Deal damage at landing position
+            
             DealDamageAtPosition(pawn.Position);
 
-            // Play impact effecter on each hit
+            
             if (Props.impactEffecter != null)
             {
                 Effecter effecter = Props.impactEffecter.Spawn();
@@ -70,7 +70,7 @@ namespace AnimeArsenal
                 jumps++;
                 IntVec3 currentPosition = pawn.Position;
 
-                // Find the next target instead of random direction
+                
                 IntVec3 nextPosition = FindNextTargetPosition(currentPosition, map);
 
                 if (nextPosition.IsValid)
@@ -79,7 +79,7 @@ namespace AnimeArsenal
                 }
                 else
                 {
-                    // If no targets found, end the dash
+                    
                     jumps = maxJumps;
                 }
             }
@@ -92,19 +92,19 @@ namespace AnimeArsenal
 
         private IntVec3 FindNextTargetPosition(IntVec3 currentPosition, Map map)
         {
-            // Find all hostile pawns within search radius that haven't been targeted yet
+            
             List<Pawn> potentialTargets = new List<Pawn>();
 
             foreach (Pawn mapPawn in map.mapPawns.AllPawnsSpawned)
             {
-                if (mapPawn == parent.pawn) continue; // Skip self
-                if (mapPawn.Dead || mapPawn.Downed) continue; // Skip dead/downed
-                if (alreadyTargeted.Contains(mapPawn)) continue; // Skip already targeted
+                if (mapPawn == parent.pawn) continue;
+                if (mapPawn.Dead || mapPawn.Downed) continue; 
+                if (alreadyTargeted.Contains(mapPawn)) continue; 
 
                 float distance = currentPosition.DistanceTo(mapPawn.Position);
-                if (distance > targetSearchRadius) continue; // Too far
+                if (distance > targetSearchRadius) continue; 
 
-                // Check if hostile
+                
                 if (mapPawn.HostileTo(parent.pawn))
                 {
                     potentialTargets.Add(mapPawn);
@@ -113,14 +113,13 @@ namespace AnimeArsenal
 
             if (potentialTargets.Count == 0)
             {
-                return IntVec3.Invalid; // No targets found
+                return IntVec3.Invalid; 
             }
 
-            // Sort by distance and pick the closest
+            
             Pawn closestTarget = potentialTargets.OrderBy(p => currentPosition.DistanceTo(p.Position)).First();
             alreadyTargeted.Add(closestTarget);
 
-            // Calculate position near the target
             IntVec3 targetPosition = GetPositionNearTarget(closestTarget.Position, currentPosition, map);
 
             return targetPosition;
@@ -128,18 +127,18 @@ namespace AnimeArsenal
 
         private IntVec3 GetPositionNearTarget(IntVec3 targetPos, IntVec3 currentPos, Map map)
         {
-            // Calculate direction to target
+            
             Vector3 direction = (targetPos - currentPos).ToVector3();
             float distance = direction.magnitude;
 
             if (distance <= jumpDistance)
             {
-                // Can reach the target directly
+                
                 return EnsurePositionIsValid(targetPos, map);
             }
             else
             {
-                // Jump toward the target at max jump distance
+                
                 Vector3 normalized = direction.normalized;
                 IntVec3 jumpVector = new IntVec3(
                     Mathf.RoundToInt(normalized.x * jumpDistance),
@@ -217,9 +216,9 @@ namespace AnimeArsenal
         public DamageDef jumpDamageDef;
         public FloatRange jumpDamage = new FloatRange(1f, 2f);
 
-        // Effecter properties
-        public EffecterDef casterEffecter;  // Plays when ability is first activated
-        public EffecterDef impactEffecter;  // Plays on each hit/jump
+        
+        public EffecterDef casterEffecter;  
+        public EffecterDef impactEffecter;  
 
         public CompProperties_BaseStance()
         {
@@ -229,7 +228,5 @@ namespace AnimeArsenal
 
     public class CompAbilityEffect_DashStance : CompAbilityEffect_BaseStance
     {
-        // This class inherits all functionality from the base class
-        // No overrides needed - the base class handles everything correctly
     }
 }

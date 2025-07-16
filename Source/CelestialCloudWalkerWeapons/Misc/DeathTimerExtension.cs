@@ -5,31 +5,31 @@ using System.Linq;
 using HarmonyLib;
 using System.Reflection;
 
-// ModExtension that defines the death timer behavior - can be added to any gene
+
 public class DeathTimerExtension : DefModExtension
 {
-    public string hediffToWatch; // The hediff defName that triggers the death timer
+    public string hediffToWatch; 
     public string activationMessage = "{0} has activated a deadly power. Their lifespan has been drastically shortened.";
     public string deathMessage = "{0} has succumbed to the curse, their body unable to sustain the supernatural power any longer.";
 
-    // Configurable curse hediff properties
+    
     public string curseHediffLabel = "cursed";
     public string curseHediffDescription = "This person is cursed to die before their 25th birthday due to using forbidden power.";
-    public string curseStageLabel = "cursed"; // Label for the hediff stage
+    public string curseStageLabel = "cursed"; 
 
-    // Death cause options
+    
     public DeathCauseType deathCause = DeathCauseType.HeartFailure;
 
-    public int maxAgeInYears = 25; // Maximum age before death occurs
-    public int minDaysEarlyDeath = 1; // Minimum days before max age to die
-    public int maxDaysEarlyDeath = 365; // Maximum days before max age to die
-    public int immediateDeathMinDays = 1; // If already past max age, min days until death
-    public int immediateDeathMaxDays = 30; // If already past max age, max days until death
-    public bool createCurseHediff = true; // Whether to create a visible curse hediff
-    public bool activateOnGeneAdd = false; // If true, activates immediately when gene is added (doesn't wait for hediff)
+    public int maxAgeInYears = 25; 
+    public int minDaysEarlyDeath = 1; 
+    public int maxDaysEarlyDeath = 365; 
+    public int immediateDeathMinDays = 1; 
+    public int immediateDeathMaxDays = 30; 
+    public bool createCurseHediff = true; 
+    public bool activateOnGeneAdd = false; 
 }
 
-// Enum for different death causes
+
 public enum DeathCauseType
 {
     HeartFailure,
@@ -39,7 +39,6 @@ public enum DeathCauseType
     Random
 }
 
-// Static manager that handles all death timers across all genes
 [StaticConstructorOnStartup]
 public static class DeathTimerManager
 {
@@ -47,7 +46,6 @@ public static class DeathTimerManager
 
     static DeathTimerManager()
     {
-        // Apply Harmony patches
         var harmony = new Harmony("DeathTimerExtension.Patches");
         harmony.PatchAll();
     }
@@ -88,7 +86,6 @@ public static class DeathTimerManager
         }
     }
 
-    // Public API methods
     public static bool HasDeathTimer(Gene gene)
     {
         return activeDeathTimers.ContainsKey(gene);
@@ -112,7 +109,6 @@ public static class DeathTimerManager
         return timer?.DaysUntilDeath ?? -1;
     }
 
-    // Internal methods
     internal static void RegisterGene(Gene gene)
     {
         if (gene?.def?.HasModExtension<DeathTimerExtension>() == true && !activeDeathTimers.ContainsKey(gene))
@@ -140,7 +136,7 @@ public static class DeathTimerManager
         var extension = deathTimer.Extension;
         if (extension == null || deathTimer.Pawn == null) return;
 
-        // Check every 60 ticks (1 second) to avoid performance issues
+        
         if (Find.TickManager.TicksGame % 60 == 0)
         {
             if (!extension.activateOnGeneAdd)
@@ -178,7 +174,7 @@ public static class DeathTimerManager
         var extension = deathTimer.Extension;
         deathTimer.powerActivated = true;
 
-        // Calculate death date
+        
         long currentAge = deathTimer.Pawn.ageTracker.AgeBiologicalTicks;
         long maxAgeInTicks = (long)extension.maxAgeInYears * 3600000L;
 
@@ -200,14 +196,12 @@ public static class DeathTimerManager
             }
         }
 
-        // Send activation message
         if (!extension.activationMessage.NullOrEmpty())
         {
             string message = string.Format(extension.activationMessage, deathTimer.Pawn.Name.ToStringShort);
             Messages.Message(message, deathTimer.Pawn, MessageTypeDefOf.NegativeEvent);
         }
 
-        // Create curse hediff if enabled
         if (extension.createCurseHediff)
         {
             CreateCurseHediff(deathTimer);
@@ -224,8 +218,8 @@ public static class DeathTimerManager
         {
             curseDef = new HediffDef();
             curseDef.defName = curseDefName;
-            curseDef.label = extension.curseHediffLabel; // Now uses XML-configurable label
-            curseDef.description = extension.curseHediffDescription; // Now uses XML-configurable description
+            curseDef.label = extension.curseHediffLabel; 
+            curseDef.description = extension.curseHediffDescription; 
             curseDef.hediffClass = typeof(Hediff_DeathCurse);
             curseDef.defaultLabelColor = new UnityEngine.Color(0.8f, 0.2f, 0.2f);
             curseDef.makesSickThought = false;
@@ -237,7 +231,7 @@ public static class DeathTimerManager
 
             curseDef.stages = new List<HediffStage>();
             HediffStage stage = new HediffStage();
-            stage.label = extension.curseStageLabel; // Now uses XML-configurable stage label
+            stage.label = extension.curseStageLabel; 
             stage.minSeverity = 0f;
             curseDef.stages.Add(stage);
 
@@ -290,14 +284,13 @@ public static class DeathTimerManager
                 KillByAsphyxiation(deathTimer.Pawn);
                 break;
             default:
-                KillByHeartFailure(deathTimer.Pawn); // Default fallback
+                KillByHeartFailure(deathTimer.Pawn); 
                 break;
         }
     }
 
     private static void KillByHeartFailure(Pawn pawn)
     {
-        // Damage the heart specifically
         BodyPartRecord heart = pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def.defName == "Heart");
         if (heart != null)
         {
@@ -307,7 +300,6 @@ public static class DeathTimerManager
         }
         else
         {
-            // Fallback if no heart found
             DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f);
             damageInfo.SetIgnoreArmor(true);
             pawn.TakeDamage(damageInfo);
@@ -316,7 +308,6 @@ public static class DeathTimerManager
 
     private static void KillByOrganFailure(Pawn pawn)
     {
-        // Damage multiple vital organs
         var vitalOrgans = new[] { "Heart", "Liver", "Kidney", "Lung" };
         var bodyParts = pawn.health.hediffSet.GetNotMissingParts();
 
@@ -328,11 +319,10 @@ public static class DeathTimerManager
                 DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, organ);
                 damageInfo.SetIgnoreArmor(true);
                 pawn.TakeDamage(damageInfo);
-                break; // Only need to destroy one vital organ
+                break; 
             }
         }
 
-        // Fallback
         if (vitalOrgans.All(organName => bodyParts.All(bp => bp.def.defName != organName)))
         {
             DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f);
@@ -343,12 +333,10 @@ public static class DeathTimerManager
 
     private static void KillByBloodLoss(Pawn pawn)
     {
-        // Cause severe blood loss
         Hediff bloodLoss = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, pawn);
-        bloodLoss.Severity = 1.0f; // Maximum blood loss
+        bloodLoss.Severity = 1.0f; 
         pawn.health.AddHediff(bloodLoss);
 
-        // Also add some bleeding to ensure death
         DamageInfo damageInfo = new DamageInfo(DamageDefOf.Cut, 50f);
         damageInfo.SetIgnoreArmor(true);
         pawn.TakeDamage(damageInfo);
@@ -356,7 +344,6 @@ public static class DeathTimerManager
 
     private static void KillByAsphyxiation(Pawn pawn)
     {
-        // Damage lungs or cause asphyxiation
         var lungs = pawn.health.hediffSet.GetNotMissingParts().Where(x => x.def.defName == "Lung").ToList();
         if (lungs.Any())
         {
@@ -369,14 +356,13 @@ public static class DeathTimerManager
         }
         else
         {
-            // Fallback to deterioration damage
             DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f);
             damageInfo.SetIgnoreArmor(true);
             pawn.TakeDamage(damageInfo);
         }
     }
 
-    // Save/Load support
+    
     public static void ExposeData()
     {
         var geneKeys = activeDeathTimers.Keys.ToList();
@@ -403,7 +389,6 @@ public static class DeathTimerManager
     }
 }
 
-// Harmony patches to automatically hook into any gene
 [HarmonyPatch]
 public static class DeathTimerPatches
 {
@@ -428,7 +413,6 @@ public static class DeathTimerPatches
         DeathTimerManager.TickGene(__instance);
     }
 
-    // Hook into game save/load
     [HarmonyPatch(typeof(Game), "ExposeData")]
     [HarmonyPostfix]
     public static void Game_ExposeData_Postfix()
@@ -437,7 +421,6 @@ public static class DeathTimerPatches
     }
 }
 
-// Extension methods for easy access
 public static class DeathTimerExtensions
 {
     public static bool HasDeathTimer(this Gene gene)
@@ -485,7 +468,6 @@ public static class DeathTimerExtensions
     }
 }
 
-// Custom hediff class for the curse
 public class Hediff_DeathCurse : HediffWithComps
 {
     public override void PostMake()

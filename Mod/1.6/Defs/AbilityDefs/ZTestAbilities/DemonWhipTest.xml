@@ -36,7 +36,6 @@
     </comps>
   </AbilityDef>
 
-  <!-- Ground Effect - Multiple hits with spread -->
   <EffecterDef>
     <defName>AnimeArsenal_WhipHit</defName>
     <children>
@@ -54,7 +53,7 @@
       </li>
     </children>
   </EffecterDef>
-  <!-- Hit Effect - Single focused hit -->
+
   <EffecterDef>
     <defName>AnimeArsenal_WhipHit_Single</defName>
     <children>
@@ -71,7 +70,7 @@
       </li>
     </children>
   </EffecterDef>
-  <!-- Whip Mote Definition -->
+
   <ThingDef ParentName="MoteBase">
     <defName>AnimeArsenal_WhipMote</defName>
     <thingClass>MoteAttached</thingClass>
@@ -84,7 +83,7 @@
         <_Loop>0</_Loop>
         <_FramesPerSec>8</_FramesPerSec>
       </shaderParameters>
-      <!-- Remove the color tag entirely to use original texture colors -->
+      
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <mote>

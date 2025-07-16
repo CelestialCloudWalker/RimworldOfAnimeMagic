@@ -5,41 +5,30 @@ using Verse;
 
 namespace AnimeArsenal
 {
-    // ModExtension class to define extra damage against genes
     public class GeneDamageModExtension : DefModExtension
     {
-        // The damage type to apply (e.g., "Cut", "Blunt", etc.)
         public DamageDef damageType;
 
-        // Amount of extra damage to deal
         public float damageAmount = 1f;
 
-        // The target gene defName
         public string targetGene;
 
-        // Optional: damage multiplier instead of flat damage
         public float damageMultiplier = 1f;
 
-        // Optional: whether to use multiplier (true) or flat damage (false)
         public bool useMultiplier = false;
 
-        // Optional: body parts to target specifically
         public List<BodyPartDef> targetBodyParts;
 
-        // Optional: armor penetration for the extra damage
         public float armorPenetration = 0f;
 
-        // Additional options for hediffs and genes
         public bool continuousDamage = false;
-        public int damageInterval = 60; // ticks between damage applications
+        public int damageInterval = 60;
         public bool applyOnGeneAdd = false;
         public bool applyOnGeneRemove = false;
 
-        // New option for damage-on-hit for gene carriers
-        public bool damageOnHit = true; // Default behavior - damage when hit by weapons/projectiles with this modExtension
+        public bool damageOnHit = true; 
     }
 
-    // HediffComp for continuous damage from hediffs
     public class HediffComp_GeneDamage : HediffComp
     {
         public HediffCompProperties_GeneDamage Props => (HediffCompProperties_GeneDamage)props;
@@ -119,7 +108,6 @@ namespace AnimeArsenal
         }
     }
 
-    // Gene class for gene-specific behavior
     public class Gene_GeneDamage : Gene
     {
         public override void PostAdd()
@@ -157,7 +145,6 @@ namespace AnimeArsenal
 
         private void ProcessGeneAddDamage(GeneDamageModExtension modExt)
         {
-            // Apply damage when THIS gene is added, checking for the target gene
             if (pawn.genes?.GenesListForReading?.Any(g => g.def.defName == modExt.targetGene) ?? false)
             {
                 ApplyGeneDamage(modExt);
@@ -166,13 +153,11 @@ namespace AnimeArsenal
 
         private void ProcessGeneRemoveDamage(GeneDamageModExtension modExt)
         {
-            // Apply damage when THIS gene is removed
             ApplyGeneDamage(modExt);
         }
 
         private void ProcessContinuousGeneDamage(GeneDamageModExtension modExt)
         {
-            // Apply continuous damage if target gene is present
             if (pawn.genes?.GenesListForReading?.Any(g => g.def.defName == modExt.targetGene) ?? false)
             {
                 ApplyGeneDamage(modExt);
@@ -207,7 +192,6 @@ namespace AnimeArsenal
         }
     }
 
-    // Properties classes for hediffs
     public class HediffCompProperties_GeneDamage : HediffCompProperties
     {
         public HediffCompProperties_GeneDamage()

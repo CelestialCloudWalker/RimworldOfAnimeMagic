@@ -6,7 +6,6 @@
     <description>An intense fire-based enchantment that imbues weapons with the searing power of the First Form: Blaze of the Inferno. Strikes leave behind charred wounds, but the relentless heat drains the user's stamina over time.</description>
     <enchantHediff>BlazeInfernoEdge</enchantHediff>
     <resourceGene>Gene_FlameBreath</resourceGene>
-    <!-- Resource Cost Settings -->
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

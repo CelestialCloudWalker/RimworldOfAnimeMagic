@@ -19,7 +19,6 @@ namespace AnimeArsenal
 
             base.Apply(target, dest);
 
-            // Safety check for map
             if (parent?.pawn?.Map == null)
             {
                 Log.Error("AnimeArsenal: GroundFling - No valid map found");
@@ -29,7 +28,6 @@ namespace AnimeArsenal
             Map map = parent.pawn.Map;
             Log.Message($"[Ground Fling] Map found: {map}");
 
-            // Validate target cell
             if (!target.Cell.IsValid || !target.Cell.InBounds(map))
             {
                 Log.Error($"AnimeArsenal: GroundFling - Invalid target cell: {target.Cell}, Valid: {target.Cell.IsValid}, InBounds: {target.Cell.InBounds(map)}");
@@ -38,11 +36,9 @@ namespace AnimeArsenal
 
             Log.Message($"[Ground Fling] Target cell validated: {target.Cell}");
 
-            // FIRST: Test ground effect immediately
             Log.Message("[Ground Fling] Testing ground effect FIRST");
             AddGroundEffect(target, map);
 
-            // Get all pawns in the target area
             List<Pawn> affectedPawns = GetPawnsInArea(target, map);
             Log.Message($"[Ground Fling] Found {affectedPawns.Count} affected pawns");
 
@@ -56,20 +52,18 @@ namespace AnimeArsenal
                 return;
             }
 
-            // Limit to maximum targets if specified
             if (Props.maxTargets > 0 && affectedPawns.Count > Props.maxTargets)
             {
                 affectedPawns = affectedPawns.InRandomOrder().Take(Props.maxTargets).ToList();
                 Log.Message($"[Ground Fling] Limited to {affectedPawns.Count} pawns");
             }
 
-            // Fling each pawn
             foreach (Pawn pawn in affectedPawns)
             {
                 if (pawn != null && !pawn.Dead)
                 {
                     Log.Message($"[Ground Fling] Flinging pawn: {pawn.LabelShort}");
-                    FlingPawn(pawn, map); // Pass the map parameter
+                    FlingPawn(pawn, map);
                 }
             }
 
@@ -80,20 +74,17 @@ namespace AnimeArsenal
         {
             List<Pawn> pawns = new List<Pawn>();
 
-            // Get all cells in the effect radius
             IEnumerable<IntVec3> cells = GenRadial.RadialCellsAround(target.Cell, Props.effectRadius, true);
 
             foreach (IntVec3 cell in cells)
             {
                 if (cell.InBounds(map))
                 {
-                    // Find pawns in each cell
                     List<Thing> things = map.thingGrid.ThingsListAtFast(cell);
                     foreach (Thing thing in things)
                     {
                         if (thing is Pawn pawn && !pawns.Contains(pawn))
                         {
-                            // Check if pawn should be affected
                             if (ShouldAffectPawn(pawn))
                             {
                                 pawns.Add(pawn);
@@ -108,19 +99,15 @@ namespace AnimeArsenal
 
         private bool ShouldAffectPawn(Pawn pawn)
         {
-            // Don't affect the caster if specified
             if (!Props.affectCaster && pawn == parent.pawn)
                 return false;
 
-            // Don't affect downed pawns if specified
             if (!Props.affectDowned && pawn.Downed)
                 return false;
 
-            // Don't affect dead pawns
             if (pawn.Dead || pawn.Destroyed)
                 return false;
 
-            // Check faction relations if specified
             if (Props.onlyAffectHostiles && parent.pawn != null)
             {
                 if (pawn.Faction == parent.pawn.Faction ||
@@ -138,7 +125,6 @@ namespace AnimeArsenal
         {
             try
             {
-                // Additional safety checks
                 if (pawn == null || pawn.Dead || pawn.Destroyed)
                 {
                     Log.Warning($"[Ground Fling] Attempted to fling invalid pawn: {pawn?.LabelShort ?? "null"}");
@@ -151,11 +137,10 @@ namespace AnimeArsenal
                     return;
                 }
 
-                // Verify pawn is still on the expected map
                 if (pawn.Map != map)
                 {
                     Log.Warning($"[Ground Fling] Pawn {pawn.LabelShort} is on different map than expected. Pawn map: {pawn.Map}, Expected map: {map}");
-                    // Use the pawn's actual map if it exists
+                    
                     if (pawn.Map != null)
                     {
                         map = pawn.Map;
@@ -167,28 +152,22 @@ namespace AnimeArsenal
                     }
                 }
 
-                // Generate random direction
                 Vector3 randomDirection = GetRandomDirection();
 
-                // Apply damage first (before knockback)
                 if (Props.damage > 0)
                 {
                     ApplyDamage(pawn);
                 }
 
-                // Apply knockback in random direction
                 ApplyRandomKnockback(pawn, randomDirection, map);
 
-                // Apply stun effect after knockback
                 if (!string.IsNullOrEmpty(Props.stunHediff))
                 {
                     ApplyStunEffect(pawn);
                 }
 
-                // Add hit effect on the pawn
                 AddHitEffect(pawn);
 
-                // Show message
                 if (Props.showMessages)
                 {
                     Messages.Message($"{pawn.LabelShort} is whipped and flung from the ground!",
@@ -205,7 +184,7 @@ namespace AnimeArsenal
 
         private Vector3 GetRandomDirection()
         {
-            // Generate random angle
+            
             float randomAngle = Rand.Range(0f, 360f) * Mathf.Deg2Rad;
             return new Vector3(Mathf.Cos(randomAngle), 0f, Mathf.Sin(randomAngle));
         }
@@ -214,7 +193,6 @@ namespace AnimeArsenal
         {
             try
             {
-                // Additional null checks
                 if (pawn == null)
                 {
                     Log.Error("[Ground Fling] Pawn is null in ApplyRandomKnockback");
@@ -238,7 +216,6 @@ namespace AnimeArsenal
 
                 Log.Message($"[Ground Fling] Applying knockback to {pawn.LabelShort} from {currentPos}");
 
-                // Try to find a valid position to knock back to
                 for (int i = 1; i <= Props.flingDistance; i++)
                 {
                     IntVec3 testPos = currentPos + new IntVec3(
@@ -247,27 +224,25 @@ namespace AnimeArsenal
                         Mathf.RoundToInt(direction.z * i)
                     );
 
-                    // Check if position is valid
                     if (testPos.InBounds(map) && testPos.Standable(map) && !testPos.Filled(map))
                     {
                         targetPos = testPos;
                     }
                     else
                     {
-                        break; // Stop if we hit an obstacle
+                        break; 
                     }
                 }
 
-                // Only move if we found a different position
                 if (targetPos != currentPos)
                 {
-                    // Use safer position setting
+                    
                     if (pawn.Spawned)
                     {
                         pawn.Position = targetPos;
                         pawn.Notify_Teleported(false, false);
 
-                        // Update pawn's location for AI
+                        
                         if (pawn.jobs?.curDriver != null)
                         {
                             pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
@@ -295,7 +270,6 @@ namespace AnimeArsenal
             Log.Message($"[Ground Fling] Props: {Props}");
             Log.Message($"[Ground Fling] Props.groundEffecter: {Props.groundEffecter}");
 
-            // Play ground effect sound
             if (Props.groundEffectSound != null)
             {
                 Log.Message($"[Ground Fling] Playing sound: {Props.groundEffectSound.defName}");
@@ -312,9 +286,7 @@ namespace AnimeArsenal
 
                 try
                 {
-                    // Try multiple approaches for triggering the effecter
 
-                    // Approach 1: Simple spawn and trigger (what we had before)
                     Log.Message("[Ground Fling] Trying Approach 1: Simple spawn and trigger");
                     Effecter effecter = Props.groundEffecter.Spawn();
                     Log.Message($"[Ground Fling] Effecter spawned successfully: {effecter}");
@@ -325,17 +297,14 @@ namespace AnimeArsenal
                     effecter.Trigger(targetInfo, TargetInfo.Invalid);
                     Log.Message("[Ground Fling] Approach 1: Effecter triggered");
 
-                    // Approach 2: Try with both targets being the same
                     Log.Message("[Ground Fling] Trying Approach 2: Both targets same");
                     effecter.Trigger(targetInfo, targetInfo);
                     Log.Message("[Ground Fling] Approach 2: Effecter triggered with both targets");
 
-                    // Approach 3: Manual cleanup after a delay (some effecters need this)
                     Log.Message("[Ground Fling] Trying Approach 3: Manual cleanup");
                     effecter.Cleanup();
                     Log.Message("[Ground Fling] Approach 3: Effecter cleanup called");
 
-                    // Approach 4: Try spawning a new effecter with different parameters
                     Log.Message("[Ground Fling] Trying Approach 4: Fresh spawn");
                     Effecter effecter2 = Props.groundEffecter.Spawn(target.Cell, map);
                     Log.Message($"[Ground Fling] Effecter2 spawned with position: {effecter2}");
@@ -348,7 +317,6 @@ namespace AnimeArsenal
                 {
                     Log.Error($"[Ground Fling] Exception in AddGroundEffect: {ex}");
 
-                    // Fallback: Try the most basic approach
                     try
                     {
                         Log.Message("[Ground Fling] Trying fallback approach");
@@ -366,7 +334,6 @@ namespace AnimeArsenal
             {
                 Log.Error("[Ground Fling] Props.groundEffecter is NULL!");
 
-                // Debug Props contents
                 Log.Message($"[Ground Fling] Props type: {Props.GetType()}");
                 Log.Message($"[Ground Fling] Props.effectRadius: {Props.effectRadius}");
                 Log.Message($"[Ground Fling] Props.maxTargets: {Props.maxTargets}");
@@ -379,14 +346,12 @@ namespace AnimeArsenal
         {
             Log.Message($"[Ground Fling] AddHitEffect START for {pawn.LabelShort}");
 
-            // Additional safety check
             if (pawn?.Map == null)
             {
                 Log.Warning($"[Ground Fling] Cannot add hit effect for {pawn?.LabelShort} - pawn or map is null");
                 return;
             }
 
-            // Play hit sound
             if (Props.hitSound != null)
             {
                 Log.Message($"[Ground Fling] Playing hit sound: {Props.hitSound.defName}");
@@ -397,11 +362,9 @@ namespace AnimeArsenal
                 Log.Message("[Ground Fling] No hitSound defined");
             }
 
-            // Determine which effecter to use for additional spawns
             EffecterDef effecterToUse = Props.hitEffecter ?? Props.groundEffecter;
             Log.Message($"[Ground Fling] EffecterToUse: {effecterToUse?.defName ?? "NULL"}");
 
-            // Add hit visual effect at pawn location if hitEffecter is specified
             if (Props.hitEffecter != null)
             {
                 Log.Message($"[Ground Fling] Spawning hitEffecter: {Props.hitEffecter.defName}");
@@ -421,7 +384,6 @@ namespace AnimeArsenal
                 Log.Message("[Ground Fling] No hitEffecter defined");
             }
 
-            // Add additional effects around the pawn if configured
             if (Props.hitEffecterCount > 0 && effecterToUse != null)
             {
                 Log.Message($"[Ground Fling] Adding {Props.hitEffecterCount} additional effects around {pawn.LabelShort}");
@@ -447,7 +409,6 @@ namespace AnimeArsenal
 
             for (int i = 0; i < count; i++)
             {
-                // Generate random position within radius
                 Vector2 randomCircle = UnityEngine.Random.insideUnitCircle * radius;
                 IntVec3 effectPos = center + new IntVec3(
                     Mathf.RoundToInt(randomCircle.x),
@@ -455,7 +416,6 @@ namespace AnimeArsenal
                     Mathf.RoundToInt(randomCircle.y)
                 );
 
-                // Make sure position is valid
                 if (effectPos.InBounds(map))
                 {
                     Log.Message($"[Ground Fling] Spawning additional effect {i + 1} at {effectPos}");
@@ -492,9 +452,9 @@ namespace AnimeArsenal
                 Props.damage,
                 Props.armorPenetration,
                 -1f,
-                parent.pawn, // instigator
-                null, // hit part
-                null, // weapon
+                parent.pawn, 
+                null, 
+                null, 
                 DamageInfo.SourceCategory.ThingOrUnknown
             );
 
@@ -515,12 +475,12 @@ namespace AnimeArsenal
                 HediffDef hediffDef = DefDatabase<HediffDef>.GetNamedSilentFail(Props.stunHediff);
                 if (hediffDef == null)
                 {
-                    // Use vanilla PsychicShock as fallback
+                    
                     hediffDef = HediffDefOf.PsychicShock;
                     Log.Warning($"AnimeArsenal: Hediff '{Props.stunHediff}' not found. Using PsychicShock as fallback.");
                 }
 
-                // Remove existing hediff if present
+                
                 var existing = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef);
                 if (existing != null)
                 {
@@ -571,38 +531,33 @@ namespace AnimeArsenal
 
     public class CompProperties_AbilityEffect_GroundFling : CompProperties_AbilityEffect
     {
-        // Area of effect
         public float effectRadius = 2.0f;
 
-        // Targeting options
-        public int maxTargets = 1; // Maximum number of pawns to affect (0 = unlimited)
+        public int maxTargets = 1; 
         public bool affectCaster = false;
         public bool affectDowned = true;
         public bool onlyAffectHostiles = false;
 
-        // Fling properties
         public int flingDistance = 4;
-
-        // Damage properties  
+ 
         public int damage = 10;
-        public DamageDef damageDef = null; // Will default to Blunt if null
+        public DamageDef damageDef = null; 
         public float armorPenetration = 0f;
 
-        // Stun properties (using string to avoid XML reference issues)
-        public string stunHediff = "PsychicShock"; // Default to vanilla PsychicShock hediff
+        public string stunHediff = "PsychicShock";
         public float stunSeverity = 1.0f;
 
-        // Effects
+        
         public SoundDef groundEffectSound = null;
         public EffecterDef groundEffecter = null;
         public SoundDef hitSound = null;
         public EffecterDef hitEffecter = null;
 
-        // Additional hit effects around target
-        public int hitEffecterCount = 0; // Number of additional effects to spawn around each hit pawn
-        public float hitEffecterRadius = 1.5f; // Radius around pawn to spawn additional effects
+        
+        public int hitEffecterCount = 0; 
+        public float hitEffecterRadius = 1.5f; 
 
-        // Messages
+        
         public bool showMessages = true;
 
         public CompProperties_AbilityEffect_GroundFling()

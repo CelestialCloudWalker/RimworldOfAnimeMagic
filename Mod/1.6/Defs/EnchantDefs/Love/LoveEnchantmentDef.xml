@@ -6,7 +6,7 @@
     <description>An enchantment fueled by the intensity of Love Breathing, empowering the wielder with enhanced combat precision and emotional resonance. While active, the enchantment consumes breath, amplifying the user's strength at the cost of stamina.</description>
     <enchantHediff>HeartDesireEdge</enchantHediff>
     <resourceGene>Gene_LoveBreath</resourceGene>
-    <!-- Resource Cost Settings -->
+    
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

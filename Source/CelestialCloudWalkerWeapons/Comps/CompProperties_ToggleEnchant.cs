@@ -61,21 +61,17 @@ namespace AnimeArsenal
 
                 if (resourceCostTimer >= Props.enchantDef.ticksBetweenCost)
                 {
-                    //make sure it isnt null
                     if (ResourceGene != null)
                     {
-                        //actually consume the resource 
                         ResourceGene.Consume(Props.enchantDef.resourceCostPerTick);
                     }
 
 
-                    //check if the last consumption had used up all the available resource
                     if (ShouldCancel())
                     {
                         this.OnToggleOff();
                     }
 
-                    //reset timer for the next go around
                     resourceCostTimer = 0;
                 }
 

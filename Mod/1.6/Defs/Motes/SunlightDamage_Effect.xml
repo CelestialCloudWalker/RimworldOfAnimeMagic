@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
-  <!-- Burning Effect -->
+<Defs>>
   <EffecterDef>
     <defName>SunlightBurningEffect</defName>
     <children>
@@ -18,7 +17,6 @@
     </children>
   </EffecterDef>
 
-  <!-- Death Effect -->
   <EffecterDef>
     <defName>SunlightDeathEffect</defName>
     <children>
@@ -37,7 +35,6 @@
     </children>
   </EffecterDef>
 
-  <!-- Spark Mote -->
   <ThingDef ParentName="MoteBase">
     <defName>Mote_SunlightSpark</defName>
     <graphicData>
@@ -58,7 +55,6 @@
     </mote>
   </ThingDef>
 
-  <!-- Explosion Mote -->
   <ThingDef ParentName="MoteBase">
     <defName>Mote_SunlightExplosion</defName>
     <graphicData>

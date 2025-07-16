@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Custom Thought Definitions for Dream Manipulation -->
-
-  <!-- Nightmare Thoughts -->
   <ThoughtDef>
     <defName>NightmareDream</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -18,7 +15,6 @@
     </stages>
   </ThoughtDef>
 
-  <!-- Pleasant Dream Thoughts -->
   <ThoughtDef>
     <defName>PleasantDream</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -33,7 +29,6 @@
     </stages>
   </ThoughtDef>
 
-  <!-- Memory Implantation Thoughts -->
   <ThoughtDef>
     <defName>ImplantedMemory_Betrayal</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -76,7 +71,6 @@
     </stages>
   </ThoughtDef>
 
-  <!-- Mood Manipulation Thoughts -->
   <ThoughtDef>
     <defName>DreamMoodPositive</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -105,9 +99,6 @@
     </stages>
   </ThoughtDef>
 
-  <!-- Hediff Definitions for Dream Effects -->
-
-  <!-- Nightmare Hediff -->
   <HediffDef>
     <defName>NightmareTrauma</defName>
     <label>nightmare trauma</label>
@@ -154,7 +145,6 @@
     </stages>
   </HediffDef>
 
-  <!-- Pleasant Dream Hediff -->
   <HediffDef>
     <defName>DreamBliss</defName>
     <label>dream bliss</label>
@@ -186,7 +176,6 @@
     </stages>
   </HediffDef>
 
-  <!-- Memory Extraction Hediff -->
   <HediffDef>
     <defName>MemoryConfusion</defName>
     <label>memory confusion</label>
@@ -218,7 +207,6 @@
     </stages>
   </HediffDef>
 
-  <!-- Memory Implantation Hediff -->
   <HediffDef>
     <defName>MemoryDisorientation</defName>
     <label>memory disorientation</label>
@@ -250,9 +238,6 @@
     </stages>
   </HediffDef>
 
-  <!-- Updated Ability Definitions with Custom Thoughts and Hediffs -->
-
-  <!-- Nightmare Manipulation -->
   <AbilityDef>
     <defName>Dream_Nightmare</defName>
     <label>Nightmare</label>
@@ -285,7 +270,6 @@
     </comps>
   </AbilityDef>
 
-  <!-- Pleasant Dream -->
   <AbilityDef>
     <defName>Dream_Pleasant</defName>
     <label>Pleasant Dreams</label>
@@ -318,7 +302,6 @@
     </comps>
   </AbilityDef>
 
-  <!-- Memory Extraction - FIXED -->
   <AbilityDef>
     <defName>Dream_MemoryExtraction</defName>
     <label>Extract Dreams</label>
@@ -349,7 +332,6 @@
     </comps>
   </AbilityDef>
 
-  <!-- Memory Implantation - FIXED -->
   <AbilityDef>
     <defName>Dream_MemoryImplantation</defName>
     <label>Implant Dreams</label>
@@ -385,7 +367,6 @@
     </comps>
   </AbilityDef>
 
-  <!-- Skill Transfer -->
   <AbilityDef>
     <defName>Dream_SkillDrain</defName>
     <label>Dream Skill Drain</label>
@@ -412,12 +393,10 @@
         <effectSeverity>0.5</effectSeverity>
         <transferFromTarget>true</transferFromTarget>
         <showMessage>true</showMessage>
-        <!-- Remove skillToTransfer and skillTransferAmount - will be random -->
       </li>
     </comps>
   </AbilityDef>
 
-  <!-- Mood Manipulation - FIXED -->
   <AbilityDef>
     <defName>Dream_MoodControl</defName>
     <label>Dream Mood Control</label>

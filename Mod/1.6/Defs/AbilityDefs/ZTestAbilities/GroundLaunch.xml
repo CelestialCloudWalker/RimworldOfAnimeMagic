@@ -44,14 +44,12 @@
     <defName>GroundLaunchBurstEffecter</defName>
     <label>ground launch burst</label>
     <children>
-      <!-- Main burst effect -->
       <li>
         <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
         <moteDef>Mote_GroundLaunchBurst</moteDef>
         <spawnLocType>OnSource</spawnLocType>
         <positionRadius>0.5</positionRadius>
       </li>
-      <!-- Debris effect -->
       <li>
         <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
         <moteDef>Mote_GroundDebris</moteDef>

@@ -76,13 +76,11 @@ namespace AnimeArsenal
             if (!(pawn.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) ?? false))
                 return true;
 
-            // Check if neck is destroyed - if so, allow death
             var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
                 p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
             if (neck != null && pawn.health.hediffSet.PartIsMissing(neck))
                 return true;
 
-            // Check if vital parts are missing
             bool vitalMissing = pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
             {
                 string defName = part.Part.def.defName;
@@ -91,7 +89,6 @@ namespace AnimeArsenal
                        defName == "Heart" || defName == "AA_DemonHeart";
             });
 
-            // Prevent death if vital parts are missing (they will regenerate)
             return !vitalMissing;
         }
     }
@@ -107,18 +104,16 @@ namespace AnimeArsenal
             Pawn pawn = pawnField(__instance);
             if (pawn?.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) == true)
             {
-                // Check if neck is intact - if neck is destroyed, they should die
                 var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
                     p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
                 if (neck != null && !pawn.health.hediffSet.PartIsMissing(neck))
                 {
-                    __result = false; // Don't die if neck is intact
+                    __result = false; 
                 }
             }
         }
     }
 
-    // Additional patch to handle consciousness and movement issues after regeneration
     [HarmonyPatch(typeof(PawnCapacitiesHandler), "GetLevel")]
     public static class Patch_CapacitiesAfterRegeneration
     {
@@ -126,7 +121,6 @@ namespace AnimeArsenal
         {
             try
             {
-                // Access the pawn through reflection since it's a private field
                 var pawnField = typeof(PawnCapacitiesHandler).GetField("pawn",
                     System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                 if (pawnField == null) return;
@@ -135,8 +129,6 @@ namespace AnimeArsenal
                 if (pawn?.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) != true)
                     return;
 
-                // If the pawn has blood demon art and their heart was recently regenerated,
-                // ensure they don't have movement/consciousness issues
                 if (capacity == PawnCapacityDefOf.BloodPumping ||
                     capacity == PawnCapacityDefOf.Consciousness ||
                     capacity == PawnCapacityDefOf.Moving)
@@ -144,10 +136,8 @@ namespace AnimeArsenal
                     var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
                         p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
 
-                    // Only apply if neck is intact
                     if (neck == null || !pawn.health.hediffSet.PartIsMissing(neck))
                     {
-                        // Check if vital organs are present (not missing)
                         bool hasHeart = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
                             part.Part.def.defName == "Heart" || part.Part.def.defName == "AA_DemonHeart");
                         bool hasBrain = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
@@ -159,15 +149,15 @@ namespace AnimeArsenal
 
                         if (capacity == PawnCapacityDefOf.BloodPumping && hasHeart)
                         {
-                            __result = Mathf.Max(__result, 0.5f); // Ensure minimum blood pumping
+                            __result = Mathf.Max(__result, 0.5f); 
                         }
                         else if (capacity == PawnCapacityDefOf.Consciousness && hasBrain && hasHead && hasSkull)
                         {
-                            __result = Mathf.Max(__result, 0.5f); // Ensure minimum consciousness
+                            __result = Mathf.Max(__result, 0.5f); 
                         }
                         else if (capacity == PawnCapacityDefOf.Moving && hasHeart && hasBrain && hasHead)
                         {
-                            __result = Mathf.Max(__result, 0.3f); // Ensure minimum movement
+                            __result = Mathf.Max(__result, 0.3f); 
                         }
                     }
                 }
@@ -178,24 +168,20 @@ namespace AnimeArsenal
             }
         }
     }
-    // Main Harmony patch - handles all weapon/projectile damage
+
     [HarmonyPatch(typeof(Thing), "TakeDamage")]
     public static class TakeDamage_GeneDamage_Patch
     {
-        // Flag to prevent infinite recursion
         private static bool isProcessingGeneDamage = false;
 
         public static void Postfix(Thing __instance, DamageInfo dinfo, DamageWorker.DamageResult __result)
         {
-            // Prevent infinite recursion
             if (isProcessingGeneDamage)
                 return;
 
-            // Only process if the target is a pawn with genes
             if (!(__instance is Pawn victim) || victim.genes == null)
                 return;
 
-            // Only process if there was actual damage dealt
             if (__result.totalDamageDealt <= 0)
                 return;
 
@@ -214,7 +200,6 @@ namespace AnimeArsenal
         {
             List<GeneDamageModExtension> modExtensions = new List<GeneDamageModExtension>();
 
-            // 1. Check weapon for mod extensions
             if (dinfo.Weapon != null)
             {
                 var weaponExt = dinfo.Weapon.GetModExtension<GeneDamageModExtension>();
@@ -222,7 +207,6 @@ namespace AnimeArsenal
                     modExtensions.Add(weaponExt);
             }
 
-            // 2. Check instigator's equipped weapon
             if (dinfo.Instigator is Pawn attacker && attacker.equipment?.Primary != null)
             {
                 var weaponExt = attacker.equipment.Primary.def.GetModExtension<GeneDamageModExtension>();
@@ -230,7 +214,6 @@ namespace AnimeArsenal
                     modExtensions.Add(weaponExt);
             }
 
-            // 3. Check damage def itself
             if (dinfo.Def != null)
             {
                 var damageExt = dinfo.Def.GetModExtension<GeneDamageModExtension>();
@@ -238,7 +221,6 @@ namespace AnimeArsenal
                     modExtensions.Add(damageExt);
             }
 
-            // 4. Check attacker's genes for mod extensions
             if (dinfo.Instigator is Pawn attackerPawn && attackerPawn.genes != null)
             {
                 foreach (var gene in attackerPawn.genes.GenesListForReading)
@@ -249,10 +231,8 @@ namespace AnimeArsenal
                 }
             }
 
-            // Apply damage for each relevant mod extension
             foreach (var modExt in modExtensions)
             {
-                // Check if victim has the target gene for this mod extension
                 bool hasTargetGene = victim.genes.GenesListForReading.Any(gene => gene.def.defName == modExt.targetGene);
                 if (hasTargetGene)
                 {
@@ -263,15 +243,12 @@ namespace AnimeArsenal
 
         private static void ApplyGeneDamage(Pawn victim, GeneDamageModExtension modExt, DamageInfo originalDinfo, float totalDamageDealt)
         {
-            // Calculate extra damage
             float extraDamage = modExt.useMultiplier ?
                 totalDamageDealt * modExt.damageMultiplier :
                 modExt.damageAmount;
 
-            // Apply the extra damage
             if (modExt.targetBodyParts != null && modExt.targetBodyParts.Count > 0)
             {
-                // Target specific body parts
                 foreach (BodyPartDef bodyPartDef in modExt.targetBodyParts)
                 {
                     BodyPartRecord bodyPart = victim.RaceProps.body.AllParts.FirstOrDefault(p => p.def == bodyPartDef);
@@ -287,14 +264,12 @@ namespace AnimeArsenal
                             originalDinfo.Weapon
                         );
 
-                        // Use DamageWorker directly to avoid triggering patches again
                         modExt.damageType.Worker.Apply(extraDamageInfo, victim);
                     }
                 }
             }
             else
             {
-                // Apply to same hit part as original damage
                 DamageInfo extraDamageInfo = new DamageInfo(
                     modExt.damageType,
                     extraDamage,
@@ -305,7 +280,6 @@ namespace AnimeArsenal
                     originalDinfo.Weapon
                 );
 
-                // Use DamageWorker directly to avoid triggering patches again
                 modExt.damageType.Worker.Apply(extraDamageInfo, victim);
             }
         }

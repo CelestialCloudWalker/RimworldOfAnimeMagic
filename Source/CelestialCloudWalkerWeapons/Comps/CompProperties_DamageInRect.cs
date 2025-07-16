@@ -129,7 +129,6 @@ namespace AnimeArsenal
         protected override void ApplyDamageToTarget(Pawn caster, Thing target)
         {
             base.ApplyDamageToTarget(caster, target);
-            // Add any additional beam-specific effects here
         }
     }
     //public class CompProperties_DamageInRect : CompProperties_AbilityEffect

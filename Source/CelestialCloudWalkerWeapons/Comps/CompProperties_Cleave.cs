@@ -45,10 +45,10 @@ namespace AnimeArsenal
             TargetPawn = pawn;
             DamagePerCut = Props.BaseDamage;
 
-            // Initialize the Ticker
+            
             DamageTicker = new Ticker(Props.TicksBetweenCuts, ApplyCut, true, Props.NumberOfCuts);
 
-            // Launch the pawn
+           
             IntVec3 launchDirection = pawn.Position - parent.pawn.Position;
             IntVec3 destination = pawn.Position + launchDirection * Props.KnockbackDistance;
             PawnFlyer pawnFlyer = PawnFlyer.MakeFlyer(CelestialDefof.AnimeArsenal_Flyer, pawn, destination, null, null);

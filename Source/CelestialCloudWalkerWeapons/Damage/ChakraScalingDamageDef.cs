@@ -17,10 +17,8 @@ namespace AnimeArsenal.ChakraScalingDamageDef
 
             if (dinfo.Instigator != null && dinfo.Instigator is Pawn pawn)
             {
-                // Checks if the pawn has any genes from the Naruto GeneCategoryDef
                 if (HasChakra(pawn))
                 {
-                    // Double the damage by multiplying the old Amount by 2 then set it again
                     dinfo.SetAmount(dinfo.Amount * ChakraScalingDamageDef.damageMultiplier);
                 }
             }

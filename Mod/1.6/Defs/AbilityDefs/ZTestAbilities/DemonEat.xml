@@ -22,15 +22,6 @@
       <li Class="AnimeArsenal.AbilityCompProperties_DemonConsume">
         <nutritionGain>0.8</nutritionGain>
         <canTargetCorpses>true</canTargetCorpses>
-        <!-- Optional hediff properties - uncomment and modify as needed -->
-        <!--
-        <hediffToApplyOnSelf>DemonBloodlust</hediffToApplyOnSelf>
-        <hediffSeverityOnSelf>1.0</hediffSeverityOnSelf>
-        <hediffChanceOnSelf>0.8</hediffChanceOnSelf>
-        <hediffToApplyOnTarget>DemonDrain</hediffToApplyOnTarget>
-        <hediffSeverityOnTarget>2.0</hediffSeverityOnTarget>
-        <hediffChanceOnTarget>1.0</hediffChanceOnTarget>
-      -->
     </li>
   </comps>
 </AbilityDef>

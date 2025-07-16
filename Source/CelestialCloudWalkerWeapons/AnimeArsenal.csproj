@@ -34,18 +34,17 @@
     <Reference Include="AlienRace">
       <HintPath>D:\SteamLibrary\steamapps\workshop\content\294100\839005762\Assemblies\AlienRace.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
+    <Reference Include="Assembly-CSharp, Version=1.6.9321.26038, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="Talented, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\SteamLibrary\steamapps\workshop\content\294100\3412307423\1.6\Assemblies\Talented.dll</HintPath>
+    <Reference Include="Talented">
+      <HintPath>D:\Git\Talented\mod\1.6\Assemblies\Talented.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
       <HintPath>D:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
@@ -61,11 +60,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AMConstants.cs" />
+    <Compile Include="Misc\AMConstants.cs" />
     <Compile Include="AnimeArsenalUtility.cs" />
-    <Compile Include="AssetBundleShaderManager.cs" />
-    <Compile Include="BodyDisappearExtension.cs" />
-    <Compile Include="CompAbilityEffect_GroundFling.cs" />
+    <Compile Include="Misc\AssetBundleShaderManager.cs" />
+    <Compile Include="Misc\BodyDisappearExtension.cs" />
+    <Compile Include="Comps\CompAbilityEffect_GroundFling.cs" />
     <Compile Include="Comps\CompAbilityEffect_CauseSleep.cs" />
     <Compile Include="Comps\CompAbilityEffect_DreamManipulation.cs" />
     <Compile Include="Comps\CompAbilityEffect_ForwardDash.cs" />
@@ -74,22 +73,22 @@
     <Compile Include="Comps\CompProjectileEffect_CauseSleep.cs" />
     <Compile Include="Comps\CompProperties_AbilityDamage.cs" />
     <Compile Include="Comps\HediffCompProperties_Overlay.cs" />
-    <Compile Include="DeathTimerExtension.cs" />
-    <Compile Include="DemonConsumeandHeal.cs" />
-    <Compile Include="DemonSlayerWeaponComp.cs" />
-    <Compile Include="DrawOffsetExt.cs" />
-    <Compile Include="EmosGraphic_MoteWithAgeSecsCustom.cs" />
-    <Compile Include="GeneDamageModExtension.cs" />
-    <Compile Include="GraphicDataWithShader.cs" />
-    <Compile Include="Graphic_SingleWithShader.cs" />
+    <Compile Include="Misc\DeathTimerExtension.cs" />
+    <Compile Include="Misc\DemonConsumeandHeal.cs" />
+    <Compile Include="Misc\DemonSlayerWeaponComp.cs" />
+    <Compile Include="Misc\DrawOffsetExt.cs" />
+    <Compile Include="Misc\EmosGraphic_MoteWithAgeSecsCustom.cs" />
+    <Compile Include="Misc\GeneDamageModExtension.cs" />
+    <Compile Include="Misc\GraphicDataWithShader.cs" />
+    <Compile Include="Misc\Graphic_SingleWithShader.cs" />
     <Compile Include="Misc\AoeDamageAtEndFlyer.cs" />
     <Compile Include="Comps\BaseTraitComp.cs" />
     <Compile Include="Comps\CompAbilityEffect_BaseStance.cs" />
     <Compile Include="Comps\DashTrailManager.cs" />
     <Compile Include="Comps\TrackedMote.cs" />
-    <Compile Include="PawnRenderNodeWorker_WeaponOverlay.cs" />
-    <Compile Include="Projectile_SleepEffect _ScalingStatDamageProjectile.cs" />
-    <Compile Include="RegenerationExtension.cs" />
+    <Compile Include="Misc\PawnRenderNodeWorker_WeaponOverlay.cs" />
+    <Compile Include="Misc\Projectile_SleepEffect _ScalingStatDamageProjectile.cs" />
+    <Compile Include="Misc\RegenerationExtension.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />
@@ -124,12 +123,12 @@
     <Compile Include="Hediffs\HediffCompProperties_SelectiveDamageImmunity.cs" />
     <Compile Include="Hediffs\HediffCompProperties_ThinkTreeOverride.cs" />
     <Compile Include="Hediffs\Hediff_DemonWorkSlave.cs" />
-    <Compile Include="JobGiver_AICastOffensiveAbility.cs" />
+    <Compile Include="Misc\JobGiver_AICastOffensiveAbility.cs" />
     <Compile Include="Misc\MoteBeam.cs" />
     <Compile Include="Misc\PowerBeamVisual.cs" />
     <Compile Include="Misc\ProjectileUtility.cs" />
-    <Compile Include="Projectile_ImpactAOE.cs" />
-    <Compile Include="Projectile_ScalingDoomsdayRocket.cs" />
+    <Compile Include="Misc\Projectile_ImpactAOE.cs" />
+    <Compile Include="Misc\Projectile_ScalingDoomsdayRocket.cs" />
     <Compile Include="Resource Gene\BreathingTechniqueGene.cs" />
     <Compile Include="Resource Gene\BreathingTechniqueGeneDef.cs" />
     <Compile Include="Resource Gene\GeneGizmoBreath.cs" />
@@ -141,16 +140,16 @@
     <Compile Include="Comps\CompProperties_RangeToggle.cs" />
     <Compile Include="Damage\DamageData.cs" />
     <Compile Include="Damage\DamageWorker_MultiDamage.cs" />
-    <Compile Include="MultiDamageDef.cs" />
+    <Compile Include="Misc\MultiDamageDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Misc\RotatedRectTargetFinder.cs" />
     <Compile Include="Misc\ScalingStatDamageProjectile.cs" />
-    <Compile Include="StatDef_GeneDependent.cs" />
-    <Compile Include="StatWorker_GeneDependent.cs" />
-    <Compile Include="ThingCompExt.cs" />
+    <Compile Include="Misc\StatDef_GeneDependent.cs" />
+    <Compile Include="Misc\StatWorker_GeneDependent.cs" />
+    <Compile Include="Misc\ThingCompExt.cs" />
     <Compile Include="Misc\Ticker.cs" />
     <Compile Include="Misc\TrackedMotePos.cs" />
-    <Compile Include="Verb_ExtendedMeleeAttack.cs" />
+    <Compile Include="Misc\Verb_ExtendedMeleeAttack.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony">

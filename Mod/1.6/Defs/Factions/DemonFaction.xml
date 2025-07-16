@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- Actual Faction Implementation -->
+
   <FactionDef>
     <defName>AA_Twelve_Demon_Moons</defName>
     <label>Twelve Demon Moons</label>
@@ -35,7 +35,7 @@
     </disallowedMemes>
     <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
 
-    <!-- FIXED: Use a standard RimWorld loot maker that definitely exists -->
+
     <raidLootMaker>AA_DemonRaidLootMaker</raidLootMaker>
     <raidLootValueFromPointsCurve>
       <points>
@@ -64,9 +64,8 @@
       <li>(0.7, 0.0, 0.2)</li>
     </colorSpectrum>
 
-    <!-- CRITICAL: PawnGroupMakers must be directly in the concrete faction -->
+
     <pawnGroupMakers>
-      <!-- Basic Demon Forces -->
       <li>
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
@@ -78,7 +77,6 @@
           <AA_FletclingDemonBoss>3</AA_FletclingDemonBoss>
         </options>
       </li>
-      <!-- Lower Moon Forces -->
       <li>
         <kindDef>Combat</kindDef>
         <commonality>50</commonality>
@@ -92,7 +90,6 @@
           <AA_LowerMoon1Demon>1</AA_LowerMoon1Demon>
         </options>
       </li>
-      <!-- Upper Moon Forces -->
       <li>
         <kindDef>Combat</kindDef>
         <commonality>25</commonality>
@@ -106,7 +103,6 @@
           <AA_UpperMoon1Demon>1</AA_UpperMoon1Demon>
         </options>
       </li>
-      <!-- Demon King (Ultra Rare) -->
       <li>
         <kindDef>Combat</kindDef>
         <commonality>5</commonality>
@@ -140,8 +136,7 @@
       </points>
     </raidCommonalityFromPointsCurve>
   </FactionDef>
-
-  <!-- Keep your other definitions as they are -->
+  
   <CultureDef>
     <defName>AA_DemonCulture</defName>
     <label>Demon</label>

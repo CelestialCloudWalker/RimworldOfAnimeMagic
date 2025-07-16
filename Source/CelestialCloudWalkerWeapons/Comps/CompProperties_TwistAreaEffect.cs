@@ -61,14 +61,11 @@ namespace JJK
 
             if (targetLimb != null)
             {
-                // Calculate damage
                 float damage = BaseDamage * Scale;
 
-                // Apply damage to the selected limb
                 DamageInfo dinfo = new DamageInfo(CelestialDefof.TwistDamage, damage, 1f, -1f, Caster, targetLimb);
                 Target.TakeDamage(dinfo);
 
-                // Optional: Add a visual or sound effect
                 MoteMaker.ThrowText(Caster.DrawPos, Caster.Map, "TWIST!", Color.red);
             }
         }

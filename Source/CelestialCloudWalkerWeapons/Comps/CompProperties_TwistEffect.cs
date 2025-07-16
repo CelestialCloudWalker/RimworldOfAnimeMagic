@@ -8,7 +8,7 @@ namespace AnimeArsenal
 {
     public class CompProperties_TwistEffect : CompProperties_AbilityEffect
     {
-        public float baseDamage = 15f; // Default damage value
+        public float baseDamage = 15f; 
 
         public CompProperties_TwistEffect()
         {
@@ -35,10 +35,8 @@ namespace AnimeArsenal
             BodyPartRecord targetLimb = AnimeArsenalUtility.GetRandomLimb(Target);
             if (targetLimb != null)
             {
-                // Calculate damage
                 float damage = BaseDamage * Scale;
 
-                // Apply damage to the selected limb
                 DamageInfo dinfo = new DamageInfo(CelestialDefof.TwistDamage, damage, 1f, -1f, Caster, targetLimb);
                 Target.TakeDamage(dinfo);
             }

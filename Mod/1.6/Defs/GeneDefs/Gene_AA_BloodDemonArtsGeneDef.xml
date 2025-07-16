@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- all the stuff your DemonArt genes have in common can be put in one place -->
   <AnimeArsenal.BloodDemonArtsGeneDef Name="AA_BloodDemonArtsGene" Abstract="True">
     <geneClass>AnimeArsenal.BloodDemonArtsGene</geneClass>
     <resourceGizmoType>AnimeArsenal.GeneGizmoBlood</resourceGizmoType>
@@ -14,7 +13,7 @@
     <displayCategory>DemonBloodArts</displayCategory>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
 
-    <!-- Generic Stats Settings -->
+  
     <regenTicks>BloodDemonArts_RegenTicks</regenTicks>
     <regenStat>BloodDemonArts_RegenAmount</regenStat>
     <regenSpeedStat>AnimeArsenal_BloodDemonArtsRegenSpeed</regenSpeedStat>

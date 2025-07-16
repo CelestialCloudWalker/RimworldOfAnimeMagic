@@ -132,16 +132,16 @@ namespace AnimeArsenal
                 aimAngle = 143f;
                 switch (parms.facing.AsInt)
                 {
-                    case 0: // North
+                    case 0: 
                         drawPos += EqLocNorth * equipmentDrawDistanceFactor;
                         break;
-                    case 1: // East
+                    case 1:
                         drawPos += EqLocEast * equipmentDrawDistanceFactor;
                         break;
-                    case 2: // South
+                    case 2:
                         drawPos += EqLocSouth * equipmentDrawDistanceFactor;
                         break;
-                    case 3: // West
+                    case 3: 
                         drawPos += EqLocWest * equipmentDrawDistanceFactor;
                         aimAngle = 217f;
                         break;
@@ -194,7 +194,6 @@ namespace AnimeArsenal
                 weaponOffset = weapon.def.GetModExtension<DrawOffsetExt>().GetOffsetForRot(parms.pawn.Rotation) * TWEAK_OFFSET;
             }
 
-            // Draw all valid overlays
             foreach (HediffComp_Overlay overlay in overlays)
             {
                 if (overlay.Props.overlayGraphic == null || overlay.Props.overlayGraphic.Graphic == null)

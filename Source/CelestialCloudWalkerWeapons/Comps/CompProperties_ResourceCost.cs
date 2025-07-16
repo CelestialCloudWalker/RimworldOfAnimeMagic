@@ -46,7 +46,7 @@ namespace AnimeArsenal
                 }
                 else
                 {
-                    //show an error or log something or not!
+                  
                 }
             }
 

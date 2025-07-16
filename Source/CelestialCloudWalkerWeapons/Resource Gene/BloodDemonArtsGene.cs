@@ -31,7 +31,7 @@ namespace AnimeArsenal
             base.PostAdd();
             ApplyCustomColor(Pawn);
             Reset();
-            // FIXED: Use DefDatabase.GetNamed with errorOnFail: false
+            
             var regenHediffDef = DefDatabase<HediffDef>.GetNamed("BloodDemonRegeneration", false);
             if (regenHediffDef != null)
             {
@@ -43,7 +43,7 @@ namespace AnimeArsenal
         {
             base.PostRemove();
             RestoreOriginalColor(Pawn);
-            // FIXED: Use DefDatabase.GetNamed with errorOnFail: false
+            
             var regenHediffDef = DefDatabase<HediffDef>.GetNamed("BloodDemonRegeneration", false);
             if (regenHediffDef != null)
             {

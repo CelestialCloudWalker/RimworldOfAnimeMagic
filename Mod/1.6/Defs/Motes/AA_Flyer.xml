@@ -17,7 +17,7 @@
       <progressCurve>
         <points>
           <li>(0, 0)</li>
-          <li>(0.85, 0.85)</li> <!-- Complete 15% of the journey in first 10% of time -->
+          <li>(0.85, 0.85)</li> 
           <li>(1, 1)</li>
         </points>
       </progressCurve>

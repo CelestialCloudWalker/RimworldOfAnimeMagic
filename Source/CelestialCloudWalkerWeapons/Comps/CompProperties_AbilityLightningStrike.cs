@@ -29,11 +29,9 @@ namespace AnimeArsenal
             Map map = parent.pawn.Map;
             IntVec3 strikeLocation = target.Cell;
 
-            // Create and fire the lightning strike event
             WeatherEvent_LightningStrike lightningStrike = new WeatherEvent_LightningStrike(map, strikeLocation);
             lightningStrike.FireEvent();
 
-            // Apply additional effects
             if (Props.explosionRadius > 0f)
             {
                 GenExplosion.DoExplosion(

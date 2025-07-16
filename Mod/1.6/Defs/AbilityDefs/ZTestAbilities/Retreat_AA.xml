@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- Simple Retreat Dash Ability -->
   <AbilityDef>
     <defName>AA_RetreatDash</defName>
     <label>retreat dash</label>
@@ -26,10 +25,10 @@
         <maxDashDistance>15</maxDashDistance>
         <avoidEnemies>true</avoidEnemies>
         <enemyAvoidanceRadius>5</enemyAvoidanceRadius>
-        <numberOfDashes>2</numberOfDashes>  <!-- Add this line - controls how many dashes -->
+        <numberOfDashes>2</numberOfDashes>
         <castEffecter>AnimeArsenal_BeastJump</castEffecter>
         <landEffecter>AnimeArsenal_DashBack</landEffecter>
-        <retryEffecter>AnimeArsenal_DashBack</retryEffecter>  <!-- Optional - effect for 2nd+ dashes -->
+        <retryEffecter>AnimeArsenal_DashBack</retryEffecter> 
         <grantTemporaryImmunity>false</grantTemporaryImmunity>
         <grantSpeedBoost>false</grantSpeedBoost>
         <grantMoodBoost>false</grantMoodBoost>

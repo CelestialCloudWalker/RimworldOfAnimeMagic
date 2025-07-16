@@ -7,8 +7,7 @@
 
     <enchantHediff>InsectBreathing_WisteriaPoisonBlade</enchantHediff>
     <resourceGene>Gene_InsectBreath</resourceGene>
-
-    <!-- Higher resource cost -->
+    
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

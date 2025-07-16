@@ -6,7 +6,6 @@
     <description>A powerful fire-based enchantment that enhances combat abilities but causes exhaustion over time.</description>
     <enchantHediff>DemonEdge</enchantHediff>
     <resourceGene>BloodDemonArt</resourceGene>
-    <!-- Resource Cost Settings -->
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

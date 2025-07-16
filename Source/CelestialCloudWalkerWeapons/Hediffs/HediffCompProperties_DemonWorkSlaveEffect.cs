@@ -68,7 +68,6 @@ namespace AnimeArsenal
 
         private void HandleNeedsAndSupress(Pawn pawn)
         {
-            // Automatically satisfy needs
             foreach (Need need in pawn.needs.AllNeeds)
             {
                 need.CurLevel = need.MaxLevel;
@@ -82,17 +81,10 @@ namespace AnimeArsenal
 
         private void ApplyZombieColor(Pawn pawn)
         {
-            //originalColor = pawn.Drawer.renderer.BodyGraphic.color;
-            //pawn.Drawer.renderer.BodyGraphic.color = Props.Color;
-            //pawn.Drawer.renderer.SetAllGraphicsDirty();
-            //colorChanged = true;
         }
 
         private void RestoreOriginalColor(Pawn pawn)
         {
-            //pawn.Drawer.renderer.BodyGraphic.color = originalColor;
-            //pawn.Drawer.renderer.SetAllGraphicsDirty();
-            //colorChanged = false;
         }
 
 
@@ -100,7 +92,7 @@ namespace AnimeArsenal
         {
             pawn.guest.SetGuestStatus(OriginalFaction, GuestStatus.Guest);
             pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, true, true);
-            // pawn.health.RemoveHediff(parent);
+            
         }
         public override void CompExposeData()
         {

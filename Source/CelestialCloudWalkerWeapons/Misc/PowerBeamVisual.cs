@@ -31,10 +31,6 @@ namespace AnimeArsenal
 
         public void InitializeBeam(IntVec3 sourcePosition, IntVec3 targetPosition)
         {
-            //if (startMote == null)
-            //{
-            //    startMote = StartBeamMoteDef.SpawnMaintained(sourcePosition, CurrentMap);
-            //}
 
             if (endMote == null && EndBeamMoteDef != null)
             {
@@ -85,11 +81,6 @@ namespace AnimeArsenal
                 beamMote.Destroy();
                 beamMote = null;
             }
-            //if (startMote != null)
-            //{
-            //    startMote.Cleanup();
-            //    startMote = null;
-            //}
             if (endMote != null)
             {
                 endMote.Cleanup();

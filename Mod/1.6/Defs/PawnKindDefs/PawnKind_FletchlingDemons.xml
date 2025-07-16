@@ -25,7 +25,6 @@
     </apparelRequired>
   </PawnKindDef>
 
-  <!-- Basic Demon Pawns -->
   <PawnKindDef ParentName="FletchlingDemonBase">
     <defName>AA_FletclingDemonRaider</defName>
     <label>demon raider</label>
@@ -71,7 +70,6 @@
     </titleSelectOne>
   </PawnKindDef>
 
-  <!-- Lower Moon Demons (Weakest to Strongest) -->
   <PawnKindDef ParentName="FletchlingDemonBase">
     <defName>AA_LowerMoon6Demon</defName>
     <label>Lower Moon Six</label>
@@ -138,7 +136,6 @@
     </titleSelectOne>
   </PawnKindDef>
 
-  <!-- Upper Moon Demons (Weakest to Strongest) -->
   <PawnKindDef ParentName="FletchlingDemonBase">
     <defName>AA_UpperMoon6Demon</defName>
     <label>Upper Moon Six</label>
@@ -206,7 +203,6 @@
     </titleSelectOne>
   </PawnKindDef>
 
-  <!-- Demon King (Ultimate Boss) -->
   <PawnKindDef ParentName="FletchlingDemonBase">
     <defName>AA_DemonKing</defName>
     <label>Demon King</label>

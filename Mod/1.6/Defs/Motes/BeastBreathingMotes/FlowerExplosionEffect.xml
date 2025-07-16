@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- EffecterDef -->
   <EffecterDef>
     <defName>FlowerBreathingExplosionEffect</defName>
     <maintainTicks>1250</maintainTicks>
@@ -29,7 +28,6 @@
     </children>
   </EffecterDef>
 
-  <!-- MoteDef -->
   <ThingDef ParentName="MoteBase">
     <defName>Mote_ExpandingRingFlower</defName>
     <graphicData>

@@ -6,14 +6,14 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-
-
 namespace AnimeArsenal
 {
     public class GeneGizmo_ResourceAstral : GeneGizmo_Resource
     {
         private const float TotalPulsateTime = 0.85f;
         private List<Pair<IGeneResourceDrain, float>> tmpDrainGenes = new List<Pair<IGeneResourceDrain, float>>();
+        protected bool IsDraggingBar = false;
+        protected override bool DraggingBar { get => IsDraggingBar; set => IsDraggingBar = value; }
 
         protected override string Title
         {
@@ -35,40 +35,22 @@ namespace AnimeArsenal
                 return;
             }
         }
-
-        //public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
-        //{
-        //    if (gene == null) return new GizmoResult(GizmoState.Clear);
-
-        //    GizmoResult result = base.GizmoOnGUI(topLeft, maxWidth, parms);
-        //    float num = Mathf.Repeat(Time.time, TotalPulsateTime);
-
-        //    if (gene is Resource_Gene cursedEnergy)
-        //    {
-        //        Target = num;
-        //    }
-        //    return result;
-        //}
-
-        //protected override void DrawHeader(Rect headerRect, ref bool mouseOverElement)
-        //{
-        //    if (gene == null || gene.pawn == null) return;
-        //    base.DrawHeader(headerRect, ref mouseOverElement);  
-        //}
+        protected override IEnumerable<float> GetBarThresholds()
+        {
+            yield return 0.25f;
+            yield return 0.5f;
+            yield return 0.75f;
+        }
 
         protected override string GetTooltip()
         {
             if (!(gene is Gene_BasicResource resourceGene)) return "";
-
             string text = $"{resourceGene.Def.resourceLabel.CapitalizeFirst().Colorize(ColoredText.TipSectionTitleColor)}: {resourceGene.ValueForDisplay} / {resourceGene.MaxForDisplay}\n";
-
             string regen = $"\nRegenerates {resourceGene.RegenAmount} every {GenDate.ToStringTicksToPeriod(resourceGene.RegenTicks)}";
-
             if (!resourceGene.def.resourceDescription.NullOrEmpty())
             {
                 text += $"\n\n{resourceGene.def.resourceDescription.Formatted(resourceGene.pawn.Named("PAWN")).Resolve()}";
             }
-
             return text + regen;
         }
     }

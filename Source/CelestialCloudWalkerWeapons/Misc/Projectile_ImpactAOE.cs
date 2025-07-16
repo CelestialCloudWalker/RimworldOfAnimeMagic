@@ -9,15 +9,14 @@ namespace AnimeArsenal
     {
         public  ProjectileProperties_ImpactAOE Props => (ProjectileProperties_ImpactAOE)this.def.projectile;
 
-        // Removed the CasterDamageBonus property
+        
 
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
-            // Get the things in range without the caster damage bonus
+           
             List<Thing> ThingsToHit = AnimeArsenalUtility.GetThingsInRange(this.Position, this.MapHeld, this.Props.ExplosionRadius, TargetValidator).ToList();
             AnimeArsenalUtility.DealDamageToThingsInRange(ThingsToHit, Props.damageDef, Props.BaseDamage, Props.GetArmorPenetration(this.launcher));
 
-            // Apply pushback to pawns
             foreach (var thingToHit in ThingsToHit)
             {
                 if (!thingToHit.Destroyed && thingToHit is Pawn pawnToHit)
@@ -26,13 +25,11 @@ namespace AnimeArsenal
                 }
             }
 
-            // Spawn explosion effect if defined
             if (this.Props.ExplosionEffect != null)
             {
                 this.Props.ExplosionEffect.Spawn(this.Position, this.MapHeld);
             }
 
-            // Call base method to handle other impact logic
             base.Impact(hitThing, blockedByShield);
         }
 

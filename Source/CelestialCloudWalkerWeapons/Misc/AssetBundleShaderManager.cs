@@ -81,10 +81,8 @@ namespace AnimeArsenal
 
         public static Shader GetShaderByAssetName(string ShaderName)
         {
-            //Log.Message($"Attemping to retrieving Shader with name {ShaderName} from cache");
             if (HasShader(ShaderName))
             {
-                // Log.Message($"{ShaderName} found.");
                 return ShaderCache[ShaderName];
             }
             Log.Message($"{ShaderName} not found.");

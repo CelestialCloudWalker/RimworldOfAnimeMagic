@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_FrostBreath</defName>
     <label>Frost Breath</label>
@@ -11,44 +10,33 @@
     <resourceDescription>Current stored Breath, charged with the essence of frost. This energy powers devastating ice-based abilities, freezing enemies in their tracks.</resourceDescription>
     <abilities>
     </abilities>
-    <!-- Tree Configuration -->
     <TalentTrees>
     </TalentTrees>
-
-    <!-- Experience System -->
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>
       <experienceTypes>
-        <!-- Combat XP -->
         <li Class="Talented.DamageTakenExperienceTypeDef">
           <baseXP>50</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
-
         <li Class="Talented.DamageDealtExperienceTypeDef">
           <baseXP>100</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
-        <!-- Skill XP -->
         <li Class="Talented.SkillExperienceTypeDef">
           <SkillDef>Shooting</SkillDef>
           <baseXP>2</baseXP>
         </li>
-
-        <!-- Job XP -->
         <li Class="Talented.JobExperienceTypeDef">
           <SkillDef>HaulToCell</SkillDef>
           <baseXP>1</baseXP>
         </li>
-
-        <!-- Verb XP -->
         <li Class="Talented.VerbExperienceTypeDef">
           <VerbClassName>Verb_BeatFire</VerbClassName>
           <baseXP>1</baseXP>
         </li>
       </experienceTypes>
     </experienceGainSettings>
-
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>
@@ -93,17 +81,12 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(173, 216, 230)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <!-- Exhaustion Settings -->
     <exhaustionPerTick>0.0004</exhaustionPerTick>
-    <!-- Default to fire exhaustion -->
     <exhaustionHediff>IceEnchantmentExhaustion</exhaustionHediff>
     <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
     <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
     <exhausationCooldownTicks>3000</exhausationCooldownTicks>
-    <!-- UI Configuration -->
     <TabLabel>Talents</TabLabel>
-
-    <!-- Generic Stats Settings -->
     <regenTicks>FrostBreath_RegenTicks</regenTicks>
     <regenStat>FrostBreath_RegenAmount</regenStat>
     <regenSpeedStat>FrostBreath_RegenRate</regenSpeedStat>

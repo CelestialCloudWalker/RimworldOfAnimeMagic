@@ -21,7 +21,7 @@ namespace AnimeArsenal
 
         public void UpdateTargets(Vector3 newOrigin, Vector3 newDestination, float beamWidth, Vector3 originOffset = default(Vector3))
         {
-            // Adjust the origin to the center of the cell
+            
             origin = newOrigin.Yto0() + new Vector3(0, 0, 0);
             destination = newDestination;
             if (originOffset != default(Vector3))
@@ -75,7 +75,7 @@ namespace AnimeArsenal
             if (beamMesh == null)
                 UpdateMesh();
 
-            // Use the adjusted origin directly
+            
             Graphics.DrawMesh(beamMesh, origin + originOffset, Quaternion.identity, beamMat, 0);
         }
     }

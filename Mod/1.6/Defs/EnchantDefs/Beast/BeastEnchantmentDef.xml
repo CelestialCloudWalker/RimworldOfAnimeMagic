@@ -6,7 +6,6 @@
     <description>An ancient primal enchantment that enhances weapon strikes with feral power, leaving devastating wounds. However, prolonged use drains the wielder’s stamina rapidly.</description>
     <enchantHediff>PrimalEdge</enchantHediff>
     <resourceGene>Gene_BeastBreath</resourceGene>
-    <!-- Resource Cost Settings -->
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

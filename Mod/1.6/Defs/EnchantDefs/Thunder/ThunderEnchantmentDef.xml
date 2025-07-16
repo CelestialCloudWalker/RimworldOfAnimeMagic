@@ -8,7 +8,7 @@
     <enchantHediff>ThunderEdge</enchantHediff>
     <resourceGene>Gene_ThunderBreath</resourceGene>
 
-    <!-- Higher resource cost -->
+    
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>

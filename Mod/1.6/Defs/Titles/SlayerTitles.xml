@@ -161,7 +161,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -177,7 +177,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -193,7 +193,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -209,7 +209,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -225,7 +225,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -241,7 +241,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -257,7 +257,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -273,7 +273,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
@@ -288,7 +288,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -304,7 +304,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -320,7 +320,7 @@
 		<recruitmentResistanceOffset>75</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>	
 		<decreeMentalBreakCommonality>12</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
@@ -336,7 +336,7 @@
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>		<!-- disabled -->
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>

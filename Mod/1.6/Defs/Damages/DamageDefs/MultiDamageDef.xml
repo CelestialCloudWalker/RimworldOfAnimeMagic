@@ -29,7 +29,6 @@
   </secondaryDamages>
 </AnimeArsenal.MultiDamageDef>
 
-<!-- Then extend it with your custom properties -->
 <AnimeArsenal.MultiDamageDef>
   <defName>ManyDamageInOne</defName>
   <workerClass>AnimeArsenal.DamageWorker_MultiDamage</workerClass>
@@ -58,7 +57,6 @@
   </secondaryDamages>
 </AnimeArsenal.MultiDamageDef>
 
-<!-- Then extend it with your custom properties -->
 <AnimeArsenal.MultiDamageDef>
   <defName>DemonDamagetest</defName>
   <workerClass>AnimeArsenal.DamageWorker_MultiDamage</workerClass>

@@ -36,7 +36,6 @@ namespace AnimeArsenal
                     category: dinfo.Category
                 );
 
-                //secondaryDinfo.SetBodyRegion(dinfo.Height, dinfo.Depth);
                 victim.TakeDamage(secondaryDinfo);
             }
 
