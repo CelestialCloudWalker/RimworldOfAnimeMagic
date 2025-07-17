@@ -32,6 +32,10 @@ namespace AnimeArsenal
         public static EffecterDef SunlightBurningEffect;
         public static EffecterDef SunlightDeathEffect;
 
+
+        public static GeneDef BloodDemonArt;
+        public static ThingDef AA_DemonRace;
+
     }
 }
 

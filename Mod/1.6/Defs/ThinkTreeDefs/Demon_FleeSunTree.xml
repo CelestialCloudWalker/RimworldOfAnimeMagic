@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- <ThinkTreeDef>
+    <defName>Demon_FleeSunLightTree</defName>
+    <insertTag>Humanlike_PreMain</insertTag>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="AnimeArsenal.ThinkNode_ConditionalIsDemon">
+          <subNodes>
+            <li Class="AnimeArsenal.ThinkNode_ConditionalIsDaylight">
+              <subNodes>
+                <li Class="ThinkNode_Priority">
+                  <subNodes>
+                    <li Class="AnimeArsenal.ThinkNode_ConditionalIsColonist">
+                      <subNodes>
+
+                        <li Class="AnimeArsenal.ThinkNode_ConditionalIsUnderRoof">
+                          <invert>true</invert>
+                          <subNodes>
+                            <li Class="AnimeArsenal.JobGiver_GoToRoof" />
+                          </subNodes>
+                        </li>
+
+                        <li Class="AnimeArsenal.ThinkNode_ConditionalIsUnderRoof">
+                          <subNodes>
+                            <li Class="JobGiver_StandAndStare" />
+                          </subNodes>
+                        </li>
+                      </subNodes>
+                    </li>
+
+
+                    <li Class="AnimeArsenal.ThinkNode_ConditionalIsColonist">
+                      <invert>true</invert>
+                      <subNodes>
+                        <li Class="AnimeArsenal.ThinkNode_ConditionalIsUnderRoof">
+                          <invert>true</invert>
+                          <subNodes>
+                            <li Class="JobGiver_ExitMapPanic" />
+                          </subNodes>
+                        </li>
+                      </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef> -->
+</Defs>

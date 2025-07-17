@@ -5,9 +5,69 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace AnimeArsenal
 {
+
+    public class ThinkNode_ConditionalIsDemon : ThinkNode_Conditional
+    {
+        protected override bool Satisfied(Pawn pawn)
+        {
+            //Log.Message($"{pawn.LabelShort} Is demon {pawn.genes.GenesListForReading.Any(x => x.def == CelestialDefof.BloodDemonArt)}");
+            return pawn.genes.GenesListForReading.Any(x => x.def == CelestialDefof.BloodDemonArt);
+        }
+    }
+
+    public class ThinkNode_ConditionalIsColonist : ThinkNode_Conditional
+    {
+        protected override bool Satisfied(Pawn pawn)
+        {
+            return pawn.Faction != null && pawn.Faction == Faction.OfPlayer;
+        }
+    }
+
+    public class ThinkNode_ConditionalIsDaylight : ThinkNode_Conditional
+    {
+        public float lightThreshold = 0.4f;
+
+        protected override bool Satisfied(Pawn pawn)
+        {
+            //Log.Message($"Isdalyt {pawn.Map.skyManager.CurSkyGlow}");
+            return pawn.Map != null && pawn.Map.skyManager.CurSkyGlow >= lightThreshold;
+        }
+    }
+
+    public class ThinkNode_ConditionalIsUnderRoof : ThinkNode_Conditional
+    {
+        protected override bool Satisfied(Pawn pawn)
+        {
+            //Log.Message($"is roofed {pawn.Map != null && pawn.Position.Roofed(pawn.Map)}");
+            return pawn.Map != null && pawn.Position.Roofed(pawn.Map);
+        }
+    }
+
+    public class JobGiver_GoToRoof : ThinkNode_JobGiver
+    {
+        protected override Job TryGiveJob(Pawn pawn)
+        {
+            if (pawn.Position.Roofed(pawn.Map))
+            {
+                return null;
+            }
+
+            if (CellFinder.TryFindRandomCellNear(pawn.Position, pawn.Map, 20,
+                (IntVec3 c) => c.Roofed(pawn.Map) && pawn.CanReserveAndReach(c, PathEndMode.OnCell, Danger.Deadly),
+                out IntVec3 shelterCell))
+            {
+
+                return JobMaker.MakeJob(JobDefOf.Goto, shelterCell);
+            }
+
+            return null;
+        }
+    }
+
     public class CompAbilityEffect_BaseStance : CompAbilityEffect
     {
         private int maxJumps = 4;
