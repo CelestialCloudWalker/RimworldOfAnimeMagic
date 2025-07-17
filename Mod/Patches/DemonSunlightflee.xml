@@ -24,12 +24,7 @@
                                 <li Class="AnimeArsenal.JobGiver_GoToRoof" />
                               </subNodes>
                             </li>
-
-                            <li Class="AnimeArsenal.ThinkNode_ConditionalIsUnderRoof">
-                              <subNodes>
-                                <li Class="JobGiver_StandAndStare" />
-                              </subNodes>
-                            </li>
+                            
                           </subNodes>
                         </li>
                       </subNodes>
