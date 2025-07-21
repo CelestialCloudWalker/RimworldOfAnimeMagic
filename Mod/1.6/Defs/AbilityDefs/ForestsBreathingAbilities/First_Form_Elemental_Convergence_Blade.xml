@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>First_Form_Elemental_Convergence_Blade</defName>
     <label>First Form: Elemental Convergence Blade</label>
+    <category>ForestsBreathing_Ability_Catergory</category>
+    <groupDef>ForestsBreathing_FirstForm_Group</groupDef>
     <description>The user channels their Breathing technique into their weapon.</description>
     <targetRequired>false</targetRequired>
     <iconPath>UI/Icons/ComingSoon</iconPath>

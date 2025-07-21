@@ -16,7 +16,7 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>PrimalFang</damageDef>
+      <damageDef>Savage_Mauling</damageDef>
       <damageAmountBase>1</damageAmountBase> 
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>

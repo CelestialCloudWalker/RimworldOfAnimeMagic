@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Tenth_Form_Storm_Cloud_Steps</defName>
     <label>Tenth Form: Storm Cloud Steps</label>
+    <category>ThunderBreathing_Ability_Catergory</category>
+    <groupDef>ThunderBreathing_TenthForm_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>

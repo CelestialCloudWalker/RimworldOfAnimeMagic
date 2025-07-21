@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Second_Form_Honorable_Shadow_Plum</defName>
     <label>Second Form: Honorable Shadow Plum</label>
+    <category>FlowerBreathing_Ability_Catergory</category>
+    <groupDef>FlowerBreathing_SecondForm_Group</groupDef>
     <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
@@ -19,7 +21,7 @@
         <Radius>5</Radius>
         <MaxShotsToReflect>20</MaxShotsToReflect>
         <effecterDef>AnimeArsenal_FlowerDeflect</effecterDef>
-       </li>
+      </li>
     </comps>
   </AbilityDef>
 </Defs>

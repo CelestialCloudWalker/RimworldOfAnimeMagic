@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Water_Blade_Technique</defName>
+    <label>Water Blade Technique</label>
+    <description>Channels flowing water into weapons, making attacks bend and curve.</description>
+    <enchantHediff>Flowing_Heart</enchantHediff>
+    <resourceGene>Gene_WaterBreath</resourceGene>
+
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Blade_Technique</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

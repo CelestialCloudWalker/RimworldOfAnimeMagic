@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Third_Form_Flowing_Dance</defName>
     <label>Third Form: Flowing Dance</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <groupDef>WaterBreathing_ThirdForm_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>

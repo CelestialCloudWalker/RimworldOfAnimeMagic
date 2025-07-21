@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Seventh_Form_Drop_Ripple_Thrust</defName>
     <label>Seventh Form: Drop Ripple Thrust</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <groupDef>WaterBreathing_SeventhForm_Group</groupDef>
     <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>180</cooldownTicksRange>
@@ -22,7 +24,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>7</damageAmount>
-        <damageType>WaterBreathingDD</damageType>
+        <damageType>Water_Slash</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <stunDuration>2</stunDuration>

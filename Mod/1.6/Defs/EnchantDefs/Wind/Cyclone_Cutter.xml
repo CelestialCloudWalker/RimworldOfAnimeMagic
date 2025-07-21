@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <DamageDef>
+      <defName>Cyclone_Cutter</defName>
+      <label>Cyclone Cutter</label>
+      <workerClass>DamageWorker_AddInjury</workerClass>
+      <externalViolence>true</externalViolence>
+      <deathMessage>{0} was carved apart by the spinning winds.</deathMessage>
+      <hediff>WindLaceration</hediff>
+      <hediffSolid>Crack</hediffSolid>
+      <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+      <impactSoundType>Tornado</impactSoundType>
+      <armorCategory>Sharp</armorCategory>
+      <overkillPctToDestroyPart>0.7</overkillPctToDestroyPart>
+    </DamageDef>
+
+    <HediffDef ParentName="InjuryBase">
+      <defName>WindLaceration</defName>
+      <label>Wind Laceration</label>
+      <labelNoun>a wind laceration</labelNoun>
+      <description>A clean cut caused by razor-sharp wind.</description>
+      <comps>
+        <li Class="HediffCompProperties_TendDuration">
+          <severityPerDayTended>-0.78</severityPerDayTended>
+        </li>
+      </comps>
+      <injuryProps>
+        <painPerSeverity>0.035</painPerSeverity>
+        <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+        <bleedRate>0.04</bleedRate>
+        <canMerge>true</canMerge>
+        <destroyedLabel>Sliced off</destroyedLabel>
+        <destroyedOutLabel>Sliced through</destroyedOutLabel>
+      </injuryProps>
+    </HediffDef>
+</Defs>

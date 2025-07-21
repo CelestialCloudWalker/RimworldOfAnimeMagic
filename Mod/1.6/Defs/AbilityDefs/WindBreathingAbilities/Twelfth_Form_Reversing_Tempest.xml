@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Twelfth_Form_Reversing_Tempest</defName>
     <label>Twelfth Form: Reversing Tempest</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <groupDef>WindBreathing_TwelfthForm_Group</groupDef>
     <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
@@ -19,7 +21,7 @@
         <Radius>5</Radius>
         <MaxShotsToReflect>20</MaxShotsToReflect>
         <effecterDef>AnimeArsenal_WindDeflect</effecterDef>
-       </li>
+      </li>
     </comps>
   </AbilityDef>
 </Defs>

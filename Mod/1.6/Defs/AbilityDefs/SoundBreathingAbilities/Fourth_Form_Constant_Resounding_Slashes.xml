@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Fourth_Form_Constant_Resounding_Slashes</defName>
     <label>Fourth Form: Constant Resounding Slashes</label>
+    <category>SoundBreathing_Ability_Catergory</category>
+    <groupDef>SoundBreathing_FourthForm_Group</groupDef>
     <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
@@ -19,7 +21,7 @@
         <Radius>5</Radius>
         <MaxShotsToReflect>20</MaxShotsToReflect>
         <effecterDef>AnimeArsenal_SoundDeflect</effecterDef>
-       </li>
+      </li>
     </comps>
   </AbilityDef>
 </Defs>

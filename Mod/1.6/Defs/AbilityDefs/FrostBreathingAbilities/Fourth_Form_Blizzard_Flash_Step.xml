@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Fourth_Form_Blizzard_Flash_Step</defName>
     <label>Fourth Form: Blizzard Flash Step</label>
+    <category>FrostBreathing_Ability_Catergory</category>
+    <groupDef>FrostBreathing_FourthForm_Group</groupDef>
     <description>The user releases a singular, horizontal slash aiming to decapitate their target.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>180</cooldownTicksRange>
@@ -22,7 +24,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>15</damageAmount>
-        <damageType>BreathFrost_Damage</damageType>
+        <damageType>Glacial_Slice</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <stunDuration>2</stunDuration>

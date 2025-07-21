@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Flowing_Embrace_Technique</defName>
+    <label>Flowing Embrace Technique</label>
+    <description>Makes strikes flow with graceful movements that embrace the target.</description>
+    <enchantHediff>Passionate_Heart</enchantHediff>
+    <resourceGene>Gene_LoveBreath</resourceGene>
+
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Second_Form_Frozen_Edge_Enchantment</defName>
     <label>Second Form: Frozen Edge Enchantment</label>
+    <category>FrostBreathing_Ability_Catergory</category>
+    <groupDef>FrostBreathing_SecondForm_Group</groupDef>
     <description>The user channels thier breathing style into their weapon.</description>
     <targetRequired>false</targetRequired>
     <iconPath>UI/Icons/ComingSoon</iconPath>
@@ -12,7 +14,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-        <enchantDef>FrozenBlightEnchantment</enchantDef>
+        <enchantDef>Icicle_Blade_Technique</enchantDef>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>Gene_FrostBreath</resourceGeneDef>

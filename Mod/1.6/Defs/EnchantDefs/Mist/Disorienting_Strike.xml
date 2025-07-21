@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Disorienting_Strike</defName>
+    <label>Disorienting Strike</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was lost in the mist and struck down by Disorienting Strike.</deathMessage>
+    <hediff>Obscured_Wounds</hediff>
+    <hediffSkin>Obscured_Wounds</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+  </DamageDef>
+  <HediffDef ParentName="InjuryBase">
+    <defName>Obscured_Wounds</defName>
+    <label>Obscured Wounds</label>
+    <labelNoun>a Obscured Wound</labelNoun>
+    <description>Injuries that appear through shifting mist, impossible to see coming until it's too late.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.72</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_CauseMentalState">
+        <humanMentalState>Wander_Psychotic</humanMentalState>
+        <animalMentalState>Manhunter</animalMentalState>
+        <mtbDaysToCauseMentalState>0.1</mtbDaysToCauseMentalState>
+        <minSeverity>0.2</minSeverity>
+        <endMentalStateOnCure>true</endMentalStateOnCure>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.035</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Dissipated</destroyedLabel>
+      <destroyedOutLabel>Completely dissipated</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

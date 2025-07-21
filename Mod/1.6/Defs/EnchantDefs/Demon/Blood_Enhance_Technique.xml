@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Blood_Enhance_Technique</defName>
+    <label>Blood Enhance Technique</label>
+    <description>A powerful blood Enhancement that amplifies the user's damage output in combat.</description>
+    <enchantHediff>Blood_Enhance</enchantHediff>
+    <resourceGene>BloodDemonArt</resourceGene>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

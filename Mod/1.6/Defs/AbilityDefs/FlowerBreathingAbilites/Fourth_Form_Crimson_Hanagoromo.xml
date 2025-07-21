@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <AbilityDef>
-      <defName>Fourth_Form_Crimson_Hanagoromo</defName>
-      <label>Fourth Form: Crimson Hanagoromo</label>
-      <description>The user delivers A diagonal slash with its sword.</description>
-      <iconPath>UI/Icons/FlameSlice</iconPath>
-      <cooldownTicksRange>60</cooldownTicksRange>
-      <displayOrder>200</displayOrder>
-      <aiCanUse>true</aiCanUse>
-      <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-      <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-      <verbProperties>
-        <verbClass>Verb_CastAbility</verbClass>
-        <range>20</range>
-        <warmupTime>0.5</warmupTime>
-        <soundCast>FireSpew_Resolve</soundCast>
-        <targetParams>
-          <canTargetPawns>True</canTargetPawns>
-          <canTargetLocations>True</canTargetLocations>
-        </targetParams>
-      </verbProperties>
-      <comps>
-        <li Class="CompProperties_AbilityLaunchProjectile">
-          <projectileDef>Fourth_Form_Crimson_Hanagoromo_Projectile</projectileDef>
-        </li>
-        <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>Gene_FlowerBreath</resourceGeneDef>
-          <resourceCost>20</resourceCost>
-        </li>
-      </comps>
-    </AbilityDef>
+  <AbilityDef>
+    <defName>Fourth_Form_Crimson_Hanagoromo</defName>
+    <label>Fourth Form: Crimson Hanagoromo</label>
+    <category>FlowerBreathing_Ability_Catergory</category>
+    <groupDef>FlowerBreathing_FourthForm_Group</groupDef>
+    <description>The user delivers A diagonal slash with its sword.</description>
+    <iconPath>UI/Icons/FlameSlice</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetLocations>True</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Fourth_Form_Crimson_Hanagoromo_Projectile</projectileDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>Gene_FlowerBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+  </AbilityDef>
 </Defs>

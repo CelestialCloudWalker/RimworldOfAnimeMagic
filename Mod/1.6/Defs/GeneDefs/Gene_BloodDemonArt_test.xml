@@ -103,8 +103,9 @@
 
       <li Class="AnimeArsenal.SunlightDamageExtension">
         <damagePerTick>1</damagePerTick>
-        <damageThresholdBeforeDeath>10</damageThresholdBeforeDeath>
+        <damageThresholdBeforeDeath>40</damageThresholdBeforeDeath>
         <ticksBetweenDamage>100</ticksBetweenDamage>
+        <ticksToResetDamage>2500</ticksToResetDamage>
       </li>
 
       <li Class="AnimeArsenal.BodyDisappearExtension">

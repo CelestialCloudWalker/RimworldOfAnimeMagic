@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Wisteria_Blade_Technique</defName>
+    <label>Wisteria Blade Technique</label>
+    <description>Coats weapons in wisteria poison that seeps into every cut and puncture.</description>
+
+    <enchantHediff>Wisteria_Edge</enchantHediff>
+    <resourceGene>Gene_InsectBreath</resourceGene>
+
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

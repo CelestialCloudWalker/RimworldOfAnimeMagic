@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Second_Form_Echo_Percussion</defName>
     <label>Second Form: Echo Percussion</label>
+    <category>SoundBreathing_Ability_Catergory</category>
+    <groupDef>SoundBreathing_SecondForm_Group</groupDef>
     <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>180</cooldownTicksRange>
@@ -22,7 +24,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>7</damageAmount>
-        <damageType>SoundBreathing</damageType>
+        <damageType>Sonic_Shockwave</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <stunDuration>2</stunDuration>

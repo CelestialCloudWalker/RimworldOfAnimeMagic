@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Coiling_Blade_Technique</defName>
+    <label>Coiling Blade Technique</label>
+    <description>Makes weapons slither and bend like serpents.</description>
+
+    <enchantHediff>Serpent_Soul</enchantHediff>
+    <resourceGene>Gene_SerpentBreath</resourceGene>
+
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

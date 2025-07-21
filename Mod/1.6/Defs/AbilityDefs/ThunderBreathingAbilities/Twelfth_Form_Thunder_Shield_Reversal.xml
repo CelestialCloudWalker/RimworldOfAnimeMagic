@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Twelfth_Form_Thunder_Shield_Reversal</defName>
     <label>Twelfth Form: Thunder Shield Reversal</label>
+    <category>ThunderBreathing_Ability_Catergory</category>
+    <groupDef>ThunderBreathing_TwelfthForm_Group</groupDef>
     <description>A instinctive counter that deflects incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
@@ -19,7 +21,7 @@
         <Radius>5</Radius>
         <MaxShotsToReflect>20</MaxShotsToReflect>
         <effecterDef>AnimeArsenal_ThunderDeflect</effecterDef>
-       </li>
+      </li>
     </comps>
   </AbilityDef>
 </Defs>

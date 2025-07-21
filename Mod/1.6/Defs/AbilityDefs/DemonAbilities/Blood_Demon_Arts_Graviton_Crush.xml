@@ -3,6 +3,8 @@
   <AbilityDef ParentName="RangedDemonBase">
     <defName>Blood_Demon_Arts_Graviton_Crush</defName>
     <label>Blood Demon Arts: Graviton Crush</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>BloodDemonArts_GravitonCrush_Group</groupDef>
     <description>Causes an overwhelming force to bear down on pawns in the target area, dealing crushing damage.</description>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <displayOrder>10</displayOrder>

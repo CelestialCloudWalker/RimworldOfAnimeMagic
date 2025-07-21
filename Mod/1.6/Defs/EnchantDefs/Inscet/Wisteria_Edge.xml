@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>Wisteria_Edge</defName>
+    <label>Wisteria Edge</label>
+    <description>{0} sharpens their soul like a stinger, adding a wisteria poison to every blow.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
+      <bleedRate>0.000</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>shattered</destroyedLabel>
+      <destroyedOutLabel>completely shattered</destroyedOutLabel>
+    </injuryProps>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Wisteria_Sting</damageType>
+        <damageValue>10</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Thirteenth_Form_Dividing_Riverbed</defName>
     <label>Thirteenth Form: Dividing Riverbed</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <groupDef>WaterBreathing_ThirteenthForm_Group</groupDef>
     <description>A wild, instinctive counter that deflects incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
@@ -19,7 +21,7 @@
         <Radius>5</Radius>
         <MaxShotsToReflect>20</MaxShotsToReflect>
         <effecterDef>AnimeArsenal_WaterDeflect</effecterDef>
-       </li>
+      </li>
     </comps>
   </AbilityDef>
 </Defs>

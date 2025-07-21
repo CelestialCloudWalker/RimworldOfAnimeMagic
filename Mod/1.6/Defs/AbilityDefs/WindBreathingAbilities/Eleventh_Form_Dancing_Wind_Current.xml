@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Eleventh_Form_Dancing_Wind_Current</defName>
     <label>Eleventh Form: Dancing Wind Current</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <groupDef>WindBreathing_EleventhForm_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>

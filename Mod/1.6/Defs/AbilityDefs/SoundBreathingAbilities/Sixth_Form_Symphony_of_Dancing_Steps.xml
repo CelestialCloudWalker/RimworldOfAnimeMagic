@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Sixth_Form_Symphony_of_Dancing_Steps</defName>
     <label>Sixth Form: Symphony of Dancing Steps</label>
+    <category>SoundBreathing_Ability_Catergory</category>
+    <groupDef>SoundBreathing_SixthForm_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>

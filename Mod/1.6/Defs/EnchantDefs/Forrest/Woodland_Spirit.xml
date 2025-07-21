@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>Woodland_Spirit</defName>
+    <label>Woodland Spirit </label>
+    <description>{0} fills their soul with forest energy, coating strikes with thorns and barbs.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <injuryProps>
+      <painPerSeverity>0.06</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00035</averagePainPerSeverityPermanent>
+      <bleedRate>0.000</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>shattered</destroyedLabel>
+      <destroyedOutLabel>ravaged</destroyedOutLabel>
+    </injuryProps>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Thorn_Piercing</damageType>
+        <damageValue>7</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

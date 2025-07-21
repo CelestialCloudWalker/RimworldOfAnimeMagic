@@ -16,8 +16,8 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>VeilStrike</damageDef>
-      <damageAmountBase>1</damageAmountBase> 
+      <damageDef>Searing_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>

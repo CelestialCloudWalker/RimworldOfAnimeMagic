@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Eighth_Form_Stalactite_Rain</defName>
     <label>Eighth Form: Stalactite Rain</label>
+    <category>StoneBreathing_Ability_Catergory</category>
+    <groupDef>StoneBreathing_EightForm_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>

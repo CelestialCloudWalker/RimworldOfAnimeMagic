@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>Serpent_Soul</defName>
+    <label>Serpent Soul</label>
+    <description>{0} Fills their spirit with serpent breathing, making strikes coil and twist.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
+      <canMerge>true</canMerge>
+      <destroyedLabel>destroyed</destroyedLabel>
+      <destroyedOutLabel>destroyed</destroyedOutLabel>
+    </injuryProps>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Twisting_Fang</damageType>
+        <damageValue>10.0</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

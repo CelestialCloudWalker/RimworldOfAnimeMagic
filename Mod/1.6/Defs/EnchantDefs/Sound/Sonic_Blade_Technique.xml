@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Sonic_Blade_Technique</defName>
+    <label>Sonic Blade Technique</label>
+    <description>Infuses weapons with sound vibrations that create shockwaves on impact.</description>
+    <enchantHediff>Sonic_Heart</enchantHediff>
+    <resourceGene>Gene_SoundBreath</resourceGene>
+
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

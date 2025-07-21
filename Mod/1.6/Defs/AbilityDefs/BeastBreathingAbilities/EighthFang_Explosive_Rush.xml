@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Eighth_Fang_Explosive_Rush</defName>
     <label>Eighth Fang: Explosive Rush</label>
+    <category>BeastBreathing_Ability_Catergory</category>
+    <groupDef>BeastBreathing_EightFang_Group</groupDef>
     <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>180</cooldownTicksRange>
@@ -22,7 +24,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>7</damageAmount>
-        <damageType>PrimalFang</damageType>
+        <damageType>Savage_Mauling</damageType>
         <stunDuration>2</stunDuration>
         <effectRadius>0</effectRadius>
         <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>

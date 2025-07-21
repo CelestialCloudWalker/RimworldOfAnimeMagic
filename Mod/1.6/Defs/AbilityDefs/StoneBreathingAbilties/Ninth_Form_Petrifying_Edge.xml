@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<AbilityDef>
-      <defName>Ninth_Form_Petrifying_Edge</defName>
-      <label>Ninth Form: Petrifying Edge</label>
-      <description>The user channels thier breathing style into their weapon.</description>
-      <iconPath>UI/Icons/ComingSoon</iconPath>
-      <targetRequired>false</targetRequired>
-      <verbProperties>
-          <verbClass>Verb_CastAbility</verbClass>
-          <range>-1</range>
-      </verbProperties>
-      <comps>
-          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-              <enchantDef>StoneEnchantment</enchantDef>
-          </li>
-          <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>Gene_StoneBreath</resourceGeneDef>
-            <resourceCost>20</resourceCost>
-          </li>
-      </comps>
+  <AbilityDef>
+    <defName>Ninth_Form_Petrifying_Edge</defName>
+    <label>Ninth Form: Petrifying Edge</label>
+    <category>StoneBreathing_Ability_Catergory</category>
+    <groupDef>StoneBreathing_NinthForm_Group</groupDef>
+    <description>The user channels thier breathing style into their weapon.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+        <enchantDef>StoneEnchantment</enchantDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>Gene_StoneBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
   </AbilityDef>
 </Defs>

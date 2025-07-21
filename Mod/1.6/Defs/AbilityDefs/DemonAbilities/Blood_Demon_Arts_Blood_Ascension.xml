@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<AbilityDef>
-      <defName>Blood_Demon_Arts_Blood_Ascension</defName>
-      <label>Blood Demon Arts: Blood Ascension</label>
-      <description>Toggles a hediff on or off.</description>
-      <targetRequired>false</targetRequired>
-      <verbProperties>
-          <verbClass>Verb_CastAbility</verbClass>
-          <range>-1</range>
-      </verbProperties>
-      <comps>
-          <li Class="AnimeArsenal.CompProperties_ToggleEnchantDemon">
-              <enchantDef>DemonEnchantment</enchantDef>
-          </li>
-          <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>BloodDemonArt</resourceGeneDef>
-            <resourceCost>20</resourceCost>
-          </li>
-      </comps>
+  <AbilityDef>
+    <defName>Blood_Demon_Arts_Blood_Ascension</defName>
+    <label>Blood Demon Arts: Blood Ascension</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>BloodDemonArts_BloodAcension_Group</groupDef>
+    <description>Blood Enhancement that increases attack damage(WIP).</description>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchantDemon">
+        <enchantDef>Blood_Enhance_Technique</enchantDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
   </AbilityDef>
 </Defs>

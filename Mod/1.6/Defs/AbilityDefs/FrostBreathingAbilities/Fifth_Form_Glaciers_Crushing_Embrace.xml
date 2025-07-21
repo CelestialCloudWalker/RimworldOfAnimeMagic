@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Fifth_Form_Glaciers_Crushing_Embrace</defName>
     <label>Fifth Form: Glacier's Crushing Embrace</label>
+    <category>FrostBreathing_Ability_Catergory</category>
+    <groupDef>FrostBreathing_FifthForm_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>

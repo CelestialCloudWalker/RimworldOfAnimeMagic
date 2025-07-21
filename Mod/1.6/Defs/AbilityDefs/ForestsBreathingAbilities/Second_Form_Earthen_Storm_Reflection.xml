@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Second_Form_Earthen_Storm_Reflection</defName>
     <label>Second Form: Earthen Storm Reflection</label>
+    <category>ForestsBreathing_Ability_Catergory</category>
+    <groupDef>ForestsBreathing_SecondForm_Group</groupDef>
     <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>

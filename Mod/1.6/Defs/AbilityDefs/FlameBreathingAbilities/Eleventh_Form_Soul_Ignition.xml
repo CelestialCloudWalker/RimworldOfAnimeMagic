@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Eleventh_Form_Soul_Ignition</defName>
     <label>Eleventh Form: Soul Ignition</label>
+    <category>FlameBreathing_Ability_Catergory</category>
+    <groupDef>FlameBreathing_EleventhForm_Group</groupDef>
     <description>The user channels thier breathing style into their weapon.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
@@ -12,7 +14,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-        <enchantDef>BlazeInfernoEnchantment</enchantDef>
+        <enchantDef>Burning_Spirit</enchantDef>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>Gene_FlameBreath</resourceGeneDef>

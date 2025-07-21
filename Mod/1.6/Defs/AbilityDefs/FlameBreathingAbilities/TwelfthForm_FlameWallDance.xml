@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>TwelfthForm_FlameWallDance</defName>
     <label>Twelfth Form: Flame Wall Dance</label>
+    <category>FlameBreathing_Ability_Catergory</category>
+    <groupDef>FlameBreathing_TwelthForm_Group</groupDef>
     <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>

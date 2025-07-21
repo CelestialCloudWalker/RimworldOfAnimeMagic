@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AbilityDef>
-  <defName>Blood_Demon_Arts_Thunderous_Wrath</defName>
-  <label>Blood Demon Arts: Thunderous Wrath</label>
-  <description>Summons a powerful lightning strike at the target location.</description>
-  <verbProperties>
-    <verbClass>Verb_CastAbility</verbClass>
-    <drawAimPie>true</drawAimPie>
-    <warmupTime>1</warmupTime>
-    <range>40</range>
-    <targetParams>
-      <canTargetSelf>false</canTargetSelf>
-      <canTargetPawns>True</canTargetPawns>
-      <canTargetLocations>True</canTargetLocations>
-    </targetParams>
-  </verbProperties>
-  <aiCanUse>true</aiCanUse>
-  <cooldownTicksRange>
-    <min>30000</min>
-    <max>30000</max>
-  </cooldownTicksRange>
-  <comps>
-    <li Class="AnimeArsenal.CompProperties_AbilityLightningStrike">
-      <compClass>AnimeArsenal.CompAbilityEffect_LightningStrike</compClass>
-      <lightning>True</lightning>
-      <explosionRadius>1</explosionRadius>
-      <explosionDamage>5</explosionDamage>
-      <soundOnImpact>Thunder_OnMap</soundOnImpact>
-    </li>
-    <li Class="AnimeArsenal.CompProperties_ResourceCost">
-      <resourceGeneDef>BloodDemonArt</resourceGeneDef>
-      <resourceCost>20</resourceCost>
-    </li>
-  </comps>
-</AbilityDef>
+    <defName>Blood_Demon_Arts_Thunderous_Wrath</defName>
+    <label>Blood Demon Arts: Thunderous Wrath</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>BloodDemonArts_ThunderousWrath_Group</groupDef>
+    <description>Summons a powerful lightning strike at the target location.</description>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>true</drawAimPie>
+      <warmupTime>1</warmupTime>
+      <range>40</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetLocations>True</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>
+      <min>30000</min>
+      <max>30000</max>
+    </cooldownTicksRange>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLightningStrike">
+        <compClass>AnimeArsenal.CompAbilityEffect_LightningStrike</compClass>
+        <lightning>True</lightning>
+        <explosionRadius>1</explosionRadius>
+        <explosionDamage>5</explosionDamage>
+        <soundOnImpact>Thunder_OnMap</soundOnImpact>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+  </AbilityDef>
 </Defs>

@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>First_Form_Crystalline_Reflection</defName>
     <label>First Form: Crystalline Reflection</label>
+    <category>FrostBreathing_Ability_Catergory</category>
+    <groupDef>FrostBreathing_FirstForm_Group</groupDef>
     <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>

@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>First_Form_Unknowing_Fire</defName>
     <label>First Form: Unknowing Fire</label>
+    <category>FlameBreathing_Ability_Catergory</category>
+    <groupDef>FlameBreathing_FirstForm_Group</groupDef>
     <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Abilities/IgnitionEdge</iconPath>
     <aiCanUse>true</aiCanUse>
@@ -22,7 +24,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>7</damageAmount>
-        <damageType>FlameStrike</damageType>
+        <damageType>Searing_Slash</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <stunDuration>2</stunDuration>

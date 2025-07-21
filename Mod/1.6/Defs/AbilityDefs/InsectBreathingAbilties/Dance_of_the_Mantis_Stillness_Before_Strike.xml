@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Dance_of_the_Mantis_Stillness_Before_Strike</defName>
     <label>Dance of the Mantis: Stillness Before Strike</label>
+    <category>InsectBreathing_Ability_Catergory</category>
+    <groupDef>Insectreathing_Dance_Of_The_Mantis_Group</groupDef>
     <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>180</cooldownTicksRange>
@@ -22,7 +24,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>15</damageAmount>
-        <damageType>AA_InsectBreathing_PoisonSting</damageType>
+        <damageType>Wisteria_Sting</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <stunDuration>2</stunDuration>

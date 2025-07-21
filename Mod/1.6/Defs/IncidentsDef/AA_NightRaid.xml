@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <IncidentDef>
+    <defName>NightDemonRaid</defName>
+    <label>Demon raid</label>
+    <workerClass>AnimeArsenal.IncidentWorker_RaidNightOnly</workerClass>
+    <baseChance>1.0</baseChance>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <pointsScaleable>true</pointsScaleable>
+    <minPopulation>1</minPopulation>
+    <earliestDay>3</earliestDay>
+    <minThreatPoints>50</minThreatPoints>
+    <letterText>Demons have arrived under cover of darkness.</letterText>
+    <letterLabel>Demon Raid</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+  </IncidentDef>
+
+
+</Defs>

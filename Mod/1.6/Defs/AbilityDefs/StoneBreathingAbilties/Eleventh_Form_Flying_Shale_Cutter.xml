@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <AbilityDef>
-      <defName>Eleventh_Form_Flying_Shale_Cutter</defName>
-      <label>Eleventh Form: Flying Shale Cutter</label>
-      <description>The user delivers A diagonal slash with its sword.</description>
-      <iconPath>UI/Icons/ComingSoon</iconPath>
-      <cooldownTicksRange>60</cooldownTicksRange>
-      <displayOrder>200</displayOrder>
-      <aiCanUse>true</aiCanUse>
-      <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-      <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-      <verbProperties>
-        <verbClass>Verb_CastAbility</verbClass>
-        <range>20</range>
-        <warmupTime>0.5</warmupTime>
-        <soundCast>FireSpew_Resolve</soundCast>
-        <targetParams>
-          <canTargetPawns>True</canTargetPawns>
-          <canTargetLocations>True</canTargetLocations>
-        </targetParams>
-      </verbProperties>
-      <comps>
-        <li Class="CompProperties_AbilityLaunchProjectile">
-          <projectileDef>Eleventh_Form_Flying_Shale_Cutter_Projectile</projectileDef>
-        </li>
-        <li Class="AnimeArsenal.CompProperties_ResourceCost">
-          <resourceGeneDef>Gene_StoneBreath</resourceGeneDef>
-          <resourceCost>20</resourceCost>
-        </li>
-      </comps>
-    </AbilityDef>
+  <AbilityDef>
+    <defName>Eleventh_Form_Flying_Shale_Cutter</defName>
+    <label>Eleventh Form: Flying Shale Cutter</label>
+    <category>StoneBreathing_Ability_Catergory</category>
+    <groupDef>StoneBreathing_EleventhForm_Group</groupDef>
+    <description>The user delivers A diagonal slash with its sword.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetLocations>True</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Eleventh_Form_Flying_Shale_Cutter_Projectile</projectileDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>Gene_StoneBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+  </AbilityDef>
 </Defs>

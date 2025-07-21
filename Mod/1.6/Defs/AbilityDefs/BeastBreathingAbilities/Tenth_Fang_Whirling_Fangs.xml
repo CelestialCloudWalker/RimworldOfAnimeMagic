@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Tenth_Fang_Whirling_Fangs</defName>
     <label>Tenth Fang: Whirling Fangs</label>
+    <category>BeastBreathing_Ability_Catergory</category>
+    <groupDef>BeastBreathing_TenthFang_Group</groupDef>
     <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>

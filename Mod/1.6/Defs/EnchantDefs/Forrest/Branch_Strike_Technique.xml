@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Branch_Strike_Technique</defName>
+    <label>Branch Strike Technique</label>
+    <description>Attacks grow and spread like living branches, finding weak points.</description>
+    <enchantHediff>Woodland_Spirit</enchantHediff>
+    <resourceGene>Gene_ForestBreath</resourceGene>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

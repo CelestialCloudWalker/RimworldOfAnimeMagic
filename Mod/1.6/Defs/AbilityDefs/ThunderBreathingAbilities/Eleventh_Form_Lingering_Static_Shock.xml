@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<AbilityDef>
-      <defName>Eleventh_Form_Lingering_Static_Shock</defName>
-      <label>Eleventh Form: Lingering Static Shock</label>
-      <description>The user channels thier breathing style into their weapon.</description>
-      <iconPath>UI/Icons/ComingSoon</iconPath>
-      <targetRequired>false</targetRequired>
-      <verbProperties>
-          <verbClass>Verb_CastAbility</verbClass>
-          <range>-1</range>
-      </verbProperties>
-      <comps>
-          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-              <enchantDef>ThunderEnchantment</enchantDef>
-          </li>
-          <li Class="AnimeArsenal.CompProperties_ResourceCost">
-            <resourceGeneDef>Gene_ThunderBreath</resourceGeneDef>
-            <resourceCost>20</resourceCost>
-          </li>
-      </comps>
+  <AbilityDef>
+    <defName>Eleventh_Form_Lingering_Static_Shock</defName>
+    <label>Eleventh Form: Lingering Static Shock</label>
+    <category>ThunderBreathing_Ability_Catergory</category>
+    <groupDef>ThunderBreathing_EleventhForm_Group</groupDef>
+    <description>The user channels thier breathing style into their weapon.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+        <enchantDef>ThunderEnchantment</enchantDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>Gene_ThunderBreath</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
   </AbilityDef>
 </Defs>

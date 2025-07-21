@@ -3,7 +3,9 @@
   <AbilityDef>
     <defName>Blood_Demon_Arts_Pain_Blade</defName>
     <label>Blood Demon Arts: Pain Blade</label>
-    <description>The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, producing a strong repelling effect rather than an attracting one. Sends the hit target flying backwards</description>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>BloodDemonArts_PainBlade_Group</groupDef>
+    <description>Launches a blade that slices through targets</description>
     <iconPath>Abilities/Gojo/Red</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <category>BloodDemonArts</category>

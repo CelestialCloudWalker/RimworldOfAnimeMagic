@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Tenth_Form_Eternal_Bond_of_Devotion</defName>
     <label>Tenth Form: Eternal Bond of Devotion</label>
+    <category>LoveBreathing_Ability_Catergory</category>
+    <groupDef>LoveBreathing_TenthForm_Group</groupDef>
     <description>The user channels thier breathing style into their weapon.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>

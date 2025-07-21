@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>Blood_Demon_Arts_Devour</defName>
+    <label>Blood Demon Arts: Devour</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>Blood_Demon_Arts_Devour_Group</groupDef>
+    <description>Devour a target to heal wounds and restore blood demon arts energy. Can target corpses or living enemies.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>100</range>
+      <warmupTime>1.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.AbilityCompProperties_DemonConsume">
+        <nutritionGain>0.8</nutritionGain>
+        <canTargetCorpses>true</canTargetCorpses>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_ResourceCost">
+        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
+        <resourceCost>20</resourceCost>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+  <ThoughtDef>
+    <defName>DemonConsumptionMemory</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>10</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>consumed flesh</label>
+        <description>I devoured another being. The power flows through me.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+        <baseOpinionOffset>0</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>WitnessedDemonConsumptionMemory</defName>
+    <durationDays>5</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>witnessed demon consumption</label>
+        <description>I saw someone devour another person like a monster. It was horrifying.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+        <baseOpinionOffset>-20</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+  <HediffDef>
+    <defName>DemonBloodlust</defName>
+    <label>demon bloodlust</label>
+    <description>The taste of flesh has awakened a demonic hunger.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>5.0</maxSeverity>
+    <initialSeverity>1.0</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.5</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MeleeHitChance>5</MeleeHitChance>
+          <MeleeDodgeChance>10</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.0</minSeverity>
+        <label>intense bloodlust</label>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.20</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MeleeHitChance>10</MeleeHitChance>
+          <MeleeDodgeChance>15</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DemonDrain</defName>
+    <label>demon drain</label>
+    <description>Life force is being drained by demonic consumption.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.1, 0.1)</defaultLabelColor>
+    <isBad>true</isBad>
+    <maxSeverity>10.0</maxSeverity>
+    <initialSeverity>1.0</initialSeverity>
+    <lethalSeverity>8.0</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.3</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>3.0</minSeverity>
+        <label>severe drain</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>6.0</minSeverity>
+        <label>critical drain</label>
+        <lifeThreatening>true</lifeThreatening>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.50</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.60</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.50</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

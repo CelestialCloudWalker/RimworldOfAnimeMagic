@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <AbilityDef>
+    <defName>AbilityStealBite</defName>
+    <label>ability copy bite</label>
+    <description>Bite a target to copy one of their abilities. Works on any living pawn. The target keeps their original ability.</description>
+    <iconPath>UI/Abilities/AbilityStealBite</iconPath>
+    <aiCanUse>false</aiCanUse>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <statBases>
+      <Ability_Duration>1</Ability_Duration>
+      <Ability_Range>1</Ability_Range>
+      <Ability_EffectRadius>0</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>2</warmupTime>
+      <soundCast>Pawn_Melee_Bite_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetHumans>true</canTargetHumans>
+        <mustBeSelectable>false</mustBeSelectable>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityStealBite">
+        <damageType>Bite</damageType>
+        <baseDamage>12</baseDamage>
+        <armorPenetration>0.1</armorPenetration>
+        <scaleDamageWithMelee>true</scaleDamageWithMelee>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <HediffDef>
+    <defName>CopiedAbilityHediff</defName>
+    <label>copied ability</label>
+    <description>This pawn has gained an ability through supernatural means.</description>
+    <hediffClass>AnimeArsenal.HediffCopiedAbility</hediffClass>
+    <defaultLabelColor>(0.2, 0.8, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>empowered</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <StatDef>
+    <defName>AbilityStealChance</defName>
+    <label>ability copy chance</label>
+    <description>The chance to successfully copy an ability when biting.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0.75</defaultBaseValue>
+    <minValue>0</minValue>
+    <maxValue>1</maxValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <displayPriorityInCategory>50</displayPriorityInCategory>
+  </StatDef>
+
+  <ThoughtDef>
+    <defName>CopiedAbility</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>8</durationDays>
+    <stackLimit>1</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>copied ability</label>
+        <description>I absorbed the essence of another's power. It flows through me now.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>AbilityCopied</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>1</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>ability copied</label>
+        <description>Someone copied my abilities... I feel strangely exposed.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

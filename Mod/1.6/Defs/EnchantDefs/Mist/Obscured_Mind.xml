@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>Obscured_Mind</defName>
+    <label>Obscured Mind</label>
+    <description>{0} clouds the spirit with a mist, making strikes disorienting.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <injuryProps>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.035</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Desotryed</destroyedLabel>
+      <destroyedOutLabel>Completely Destroyed</destroyedOutLabel>
+    </injuryProps>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Disorienting_Strike</damageType>
+        <damageValue>10</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

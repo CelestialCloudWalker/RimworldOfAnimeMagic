@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Earth_Surge_Technique</defName>
+    <label>Earth Surge Technique</label>
+    <description>Channels the ground's power into weapons, creating attacks that hit like a ton of rocks.</description>
+    <enchantHediff>Stone_Heart</enchantHediff>
+    <resourceGene>Gene_StoneBreath</resourceGene>
+
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

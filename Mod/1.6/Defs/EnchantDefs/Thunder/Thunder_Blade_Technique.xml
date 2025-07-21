@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Thunder_Blade_Technique</defName>
+    <label>Thunder Blade Technique</label>
+    <description>Channels lightning into weapons, creating attacks that strike fast and burn.</description>
+
+    <enchantHediff>Lightning_Soul</enchantHediff>
+    <resourceGene>Gene_ThunderBreath</resourceGene>
+
+
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

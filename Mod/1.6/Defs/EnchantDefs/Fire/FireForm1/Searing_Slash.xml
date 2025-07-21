@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Searing_Slash</defName>
+    <label>Searing Slash</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was incinerated by Searing Slashes.</deathMessage>
+    <hediff>Third_Degree_Burns</hediff>
+    <hediffSkin>BurThird_Degree_BurnsningWound</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Heat</armorCategory>
+    <impactSoundType>Blunt</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Third_Degree_Burns</defName>
+    <label>Third Degree Burns</label>
+    <labelNoun>a Third Degree Burn</labelNoun>
+    <description>Severe burns that penetrate deep into tissue, causing intense pain.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.75</severityPerDayTended>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.0075</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Charred</destroyedLabel>
+      <destroyedOutLabel>Incinerated</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+</Defs>

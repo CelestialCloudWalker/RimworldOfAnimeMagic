@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Third_Form_Blazing_Current_Step</defName>
     <label>Third Form: Blazing Current Step</label>
+    <category>ForestsBreathing_Ability_Catergory</category>
+    <groupDef>ForestsBreathing_ThirdForm_Group</groupDef>
     <description>The user charges towards their opponent at blinding speeds.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>180</cooldownTicksRange>
@@ -22,7 +24,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>15</damageAmount>
-        <damageType>ForestFang</damageType>
+        <damageType>Thorn_Piercing</damageType>
         <armorPenetration>0.3</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <stunDuration>2</stunDuration>

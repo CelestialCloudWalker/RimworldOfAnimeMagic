@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Phantom_Blade_Technique</defName>
+    <label>Phantom Blade Technique</label>
+    <description>"Shrouds weapons in mist that disorients enemies.</description>
+    <enchantHediff>Obscured_Mind</enchantHediff>
+    <resourceGene>Gene_MistBreath</resourceGene>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

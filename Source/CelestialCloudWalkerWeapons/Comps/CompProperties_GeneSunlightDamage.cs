@@ -10,11 +10,13 @@ namespace AnimeArsenal
         public float damagePerTick = 0.1f;
         public float damageThresholdBeforeDeath = 10f;
         public int ticksBetweenDamage = 250;
+        public int ticksToResetDamage = 2500; // New field: ticks out of sun before damage resets
     }
 
     public class MapComponent_SunlightDamage : MapComponent
     {
         private Dictionary<int, float> accumulatedDamage = new Dictionary<int, float>();
+        private Dictionary<int, int> ticksOutOfSun = new Dictionary<int, int>(); // Track ticks out of sunlight
         private Effecter burningEffecter;
         private Effecter deathEffecter;
 
@@ -28,6 +30,7 @@ namespace AnimeArsenal
         {
             base.ExposeData();
             Scribe_Collections.Look(ref accumulatedDamage, "accumulatedDamage", LookMode.Value, LookMode.Value);
+            Scribe_Collections.Look(ref ticksOutOfSun, "ticksOutOfSun", LookMode.Value, LookMode.Value);
         }
 
         public override void MapComponentTick()
@@ -38,20 +41,19 @@ namespace AnimeArsenal
                 .GetModExtension<SunlightDamageExtension>();
             if (extension == null) return;
 
-            if (Find.TickManager.TicksGame % extension.ticksBetweenDamage != 0) return;
-
-            List<Pawn> pawnsToProcess = map.mapPawns.AllPawnsSpawned
-                .Where(p => HasBloodDemonArt(p) && IsExposedToSunlight(p))
+            List<Pawn> pawnsWithBloodDemonArt = map.mapPawns.AllPawnsSpawned
+                .Where(p => HasBloodDemonArt(p))
                 .ToList();
 
-            foreach (Pawn pawn in pawnsToProcess)
+            foreach (Pawn pawn in pawnsWithBloodDemonArt)
             {
                 if (pawn?.Destroyed != true)
                 {
-                    DealSunlightDamage(pawn);
+                    ProcessPawnSunlightStatus(pawn, extension);
                 }
             }
 
+            // Clean up data for pawns that no longer exist
             List<int> pawnsToRemove = accumulatedDamage.Keys
                 .Where(id => !map.mapPawns.AllPawnsSpawned.Any(p => p.thingIDNumber == id))
                 .ToList();
@@ -59,6 +61,41 @@ namespace AnimeArsenal
             foreach (int id in pawnsToRemove)
             {
                 accumulatedDamage.Remove(id);
+                ticksOutOfSun.Remove(id);
+            }
+        }
+
+        private void ProcessPawnSunlightStatus(Pawn pawn, SunlightDamageExtension extension)
+        {
+            bool isExposed = IsExposedToSunlight(pawn);
+            int pawnId = pawn.thingIDNumber;
+
+            if (isExposed)
+            {
+                ticksOutOfSun.Remove(pawnId);
+
+                if (Find.TickManager.TicksGame % extension.ticksBetweenDamage == 0)
+                {
+                    DealSunlightDamage(pawn);
+                }
+            }
+            else
+            {
+                if (!ticksOutOfSun.ContainsKey(pawnId))
+                {
+                    ticksOutOfSun[pawnId] = 0;
+                }
+                ticksOutOfSun[pawnId]++;
+
+                if (ticksOutOfSun[pawnId] >= extension.ticksToResetDamage)
+                {
+                    if (accumulatedDamage.ContainsKey(pawnId))
+                    {
+                        accumulatedDamage.Remove(pawnId);
+                        MoteMaker.ThrowText(pawn.DrawPos, map, "Sunlight damage reset", 2f);
+                    }
+                    ticksOutOfSun.Remove(pawnId); 
+                }
             }
         }
 
@@ -127,6 +164,7 @@ namespace AnimeArsenal
             pawn.Kill(null);
 
             accumulatedDamage.Remove(pawn.thingIDNumber);
+            ticksOutOfSun.Remove(pawn.thingIDNumber);
         }
 
         public override void FinalizeInit()

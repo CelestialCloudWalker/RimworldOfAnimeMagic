@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Twelfth_Fang_Boar_Rush</defName>
     <label>Twelfth Fang: Boar Rush</label>
+    <category>BeastBreathing_Ability_Catergory</category>
+    <groupDef>BeastBreathing_TwelfthFang_Group</groupDef>
     <description>The user vanishes in a blitz of dashes, automatically targeting nearby enemies with each jump.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>

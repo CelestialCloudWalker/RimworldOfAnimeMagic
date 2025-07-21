@@ -3,8 +3,9 @@
   <AbilityDef ParentName="RangedDemonBase">
     <defName>Blood_Demon_Arts_Spiral_of_Torment</defName>
     <label>Blood Demon Arts: Spiral of Torment</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>BloodDemonArts_SpiralOfTorment_Group</groupDef>
     <description>Command a random limb on the target to twist into a bloody mess.</description>
-        <category>BloodDemonArts</category>
     <comps>
       <li Class="AnimeArsenal.CompProperties_TwistEffect">
         <baseDamage>8</baseDamage>

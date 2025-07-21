@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Icicle_Blade_Technique</defName>
+    <label>Icicle Blade Technique</label>
+    <description>Coats weapons in ice that pierces and freezes enemies.</description>
+    <enchantHediff>Frozen_Heart</enchantHediff>
+    <resourceGene>Gene_FrostBreath</resourceGene>
+    <ticksBetweenCost>120</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

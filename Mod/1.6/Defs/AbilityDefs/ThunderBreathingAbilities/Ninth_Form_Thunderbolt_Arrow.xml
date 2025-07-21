@@ -3,6 +3,8 @@
     <AbilityDef>
       <defName>Ninth_Form_Thunderbolt_Arrow</defName>
       <label>Ninth Form: Thunderbolt Arrow</label>
+      <category>ThunderBreathing_Ability_Catergory</category>
+      <groupDef>ThunderBreathing_NinthForm_Group</groupDef>
       <description>The user delivers A diagonal slash with its sword.</description>
       <iconPath>UI/Icons/ComingSoon</iconPath>
       <cooldownTicksRange>60</cooldownTicksRange>

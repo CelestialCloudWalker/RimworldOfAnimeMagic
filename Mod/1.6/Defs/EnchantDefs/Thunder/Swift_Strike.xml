@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Swift_Strike</defName>
+    <label>Swift Strike</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was swiftly cut down by the strike.</deathMessage>
+    <hediff>Lightning_Burns</hediff>
+    <hediffSkin>Lightning_Burns</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Lightning_Burns</defName>
+    <label>Lightning Burns</label>
+    <labelNoun>a lighting burn</labelNoun>
+    <description>Injuries that burns and crackles.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.70</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.30</infectionChance>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.055</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00725</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Electrified</destroyedLabel>
+      <destroyedOutLabel>Thunderstruck</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

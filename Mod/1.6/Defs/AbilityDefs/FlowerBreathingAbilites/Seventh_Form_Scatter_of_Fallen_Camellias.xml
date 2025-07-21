@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Seventh_Form_Scatter_of_Fallen_Camellias</defName>
     <label>Seventh Form: Scatter of Fallen Camellias</label>
+    <category>FlowerBreathing_Ability_Catergory</category>
+    <groupDef>FlowerBreathing_SeventhForm_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>

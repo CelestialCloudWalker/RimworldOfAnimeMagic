@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Eighth_Form_Reflection_of_True_Feelings</defName>
     <label>Eighth Form: Reflection of True Feelings</label>
+    <category>LoveBreathing_Ability_Catergory</category>
+    <groupDef>LoveBreathing_EightForm_Group</groupDef>
     <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
@@ -19,7 +21,7 @@
         <Radius>5</Radius>
         <MaxShotsToReflect>20</MaxShotsToReflect>
         <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
-       </li>
+      </li>
     </comps>
   </AbilityDef>
 </Defs>

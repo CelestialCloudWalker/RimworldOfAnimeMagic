@@ -80,7 +80,7 @@
     <barColor>(0, 191, 255)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
     <exhaustionPerTick>0.0004</exhaustionPerTick>
-    <exhaustionHediff>FlowerEnchantmentExhaustion</exhaustionHediff>
+    <exhaustionHediff>Electric_Burnout</exhaustionHediff>
     <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
     <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
     <exhausationCooldownTicks>3000</exhausationCooldownTicks>

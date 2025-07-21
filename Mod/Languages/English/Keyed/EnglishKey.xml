@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <AbilityStealBite_TargetDead>Target is dead and cannot have abilities copied.</AbilityStealBite_TargetDead>
+  <AbilityStealBite_NoAbilities>Target has no abilities to copy.</AbilityStealBite_NoAbilities>
+  <AbilityStealBite_Failed>{0} failed to copy the ability.</AbilityStealBite_Failed>
+  <AbilityStealBite_Success>{0} successfully copied {1}!</AbilityStealBite_Success>
+  <AbilityStealBite_MustTargetPawn>Must target a pawn to copy abilities.</AbilityStealBite_MustTargetPawn>
+
+  <CopiedAbility_label>copied ability</CopiedAbility_label>
+  <CopiedAbility_description>I successfully copied someone's ability. It feels empowering.</CopiedAbility_description>
+
+  <AbilityCopied_label>ability copied</AbilityCopied_label>
+  <AbilityCopied_description>Someone copied one of my abilities. I feel violated.</AbilityCopied_description>
+
+  <CopiedAbilityHediff_label>copied ability</CopiedAbilityHediff_label>
+  <CopiedAbilityHediff_description>This pawn has a copied ability that will fade over time.</CopiedAbilityHediff_description>
+
+  <AbilityStealChance_label>ability steal chance</AbilityStealChance_label>
+  <AbilityStealChance_description>The chance to successfully copy an ability when using steal bite.</AbilityStealChance_description>
+
+</LanguageData>

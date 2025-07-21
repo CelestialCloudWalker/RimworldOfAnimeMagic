@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Fifth_Form_Slithering_Serpent</defName>
     <label>Fifth Form: Slithering Serpent</label>
+    <category>SerpentBreathing_Ability_Catergory</category>
+    <groupDef>SerpentBreathing_FifthForm_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>

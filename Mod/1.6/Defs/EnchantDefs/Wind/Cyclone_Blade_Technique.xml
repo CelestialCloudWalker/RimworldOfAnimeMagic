@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Cyclone_Blade_Technique</defName>
+    <label>Cyclone Blade Technique</label>
+    <description>Channels wind into weapons, making attacks spin and slice.</description>
+    <enchantHediff>Cyclone_Spirit</enchantHediff>
+    <resourceGene>Gene_WindBreath</resourceGene>
+
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

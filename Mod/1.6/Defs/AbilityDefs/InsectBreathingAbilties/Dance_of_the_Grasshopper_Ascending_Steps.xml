@@ -3,6 +3,8 @@
   <AbilityDef>
     <defName>Dance_of_the_Grasshopper_Ascending_Steps</defName>
     <label>Dance of the Grasshopper: Ascending Steps</label>
+    <category>InsectBreathing_Ability_Catergory</category>
+    <groupDef>Insectreathing_Dance_Of_The_Grasshopper_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
