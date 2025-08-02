@@ -10,6 +10,7 @@
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
 
     <TalentTrees>
+        <li>Beast_BreathingStyleBlankTree</li>
     </TalentTrees>
 
     <experienceFormula>Basic_LinearXP</experienceFormula>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <StatDef_GeneDependent>
+  <StatDef>
     <defName>FlowerBreath_RegenRate</defName>
     <label>Flower Breath Regen Rate</label>
     <category>PawnMisc</category>
@@ -8,8 +8,6 @@
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0</minValue>
     <toStringStyle>PercentOne</toStringStyle>
-    <requiredGenes>
-      <li>Gene_FlowerBreath</li>
-    </requiredGenes>
-  </StatDef_GeneDependent>
+    <showOnDefaultValue>false</showOnDefaultValue>
+  </StatDef>
 </Defs>

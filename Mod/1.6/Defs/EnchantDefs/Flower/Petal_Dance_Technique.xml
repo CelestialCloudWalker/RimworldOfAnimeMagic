@@ -4,7 +4,7 @@
     <defName>Petal_Dance_Technique</defName>
     <label>Petal Dance Technique</label>
     <description>A technique that allows a Flower Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Blooming_Grace</enchantHediff>
+    <enchantHediff>Floral_Mastery</enchantHediff>
     <resourceGene>Gene_FlowerBreath</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>

@@ -14,7 +14,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-        <enchantDef>SoundEnchantment</enchantDef>
+        <enchantDef>Sonic_Blade_Technique</enchantDef>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>Gene_SoundBreath</resourceGeneDef>

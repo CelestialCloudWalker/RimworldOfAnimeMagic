@@ -14,7 +14,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-        <enchantDef>VeilEnchantment</enchantDef>
+        <enchantDef>Phantom_Blade_Technique</enchantDef>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>Gene_MistBreath</resourceGeneDef>

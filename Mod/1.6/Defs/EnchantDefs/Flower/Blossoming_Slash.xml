@@ -6,8 +6,8 @@
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} was cut down by a slash of petals.</deathMessage>
-    <hediff>RosePetalWound</hediff>
-    <hediffSkin>RosePetalWound</hediffSkin>
+    <hediff>Petal_Wounds</hediff>
+    <hediffSkin>Petal_Wounds</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <impactSoundType>Slice</impactSoundType>
     <armorCategory>Sharp</armorCategory>
@@ -23,8 +23,8 @@
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
-    <defName>Petal Wounds</defName>
-    <label>Petal_Wounds</label>
+    <defName>Petal_Wounds</defName>
+    <label>Petal Wounds</label>
     <labelNoun>a Petal Wound</labelNoun>
     <description>cuts that scatter across the body like fallen flower petals.</description>
     <comps>

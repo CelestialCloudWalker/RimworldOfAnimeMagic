@@ -10,6 +10,7 @@
     <resourceLabel>Flower Breath</resourceLabel>
     <resourceDescription>Current stored Breath, charged with the essence of frost. This energy powers devastating ice-based abilities, freezing enemies in their tracks.</resourceDescription>
     <TalentTrees>
+      <li>Flower_BreathingStyleBlankTree</li>
     </TalentTrees>
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>

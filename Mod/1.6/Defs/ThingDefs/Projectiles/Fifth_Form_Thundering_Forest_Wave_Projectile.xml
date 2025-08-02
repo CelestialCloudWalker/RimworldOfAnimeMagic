@@ -15,8 +15,8 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>ForestFang</damageDef>
-      <damageAmountBase>1</damageAmountBase>
+      <damageDef>Thorn_Piercing</damageDef>
+      <damageAmountBase>7</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>

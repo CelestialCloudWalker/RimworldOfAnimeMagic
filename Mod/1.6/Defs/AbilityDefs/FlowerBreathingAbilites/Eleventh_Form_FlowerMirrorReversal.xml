@@ -14,7 +14,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-        <enchantDef>EnchantRoseThornEdge</enchantDef>
+        <enchantDef>Petal_Dance_Technique</enchantDef>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>Gene_FlowerBreath</resourceGeneDef>

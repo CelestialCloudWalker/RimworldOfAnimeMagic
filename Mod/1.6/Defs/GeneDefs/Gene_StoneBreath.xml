@@ -9,6 +9,7 @@
     <resourceLabel>Stone Breath</resourceLabel>
     <resourceDescription>Current stored Breath, charged with the power of passion. This resource energizes graceful and powerful techniques, overwhelming enemies with both elegance and force.</resourceDescription>
     <TalentTrees>
+      <li>Stone_BreathingStyleBlankTree</li>
     </TalentTrees>
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>

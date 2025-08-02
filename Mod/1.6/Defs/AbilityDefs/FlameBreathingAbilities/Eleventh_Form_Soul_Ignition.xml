@@ -14,7 +14,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-        <enchantDef>Burning_Spirit</enchantDef>
+        <enchantDef>Flame_Blade_Technique</enchantDef>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>Gene_FlameBreath</resourceGeneDef>

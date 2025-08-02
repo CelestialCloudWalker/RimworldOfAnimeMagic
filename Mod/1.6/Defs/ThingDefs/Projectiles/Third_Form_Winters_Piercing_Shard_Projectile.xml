@@ -15,7 +15,7 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>Glacial_Slice</damageDef>
+      <damageDef>AA_Freezing</damageDef>
       <damageAmountBase>1</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>

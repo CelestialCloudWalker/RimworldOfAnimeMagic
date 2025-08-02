@@ -15,8 +15,8 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>AA_InsectBreathing_PoisonSting</damageDef>
-      <damageAmountBase>1</damageAmountBase> 
+      <damageDef>Wisteria_Sting</damageDef>
+      <damageAmountBase>1</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>

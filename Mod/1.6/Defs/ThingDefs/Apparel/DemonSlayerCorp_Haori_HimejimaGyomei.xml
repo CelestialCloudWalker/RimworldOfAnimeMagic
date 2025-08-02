@@ -22,11 +22,15 @@
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>16000</WorkToMake>
-      <Mass>2</Mass>
+      <Mass>0.5</Mass>
       <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
       <StuffEffectMultiplierInsulation_Heat>0.85</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>3</EquipDelay>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.46</ArmorRating_Heat>
     </statBases>
     <apparel>
       <bodyPartGroups>
@@ -37,20 +41,23 @@
         <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>Haori_HimejimaGyomei/Haori_HimejimaGyomei</wornGraphicPath>
-        <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-        <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-        <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
-        <shellRenderedBehindHead>true</shellRenderedBehindHead>
-        <layers>
-          <li>Shell</li>
-        </layers>
-        <tags>
-          <li>Cape</li>
-        </tags>
-      </apparel>
-      <colorGenerator Class="ColorGenerator_StandardApparel" />
-      <recipeMaker>
-        <displayPriority>235</displayPriority>
-      </recipeMaker>
-    </ThingDef>
-  </Defs>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>Cape</li>
+      </tags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>235</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

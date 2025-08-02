@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>DemonSlayerCorp_UniformSkirtA</defName>
     <label>Demon Slayer Corp Skirt B</label>
     <description>The Demon Slayer Corps uniform is a durable, dark-colored, high-collared outfit designed for mobility and protection.</description>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
-      <displayPriority>205</displayPriority>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>235</displayPriority>
     </recipeMaker>
     <graphicData>
       <shaderType>CutoutComplex</shaderType>
@@ -22,13 +24,17 @@
       <li>ApparelMisc</li>
     </thingCategories>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>1600</WorkToMake>
-      <Mass>0.25</Mass>
-      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.22</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>1.5</EquipDelay>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>16000</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.85</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.46</ArmorRating_Heat>
     </statBases>
     <apparel>
       <bodyPartGroups>
@@ -56,5 +62,4 @@
       <li>BasicClothing</li>
     </tradeTags>
   </ThingDef>
-
 </Defs>

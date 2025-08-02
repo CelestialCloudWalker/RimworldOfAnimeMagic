@@ -14,7 +14,7 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
-        <enchantDef>NaturalEnchantment</enchantDef>
+        <enchantDef>Branch_Strike_Technique</enchantDef>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">
         <resourceGeneDef>Gene_ForestBreath</resourceGeneDef>

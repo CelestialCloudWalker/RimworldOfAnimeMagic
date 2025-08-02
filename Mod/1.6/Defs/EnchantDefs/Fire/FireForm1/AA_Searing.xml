@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>AA_Searing</defName>
+    <label>Seared</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was consumed by searing heat.</deathMessage>
+    <hediff>AA_Seared</hediff>
+    <hediffSkin>AA_Seared</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Heat</armorCategory>
+    <impactSoundType>Blunt</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>AA_Seared</defName>
+    <label>Seared</label>
+    <labelNoun>seared flesh</labelNoun>
+    <description>Intense heat has seared the pawn's skin, leaving painful burns that hinder movement and concentration.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.75</severityPerDayTended>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.0075</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Charred</destroyedLabel>
+      <destroyedOutLabel>Incinerated</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+</Defs>

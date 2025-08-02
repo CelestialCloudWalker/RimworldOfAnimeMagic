@@ -5,9 +5,9 @@
     <label>Savage Mauling</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0}  was ruthlessly torn apart.</deathMessage>
-    <hediff>TornFlesh</hediff>
-    <hediffSkin>TornFlesh</hediffSkin>
+    <deathMessage>{0} was torn apart.</deathMessage>
+    <hediff>Mauled</hediff>
+    <hediffSkin>Mauled</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Sharp</armorCategory>
     <impactSoundType>Slice</impactSoundType>
@@ -15,10 +15,10 @@
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
-    <defName>TornFlesh</defName>
-    <label>Torn Flesh</label>
-    <labelNoun>Torn Flesh</labelNoun>
-    <description>Torn Flesh.</description>
+    <defName>Mauled</defName>
+    <label>Mauled</label>
+    <labelNoun>Mauling</labelNoun>
+    <description>This pawn's flesh has been torn apart.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <severityPerDayTended>-0.68</severityPerDayTended>

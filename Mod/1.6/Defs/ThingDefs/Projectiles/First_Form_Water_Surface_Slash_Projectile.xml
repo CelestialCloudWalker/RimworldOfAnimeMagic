@@ -16,7 +16,7 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>WaterBreathingDD</damageDef>
+      <damageDef>Water_Pressure</damageDef>
       <damageAmountBase>1</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>

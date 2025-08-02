@@ -15,8 +15,8 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>DemonDamageTest</damageDef>
-      <damageAmountBase>1</damageAmountBase> 
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>

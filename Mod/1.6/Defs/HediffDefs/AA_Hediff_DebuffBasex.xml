@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef Name="BeastBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(139, 69, 19)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="FlameBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(255, 69, 0)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="FlowerBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(255, 182, 193)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="ForestBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(85, 107, 47)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="FrostBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(173, 216, 230)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="InsectBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(218, 112, 214)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="LoveBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(255, 182, 193)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="MistBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(192, 192, 192)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="SerpentBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(138, 43, 226)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="SoundBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(255, 215, 0)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="StoneBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(169, 169, 169)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="ThunderBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(0, 191, 255)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="WaterBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(0, 105, 148)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+  <HediffDef Name="WindBreathingDebuffBase" Abstract="true">
+    <isBad>true</isBad>
+    <hediffClass>HediffWithComps</hediffClass>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultLabelColor>(50, 205, 50)</defaultLabelColor>
+    <tendable>false</tendable>
+  </HediffDef>
+</Defs>

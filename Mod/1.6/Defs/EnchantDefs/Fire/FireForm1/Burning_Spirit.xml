@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Searing_Slash</damageType>
+        <damageType>AA_Searing</damageType>
         <damageValue>15</damageValue>
       </li>
     </comps>

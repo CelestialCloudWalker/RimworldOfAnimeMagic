@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="BaseBullet">
     <defName>Eighth_Form_Phantom_Mist_Cutter_Projectile</defName>
-    <label>HelpMe</label>
+    <label>Mist Cutter Projectile</label>
     <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
     <tickerType>Normal</tickerType>
     <graphicData>
@@ -16,8 +16,8 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>VeilStrike</damageDef>
-      <damageAmountBase>1</damageAmountBase> 
+      <damageDef>Disorienting_Strike</damageDef>
+      <damageAmountBase>5</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>

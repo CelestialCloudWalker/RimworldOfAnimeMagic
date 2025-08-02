@@ -16,8 +16,8 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>ThunderBreathing</damageDef>
-      <damageAmountBase>1</damageAmountBase>
+      <damageDef>Swift_Strike</damageDef>
+      <damageAmountBase>5</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>

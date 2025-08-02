@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <StatDef_GeneDependent>
+  <StatDef>
     <defName>BloodDemonArts_RegenTicks</defName>
     <label>blood demon regeneration interval</label>
     <description>Ticks between regeneration pulses.</description>
     <category>BasicsPawn</category>
     <defaultBaseValue>30</defaultBaseValue>
     <minValue>1</minValue>
-    <requiredGenes>
-      <li>BloodDemonArt</li>
-    </requiredGenes>
-  </StatDef_GeneDependent>
+    <showOnDefaultValue>false</showOnDefaultValue>
+  </StatDef>
 </Defs>

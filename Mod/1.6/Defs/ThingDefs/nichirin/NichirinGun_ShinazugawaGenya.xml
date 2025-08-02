@@ -10,7 +10,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <uiIconScale>1.4</uiIconScale>
-    <soundInteract>Interact_Revolver</soundInteract>
+    <soundInteract>Interact_Shotgun</soundInteract>
     <statBases>
       <WorkToMake>4000</WorkToMake>
       <Mass>1.4</Mass>
@@ -22,18 +22,20 @@
     </statBases>
     <weaponTags>
       <li>SimpleGun</li>
-      <li>Revolver</li>
+      <li>Gun</li>
     </weaponTags>
-    <weaponClasses>
-      <li>RangedLight</li>
-    </weaponClasses>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
     <costList>
-      <Steel>30</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Scarlet_Crimson_Iron_Sand>20</Scarlet_Crimson_Iron_Sand>
+      <Scarlet_Ore>20</Scarlet_Ore>
     </costList>
+    <costStuffCount>100</costStuffCount>
     <recipeMaker>
       <skillRequirements>
-        <Crafting>3</Crafting>
+        <Crafting>10</Crafting>
       </skillRequirements>
       <displayPriority>400</displayPriority>
     </recipeMaker>
@@ -44,7 +46,7 @@
         <defaultProjectile>NichirinBullet</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>25.9</range>
-        <soundCast>Shot_Revolver</soundCast>
+        <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>

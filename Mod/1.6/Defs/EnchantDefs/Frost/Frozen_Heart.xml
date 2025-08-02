@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Glacial_Slice</damageType>
+        <damageType>AA_Freezing</damageType>
         <damageValue>10</damageValue>
       </li>
     </comps>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DamageDef>
-    <defName>Glacial_Slice</defName>
-    <label>Glacial Slice</label>
+    <defName>AA_Freezing</defName>
+    <label>Freezing</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was frozen solid by Glacial Slices."</deathMessage>
-    <hediff>Frostbite_Wound</hediff>
-    <hediffSkin>Frostbite_Wound</hediffSkin>
+    <deathMessage>{0} froze to death.</deathMessage>
+    <hediff>AA_Frozen</hediff>
+    <hediffSkin>AA_Frozen</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <impactSoundType>Slice</impactSoundType>
     <armorCategory>Sharp</armorCategory>
@@ -15,10 +15,10 @@
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
-    <defName>Frostbite_Wound</defName>
-    <label>Chilled Laceration</label>
-    <labelNoun>a chilled wound</labelNoun>
-    <description>A wound inflicted with an icy blade, leaving frostbitten tissue.</description>
+    <defName>AA_Frozen</defName>
+    <label>Frozen</label>
+    <labelNoun>a frozen condition</labelNoun>
+    <description>After being struck by freezing attacks, the pawn's body temperature has dropped dangerously low. Their movements are sluggish and they begin to freeze.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <severityPerDayTended>-0.3</severityPerDayTended>

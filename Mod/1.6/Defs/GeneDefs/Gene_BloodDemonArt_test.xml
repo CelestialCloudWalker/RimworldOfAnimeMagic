@@ -10,7 +10,7 @@
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
 
     <TalentTrees>
-      <li>DemonTalentTree</li>
+      <li>BloodDemonArtStyleTree</li>
     </TalentTrees>
 
     <experienceFormula>Basic_LinearXP</experienceFormula>

@@ -7,10 +7,8 @@
     <description>A gene with talent tree mechanics.</description>
     <iconPath>UI/Icons/Genes/breathing_potential</iconPath>
     <TalentTrees>
-      <li>Test</li>
+      <li>BreathingPotentialTreee3</li>
     </TalentTrees>
-
-
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>
       <experienceTypes>

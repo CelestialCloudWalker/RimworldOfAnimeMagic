@@ -4,7 +4,7 @@
     <defName>Fang_Rend_Technique</defName>
     <label>Fang Rend Technique</label>
     <description>A technique that allows a Beast Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Beast_Breathing_Aura</enchantHediff>
+    <enchantHediff>Primal_Aura</enchantHediff>
     <resourceGene>Gene_BeastBreath</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>

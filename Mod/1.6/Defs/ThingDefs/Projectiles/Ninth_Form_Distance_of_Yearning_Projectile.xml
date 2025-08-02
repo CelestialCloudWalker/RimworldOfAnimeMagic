@@ -16,8 +16,8 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>HeartStrike</damageDef>
-      <damageAmountBase>1</damageAmountBase> 
+      <damageDef>Passionate_Strike</damageDef>
+      <damageAmountBase>1</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>

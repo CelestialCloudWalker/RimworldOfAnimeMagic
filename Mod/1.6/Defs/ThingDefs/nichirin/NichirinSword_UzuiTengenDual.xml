@@ -18,7 +18,7 @@
       <Steel>1000</Steel>
       <Plasteel>50</Plasteel>
     </costList>
-    <techLevel>Spacer</techLevel>
+    <techLevel>Medieval</techLevel>
 
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>

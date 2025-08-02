@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <StatDef_GeneDependent>
+  <StatDef>
     <defName>WindBreath_RegenAmount</defName>
     <label>Wind Breath Regen Amount Per Regen Tick</label>
     <category>PawnMisc</category>
     <description>Rate of Wind Breath regeneration per tick.</description>
-    <defaultBaseValue>.5</defaultBaseValue>
+    <defaultBaseValue>0.5</defaultBaseValue>
     <minValue>0</minValue>
     <toStringStyle>PercentOne</toStringStyle>
-    <requiredGenes>
-      <li>Gene_WindBreath</li>
-    </requiredGenes>
-  </StatDef_GeneDependent>
+    <showOnDefaultValue>false</showOnDefaultValue>
+  </StatDef>
 </Defs>

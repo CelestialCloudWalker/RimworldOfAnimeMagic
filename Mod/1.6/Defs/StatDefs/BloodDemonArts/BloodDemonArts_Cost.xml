@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <StatDef_GeneDependent>
+  <StatDef>
     <defName>BloodDemonArts_Cost</defName>
     <label>blood demon arts cost</label>
     <description>Resource cost for blood demon arts abilities.</description>
     <category>BasicsPawn</category>
     <defaultBaseValue>10</defaultBaseValue>
     <minValue>0</minValue>
-    <requiredGenes>
-      <li>BloodDemonArt</li>
-    </requiredGenes>
-  </StatDef_GeneDependent>
+    <showOnDefaultValue>false</showOnDefaultValue>
+  </StatDef>
 </Defs>

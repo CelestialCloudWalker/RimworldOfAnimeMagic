@@ -16,7 +16,7 @@
     </injuryProps>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Water_Slash</damageType>
+        <damageType>Water_Pressure</damageType>
         <damageValue>10</damageValue>
       </li>
     </comps>

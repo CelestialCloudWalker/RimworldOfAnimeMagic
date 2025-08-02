@@ -9,6 +9,7 @@
     <resourceLabel>Wind Breath</resourceLabel>
     <resourceDescription>Current stored Breath, infused with the force of razor-sharp winds. This energy powers devastating wind-based abilities that slice through enemies with precision and speed.</resourceDescription>
     <TalentTrees>
+      <li>Wind_BreathingStyleBlankTree</li>
     </TalentTrees>
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>

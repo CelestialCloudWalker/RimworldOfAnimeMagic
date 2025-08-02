@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <StatDef_GeneDependent>
+  <StatDef>
     <defName>FlameBreath_Cost</defName>
     <label>Flame Breath Cost Multiplier</label>
     <category>PawnMisc</category>
@@ -9,9 +9,7 @@
     <minValue>0</minValue>
     <maxValue>2</maxValue>
     <toStringStyle>PercentOne</toStringStyle>
-    <requiredGenes>
-      <li>Gene_FlameBreath</li>
-    </requiredGenes>
-  </StatDef_GeneDependent>
+    <showOnDefaultValue>false</showOnDefaultValue>
+  </StatDef>
 
 </Defs>

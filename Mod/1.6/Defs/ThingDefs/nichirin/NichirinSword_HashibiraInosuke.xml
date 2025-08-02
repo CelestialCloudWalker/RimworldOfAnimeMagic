@@ -11,14 +11,16 @@
       <drawSize>1.2</drawSize>
     </graphicData>
     <drawerType>MapMeshAndRealTime</drawerType>
-    <recipeMaker>
-    </recipeMaker>
     <equipmentType>Primary</equipmentType>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
     <costList>
-      <Steel>1000</Steel>
-      <Plasteel>50</Plasteel>
+      <Scarlet_Crimson_Iron_Sand>20</Scarlet_Crimson_Iron_Sand>
+      <Scarlet_Ore>20</Scarlet_Ore>
     </costList>
-    <techLevel>Spacer</techLevel>
+    <costStuffCount>100</costStuffCount>
+    <techLevel>Medieval</techLevel>
 
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
