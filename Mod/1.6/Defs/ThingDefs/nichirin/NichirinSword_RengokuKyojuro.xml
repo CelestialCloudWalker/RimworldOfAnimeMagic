@@ -54,14 +54,6 @@
         <cooldownTime>1.1</cooldownTime>
       </li>
     </tools>
-    <comps>
-      <li Class="AnimeArsenal.CompProperties_DemonSlayerWeapon">
-        <breathingStyleGenes>
-          <li>Gene_FlameBreath</li>
-        </breathingStyleGenes>
-        <randomGene>true</randomGene>
-      </li>
-    </comps>
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>

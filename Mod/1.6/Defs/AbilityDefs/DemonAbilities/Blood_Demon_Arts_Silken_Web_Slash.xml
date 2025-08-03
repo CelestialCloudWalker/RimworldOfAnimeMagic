@@ -7,7 +7,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_SilkenWebSlash_Group</groupDef>
     <description>Launches the target away, then slashes them with demonic silk threads.</description>
-    <iconPath>UI/Icons/Gene_Cleave</iconPath>
+    <iconPath>UI/Abilities/DemonAbilityWeb</iconPath>
     <displayOrder>100</displayOrder>
     <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
     <warmupStartSound>Bloodfeed_Cast</warmupStartSound>

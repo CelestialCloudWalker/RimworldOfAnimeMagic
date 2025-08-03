@@ -7,7 +7,7 @@
     <groupDef>ForestsBreathing_FirstForm_Group</groupDef>
     <description>The user channels their Breathing technique into their weapon.</description>
     <targetRequired>false</targetRequired>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/AbilityEmbu</iconPath>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>-1</range>

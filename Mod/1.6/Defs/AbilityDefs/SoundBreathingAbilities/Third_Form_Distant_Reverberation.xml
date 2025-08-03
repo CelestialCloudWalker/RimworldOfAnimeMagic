@@ -6,7 +6,7 @@
     <category>SoundBreathing_Ability_Catergory</category>
     <groupDef>SoundBreathing_ThirdForm_Group</groupDef>
     <description>The user delivers A diagonal slash with its sword.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/AbilityProjectile</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>

@@ -17,6 +17,7 @@
     <label>Soaked</label>
     <labelNoun>a soaked condition</labelNoun>
     <description>After being struck by high-pressure water, the pawn is soaked. Their body is heavy, slowed, and vulnerable to follow-up attacks.</description>
+    <tendable>true</tendable>
     <stages>
       <li>
         <capMods>

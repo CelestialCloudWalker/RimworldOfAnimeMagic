@@ -6,7 +6,7 @@
     <category>ThunderBreathing_Ability_Catergory</category>
     <groupDef>ThunderBreathing_TwelfthForm_Group</groupDef>
     <description>A instinctive counter that deflects incoming projectiles.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

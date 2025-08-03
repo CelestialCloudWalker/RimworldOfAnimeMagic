@@ -6,6 +6,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_ThunderousWrath_Group</groupDef>
     <description>Summons a powerful lightning strike at the target location.</description>
+    <iconPath>UI/Abilities/LightingAbilityIcon</iconPath>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <drawAimPie>true</drawAimPie>

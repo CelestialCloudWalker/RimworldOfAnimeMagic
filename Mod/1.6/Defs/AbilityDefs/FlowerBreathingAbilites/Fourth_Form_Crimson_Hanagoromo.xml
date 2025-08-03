@@ -6,7 +6,7 @@
     <category>FlowerBreathing_Ability_Catergory</category>
     <groupDef>FlowerBreathing_FourthForm_Group</groupDef>
     <description>The user delivers A diagonal slash with its sword.</description>
-    <iconPath>UI/Icons/FlameSlice</iconPath>
+    <iconPath>UI/Abilities/AbilityProjectile</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>

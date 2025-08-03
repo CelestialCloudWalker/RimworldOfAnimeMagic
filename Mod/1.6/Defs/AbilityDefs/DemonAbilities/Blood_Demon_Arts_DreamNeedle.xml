@@ -6,7 +6,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_DreamNeedle_Group</groupDef>
     <description>Causes the target to fall asleep instantly.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DemonSleepAbilitySleep</iconPath>
     <cooldownTicksRange>100</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

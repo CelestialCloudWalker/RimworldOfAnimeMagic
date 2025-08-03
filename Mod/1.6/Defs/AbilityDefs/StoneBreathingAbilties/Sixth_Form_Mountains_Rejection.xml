@@ -6,7 +6,7 @@
     <category>StoneBreathing_Ability_Catergory</category>
     <groupDef>StoneBreathing_SixthForm_Group</groupDef>
     <description>A instinctive counter that deflects incoming projectiles.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

@@ -6,7 +6,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>Blood_Demon_Art_Groundlash_Tentacles_Group</groupDef>
     <description>Demon Tenicles come out and launch targets in the area.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DemonAbilityWhip</iconPath>
     <cooldownTicksRange>300</cooldownTicksRange>
     <aiCanUse>false</aiCanUse>
     <targetRequired>true</targetRequired>

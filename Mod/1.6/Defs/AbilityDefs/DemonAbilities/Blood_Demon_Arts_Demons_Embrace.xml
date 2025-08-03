@@ -6,7 +6,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_Demons_Embrace_Group</groupDef>
     <description>Turn a pawn into a Demon work slave, granting them the power of Blood Demon Art.</description>
-    <iconPath>UI/Abilities/ShapeFlesh</iconPath>
+    <iconPath>UI/Abilities/DemonTransformAbility</iconPath>
     <jobDef>CastAbilityOnThing</jobDef>
     <category>BloodDemonArts</category>
     <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>

@@ -7,7 +7,7 @@
     <handlerClass>Talented.ActiveTreeHandler</handlerClass>
     <skin>DefaultTreeSkin</skin>
     <nodes>
-      <li>Node_1754098187321_7107</li>
+      <li>Node_1754181235717_2712</li>
     </nodes>
     <availablePaths>
       <li>
@@ -286,7 +286,7 @@
   </Talented.TalentTreeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_7107</defName>
+    <defName>Node_1754181235717_2712</defName>
     <label>Mizunoto</label>
     <style>DefaultNodeStyle</style>
     <position>(165,286)</position>
@@ -296,60 +296,72 @@
     </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_310</li>
+      <li>Node_1754181235717_7806</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_310</defName>
+    <defName>Node_1754181235717_7806</defName>
     <label>Mizunoe</label>
     <style>DefaultNodeStyle</style>
     <position>(213,284)</position>
     <type>Normal</type>
+    <upgrades>
+      <li>Weight_Training_Talent6</li>
+    </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_1556</li>
+      <li>Node_1754181235717_6907</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_1556</defName>
+    <defName>Node_1754181235717_6907</defName>
     <label>Kanoto</label>
     <style>DefaultNodeStyle</style>
     <position>(266,285)</position>
     <type>Normal</type>
+    <upgrades>
+      <li>Swift_Attacks_Talent6</li>
+    </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_7699</li>
+      <li>Node_1754181235717_9861</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_7699</defName>
+    <defName>Node_1754181235717_9861</defName>
     <label>Kanoe</label>
     <style>DefaultNodeStyle</style>
     <position>(329,284)</position>
     <type>Normal</type>
+    <upgrades>
+      <li>Enhanced_Strikes_Talent6</li>
+    </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_5147</li>
+      <li>Node_1754181235717_1907</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_5147</defName>
+    <defName>Node_1754181235717_1907</defName>
     <label>Tsuchinoto</label>
     <style>DefaultNodeStyle</style>
     <position>(392,285)</position>
     <type>Normal</type>
+    <upgrades>
+      <li>Quick_Step_Talent6</li>
+    </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_7290</li>
+      <li>Node_1754181235717_6899</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_7290</defName>
+    <defName>Node_1754181235717_6899</defName>
     <label>Tsuchinoe</label>
     <style>DefaultNodeStyle</style>
     <position>(392,235)</position>
@@ -359,73 +371,85 @@
     </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_9972</li>
+      <li>Node_1754181235717_8606</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_9972</defName>
+    <defName>Node_1754181235717_8606</defName>
     <label>Hinoto</label>
     <style>DefaultNodeStyle</style>
     <position>(343,235)</position>
     <type>Normal</type>
+    <upgrades>
+      <li>Quick_Reflexes_Talent6</li>
+    </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_7606</li>
+      <li>Node_1754181235717_6419</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_7606</defName>
+    <defName>Node_1754181235717_6419</defName>
     <label>Hinoe</label>
     <style>DefaultNodeStyle</style>
     <position>(281,238)</position>
     <type>Normal</type>
+    <upgrades>
+      <li>Heavy_Impact_Talent6</li>
+    </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_9667</li>
+      <li>Node_1754181235717_4837</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_9667</defName>
+    <defName>Node_1754181235717_4837</defName>
     <label>Kinoto</label>
     <style>DefaultNodeStyle</style>
     <position>(223,237)</position>
     <type>Normal</type>
+    <upgrades>
+      <li>Steady_Aim_Talent7</li>
+    </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_7532</li>
+      <li>Node_1754181235717_4327</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_7532</defName>
+    <defName>Node_1754181235717_4327</defName>
     <label>Kinoe</label>
     <style>DefaultNodeStyle</style>
     <position>(163,238)</position>
     <type>Normal</type>
+    <upgrades>
+      <li>Prone_Mobility_Talent6</li>
+    </upgrades>
     <path>Hashira_Path</path>
     <connections>
-      <li>Node_1754098187321_5836</li>
-      <li>Node_1754098187321_2411</li>
-      <li>Node_1754098187321_4888</li>
-      <li>Node_1754098187321_8043</li>
-      <li>Node_1754098187321_5576</li>
-      <li>Node_1754098187321_4104</li>
-      <li>Node_1754098187321_5661</li>
-      <li>Node_1754098187321_6160</li>
-      <li>Node_1754098187321_2261</li>
-      <li>Node_1754098187321_4552</li>
-      <li>Node_1754098187321_2330</li>
-      <li>Node_1754098187321_4408</li>
-      <li>Node_1754098187321_3854</li>
-      <li>Node_1754098187321_8412</li>
+      <li>Node_1754181235717_1108</li>
+      <li>Node_1754181235717_5578</li>
+      <li>Node_1754181235717_7397</li>
+      <li>Node_1754181235717_3801</li>
+      <li>Node_1754181235717_5725</li>
+      <li>Node_1754181235717_9470</li>
+      <li>Node_1754181235717_5393</li>
+      <li>Node_1754181235717_9791</li>
+      <li>Node_1754181235717_5250</li>
+      <li>Node_1754181235717_4975</li>
+      <li>Node_1754181235717_2176</li>
+      <li>Node_1754181235717_5736</li>
+      <li>Node_1754181235717_5386</li>
+      <li>Node_1754181235717_8393</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_5836</defName>
+    <defName>Node_1754181235717_1108</defName>
     <label>Beast Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(162,182)</position>
@@ -437,7 +461,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_8043</defName>
+    <defName>Node_1754181235717_3801</defName>
     <label>Flower Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(163,88)</position>
@@ -449,7 +473,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_2411</defName>
+    <defName>Node_1754181235717_5578</defName>
     <label>Flame Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(162,135)</position>
@@ -461,7 +485,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_5576</defName>
+    <defName>Node_1754181235717_5725</defName>
     <label>Forest Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(216,90)</position>
@@ -473,7 +497,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_5661</defName>
+    <defName>Node_1754181235717_5393</defName>
     <label>Love Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(270,89)</position>
@@ -485,7 +509,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_2261</defName>
+    <defName>Node_1754181235717_5250</defName>
     <label>Serpent Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(329,90)</position>
@@ -497,7 +521,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_4552</defName>
+    <defName>Node_1754181235717_4975</defName>
     <label>Thunder Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(386,90)</position>
@@ -509,7 +533,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_4888</defName>
+    <defName>Node_1754181235717_7397</defName>
     <label>Frost Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(213,137)</position>
@@ -521,7 +545,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_4104</defName>
+    <defName>Node_1754181235717_9470</defName>
     <label>Insect Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(271,136)</position>
@@ -533,7 +557,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_6160</defName>
+    <defName>Node_1754181235717_9791</defName>
     <label>Mist Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(330,134)</position>
@@ -545,7 +569,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_4408</defName>
+    <defName>Node_1754181235717_5736</defName>
     <label>Sound Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(387,133)</position>
@@ -557,7 +581,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_2330</defName>
+    <defName>Node_1754181235717_2176</defName>
     <label>Stone Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(389,178)</position>
@@ -569,7 +593,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_3854</defName>
+    <defName>Node_1754181235717_5386</defName>
     <label>Water Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(217,181)</position>
@@ -581,7 +605,7 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1754098187321_8412</defName>
+    <defName>Node_1754181235717_8393</defName>
     <label>Wind Tsuguko</label>
     <style>DefaultNodeStyle</style>
     <position>(293,179)</position>

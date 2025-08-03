@@ -6,7 +6,7 @@
     <category>BeastBreathing_Ability_Catergory</category>
     <groupDef>BeastBreathing_EightFang_Group</groupDef>
     <description>The user charges towards their opponent at blinding speeds.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/AbilityDash</iconPath>
     <cooldownTicksRange>180</cooldownTicksRange>
     <targetRequired>True</targetRequired>
     <verbProperties>

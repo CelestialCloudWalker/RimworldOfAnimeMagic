@@ -6,7 +6,7 @@
     <category>BeastBreathing_Ability_Catergory</category>
     <groupDef>BeastBreathing_TwelfthFang_Group</groupDef>
     <description>The user vanishes in a blitz of dashes, automatically targeting nearby enemies with each jump.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/AbilityMultiDash</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

@@ -6,6 +6,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_BloodAcension_Group</groupDef>
     <description>Blood Enhancement that increases attack damage(WIP).</description>
+    <iconPath>UI/Abilities/DemonAbility1</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

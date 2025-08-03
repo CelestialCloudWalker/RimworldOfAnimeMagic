@@ -77,7 +77,7 @@
   </Talented.TalentDef>
 
   <Talented.TalentDef>
-    <defName>Insects_Breathing_GeneGive_Talent</defName>
+    <defName>Insect_Breathing_GeneGive_Talent</defName>
     <label>InsectBreathing</label>
     <levelRequired>5</levelRequired>
     <pointCost>2</pointCost>
@@ -7280,6 +7280,132 @@
         <statDef>BloodDemonArts_Cost</statDef>
         <value>0.95</value>
         <operation>Multiply</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Weight_Training_Talent6</defName>
+    <label>Weight_Training</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>CarryingCapacity</statDef>
+        <value>1.03</value>
+        <operation>Multiply</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Swift_Attacks_Talent6</defName>
+    <label>Swift Attacks</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>MeleeDPS</statDef>
+        <value>1.5</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Tough_Body_Talent6</defName>
+    <label>Tough_Body</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>IncomingDamageFactor</statDef>
+        <value>0.95</value>
+        <operation>Multiply</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Enhanced_Strikes_Talent6</defName>
+    <label>Enhanced_Strikes</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>MeleeDamageFactor</statDef>
+        <value>1.05</value>
+        <operation>Multiply</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Heavy_Impact_Talent6</defName>
+    <label>Heavy_Impact</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>MeleeArmorPenetration</statDef>
+        <value>0.05</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Quick_Step_Talent6</defName>
+    <label>Quick_Step</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>MoveSpeed</statDef>
+        <value>0.02</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Quick_Reflexes_Talent6</defName>
+    <label>Quick_Reflexes</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>MeleeDodgeChance</statDef>
+        <value>0.02</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Steady_Aim_Talent7</defName>
+    <label>Steady_Aim</label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>ShootingAccuracyPawn</statDef>
+        <value>0.02</value>
+        <operation>Add</operation>
+      </li>
+    </statEffects>
+  </Talented.TalentDef>
+
+  <Talented.TalentDef>
+    <defName>Prone_Mobility_Talent6</defName>
+    <label>Prone_Mobility </label>
+    <levelRequired>0</levelRequired>
+    <pointCost>1</pointCost>
+    <statEffects>
+      <li>
+        <statDef>CrawlSpeed</statDef>
+        <value>0.1</value>
+        <operation>Add</operation>
       </li>
     </statEffects>
   </Talented.TalentDef>

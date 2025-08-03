@@ -6,6 +6,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_SpiralOfTorment_Group</groupDef>
     <description>Command a random limb on the target to twist into a bloody mess.</description>
+    <iconPath>UI/Abilities/DemonAbilityTwist</iconPath>
     <comps>
       <li Class="AnimeArsenal.CompProperties_TwistEffect">
         <baseDamage>8</baseDamage>

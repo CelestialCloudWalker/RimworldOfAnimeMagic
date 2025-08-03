@@ -53,27 +53,6 @@
         <cooldownTime>1.1</cooldownTime>
       </li>
     </tools>
-    <comps>
-      <li Class="AnimeArsenal.CompProperties_DemonSlayerWeapon">
-        <breathingStyleGenes>
-          <li>Gene_WaterBreath</li>
-          <li>Gene_FlameBreath</li>
-          <li>Gene_ThunderBreath</li>
-          <li>Gene_WindBreath</li>
-          <li>Gene_StoneBreath</li>
-          <li>Gene_BeastBreath</li>
-          <li>Gene_FlowerBreath</li>
-          <li>Gene_InsectBreath</li>
-          <li>Gene_LoveBreath</li>
-          <li>Gene_SerpentBreath</li>
-          <li>Gene_SoundBreath</li>
-          <li>Gene_MistBreath</li>
-          <li>Gene_Gene_FrostBreath</li>
-          <li>Gene_ForestBreath</li>
-        </breathingStyleGenes>
-        <randomGene>true</randomGene>
-      </li>
-    </comps>
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>

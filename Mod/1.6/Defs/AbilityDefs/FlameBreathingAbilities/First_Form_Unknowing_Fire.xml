@@ -6,7 +6,7 @@
     <category>FlameBreathing_Ability_Catergory</category>
     <groupDef>FlameBreathing_FirstForm_Group</groupDef>
     <description>The user charges towards their opponent at blinding speeds.</description>
-    <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+    <iconPath>UI/Abilities/AbilityDash</iconPath>
     <aiCanUse>true</aiCanUse>
     <targetRequired>True</targetRequired>
     <verbProperties>

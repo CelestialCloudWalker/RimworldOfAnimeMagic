@@ -6,7 +6,7 @@
     <category>WaterBreathing_Ability_Catergory</category>
     <groupDef>WaterBreathing_ThirteenthForm_Group</groupDef>
     <description>A wild, instinctive counter that deflects incoming projectiles.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

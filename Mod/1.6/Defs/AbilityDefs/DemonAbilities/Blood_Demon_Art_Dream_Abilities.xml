@@ -243,7 +243,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>Blood_Demon_Arts_Abyssal_Visions_Group</groupDef>
     <description>Inflict terrifying nightmares on a sleeping target, causing psychological trauma and reducing rest quality.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DemonSleepAbilityNightmare</iconPath>
     <cooldownTicksRange>300</cooldownTicksRange>
     <displayOrder>210</displayOrder>
     <aiCanUse>true</aiCanUse>
@@ -281,7 +281,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>Blood_Demon_Arts_Dream_of_Serenity_Group</groupDef>
     <description>Grant peaceful, restorative dreams to a sleeping target, improving their mood and rest quality.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DemonSleepAbility6</iconPath>
     <cooldownTicksRange>600</cooldownTicksRange>
     <displayOrder>211</displayOrder>
     <aiCanUse>false</aiCanUse>
@@ -319,7 +319,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>Blood_Demon_Arts_Memory_Harvest_Group</groupDef>
     <description>Dive into a sleeping target's dreams to extract valuable information about their faction, skills, and background.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DemonSleepAbility4</iconPath>
     <cooldownTicksRange>1200</cooldownTicksRange>
     <displayOrder>212</displayOrder>
     <aiCanUse>true</aiCanUse>
@@ -355,7 +355,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>Blood_Demon_Arts_Memory_Manipulation_Group</groupDef>
     <description>Plant false memories and thoughts into a sleeping target's mind through dream manipulation.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DemonSleepAbility3</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <displayOrder>213</displayOrder>
     <aiCanUse>false</aiCanUse>
@@ -396,7 +396,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>Blood_Demon_Arts_Memory_Dream_Parasite_Group</groupDef>
     <description>Enter a sleeping target's dreams and steal their knowledge and skills for yourself. The skill and amount transferred is unpredictable.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DemonAbilitySkillSteal</iconPath>
     <cooldownTicksRange>2400</cooldownTicksRange>
     <displayOrder>214</displayOrder>
     <aiCanUse>false</aiCanUse>
@@ -432,7 +432,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>Blood_Demon_Arts_Memory_Harvest_Group</groupDef>
     <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DemonSleepAbility1</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <displayOrder>215</displayOrder>
     <aiCanUse>true</aiCanUse>

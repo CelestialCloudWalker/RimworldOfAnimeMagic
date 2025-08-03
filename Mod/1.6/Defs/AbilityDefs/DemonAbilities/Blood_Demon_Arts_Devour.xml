@@ -6,7 +6,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>Blood_Demon_Arts_Devour_Group</groupDef>
     <description>Devour a target to heal wounds and restore blood demon arts energy. Can target corpses or living enemies.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/DemonEatAbilityIcon</iconPath>
     <cooldownTicksRange>3600</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <hostile>true</hostile>

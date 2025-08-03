@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
   <AbilityDef>
     <defName>AbilityStealBite</defName>
     <label>ability copy bite</label>
     <description>Bite a target to copy one of their abilities. Works on any living pawn. The target keeps their original ability.</description>
-    <iconPath>UI/Abilities/AbilityStealBite</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <aiCanUse>false</aiCanUse>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>

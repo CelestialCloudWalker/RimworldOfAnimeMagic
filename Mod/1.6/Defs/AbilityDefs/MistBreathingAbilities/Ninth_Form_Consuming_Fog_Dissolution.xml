@@ -6,7 +6,7 @@
     <category>MistBreathing_Ability_Catergory</category>
     <groupDef>MistBreathing_NinthForm_Group</groupDef>
     <description>The user channels thier breathing style into their weapon.</description>
-    <iconPath>UI/Abilities/MistF1</iconPath>
+    <iconPath>UI/Abilities/AbilityEmbu</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

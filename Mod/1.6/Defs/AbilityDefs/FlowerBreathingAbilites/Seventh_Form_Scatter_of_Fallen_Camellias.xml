@@ -6,7 +6,7 @@
     <category>FlowerBreathing_Ability_Catergory</category>
     <groupDef>FlowerBreathing_SeventhForm_Group</groupDef>
     <description>The user vanishes in a blitz of dashes.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/AbilityMultiDash</iconPath>
     <cooldownTicksRange>600~600</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

@@ -6,7 +6,7 @@
     <category>FrostBreathing_Ability_Catergory</category>
     <groupDef>FrostBreathing_FourthForm_Group</groupDef>
     <description>The user releases a singular, horizontal slash aiming to decapitate their target.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/AbilityDash</iconPath>
     <cooldownTicksRange>180</cooldownTicksRange>
     <targetRequired>True</targetRequired>
     <verbProperties>

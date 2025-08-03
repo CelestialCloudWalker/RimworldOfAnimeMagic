@@ -6,7 +6,7 @@
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_ViciousRush_Group</groupDef>
     <description>Instantly teleport to a target and perform a devastating melee attack.</description>
-    <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+    <iconPath>UI/Abilities/AbilityDash</iconPath>
     <aiCanUse>true</aiCanUse>
     <targetRequired>True</targetRequired>
     <verbProperties>

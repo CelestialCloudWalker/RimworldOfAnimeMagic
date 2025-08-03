@@ -6,7 +6,7 @@
     <category>BeastBreathing_Ability_Catergory</category>
     <groupDef>BeastBreathing_SevenFang_Group</groupDef>
     <description>The user channels thier breathing style into their weapon.</description>
-    <iconPath>UI/Abilities/IgnitionEdge</iconPath>
+    <iconPath>UI/Abilities/AbilityEmbu</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

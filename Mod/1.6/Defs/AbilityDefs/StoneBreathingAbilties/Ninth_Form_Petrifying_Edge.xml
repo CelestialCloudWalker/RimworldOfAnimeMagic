@@ -6,7 +6,7 @@
     <category>StoneBreathing_Ability_Catergory</category>
     <groupDef>StoneBreathing_NinthForm_Group</groupDef>
     <description>The user channels thier breathing style into their weapon.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/AbilityEmbu</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>

@@ -7,7 +7,7 @@
     <groupDef>FrostBreathing_SecondForm_Group</groupDef>
     <description>The user channels thier breathing style into their weapon.</description>
     <targetRequired>false</targetRequired>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/AbilityEmbu</iconPath>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>-1</range>
