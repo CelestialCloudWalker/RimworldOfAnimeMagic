@@ -8,7 +8,6 @@ using UnityEngine;
 using Verse;
 using static RimWorld.RitualStage_InteractWithRole;
 
-
 namespace AnimeArsenal
 {
     public class CompProperties_Cleave : CompProperties_AbilityEffect
@@ -17,9 +16,8 @@ namespace AnimeArsenal
         public int KnockbackDistance = 5;
         public float BaseDamage = 8f;
         public int TicksBetweenCuts = 10;
-        public DamageDef DamageDef;
-        public StatDef ScaleStat;
-
+        public DamageDef DamageDef = DamageDefOf.Cut;
+        public StatDef ScaleStat = StatDefOf.MeleeDamageFactor;
         public EffecterDef CleaveDamageEffecter;
 
         public CompProperties_Cleave()
@@ -27,6 +25,7 @@ namespace AnimeArsenal
             compClass = typeof(CompAbilityEffect_Cleave);
         }
     }
+
     public class CompAbilityEffect_Cleave : CompAbilityEffect
     {
         public new CompProperties_Cleave Props => (CompProperties_Cleave)props;
@@ -45,10 +44,8 @@ namespace AnimeArsenal
             TargetPawn = pawn;
             DamagePerCut = Props.BaseDamage;
 
-            
             DamageTicker = new Ticker(Props.TicksBetweenCuts, ApplyCut, true, Props.NumberOfCuts);
 
-           
             IntVec3 launchDirection = pawn.Position - parent.pawn.Position;
             IntVec3 destination = pawn.Position + launchDirection * Props.KnockbackDistance;
             PawnFlyer pawnFlyer = PawnFlyer.MakeFlyer(CelestialDefof.AnimeArsenal_Flyer, pawn, destination, null, null);
@@ -58,7 +55,6 @@ namespace AnimeArsenal
         public override void CompTick()
         {
             base.CompTick();
-
             if (DamageTicker != null && DamageTicker.IsRunning)
             {
                 DamageTicker.Tick();
@@ -69,7 +65,7 @@ namespace AnimeArsenal
         {
             if (TargetPawn == null || TargetPawn.Dead || TargetPawn.Destroyed)
             {
-                DamageTicker.Stop();
+                DamageTicker?.Stop();
                 return;
             }
 
@@ -78,24 +74,29 @@ namespace AnimeArsenal
                 this.Props.CleaveDamageEffecter.SpawnMaintained(TargetPawn, TargetPawn.MapHeld);
             }
 
-            float actualDamage = DamagePerCut * TargetPawn.GetStatValue(Props.ScaleStat);
-            DamageInfo damageInfo = new DamageInfo(Props.DamageDef, actualDamage);
+            
+            float damageMultiplier = 1f;
+            if (Props.ScaleStat != null)
+            {
+                damageMultiplier = TargetPawn.GetStatValue(Props.ScaleStat);
+            }
+
+            float actualDamage = DamagePerCut * damageMultiplier;
+            DamageInfo damageInfo = new DamageInfo(Props.DamageDef ?? DamageDefOf.Cut, actualDamage);
             TargetPawn.TakeDamage(damageInfo);
         }
+
         public override bool AICanTargetNow(LocalTargetInfo target)
         {
-
             return true;
         }
+
         public override void PostExposeData()
         {
             base.PostExposeData();
-
             Scribe_References.Look(ref TargetPawn, "targetPawn");
             Scribe_Values.Look(ref DamagePerCut, "damagePerCut");
             Scribe_Deep.Look(ref DamageTicker, "damageTicker");
         }
-
     }
-
 }

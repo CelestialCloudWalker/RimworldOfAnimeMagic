@@ -3,17 +3,12 @@
   <HediffDef>
     <defName>Floral_Mastery</defName>
     <label>Floral Mastery</label>
-    <description>{0} feels a connection with the flowers.</description>
-    <displayWound>false</displayWound>
+    <description>Feels a connection with the flowers.</description>
     <hediffClass>HediffWithComps</hediffClass>
-    <injuryProps>
-      <painPerSeverity>0.05</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
-      <bleedRate>0.10</bleedRate>
-      <canMerge>true</canMerge>
-      <destroyedLabel>Destroyed</destroyedLabel>
-      <destroyedOutLabel>Destroyed</destroyedOutLabel>
-    </injuryProps>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
         <damageType>Blossoming_Slash</damageType>

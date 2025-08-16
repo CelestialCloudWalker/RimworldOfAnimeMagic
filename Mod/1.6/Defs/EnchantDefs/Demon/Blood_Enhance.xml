@@ -3,7 +3,7 @@
   <HediffDef>
     <defName>Blood_Enhance</defName>
     <label>Blood Enhance</label>
-    <description>{0}'s blood begins to feel empowered.</description>
+    <description>Blood begins to feel empowered.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <injuryProps>

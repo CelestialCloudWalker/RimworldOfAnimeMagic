@@ -6,7 +6,7 @@
     <category>SlayerCorp_Ability_Catergory</category>
     <groupDef>SlayerCorp_RetreatDash_Group</groupDef>
     <description>Quickly dash away from the target to a safe position.</description>
-    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <iconPath>UI/Abilities/AbilityRetreat</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>

@@ -105,6 +105,7 @@
     <Compile Include="Misc\PawnRenderNodeWorker_WeaponOverlay.cs" />
     <Compile Include="Misc\Projectile_SleepEffect _ScalingStatDamageProjectile.cs" />
     <Compile Include="Misc\RegenerationExtension.cs" />
+    <Compile Include="QuestNode_GetGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGeneDef.cs" />
     <Compile Include="CelestialPatchApply.cs" />

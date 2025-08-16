@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
-    <defName>AA_TestGene</defName>
-    <label>TestGene</label>
+    <defName>AA_ComingSoon</defName>
+    <label>ComingSoon</label>
     <resourceName>Magic Power</resourceName>
     <description>Carriers of this gene can harness MagicPower, storing it within their bodies for various supernatural abilities.</description>
-    <iconPath>UI/Icons/Genes/Gene_AstralPulse</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <resourceLabel>Astral Energy</resourceLabel>
     <resourceDescription>Current stored astral energy. This energy can be used to power various supernatural abilities.</resourceDescription>
     <maxStat>AstralPulse</maxStat>

@@ -103,7 +103,7 @@ namespace AnimeArsenal
         {
             if (!extension.consumeResourcesOnRegeneration) return true;
 
-            var resourceGene = pawn.genes?.GetGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt", false)) as Gene_BasicResource;
+            var resourceGene = GetResourceGene(pawn);
             return resourceGene?.Value >= (cost + extension.minimumResourcesRequired);
         }
 
@@ -111,13 +111,23 @@ namespace AnimeArsenal
         {
             if (!extension.consumeResourcesOnRegeneration) return true;
 
-            var resourceGene = pawn.genes?.GetGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt", false)) as Gene_BasicResource;
+            var resourceGene = GetResourceGene(pawn);
             if (resourceGene != null && resourceGene.Value >= (cost + extension.minimumResourcesRequired))
             {
                 resourceGene.Consume(cost);
                 return true;
             }
             return false;
+        }
+
+        private static Gene_BasicResource GetResourceGene(Pawn pawn)
+        {
+            if (pawn.genes == null) return null;
+
+            // Find the first gene that has RegenerationExtension and is a BasicResource gene
+            return pawn.genes.GenesListForReading
+                .FirstOrDefault(g => g.Active && g.def.GetModExtension<RegenerationExtension>() != null)
+                as Gene_BasicResource;
         }
     }
 
@@ -131,16 +141,17 @@ namespace AnimeArsenal
         {
             base.MapComponentTick();
 
-            var extension = DefDatabase<GeneDef>.GetNamed("BloodDemonArt", false)?.GetModExtension<RegenerationExtension>();
-            if (extension == null || Find.TickManager.TicksGame % extension.ticksBetweenHealing != 0) return;
-
             var pawnsToProcess = map.mapPawns.AllPawnsSpawned
-                .Where(p => HasBloodDemonArt(p) && !p.Dead && p?.Destroyed != true)
+                .Where(p => HasRegenerationGene(p) && !p.Dead && p?.Destroyed != true)
                 .ToList();
 
             foreach (var pawn in pawnsToProcess)
             {
-                ProcessPawn(pawn, extension);
+                var extension = GetRegenerationExtension(pawn);
+                if (extension != null && Find.TickManager.TicksGame % extension.ticksBetweenHealing == 0)
+                {
+                    ProcessPawn(pawn, extension);
+                }
             }
         }
 
@@ -157,9 +168,22 @@ namespace AnimeArsenal
             EnsurePawnIsUpright(pawn);
         }
 
-        private bool HasBloodDemonArt(Pawn pawn)
+        private bool HasRegenerationGene(Pawn pawn)
         {
-            return pawn.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt", false)) ?? false;
+            if (pawn.genes == null) return false;
+
+            return pawn.genes.GenesListForReading.Any(gene =>
+                gene.Active && gene.def.GetModExtension<RegenerationExtension>() != null);
+        }
+
+        private RegenerationExtension GetRegenerationExtension(Pawn pawn)
+        {
+            if (pawn.genes == null) return null;
+
+            var gene = pawn.genes.GenesListForReading.FirstOrDefault(g =>
+                g.Active && g.def.GetModExtension<RegenerationExtension>() != null);
+
+            return gene?.def.GetModExtension<RegenerationExtension>();
         }
 
         private bool HasFatalDamage(Pawn pawn, RegenerationExtension extension)
@@ -243,7 +267,7 @@ namespace AnimeArsenal
                 return true;
             }
 
-            return !RegenerationHelper.IsOrgan(part); 
+            return !RegenerationHelper.IsOrgan(part);
         }
 
         private void RegeneratePart(Pawn pawn, BodyPartRecord part, RegenerationExtension extension, string moteText, Color moteColor)

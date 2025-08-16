@@ -6,6 +6,12 @@
     <description>The toxic breathing floods the user's system, causing gradual poisoning.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
+
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>15000</disappearsAfterTicks>
+      </li>
+    </comps>
     <injuryProps>
       <painPerSeverity>0.02</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00015</averagePainPerSeverityPermanent>

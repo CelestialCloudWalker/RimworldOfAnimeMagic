@@ -37,5 +37,19 @@
     </root>
   </ThingSetMakerDef>
 
-
+  <ThingSetMakerDef>
+    <defName>DemonSlayerRewards</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+            <li>Apparel_Duster</li>
+            <li>MeleeWeapon_Knife</li>
+            <li>Jade</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
 </Defs>

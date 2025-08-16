@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AnimeArsenal.BloodDemonArtsGeneDef ParentName="AA_BloodDemonArtsGene">
+  <AnimeArsenal.BloodDemonArtsGeneDef ParentName="AA_BloodDemonArtsGene" Name="BloodDemonArt">
     <defName>BloodDemonArt</defName>
     <label>Blood Demon Art</label>
     <resourceName>Blood Art</resourceName>
@@ -103,9 +103,10 @@
 
       <li Class="AnimeArsenal.SunlightDamageExtension">
         <damagePerTick>1</damagePerTick>
-        <damageThresholdBeforeDeath>40</damageThresholdBeforeDeath>
+        <damageThresholdBeforeDeath>30</damageThresholdBeforeDeath>
         <ticksBetweenDamage>100</ticksBetweenDamage>
         <ticksToResetDamage>2500</ticksToResetDamage>
+        <minimumCoverageForProtection>0.50</minimumCoverageForProtection>
       </li>
 
       <li Class="AnimeArsenal.BodyDisappearExtension">

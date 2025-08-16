@@ -12,5 +12,6 @@
     </resourceGizmoThresholds>
     <displayCategory>BreathingTechnique</displayCategory>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <scaleWithBreathing>true</scaleWithBreathing>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 </Defs>

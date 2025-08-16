@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.BloodDemonArtsGeneDef ParentName="BloodDemonArt">
+    <defName>BloodDemonArt_test</defName>
+    <label>Blood Demon Art test</label>
+    <resourceName>Blood Art</resourceName>
+    <description>Carriers of this gene channel Blood Art.</description>
+    <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+    <resourceLabel>Blood Art</resourceLabel>
+    <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
+  </AnimeArsenal.BloodDemonArtsGeneDef>
+</Defs>

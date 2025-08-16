@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HistoryEventDef>
+    <defName>AnimeArsenal_GeneTrainingCompleted</defName>
+    <label>Mount Sagiri Final Selection</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>AnimeArsenal_FinalSelectionFailed</defName>
+    <label>Mount Sagiri Final Selection Failed</label>
+  </HistoryEventDef>
+
+  <QuestScriptDef>
+    <defName>AnimeArsenal_MountSagiriFinalSelection</defName>
+    <rootSelectionWeight>0.3</rootSelectionWeight>
+    <rootMinPoints>1500</rootMinPoints>
+    <rootEarliestDay>20</rootEarliestDay>
+    <minRefireDays>120</minRefireDays>
+    <expireDaysRange>7~14</expireDaysRange>
+    <epic>true</epic>
+    <isRootSpecial>true</isRootSpecial>
+    <questAvailableLetterLabel>Final Selection - Mount Sagiri</questAvailableLetterLabel>
+    <questAvailableLetterDef>PositiveEvent</questAvailableLetterDef>
+    <successHistoryEvent>AnimeArsenal_GeneTrainingCompleted</successHistoryEvent>
+    <failedOrExpiredHistoryEvent>AnimeArsenal_FinalSelectionFailed</failedOrExpiredHistoryEvent>
+
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Final Selection</li>
+        <li>questName->Mount Sagiri Trial</li>
+        <li>questName->A chance to fight back</li>
+        <li>questName->Seven Days of Survival</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->A former Demon Slayer Corp member has appeared at your settlement. They offer to escort three of your colonists to Mount Sagiri for the Final Selection - a seven-day survival trial where participants fight captured demons in a wisteria-enclosed mountain.\n\nOnly those who survive all seven nights and claim their ore at dawn will join the Demon Slayer Corps. Your colonist may develop enhanced breathing techniques and supernatural reflexes... if they can endure.\n\nThe retired slayer's scarred face speaks volumes: "Many climb Mount Sagiri. Most feed the demons. The worthy few descend forever changed."\n\nSurvival depends on combat skills, physical resilience, and sheer determination. Skilled fighters and tough individuals have better odds, while the frail face greater peril.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+
+        <li Class="QuestNode_GetPawn">
+          <storeAs>asker</storeAs>
+          <mustBeFactionLeader>true</mustBeFactionLeader>
+          <mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+          <factionMustBePermanent>true</factionMustBePermanent>
+          <excludeFactionDefs>
+            <li>AA_Twelve_Demon_Moons</li>
+          </excludeFactionDefs>
+        </li>
+
+        <li Class="QuestNode_Set">
+          <name>trainingDays</name>
+          <value>7</value>
+        </li>
+
+        <li Class="QuestNode_GetMap">
+          <storeAs>map</storeAs>
+          <preferMapWithMinFreeColonists>1</preferMapWithMinFreeColonists>
+        </li>
+
+        <li Class="AnimeArsenal.QuestNode_GetGene">
+          <genes>
+            <li>
+              <geneDef>Gene_BreathingPotential</geneDef>
+              <weight>10</weight>
+            </li>
+          </genes>
+          <survivalSettings>
+            <baseSurvivalChance>0.6</baseSurvivalChance>
+            <minimumSurvivalChance>0.1</minimumSurvivalChance>
+            <maximumSurvivalChance>0.9</maximumSurvivalChance>
+
+            <skillBonuses>
+              <li>
+                <skillDef>Melee</skillDef>
+                <minimumLevel>8</minimumLevel>
+                <bonus>0.2</bonus>
+              </li>
+              <li>
+                <skillDef>Shooting</skillDef>
+                <minimumLevel>6</minimumLevel>
+                <bonus>0.15</bonus>
+              </li>
+              <li>
+                <skillDef>Medicine</skillDef>
+                <minimumLevel>4</minimumLevel>
+                <bonus>0.1</bonus>
+              </li>
+              <li>
+                <skillDef>Animals</skillDef>
+                <minimumLevel>6</minimumLevel>
+                <bonus>0.05</bonus>
+              </li>
+              <li>
+                <skillDef>Intellectual</skillDef>
+                <minimumLevel>10</minimumLevel>
+                <bonus>0.1</bonus>
+              </li>
+            </skillBonuses>
+
+            <traitModifiers>
+              <li>
+                <traitDef>Tough</traitDef>
+                <modifier>0.25</modifier>
+              </li>
+              <li>
+                <traitDef>Brawler</traitDef>
+                <modifier>0.15</modifier>
+              </li>
+              <li>
+                <traitDef>ShootingAccuracy</traitDef>
+                <modifier>0.1</modifier>
+              </li>
+              <li>
+                <traitDef>FastLearner</traitDef>
+                <modifier>0.05</modifier>
+              </li>
+              <li>
+                <traitDef>SlowLearner</traitDef>
+                <modifier>-0.1</modifier>
+              </li>
+              <li>
+                <traitDef>Wimp</traitDef>
+                <modifier>-0.3</modifier>
+              </li>
+            </traitModifiers>
+          </survivalSettings>
+        </li>
+
+        <li Class="QuestNode_ShuttleDelay">
+          <delayTicks>3500</delayTicks>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_SubScript">
+                <def>Util_TransportShip_Pickup</def>
+                <parms>
+                  <leaveDelayTicks>60000</leaveDelayTicks>
+                  <leaveImmediatelyWhenSatisfied>true</leaveImmediatelyWhenSatisfied>
+                  <acceptColonists>true</acceptColonists>
+                  <acceptChildren>false</acceptChildren>
+                  <onlyAcceptColonists>true</onlyAcceptColonists>
+                  <onlyAcceptHealthy>true</onlyAcceptHealthy>
+                  <requireColonistCount>3</requireColonistCount>
+                </parms>
+              </li>
+
+              <li Class="QuestNode_Letter">
+                <label>Demon Slayer Corps Guide Arrived</label>
+                <text>A veteran of the Demon Slayer Corps has arrived to escort three of your colonists to Mount Sagiri. Their haori bears the Corps' symbol, and their eyes hold the weight of countless battles.\n\n"Seven nights among demons. Send exactly three candidates. Those who survive join our ranks. Those who fall become demon feast."\n\nChoose wisely - combat skills and physical toughness improve survival odds, while frailty makes the trial far more perilous. The Final Selection requires exactly three participants.</text>
+                <lookTargets>$pickupShipThing</lookTargets>
+              </li>
+            </nodes>
+          </node>
+        </li>
+
+        <li Class="QuestNode_Signal">
+          <inSignal>pickupShipThing.SentSatisfied</inSignal>
+          <node Class="QuestNode_LendColonistsToFaction">
+            <shuttle>$pickupShipThing</shuttle>
+            <lendColonistsToFactionOf>$asker</lendColonistsToFactionOf>
+            <returnLentColonistsInTicks>$($trainingDays*60000)</returnLentColonistsInTicks>
+            <outSignalComplete>ColonistsReturned</outSignalComplete>
+            <outSignalColonistsDied>ColonistsDied</outSignalColonistsDied>
+          </node>
+        </li>
+
+        <li Class="QuestNode_Signal">
+          <inSignal>ColonistsReturned</inSignal>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label>Final Selection Results</label>
+                <text>The transport has returned from Mount Sagiri. The survival rolls have been made, and fates have been decided...</text>
+                <letterDef>NeutralEvent</letterDef>
+                <useColonistsFromCaravanArg>true</useColonistsFromCaravanArg>
+              </li>
+
+              <li Class="QuestNode_GenerateThingSet">
+                <thingSetMaker>DemonSlayerRewards</thingSetMaker>
+                <totalMarketValueRange>800~1200</totalMarketValueRange>
+                <storeAs>finalSelectionRewards</storeAs>
+                <qualityGenerator>Reward</qualityGenerator>
+              </li>
+
+              <li Class="QuestNode_DropPods">
+                <contents>$finalSelectionRewards</contents>
+                <customLetterLabel>Final Selection Rewards</customLetterLabel>
+                <customLetterText>Rewards from your successful Final Selection have arrived via transport pod.</customLetterText>
+              </li>
+
+              <li Class="QuestNode_End">
+                <outcome>Success</outcome>
+              </li>
+            </nodes>
+          </node>
+        </li>
+
+        <li Class="QuestNode_Signal">
+          <inSignal>ColonistsDied</inSignal>
+          <node Class="QuestNode_Letter">
+            <label>Final Selection - Total Failure</label>
+            <text>No one has returned from Mount Sagiri. The demons have claimed another group of hopefuls. Their sacrifice will not be forgotten, but the Corps gains no new members this day.</text>
+            <letterDef>Death</letterDef>
+          </node>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+</Defs>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <AbilityDef ParentName="AbilityTouchBase">
     <defName>Blood_Demon_Silken_Web_Slash</defName>
     <label>Blood Demon Arts: Silken Web Slash</label>
@@ -32,6 +31,7 @@
         <BaseDamage>5</BaseDamage>
         <TicksBetweenCuts>15</TicksBetweenCuts>
         <DamageDef>Cut</DamageDef>
+        <ScaleStat>MeleeDamageFactor</ScaleStat>
         <CleaveDamageEffecter>AA_CleaveDamageEffect</CleaveDamageEffecter>
       </li>
       <li Class="AnimeArsenal.CompProperties_ResourceCost">

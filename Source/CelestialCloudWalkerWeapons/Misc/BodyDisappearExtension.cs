@@ -20,14 +20,16 @@ namespace AnimeArsenal
         [HarmonyPostfix]
         public static void Postfix(Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit)
         {
-            if (!HasBloodDemonGene(__instance)) return;
-
+            if (!HasBodyDisappearGene(__instance)) return;
             BodyDisappearUtility.RegisterPawnForDisappearance(__instance);
         }
 
-        private static bool HasBloodDemonGene(Pawn pawn)
+        private static bool HasBodyDisappearGene(Pawn pawn)
         {
-            return pawn.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) ?? false;
+            if (pawn.genes == null) return false;
+
+            return pawn.genes.GenesListForReading.Any(gene =>
+                gene.Active && gene.def.GetModExtension<BodyDisappearExtension>() != null);
         }
     }
 
@@ -44,14 +46,10 @@ namespace AnimeArsenal
         public static void ProcessCorpseDisappearance(Corpse corpse)
         {
             if (corpse?.InnerPawn == null) return;
-
             if (!pawnsToDisappear.Contains(corpse.InnerPawn.thingIDNumber)) return;
-
             pawnsToDisappear.Remove(corpse.InnerPawn.thingIDNumber);
 
-            var extension = DefDatabase<GeneDef>.GetNamed("BloodDemonArt")
-                .GetModExtension<BodyDisappearExtension>();
-
+            var extension = GetBodyDisappearExtension(corpse.InnerPawn);
             if (extension == null) return;
 
             Map map = corpse.Map;
@@ -66,6 +64,7 @@ namespace AnimeArsenal
                     disappearEffecter.Trigger(new TargetInfo(position, map), new TargetInfo(position, map));
                     disappearEffecter.Cleanup();
                 }
+
                 if (!string.IsNullOrEmpty(extension.disappearMessage))
                 {
                     MoteMaker.ThrowText(corpse.DrawPos, map, extension.disappearMessage, 3f);
@@ -78,6 +77,16 @@ namespace AnimeArsenal
             }
 
             corpse.Destroy();
+        }
+
+        private static BodyDisappearExtension GetBodyDisappearExtension(Pawn pawn)
+        {
+            if (pawn.genes == null) return null;
+
+            var gene = pawn.genes.GenesListForReading.FirstOrDefault(g =>
+                g.Active && g.def.GetModExtension<BodyDisappearExtension>() != null);
+
+            return gene?.def.GetModExtension<BodyDisappearExtension>();
         }
     }
 

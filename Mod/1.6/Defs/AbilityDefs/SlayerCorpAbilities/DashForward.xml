@@ -6,7 +6,7 @@
     <category>SlayerCorp_Ability_Catergory</category>
     <groupDef>SlayerCorp_DashForward_Group</groupDef>
     <description>Quickly dash forward toward the target to close the distance.</description>
-    <iconPath>UI/Icons/AbilityDashforward</iconPath>
+    <iconPath>UI/Abilities/AbilityDashforward</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>

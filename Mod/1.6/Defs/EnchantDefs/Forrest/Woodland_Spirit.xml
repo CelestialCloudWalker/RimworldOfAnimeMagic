@@ -3,7 +3,7 @@
   <HediffDef>
     <defName>Woodland_Spirit</defName>
     <label>Woodland Spirit </label>
-    <description>{0} fills their soul with forest energy, coating strikes with thorns and barbs.</description>
+    <description>Spirit begins to fill with forest energy.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <injuryProps>

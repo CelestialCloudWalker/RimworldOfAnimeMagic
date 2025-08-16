@@ -4,8 +4,10 @@
   <Talented.TalentedGeneDef>
     <defName>Gene_BreathingPotential</defName>
     <label>Breathing Potential</label>
+    <resourceName>Breath</resourceName>
     <description>A gene with talent tree mechanics.</description>
     <iconPath>UI/Icons/Genes/breathing_potential</iconPath>
+    <resourceLabel>Breath</resourceLabel>
     <TalentTrees>
       <li>BreathingPotentialTreee3</li>
     </TalentTrees>
@@ -51,6 +53,18 @@
         <applyOnGeneRemove>false</applyOnGeneRemove>
       </li>
     </modExtensions>
+    <maxStat>FlameBreath</maxStat>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
     <TabLabel>Talents</TabLabel>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>BreathingTechnique</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(255, 69, 0)</barColor>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
   </Talented.TalentedGeneDef>
 </Defs>

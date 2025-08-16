@@ -3,7 +3,7 @@
   <HediffDef>
     <defName>Primal_Aura</defName>
     <label>Primal Aura</label>
-    <description>{0} emanates a Primal Aura.</description>
+    <description>Emanating a Primal Aura.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <injuryProps>

@@ -1,6 +1,5 @@
 ﻿using Talented;
 using Verse;
-
 namespace AnimeArsenal
 {
     public class BreathingTechniqueGeneDef : TalentedGeneDef
@@ -10,6 +9,7 @@ namespace AnimeArsenal
         public int ticksBeforeExhaustionStart = 2500;
         public int ticksPerExhaustionIncrease = 1250;
         public int exhausationCooldownTicks = 2500;
+        public bool scaleWithBreathing = false;
 
         public BreathingTechniqueGeneDef()
         {
