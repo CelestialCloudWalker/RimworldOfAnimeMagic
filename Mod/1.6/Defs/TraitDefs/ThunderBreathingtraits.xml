@@ -1,138 +1,152 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>ElectricPower</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Electric Power</label>
-        <description>{PAWN_nameDef} channels the raw force of a thunderstorm, delivering lightning-fast attacks that crackle with power. {PAWN_pronoun}'s strikes bypass defenses, like lightning splitting the sky.</description>
-        <statFactors>
-          <MeleeDPS>1.20</MeleeDPS>
-          <MeleeHitChance>1.15</MeleeHitChance>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
     <defName>LightningReflexes</defName>
-    <commonality>1</commonality>
+    <commonality>0.8</commonality>
     <degreeDatas>
       <li>
-        <label>Lightning Reflexes</label>
-        <description>{PAWN_nameDef} moves with the speed and unpredictability of a thunderstrike, reacting in the blink of an eye. {PAWN_pronoun} dodges and strikes with the force of an electric storm.</description>
-        <statFactors>
-          <MoveSpeed>1.20</MoveSpeed>
-          <MeleeDodgeChance>1.20</MeleeDodgeChance>
-        </statFactors>
+        <label>lightning reflexes</label>
+        <description>[PAWN_nameDef] moves with the speed of a lightning strike. [PAWN_possessive] incredible reflexes give [PAWN_objective] the first strike in any encounter, though such speed comes with its own challenges.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MoveSpeed>0.5</MoveSpeed>
+          <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+          <MeleeHitChance>10</MeleeHitChance>
+          <MeleeDodgeChance>12</MeleeDodgeChance>
+          <RestRateMultiplier>0.8</RestRateMultiplier>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
+          <Shooting>3</Shooting>
+        </skillGains>
+        <marketValueFactorOffset>0.18</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>StormcallersBond</defName>
-    <commonality>1</commonality>
+    <defName>StormCaller</defName>
+    <commonality>0.7</commonality>
     <degreeDatas>
       <li>
-        <label>Stormcaller's Bond</label>
-        <description>{PAWN_nameDef} commands the elements with the strength of a storm, drawing animals to {PAWN_possessive} side with the raw power of nature. {PAWN_pronoun} bends beasts to {PAWN_possessive} will as thunder commands the sky.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.15</AnimalsLearningFactor>
-          <TameAnimalChance>1.18</TameAnimalChance>
-        </statFactors>
+        <label>storm caller</label>
+        <description>[PAWN_nameDef] draws power from thunderstorms and electrical energy. [PAWN_possessive] abilities surge during storms, and [PAWN_pronoun] seems immune to electrical hazards.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+          <MentalBreakThreshold>8</MentalBreakThreshold>
+          <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+        </statOffsets>
+        <skillGains>
+          <Crafting>3</Crafting>
+          <Construction>2</Construction>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>StormsPersistence</defName>
-    <commonality>1</commonality>
+    <defName>ElectricTouch</defName>
+    <commonality>0.6</commonality>
+    <forcedPassions>
+      <li>Crafting</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Storm's Persistence</label>
-        <description>{PAWN_nameDef} endures pain and hardship with the resilience of a thunderstorm. Like the storm that never ceases, {PAWN_pronoun} fights on through exhaustion and suffering, unyielding.</description>
-        <statFactors>
-          <PainShockThreshold>1.18</PainShockThreshold>
-          <RestFallRateFactor>0.85</RestFallRateFactor>
-        </statFactors>
+        <label>electric touch</label>
+        <description>[PAWN_nameDef] channels electrical energy through [PAWN_possessive] hands. [PAWN_possessive] natural affinity with electronics makes [PAWN_objective] exceptionally skilled at crafting and repairing electrical devices.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+          <FixBrokenDownBuildingSuccessChance>0.5</FixBrokenDownBuildingSuccessChance>
+          <ResearchSpeed>0.2</ResearchSpeed>
+        </statOffsets>
+        <skillGains>
+          <Crafting>6</Crafting>
+          <Intellectual>3</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>StormbornShield</defName>
-    <commonality>1</commonality>
+    <defName>FlashStep</defName>
+    <commonality>0.5</commonality>
     <degreeDatas>
       <li>
-        <label>Stormborn Shield</label>
-        <description>{PAWN_nameDef} draws strength from the storm, unshaken by toxins and filth. Like a shield of lightning, {PAWN_pronoun} endures, emerging from battle unharmed and unbroken.</description>
-        <statFactors>
-          <FilthRate>0.82</FilthRate>
-          <ToxicResistance>1.18</ToxicResistance>
-        </statFactors>
+        <label>flash step</label>
+        <description>[PAWN_nameDef] can move in sudden bursts of incredible speed. [PAWN_possessive] lightning-fast movement allows for quick escapes and rapid rescue operations, though sustained speed taxes [PAWN_possessive] body.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MoveSpeed>0.6</MoveSpeed>
+          <MeleeDodgeChance>15</MeleeDodgeChance>
+          <CarryingCapacity>-20</CarryingCapacity>
+          <BedHungerRateFactor>1.2</BedHungerRateFactor>
+        </statOffsets>
+        <skillGains>
+          <Melee>3</Melee>
+          <Medicine>2</Medicine>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>ElectrifiedDishes</defName>
-    <commonality>1</commonality>
+    <defName>ChainLightning</defName>
+    <commonality>0.3</commonality>
+    <forcedPassions>
+      <li>Shooting</li>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Electrified Dishes</label>
-        <description>{PAWN_nameDef} uses the crackling power of lightning in the kitchen, creating dishes that are infused with electric energy. {PAWN_pronoun} ensures every meal is charged with vitality and power.</description>
-        <statFactors>
-          <CookSpeed>1.18</CookSpeed>
-          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>chain lightning</label>
+        <description>[PAWN_nameDef] strikes with electrical energy that arcs between multiple targets. [PAWN_possessive] attacks become more effective against groups, and [PAWN_pronoun] excels with conductive weapons.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ShootingAccuracyPawn>6</ShootingAccuracyPawn>
+          <MeleeHitChance>8</MeleeHitChance>
+          <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Shooting>4</Shooting>
+          <Melee>4</Melee>
+          <Crafting>2</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>CracklingDominance</defName>
-    <commonality>1</commonality>
+    <defName>ThunderousPresence</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Social</li>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Crackling Dominance</label>
-        <description>{PAWN_nameDef} commands the room with an undeniable presence, radiating power like a thunderclap. {PAWN_pronoun}'s aura instills both fear and respect, drawing others to {PAWN_possessive} side.</description>
-        <statFactors>
-          <SocialImpact>1.20</SocialImpact>
-          <RestRateMultiplier>1.12</RestRateMultiplier>
-        </statFactors>
+        <label>thunderous presence</label>
+        <description>[PAWN_nameDef] commands attention like a clap of thunder. [PAWN_possessive] booming voice and imposing presence make [PAWN_objective] a natural leader, though subtlety is not [PAWN_possessive] strength.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SocialImpact>0.6</SocialImpact>
+          <MeleeHitChance>8</MeleeHitChance>
+          <HuntingStealth>-0.8</HuntingStealth>
+          <ArrestSuccessChance>0.3</ArrestSuccessChance>
+        </statOffsets>
+        <skillGains>
+          <Social>5</Social>
+          <Melee>4</Melee>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>StormcallersCare</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Stormcaller's Care</label>
-        <description>{PAWN_nameDef} heals with the fierce energy of a storm, restoring vitality with the speed and intensity of a lightning strike. {PAWN_pronoun} ensures that no ally falls to the storm's chaos.</description>
-        <statFactors>
-          <MedicalTendQuality>1.15</MedicalTendQuality>
-          <MedicalTendSpeed>1.20</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>StormsFertility</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Storm's Fertility</label>
-        <description>{PAWN_nameDef} understands the balance of destruction and creation, fostering growth and renewal like the nourishing rains of a storm. {PAWN_pronoun} brings new life wherever {PAWN_pronoun} treads, much like the storm rejuvenates the earth.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.15</PlantWorkSpeed>
-          <PlantHarvestYield>1.18</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

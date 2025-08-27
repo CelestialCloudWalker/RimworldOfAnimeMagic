@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>ConeSpray</defName>
+    <label>Cone spray</label>
+    <description>Spray a sticky acid substance from glands in the neck up through the mouth and all over the target area. The acid will stick to targets and burn them.</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayOrder>300</displayOrder>
+    <category>Sanguophage</category>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8.9</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>AcidSpray_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetItems>true</canTargetItems>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilitySprayLiquid">
+        <projectileDef>Proj_Acid</projectileDef>
+        <numCellsToHit>9</numCellsToHit>
+        <sprayEffecter>AcidSpray_Directional</sprayEffecter>
+      </li>
+      <li Class="EMF.CompProperties_AbilityDamageInCone">
+        <range>12</range>
+        <angle>60</angle>
+        <damageParms>
+          <damageAmount>8~12</damageAmount>
+          <damageDef>Blunt</damageDef>
+          <useWeaponDamageIfAvailable>false</useWeaponDamageIfAvailable>
+        </damageParms>
+        <friendlyFireParms>
+          <canTargetHostile>true</canTargetHostile>
+          <canTargetNeutral>true</canTargetNeutral>
+          <canTargetFriendly>false</canTargetFriendly>
+        </friendlyFireParms>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

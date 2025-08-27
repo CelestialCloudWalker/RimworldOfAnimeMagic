@@ -3,6 +3,7 @@
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_SerpentBreath</defName>
     <label>Serpent Breath</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Serpent Breath</resourceName>
     <description>Carriers of this gene embody the elegance and fluidity of blooming flowers, unleashing techniques that blend agility and vision with deadly precision. Their attacks are a mesmerizing dance of petals and blossoms, with enhanced perception at the cost of potential strain on their eyesight.</description>
     <iconPath>UI/Icons/Genes/serpent</iconPath>

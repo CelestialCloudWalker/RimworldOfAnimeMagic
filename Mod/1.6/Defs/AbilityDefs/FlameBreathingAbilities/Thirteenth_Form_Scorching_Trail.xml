@@ -1,40 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Thirteenth_Form_Scorching_Trail</defName>
     <label>Thirteenth Form: Scorching Trail</label>
     <category>FlameBreathing_Ability_Catergory</category>
-    <groupDef>FlameBreathing_ThirteenthForm_Group</groupDef>
-    <description>The user vanishes in a blitz of dashes.</description>
+    <description>The user vanishes in a blitz of flame dashes, leaving a scorching trail that burns enemies. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/AbilityMultiDash</iconPath>
-    <cooldownTicksRange>600~600</cooldownTicksRange>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+    
+    <requiredGeneDefName>Gene_FlameBreath</requiredGeneDefName>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>25</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <drawAimPie>True</drawAimPie>
-      <warmupTime>0.5</warmupTime>
       <range>15</range>
-      <requireLineOfSight>True</requireLineOfSight>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
       <targetParams>
-        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
         <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
+
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_BaseStance">
-        <maxJumps>6</maxJumps>
-        <ticksBetweenJumps>3</ticksBetweenJumps>
-        <jumpDistance>5</jumpDistance>
-        <targetSearchRadius>18</targetSearchRadius>
-        <jumpDamageDef>Cut</jumpDamageDef>
-        <jumpDamage>4~5</jumpDamage>
+        <maxJumps>4</maxJumps>
+        <ticksBetweenJumps>4</ticksBetweenJumps>
+        <jumpDistance>4</jumpDistance>
+        <targetSearchRadius>15</targetSearchRadius>
+        <jumpDamageDef>AA_Searing</jumpDamageDef>
+        <jumpDamage>3~4</jumpDamage>
         <casterEffecter>AnimeArsenal_FlameJump</casterEffecter>
         <impactEffecter>AnimeArsenal_FlameHit</impactEffecter>
       </li>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>Gene_FlameBreath</resourceGeneDef>
-        <resourceCost>25</resourceCost>
-      </li>
     </comps>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-  </AbilityDef>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic flame dash sequence that burns enemies with moderate searing damage.</description>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>An improved scorching trail with more dashes and increased burning damage.</description>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>5</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>4</jumpDistance>
+            <targetSearchRadius>16</targetSearchRadius>
+            <jumpDamageDef>AA_Searing</jumpDamageDef>
+            <jumpDamage>4~5</jumpDamage>
+            <casterEffecter>AnimeArsenal_FlameJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_FlameHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>A devastating flame trail with extended range, more dashes, and faster execution that leaves intense burning.</description>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>6</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>5</jumpDistance>
+            <targetSearchRadius>18</targetSearchRadius>
+            <jumpDamageDef>AA_Searing</jumpDamageDef>
+            <jumpDamage>5~6</jumpDamage>
+            <casterEffecter>AnimeArsenal_FlameJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_FlameHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <description>The ultimate scorching trail - maximum dashes, devastating searing damage, and lightning-fast execution that incinerates everything in its path.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>7</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>20</targetSearchRadius>
+            <jumpDamageDef>AA_Searing</jumpDamageDef>
+            <jumpDamage>6~8</jumpDamage>
+            <casterEffecter>AnimeArsenal_FlameJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_FlameHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

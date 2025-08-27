@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <HediffDef>
-    <defName>Obscured_Mind</defName>
-    <label>Obscured Mind</label>
-    <description>WIP.</description>
+    <defName>Mist_Aura</defName>
+    <label>Mist Aura</label>
+    <description>Emanating a disorienting Mist Aura.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
@@ -13,7 +14,61 @@
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
         <damageType>Disorienting_Strike</damageType>
+        <damageValue>7</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Mist_Aura_Enhanced</defName>
+    <label>Enhanced Mist Aura</label>
+    <description>Emanating an enhanced Mist Aura with greater disorientation.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.7, 0.4)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Disorienting_Strike</damageType>
         <damageValue>10</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Mist_Aura_Superior</defName>
+    <label>Superior Mist Aura</label>
+    <description>Emanating a superior Mist Aura with powerful confusion effects.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Disorienting_Strike</damageType>
+        <damageValue>14</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Mist_Aura_Master</defName>
+    <label>Master Mist Aura</label>
+    <description>Emanating the ultimate Mist Aura with devastating confusion.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.6)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Disorienting_Strike</damageType>
+        <damageValue>20</damageValue>
       </li>
     </comps>
   </HediffDef>

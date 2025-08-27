@@ -1,138 +1,168 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>SavageStrength</defName>
+    <defName>FeralInstincts</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Animals</li>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Savage Strength</label>
-        <description>{PAWN_nameDef} channels the raw ferocity of a beast, striking with untamed power. {PAWN_pronoun}'s attacks land with overwhelming force, embodying the primal essence of combat.</description>
-        <statFactors>
-          <MeleeDPS>1.15</MeleeDPS>
-          <MeleeHitChance>1.08</MeleeHitChance>
-        </statFactors>
+        <label>feral instincts</label>
+        <description>[PAWN_nameDef] possesses animalistic instincts that enhance [PAWN_possessive] combat prowess and connection with beasts, but make [PAWN_objective] unsuited for civilized discourse.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>8</MeleeHitChance>
+          <MeleeDodgeChance>4</MeleeDodgeChance>
+          <MoveSpeed>0.3</MoveSpeed>
+          <SocialImpact>-0.25</SocialImpact>
+          <NegotiationAbility>-0.4</NegotiationAbility>
+          <ArrestSuccessChance>-0.3</ArrestSuccessChance>
+          <AnimalGatherSpeed>0.3</AnimalGatherSpeed>
+          <AnimalGatherYield>0.2</AnimalGatherYield>
+          <TameAnimalChance>0.25</TameAnimalChance>
+          <TrainAnimalChance>0.2</TrainAnimalChance>
+        </statOffsets>
+        <skillGains>
+          <Animals>6</Animals>
+          <Melee>4</Melee>
+          <Social>-3</Social>
+        </skillGains>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Beauty</li>
+      <li>ShootingAccuracy</li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>PackHunter</defName>
+    <commonality>1</commonality>
+    <forcedPassions>
+      <li>Shooting</li>
+      <li>Melee</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>pack hunter</label>
+        <description>[PAWN_nameDef] fights with the coordination of a pack predator. [PAWN_pronoun] excels in group combat and prefers fresh meat over cooked meals.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+          <MeleeHitChance>5</MeleeHitChance>
+          <CookSpeed>-0.5</CookSpeed>
+          <ButcheryFleshSpeed>0.4</ButcheryFleshSpeed>
+          <ButcheryFleshEfficiency>0.2</ButcheryFleshEfficiency>
+        </statOffsets>
+        <skillGains>
+          <Shooting>3</Shooting>
+          <Melee>2</Melee>
+          <Cooking>-4</Cooking>
+        </skillGains>
+        <disallowedThoughts>
+          <li>AteRawFood</li>
+        </disallowedThoughts>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>SavageSpeed</defName>
+    <defName>WildSenses</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Shooting</li>
+      <li>Animals</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Savage Speed</label>
-        <description>{PAWN_nameDef} moves with wild, untamed agility, weaving through battle like a beast on the hunt. {PAWN_pronoun} is an unpredictable force, always striking before prey can react.</description>
-        <statFactors>
-          <MoveSpeed>1.12</MoveSpeed>
-          <MeleeDodgeChance>1.10</MeleeDodgeChance>
-        </statFactors>
+        <label>wild senses</label>
+        <description>[PAWN_nameDef] has heightened senses like those of a wild animal. [PAWN_pronoun] can detect danger before others but requires more food to sustain [PAWN_possessive] enhanced metabolism.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <TrapSpringChance>-0.6</TrapSpringChance>
+          <HuntingStealth>0.4</HuntingStealth>
+          <RestRateMultiplier>1.15</RestRateMultiplier>
+          <BedHungerRateFactor>1.25</BedHungerRateFactor>
+        </statOffsets>
+        <skillGains>
+          <Shooting>2</Shooting>
+          <Animals>3</Animals>
+        </skillGains>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>WildTamer</defName>
+    <defName>Territorial</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Construction</li>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Wild Tamer</label>
-        <description>{PAWN_nameDef} shares an instinctual bond with nature's beasts, understanding their primal instincts as if one of their own. {PAWN_pronoun} tames even the wildest creatures with sheer presence.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.15</AnimalsLearningFactor>
-          <TameAnimalChance>1.18</TameAnimalChance>
-        </statFactors>
+        <label>territorial</label>
+        <description>[PAWN_nameDef] has a strong territorial instinct. [PAWN_pronoun] fights fiercely when defending [PAWN_possessive] home and builds formidable fortifications, but doesn't play well with strangers.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ConstructionSpeed>0.25</ConstructionSpeed>
+          <ConstructSuccessChance>0.15</ConstructSuccessChance>
+          <SocialImpact>-0.4</SocialImpact>
+          <MeleeHitChance>6</MeleeHitChance>
+        </statOffsets>
+        <skillGains>
+          <Construction>4</Construction>
+          <Melee>3</Melee>
+          <Social>-2</Social>
+        </skillGains>
+        <marketValueFactorOffset>-0.05</marketValueFactorOffset>
       </li>
     </degreeDatas>
+    <conflictingTraits>
+      <li>Beauty</li>
+    </conflictingTraits>
   </TraitDef>
 
   <TraitDef>
-    <defName>BeastlyEndurance</defName>
-    <commonality>1</commonality>
+    <defName>PrimalRage</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Beastly Endurance</label>
-        <description>{PAWN_nameDef} endures pain and exhaustion like a true beast, pushing beyond normal limits. Even in relentless battle, {PAWN_pronoun} refuses to falter.</description>
-        <statFactors>
-          <PainShockThreshold>1.15</PainShockThreshold>
-          <RestFallRateFactor>0.90</RestFallRateFactor>
-        </statFactors>
+        <label>primal rage</label>
+        <description>[PAWN_nameDef] channels primal fury when wounded. Pain only makes [PAWN_objective] more dangerous in combat, though [PAWN_possessive] wild nature makes delicate work nearly impossible.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <PainShockThreshold>0.25</PainShockThreshold>
+          <MeleeHitChance>4</MeleeHitChance>
+          <MeleeDPS>0.15</MeleeDPS>
+          <SurgerySuccessChanceFactor>-0.6</SurgerySuccessChanceFactor>
+          <FixBrokenDownBuildingSuccessChance>-0.4</FixBrokenDownBuildingSuccessChance>
+          <CookSpeed>-0.5</CookSpeed>
+          <GeneralLaborSpeed>-0.3</GeneralLaborSpeed>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
+          <Medicine>-4</Medicine>
+          <Crafting>-3</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>-0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
+    <conflictingTraits>
+      <li>ShootingAccuracy</li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
   </TraitDef>
 
-  <TraitDef>
-    <defName>FeralResilience</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Feral Resilience</label>
-        <description>{PAWN_nameDef} thrives in the harshest environments, shrugging off toxins and filth like a beast born to the wild. Nothing weakens {PAWN_pronoun}'s untamed spirit.</description>
-        <statFactors>
-          <FilthRate>0.85</FilthRate>
-          <ToxicResistance>1.20</ToxicResistance>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>WildCookingMastery</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Primal Cooking</label>
-        <description>{PAWN_nameDef} has mastered the art of survival, expertly preparing meals using every part of the hunt. {PAWN_pronoun} wastes nothing, ensuring the pack stays strong.</description>
-        <statFactors>
-          <CookSpeed>1.15</CookSpeed>
-          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>BeastlyPresence</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Beastly Presence</label>
-        <description>{PAWN_nameDef} exudes a primal aura, commanding attention and respect. {PAWN_pronoun}'s untamed spirit drives others to follow, inspired by raw, instinctual energy.</description>
-        <statFactors>
-          <SocialImpact>1.12</SocialImpact>
-          <RestRateMultiplier>1.10</RestRateMultiplier>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>SavageCare</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Primal Instinct</label>
-        <description>{PAWN_nameDef} possesses an innate understanding of wounds and survival, treating injuries with an almost beast-like intuition. {PAWN_pronoun} ensures the pack recovers swiftly.</description>
-        <statFactors>
-          <MedicalTendQuality>1.10</MedicalTendQuality>
-          <MedicalTendSpeed>1.15</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>NaturesBounty</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Wild Hunter</label>
-        <description>{PAWN_nameDef} understands nature's rhythms, thriving in the wilderness. Under {PAWN_possessive} care, the land flourishes, providing bountiful sustenance.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.12</PlantWorkSpeed>
-          <PlantHarvestYield>1.08</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

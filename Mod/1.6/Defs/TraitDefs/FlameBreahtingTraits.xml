@@ -1,138 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>BlazingMight</defName>
+    <defName>InnerFire</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Cooking</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Blazing Might</label>
-        <description>{PAWN_nameDef} harnesses the fury of an unrelenting inferno, striking with the scorching power of flames. {PAWN_pronoun}'s attacks burn through defenses, embodying the essence of destruction.</description>
-        <statFactors>
-          <MeleeDPS>1.15</MeleeDPS>
-          <MeleeHitChance>1.10</MeleeHitChance>
-        </statFactors>
+        <label>inner fire</label>
+        <description>[PAWN_nameDef] burns with an inner flame that protects [PAWN_objective] from cold but increases [PAWN_possessive] appetite. [PAWN_pronoun] excels at cooking and working with heat.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+          <ComfyTemperatureMax>10</ComfyTemperatureMax>
+          <CookSpeed>0.4</CookSpeed>
+          <SmeltingSpeed>0.3</SmeltingSpeed>
+          <BedHungerRateFactor>1.3</BedHungerRateFactor>
+        </statOffsets>
+        <skillGains>
+          <Cooking>4</Cooking>
+          <Crafting>2</Crafting>
+        </skillGains>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>InfernalDash</defName>
+    <defName>BurningPassion</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Crafting</li>
+      <li>Artistic</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Infernal Dash</label>
-        <description>{PAWN_nameDef} moves with the speed of a wildfire, blazing across the battlefield before enemies can react. {PAWN_pronoun} strikes with precision, leaving only embers in {PAWN_possessive} wake.</description>
-        <statFactors>
-          <MoveSpeed>1.12</MoveSpeed>
-          <MeleeDodgeChance>1.15</MeleeDodgeChance>
-        </statFactors>
+        <label>burning passion</label>
+        <description>[PAWN_nameDef]'s passionate nature drives [PAWN_objective] to excel at creative work, but [PAWN_pronoun] requires more recreation to maintain [PAWN_possessive] intense focus.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+          <JoyFallRateFactor>1.4</JoyFallRateFactor>
+        </statOffsets>
+        <skillGains>
+          <Crafting>3</Crafting>
+          <Artistic>3</Artistic>
+        </skillGains>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>InfernalCommand</defName>
+    <defName>ForgeMaster</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Crafting</li>
+      <li>Construction</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Infernal Command</label>
-        <description>{PAWN_nameDef} radiates the presence of a roaring blaze, drawing even the fiercest creatures to {PAWN_possessive} command. {PAWN_pronoun} bends the will of beasts with the unwavering force of fire.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.20</AnimalsLearningFactor>
-          <TameAnimalChance>1.15</TameAnimalChance>
-        </statFactors>
+        <label>forge master</label>
+        <description>[PAWN_nameDef] is a master of flame and forge. [PAWN_pronoun] works metal with unmatched skill and builds with the precision of a true craftsman.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SmeltingSpeed>0.5</SmeltingSpeed>
+          <ConstructionSpeed>0.25</ConstructionSpeed>
+          <ConstructSuccessChance>0.2</ConstructSuccessChance>
+          <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+        </statOffsets>
+        <skillGains>
+          <Crafting>5</Crafting>
+          <Construction>3</Construction>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>BurningWill</defName>
+    <defName>BlazingSpirit</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Burning Will</label>
-        <description>{PAWN_nameDef} endures hardship like tempered steel in the forge, standing firm against pain and exhaustion. Even when all seems lost, {PAWN_pronoun} fights on, burning with indomitable resolve.</description>
-        <statFactors>
-          <PainShockThreshold>1.15</PainShockThreshold>
-          <RestFallRateFactor>0.85</RestFallRateFactor>
-        </statFactors>
+        <label>blazing spirit</label>
+        <description>[PAWN_nameDef] has an unbreakable spirit that inspires others. [PAWN_possessive] fiery determination makes [PAWN_objective] nearly immune to despair, though [PAWN_pronoun] needs constant activity.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SocialImpact>0.4</SocialImpact>
+          <NegotiationAbility>0.3</NegotiationAbility>
+          <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+          <JoyFallRateFactor>1.3</JoyFallRateFactor>
+        </statOffsets>
+        <skillGains>
+          <Social>4</Social>
+        </skillGains>
+        <disallowedMentalStates>
+          <li>Berserk</li>
+        </disallowedMentalStates>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>InfernalResistance</defName>
-    <commonality>1</commonality>
+    <defName>PhoenixHeart</defName>
+    <commonality>0.5</commonality>
     <degreeDatas>
       <li>
-        <label>Infernal Resistance</label>
-        <description>{PAWN_nameDef} thrives in the heart of the fire, unshaken by toxins and filth. {PAWN_pronoun} emerges from even the harshest conditions, unburnt and unwavering.</description>
-        <statFactors>
-          <FilthRate>0.80</FilthRate>
-          <ToxicResistance>1.20</ToxicResistance>
-        </statFactors>
+        <label>phoenix heart</label>
+        <description>[PAWN_nameDef] possesses remarkable regenerative abilities. Wounds heal faster and infections rarely take hold, as if [PAWN_possessive] body burns away impurities.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <InjuryHealingFactor>1.5</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.3</ImmunityGainSpeed>
+          <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+          <ComfyTemperatureMax>15</ComfyTemperatureMax>
+        </statOffsets>
+        <skillGains>
+          <Medicine>2</Medicine>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>EmberChef</defName>
-    <commonality>1</commonality>
+    <defName>CombustiveTemper</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
     <degreeDatas>
       <li>
-        <label>Ember Chef</label>
-        <description>{PAWN_nameDef} wields fire as both a weapon and a tool, expertly crafting meals infused with the essence of flame. {PAWN_pronoun} ensures that nothing goes to waste, sustaining all who fight beside {PAWN_pronoun}.</description>
-        <statFactors>
-          <CookSpeed>1.18</CookSpeed>
-          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>combustive temper</label>
+        <description>[PAWN_nameDef] has a volatile temperament that ignites into fury. When enraged, [PAWN_pronoun] becomes a devastating combatant but struggles with delicate work and has an unhealthy fascination with fire.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+          <MeleeHitChance>8</MeleeHitChance>
+          <MeleeDPS>0.2</MeleeDPS>
+          <SurgerySuccessChanceFactor>-0.5</SurgerySuccessChanceFactor>
+          <GeneralLaborSpeed>-0.2</GeneralLaborSpeed>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Medicine>-3</Medicine>
+        </skillGains>
+        <marketValueFactorOffset>-0.05</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>BlazingCharisma</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Blazing Charisma</label>
-        <description>{PAWN_nameDef} burns with an undeniable presence, drawing others in like moths to a flame. {PAWN_pronoun}'s spirit ignites passion and loyalty in those who stand by {PAWN_pronoun}.</description>
-        <statFactors>
-          <SocialImpact>1.15</SocialImpact>
-          <RestRateMultiplier>1.10</RestRateMultiplier>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>FieryCompassion</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Fiery Compassion</label>
-        <description>{PAWN_nameDef} treats the wounded with the warmth of a nurturing flame, ensuring swift recovery. {PAWN_pronoun} wields both destruction and healing, never allowing an ally to fall to the cold grasp of death.</description>
-        <statFactors>
-          <MedicalTendQuality>1.15</MedicalTendQuality>
-          <MedicalTendSpeed>1.12</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>InfernalGrowth</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Infernal Growth</label>
-        <description>{PAWN_nameDef} understands the cycle of destruction and rebirth, nurturing the land like volcanic soil. Wherever {PAWN_pronoun} treads, new life rises from the ashes.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.15</PlantWorkSpeed>
-          <PlantHarvestYield>1.10</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

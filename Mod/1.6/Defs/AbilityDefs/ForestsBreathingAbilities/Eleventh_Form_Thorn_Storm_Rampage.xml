@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Eleventh_Form_Thorn_Storm_Rampage</defName>
+    <label>Eleventh Form: Thorn Storm Rampage</label>
+    <category>ForestsBreathing_Ability_Catergory</category>
+    <description>The user unleashes a devastating storm of razor-sharp thorns that pierce through all enemies in a wide radius around them. The raw natural power of the forest breathing technique impales anything nearby. Gains experience with each use and becomes more powerful.</description>
+    <iconPath>UI/Abilities/AbilityThornStorm</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+    
+    <requiredGeneDefName>Gene_ForestBreath</requiredGeneDefName>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>1.0</warmupTime>
+      <noiseRadius>8</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    
+    <comps>
+      <li Class="EMF.CompProperties_AbilityDamageInRadius">
+        <radius>4</radius>
+        <damageParms>
+          <damageAmount>8~12</damageAmount>
+          <damageDef>Thorn_Piercing</damageDef>
+        </damageParms>
+        <friendlyFireParms>
+          <canTargetHostile>true</canTargetHostile>
+          <canTargetNeutral>true</canTargetNeutral>
+          <canTargetFriendly>false</canTargetFriendly>
+        </friendlyFireParms>
+      </li>
+    </comps>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic area attack that surrounds enemies with piercing thorns dealing moderate damage.</description>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>An improved rampage with wider thorn spread and increased piercing damage per target.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>5</radius>
+            <damageParms>
+              <damageAmount>12~16</damageAmount>
+              <damageDef>Thorn_Piercing</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <description>A devastating rampage with extended radius and brutal thorn strikes that can pierce through armor with natural ferocity.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>6</radius>
+            <damageParms>
+              <damageAmount>16~20</damageAmount>
+              <damageDef>Thorn_Piercing</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>800</experienceRequired>
+        <description>The ultimate thorn storm rampage - maximum area coverage with devastating piercing damage that can impale buildings and skewer any enemy with the full fury of nature's wrath.</description>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>7</radius>
+            <damageParms>
+              <damageAmount>20~28</damageAmount>
+              <damageDef>Thorn_Piercing</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

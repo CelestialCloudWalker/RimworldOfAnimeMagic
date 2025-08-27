@@ -3,6 +3,7 @@
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_InsectBreath</defName>
     <label>Insect Breath</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Insect Breath</resourceName>
     <description>Carriers of this gene strike with swift, venomous precision, mimicking the lethal stings of insects. Their movements conjure phantom butterflies, embodying both beauty and death.</description>
     <iconPath>UI/Icons/Genes/insect</iconPath>

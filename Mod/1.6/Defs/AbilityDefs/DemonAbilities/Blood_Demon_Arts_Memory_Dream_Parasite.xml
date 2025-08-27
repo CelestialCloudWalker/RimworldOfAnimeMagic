@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Blood_Demon_Arts_Memory_Dream_Parasite</defName>
+    <label>Blood Demon Arts: Dream Parasite</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>Blood_Demon_Arts_Memory_Dream_Parasite_Group</groupDef>
+    <description>Enter a sleeping target's dreams and steal their knowledge and skills for yourself. Transfer efficiency and predictability increase with mastery.</description>
+    <iconPath>UI/Abilities/DemonAbilitySkillSteal</iconPath>
+    <displayOrder>214</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>2</range>
+      <warmupTime>5.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>SkillTransfer</dreamEffectType>
+        <effectSeverity>0.3</effectSeverity>
+        <transferFromTarget>true</transferFromTarget>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic skill absorption with limited transfer efficiency. Results are highly unpredictable.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.5</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>Enhanced skill absorption with better transfer rates and slightly more predictable results.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.7</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <description>Advanced skill parasitism that can drain significant knowledge with more consistent results.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.9</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <description>Perfect skill parasitism that can completely drain target abilities with predictable, devastating efficiency.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <resourceCostMultiplier>0.75</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>1.2</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

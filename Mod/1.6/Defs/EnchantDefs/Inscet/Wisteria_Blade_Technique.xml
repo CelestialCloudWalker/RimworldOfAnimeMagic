@@ -1,14 +1,43 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <AnimeArsenal.EnchantDef>
     <defName>Wisteria_Blade_Technique</defName>
     <label>Wisteria Blade Technique</label>
     <description>Coats weapons in wisteria poison that seeps into every cut and puncture.</description>
-
     <enchantHediff>Wisteria_Edge</enchantHediff>
     <resourceGene>Gene_InsectBreath</resourceGene>
-
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Wisteria_Blade_Technique_Enhanced</defName>
+    <label>Enhanced Wisteria Blade</label>
+    <description>An improved technique with stronger poison and better efficiency.</description>
+    <enchantHediff>Wisteria_Edge_Enhanced</enchantHediff>
+    <resourceGene>Gene_InsectBreath</resourceGene>
+    <ticksBetweenCost>400</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Wisteria_Blade_Technique_Superior</defName>
+    <label>Superior Wisteria Blade</label>
+    <description>A superior technique with potent poison and high efficiency.</description>
+    <enchantHediff>Wisteria_Edge_Superior</enchantHediff>
+    <resourceGene>Gene_InsectBreath</resourceGene>
+    <ticksBetweenCost>350</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Wisteria_Blade_Technique_Master</defName>
+    <label>Master Wisteria Blade</label>
+    <description>The ultimate technique with lethal poison and maximum efficiency.</description>
+    <enchantHediff>Wisteria_Edge_Master</enchantHediff>
+    <resourceGene>Gene_InsectBreath</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Vicious_Rush</defName>
     <label>Blood Demon Arts: Vicious Rush</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_ViciousRush_Group</groupDef>
-    <description>Instantly teleport to a target and perform a devastating melee attack.</description>
+    <description>Instantly teleport to a target and perform a devastating melee attack. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/AbilityDash</iconPath>
-    <aiCanUse>true</aiCanUse>
-    <targetRequired>True</targetRequired>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>5</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>20</range>
       <warmupTime>0.5</warmupTime>
       <noiseRadius>4</noiseRadius>
-      <requireLineOfSight>True</requireLineOfSight>
+      <requireLineOfSight>true</requireLineOfSight>
       <targetParams>
         <canTargetSelf>false</canTargetSelf>
-        <canTargetPawns>True</canTargetPawns>
+        <canTargetPawns>true</canTargetPawns>
         <canTargetLocations>false</canTargetLocations>
       </targetParams>
     </verbProperties>
+
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>10</damageAmount>
@@ -29,7 +38,83 @@
         <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
         <stunDuration>2</stunDuration>
         <effectRadius>0</effectRadius>
+        
+        
       </li>
     </comps>
-  </AbilityDef>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic teleporting slash attack that deals cutting damage with moderate armor penetration.</description>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>An improved rush with increased damage, better armor penetration, and longer stun duration.</description>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>14</damageAmount>
+            <damageType>Cut</damageType>
+            <armorPenetration>0.4</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.15</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>3</stunDuration>
+            <effectRadius>0</effectRadius>
+            
+            
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>A devastating rush that cuts through nearby enemies in addition to the primary target with enhanced armor penetration.</description>
+        <resourceCostMultiplier>1.3</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>18</damageAmount>
+            <damageType>Cut</damageType>
+            <armorPenetration>0.5</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.2</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>4</stunDuration>
+            <effectRadius>1.5</effectRadius>
+            
+            
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>The ultimate vicious rush - devastating cutting damage, extreme armor penetration, extended stun, and wide area effect.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>25</damageAmount>
+            <damageType>Cut</damageType>
+            <armorPenetration>0.7</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.25</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>5</stunDuration>
+            <effectRadius>2.5</effectRadius>
+            
+            
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

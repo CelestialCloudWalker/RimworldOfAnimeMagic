@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Blood_Demon_Arts_Hearts_Manipulation</defName>
+    <label>Blood Demon Arts: Heart's Manipulation</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>Blood_Demon_Arts_Hearts_Manipulation_Group</groupDef>
+    <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. Emotional impact increases with mastery.</description>
+    <iconPath>UI/Abilities/DemonSleepAbility1</iconPath>
+    <displayOrder>215</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>4</range>
+      <warmupTime>2.5</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>MoodManipulation</dreamEffectType>
+        <effectSeverity>0.4</effectSeverity>
+        <moodChange>10</moodChange>
+        <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+        <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic emotional manipulation with mild mood effects.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>0.6</effectSeverity>
+            <moodChange>15</moodChange>
+            <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <description>Enhanced emotional control with stronger mood swings and longer-lasting effects.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>0.8</effectSeverity>
+            <moodChange>25</moodChange>
+            <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <description>Advanced emotional manipulation that can create intense emotional responses and behavioral changes.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>1.0</effectSeverity>
+            <moodChange>35</moodChange>
+            <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <description>Perfect emotional control that can completely rewrite a target's emotional state and personality.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <resourceCostMultiplier>0.75</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>1.3</effectSeverity>
+            <moodChange>50</moodChange>
+            <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

@@ -3,6 +3,7 @@
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_WaterBreath</defName>
     <label>Water Breath</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Water Breath</resourceName>
     <description>Carriers of this gene embody the passion and grace of love, using techniques that blend emotion, fluidity, and overwhelming strength.</description>
     <iconPath>UI/Icons/Genes/water</iconPath>

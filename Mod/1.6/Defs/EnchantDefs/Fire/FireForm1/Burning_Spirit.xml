@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <HediffDef>
     <defName>Burning_Spirit</defName>
     <label>Burning Spirit</label>
@@ -14,6 +15,60 @@
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
         <damageType>AA_Searing</damageType>
         <damageValue>15</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Burning_Spirit_Enhanced</defName>
+    <label>Enhanced Burning Spirit</label>
+    <description>Spirit burns with enhanced flame power.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.7, 0.2)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>AA_Searing</damageType>
+        <damageValue>22</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Burning_Spirit_Superior</defName>
+    <label>Superior Burning Spirit</label>
+    <description>Spirit burns with superior flame intensity.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.6, 0.1)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>AA_Searing</damageType>
+        <damageValue>30</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Burning_Spirit_Master</defName>
+    <label>Master Burning Spirit</label>
+    <description>Spirit burns with the ultimate flame mastery.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.4, 0.0)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>AA_Searing</damageType>
+        <damageValue>40</damageValue>
       </li>
     </comps>
   </HediffDef>

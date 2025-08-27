@@ -1,19 +1,90 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <HediffDef>
-    <defName>Lightning_Soul</defName>
-    <label>Lightning Soul</label>
-    <description>WIP.</description>
+    <defName>Lightning_Aura</defName>
+    <label>Lightning Aura</label>
+    <description>Emanating a crackling Lightning Aura.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
-    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
-    <scenarioCanAdd>true</scenarioCanAdd>
-    <maxSeverity>1.0</maxSeverity>
-    <isBad>false</isBad>
+    <injuryProps>
+      <painPerSeverity>0.06</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00035</averagePainPerSeverityPermanent>
+      <bleedRate>0.000</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>shattered</destroyedLabel>
+      <destroyedOutLabel>electrified</destroyedOutLabel>
+    </injuryProps>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Swift_Strike</damageType>
+        <damageValue>7</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Lightning_Aura_Enhanced</defName>
+    <label>Enhanced Lightning Aura</label>
+    <description>Emanating an enhanced Lightning Aura with greater electrical power.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00030</averagePainPerSeverityPermanent>
+      <bleedRate>0.000</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>shattered</destroyedLabel>
+      <destroyedOutLabel>electrified</destroyedOutLabel>
+    </injuryProps>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
         <damageType>Swift_Strike</damageType>
         <damageValue>10</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Lightning_Aura_Superior</defName>
+    <label>Superior Lightning Aura</label>
+    <description>Emanating a superior Lightning Aura with powerful electrical energy.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <injuryProps>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
+      <bleedRate>0.000</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>shattered</destroyedLabel>
+      <destroyedOutLabel>electrified</destroyedOutLabel>
+    </injuryProps>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Swift_Strike</damageType>
+        <damageValue>14</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Lightning_Aura_Master</defName>
+    <label>Master Lightning Aura</label>
+    <description>Emanating the ultimate Lightning Aura with devastating electrical power.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <injuryProps>
+      <painPerSeverity>0.03</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00020</averagePainPerSeverityPermanent>
+      <bleedRate>0.000</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>shattered</destroyedLabel>
+      <destroyedOutLabel>electrified</destroyedOutLabel>
+    </injuryProps>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Swift_Strike</damageType>
+        <damageValue>20</damageValue>
       </li>
     </comps>
   </HediffDef>

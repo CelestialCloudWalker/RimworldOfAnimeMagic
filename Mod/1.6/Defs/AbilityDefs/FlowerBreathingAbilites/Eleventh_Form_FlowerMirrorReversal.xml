@@ -1,25 +1,71 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AbilityDef>
+  
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Eleventh_Form_FlowerMirrorReversal</defName>
     <label>Eleventh Form: Blossoming Mirror Reversal</label>
     <category>FlowerBreathing_Ability_Catergory</category>
-    <groupDef>FlowerBreathing_EleventhForm_Group</groupDef>
-    <description>The user channels thier breathing style into their weapon.</description>
+    <description>The user channels their breathing style into their weapon, creating a powerful enchantment. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
+    
+    <requiredGeneDefName>Gene_FlowerBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>5</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>-1</range>
     </verbProperties>
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
         <enchantDef>Petal_Dance_Technique</enchantDef>
       </li>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>Gene_FlowerBreath</resourceGeneDef>
-        <resourceCost>20</resourceCost>
-      </li>
     </comps>
-  </AbilityDef>
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic weapon enchantment that imbues attacks with floral energy.</description>
+      </li>
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>An improved enchantment with stronger floral energy and reduced maintenance cost.</description>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Petal_Dance_Technique_Enhanced</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>A superior enchantment that significantly enhances weapon damage and efficiency.</description>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Petal_Dance_Technique_Superior</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <description>The ultimate weapon enchantment - maximum floral damage with minimal resource drain.</description>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Petal_Dance_Technique_Master</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

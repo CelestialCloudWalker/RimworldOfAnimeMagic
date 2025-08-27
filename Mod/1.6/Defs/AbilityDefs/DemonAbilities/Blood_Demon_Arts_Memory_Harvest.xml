@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Blood_Demon_Arts_Memory_Harvest</defName>
+    <label>Blood Demon Arts: Memory Harvest</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>Blood_Demon_Arts_Memory_Harvest_Group</groupDef>
+    <description>Dive into a sleeping target's dreams to extract valuable information. Information quality improves with mastery.</description>
+    <iconPath>UI/Abilities/DemonSleepAbility4</iconPath>
+    <displayOrder>212</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>12</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3</range>
+      <warmupTime>3.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>MemoryExtraction</dreamEffectType>
+        <effectSeverity>0.3</effectSeverity>
+        <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic memory extraction with limited information gathering.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>0.5</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>Enhanced memory extraction with better information quality.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>0.7</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>Deep memory harvesting that can extract detailed information and secrets.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>0.9</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>Perfect memory harvesting that can extract any information from the target's mind.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <resourceCostMultiplier>0.75</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>1.2</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

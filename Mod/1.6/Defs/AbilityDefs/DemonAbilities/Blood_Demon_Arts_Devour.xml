@@ -1,38 +1,156 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Devour</defName>
-    <label>Blood Demon Arts: Devour</label>
+    <label>Blood Demon Art: Devour</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>Blood_Demon_Arts_Devour_Group</groupDef>
-    <description>Devour a target to heal wounds and restore blood demon arts energy. Can target corpses or living enemies.</description>
+    <description>Devour a target to heal wounds and restore blood demon arts energy. Can target corpses or living enemies. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/DemonEatAbilityIcon</iconPath>
     <cooldownTicksRange>3600</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
     <hostile>true</hostile>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>100</range>
+      <range>1.5</range>
       <warmupTime>1.5</warmupTime>
       <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
       <targetParams>
         <canTargetPawns>true</canTargetPawns>
+        <canTargetCorpses>true</canTargetCorpses>
       </targetParams>
     </verbProperties>
+
+    
     <comps>
       <li Class="AnimeArsenal.AbilityCompProperties_DemonConsume">
         <nutritionGain>0.8</nutritionGain>
         <canTargetCorpses>true</canTargetCorpses>
-      </li>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
-        <resourceCost>20</resourceCost>
+        <canTargetLiving>false</canTargetLiving>
+        <healAmount>15</healAmount>
+        <resourceRestore>10</resourceRestore>
+        <bloodlustSeverity>1.0</bloodlustSeverity>
+        <drainSeverity>1.0</drainSeverity>
+        <range>1.5</range>
+        <maxTargets>1</maxTargets>
+        <areaOfEffect>false</areaOfEffect>
+        <instantKillChance>0</instantKillChance>
       </li>
     </comps>
-  </AbilityDef>
 
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic consumption ability that restores health and energy from fallen enemies.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.AbilityCompProperties_DemonConsume">
+            <nutritionGain>0.8</nutritionGain>
+            <canTargetCorpses>true</canTargetCorpses>
+            <canTargetLiving>false</canTargetLiving>
+            <healAmount>15</healAmount>
+            <resourceRestore>10</resourceRestore>
+            <bloodlustSeverity>1.0</bloodlustSeverity>
+            <drainSeverity>1.0</drainSeverity>
+            <range>1.5</range>
+            <maxTargets>1</maxTargets>
+            <areaOfEffect>false</areaOfEffect>
+            <instantKillChance>0</instantKillChance>
+          </li>
+        </levelComps>
+      </li>
 
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>Enhanced consumption that provides greater healing and can drain life from living targets.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.AbilityCompProperties_DemonConsume">
+            <nutritionGain>1.0</nutritionGain>
+            <canTargetCorpses>true</canTargetCorpses>
+            <canTargetLiving>true</canTargetLiving>
+            <healAmount>25</healAmount>
+            <resourceRestore>15</resourceRestore>
+            <bloodlustSeverity>1.2</bloodlustSeverity>
+            <drainSeverity>2.0</drainSeverity>
+            <range>2.0</range>
+            <maxTargets>1</maxTargets>
+            <areaOfEffect>false</areaOfEffect>
+            <instantKillChance>0</instantKillChance>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Advanced consumption technique that can affect multiple targets and provides significant regeneration.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.AbilityCompProperties_DemonConsume">
+            <nutritionGain>1.2</nutritionGain>
+            <canTargetCorpses>true</canTargetCorpses>
+            <canTargetLiving>true</canTargetLiving>
+            <healAmount>40</healAmount>
+            <resourceRestore>25</resourceRestore>
+            <bloodlustSeverity>1.5</bloodlustSeverity>
+            <drainSeverity>3.0</drainSeverity>
+            <range>2.5</range>
+            <maxTargets>2</maxTargets>
+            <areaOfEffect>true</areaOfEffect>
+            <instantKillChance>0</instantKillChance>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <description>Ultimate consumption mastery - can devour multiple enemies at once with devastating life drain and massive regeneration.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.AbilityCompProperties_DemonConsume">
+            <nutritionGain>1.5</nutritionGain>
+            <canTargetCorpses>true</canTargetCorpses>
+            <canTargetLiving>true</canTargetLiving>
+            <healAmount>60</healAmount>
+            <resourceRestore>35</resourceRestore>
+            <bloodlustSeverity>2.0</bloodlustSeverity>
+            <drainSeverity>4.0</drainSeverity>
+            <range>3.0</range>
+            <maxTargets>3</maxTargets>
+            <areaOfEffect>true</areaOfEffect>
+            <instantKillChance>0.1</instantKillChance>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+
+  
   <ThoughtDef>
     <defName>DemonConsumptionMemory</defName>
     <durationDays>3</durationDays>
@@ -64,7 +182,6 @@
       </li>
     </stages>
   </ThoughtDef>
-
 
   <HediffDef>
     <defName>DemonBloodlust</defName>
@@ -187,5 +304,4 @@
       </li>
     </stages>
   </HediffDef>
-
 </Defs>

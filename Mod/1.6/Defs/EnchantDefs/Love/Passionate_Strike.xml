@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <DamageDef>
     <defName>Passionate_Strike</defName>
@@ -22,13 +22,15 @@
       <li Class="HediffCompProperties_TendDuration">
         <severityPerDayTended>-0.72</severityPerDayTended>
       </li>
+      <!-- Mental state component commented out to prevent null reference errors
       <li Class="HediffCompProperties_CauseMentalState">
-        <humanMentalState>Wander_Psychotic</humanMentalState>
+        <humanMentalState>Wander_OwnRoom</humanMentalState>
         <animalMentalState>Manhunter</animalMentalState>
-        <mtbDaysToCauseMentalState>0.1</mtbDaysToCauseMentalState>
-        <minSeverity>0.2</minSeverity>
+        <mtbDaysToCauseMentalState>0.5</mtbDaysToCauseMentalState>
+        <minSeverity>0.3</minSeverity>
         <endMentalStateOnCure>true</endMentalStateOnCure>
       </li>
+      -->
     </comps>
     <injuryProps>
       <painPerSeverity>0.04</painPerSeverity>

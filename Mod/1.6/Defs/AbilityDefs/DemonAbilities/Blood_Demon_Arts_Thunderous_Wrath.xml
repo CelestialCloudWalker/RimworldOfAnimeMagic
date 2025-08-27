@@ -1,40 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Thunderous_Wrath</defName>
     <label>Blood Demon Arts: Thunderous Wrath</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_ThunderousWrath_Group</groupDef>
-    <description>Summons a powerful lightning strike at the target location.</description>
+    <description>Summons escalating lightning strikes at the target location. Higher mastery creates devastating chain reactions hitting multiple enemies.</description>
     <iconPath>UI/Abilities/LightingAbilityIcon</iconPath>
+    <displayOrder>140</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <hostile>true</hostile>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <drawAimPie>true</drawAimPie>
-      <warmupTime>1</warmupTime>
       <range>40</range>
+      <warmupTime>1.0</warmupTime>
       <targetParams>
         <canTargetSelf>false</canTargetSelf>
-        <canTargetPawns>True</canTargetPawns>
-        <canTargetLocations>True</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
-    <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>
-      <min>30000</min>
-      <max>30000</max>
-    </cooldownTicksRange>
+
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityLightningStrike">
-        <compClass>AnimeArsenal.CompAbilityEffect_LightningStrike</compClass>
-        <lightning>True</lightning>
+        <lightning>true</lightning>
         <explosionRadius>1</explosionRadius>
-        <explosionDamage>5</explosionDamage>
+        <explosionDamage>8</explosionDamage>
         <soundOnImpact>Thunder_OnMap</soundOnImpact>
-      </li>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
-        <resourceCost>20</resourceCost>
+        <strikeCount>1</strikeCount>
+        <strikeDelay>0.5</strikeDelay>
       </li>
     </comps>
-  </AbilityDef>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic lightning strike followed by a second bolt.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLightningStrike">
+            <lightning>true</lightning>
+            <explosionRadius>2</explosionRadius>
+            <explosionDamage>12</explosionDamage>
+            <soundOnImpact>Thunder_OnMap</soundOnImpact>
+            <strikeCount>2</strikeCount>
+            <strikeDelay>0.8</strikeDelay>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <description>Triple lightning strikes that can chain to nearby enemies.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLightningStrike">
+            <lightning>true</lightning>
+            <explosionRadius>3</explosionRadius>
+            <explosionDamage>18</explosionDamage>
+            <soundOnImpact>Thunder_OnMap</soundOnImpact>
+            <strikeCount>3</strikeCount>
+            <strikeDelay>0.6</strikeDelay>
+            <chainRange>6</chainRange>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>Devastating chain lightning that seeks out enemies with increasing power.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLightningStrike">
+            <lightning>true</lightning>
+            <explosionRadius>4</explosionRadius>
+            <explosionDamage>25</explosionDamage>
+            <soundOnImpact>Thunder_OnMap</soundOnImpact>
+            <strikeCount>5</strikeCount>
+            <strikeDelay>0.4</strikeDelay>
+            <chainRange>8</chainRange>
+            <damageEscalation>1.2</damageEscalation>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>Divine storm of escalating lightning - each strike more devastating than the last.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <resourceCostMultiplier>0.85</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLightningStrike">
+            <lightning>true</lightning>
+            <explosionRadius>5</explosionRadius>
+            <explosionDamage>30</explosionDamage>
+            <soundOnImpact>Thunder_OnMap</soundOnImpact>
+            <strikeCount>8</strikeCount>
+            <strikeDelay>0.3</strikeDelay>
+            <chainRange>12</chainRange>
+            <damageEscalation>1.4</damageEscalation>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

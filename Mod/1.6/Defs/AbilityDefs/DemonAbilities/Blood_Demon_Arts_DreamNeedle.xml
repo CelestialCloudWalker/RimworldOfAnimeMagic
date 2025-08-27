@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_DreamNeedle</defName>
     <label>Blood Demon Arts: Dream Needle</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_DreamNeedle_Group</groupDef>
-    <description>Causes the target to fall asleep instantly.</description>
+    <description>Causes targets to fall asleep instantly. Becomes more powerful and affects more targets as mastery increases.</description>
     <iconPath>UI/Abilities/DemonSleepAbilitySleep</iconPath>
     <cooldownTicksRange>100</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>12</range>
@@ -20,18 +31,105 @@
         <canTargetMechs>false</canTargetMechs>
       </targetParams>
     </verbProperties>
+
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
         <useSleepHediff>false</useSleepHediff>
         <forceImmediateSleep>true</forceImmediateSleep>
         <showMessage>true</showMessage>
       </li>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
-        <resourceCost>20</resourceCost>
-      </li>
     </comps>
-  </AbilityDef>
 
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic sleep induction technique. Puts a single target to sleep for a short duration.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>12</range>
+          </li>
+        </levelComps>
+      </li>
 
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>75</experienceRequired>
+        <description>Enhanced sleep technique with longer duration and extended range.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>6</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>15</range>
+            <canPenetrateMindShields>false</canPenetrateMindShields>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>Advanced technique that can affect multiple targets in an area with deep sleep.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>8</sleepDurationHours>
+            <maxTargets>3</maxTargets>
+            <range>18</range>
+            <areaOfEffect>true</areaOfEffect>
+            <areaRadius>3</areaRadius>
+            <canPenetrateMindShields>true</canPenetrateMindShields>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <description>Ultimate sleep mastery - affects many targets over a wide area with extended deep sleep that's nearly impossible to wake from.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>12</sleepDurationHours>
+            <maxTargets>5</maxTargets>
+            <range>25</range>
+            <areaOfEffect>true</areaOfEffect>
+            <areaRadius>5</areaRadius>
+            <canPenetrateMindShields>true</canPenetrateMindShields>
+            <deepSleep>true</deepSleep>
+            <wakeResistance>0.8</wakeResistance>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

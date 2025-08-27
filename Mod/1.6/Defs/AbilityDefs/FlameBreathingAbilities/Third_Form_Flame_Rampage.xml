@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Third_Form_Flame_Rampage</defName>
+    <label>Third Form: Flame Rampage</label>
+    <category>FlameBreathing_Ability_Catergory</category>
+    <description>The user releases a devastating roar of flames that incinerates all enemies in a wide radius around them. The raw power of the flame breathing technique burns through anything nearby. Gains experience with each use and becomes more powerful.</description>
+    <iconPath>UI/Abilities/AbilityFlameRoar</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+    
+    <requiredGeneDefName>Gene_FlameBreath</requiredGeneDefName>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>1.0</warmupTime>
+      <noiseRadius>8</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    
+    <comps>
+      <li Class="EMF.CompProperties_AbilityDamageInRadius">
+        <radius>4</radius>
+        <damageParms>
+          <damageAmount>8~12</damageAmount>
+          <damageDef>AA_Searing</damageDef>
+        </damageParms>
+        <friendlyFireParms>
+          <canTargetHostile>true</canTargetHostile>
+          <canTargetNeutral>true</canTargetNeutral>
+          <canTargetFriendly>false</canTargetFriendly>
+        </friendlyFireParms>
+      </li>
+    </comps>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic area roar that incinerates nearby enemies with moderate searing damage.</description>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>An improved rampage with wider reach and increased burning damage per target.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>5</radius>
+            <damageParms>
+              <damageAmount>12~16</damageAmount>
+              <damageDef>AA_Searing</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <description>A devastating rampage with extended radius and brutal searing damage that can melt through armor.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>6</radius>
+            <damageParms>
+              <damageAmount>16~20</damageAmount>
+              <damageDef>AA_Searing</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>800</experienceRequired>
+        <description>The ultimate flame rampage - maximum area coverage with devastating searing damage that can incinerate buildings and burn any enemy to ash.</description>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>7</radius>
+            <damageParms>
+              <damageAmount>20~28</damageAmount>
+              <damageDef>AA_Searing</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

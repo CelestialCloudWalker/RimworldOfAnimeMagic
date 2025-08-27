@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <AnimeArsenal.EnchantDef>
     <defName>Blood_Enhance_Technique</defName>
     <label>Blood Enhance Technique</label>
@@ -8,5 +9,38 @@
     <resourceGene>BloodDemonArt</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Blood_Enhance_Technique_Enhanced</defName>
+    <label>Enhanced Blood Technique</label>
+    <description>An improved blood enhancement with stronger demonic energy and better efficiency.</description>
+    <enchantHediff>Blood_Enhance_Enhanced</enchantHediff>
+    <resourceGene>BloodDemonArt</resourceGene>
+    <ticksBetweenCost>400</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Blood_Enhance_Technique_Superior</defName>
+    <label>Superior Blood Technique</label>
+    <description>A superior blood enhancement with powerful demonic energy and high efficiency.</description>
+    <enchantHediff>Blood_Enhance_Superior</enchantHediff>
+    <resourceGene>BloodDemonArt</resourceGene>
+    <ticksBetweenCost>350</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Blood_Enhance_Technique_Master</defName>
+    <label>Master Blood Technique</label>
+    <description>The ultimate blood enhancement with devastating demonic power and maximum efficiency.</description>
+    <enchantHediff>Blood_Enhance_Master</enchantHediff>
+    <resourceGene>BloodDemonArt</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

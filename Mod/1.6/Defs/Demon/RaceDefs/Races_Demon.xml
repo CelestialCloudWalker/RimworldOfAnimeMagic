@@ -105,7 +105,7 @@
         <whiteGeneList>
           <li>BloodDemonArt</li>
         </whiteGeneList>
-        
+
         <whiteTraitList>
           <li>Cannibal</li>
           <li>Bloodlust</li>
@@ -145,21 +145,14 @@
         <reproduction>
           <maleFertilityAgeFactor>
             <points>
-              <li>(14, 0)</li>
-              <li>(18, 1)</li>
-              <li>(70, 1)</li>
-              <li>(90, 0)</li>
+              <li>(0, 0)</li>
+              <li>(999, 0)</li>
             </points>
           </maleFertilityAgeFactor>
           <femaleFertilityAgeFactor>
             <points>
-              <li>(14, 0)</li>
-              <li>(20, 1)</li>
-              <li>(35, 1)</li>
-              <li>(50, 0.5)</li>
-              <li>(60, 0.1)</li>
-              <li>(65, 0.02)</li>
-              <li>(70, 0)</li>
+              <li>(0, 0)</li>
+              <li>(999, 0)</li>
             </points>
           </femaleFertilityAgeFactor>
         </reproduction>

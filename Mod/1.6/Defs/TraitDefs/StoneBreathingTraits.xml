@@ -1,138 +1,194 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>TitansGrip</defName>
-    <commonality>1</commonality>
+    <defName>UnwaveringResolve</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Titan's Grip</label>
-        <description>{PAWN_nameDef} grips their weapon with the unyielding strength of a mountain, striking with immense power. {PAWN_pronoun}'s attacks crush through defenses as if they were made of sand, leaving only rubble in their wake.</description>
-        <statFactors>
-          <MeleeDPS>1.20</MeleeDPS>
-          <MeleeHitChance>1.15</MeleeHitChance>
-        </statFactors>
+        <label>unwavering resolve</label>
+        <description>[PAWN_nameDef] has the unshakeable determination of a mountain. [PAWN_possessive] mental fortitude is absolute, making [PAWN_objective] a pillar of strength that others can rely on in any crisis.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MentalBreakThreshold>-0.35</MentalBreakThreshold>
+          <SocialImpact>0.4</SocialImpact>
+          <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+          <MoveSpeed>-0.2</MoveSpeed>
+          <ConstructionSpeed>0.3</ConstructionSpeed>
+        </statOffsets>
+        <skillGains>
+          <Social>4</Social>
+          <Construction>3</Construction>
+        </skillGains>
+        <disallowedMentalStates>
+          <li>Berserk</li>
+          <li>Tantrum</li>
+        </disallowedMentalStates>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>ImmovableStride</defName>
+    <defName>MountainEndurance</defName>
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Immovable Stride</label>
-        <description>{PAWN_nameDef} moves with the steady, powerful steps of the earth itself. {PAWN_pronoun}'s stride is firm and unwavering, leaving no ground unclaimed. {PAWN_pronoun} charges forward, unstoppable like an avalanche.</description>
-        <statFactors>
-          <MoveSpeed>1.10</MoveSpeed>
-          <MeleeDodgeChance>1.15</MeleeDodgeChance>
-        </statFactors>
+        <label>mountain endurance</label>
+        <description>[PAWN_nameDef] possesses the eternal patience of stone. [PAWN_pronoun] can endure pain and hardship that would break others, though [PAWN_possessive] movements are slow and deliberate.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <PainShockThreshold>0.5</PainShockThreshold>
+          <BedHungerRateFactor>0.7</BedHungerRateFactor>
+          <RestRateMultiplier>0.8</RestRateMultiplier>
+          <MoveSpeed>-0.3</MoveSpeed>
+          <GeneralLaborSpeed>0.2</GeneralLaborSpeed>
+        </statOffsets>
+        <skillGains>
+          <Mining>4</Mining>
+          <Construction>3</Construction>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>MountainsBond</defName>
+    <defName>GeologicalKnowledge</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Mining</li>
+      <li>Crafting</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Mountain's Bond</label>
-        <description>{PAWN_nameDef} shares a deep connection with the earth, drawing strength from the mountains and the rock beneath. {PAWN_pronoun} bends nature to {PAWN_possessive} will, commanding the creatures of the land with the power of stone.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.18</AnimalsLearningFactor>
-          <TameAnimalChance>1.15</TameAnimalChance>
-        </statFactors>
+        <label>geological knowledge</label>
+        <description>[PAWN_nameDef] understands stone and metal like an old friend. [PAWN_possessive] expertise with earth and ore makes [PAWN_objective] invaluable for construction and resource extraction.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MiningSpeed>0.5</MiningSpeed>
+          <MiningYield>0.25</MiningYield>
+          <ConstructionSpeed>0.3</ConstructionSpeed>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Mining>6</Mining>
+          <Construction>4</Construction>
+          <Crafting>3</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>UnshakableWill</defName>
-    <commonality>1</commonality>
+    <defName>AvalancheForce</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Unshakable Will</label>
-        <description>{PAWN_nameDef} is as unmovable as the foundations of the earth. {PAWN_pronoun} resists all attempts to disrupt their focus, standing firm against pain and fatigue like a mountain that never falters.</description>
-        <statFactors>
-          <PainShockThreshold>1.25</PainShockThreshold>
-          <RestFallRateFactor>0.80</RestFallRateFactor>
-        </statFactors>
+        <label>avalanche force</label>
+        <description>[PAWN_nameDef] strikes with the devastating power of a rockslide. [PAWN_possessive] attacks are slow but overwhelmingly destructive, capable of shattering anything in [PAWN_possessive] path.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>-3</MeleeHitChance>
+          <MeleeDPS>0.6</MeleeDPS>
+          <MoveSpeed>-0.25</MoveSpeed>
+          <ConstructionSpeed>-0.2</ConstructionSpeed>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
+          <Mining>2</Mining>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>UnyieldingStance</defName>
-    <commonality>1</commonality>
+    <defName>TectonicSense</defName>
+    <commonality>0.6</commonality>
+    <forcedPassions>
+      <li>Intellectual</li>
+      <li>Mining</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Unyielding Stance</label>
-        <description>{PAWN_nameDef} stands like an immovable stone, immune to the filth and toxins that might harm others. No matter the conditions, {PAWN_pronoun} remains standing, solid and unaffected by the harshest of environments.</description>
-        <statFactors>
-          <FilthRate>0.75</FilthRate>
-          <ToxicResistance>1.25</ToxicResistance>
-        </statFactors>
+        <label>tectonic sense</label>
+        <description>[PAWN_nameDef] feels the pulse of the earth itself. [PAWN_possessive] connection to stone and soil gives [PAWN_objective] uncanny awareness of underground resources and geological formations.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ResearchSpeed>0.3</ResearchSpeed>
+          <MiningSpeed>0.4</MiningSpeed>
+          <TrapSpringChance>-0.6</TrapSpringChance>
+          <DeepDrillingSpeed>0.5</DeepDrillingSpeed>
+        </statOffsets>
+        <skillGains>
+          <Intellectual>4</Intellectual>
+          <Mining>5</Mining>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>RockHewnRecipes</defName>
-    <commonality>1</commonality>
+    <defName>BedrockFoundation</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Construction</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Rock-Hewn Recipes</label>
-        <description>{PAWN_nameDef} crafts meals with the enduring strength of the earth itself. {PAWN_pronoun} ensures that every ingredient is used efficiently, sustaining the troops like the heart of a mountain that never runs dry.</description>
-        <statFactors>
-          <CookSpeed>1.15</CookSpeed>
-          <ButcheryFleshEfficiency>1.18</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>bedrock foundation</label>
+        <description>[PAWN_nameDef] builds structures that will stand for millennia. [PAWN_possessive] construction work is methodical and permanent, creating fortifications that can withstand any siege.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ConstructionSpeed>0.4</ConstructionSpeed>
+          <ConstructSuccessChance>0.3</ConstructSuccessChance>
+          <FixBrokenDownBuildingSuccessChance>0.4</FixBrokenDownBuildingSuccessChance>
+          <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Construction>6</Construction>
+          <Mining>3</Mining>
+          <Crafting>2</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>ColossalPresence</defName>
-    <commonality>1</commonality>
+    <defName>CrystalFormation</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Artistic</li>
+      <li>Crafting</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Colossal Presence</label>
-        <description>{PAWN_nameDef} carries the weight of mountains in their presence. {PAWN_pronoun} exudes power and determination, inspiring those around {PAWN_pronoun} to stand firm and follow with unwavering loyalty.</description>
-        <statFactors>
-          <SocialImpact>1.22</SocialImpact>
-          <RestRateMultiplier>1.15</RestRateMultiplier>
-        </statFactors>
+        <label>crystal formation</label>
+        <description>[PAWN_nameDef] shapes stone and crystal with artistic precision. [PAWN_possessive] work transforms raw minerals into objects of beauty and value, finding art in the earth's treasures.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>0.35</WorkSpeedGlobal>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <MiningYield>0.2</MiningYield>
+        </statOffsets>
+        <skillGains>
+          <Artistic>5</Artistic>
+          <Crafting>4</Crafting>
+          <Mining>2</Mining>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>UnshakableAid</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Unshakable Aid</label>
-        <description>{PAWN_nameDef} helps others with the steady and firm touch of the earth. {PAWN_pronoun} heals and comforts others with unwavering patience, never letting the wounded suffer for long.</description>
-        <statFactors>
-          <MedicalTendQuality>1.20</MedicalTendQuality>
-          <MedicalTendSpeed>1.15</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>EarthenGrowth</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Earthen Growth</label>
-        <description>{PAWN_nameDef} taps into the power of the earth to promote growth. {PAWN_pronoun} can nurture the land with an almost mystical touch, ensuring that crops grow and yield plentiful harvests, like a mountain rich with resources.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.15</PlantWorkSpeed>
-          <PlantHarvestYield>1.20</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

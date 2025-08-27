@@ -1,138 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>FrozenForce</defName>
+    <defName>IceInVeins</defName>
     <commonality>1</commonality>
+    <conflictingTraits>
+      <li>Neurotic</li>
+    </conflictingTraits>
     <degreeDatas>
       <li>
-        <label>Frozen Force</label>
-        <description>{PAWN_nameDef} commands the bitter cold, striking with the icy power of winter. {PAWN_pronoun}'s attacks freeze the air itself, slowing enemies and shattering their defenses with cold precision.</description>
-        <statFactors>
-          <MeleeDPS>1.18</MeleeDPS>
-          <MeleeHitChance>1.12</MeleeHitChance>
-        </statFactors>
+        <label>ice in veins</label>
+        <description>[PAWN_nameDef] has ice flowing through [PAWN_possessive] veins. [PAWN_pronoun] moves with deliberate precision, immune to heat and pain, but slower than others in all endeavors.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+          <ComfyTemperatureMax>35</ComfyTemperatureMax>
+          <PainShockThreshold>0.4</PainShockThreshold>
+          <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+          <MoveSpeed>-0.3</MoveSpeed>
+          <MentalBreakThreshold>-0.2</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Intellectual>2</Intellectual>
+          <Crafting>2</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.03</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>GlacialSwiftness</defName>
+    <defName>FrozenFocus</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Intellectual</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Glacial Swiftness</label>
-        <description>{PAWN_nameDef} moves with the silent grace of snow falling in the dead of winter. {PAWN_pronoun} strikes swiftly, leaving a trail of frost in {PAWN_possessive} wake as enemies are caught off guard.</description>
-        <statFactors>
-          <MoveSpeed>1.14</MoveSpeed>
-          <MeleeDodgeChance>1.16</MeleeDodgeChance>
-        </statFactors>
+        <label>frozen focus</label>
+        <description>[PAWN_nameDef] possesses crystalline mental clarity. [PAWN_possessive] mind remains calm and focused even under extreme stress, though [PAWN_pronoun] seems distant from others.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ResearchSpeed>0.4</ResearchSpeed>
+          <MentalBreakThreshold>-0.25</MentalBreakThreshold>
+          <SocialImpact>-0.3</SocialImpact>
+          <MeditationFocusGain>0.4</MeditationFocusGain>
+          <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+        </statOffsets>
+        <skillGains>
+          <Intellectual>5</Intellectual>
+          <Social>-2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>IcyDominion</defName>
-    <commonality>1</commonality>
+    <defName>GlacialEndurance</defName>
+    <commonality>0.8</commonality>
     <degreeDatas>
       <li>
-        <label>Icy Dominion</label>
-        <description>{PAWN_nameDef} exudes the aura of the frozen north, commanding even the fiercest creatures to submit. {PAWN_pronoun} bends the will of beasts with the unyielding force of winter's chill.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.15</AnimalsLearningFactor>
-          <TameAnimalChance>1.18</TameAnimalChance>
-        </statFactors>
+        <label>glacial endurance</label>
+        <description>[PAWN_nameDef] has the endurance of an ancient glacier. [PAWN_pronoun] moves slowly but with inexorable precision, rarely needing food or rest.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <BedHungerRateFactor>0.5</BedHungerRateFactor>
+          <RestRateMultiplier>0.7</RestRateMultiplier>
+          <PainShockThreshold>0.3</PainShockThreshold>
+          <MoveSpeed>-0.4</MoveSpeed>
+          <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+          <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Shooting>3</Shooting>
+          <Crafting>3</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.06</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>PermafrostStamina</defName>
-    <commonality>1</commonality>
+    <defName>WintersHeart</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Permafrost Stamina</label>
-        <description>{PAWN_nameDef} stands resolute against the harshest cold, immune to exhaustion and pain. Even in the darkest depths of winter, {PAWN_pronoun} pushes onward, a paragon of icy endurance.</description>
-        <statFactors>
-          <PainShockThreshold>1.18</PainShockThreshold>
-          <RestFallRateFactor>0.78</RestFallRateFactor>
-        </statFactors>
+        <label>winter's heart</label>
+        <description>[PAWN_nameDef] thrives in the bitter cold of winter. [PAWN_possessive] combat prowess increases with dropping temperatures, but [PAWN_pronoun] suffers greatly in heat.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+          <ComfyTemperatureMax>15</ComfyTemperatureMax>
+          <MeleeHitChance>6</MeleeHitChance>
+          <MeleeDPS>0.2</MeleeDPS>
+          <MentalBreakThreshold>-5</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Crafting>2</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.02</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>GlacialImmunity</defName>
-    <commonality>1</commonality>
+    <defName>CryogenicHealing</defName>
+    <commonality>0.6</commonality>
+    <forcedPassions>
+      <li>Medicine</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Glacial Immunity</label>
-        <description>{PAWN_nameDef} thrives in the extreme cold, untouched by toxins and filth. {PAWN_pronoun} walks through the harshest of conditions unscathed, like a glacier that withstands centuries of time.</description>
-        <statFactors>
-          <FilthRate>0.78</FilthRate>
-          <ToxicResistance>1.25</ToxicResistance>
-        </statFactors>
+        <label>cryogenic healing</label>
+        <description>[PAWN_nameDef] heals with the slow certainty of frozen time. [PAWN_possessive] recovery is gradual but complete, and infections cannot take hold in [PAWN_possessive] chilled body.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <InjuryHealingFactor>2.0</InjuryHealingFactor>
+          <ImmunityGainSpeed>2.0</ImmunityGainSpeed>
+          <SurgerySuccessChanceFactor>0.3</SurgerySuccessChanceFactor>
+          <MedicalTendSpeed>0.25</MedicalTendSpeed>
+          <ComfyTemperatureMin>-45</ComfyTemperatureMin>
+        </statOffsets>
+        <skillGains>
+          <Medicine>5</Medicine>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>FrozenFeast</defName>
-    <commonality>1</commonality>
+    <defName>AbsoluteZero</defName>
+    <commonality>0.3</commonality>
     <degreeDatas>
       <li>
-        <label>Frozen Feast</label>
-        <description>{PAWN_nameDef} uses the cold to preserve food, turning ice into sustenance. {PAWN_pronoun} ensures that nothing goes to waste, crafting meals that sustain allies through even the harshest winters.</description>
-        <statFactors>
-          <CookSpeed>1.15</CookSpeed>
-          <ButcheryFleshEfficiency>1.20</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>absolute zero</label>
+        <description>[PAWN_nameDef] embodies the ultimate cold. [PAWN_possessive] body exists at temperatures that would kill others, preserving everything around [PAWN_objective] but making [PAWN_objective] emotionally distant.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+          <ComfyTemperatureMax>40</ComfyTemperatureMax>
+          <SocialImpact>-0.5</SocialImpact>
+          <MeleeHitChance>4</MeleeHitChance>
+          <FoodPoisonChance>-1.0</FoodPoisonChance>
+          <PsychicSensitivity>-0.3</PsychicSensitivity>
+        </statOffsets>
+        <skillGains>
+          <Melee>3</Melee>
+          <Cooking>3</Cooking>
+          <Social>-4</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.05</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>ChillingAura</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Chilling Aura</label>
-        <description>{PAWN_nameDef} emanates an aura of frost that chills the heart and sharpens resolve. {PAWN_pronoun}'s presence inspires loyalty and determination in those nearby, like the calm before a blizzard.</description>
-        <statFactors>
-          <SocialImpact>1.16</SocialImpact>
-          <RestRateMultiplier>1.15</RestRateMultiplier>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>ChilledRestoration</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Chilled Restoration</label>
-        <description>{PAWN_nameDef} heals with the precision of winter's touch, revitalizing the wounded with a calming cold that restores vitality. Even in the most frigid of times, {PAWN_pronoun} ensures that allies recover swiftly.</description>
-        <statFactors>
-          <MedicalTendQuality>1.18</MedicalTendQuality>
-          <MedicalTendSpeed>1.16</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>FrozenBloom</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Frozen Bloom</label>
-        <description>{PAWN_nameDef} nurtures the earth with the delicate touch of frost, fostering life even in the harshest of conditions. Wherever {PAWN_pronoun} treads, the cold brings forth new growth, flourishing in the wake of winter's embrace.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.16</PlantWorkSpeed>
-          <PlantHarvestYield>1.18</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

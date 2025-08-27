@@ -3,6 +3,7 @@
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_FrostBreath</defName>
     <label>Frost Breath</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Frost Breath</resourceName>
     <description>Carriers of this gene can channel the biting chill of frost into their body, unleashing rapid and devastating ice-based attacks fueled by their inner breath. Their power brings frigid winds and piercing cold to the battlefield.</description>
     <iconPath>UI/Icons/Genes/frost</iconPath>

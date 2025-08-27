@@ -1,46 +1,244 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
   <TraitDef>
-    <defName>DemonicResilience</defName>
-    <commonality>1</commonality>
+    <defName>BloodThirst</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
+    <conflictingTraits>
+      <li>Ascetic</li>
+      <li>Kind</li>
+    </conflictingTraits>
     <degreeDatas>
       <li>
-        <label>Demonic Resilience</label>
-        <description>{PAWN_nameDef} possesses an unnatural resilience, allowing {PAWN_objective} to endure pain far beyond normal limits. {PAWN_pronoun}'s body is tougher than most, shrugging off injuries that would cripple others.</description>
-        <statFactors>
-          <PainShockThreshold>1.25</PainShockThreshold>
-        </statFactors>
+        <label>blood thirst</label>
+        <description>[PAWN_nameDef] craves human blood with an insatiable hunger. [PAWN_possessive] demonic nature grants incredible combat prowess, but [PAWN_pronoun] must feed regularly or suffer severe consequences.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>15</MeleeHitChance>
+          <MeleeDPS>0.6</MeleeDPS>
+          <MoveSpeed>0.3</MoveSpeed>
+          <SocialImpact>-0.5</SocialImpact>
+        </statOffsets>
+        <skillGains>
+          <Melee>7</Melee>
+          <Shooting>-2</Shooting>
+          <Social>-3</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.2</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>DarkHunger</defName>
-    <commonality>1</commonality>
+    <defName>RegenerativeFlesh</defName>
+    <commonality>0.6</commonality>
     <degreeDatas>
       <li>
-        <label>Dark Hunger</label>
-        <description>{PAWN_nameDef} harbors an insatiable hunger, consuming meals with unnatural speed. {PAWN_pronoun} also has a body that yields slightly more flesh, as if shaped by some dark, ravenous force.</description>
-        <statFactors>
-          <MeatAmount>1.15</MeatAmount>
-          <EatingSpeed>1.30</EatingSpeed>
-        </statFactors>
+        <label>regenerative flesh</label>
+        <description>[PAWN_nameDef] possesses supernatural healing abilities that rapidly mend wounds. [PAWN_possessive] demonic constitution allows [PAWN_objective] to recover from injuries that would cripple mortals, though sunlight weakens this power.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <InjuryHealingFactor>0.8</InjuryHealingFactor>
+          <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+          <PainShockThreshold>0.3</PainShockThreshold>
+          <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+          <ComfyTemperatureMax>50</ComfyTemperatureMax>
+        </statOffsets>
+        <skillGains>
+          <Medicine>3</Medicine>
+        </skillGains>
+        <marketValueFactorOffset>0.25</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>DemonicEndurance</defName>
-    <commonality>1</commonality>
+    <defName>NightPredator</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Animals</li>
+    </forcedPassions>
+    <conflictingTraits>
+      <li>NightOwl</li>
+    </conflictingTraits>
     <degreeDatas>
       <li>
-        <label>Demonic Endurance</label>
-        <description>{PAWN_nameDef} moves with tireless determination, possessing a supernatural endurance that allows {PAWN_objective} to push forward even when others falter. Whether walking or crawling, {PAWN_pronoun} refuses to be slowed.</description>
-        <statFactors>
-          <MoveSpeed>1.15</MoveSpeed>
-          <CrawlSpeed>1.20</CrawlSpeed>
-        </statFactors>
+        <label>night predator</label>
+        <description>[PAWN_nameDef] thrives in darkness like a true creature of the night. [PAWN_possessive] enhanced senses and predatory instincts make [PAWN_objective] deadly in the shadows, but daylight weakens [PAWN_possessive] abilities.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <HuntingStealth>1.0</HuntingStealth>
+          <MeleeHitChance>10</MeleeHitChance>
+          <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+          <WorkSpeedGlobal>-0.3</WorkSpeedGlobal>
+          <MentalBreakThreshold>-5</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Animals>5</Animals>
+          <Melee>4</Melee>
+          <Shooting>3</Shooting>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
+  <TraitDef>
+    <defName>InhumanStrength</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Mining</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>inhuman strength</label>
+        <description>[PAWN_nameDef] possesses strength far beyond mortal limits. [PAWN_possessive] demonic power allows [PAWN_objective] to crush stone with bare hands and wield massive weapons, though such power is difficult to control.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeDPS>0.8</MeleeDPS>
+          <MiningSpeed>0.7</MiningSpeed>
+          <CarryingCapacity>100</CarryingCapacity>
+          <ConstructionSpeed>-0.2</ConstructionSpeed>
+        </statOffsets>
+        <skillGains>
+          <Melee>6</Melee>
+          <Mining>5</Mining>
+          <Crafting>-3</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CorruptedMind</defName>
+    <commonality>0.6</commonality>
+    <conflictingTraits>
+      <li>Kind</li>
+    </conflictingTraits>
+    <degreeDatas>
+      <li>
+        <label>corrupted mind</label>
+        <description>[PAWN_nameDef] has been twisted by demonic influence, losing much of [PAWN_possessive] humanity. [PAWN_possessive] alien thought patterns make [PAWN_objective] resistant to mental manipulation but unable to form meaningful connections.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <PsychicSensitivity>-0.8</PsychicSensitivity>
+          <MentalBreakThreshold>-0.3</MentalBreakThreshold>
+          <SocialImpact>-0.6</SocialImpact>
+          <NegotiationAbility>-0.4</NegotiationAbility>
+          <MentalBreakThreshold>-10</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Social>-5</Social>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+        <disallowedMentalStates>
+          <li>SocialFighting</li>
+        </disallowedMentalStates>
+        <marketValueFactorOffset>-0.1</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>FleshManipulation</defName>
+    <commonality>0.4</commonality>
+    <forcedPassions>
+      <li>Medicine</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>flesh manipulation</label>
+        <description>[PAWN_nameDef] can reshape flesh and bone with supernatural precision. [PAWN_possessive] grotesque abilities make [PAWN_objective] an unparalleled surgeon, though [PAWN_possessive] methods horrify normal people.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SurgerySuccessChanceFactor>1.0</SurgerySuccessChanceFactor>
+          <MedicalTendSpeed>0.6</MedicalTendSpeed>
+          <SocialImpact>-0.4</SocialImpact>
+          <Beauty>-2</Beauty>
+        </statOffsets>
+        <skillGains>
+          <Medicine>8</Medicine>
+          <Crafting>3</Crafting>
+          <Social>-2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.18</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>BloodArt</defName>
+    <commonality>0.3</commonality>
+    <forcedPassions>
+      <li>Artistic</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>blood art</label>
+        <description>[PAWN_nameDef] wields supernatural Blood Demon Art techniques. [PAWN_possessive] unique abilities manifest through artistic expression, creating both beautiful and terrifying works powered by demonic energy.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>8</MeleeHitChance>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+          <MentalBreakThreshold>5</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Artistic>7</Artistic>
+          <Melee>4</Melee>
+          <Crafting>2</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.22</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>SunlightVulnerability</defName>
+    <commonality>0.9</commonality>
+    <degreeDatas>
+      <li>
+        <label>sunlight vulnerability</label>
+        <description>[PAWN_nameDef] suffers greatly under the sun's rays. [PAWN_possessive] demonic nature makes daylight painful and weakening, forcing [PAWN_objective] to seek shadows and avoid outdoor work during the day.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+          <MoveSpeed>-0.2</MoveSpeed>
+          <MentalBreakThreshold>-8</MentalBreakThreshold>
+          <InjuryHealingFactor>-0.3</InjuryHealingFactor>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Mining>2</Mining>
+        </skillGains>
+        <marketValueFactorOffset>-0.15</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>DemonicHunger</defName>
+    <commonality>0.7</commonality>
+    <degreeDatas>
+      <li>
+        <label>demonic hunger</label>
+        <description>[PAWN_nameDef] has an endless appetite that can never be truly satisfied. [PAWN_possessive] supernatural metabolism grants increased energy but demands constant feeding, and normal food provides little sustenance.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+          <RestRateMultiplier>1.2</RestRateMultiplier>
+          <MentalBreakThreshold>-5</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Cooking>-2</Cooking>
+          <Animals>3</Animals>
+        </skillGains>
+        <marketValueFactorOffset>-0.05</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
 </Defs>

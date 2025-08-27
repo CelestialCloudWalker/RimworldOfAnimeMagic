@@ -1,138 +1,179 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>GaleStrike</defName>
+    <defName>ZephyrSteps</defName>
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Gale Strike</label>
-        <description>{PAWN_nameDef} strikes with the force of a howling gale, piercing through defenses with the power of wind. {PAWN_pronoun}'s attacks are swift and unstoppable, cutting through enemies with ease.</description>
-        <statFactors>
-          <MeleeDPS>1.18</MeleeDPS>
-          <MeleeHitChance>1.12</MeleeHitChance>
-        </statFactors>
+        <label>zephyr steps</label>
+        <description>[PAWN_nameDef] moves with the lightness of a gentle breeze. [PAWN_possessive] footsteps make no sound, and [PAWN_pronoun] glides through the world with ethereal grace.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MoveSpeed>0.4</MoveSpeed>
+          <HuntingStealth>0.6</HuntingStealth>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <CarryingCapacity>-15</CarryingCapacity>
+        </statOffsets>
+        <skillGains>
+          <Shooting>3</Shooting>
+          <Animals>2</Animals>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>HurricaneDash</defName>
-    <commonality>1</commonality>
+    <defName>GaleForce</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Shooting</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Hurricane Dash</label>
-        <description>{PAWN_nameDef} moves like a whirlwind, striking with the speed of a hurricane. {PAWN_pronoun} leaves destruction in {PAWN_possessive} wake, evading attacks with lightning-fast reflexes.</description>
-        <statFactors>
-          <MoveSpeed>1.15</MoveSpeed>
-          <MeleeDodgeChance>1.20</MeleeDodgeChance>
-        </statFactors>
+        <label>gale force</label>
+        <description>[PAWN_nameDef] harnesses the power of wind to enhance [PAWN_possessive] ranged attacks. [PAWN_possessive] shots ride the air currents with supernatural accuracy and range.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
+          <HuntingStealth>0.3</HuntingStealth>
+          <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Shooting>6</Shooting>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>TempestuousGuide</defName>
-    <commonality>1</commonality>
+    <defName>WhirlwindStrike</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Tempestuous Guide</label>
-        <description>{PAWN_nameDef} radiates the power of a storm, compelling even the wildest creatures to follow {PAWN_possessive} command. {PAWN_pronoun} bends the will of beasts with the strength and dominance of a raging tempest.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.18</AnimalsLearningFactor>
-          <TameAnimalChance>1.20</TameAnimalChance>
-        </statFactors>
+        <label>whirlwind strike</label>
+        <description>[PAWN_nameDef] spins and strikes like a miniature tornado. [PAWN_possessive] whirling attacks can engage multiple enemies simultaneously, making [PAWN_objective] devastatingly effective against groups.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>8</MeleeHitChance>
+          <MeleeDPS>0.3</MeleeDPS>
+          <MeleeDodgeChance>6</MeleeDodgeChance>
+          <MoveSpeed>0.25</MoveSpeed>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
+          <Artistic>2</Artistic>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>HowlingEndurance</defName>
-    <commonality>1</commonality>
+    <defName>AtmosphericPressure</defName>
+    <commonality>0.6</commonality>
     <degreeDatas>
       <li>
-        <label>Howling Endurance</label>
-        <description>{PAWN_nameDef} endures hardship like the relentless winds, pressing on no matter the adversity. {PAWN_pronoun} is unshaken, weathering pain and fatigue like a storm that refuses to dissipate.</description>
-        <statFactors>
-          <PainShockThreshold>1.18</PainShockThreshold>
-          <RestFallRateFactor>0.80</RestFallRateFactor>
-        </statFactors>
+        <label>atmospheric pressure</label>
+        <description>[PAWN_nameDef] has adapted to changes in air pressure and altitude. [PAWN_possessive] efficient breathing and stamina make [PAWN_objective] immune to weather effects and altitude sickness.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <RestRateMultiplier>1.4</RestRateMultiplier>
+          <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+          <MentalBreakThreshold>5</MentalBreakThreshold>
+          <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+        </statOffsets>
+        <skillGains>
+          <Construction>2</Construction>
+          <Mining>2</Mining>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>StormsBarrier</defName>
-    <commonality>1</commonality>
+    <defName>CuttingBreeze</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+      <li>Artistic</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Storm's Barrier</label>
-        <description>{PAWN_nameDef} thrives in the chaos of battle, unshaken by filth or toxins. {PAWN_pronoun} remains impervious, like a storm that sweeps everything aside, leaving no trace of harm.</description>
-        <statFactors>
-          <FilthRate>0.75</FilthRate>
-          <ToxicResistance>1.22</ToxicResistance>
-        </statFactors>
+        <label>cutting breeze</label>
+        <description>[PAWN_nameDef] wields bladed weapons with the precision of a sharp wind. [PAWN_possessive] cuts are surgical in their accuracy, excelling at both combat and artistic sculpture.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>8</MeleeHitChance>
+          <SurgerySuccessChanceFactor>0.3</SurgerySuccessChanceFactor>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Artistic>4</Artistic>
+          <Medicine>3</Medicine>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>TempestChef</defName>
-    <commonality>1</commonality>
+    <defName>TailwindSupport</defName>
+    <commonality>0.9</commonality>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Tempest Chef</label>
-        <description>{PAWN_nameDef} harnesses wind's power to create meals with unmatched speed and efficiency. {PAWN_pronoun} ensures every meal is perfectly crafted, nourishing allies with the swiftness of a storm.</description>
-        <statFactors>
-          <CookSpeed>1.20</CookSpeed>
-          <ButcheryFleshEfficiency>1.10</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>tailwind support</label>
+        <description>[PAWN_nameDef] provides speed and coordination bonuses to nearby allies like a favorable wind. [PAWN_possessive] presence helps others move faster and work more efficiently.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SocialImpact>0.4</SocialImpact>
+          <MoveSpeed>0.2</MoveSpeed>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Social>5</Social>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>WhirlwindsGaze</defName>
-    <commonality>1</commonality>
+    <defName>StormFront</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Intellectual</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Whirlwind's Gaze</label>
-        <description>{PAWN_nameDef} has a magnetic presence, like the pull of a powerful gust. {PAWN_pronoun}'s aura ignites loyalty and inspiration in others, leading them like the wind carries seeds to new lands.</description>
-        <statFactors>
-          <SocialImpact>1.18</SocialImpact>
-          <RestRateMultiplier>1.12</RestRateMultiplier>
-        </statFactors>
+        <label>storm front</label>
+        <description>[PAWN_nameDef] can sense changing weather patterns and atmospheric conditions. [PAWN_possessive] connection to air currents provides enhanced environmental awareness and mood stability.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ResearchSpeed>0.3</ResearchSpeed>
+          <MentalBreakThreshold>8</MentalBreakThreshold>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <TrapSpringChance>-0.4</TrapSpringChance>
+        </statOffsets>
+        <skillGains>
+          <Intellectual>5</Intellectual>
+          <Animals>2</Animals>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>BreezesCaress</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Breeze's Caress</label>
-        <description>{PAWN_nameDef} heals with the gentle touch of a breeze, bringing swift relief to the wounded. {PAWN_pronoun} uses wind's calming power to ensure recovery, never allowing an ally to fall to death's cold grasp.</description>
-        <statFactors>
-          <MedicalTendQuality>1.15</MedicalTendQuality>
-          <MedicalTendSpeed>1.15</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>GalesOrchard</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Gale's Orchard</label>
-        <description>{PAWN_nameDef} understands the winds of change and renewal, nurturing the land like a gentle breeze. Wherever {PAWN_pronoun} goes, the land flourishes, bringing forth new growth and abundance.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.12</PlantWorkSpeed>
-          <PlantHarvestYield>1.15</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

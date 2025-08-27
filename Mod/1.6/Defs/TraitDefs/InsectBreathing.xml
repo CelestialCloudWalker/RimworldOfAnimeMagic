@@ -1,138 +1,179 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>VenomousStrikes</defName>
+    <defName>CompoundEyes</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Shooting</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Venomous Strikes</label>
-        <description>{PAWN_nameDef} strikes with the lethal precision of an insect's venomous sting. {PAWN_pronoun}'s attacks inject deadly toxins into enemies, weakening and debilitating them with every blow.</description>
-        <statFactors>
-          <MeleeDPS>1.15</MeleeDPS>
-          <MeleeHitChance>1.10</MeleeHitChance>
-        </statFactors>
+        <label>compound eyes</label>
+        <description>[PAWN_nameDef] sees the world through multifaceted compound eyes. [PAWN_possessive] enhanced vision grants superior accuracy and the ability to work effectively even in complete darkness.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ShootingAccuracyPawn>8</ShootingAccuracyPawn>
+          <TrapSpringChance>-0.6</TrapSpringChance>
+          <ResearchSpeed>0.2</ResearchSpeed>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Shooting>5</Shooting>
+          <Intellectual>3</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>QuickSting</defName>
-    <commonality>1</commonality>
+    <defName>ChitinousSkin</defName>
+    <commonality>0.8</commonality>
     <degreeDatas>
       <li>
-        <label>Quick Sting</label>
-        <description>{PAWN_nameDef} moves with the speed and agility of a darting insect, striking before enemies even realize {PAWN_pronoun} is there. {PAWN_pronoun} lands precise blows, leaving opponents stunned in {PAWN_possessive} wake.</description>
-        <statFactors>
-          <MoveSpeed>1.12</MoveSpeed>
-          <MeleeDodgeChance>1.18</MeleeDodgeChance>
-        </statFactors>
+        <label>chitinous skin</label>
+        <description>[PAWN_nameDef] has developed a tough, insect-like carapace. [PAWN_possessive] natural armor protects [PAWN_objective] from harm, though [PAWN_possessive] appearance unsettles others.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+          <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
+          <SocialImpact>-0.4</SocialImpact>
+          <PawnBeauty>-2</PawnBeauty>
+        </statOffsets>
+        <skillGains>
+          <Animals>2</Animals>
+          <Social>-2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>HiveMastery</defName>
+    <defName>HiveMind</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Hive Mastery</label>
-        <description>{PAWN_nameDef} commands the unity of the swarm, manipulating insects and beasts alike with the cunning and strategy of a queen. {PAWN_pronoun} commands loyalty and obedience from those under {PAWN_possessive} control.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.20</AnimalsLearningFactor>
-          <TameAnimalChance>1.15</TameAnimalChance>
-        </statFactors>
+        <label>hive mind</label>
+        <description>[PAWN_nameDef] functions as part of a collective consciousness. [PAWN_pronoun] excels when working with others but struggles with individual creativity and independent thought.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+          <SocialImpact>0.3</SocialImpact>
+          <ConstructionSpeed>0.25</ConstructionSpeed>
+          <ResearchSpeed>-0.3</ResearchSpeed>
+        </statOffsets>
+        <skillGains>
+          <Social>4</Social>
+          <Construction>3</Construction>
+          <Intellectual>-3</Intellectual>
+          <Artistic>-2</Artistic>
+        </skillGains>
+        <marketValueFactorOffset>0.05</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>ChitinousToughness</defName>
-    <commonality>1</commonality>
+    <defName>Metamorphosis</defName>
+    <commonality>0.6</commonality>
     <degreeDatas>
       <li>
-        <label>Chitinous Toughness</label>
-        <description>{PAWN_nameDef} possesses the resilience of hardened chitin, shrugging off pain and exhaustion with ease. Like an insect's exoskeleton, {PAWN_pronoun} endures where others falter, continuing the fight with unyielding strength.</description>
-        <statFactors>
-          <PainShockThreshold>1.20</PainShockThreshold>
-          <RestFallRateFactor>0.85</RestFallRateFactor>
-        </statFactors>
+        <label>metamorphosis</label>
+        <description>[PAWN_nameDef] undergoes constant internal change like an insect in metamorphosis. [PAWN_possessive] body and mind adapt continuously, learning and growing stronger over time.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <GlobalLearningFactor>0.35</GlobalLearningFactor>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <InjuryHealingFactor>0.3</InjuryHealingFactor>
+        </statOffsets>
+        <skillGains>
+          <Intellectual>2</Intellectual>
+          <Medicine>2</Medicine>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>ToxinResistance</defName>
-    <commonality>1</commonality>
+    <defName>SwarmTactics</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Toxin Resistance</label>
-        <description>{PAWN_nameDef} is resistant to the toxins and venom that would fell lesser beings. {PAWN_pronoun} thrives in even the most polluted and dangerous environments, unscathed by poison and filth.</description>
-        <statFactors>
-          <FilthRate>0.80</FilthRate>
-          <ToxicResistance>1.25</ToxicResistance>
-        </statFactors>
+        <label>swarm tactics</label>
+        <description>[PAWN_nameDef] fights with the coordinated fury of a swarm. [PAWN_pronoun] becomes increasingly effective with more allies nearby, but falters when isolated.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>6</MeleeHitChance>
+          <MeleeDPS>0.15</MeleeDPS>
+          <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Social>2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.03</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>PoisonGourmet</defName>
+    <defName>InsectoidDigestion</defName>
     <commonality>1</commonality>
     <degreeDatas>
       <li>
-        <label>Poison Gourmet</label>
-        <description>{PAWN_nameDef} can craft meals with the subtlety of a venomous insect, using toxins and poisons as both ingredients and tools. {PAWN_pronoun} creates dishes that balance potency and flavor, ensuring nothing goes to waste.</description>
-        <statFactors>
-          <CookSpeed>1.15</CookSpeed>
-          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>insectoid digestion</label>
+        <description>[PAWN_nameDef] can digest almost any organic matter like an insect. [PAWN_pronoun] never suffers from food poisoning and can sustain [PAWN_objective] on the most basic nutrients.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <FoodPoisonChance>-1.0</FoodPoisonChance>
+          <BedHungerRateFactor>0.8</BedHungerRateFactor>
+          <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+          <SocialImpact>-0.2</SocialImpact>
+        </statOffsets>
+        <skillGains>
+          <Animals>3</Animals>
+          <Plants>2</Plants>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>PheromonalInfluence</defName>
-    <commonality>1</commonality>
+    <defName>WebWeaving</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Crafting</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Pheromonal Influence</label>
-        <description>{PAWN_nameDef} exudes pheromones that influence and command those around {PAWN_pronoun}, drawing allies in like ants to a queen. {PAWN_pronoun} ignites loyalty and passion in those who follow.</description>
-        <statFactors>
-          <SocialImpact>1.18</SocialImpact>
-          <RestRateMultiplier>1.10</RestRateMultiplier>
-        </statFactors>
+        <label>web weaving</label>
+        <description>[PAWN_nameDef] spins intricate patterns like a spider weaving its web. [PAWN_possessive] delicate touch excels at textile work and trap construction, creating both functional and beautiful designs.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+          <ConstructionSpeed>0.2</ConstructionSpeed>
+          <TrapSpringChance>-0.4</TrapSpringChance>
+        </statOffsets>
+        <skillGains>
+          <Crafting>5</Crafting>
+          <Artistic>3</Artistic>
+          <Construction>2</Construction>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>ToxicRemedy</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Toxic Remedy</label>
-        <description>{PAWN_nameDef} possesses an innate understanding of poisons, using toxins to heal rather than harm. {PAWN_pronoun} creates remedies and cures, turning venomous substances into potent healing agents for those who need it most.</description>
-        <statFactors>
-          <MedicalTendQuality>1.15</MedicalTendQuality>
-          <MedicalTendSpeed>1.12</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>PollinatorsGift</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Pollinator's Gift</label>
-        <description>{PAWN_nameDef} nurtures life and growth, like an insect spreading pollen from plant to plant. Wherever {PAWN_pronoun} treads, nature thrives, and the land is replenished with new vitality.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.18</PlantWorkSpeed>
-          <PlantHarvestYield>1.12</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

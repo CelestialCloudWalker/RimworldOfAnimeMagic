@@ -1,76 +1,48 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <DamageDef>
     <defName>Water_Pressure</defName>
     <label>Water Pressure</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was cleaved through by water pressure.</deathMessage>
-    <hediff>AA_Soaked</hediff>
-    <hediffSkin>AA_Soaked</hediffSkin>
+    <deathMessage>{0} was overwhelmed by crushing water pressure.</deathMessage>
+    <hediff>WaterPressure_Cut</hediff>
+    <hediffSkin>WaterPressure_Cut</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Sharp</armorCategory>
     <impactSoundType>Slice</impactSoundType>
+    <makesBlood>true</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
   </DamageDef>
-  <HediffDef ParentName="WaterBreathingDebuffBase">
-    <defName>AA_Soaked</defName>
-    <label>Soaked</label>
-    <labelNoun>a soaked condition</labelNoun>
-    <description>After being struck by high-pressure water, the pawn is soaked. Their body is heavy, slowed, and vulnerable to follow-up attacks.</description>
-    <tendable>true</tendable>
-    <stages>
-      <li>
-        <capMods>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.15</offset>
-          </li>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-0.15</offset>
-          </li>
-          <li>
-            <capacity>Sight</capacity>
-            <offset>-0.1</offset>
-          </li>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.1</offset>
-          </li>
-        </capMods>
-        <statFactors>
-          <WorkSpeedGlobal>0.85</WorkSpeedGlobal>
-          <MeleeDPS>0.8</MeleeDPS>
-          <MeleeHitChance>0.9</MeleeHitChance>
-          <MeleeDodgeChance>0.7</MeleeDodgeChance>
-          <ShootingAccuracyPawn>0.85</ShootingAccuracyPawn>
-          <AimingDelayFactor>1.3</AimingDelayFactor>
-          <StaggerDurationFactor>1.4</StaggerDurationFactor>
-          <Flammability>0</Flammability>
-        </statFactors>
-        <statOffsets>
-          <MoveSpeed>-0.2</MoveSpeed>
-          <ImmunityGainSpeed>-0.15</ImmunityGainSpeed>
-        </statOffsets>
-      </li>
-    </stages>
+
+  
+  <HediffDef ParentName="InjuryBase">
+    <defName>WaterPressure_Cut</defName>
+    <label>water pressure cut</label>
+    <labelNoun>a water pressure cut</labelNoun>
+    <description>A cutting wound caused by high-pressure water.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
-        <severityPerDayTended>-0.75</severityPerDayTended>
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
       </li>
-      <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>7200</disappearsAfterTicks>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.05</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <becomePermanentChanceFactor>0.15</becomePermanentChanceFactor>
       </li>
     </comps>
     <injuryProps>
-      <painPerSeverity>0.02</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.005</averagePainPerSeverityPermanent>
-      <bleedRate>0.01</bleedRate>
-      <canMerge>true</canMerge>
-      <destroyedLabel>Completely Soaked</destroyedLabel>
-      <destroyedOutLabel>Evaporated</destroyedOutLabel>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.03</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Cut off</destroyedLabel>
+      <destroyedOutLabel>Cut out</destroyedOutLabel>
+      <useRemovedLabel>true</useRemovedLabel>
     </injuryProps>
-    <maxSeverity>1.0</maxSeverity>
-    <initialSeverity>0.5</initialSeverity>
   </HediffDef>
 </Defs>

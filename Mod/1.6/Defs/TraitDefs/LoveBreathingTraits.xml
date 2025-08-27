@@ -1,138 +1,173 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>AffectionateStrength</defName>
+    <defName>OverwhelmingAffection</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
+    <conflictingTraits>
+      <li>Psychopath</li>
+    </conflictingTraits>
     <degreeDatas>
       <li>
-        <label>Affectionate Strength</label>
-        <description>{PAWN_nameDef} channels the overwhelming power of love into every strike, inflicting damage not only with force but with the purest of intentions. {PAWN_pronoun}'s attacks resonate with the strength of devotion, breaking through defenses with tenderness and power.</description>
-        <statFactors>
-          <MeleeDPS>1.15</MeleeDPS>
-          <MeleeHitChance>1.10</MeleeHitChance>
-        </statFactors>
+        <label>overwhelming affection</label>
+        <description>[PAWN_nameDef] loves all living beings with an intensity that radiates from [PAWN_possessive] very soul. [PAWN_possessive] social abilities are unmatched, but [PAWN_pronoun] cannot bear to harm others.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SocialImpact>0.6</SocialImpact>
+          <NegotiationAbility>0.5</NegotiationAbility>
+          <ArrestSuccessChance>0.4</ArrestSuccessChance>
+          <MeleeHitChance>-10</MeleeHitChance>
+          <ShootingAccuracyPawn>-5</ShootingAccuracyPawn>
+        </statOffsets>
+        <skillGains>
+          <Social>6</Social>
+          <Medicine>2</Medicine>
+          <Melee>-4</Melee>
+          <Shooting>-3</Shooting>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>HeartfeltLeap</defName>
+    <defName>ProtectiveInstinct</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Medicine</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Heartfelt Leap</label>
-        <description>{PAWN_nameDef} moves with the speed and grace of a heart filled with passion, leaping across the battlefield to protect those dear. {PAWN_pronoun} strikes with precision, leaving nothing but the warmth of love in {PAWN_possessive} wake.</description>
-        <statFactors>
-          <MoveSpeed>1.12</MoveSpeed>
-          <MeleeDodgeChance>1.18</MeleeDodgeChance>
-        </statFactors>
+        <label>protective instinct</label>
+        <description>[PAWN_nameDef] feels compelled to shield others from harm. [PAWN_possessive] protective nature makes [PAWN_objective] an exceptional healer and rescuer, though [PAWN_pronoun] suffers when unable to help.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>8</MeleeHitChance>
+          <MeleeDPS>0.3</MeleeDPS>
+          <SurgerySuccessChanceFactor>0.4</SurgerySuccessChanceFactor>
+          <MedicalTendSpeed>0.35</MedicalTendSpeed>
+          <MentalBreakThreshold>0.15</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Medicine>6</Medicine>
+          <Melee>3</Melee>
+          <Social>2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>SoothingPresence</defName>
-    <commonality>1</commonality>
+    <defName>EmotionalResonance</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Soothing Presence</label>
-        <description>{PAWN_nameDef} radiates warmth and compassion, calming the spirits of those nearby. {PAWN_pronoun}'s presence brings peace and harmony, fostering love and trust among allies.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.20</AnimalsLearningFactor>
-          <TameAnimalChance>1.15</TameAnimalChance>
-        </statFactors>
+        <label>emotional resonance</label>
+        <description>[PAWN_nameDef] feels the emotions of others as if they were [PAWN_possessive] own. [PAWN_possessive] empathic abilities allow profound connections but leave [PAWN_objective] vulnerable to others' pain.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <PsychicSensitivity>0.6</PsychicSensitivity>
+          <SocialImpact>0.4</SocialImpact>
+          <NegotiationAbility>0.3</NegotiationAbility>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Social>5</Social>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.06</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>UnwaveringDevotion</defName>
-    <commonality>1</commonality>
+    <defName>InspiringPresence</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Unwavering Devotion</label>
-        <description>{PAWN_nameDef} stands resolute in the face of hardship, driven by an unshakable devotion to those {PAWN_pronoun} holds dear. No matter the challenges faced, {PAWN_pronoun}'s resolve remains unbroken, standing firm to protect what {PAWN_pronoun} loves.</description>
-        <statFactors>
-          <PainShockThreshold>1.20</PainShockThreshold>
-          <RestFallRateFactor>0.85</RestFallRateFactor>
-        </statFactors>
+        <label>inspiring presence</label>
+        <description>[PAWN_nameDef] radiates hope and determination that lifts the spirits of all nearby. [PAWN_possessive] very presence motivates others to work harder and feel happier.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+          <SocialImpact>0.5</SocialImpact>
+          <MentalBreakThreshold>8</MentalBreakThreshold>
+          <MentalBreakThreshold>-0.2</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Social>5</Social>
+          <Artistic>2</Artistic>
+        </skillGains>
+        <marketValueFactorOffset>0.18</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>AffectionsAegis</defName>
-    <commonality>1</commonality>
+    <defName>UnconditionalCare</defName>
+    <commonality>0.6</commonality>
+    <forcedPassions>
+      <li>Medicine</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Affection's Aegis</label>
-        <description>{PAWN_nameDef} creates a protective barrier around {PAWN_pronoun}self and allies, as love acts as an unbreakable shield. Whether under fire or assault, {PAWN_pronoun} remains untouched by harm, offering the warmth of safety and protection.</description>
-        <statFactors>
-          <FilthRate>0.80</FilthRate>
-          <ToxicResistance>1.25</ToxicResistance>
-        </statFactors>
+        <label>unconditional care</label>
+        <description>[PAWN_nameDef] provides healing without judgment or hesitation. [PAWN_possessive] medical work never fails because it comes from a place of pure love and dedication to preserving life.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SurgerySuccessChanceFactor>0.8</SurgerySuccessChanceFactor>
+          <MedicalTendSpeed>0.4</MedicalTendSpeed>
+          <SocialImpact>0.3</SocialImpact>
+          <InjuryHealingFactor>0.2</InjuryHealingFactor>
+        </statOffsets>
+        <skillGains>
+          <Medicine>7</Medicine>
+          <Social>3</Social>
+        </skillGains>
+        <disallowedMentalStates>
+          <li>SocialFighting</li>
+        </disallowedMentalStates>
+        <marketValueFactorOffset>0.2</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>RomanticFeast</defName>
-    <commonality>1</commonality>
+    <defName>HeartShield</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Romantic Feast</label>
-        <description>{PAWN_nameDef} prepares meals infused with love, offering both sustenance and joy to those gathered around. {PAWN_pronoun}'s cooking nourishes the body and soul, ensuring that everyone feels cherished and cared for.</description>
-        <statFactors>
-          <CookSpeed>1.15</CookSpeed>
-          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>heart shield</label>
+        <description>[PAWN_nameDef] becomes an unbreakable shield when defending those [PAWN_pronoun] loves. [PAWN_possessive] protective instincts grant supernatural defensive abilities but make [PAWN_objective] reckless in [PAWN_possessive] devotion.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>5</MeleeHitChance>
+          <MeleeDodgeChance>8</MeleeDodgeChance>
+          <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Medicine>3</Medicine>
+          <Social>2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>IrresistibleCharm</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Irresistible Charm</label>
-        <description>{PAWN_nameDef} exudes an undeniable aura of affection, captivating everyone in {PAWN_possessive} presence. {PAWN_pronoun}'s charm and warmth draw others close, forging powerful bonds of love and trust.</description>
-        <statFactors>
-          <SocialImpact>1.18</SocialImpact>
-          <RestRateMultiplier>1.10</RestRateMultiplier>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>HeartfeltCare</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Heartfelt Care</label>
-        <description>{PAWN_nameDef} heals with the compassion of a devoted lover, mending wounds and offering solace to those in need. {PAWN_pronoun}'s care restores both body and spirit, ensuring that no one is left to suffer alone.</description>
-        <statFactors>
-          <MedicalTendQuality>1.15</MedicalTendQuality>
-          <MedicalTendSpeed>1.12</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>LovesBloom</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Love's Bloom</label>
-        <description>{PAWN_nameDef} nurtures the world around {PAWN_pronoun} with a heart full of affection, encouraging the growth of life in all its forms. Wherever {PAWN_pronoun} treads, the land flourishes, and love blooms in the wake of {PAWN_possessive} steps.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.18</PlantWorkSpeed>
-          <PlantHarvestYield>1.12</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

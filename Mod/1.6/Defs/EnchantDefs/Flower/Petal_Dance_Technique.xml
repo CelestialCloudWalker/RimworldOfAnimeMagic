@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <AnimeArsenal.EnchantDef>
     <defName>Petal_Dance_Technique</defName>
     <label>Petal Dance Technique</label>
@@ -8,5 +9,38 @@
     <resourceGene>Gene_FlowerBreath</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Petal_Dance_Technique_Enhanced</defName>
+    <label>Enhanced Petal Dance</label>
+    <description>An improved technique with stronger floral energy and better efficiency.</description>
+    <enchantHediff>Floral_Mastery_Enhanced</enchantHediff>
+    <resourceGene>Gene_FlowerBreath</resourceGene>
+    <ticksBetweenCost>400</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Petal_Dance_Technique_Superior</defName>
+    <label>Superior Petal Dance</label>
+    <description>A superior technique with powerful floral energy and high efficiency.</description>
+    <enchantHediff>Floral_Mastery_Superior</enchantHediff>
+    <resourceGene>Gene_FlowerBreath</resourceGene>
+    <ticksBetweenCost>350</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Petal_Dance_Technique_Master</defName>
+    <label>Master Petal Dance</label>
+    <description>The ultimate technique with devastating floral energy and maximum efficiency.</description>
+    <enchantHediff>Floral_Mastery_Master</enchantHediff>
+    <resourceGene>Gene_FlowerBreath</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

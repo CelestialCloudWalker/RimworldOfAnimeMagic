@@ -1,137 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>PetalStrike</defName>
+    <defName>GraceUnderPressure</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Artistic</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Petal Strike</label>
-        <description>{PAWN_nameDef} strikes with the grace of a falling petal, each attack blooming into a deadly dance. {PAWN_pronoun}'s blade moves with fluid elegance, overwhelming foes with nature's beauty and lethality.</description>
-        <statFactors>
-          <MeleeDPS>1.12</MeleeDPS>
-          <MeleeHitChance>1.15</MeleeHitChance>
-        </statFactors>
+        <label>grace under pressure</label>
+        <description>[PAWN_nameDef] maintains elegant composure even in dire circumstances. [PAWN_possessive] artistic nature and social grace help [PAWN_objective] inspire others while creating beauty from chaos.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SocialImpact>0.35</SocialImpact>
+          <PainShockThreshold>0.2</PainShockThreshold>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Artistic>5</Artistic>
+          <Social>3</Social>
+          <Crafting>2</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>FlutteringSteps</defName>
+    <defName>BotanicalKnowledge</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Plants</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Fluttering Steps</label>
-        <description>{PAWN_nameDef} glides across the battlefield like a petal on the wind, evading attacks with effortless poise. {PAWN_pronoun} moves with ethereal swiftness, striking before enemies can react.</description>
-        <statFactors>
-          <MoveSpeed>1.15</MoveSpeed>
-          <MeleeDodgeChance>1.18</MeleeDodgeChance>
-        </statFactors>
+        <label>botanical knowledge</label>
+        <description>[PAWN_nameDef] has deep understanding of plant life and natural remedies. [PAWN_pronoun] can coax growth from the most stubborn soil and craft healing medicines from simple herbs.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <PlantWorkSpeed>0.4</PlantWorkSpeed>
+          <PlantHarvestYield>0.25</PlantHarvestYield>
+          <DrugHarvestYield>0.3</DrugHarvestYield>
+          <ForagedNutritionPerDay>1.5</ForagedNutritionPerDay>
+        </statOffsets>
+        <skillGains>
+          <Plants>6</Plants>
+          <Medicine>3</Medicine>
+          <Intellectual>1</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>NaturesWhisper</defName>
-    <commonality>1</commonality>
+    <defName>ElegantFighter</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
+    <conflictingTraits>
+      <li>Brawler</li>
+    </conflictingTraits>
     <degreeDatas>
       <li>
-        <label>Nature's Whisper</label>
-        <description>{PAWN_nameDef} exudes an aura of tranquility, harmonizing with the natural world. Animals feel drawn to {PAWN_possessive} presence, recognizing the gentle strength that flows through {PAWN_pronoun} like a quiet breeze.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.18</AnimalsLearningFactor>
-          <TameAnimalChance>1.20</TameAnimalChance>
-        </statFactors>
+        <label>elegant fighter</label>
+        <description>[PAWN_nameDef] fights with the grace of a dancer. [PAWN_possessive] flowing combat style emphasizes finesse over brute force, finding beauty even in battle.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>6</MeleeHitChance>
+          <MeleeDodgeChance>8</MeleeDodgeChance>
+          <MoveSpeed>0.15</MoveSpeed>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Artistic>2</Artistic>
+        </skillGains>
+        <marketValueFactorOffset>0.05</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>BlossomsResilience</defName>
+    <defName>NaturalHarmony</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Animals</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Blossom's Resilience</label>
-        <description>Like a flower weathering the storm, {PAWN_nameDef} endures hardship with unyielding grace. Even when battered by adversity, {PAWN_pronoun} stands tall, unwavering in determination.</description>
-        <statFactors>
-          <PainShockThreshold>1.12</PainShockThreshold>
-          <RestFallRateFactor>0.82</RestFallRateFactor>
-        </statFactors>
+        <label>natural harmony</label>
+        <description>[PAWN_nameDef] lives in perfect harmony with nature. [PAWN_pronoun] draws strength from the outdoors and connects effortlessly with wild creatures, needing little artificial beauty.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <TameAnimalChance>0.3</TameAnimalChance>
+          <TrainAnimalChance>0.25</TrainAnimalChance>
+          <AnimalGatherSpeed>0.2</AnimalGatherSpeed>
+          <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+        </statOffsets>
+        <skillGains>
+          <Animals>5</Animals>
+          <Plants>2</Plants>
+        </skillGains>
+        <marketValueFactorOffset>0.06</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>FloralFortitude</defName>
-    <commonality>1</commonality>
+    <defName>SeasonalWisdom</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Plants</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Floral Fortitude</label>
-        <description>{PAWN_nameDef} flourishes even in the harshest conditions, immune to the toxins that wilt lesser beings. Like a lotus rising from the mud, {PAWN_pronoun} remains pure and unshaken.</description>
-        <statFactors>
-          <FilthRate>0.75</FilthRate>
-          <ToxicResistance>1.22</ToxicResistance>
-        </statFactors>
+        <label>seasonal wisdom</label>
+        <description>[PAWN_nameDef] understands the natural rhythms of the seasons. [PAWN_possessive] work adapts to nature's cycles, and harsh weather cannot dampen [PAWN_possessive] spirits.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <PlantWorkSpeed>0.3</PlantWorkSpeed>
+          <WorkSpeedGlobal>0.08</WorkSpeedGlobal>
+          <SocialImpact>5</SocialImpact>
+        </statOffsets>
+        <skillGains>
+          <Plants>4</Plants>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>BotanicalCuisine</defName>
-    <commonality>1</commonality>
+    <defName>PetalDance</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+      <li>Artistic</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Botanical Cuisine</label>
-        <description>{PAWN_nameDef} understands the delicate balance of nature, crafting meals infused with the nourishing essence of flowers. With {PAWN_possessive} skills, no ingredient is wasted, and every dish is a masterpiece.</description>
-        <statFactors>
-          <CookSpeed>1.20</CookSpeed>
-          <ButcheryFleshEfficiency>1.15</ButcheryFleshEfficiency>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>FloralMagnetism</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Floral Magnetism</label>
-        <description>{PAWN_nameDef} possesses an enchanting presence, drawing others in like bees to a blossoming flower. {PAWN_pronoun}'s very spirit inspires devotion and admiration.</description>
-        <statFactors>
-          <SocialImpact>1.18</SocialImpact>
-          <RestRateMultiplier>1.12</RestRateMultiplier>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>PetalsHealingTouch</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Petal's Healing Touch</label>
-        <description>{PAWN_nameDef} mends wounds with the tender touch of a blossoming flower, easing pain with natural grace. {PAWN_pronoun} embodies both beauty and restoration, ensuring none wither under {PAWN_possessive} care.</description>
-        <statFactors>
-          <MedicalTendQuality>1.20</MedicalTendQuality>
-          <MedicalTendSpeed>1.15</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>FloralAbundance</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Floral Abundance</label>
-        <description>{PAWN_nameDef} nurtures the land with every step, leaving lush growth in {PAWN_possessive} wake. From decay, new life flourishes, ensuring that nature always finds a way to bloom again.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.20</PlantWorkSpeed>
-          <PlantHarvestYield>1.15</PlantHarvestYield>
-        </statFactors>
+        <label>petal dance</label>
+        <description>[PAWN_nameDef] moves through combat like a deadly flower in the wind. [PAWN_possessive] flowing movements become more beautiful and effective when facing multiple foes, turning battle into art.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>5</MeleeHitChance>
+          <MeleeDodgeChance>6</MeleeDodgeChance>
+          <MoveSpeed>0.25</MoveSpeed>
+          <MeditationFocusGain>0.3</MeditationFocusGain>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Artistic>3</Artistic>
+          <Intellectual>1</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>

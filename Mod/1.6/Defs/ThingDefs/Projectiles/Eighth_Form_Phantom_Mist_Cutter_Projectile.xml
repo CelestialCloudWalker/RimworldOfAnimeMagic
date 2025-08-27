@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <ThingDef ParentName="BaseBullet">
     <defName>Eighth_Form_Phantom_Mist_Cutter_Projectile</defName>
     <label>Mist Cutter Projectile</label>
@@ -17,7 +18,7 @@
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
       <damageDef>Disorienting_Strike</damageDef>
-      <damageAmountBase>5</damageAmountBase>
+      <damageAmountBase>7</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
       <stoppingPower>1</stoppingPower>
@@ -29,13 +30,139 @@
     </projectile>
     <comps>
       <li Class="CompProperties_Glower">
-        <glowRadius>15</glowRadius>
+        <glowRadius>12</glowRadius>
         <glowColor>(191, 191, 218, 255)</glowColor>
       </li>
       <li Class="AnimeArsenal.CompProperties_BeamEffect">
         <TrailMote>Mist_Projectile_Mote</TrailMote>
         <MoteInterval>0.25</MoteInterval>
         <MoteDuration>30</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Eighth_Form_Phantom_Mist_Cutter_Projectile_Enhanced</defName>
+    <label>Enhanced Mist Cutter</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.8</drawSize>
+      <shaderParameters>
+        <_Color>(171, 171, 238, 255)</_Color>
+        <_brightnessMultiplier>1.2</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Disorienting_Strike</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationBase>0.4</armorPenetrationBase>
+      <ExplosionRadius>2.5</ExplosionRadius>
+      <stoppingPower>1.2</stoppingPower>
+      <ExplosionEffect>MistBreathingExplosionEffect</ExplosionEffect>
+      <speed>30</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <BaseDamage>10</BaseDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(171, 171, 238, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Mist_Projectile_Mote</TrailMote>
+        <MoteInterval>0.2</MoteInterval>
+        <MoteDuration>35</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Eighth_Form_Phantom_Mist_Cutter_Projectile_Superior</defName>
+    <label>Superior Mist Cutter</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.1</drawSize>
+      <shaderParameters>
+        <_Color>(151, 151, 255, 255)</_Color>
+        <_brightnessMultiplier>1.4</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Disorienting_Strike</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+      <ExplosionRadius>3</ExplosionRadius>
+      <stoppingPower>1.5</stoppingPower>
+      <ExplosionEffect>MistBreathingExplosionEffect</ExplosionEffect>
+      <speed>35</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <BaseDamage>14</BaseDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(151, 151, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Mist_Projectile_Mote</TrailMote>
+        <MoteInterval>0.15</MoteInterval>
+        <MoteDuration>40</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Eighth_Form_Phantom_Mist_Cutter_Projectile_Master</defName>
+    <label>Master Mist Cutter</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(131, 131, 255, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Disorienting_Strike</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <armorPenetrationBase>0.6</armorPenetrationBase>
+      <ExplosionRadius>3.5</ExplosionRadius>
+      <stoppingPower>2</stoppingPower>
+      <ExplosionEffect>MistBreathingExplosionEffect</ExplosionEffect>
+      <speed>40</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <BaseDamage>20</BaseDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>22</glowRadius>
+        <glowColor>(131, 131, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Mist_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>45</MoteDuration>
         <AlignWithMovement>true</AlignWithMovement>
       </li>
     </comps>

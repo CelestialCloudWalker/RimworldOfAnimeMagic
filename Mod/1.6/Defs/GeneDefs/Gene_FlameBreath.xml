@@ -3,6 +3,7 @@
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_FlameBreath</defName>
     <label>Flame Breath</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Flame Breath</resourceName>
     <description>Carriers of this gene can focus intense heat into their body, unleashing powerful flame-based attacks fueled by their inner breath.</description>
     <iconPath>UI/Icons/Genes/flame</iconPath>

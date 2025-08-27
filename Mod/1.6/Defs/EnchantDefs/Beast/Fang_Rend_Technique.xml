@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <AnimeArsenal.EnchantDef>
     <defName>Fang_Rend_Technique</defName>
     <label>Fang Rend Technique</label>
@@ -8,5 +9,38 @@
     <resourceGene>Gene_BeastBreath</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Fang_Rend_Technique_Enhanced</defName>
+    <label>Enhanced Fang Rend</label>
+    <description>An improved technique with stronger primal energy and better efficiency.</description>
+    <enchantHediff>Primal_Aura_Enhanced</enchantHediff>
+    <resourceGene>Gene_BeastBreath</resourceGene>
+    <ticksBetweenCost>400</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Fang_Rend_Technique_Superior</defName>
+    <label>Superior Fang Rend</label>
+    <description>A superior technique with powerful primal energy and high efficiency.</description>
+    <enchantHediff>Primal_Aura_Superior</enchantHediff>
+    <resourceGene>Gene_BeastBreath</resourceGene>
+    <ticksBetweenCost>350</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Fang_Rend_Technique_Master</defName>
+    <label>Master Fang Rend</label>
+    <description>The ultimate technique with devastating primal energy and maximum efficiency.</description>
+    <enchantHediff>Primal_Aura_Master</enchantHediff>
+    <resourceGene>Gene_BeastBreath</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

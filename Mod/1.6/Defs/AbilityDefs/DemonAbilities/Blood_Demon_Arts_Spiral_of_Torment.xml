@@ -1,20 +1,114 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AbilityDef ParentName="RangedDemonBase">
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Spiral_of_Torment</defName>
     <label>Blood Demon Arts: Spiral of Torment</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_SpiralOfTorment_Group</groupDef>
-    <description>Command a random limb on the target to twist into a bloody mess.</description>
+    <description>Command limbs in an area to twist into bloody messes. Radius and damage increase with mastery.</description>
     <iconPath>UI/Abilities/DemonAbilityTwist</iconPath>
+    <displayOrder>150</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <hostile>true</hostile>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>true</drawAimPie>
+      <range>15</range>
+      <warmupTime>1.0</warmupTime>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    
     <comps>
-      <li Class="AnimeArsenal.CompProperties_TwistEffect">
+      <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
         <baseDamage>8</baseDamage>
-      </li>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
-        <resourceCost>20</resourceCost>
+        <maxTargets>3</maxTargets>
+        <radius>4</radius>
       </li>
     </comps>
-  </AbilityDef>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic area twist that affects nearby enemies.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>12</baseDamage>
+            <maxTargets>4</maxTargets>
+            <radius>5</radius>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>Enhanced twisting power affects more enemies in a larger area.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>18</baseDamage>
+            <maxTargets>6</maxTargets>
+            <radius>7</radius>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Devastating twisting forces that can cripple entire groups.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>25</baseDamage>
+            <maxTargets>8</maxTargets>
+            <radius>9</radius>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <description>Ultimate mastery of limb manipulation - a true spiral of endless torment.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <resourceCostMultiplier>0.85</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>35</baseDamage>
+            <maxTargets>12</maxTargets>
+            <radius>12</radius>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

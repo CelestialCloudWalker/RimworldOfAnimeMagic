@@ -1,12 +1,43 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <AnimeArsenal.EnchantDef>
     <defName>Phantom_Blade_Technique</defName>
     <label>Phantom Blade Technique</label>
-    <description>"Shrouds weapons in mist that disorients enemies.</description>
-    <enchantHediff>Obscured_Mind</enchantHediff>
+    <description>A technique that allows a Mist Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Mist_Aura</enchantHediff>
     <resourceGene>Gene_MistBreath</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Phantom_Blade_Technique_Enhanced</defName>
+    <label>Enhanced Phantom Blade</label>
+    <description>An improved technique with stronger mist energy and better efficiency.</description>
+    <enchantHediff>Mist_Aura_Enhanced</enchantHediff>
+    <resourceGene>Gene_MistBreath</resourceGene>
+    <ticksBetweenCost>400</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Phantom_Blade_Technique_Superior</defName>
+    <label>Superior Phantom Blade</label>
+    <description>A superior technique with powerful mist energy and high efficiency.</description>
+    <enchantHediff>Mist_Aura_Superior</enchantHediff>
+    <resourceGene>Gene_MistBreath</resourceGene>
+    <ticksBetweenCost>350</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+  
+  <AnimeArsenal.EnchantDef>
+    <defName>Phantom_Blade_Technique_Master</defName>
+    <label>Master Phantom Blade</label>
+    <description>The ultimate technique with devastating mist energy and maximum efficiency.</description>
+    <enchantHediff>Mist_Aura_Master</enchantHediff>
+    <resourceGene>Gene_MistBreath</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

@@ -1,24 +1,32 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Demons_Embrace</defName>
     <label>Blood Demon Arts: Demon's Embrace</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_Demons_Embrace_Group</groupDef>
-    <description>Turn a pawn into a Demon work slave, granting them the power of Blood Demon Art.</description>
+    <description>Turn a pawn into a Demon work slave, granting them the power of Blood Demon Art. Becomes more efficient and faster with practice.</description>
     <iconPath>UI/Abilities/DemonTransformAbility</iconPath>
     <jobDef>CastAbilityOnThing</jobDef>
-    <category>BloodDemonArts</category>
     <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
     <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
     <hostile>true</hostile>
     <aiCanUse>true</aiCanUse>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>50</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    
     <cooldownTicksRange>
       <min>300</min>
       <max>300</max>
     </cooldownTicksRange>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <drawAimPie>True</drawAimPie>
@@ -30,8 +38,64 @@
         <canTargetMechs>false</canTargetMechs>
       </targetParams>
     </verbProperties>
+
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
     </comps>
-  </AbilityDef>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic demon transformation ability. Slow but effective.</description>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>75</experienceRequired>
+        <description>Improved transformation technique with reduced cooldown and cost.</description>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>Expert level transformation with significantly improved efficiency.</description>
+        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>Master level demon transformation - extremely fast and efficient.</description>
+        <cooldownMultiplier>0.4</cooldownMultiplier>
+        <resourceCostMultiplier>0.7</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

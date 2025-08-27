@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>AA_ForwardDash</defName>
-    <label>forward dash</label>
-    <category>SlayerCorp_Ability_Catergory</category>
-    <groupDef>SlayerCorp_DashForward_Group</groupDef>
-    <description>Quickly dash forward toward the target to close the distance.</description>
+    <label>Forward Dash</label>
+    <description>Quickly dash forward toward the target to close the distance. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/AbilityDashforward</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <targetRequired>true</targetRequired>
+
+    
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName> 
+    <resourceCost>15</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>30</range>
@@ -21,13 +26,15 @@
         <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
+
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
         <minDashDistance>8</minDashDistance>
         <maxDashDistance>15</maxDashDistance>
         <avoidEnemies>false</avoidEnemies>
         <enemyAvoidanceRadius>5</enemyAvoidanceRadius>
-        <numberOfDashes>2</numberOfDashes>
+        <numberOfDashes>1</numberOfDashes>
         <allowRandomDirection>false</allowRandomDirection>
         <maintainMinDistanceFromTarget>false</maintainMinDistanceFromTarget>
         <minDistanceFromTarget>2</minDistanceFromTarget>
@@ -40,5 +47,100 @@
         <restoreStamina>false</restoreStamina>
       </li>
     </comps>
-  </AbilityDef>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic forward dash technique.</description>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>An improved dash that can be performed twice in quick succession.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
+            <minDashDistance>10</minDashDistance>
+            <maxDashDistance>18</maxDashDistance>
+            <avoidEnemies>false</avoidEnemies>
+            <enemyAvoidanceRadius>5</enemyAvoidanceRadius>
+            <numberOfDashes>2</numberOfDashes>
+            <allowRandomDirection>false</allowRandomDirection>
+            <maintainMinDistanceFromTarget>false</maintainMinDistanceFromTarget>
+            <minDistanceFromTarget>2</minDistanceFromTarget>
+            <castEffecter>AnimeArsenal_BeastJump</castEffecter>
+            <landEffecter>AnimeArsenal_DashBack</landEffecter>
+            <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
+            <grantTemporaryImmunity>true</grantTemporaryImmunity>
+            <grantSpeedBoost>false</grantSpeedBoost>
+            <grantMoodBoost>false</grantMoodBoost>
+            <restoreStamina>false</restoreStamina>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>A masterful dash technique that grants temporary speed and can be chained three times.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
+            <minDashDistance>12</minDashDistance>
+            <maxDashDistance>22</maxDashDistance>
+            <avoidEnemies>false</avoidEnemies>
+            <enemyAvoidanceRadius>5</enemyAvoidanceRadius>
+            <numberOfDashes>3</numberOfDashes>
+            <allowRandomDirection>false</allowRandomDirection>
+            <maintainMinDistanceFromTarget>false</maintainMinDistanceFromTarget>
+            <minDistanceFromTarget>2</minDistanceFromTarget>
+            <castEffecter>AnimeArsenal_BeastJump</castEffecter>
+            <landEffecter>AnimeArsenal_DashBack</landEffecter>
+            <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
+            <grantTemporaryImmunity>true</grantTemporaryImmunity>
+            <grantSpeedBoost>true</grantSpeedBoost>
+            <grantMoodBoost>false</grantMoodBoost>
+            <restoreStamina>false</restoreStamina>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <description>The ultimate dash technique - grants immunity, speed, mood boost, and restores stamina.</description>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
+            <minDashDistance>15</minDashDistance>
+            <maxDashDistance>25</maxDashDistance>
+            <avoidEnemies>false</avoidEnemies>
+            <enemyAvoidanceRadius>5</enemyAvoidanceRadius>
+            <numberOfDashes>3</numberOfDashes>
+            <allowRandomDirection>false</allowRandomDirection>
+            <maintainMinDistanceFromTarget>false</maintainMinDistanceFromTarget>
+            <minDistanceFromTarget>2</minDistanceFromTarget>
+            <castEffecter>AnimeArsenal_BeastJump</castEffecter>
+            <landEffecter>AnimeArsenal_DashBack</landEffecter>
+            <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
+            <grantTemporaryImmunity>true</grantTemporaryImmunity>
+            <grantSpeedBoost>true</grantSpeedBoost>
+            <grantMoodBoost>true</grantMoodBoost>
+            <restoreStamina>true</restoreStamina>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

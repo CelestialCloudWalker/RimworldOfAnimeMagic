@@ -37,6 +37,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>D:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="EMF">
+      <HintPath>D:\SteamLibrary\steamapps\common\RimWorld\Mods\EMF\1.6\Assemblies\EMF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -73,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompAbilityStealBite.cs" />
+    <Compile Include="CompProperties_AbilityGasSpray.cs" />
     <Compile Include="GeneEffect.cs" />
     <Compile Include="GeneEffectDef.cs" />
     <Compile Include="IncidentWorker_RaidNightOnly.cs" />
@@ -105,6 +109,7 @@
     <Compile Include="Misc\PawnRenderNodeWorker_WeaponOverlay.cs" />
     <Compile Include="Misc\Projectile_SleepEffect _ScalingStatDamageProjectile.cs" />
     <Compile Include="Misc\RegenerationExtension.cs" />
+    <Compile Include="QuestNode_ConfigurableReward.cs" />
     <Compile Include="QuestNode_GetGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGeneDef.cs" />
@@ -165,6 +170,7 @@
     <Compile Include="Misc\Ticker.cs" />
     <Compile Include="Misc\TrackedMotePos.cs" />
     <Compile Include="Misc\Verb_ExtendedMeleeAttack.cs" />
+    <Compile Include="TalentedLevelingAbilityDef.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony">

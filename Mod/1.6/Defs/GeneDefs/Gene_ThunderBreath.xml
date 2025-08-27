@@ -3,6 +3,7 @@
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_ThunderBreath</defName>
     <label>Thunder Breath</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Thunder Breath</resourceName>
     <description>Carriers of this gene can channel intense electrical energy into their body, unleashing rapid and devastating thunder-based attacks fueled by their inner breath.</description>
     <iconPath>UI/Icons/Genes/thunder</iconPath>

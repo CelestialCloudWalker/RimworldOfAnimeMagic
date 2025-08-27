@@ -3,6 +3,7 @@
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_BeastBreath</defName>
     <label>Beast Breath</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Beast Breath</resourceName>
     <description>Carriers of this gene channel the primal instincts and raw strength of a beast, unleashing techniques that emphasize ferocity, speed, and relentless pursuit.</description>
     <iconPath>UI/Icons/Genes/beast</iconPath>
@@ -10,7 +11,7 @@
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
 
     <TalentTrees>
-        <li>Beast_BreathingStyleBlankTree</li>
+      <li>Beast_BreathingStyleBlankTree</li>
     </TalentTrees>
 
     <experienceFormula>Basic_LinearXP</experienceFormula>

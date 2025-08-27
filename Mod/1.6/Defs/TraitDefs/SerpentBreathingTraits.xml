@@ -1,138 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>CoilingStrength</defName>
+    <defName>FlexibleForm</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Coiling Strength</label>
-        <description>{PAWN_nameDef} harnesses the serpentine power of precision strikes, coiling through the air with deadly intent. {PAWN_pronoun}'s attacks are swift and unyielding, bypassing defenses with the unrelenting power of a serpent's bite.</description>
-        <statFactors>
-          <MeleeDPS>1.15</MeleeDPS>
-          <MeleeHitChance>1.10</MeleeHitChance>
-        </statFactors>
+        <label>flexible form</label>
+        <description>[PAWN_nameDef] moves with serpentine grace and flexibility. [PAWN_possessive] body can contort in impossible ways, making [PAWN_objective] deadly in close combat but awkward with ranged weapons.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeDodgeChance>10</MeleeDodgeChance>
+          <MeleeHitChance>8</MeleeHitChance>
+          <MoveSpeed>0.25</MoveSpeed>
+          <ShootingAccuracyPawn>-6</ShootingAccuracyPawn>
+          <TrapSpringChance>-0.4</TrapSpringChance>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
+          <Shooting>-3</Shooting>
+        </skillGains>
+        <marketValueFactorOffset>0.06</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>SlitheringMotion</defName>
-    <commonality>1</commonality>
+    <defName>VenomousStrike</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Medicine</li>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Slithering Motion</label>
-        <description>{PAWN_nameDef} moves with the smooth, fluid grace of a serpent, weaving through the battlefield with unmatched agility. {PAWN_pronoun} strikes with calculated precision, leaving {PAWN_possessive} enemies in disarray.</description>
-        <statFactors>
-          <MoveSpeed>1.12</MoveSpeed>
-          <MeleeDodgeChance>1.15</MeleeDodgeChance>
-        </statFactors>
+        <label>venomous strike</label>
+        <description>[PAWN_nameDef] carries deadly toxins in [PAWN_possessive] body like a venomous serpent. [PAWN_pronoun] understands both poison and antidote, making [PAWN_objective] dangerous in combat and invaluable in medicine.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>6</MeleeHitChance>
+          <MeleeDPS>0.25</MeleeDPS>
+          <ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+          <SurgerySuccessChanceFactor>0.2</SurgerySuccessChanceFactor>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Medicine>4</Medicine>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>SerpentineMastery</defName>
-    <commonality>1</commonality>
+    <defName>HypnoticGaze</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Serpentine Mastery</label>
-        <description>{PAWN_nameDef} commands an almost hypnotic presence, drawing creatures and allies to {PAWN_possessive} side with the deadly charm of a serpent. {PAWN_pronoun} bends the will of those around {PAWN_pronoun} with quiet, compelling influence.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.20</AnimalsLearningFactor>
-          <TameAnimalChance>1.15</TameAnimalChance>
-        </statFactors>
+        <label>hypnotic gaze</label>
+        <description>[PAWN_nameDef] possesses the mesmerizing stare of a serpent. [PAWN_possessive] eyes can entrance others, making [PAWN_objective] exceptionally persuasive and manipulative in social situations.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SocialImpact>0.5</SocialImpact>
+          <NegotiationAbility>0.6</NegotiationAbility>
+          <ArrestSuccessChance>0.4</ArrestSuccessChance>
+          <PsychicSensitivity>0.3</PsychicSensitivity>
+        </statOffsets>
+        <skillGains>
+          <Social>6</Social>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>CoiledResilience</defName>
-    <commonality>1</commonality>
+    <defName>SerpentineMovement</defName>
+    <commonality>0.9</commonality>
     <degreeDatas>
       <li>
-        <label>Coiled Resilience</label>
-        <description>{PAWN_nameDef} endures hardships with the resilience of a coiled serpent, waiting patiently before striking. {PAWN_pronoun} stands firm against pain and exhaustion, striking when the moment is right, with unyielding resolve.</description>
-        <statFactors>
-          <PainShockThreshold>1.15</PainShockThreshold>
-          <RestFallRateFactor>0.85</RestFallRateFactor>
-        </statFactors>
+        <label>serpentine movement</label>
+        <description>[PAWN_nameDef] slithers through spaces others cannot navigate. [PAWN_possessive] fluid movement allows [PAWN_objective] to excel in tight quarters and move with deadly stealth.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MoveSpeed>0.3</MoveSpeed>
+          <HuntingStealth>0.5</HuntingStealth>
+          <MeleeDodgeChance>8</MeleeDodgeChance>
+          <ConstructionSpeed>0.2</ConstructionSpeed>
+        </statOffsets>
+        <skillGains>
+          <Melee>3</Melee>
+          <Construction>2</Construction>
+          <Animals>2</Animals>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>ScaledDefense</defName>
-    <commonality>1</commonality>
+    <defName>ColdBlooded</defName>
+    <commonality>0.6</commonality>
+    <forcedPassions>
+      <li>Intellectual</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Scaled Defense</label>
-        <description>{PAWN_nameDef} thrives in hostile conditions, like a serpent's scales deflecting attacks. {PAWN_pronoun} is unaffected by toxins, filth, or physical damage, emerging from adversity unscathed and ready to strike.</description>
-        <statFactors>
-          <FilthRate>0.80</FilthRate>
-          <ToxicResistance>1.20</ToxicResistance>
-        </statFactors>
+        <label>cold-blooded</label>
+        <description>[PAWN_nameDef] thinks with reptilian logic, calculating and precise. [PAWN_possessive] performance varies with temperature, but [PAWN_possessive] cold reasoning makes [PAWN_objective] an exceptional strategist.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ResearchSpeed>0.4</ResearchSpeed>
+          <ComfyTemperatureMin>5</ComfyTemperatureMin>
+          <ComfyTemperatureMax>35</ComfyTemperatureMax>
+          <PsychicSensitivity>-0.3</PsychicSensitivity>
+          <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Intellectual>5</Intellectual>
+          <Social>-2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>CoiledCuisine</defName>
-    <commonality>1</commonality>
+    <defName>ShedSkin</defName>
+    <commonality>0.4</commonality>
     <degreeDatas>
       <li>
-        <label>Coiled Cuisine</label>
-        <description>{PAWN_nameDef} skillfully crafts meals with the precision of a serpent's strike, ensuring nothing goes to waste. {PAWN_pronoun} brings sustenance and vitality to {PAWN_possessive} allies, feeding both body and spirit.</description>
-        <statFactors>
-          <CookSpeed>1.15</CookSpeed>
-          <ButcheryFleshEfficiency>1.10</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>shed skin</label>
+        <description>[PAWN_nameDef] periodically sheds [PAWN_possessive] outer layer like a serpent, emerging renewed and healed. [PAWN_possessive] regenerative abilities are remarkable, leaving no permanent scars.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <InjuryHealingFactor>2.5</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+          <PainShockThreshold>0.2</PainShockThreshold>
+        </statOffsets>
+        <skillGains>
+          <Medicine>3</Medicine>
+        </skillGains>
+        <marketValueFactorOffset>0.18</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>HypnoticPresence</defName>
-    <commonality>1</commonality>
+    <defName>CoilingStrike</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Hypnotic Presence</label>
-        <description>{PAWN_nameDef} exudes the hypnotic allure of a serpent, weaving a charm that captivates and compels loyalty. {PAWN_pronoun} ignites passion in others, drawing them into {PAWN_possessive} circle with a magnetic force.</description>
-        <statFactors>
-          <SocialImpact>1.18</SocialImpact>
-          <RestRateMultiplier>1.10</RestRateMultiplier>
-        </statFactors>
+        <label>coiling strike</label>
+        <description>[PAWN_nameDef] fights like a constrictor, wrapping around enemies to subdue them. [PAWN_possessive] combat style focuses on restraint and capture rather than killing.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>7</MeleeHitChance>
+          <ArrestSuccessChance>0.5</ArrestSuccessChance>
+          <ConstructionSpeed>0.25</ConstructionSpeed>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Crafting>3</Crafting>
+          <Construction>2</Construction>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>CoilingComfort</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Coiling Comfort</label>
-        <description>{PAWN_nameDef} brings comfort and swift recovery to the wounded, like a serpent wrapping itself protectively around its prey. {PAWN_pronoun} heals with both tender care and unwavering precision, ensuring no ally is lost.</description>
-        <statFactors>
-          <MedicalTendQuality>1.15</MedicalTendQuality>
-          <MedicalTendSpeed>1.12</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>CoilingVine</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Coiling Vine</label>
-        <description>{PAWN_nameDef} nurtures the land with the careful precision of a serpent's strike, helping new life rise from the earth. {PAWN_pronoun} plants and harvests with quiet efficiency, ensuring the cycle of life continues with each motion.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.15</PlantWorkSpeed>
-          <PlantHarvestYield>1.10</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

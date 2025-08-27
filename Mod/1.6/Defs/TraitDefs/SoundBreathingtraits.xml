@@ -1,138 +1,197 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>ResonantImpact</defName>
-    <commonality>1</commonality>
+    <defName>ExplosiveResonance</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Resonant Impact</label>
-        <description>{PAWN_nameDef} strikes with the power of a sonic boom, delivering blows that resonate with devastating frequency. {PAWN_pronoun}'s attacks shatter defenses, causing a ripple of damage that reverberates through the battlefield.</description>
-        <statFactors>
-          <MeleeDPS>1.18</MeleeDPS>
-          <MeleeHitChance>1.12</MeleeHitChance>
-        </statFactors>
+        <label>explosive resonance</label>
+        <description>[PAWN_nameDef] fights with thunderous explosive techniques that create devastating shockwaves. [PAWN_possessive] attacks generate tremendous noise and force, though the constant explosions gradually damage [PAWN_possessive] hearing.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>10</MeleeHitChance>
+          <MeleeDPS>0.4</MeleeDPS>
+          <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+          <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
+          <Mining>3</Mining>
+          <Shooting>-2</Shooting>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>EchoingFootwork</defName>
-    <commonality>1</commonality>
+    <defName>EcholocationMaster</defName>
+    <commonality>0.4</commonality>
+    <forcedPassions>
+      <li>Shooting</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Echoing Footwork</label>
-        <description>{PAWN_nameDef} moves with the speed of a reverberating soundwave, darting across the battlefield as if carried by the wind. {PAWN_pronoun}'s steps create a shockwave that confuses and disorients enemies.</description>
-        <statFactors>
-          <MoveSpeed>1.15</MoveSpeed>
-          <MeleeDodgeChance>1.18</MeleeDodgeChance>
-        </statFactors>
+        <label>echolocation mastery</label>
+        <description>[PAWN_nameDef] has developed supernatural hearing that allows [PAWN_objective] to detect enemies and navigate in complete darkness. [PAWN_possessive] sound-based perception grants incredible accuracy but makes [PAWN_objective] vulnerable to loud noises.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ShootingAccuracyPawn>8</ShootingAccuracyPawn>
+          <MeleeHitChance>6</MeleeHitChance>
+          <PsychicSensitivity>-0.3</PsychicSensitivity>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Shooting>4</Shooting>
+          <Melee>3</Melee>
+          <Animals>2</Animals>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>HarmonicInfluence</defName>
-    <commonality>1</commonality>
+    <defName>SonicBoom</defName>
+    <commonality>0.3</commonality>
+    <forcedPassions>
+      <li>Mining</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Harmonic Influence</label>
-        <description>{PAWN_nameDef} radiates a harmonious aura, using the resonance of sound to influence the environment. {PAWN_pronoun} bends the will of others with the subtle frequencies of sound, controlling emotions and behaviors with ease.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.22</AnimalsLearningFactor>
-          <TameAnimalChance>1.18</TameAnimalChance>
-        </statFactors>
+        <label>sonic boom</label>
+        <description>[PAWN_nameDef] can generate devastating sound waves that shatter stone and disorient enemies. [PAWN_possessive] explosive techniques excel at demolition and area control but are too destructive for delicate work.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MiningSpeed>0.6</MiningSpeed>
+          <ConstructionSpeed>-0.2</ConstructionSpeed>
+          <MeleeHitChance>5</MeleeHitChance>
+          <SocialImpact>-0.2</SocialImpact>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Mining>6</Mining>
+          <Melee>3</Melee>
+          <Construction>-3</Construction>
+          <Crafting>-2</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>VibrationalEndurance</defName>
-    <commonality>1</commonality>
+    <defName>FlamboyantWarrior</defName>
+    <commonality>0.6</commonality>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
+    <conflictingTraits>
+      <li>Ascetic</li>
+    </conflictingTraits>
     <degreeDatas>
       <li>
-        <label>Vibrational Endurance</label>
-        <description>{PAWN_nameDef} endures with the strength of resonant vibrations, standing firm even in the face of overwhelming pressure. {PAWN_pronoun}'s spirit is as unshakable as a deep, steady bass.</description>
-        <statFactors>
-          <PainShockThreshold>1.20</PainShockThreshold>
-          <RestFallRateFactor>0.82</RestFallRateFactor>
-        </statFactors>
+        <label>flamboyant warrior</label>
+        <description>[PAWN_nameDef] fights with explosive flair and theatrical presence. [PAWN_possessive] flashy combat style and confident personality inspire others, but [PAWN_pronoun] demands the finest things in life and struggles with simple living.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <Beauty>1</Beauty>
+          <SocialImpact>0.4</SocialImpact>
+          <MeleeHitChance>5</MeleeHitChance>
+          <MoveSpeed>0.15</MoveSpeed>
+          <MentalBreakThreshold>5</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Social>4</Social>
+          <Melee>3</Melee>
+          <Artistic>2</Artistic>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>SoundBarrier</defName>
-    <commonality>1</commonality>
+    <defName>RhythmicCombat</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Artistic</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Sound Barrier</label>
-        <description>{PAWN_nameDef} shields themselves with sound, creating barriers of sonic energy that nullify toxins and filth. {PAWN_pronoun} vibrates at such a frequency that harmful substances cannot touch {PAWN_possessive} body.</description>
-        <statFactors>
-          <FilthRate>0.78</FilthRate>
-          <ToxicResistance>1.22</ToxicResistance>
-        </statFactors>
+        <label>rhythmic combat</label>
+        <description>[PAWN_nameDef] fights to an internal rhythm, synchronizing [PAWN_possessive] explosive attacks with perfect timing. [PAWN_possessive] musical approach to combat grants coordination bonuses but requires constant focus on maintaining the beat.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>8</MeleeHitChance>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+          <MentalBreakThreshold>3</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+          <Artistic>5</Artistic>
+          <Social>2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>ResonantCooking</defName>
-    <commonality>1</commonality>
+    <defName>DeafeningRoar</defName>
+    <commonality>0.4</commonality>
     <degreeDatas>
       <li>
-        <label>Resonant Cooking</label>
-        <description>{PAWN_nameDef} cooks with the power of sound, using vibrations to perfectly heat and cook food. {PAWN_pronoun} ensures that every meal resonates with flavor, using harmonic frequencies to enhance taste.</description>
-        <statFactors>
-          <CookSpeed>1.18</CookSpeed>
-          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>deafening roar</label>
+        <description>[PAWN_nameDef] can unleash devastating sonic attacks that disorient and terrify enemies. [PAWN_possessive] intimidating presence and thunderous voice grant social dominance but make subtle interactions impossible.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ArrestSuccessChance>0.5</ArrestSuccessChance>
+          <SocialImpact>0.3</SocialImpact>
+          <NegotiationAbility>-0.2</NegotiationAbility>
+          <MeleeHitChance>3</MeleeHitChance>
+          <AnimalGatherSpeed>-0.3</AnimalGatherSpeed>
+        </statOffsets>
+        <skillGains>
+          <Social>3</Social>
+          <Melee>2</Melee>
+          <Animals>-2</Animals>
+        </skillGains>
+        <marketValueFactorOffset>0.06</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>SonorousCommand</defName>
-    <commonality>1</commonality>
+    <defName>ExplosiveArtistry</defName>
+    <commonality>0.3</commonality>
+    <forcedPassions>
+      <li>Artistic</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Sonorous Command</label>
-        <description>{PAWN_nameDef} speaks with the weight of a deep, resonant voice, commanding attention and loyalty with each word. {PAWN_pronoun}'s presence reverberates in the hearts of those nearby, inspiring them to follow {PAWN_pronoun} with unshakeable devotion.</description>
-        <statFactors>
-          <SocialImpact>1.20</SocialImpact>
-          <RestRateMultiplier>1.12</RestRateMultiplier>
-        </statFactors>
+        <label>explosive artistry</label>
+        <description>[PAWN_nameDef] creates art through controlled explosions and sonic manipulation. [PAWN_possessive] unique artistic vision produces spectacular results but requires dangerous materials and techniques that others find unsettling.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <GeneralLaborSpeed>-0.2</GeneralLaborSpeed>
+          <SocialImpact>-0.1</SocialImpact>
+          <MentalBreakThreshold>8</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Artistic>6</Artistic>
+          <Crafting>2</Crafting>
+          <Mining>3</Mining>
+          <Social>-1</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>VibrationalHealing</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Vibrational Healing</label>
-        <description>{PAWN_nameDef} heals through sonic vibrations, resonating with the body's natural frequencies to speed up recovery. {PAWN_pronoun} soothes wounds and pain with a gentle hum that accelerates the healing process.</description>
-        <statFactors>
-          <MedicalTendQuality>1.18</MedicalTendQuality>
-          <MedicalTendSpeed>1.15</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>ResonantHarvest</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Resonant Harvest</label>
-        <description>{PAWN_nameDef} nurtures the land with harmonic frequencies, encouraging crops to grow at an accelerated rate. {PAWN_pronoun} resonates with the earth, coaxing forth bountiful harvests with minimal effort.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.16</PlantWorkSpeed>
-          <PlantHarvestYield>1.12</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

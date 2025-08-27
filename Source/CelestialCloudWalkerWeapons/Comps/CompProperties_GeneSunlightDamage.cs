@@ -12,8 +12,8 @@ namespace AnimeArsenal
         public float damageThresholdBeforeDeath = 10f;
         public int ticksBetweenDamage = 250;
         public int ticksToResetDamage = 2500;
-        // Minimum coverage required to be safe from sunlight (0.0 to 1.0)
         public float minimumCoverageForProtection = 0.95f;
+        public bool requireHeadCoverage = true;
     }
 
     public class MapComponent_SunlightDamage : MapComponent
@@ -125,16 +125,54 @@ namespace AnimeArsenal
 
         private bool IsExposedToSunlight(Pawn pawn, SunlightDamageExtension extension)
         {
-            // First check if it's daytime and not roofed
             if (map.skyManager.CurSkyGlow <= 0.5f || pawn.Position.Roofed(map))
             {
                 return false;
             }
 
-            // Check armor coverage
+            if (extension.requireHeadCoverage && !HasHeadCoverage(pawn))
+            {
+                return true;
+            }
+
+            
             float totalCoverage = CalculateArmorCoverage(pawn);
 
             return totalCoverage < extension.minimumCoverageForProtection;
+        }
+
+        private bool HasHeadCoverage(Pawn pawn)
+        {
+            if (pawn.apparel?.WornApparel == null || pawn.apparel.WornApparel.Count == 0)
+            {
+                return false;
+            }
+
+            
+            List<string> headPartNames = new List<string>
+            {
+                "FullHead",
+                "UpperHead",
+                "Eyes"
+            };
+
+            foreach (string partName in headPartNames)
+            {
+                var bodyPart = DefDatabase<BodyPartGroupDef>.GetNamedSilentFail(partName);
+                if (bodyPart != null)
+                {
+                    
+                    foreach (Apparel apparel in pawn.apparel.WornApparel)
+                    {
+                        if (apparel.def.apparel.bodyPartGroups.Contains(bodyPart))
+                        {
+                            return true; 
+                        }
+                    }
+                }
+            }
+
+            return false; 
         }
 
         private float CalculateArmorCoverage(Pawn pawn)
@@ -144,7 +182,7 @@ namespace AnimeArsenal
                 return 0f;
             }
 
-            // Comprehensive list of body parts that need protection from sunlight
+            
             List<string> criticalBodyPartNames = new List<string>
             {
                 "Torso",
@@ -162,7 +200,7 @@ namespace AnimeArsenal
 
             List<BodyPartGroupDef> criticalBodyParts = new List<BodyPartGroupDef>();
 
-            // Get all the body part groups that actually exist
+            
             foreach (string partName in criticalBodyPartNames)
             {
                 var bodyPart = DefDatabase<BodyPartGroupDef>.GetNamedSilentFail(partName);
@@ -174,7 +212,7 @@ namespace AnimeArsenal
 
             if (criticalBodyParts.Count == 0)
             {
-                // Fallback: if no specific body parts found, just check if wearing any armor
+                
                 return pawn.apparel.WornApparel.Any(a => a.def.IsApparel) ? 0.8f : 0f;
             }
 
@@ -189,7 +227,7 @@ namespace AnimeArsenal
                 {
                     if (apparel.def.apparel.bodyPartGroups.Contains(bodyPartGroup))
                     {
-                        // Use a simple coverage calculation based on apparel layer
+                        
                         float apparelCoverage = GetApparelCoverage(apparel);
                         partCoverage = Mathf.Max(partCoverage, apparelCoverage);
                     }
@@ -202,38 +240,38 @@ namespace AnimeArsenal
                 }
             }
 
-            // Calculate coverage percentage
+            
             if (criticalBodyParts.Count == 0) return 0f;
 
-            // Coverage is based on percentage of body parts covered AND their individual coverage levels
+            
             float bodyPartsCoveredRatio = (float)coveredParts / criticalBodyParts.Count;
             float averagePartCoverage = coveredParts > 0 ? totalCoverage / coveredParts : 0f;
 
-            // Combine both factors: need both good coverage AND most body parts covered
+            
             return bodyPartsCoveredRatio * averagePartCoverage;
         }
 
         private float GetApparelCoverage(Apparel apparel)
         {
-            // Assign coverage values based on apparel layer and type
+            
             ApparelLayerDef layer = apparel.def.apparel.LastLayer;
 
             if (layer == ApparelLayerDefOf.Shell || layer == ApparelLayerDefOf.Middle)
             {
-                return 1.0f; // Full coverage for outer layers
+                return 1.0f; 
             }
             else if (layer == ApparelLayerDefOf.OnSkin)
             {
-                return 0.6f; // Partial coverage for underwear/base layer
+                return 0.6f; 
             }
 
-            // Default coverage based on whether it's "substantial" apparel
+            
             if (apparel.def.apparel.bodyPartGroups.Count >= 2)
             {
-                return 0.8f; // Good coverage for multi-part apparel
+                return 0.8f; 
             }
 
-            return 0.5f; // Basic coverage
+            return 0.5f; 
         }
 
         private void BuildSunlightMeter(Pawn pawn)
@@ -255,15 +293,24 @@ namespace AnimeArsenal
             int currentTick = Find.TickManager.TicksGame;
             float damagePercent = (accumulatedDamage[pawn.thingIDNumber] / extension.damageThresholdBeforeDeath) * 100f;
 
-            // Show armor coverage info occasionally
+            
             if (currentTick % 1000 == 0)
             {
                 float coverage = CalculateArmorCoverage(pawn);
-                MoteMaker.ThrowText(pawn.DrawPos, map, $"Coverage: {coverage:P0} | Exposure: {damagePercent:F1}%", 2f);
+                bool hasHeadCoverage = HasHeadCoverage(pawn);
+                string headStatus = hasHeadCoverage ? "Protected" : "EXPOSED";
+                MoteMaker.ThrowText(pawn.DrawPos, map, $"Head: {headStatus} | Coverage: {coverage:P0} | Exposure: {damagePercent:F1}%", 2f);
             }
             else if (currentTick % 500 == 0)
             {
-                MoteMaker.ThrowText(pawn.DrawPos, map, $"Sunlight exposure: {damagePercent:F1}%", 2f);
+                if (extension.requireHeadCoverage && !HasHeadCoverage(pawn))
+                {
+                    MoteMaker.ThrowText(pawn.DrawPos, map, $"Head exposed! Damage: {damagePercent:F1}%", 2f);
+                }
+                else
+                {
+                    MoteMaker.ThrowText(pawn.DrawPos, map, $"Sunlight exposure: {damagePercent:F1}%", 2f);
+                }
             }
 
             if (accumulatedDamage[pawn.thingIDNumber] >= extension.damageThresholdBeforeDeath * 0.8f)
@@ -271,7 +318,10 @@ namespace AnimeArsenal
                 if (!lastWarningTick.ContainsKey(pawn.thingIDNumber) ||
                     currentTick - lastWarningTick[pawn.thingIDNumber] >= 1000)
                 {
-                    MoteMaker.ThrowText(pawn.DrawPos, map, "WARNING: High sunlight exposure!", 3f);
+                    string warningMessage = extension.requireHeadCoverage && !HasHeadCoverage(pawn)
+                        ? "WARNING: Head exposed to sunlight!"
+                        : "WARNING: High sunlight exposure!";
+                    MoteMaker.ThrowText(pawn.DrawPos, map, warningMessage, 3f);
                     lastWarningTick[pawn.thingIDNumber] = currentTick;
                 }
             }
@@ -303,6 +353,11 @@ namespace AnimeArsenal
         public float GetArmorCoverage(Pawn pawn)
         {
             return CalculateArmorCoverage(pawn);
+        }
+
+        public bool GetHeadCoverage(Pawn pawn)
+        {
+            return HasHeadCoverage(pawn);
         }
 
         private void KillPawn(Pawn pawn)

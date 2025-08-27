@@ -107,6 +107,7 @@
         <ticksBetweenDamage>100</ticksBetweenDamage>
         <ticksToResetDamage>2500</ticksToResetDamage>
         <minimumCoverageForProtection>0.50</minimumCoverageForProtection>
+        <requireHeadCoverage>true</requireHeadCoverage>
       </li>
 
       <li Class="AnimeArsenal.BodyDisappearExtension">

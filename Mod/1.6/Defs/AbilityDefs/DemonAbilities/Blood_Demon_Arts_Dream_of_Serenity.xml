@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Blood_Demon_Arts_Dream_of_Serenity</defName>
+    <label>Blood Demon Arts: Serene Dreams</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <groupDef>Blood_Demon_Arts_Dream_of_Serenity_Group</groupDef>
+    <description>Grant peaceful, restorative dreams to a sleeping target, improving their mood and rest quality. Effects become more potent with mastery.</description>
+    <iconPath>UI/Abilities/DemonSleepAbility6</iconPath>
+    <displayOrder>211</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>6</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5</range>
+      <warmupTime>2.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>True</canTargetPawns>
+        <canTargetSelf>False</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>PleasantDream</dreamEffectType>
+        <effectSeverity>0.4</effectSeverity>
+        <restBonus>0.3</restBonus>
+        <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+        <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic restorative dreams that provide mild comfort and rest.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.6</effectSeverity>
+            <restBonus>0.5</restBonus>
+            <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>60</experienceRequired>
+        <description>Enhanced peaceful dreams that provide significant mood and rest benefits.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.8</effectSeverity>
+            <restBonus>0.7</restBonus>
+            <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>Deeply restorative dreams that heal both body and mind.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>1.0</effectSeverity>
+            <restBonus>0.9</restBonus>
+            <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>275</experienceRequired>
+        <description>Perfect dream serenity that provides complete restoration and blissful peace.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.5</cooldownMultiplier>
+        <resourceCostMultiplier>0.7</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>1.2</effectSeverity>
+            <restBonus>1.2</restBonus>
+            <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

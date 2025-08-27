@@ -1,27 +1,125 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Eighth_Form_Reflection_of_True_Feelings</defName>
     <label>Eighth Form: Reflection of True Feelings</label>
     <category>LoveBreathing_Ability_Catergory</category>
-    <groupDef>LoveBreathing_EightForm_Group</groupDef>
-    <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles.</description>
+    <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
+
+    
+    <requiredGeneDefName>Gene_LoveBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>-1</range>
     </verbProperties>
+
+    
     <comps>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>Gene_LoveBreath</resourceGeneDef>
-        <resourceCost>20</resourceCost>
-      </li>
       <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
         <Radius>5</Radius>
+        <TicksActive>1250</TicksActive>
         <MaxShotsToReflect>20</MaxShotsToReflect>
         <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+        <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
       </li>
     </comps>
-  </AbilityDef>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic circular slash that reflects true feelings and deflects incoming projectiles in a moderate area.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <Radius>5</Radius>
+            <TicksActive>1250</TicksActive>
+            <MaxShotsToReflect>20</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <description>An improved reflection technique with larger radius and longer duration, channeling deeper emotions.</description>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <Radius>6</Radius>
+            <TicksActive>1500</TicksActive>
+            <MaxShotsToReflect>25</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <description>A superior reflection technique with wide coverage and extended protection, powered by unwavering love.</description>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <Radius>7.5</Radius>
+            <TicksActive>1750</TicksActive>
+            <MaxShotsToReflect>35</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>The ultimate reflection of true feelings - massive radius, extended duration, and can deflect enormous volleys with the power of pure love.</description>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <Radius>10</Radius>
+            <TicksActive>2500</TicksActive>
+            <MaxShotsToReflect>50</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+
+  <HediffDef>
+    <defName>AnimeArsenal_DeflectionField_Love</defName>
+    <label>love deflection field</label>
+    <description>A swirling field of loving energy that deflects incoming projectiles with the power of true feelings.</description>
+    <hediffClass>AnimeArsenal.Hediff_DeflectionField</hediffClass>
+    <defaultLabelColor>(1.0, 0.7, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>1250</min>
+          <max>1250</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
 </Defs>

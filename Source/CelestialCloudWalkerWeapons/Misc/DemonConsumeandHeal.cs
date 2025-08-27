@@ -18,8 +18,18 @@ namespace AnimeArsenal
         public float hediffChanceOnSelf = 1f;
         public float hediffChanceOnTarget = 1f;
 
-        public float nutritionGain = 0.8f; 
-        public bool canTargetCorpses = true; 
+        public float nutritionGain = 0.8f;
+        public bool canTargetCorpses = true;
+
+        public bool canTargetLiving = false;
+        public float healAmount = 15f;
+        public float resourceRestore = 10f;
+        public float bloodlustSeverity = 1f;
+        public float drainSeverity = 1f;
+        public float range = 1.5f;
+        public int maxTargets = 1;
+        public bool areaOfEffect = false;
+        public float instantKillChance = 0f;
 
         public AbilityCompProperties_DemonConsume()
         {
@@ -34,6 +44,56 @@ namespace AnimeArsenal
         private BloodDemonArtsGene BloodGene => parent.pawn.genes?.GetFirstGeneOfType<BloodDemonArtsGene>();
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            List<LocalTargetInfo> targets = new List<LocalTargetInfo>();
+
+            if (Props.areaOfEffect && Props.maxTargets > 1)
+            {
+                targets = FindTargetsInArea(target, Props.maxTargets);
+            }
+            else
+            {
+                targets.Add(target);
+            }
+
+            foreach (var tgt in targets)
+            {
+                ProcessSingleTarget(tgt);
+            }
+        }
+
+        private List<LocalTargetInfo> FindTargetsInArea(LocalTargetInfo centerTarget, int maxTargets)
+        {
+            List<LocalTargetInfo> targets = new List<LocalTargetInfo>();
+            targets.Add(centerTarget);
+
+            if (centerTarget.Thing?.Map == null) return targets;
+
+            var cellsInRange = GenRadial.RadialCellsAround(centerTarget.Cell, Props.range, true)
+                .Take(100) 
+                .ToList();
+
+            foreach (var cell in cellsInRange)
+            {
+                if (targets.Count >= maxTargets) break;
+
+                var things = cell.GetThingList(centerTarget.Thing.Map);
+                foreach (var thing in things)
+                {
+                    if (targets.Count >= maxTargets) break;
+
+                    LocalTargetInfo potentialTarget = new LocalTargetInfo(thing);
+                    if (thing != centerTarget.Thing && Valid(potentialTarget, false))
+                    {
+                        targets.Add(potentialTarget);
+                    }
+                }
+            }
+
+            return targets;
+        }
+
+        private void ProcessSingleTarget(LocalTargetInfo target)
         {
             Pawn targetPawn = null;
             Corpse targetCorpse = null;
@@ -89,7 +149,11 @@ namespace AnimeArsenal
             }
             else if (targetPawn != null)
             {
-                if (targetPawn.Dead || targetPawn.Downed)
+                if (Props.canTargetLiving && !targetPawn.Dead)
+                {
+                    isValidTarget = true;
+                }
+                else if (targetPawn.Dead || targetPawn.Downed)
                 {
                     isValidTarget = true;
                 }
@@ -101,10 +165,15 @@ namespace AnimeArsenal
 
             if (!isValidTarget)
             {
+                string message = Props.canTargetLiving ?
+                    "Cannot target this pawn" :
+                    "Can only consume downed, incapacitated, or dead pawns";
+
                 if (throwMessages)
-                    Messages.Message("Can only consume downed, incapacitated, or dead pawns", MessageTypeDefOf.RejectInput, false);
+                    Messages.Message(message, MessageTypeDefOf.RejectInput, false);
                 return false;
             }
+
             if (targetCorpse != null && targetCorpse.GetRotStage() == RotStage.Dessicated)
             {
                 if (throwMessages)
@@ -118,6 +187,12 @@ namespace AnimeArsenal
         private void ConsumeTarget(Pawn target, Corpse corpse = null)
         {
             Pawn caster = parent.pawn;
+
+            if (!target.Dead && Props.instantKillChance > 0f && Rand.Range(0f, 1f) <= Props.instantKillChance)
+            {
+                PerformInstantKill(target, corpse);
+                return;
+            }
 
             float healAmount = CalculateHealAmount(target, corpse);
             float resourceGain = CalculateResourceGain(target, corpse);
@@ -157,7 +232,7 @@ namespace AnimeArsenal
 
             if (BloodGene != null)
             {
-                BloodGene.Value = Mathf.Min(BloodGene.Max, BloodGene.Value + (BloodGene.Max * resourceGain));
+                BloodGene.Value = Mathf.Min(BloodGene.Max, BloodGene.Value + Props.resourceRestore);
             }
 
             RestoreHunger(caster, nutritionGain);
@@ -169,6 +244,67 @@ namespace AnimeArsenal
             ProcessTargetAfterConsumption(target, corpse);
 
             AddConsumptionThoughts(caster, target, corpse != null);
+        }
+
+        private void PerformInstantKill(Pawn target, Corpse corpse = null)
+        {
+            Pawn caster = parent.pawn;
+
+            if (target.Dead) return;
+
+            Messages.Message($"{caster.LabelShort} devours {target.LabelShort} completely!",
+                caster, MessageTypeDefOf.NeutralEvent, false);
+
+            DamageInfo killDamage = new DamageInfo(
+                DamageDefOf.Bite,
+                target.MaxHitPoints * 2f,
+                999f,
+                -1f,
+                caster,
+                null,
+                null,
+                DamageInfo.SourceCategory.ThingOrUnknown
+            );
+
+            target.TakeDamage(killDamage);
+
+            float healAmount = Props.healAmount * 1.5f; 
+            float resourceGain = Props.resourceRestore * 1.5f;
+            float nutritionGain = Props.nutritionGain * 1.2f;
+
+            var injuries = caster.health.hediffSet.hediffs
+                .OfType<Hediff_Injury>()
+                .Where(x => x.Severity > 0)
+                .ToList();
+
+            foreach (var injury in injuries.Take(3))
+            {
+                injury.Severity = Mathf.Max(0f, injury.Severity - (healAmount / 3f));
+                if (injury.Severity <= 0f)
+                {
+                    injury.PostRemoved();
+                }
+            }
+
+            if (BloodGene != null)
+            {
+                BloodGene.Value = Mathf.Min(BloodGene.Max, BloodGene.Value + resourceGain);
+            }
+
+            RestoreHunger(caster, nutritionGain);
+
+            CreateConsumptionEffects(target.Position, target.Map);
+
+            if (target.Dead)
+            {
+                Corpse newCorpse = target.Corpse;
+                if (newCorpse != null && !newCorpse.Destroyed)
+                {
+                    newCorpse.Destroy();
+                }
+            }
+
+            AddConsumptionThoughts(caster, target, false);
         }
 
         private void RestoreHunger(Pawn caster, float nutritionAmount)
@@ -191,21 +327,20 @@ namespace AnimeArsenal
             if (Props.hediffToApplyOnSelf != null && Rand.Range(0f, 1f) <= Props.hediffChanceOnSelf)
             {
                 Hediff hediff = caster.health.GetOrAddHediff(Props.hediffToApplyOnSelf);
-                hediff.Severity = Props.hediffSeverityOnSelf;
+                hediff.Severity = Props.bloodlustSeverity; 
             }
 
             if (!target.Dead && Props.hediffToApplyOnTarget != null && Rand.Range(0f, 1f) <= Props.hediffChanceOnTarget)
             {
                 Hediff hediff = target.health.GetOrAddHediff(Props.hediffToApplyOnTarget);
-                hediff.Severity = Props.hediffSeverityOnTarget;
+                hediff.Severity = Props.drainSeverity; 
             }
         }
 
         private float CalculateHealAmount(Pawn target, Corpse corpse = null)
         {
-            float baseHeal = 50f; 
+            float baseHeal = Props.healAmount; 
 
-            
             float sizeFactor = target.BodySize;
             float healthFactor = corpse != null ? 0.7f : target.health.summaryHealth.SummaryHealthPercent;
 
@@ -230,16 +365,14 @@ namespace AnimeArsenal
 
         private float CalculateResourceGain(Pawn target, Corpse corpse = null)
         {
-            float baseResource = 0.3f; 
+            float baseResource = Props.resourceRestore / 100f;
 
-            
             if (target.RaceProps.BloodDef != null)
                 baseResource += 0.1f;
 
             if (target.RaceProps.IsFlesh)
                 baseResource += 0.1f;
 
-            
             if (corpse != null)
             {
                 switch (corpse.GetRotStage())
@@ -256,7 +389,7 @@ namespace AnimeArsenal
                 }
             }
 
-            return baseResource;
+            return baseResource * 100f; 
         }
 
         private float CalculateNutritionGain(Pawn target, Corpse corpse = null)
@@ -314,9 +447,12 @@ namespace AnimeArsenal
             }
             else
             {
+                
+                float drainDamage = target.MaxHitPoints * 0.6f * (Props.drainSeverity / 2f); 
+
                 DamageInfo damage = new DamageInfo(
                     DamageDefOf.Bite,
-                    target.MaxHitPoints * 0.8f,
+                    drainDamage,
                     999f,
                     -1f,
                     parent.pawn,
@@ -330,7 +466,7 @@ namespace AnimeArsenal
                 if (!target.Dead)
                 {
                     Hediff bloodLoss = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, target);
-                    bloodLoss.Severity = 0.8f;
+                    bloodLoss.Severity = Props.drainSeverity * 0.3f; 
                     target.health.AddHediff(bloodLoss);
                 }
                 else

@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AbilityDef ParentName="RangedDemonBase">
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Graviton_Crush</defName>
     <label>Blood Demon Arts: Graviton Crush</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_GravitonCrush_Group</groupDef>
-    <description>Causes an overwhelming force to bear down on pawns in the target area, dealing crushing damage.</description>
+    <description>Causes an overwhelming gravitational force to bear down on pawns in the target area, dealing crushing damage. Power and area increase with mastery.</description>
     <iconPath>UI/Abilities/CrushAbilityIcon</iconPath>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <displayOrder>10</displayOrder>
-    <warmupSound>Ability_PsychicPulse</warmupSound>
-    <category>BloodDemonArts</category>
+    
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>12</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <drawAimPie>false</drawAimPie>
@@ -23,16 +33,134 @@
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
+
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_Crush">
         <baseDamage>10</baseDamage>
         <maxTargets>5</maxTargets>
         <radius>8</radius>
-      </li>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>BloodDemonArt</resourceGeneDef>
-        <resourceCost>20</resourceCost>
+        <armorPenetration>0</armorPenetration>
+        <range>20</range>
+        <stunChance>0</stunChance>
+        <stunDuration>1</stunDuration>
+        <canCrushBuildings>false</canCrushBuildings>
+        <buildingDamage>0</buildingDamage>
+        <knockdownChance>0</knockdownChance>
+        <instantKillChance>0</instantKillChance>
+        <createCrater>false</createCrater>
+        <blackHoleEffect>false</blackHoleEffect>
       </li>
     </comps>
-  </AbilityDef>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic gravitational crush that affects a small area with moderate force.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>1.0</cooldownMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Crush">
+            <baseDamage>10</baseDamage>
+            <maxTargets>5</maxTargets>
+            <radius>8</radius>
+            <stunChance>0.2</stunChance>
+            <stunDuration>2</stunDuration>
+            <canCrushBuildings>false</canCrushBuildings>
+            <armorPenetration>0</armorPenetration>
+            <range>20</range>
+            <buildingDamage>0</buildingDamage>
+            <knockdownChance>0</knockdownChance>
+            <instantKillChance>0</instantKillChance>
+            <createCrater>false</createCrater>
+            <blackHoleEffect>false</blackHoleEffect>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>Enhanced gravitational force with increased damage and larger area of effect.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Crush">
+            <baseDamage>18</baseDamage>
+            <maxTargets>8</maxTargets>
+            <radius>10</radius>
+            <stunChance>0.35</stunChance>
+            <stunDuration>3</stunDuration>
+            <canCrushBuildings>false</canCrushBuildings>
+            <armorPenetration>0.2</armorPenetration>
+            <range>25</range>
+            <buildingDamage>0</buildingDamage>
+            <knockdownChance>0</knockdownChance>
+            <instantKillChance>0</instantKillChance>
+            <createCrater>false</createCrater>
+            <blackHoleEffect>false</blackHoleEffect>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Devastating gravitational collapse that can crush buildings and heavily armored targets.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Crush">
+            <baseDamage>30</baseDamage>
+            <maxTargets>12</maxTargets>
+            <radius>12</radius>
+            <stunChance>0.5</stunChance>
+            <stunDuration>4</stunDuration>
+            <canCrushBuildings>true</canCrushBuildings>
+            <buildingDamage>25</buildingDamage>
+            <armorPenetration>0.4</armorPenetration>
+            <range>30</range>
+            <knockdownChance>0.6</knockdownChance>
+            <instantKillChance>0</instantKillChance>
+            <createCrater>false</createCrater>
+            <blackHoleEffect>false</blackHoleEffect>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>Ultimate gravitational mastery - creates a localized black hole effect that devastates everything in a massive area.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <resourceCostMultiplier>0.85</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Crush">
+            <baseDamage>50</baseDamage>
+            <maxTargets>20</maxTargets>
+            <radius>15</radius>
+            <stunChance>0.8</stunChance>
+            <stunDuration>6</stunDuration>
+            <canCrushBuildings>true</canCrushBuildings>
+            <buildingDamage>40</buildingDamage>
+            <armorPenetration>0.6</armorPenetration>
+            <range>35</range>
+            <knockdownChance>0.8</knockdownChance>
+            <instantKillChance>0.05</instantKillChance>
+            <createCrater>true</createCrater>
+            <blackHoleEffect>true</blackHoleEffect>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

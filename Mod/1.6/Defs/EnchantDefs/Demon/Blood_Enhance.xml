@@ -1,24 +1,75 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <HediffDef>
     <defName>Blood_Enhance</defName>
     <label>Blood Enhance</label>
-    <description>Blood begins to feel empowered.</description>
+    <description>Blood begins to feel empowered with demonic energy.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
-    <injuryProps>
-      <painPerSeverity>0.05</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.00025</averagePainPerSeverityPermanent>
-      <bleedRate>0.000</bleedRate>
-      <canMerge>true</canMerge>
-      <destroyedLabel>destroyed</destroyedLabel>
-      <destroyedOutLabel>destroyed</destroyedOutLabel>
-    </injuryProps>
+    <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
     <comps>
-        <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-            <damageType>Blood_Slash</damageType>
-            <damageValue>10</damageValue>
-        </li>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Blood_Slash</damageType>
+        <damageValue>10</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Blood_Enhance_Enhanced</defName>
+    <label>Enhanced Blood Power</label>
+    <description>Blood surges with enhanced demonic energy, increasing combat effectiveness.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Blood_Slash</damageType>
+        <damageValue>14</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Blood_Enhance_Superior</defName>
+    <label>Superior Blood Mastery</label>
+    <description>Blood flows with superior demonic power, greatly enhancing all attacks.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.0, 0.0)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Blood_Slash</damageType>
+        <damageValue>18</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Blood_Enhance_Master</defName>
+    <label>Master Blood Ascension</label>
+    <description>Blood reaches the pinnacle of demonic ascension, becoming a weapon of devastating power.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.0, 0.6)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Blood_Slash</damageType>
+        <damageValue>25</damageValue>
+      </li>
     </comps>
   </HediffDef>
 </Defs>

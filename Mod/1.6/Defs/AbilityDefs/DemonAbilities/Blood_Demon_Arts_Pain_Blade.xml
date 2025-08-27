@@ -1,18 +1,25 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Pain_Blade</defName>
     <label>Blood Demon Arts: Pain Blade</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
     <groupDef>BloodDemonArts_PainBlade_Group</groupDef>
-    <description>Launches a blade that slices through targets</description>
+    <description>Launches a blade of crystallized blood that slices through targets. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/AbilityProjectile</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
-    <category>BloodDemonArts</category>
+    <targetRequired>true</targetRequired>
     <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>
-    <displayGizmoWhileUndrafted>False</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>True</disableGizmoWhileUndrafted>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+
+    
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>20</range>
@@ -25,12 +32,66 @@
         <canTargetMechs>true</canTargetMechs>
       </targetParams>
     </verbProperties>
+
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
         <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile</projectileDef>
       </li>
     </comps>
-  </AbilityDef>
 
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic blood blade projectile that causes bleeding wounds.</description>
+      </li>
 
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>An improved blood blade with enhanced cutting power and deeper wounds.</description>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile_Enhanced</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>A devastating barrage of blood blades that shred through multiple targets.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.3</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile_Multi</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <description>The ultimate pain blade technique - launches a storm of razor-sharp blood projectiles with devastating cutting power.</description>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile_Master</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

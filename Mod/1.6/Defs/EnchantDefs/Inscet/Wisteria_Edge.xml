@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <HediffDef>
     <defName>Wisteria_Edge</defName>
     <label>Wisteria Edge</label>
-    <description>WIP.</description>
+    <description>Weapon coated in wisteria poison that inflicts lingering venom on targets.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
@@ -14,6 +15,60 @@
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
         <damageType>Wisteria_Sting</damageType>
         <damageValue>10</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Wisteria_Edge_Enhanced</defName>
+    <label>Enhanced Wisteria Edge</label>
+    <description>Enhanced weapon coating with stronger poison that inflicts greater lingering venom damage.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.7, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Wisteria_Sting</damageType>
+        <damageValue>14</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Wisteria_Edge_Superior</defName>
+    <label>Superior Wisteria Edge</label>
+    <description>Superior weapon coating with potent poison that inflicts severe lingering venom damage.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.6, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Wisteria_Sting</damageType>
+        <damageValue>18</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Wisteria_Edge_Master</defName>
+    <label>Master Wisteria Edge</label>
+    <description>The ultimate weapon coating with lethal poison that inflicts devastating lingering venom damage.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.5, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Wisteria_Sting</damageType>
+        <damageValue>25</damageValue>
       </li>
     </comps>
   </HediffDef>

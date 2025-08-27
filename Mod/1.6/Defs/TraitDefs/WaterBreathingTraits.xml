@@ -1,138 +1,178 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <TraitDef>
-    <defName>FlowingMight</defName>
+    <defName>FlowingCombat</defName>
     <commonality>1</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Flowing Might</label>
-        <description>{PAWN_nameDef} harnesses the flowing power of water, striking with calm precision but overwhelming force. {PAWN_pronoun}'s attacks break through defenses with the relentless power of a raging river.</description>
-        <statFactors>
-          <MeleeDPS>1.15</MeleeDPS>
-          <MeleeHitChance>1.10</MeleeHitChance>
-        </statFactors>
+        <label>flowing combat</label>
+        <description>[PAWN_nameDef] fights with the fluid grace of water. [PAWN_possessive] adaptive style becomes more effective against multiple enemies, but [PAWN_pronoun] struggles when movement is restricted.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeHitChance>8</MeleeHitChance>
+          <MeleeDodgeChance>10</MeleeDodgeChance>
+          <MoveSpeed>0.2</MoveSpeed>
+          <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>RushingCurrent</defName>
-    <commonality>1</commonality>
+    <defName>TidalForce</defName>
+    <commonality>0.7</commonality>
     <degreeDatas>
       <li>
-        <label>Rushing Current</label>
-        <description>{PAWN_nameDef} moves with the swiftness of a rushing river, striking with incredible speed and precision. {PAWN_pronoun} avoids attacks effortlessly, leaving nothing but the gentle ebb and flow of {PAWN_possessive} wake.</description>
-        <statFactors>
-          <MoveSpeed>1.12</MoveSpeed>
-          <MeleeDodgeChance>1.18</MeleeDodgeChance>
-        </statFactors>
+        <label>tidal force</label>
+        <description>[PAWN_nameDef] experiences alternating periods of high and low energy like ocean tides. [PAWN_possessive] performance fluctuates dramatically, with periods of exceptional ability followed by times of rest.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+          <MentalBreakThreshold>3</MentalBreakThreshold>
+          <RestRateMultiplier>1.3</RestRateMultiplier>
+        </statOffsets>
+        <skillGains>
+          <Crafting>2</Crafting>
+          <Artistic>2</Artistic>
+        </skillGains>
+        <marketValueFactorOffset>0.06</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>TidalTamer</defName>
-    <commonality>1</commonality>
+    <defName>HealingSprings</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Medicine</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Tidal Tamer</label>
-        <description>{PAWN_nameDef} radiates a calming presence, like the stillness of the ocean, drawing even the fiercest creatures to {PAWN_possessive} command. {PAWN_pronoun} bends the will of beasts, controlling them with the serenity of flowing water.</description>
-        <statFactors>
-          <AnimalsLearningFactor>1.20</AnimalsLearningFactor>
-          <TameAnimalChance>1.15</TameAnimalChance>
-        </statFactors>
+        <label>healing springs</label>
+        <description>[PAWN_nameDef] channels the purifying power of fresh water. [PAWN_possessive] medical work cleanses wounds and disease, and [PAWN_pronoun] never suffers from dehydration or water-borne illness.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <SurgerySuccessChanceFactor>0.4</SurgerySuccessChanceFactor>
+          <MedicalTendSpeed>0.3</MedicalTendSpeed>
+          <InjuryHealingFactor>0.5</InjuryHealingFactor>
+          <ImmunityGainSpeed>0.8</ImmunityGainSpeed>
+        </statOffsets>
+        <skillGains>
+          <Medicine>6</Medicine>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>EndlessFlow</defName>
-    <commonality>1</commonality>
+    <defName>OceansDepth</defName>
+    <commonality>0.6</commonality>
+    <forcedPassions>
+      <li>Intellectual</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Endless Flow</label>
-        <description>{PAWN_nameDef} endures hardship like the endless tide, flowing around obstacles and never breaking. Even in the face of adversity, {PAWN_pronoun} presses on, unwavering in {PAWN_possessive} resolve.</description>
-        <statFactors>
-          <PainShockThreshold>1.15</PainShockThreshold>
-          <RestFallRateFactor>0.85</RestFallRateFactor>
-        </statFactors>
+        <label>ocean's depth</label>
+        <description>[PAWN_nameDef] possesses the calm depths of the deepest ocean. [PAWN_possessive] unshakeable composure allows [PAWN_objective] to think clearly in any crisis and meditate with profound focus.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MentalBreakThreshold>-0.25</MentalBreakThreshold>
+          <ResearchSpeed>0.3</ResearchSpeed>
+          <MeditationFocusGain>0.5</MeditationFocusGain>
+          <PsychicSensitivity>0.3</PsychicSensitivity>
+        </statOffsets>
+        <skillGains>
+          <Intellectual>5</Intellectual>
+          <Social>2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>FlowingDefense</defName>
-    <commonality>1</commonality>
+    <defName>AquaticAdaptation</defName>
+    <commonality>0.9</commonality>
     <degreeDatas>
       <li>
-        <label>Flowing Defense</label>
-        <description>{PAWN_nameDef} adapts to the flow of battle, resisting toxins and filth as the river shapes its path around obstacles. {PAWN_pronoun} remains unyielding, emerging from even the harshest conditions calm and intact.</description>
-        <statFactors>
-          <FilthRate>0.80</FilthRate>
-          <ToxicResistance>1.20</ToxicResistance>
-        </statFactors>
+        <label>aquatic adaptation</label>
+        <description>[PAWN_nameDef] thrives in wet environments and struggles in arid conditions. [PAWN_possessive] body has adapted to water, making [PAWN_objective] exceptionally capable in rain and near water sources.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MoveSpeed>0.15</MoveSpeed>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+          <MentalBreakThreshold>5</MentalBreakThreshold>
+          <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
+        </statOffsets>
+        <skillGains>
+          <Animals>3</Animals>
+          <Plants>2</Plants>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>OceansHarvest</defName>
-    <commonality>1</commonality>
+    <defName>WhirlpoolTechnique</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Ocean's Harvest</label>
-        <description>{PAWN_nameDef} uses water's nourishing properties to craft meals that sustain the body and mind. {PAWN_pronoun} creates food that rejuvenates and replenishes all who stand beside {PAWN_pronoun}, much like the sea provides abundance.</description>
-        <statFactors>
-          <CookSpeed>1.15</CookSpeed>
-          <ButcheryFleshEfficiency>1.12</ButcheryFleshEfficiency>
-        </statFactors>
+        <label>whirlpool technique</label>
+        <description>[PAWN_nameDef] redirects enemy attacks like water flowing around stones. [PAWN_possessive] defensive combat style turns opponent's strength against them, excelling in martial arts.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MeleeDodgeChance>12</MeleeDodgeChance>
+          <MeleeHitChance>6</MeleeHitChance>
+          <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+          <SocialImpact>0.2</SocialImpact>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
+          <Social>2</Social>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
   <TraitDef>
-    <defName>TidalInfluence</defName>
-    <commonality>1</commonality>
+    <defName>Purification</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Medicine</li>
+    </forcedPassions>
     <degreeDatas>
       <li>
-        <label>Tidal Influence</label>
-        <description>{PAWN_nameDef} exudes a calming aura, like the tides that shape the shore. {PAWN_pronoun} draws others in with {PAWN_possessive} peaceful yet commanding presence, fostering loyalty and unity.</description>
-        <statFactors>
-          <SocialImpact>1.15</SocialImpact>
-          <RestRateMultiplier>1.10</RestRateMultiplier>
-        </statFactors>
+        <label>purification</label>
+        <description>[PAWN_nameDef] embodies water's cleansing properties. [PAWN_possessive] presence purifies disease and toxins, and [PAWN_pronoun] excels at cleaning and maintaining a healthy environment.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ImmunityGainSpeed>1.2</ImmunityGainSpeed>
+          <FoodPoisonChance>-1.0</FoodPoisonChance>
+          <SurgerySuccessChanceFactor>0.3</SurgerySuccessChanceFactor>
+          <CookSpeed>0.2</CookSpeed>
+        </statOffsets>
+        <skillGains>
+          <Medicine>5</Medicine>
+          <Cooking>3</Cooking>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>SoothingCurrent</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Soothing Current</label>
-        <description>{PAWN_nameDef} heals with the gentle but persistent touch of water, bringing comfort and relief to the wounded. {PAWN_pronoun} ensures that allies recover swiftly, using water's nurturing power to restore vitality.</description>
-        <statFactors>
-          <MedicalTendQuality>1.18</MedicalTendQuality>
-          <MedicalTendSpeed>1.12</MedicalTendSpeed>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>OceansPlenty</defName>
-    <commonality>1</commonality>
-    <degreeDatas>
-      <li>
-        <label>Ocean's Plenty</label>
-        <description>{PAWN_nameDef} understands the balance of water's power, fostering growth wherever {PAWN_pronoun} goes. Like the tides that replenish the earth, {PAWN_pronoun} nurtures the land, ensuring bountiful harvests and prosperity.</description>
-        <statFactors>
-          <PlantWorkSpeed>1.15</PlantWorkSpeed>
-          <PlantHarvestYield>1.12</PlantHarvestYield>
-        </statFactors>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 </Defs>

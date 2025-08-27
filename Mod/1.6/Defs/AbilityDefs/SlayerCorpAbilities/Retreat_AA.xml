@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>AA_RetreatDash</defName>
     <label>Retreat Dash</label>
-    <category>SlayerCorp_Ability_Catergory</category>
-    <groupDef>SlayerCorp_RetreatDash_Group</groupDef>
-    <description>Quickly dash away from the target to a safe position.</description>
+    <description>Quickly dash away from the target to a safe position. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/AbilityRetreat</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <targetRequired>true</targetRequired>
+
+    
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName> 
+    <resourceCost>15</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>30</range>
@@ -21,13 +26,15 @@
         <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
+
+    
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityRetreatDash">
         <minDashDistance>8</minDashDistance>
         <maxDashDistance>15</maxDashDistance>
         <avoidEnemies>true</avoidEnemies>
         <enemyAvoidanceRadius>5</enemyAvoidanceRadius>
-        <numberOfDashes>2</numberOfDashes>
+        <numberOfDashes>1</numberOfDashes>
         <castEffecter>AnimeArsenal_BeastJump</castEffecter>
         <landEffecter>AnimeArsenal_DashBack</landEffecter>
         <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
@@ -37,5 +44,91 @@
         <restoreStamina>false</restoreStamina>
       </li>
     </comps>
-  </AbilityDef>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic retreat dash technique to escape from danger.</description>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>An improved retreat that can be performed twice and better avoids enemies.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityRetreatDash">
+            <minDashDistance>10</minDashDistance>
+            <maxDashDistance>18</maxDashDistance>
+            <avoidEnemies>true</avoidEnemies>
+            <enemyAvoidanceRadius>7</enemyAvoidanceRadius>
+            <numberOfDashes>2</numberOfDashes>
+            <castEffecter>AnimeArsenal_BeastJump</castEffecter>
+            <landEffecter>AnimeArsenal_DashBack</landEffecter>
+            <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
+            <grantTemporaryImmunity>true</grantTemporaryImmunity>
+            <grantSpeedBoost>false</grantSpeedBoost>
+            <grantMoodBoost>false</grantMoodBoost>
+            <restoreStamina>false</restoreStamina>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>A masterful retreat technique that grants temporary speed and excellent enemy avoidance.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityRetreatDash">
+            <minDashDistance>12</minDashDistance>
+            <maxDashDistance>22</maxDashDistance>
+            <avoidEnemies>true</avoidEnemies>
+            <enemyAvoidanceRadius>9</enemyAvoidanceRadius>
+            <numberOfDashes>3</numberOfDashes>
+            <castEffecter>AnimeArsenal_BeastJump</castEffecter>
+            <landEffecter>AnimeArsenal_DashBack</landEffecter>
+            <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
+            <grantTemporaryImmunity>true</grantTemporaryImmunity>
+            <grantSpeedBoost>true</grantSpeedBoost>
+            <grantMoodBoost>false</grantMoodBoost>
+            <restoreStamina>false</restoreStamina>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <description>The ultimate retreat technique - grants immunity, speed, mood boost, restores stamina, and maximizes safety.</description>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityRetreatDash">
+            <minDashDistance>15</minDashDistance>
+            <maxDashDistance>25</maxDashDistance>
+            <avoidEnemies>true</avoidEnemies>
+            <enemyAvoidanceRadius>12</enemyAvoidanceRadius>
+            <numberOfDashes>3</numberOfDashes>
+            <castEffecter>AnimeArsenal_BeastJump</castEffecter>
+            <landEffecter>AnimeArsenal_DashBack</landEffecter>
+            <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
+            <grantTemporaryImmunity>true</grantTemporaryImmunity>
+            <grantSpeedBoost>true</grantSpeedBoost>
+            <grantMoodBoost>true</grantMoodBoost>
+            <restoreStamina>true</restoreStamina>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

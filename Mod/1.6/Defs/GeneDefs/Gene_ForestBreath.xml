@@ -3,6 +3,7 @@
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_ForestBreath</defName>
     <label>Forest Breath</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Forest Breath</resourceName>
     <description>Forest Breathing is a combat style that channels the force of the natural world through fluid, elemental movements.</description>
     <iconPath>UI/Icons/Genes/forest</iconPath>

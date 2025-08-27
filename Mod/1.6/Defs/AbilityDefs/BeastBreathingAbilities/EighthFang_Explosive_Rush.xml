@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AbilityDef>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Eighth_Fang_Explosive_Rush</defName>
     <label>Eighth Fang: Explosive Rush</label>
     <category>BeastBreathing_Ability_Catergory</category>
-    <groupDef>BeastBreathing_EightFang_Group</groupDef>
-    <description>The user charges towards their opponent at blinding speeds.</description>
+    <description>The user charges towards their opponent.</description>
     <iconPath>UI/Abilities/AbilityDash</iconPath>
     <cooldownTicksRange>180</cooldownTicksRange>
-    <targetRequired>True</targetRequired>
+    <targetRequired>true</targetRequired>
+
+
+    <requiredGeneDefName>Gene_BeastBreath</requiredGeneDefName>
+    <resourceCost>5</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>20</range>
       <warmupTime>0.5</warmupTime>
       <noiseRadius>4</noiseRadius>
-      <requireLineOfSight>True</requireLineOfSight>
+      <requireLineOfSight>true</requireLineOfSight>
       <targetParams>
         <canTargetSelf>false</canTargetSelf>
-        <canTargetPawns>True</canTargetPawns>
+        <canTargetPawns>true</canTargetPawns>
         <canTargetLocations>false</canTargetLocations>
       </targetParams>
     </verbProperties>
+
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>7</damageAmount>
@@ -30,10 +38,74 @@
         <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
         <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
       </li>
-      <li Class="AnimeArsenal.CompProperties_ResourceCost">
-        <resourceGeneDef>Gene_BeastBreath</resourceGeneDef>
-        <resourceCost>20</resourceCost>
-      </li>
     </comps>
-  </AbilityDef>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic dash attack that deals moderate damage.</description>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>An improved dash with increased damage and longer stun duration.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.0</rangeMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>10</damageAmount>
+            <damageType>Savage_Mauling</damageType>
+            <stunDuration>3</stunDuration>
+            <effectRadius>0</effectRadius>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>A near mastered dash that damages nearby enemies in addition to the primary target.</description>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <cooldownMultiplier>0.833</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>13</damageAmount>
+            <damageType>Savage_Mauling</damageType>
+            <stunDuration>4</stunDuration>
+            <effectRadius>1.5</effectRadius>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>A mastered dash with increased damage, extended stun, and wide area effect.</description>
+        <resourceCostMultiplier>2.4</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>18</damageAmount>
+            <damageType>Savage_Mauling</damageType>
+            <stunDuration>5</stunDuration>
+            <effectRadius>2.5</effectRadius>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
 </Defs>

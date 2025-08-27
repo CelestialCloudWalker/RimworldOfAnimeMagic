@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Eleventh_Form_Passionate_Heart_Storm</defName>
+    <label>Eleventh Form: Passionate Heart Storm</label>
+    <category>LoveBreathing_Ability_Catergory</category>
+    <description>The user unleashes a devastating storm of passionate energy that overwhelms all enemies in a wide radius around them with pure love. The fervent power of the love breathing technique captivates anything nearby. Gains experience with each use and becomes more powerful.</description>
+    <iconPath>UI/Abilities/AbilityHeartStorm</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+    
+    <requiredGeneDefName>Gene_LoveBreath</requiredGeneDefName>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>1.0</warmupTime>
+      <noiseRadius>8</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    
+    <comps>
+      <li Class="EMF.CompProperties_AbilityDamageInRadius">
+        <radius>4</radius>
+        <damageParms>
+          <damageAmount>8~12</damageAmount>
+          <damageDef>Passionate_Strike</damageDef>
+        </damageParms>
+        <friendlyFireParms>
+          <canTargetHostile>true</canTargetHostile>
+          <canTargetNeutral>true</canTargetNeutral>
+          <canTargetFriendly>false</canTargetFriendly>
+        </friendlyFireParms>
+      </li>
+    </comps>
+
+    <levels>
+      
+      <li>
+        <labelSuffix> (Novice)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic area attack that overwhelms enemies with passionate energy dealing moderate loving damage.</description>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Adept)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>An improved storm with wider loving aura and increased passionate damage per target.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>5</radius>
+            <damageParms>
+              <damageAmount>12~16</damageAmount>
+              <damageDef>Passionate_Strike</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Expert)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <description>A devastating storm with extended radius and overwhelming passionate strikes that can pierce through defenses with pure devotion.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>6</radius>
+            <damageParms>
+              <damageAmount>16~20</damageAmount>
+              <damageDef>Passionate_Strike</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+      
+      <li>
+        <labelSuffix> (Master)</labelSuffix>
+        <experienceRequired>800</experienceRequired>
+        <description>The ultimate passionate heart storm - maximum area coverage with devastating loving damage that can overwhelm buildings and captivate any enemy with the infinite power of pure, unbridled love.</description>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>7</radius>
+            <damageParms>
+              <damageAmount>20~28</damageAmount>
+              <damageDef>Passionate_Strike</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

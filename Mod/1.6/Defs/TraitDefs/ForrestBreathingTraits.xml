@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>WoodlandSurvivor</defName>
+    <commonality>1</commonality>
+    <forcedPassions>
+      <li>Animals</li>
+      <li>Shooting</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>woodland survivor</label>
+        <description>[PAWN_nameDef] thrives in the wilderness. [PAWN_pronoun] can hunt with deadly precision, find sustenance where others starve, and needs little comfort when surrounded by nature.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <HuntingStealth>0.4</HuntingStealth>
+          <ForagedNutritionPerDay>2.0</ForagedNutritionPerDay>
+          <AnimalGatherSpeed>0.3</AnimalGatherSpeed>
+          <TameAnimalChance>0.2</TameAnimalChance>
+        </statOffsets>
+        <skillGains>
+          <Animals>4</Animals>
+          <Shooting>3</Shooting>
+          <Plants>2</Plants>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CamouflageExpert</defName>
+    <commonality>0.8</commonality>
+    <forcedPassions>
+      <li>Shooting</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>camouflage expert</label>
+        <description>[PAWN_nameDef] moves like a shadow through natural terrain. [PAWN_possessive] mastery of concealment makes [PAWN_objective] nearly invisible to enemies and deadly from ambush.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <HuntingStealth>0.5</HuntingStealth>
+          <TrapSpringChance>-0.4</TrapSpringChance>
+          <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+          <RangedWeapon_Cooldown>-0.15</RangedWeapon_Cooldown>
+          <MeleeDodgeChance>5</MeleeDodgeChance>
+        </statOffsets>
+        <skillGains>
+          <Shooting>5</Shooting>
+          <Animals>2</Animals>
+        </skillGains>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>NaturesGuardian</defName>
+    <commonality>1</commonality>
+    <forcedPassions>
+      <li>Plants</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>nature's guardian</label>
+        <description>[PAWN_nameDef] is a devoted protector of the natural world. [PAWN_pronoun] works expertly with wood and plants but struggles with industrial manufacturing that harms the environment.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <PlantWorkSpeed>0.35</PlantWorkSpeed>
+          <PlantHarvestYield>0.2</PlantHarvestYield>
+          <ConstructionSpeed>0.2</ConstructionSpeed>
+          <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+          <MentalBreakThreshold>3</MentalBreakThreshold>
+          <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Plants>5</Plants>
+          <Construction>3</Construction>
+          <Crafting>-3</Crafting>
+        </skillGains>
+        <marketValueFactorOffset>0.02</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RootNetwork</defName>
+    <commonality>0.6</commonality>
+    <forcedPassions>
+      <li>Intellectual</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>root network</label>
+        <description>[PAWN_nameDef] feels connected to the living network of nature itself. [PAWN_possessive] heightened awareness allows [PAWN_objective] to sense danger and understand natural phenomena with uncanny insight.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ResearchSpeed>0.25</ResearchSpeed>
+          <PsychicSensitivity>0.4</PsychicSensitivity>
+          <MeditationFocusGain>0.3</MeditationFocusGain>
+          <AnimalGatherYield>0.15</AnimalGatherYield>
+          <TrapSpringChance>-0.5</TrapSpringChance>
+        </statOffsets>
+        <skillGains>
+          <Intellectual>4</Intellectual>
+          <Animals>3</Animals>
+          <Plants>2</Plants>
+        </skillGains>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>SeasonalAdaptation</defName>
+    <commonality>0.7</commonality>
+    <forcedPassions>
+      <li>Plants</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>seasonal adaptation</label>
+        <description>[PAWN_nameDef] changes with the seasons like the forest itself. [PAWN_possessive] body adapts to temperature extremes, and [PAWN_pronoun] finds strength in nature's eternal cycles.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <ComfyTemperatureMin>-35</ComfyTemperatureMin>
+          <ComfyTemperatureMax>25</ComfyTemperatureMax>
+          <PlantWorkSpeed>0.3</PlantWorkSpeed>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <RestRateMultiplier>1.2</RestRateMultiplier>
+        </statOffsets>
+        <skillGains>
+          <Plants>4</Plants>
+          <Animals>2</Animals>
+        </skillGains>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>Photosynthesis</defName>
+    <commonality>0.5</commonality>
+    <forcedPassions>
+      <li>Plants</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>photosynthesis</label>
+        <description>[PAWN_nameDef] draws sustenance from sunlight like a plant. [PAWN_pronoun] needs less food during bright days but becomes sluggish and hungry in darkness or underground.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <BedHungerRateFactor>0.7</BedHungerRateFactor>
+          <PlantWorkSpeed>0.4</PlantWorkSpeed>
+          <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
+          <MentalBreakThreshold>5</MentalBreakThreshold>
+          <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+          <Plants>6</Plants>
+          <Medicine>2</Medicine>
+        </skillGains>
+        <marketValueFactorOffset>0.02</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+</Defs>
