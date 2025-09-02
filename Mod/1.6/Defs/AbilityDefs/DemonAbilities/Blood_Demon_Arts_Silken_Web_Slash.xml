@@ -4,12 +4,11 @@
     <defName>Blood_Demon_Silken_Web_Slash</defName>
     <label>Blood Demon Arts: Silken Web Slash</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>BloodDemonArts_SilkenWebSlash_Group</groupDef>
     <description>Launches the target away, then slashes them with demonic silk threads. Power and number of cuts increase with mastery.</description>
     <iconPath>UI/Abilities/DemonAbilityWeb</iconPath>
     <displayOrder>100</displayOrder>
-    
-    
+
+
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
     <hostile>true</hostile>
@@ -17,7 +16,7 @@
     <targetRequired>true</targetRequired>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
 
-    
+
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>8</baseExperienceGain>
@@ -34,7 +33,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_Cleave">
         <NumberOfCuts>3</NumberOfCuts>
@@ -50,7 +49,7 @@
     </comps>
 
     <levels>
-      
+
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
@@ -73,7 +72,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>75</experienceRequired>
@@ -96,7 +95,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>200</experienceRequired>
@@ -119,7 +118,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>350</experienceRequired>

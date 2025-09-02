@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Beast_Breathing_Reflect</defName>
+    <label>Beast Breathing: Reflect</label>
+    <category>BeastBreathing_Ability_Catergory</category>
+    <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles. Gains experience with each use and becomes more powerful.</description>
+    <iconPath>UI/Abilities/DeflectAbility</iconPath>
+    <targetRequired>false</targetRequired>
+
+
+    <requiredGeneDefName>Gene_BeastBreath</requiredGeneDefName>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <Radius>5</Radius>
+        <TicksActive>1250</TicksActive>
+        <MaxShotsToReflect>20</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+        <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Flash)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic circular slash that deflects incoming projectiles in a moderate area.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <Radius>5</Radius>
+            <TicksActive>1250</TicksActive>
+            <MaxShotsToReflect>20</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Gleam)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <description>An improved whirling technique with larger radius and longer duration.</description>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <Radius>6</Radius>
+            <TicksActive>1350</TicksActive>
+            <MaxShotsToReflect>22</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Mirage)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <description>A superior whirling technique with wide coverage and extended protection.</description>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <Radius>6.5</Radius>
+            <TicksActive>1500</TicksActive>
+            <MaxShotsToReflect>28</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Erelong)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>The ultimate whirling fangs - massive radius, extended duration, and can deflect enormous volleys.</description>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <Radius>8</Radius>
+            <TicksActive>2000</TicksActive>
+            <MaxShotsToReflect>35</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+  <HediffDef>
+    <defName>AnimeArsenal_DeflectionField</defName>
+    <label>deflection field</label>
+    <description>Spinning blades that can reflect projectiles.</description>
+    <hediffClass>AnimeArsenal.Hediff_DeflectionField</hediffClass>
+    <defaultLabelColor>(0.8, 1.0, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>1250</min>
+          <max>1250</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

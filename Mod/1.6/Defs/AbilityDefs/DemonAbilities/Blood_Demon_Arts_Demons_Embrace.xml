@@ -4,7 +4,6 @@
     <defName>Blood_Demon_Arts_Demons_Embrace</defName>
     <label>Blood Demon Arts: Demon's Embrace</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>BloodDemonArts_Demons_Embrace_Group</groupDef>
     <description>Turn a pawn into a Demon work slave, granting them the power of Blood Demon Art. Becomes more efficient and faster with practice.</description>
     <iconPath>UI/Abilities/DemonTransformAbility</iconPath>
     <jobDef>CastAbilityOnThing</jobDef>
@@ -15,13 +14,13 @@
     <hostile>true</hostile>
     <aiCanUse>true</aiCanUse>
 
-    
+
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>50</resourceCost>
     <baseExperienceGain>15</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
 
-    
+
     <cooldownTicksRange>
       <min>300</min>
       <max>300</max>
@@ -39,13 +38,13 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
     </comps>
 
     <levels>
-      
+
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
@@ -58,7 +57,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>75</experienceRequired>
@@ -71,7 +70,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>200</experienceRequired>
@@ -84,7 +83,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>450</experienceRequired>

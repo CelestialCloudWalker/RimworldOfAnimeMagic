@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Memory_Harvest</defName>
     <label>Blood Demon Arts: Memory Harvest</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>Blood_Demon_Arts_Memory_Harvest_Group</groupDef>
     <description>Dive into a sleeping target's dreams to extract valuable information. Information quality improves with mastery.</description>
     <iconPath>UI/Abilities/DemonSleepAbility4</iconPath>
     <displayOrder>212</displayOrder>

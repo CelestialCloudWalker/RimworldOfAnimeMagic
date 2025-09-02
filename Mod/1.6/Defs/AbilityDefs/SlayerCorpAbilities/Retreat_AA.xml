@@ -55,7 +55,7 @@
 
       
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
+        <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>100</experienceRequired>
         <description>An improved retreat that can be performed twice and better avoids enemies.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
@@ -80,9 +80,9 @@
 
       
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
+        <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>A masterful retreat technique that grants temporary speed and excellent enemy avoidance.</description>
+        <description>A Erelongful retreat technique that grants temporary speed and excellent enemy avoidance.</description>
         <resourceCostMultiplier>1.5</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
@@ -106,7 +106,7 @@
 
       
       <li>
-        <labelSuffix> (Master)</labelSuffix>
+        <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>500</experienceRequired>
         <description>The ultimate retreat technique - grants immunity, speed, mood boost, restores stamina, and maximizes safety.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>

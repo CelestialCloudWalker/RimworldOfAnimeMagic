@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -281,6 +282,165 @@ namespace AnimeArsenal
                 );
 
                 modExt.damageType.Worker.Apply(extraDamageInfo, victim);
+            }
+        }
+    }
+    [StaticConstructorOnStartup]
+    public static class HarmonyPatches
+    {
+        static HarmonyPatches()
+        {
+            var harmony = new Harmony("ScarletMaterials.Patches");
+            harmony.PatchAll();
+        }
+    }
+
+    [HarmonyPatch(typeof(Verb_MeleeAttackDamage), "DamageInfosToApply")]
+    public static class Verb_MeleeAttackDamage_DamageInfosToApply_Patch
+    {
+        public static void Postfix(ref IEnumerable<DamageInfo> __result, Verb_MeleeAttackDamage __instance, LocalTargetInfo target)
+        {
+            try
+            {
+                var weapon = __instance.EquipmentSource;
+                if (weapon?.Stuff == null)
+                    return;
+
+                string materialDefName = weapon.Stuff.defName;
+                if (materialDefName != "Scarlet_Crimson_Iron_Sand" && materialDefName != "Scarlet_Ore")
+                    return;
+
+                var targetPawn = target.Pawn;
+                if (targetPawn?.genes == null)
+                    return;
+
+                List<string> targetGenes = new List<string>
+                {
+                    "BloodDemonArt_LowerMoon",
+                    "BloodDemonArt_UpperMoon",
+                    "BloodDemonArt",
+                };
+
+                bool hasDemonGene = false;
+                foreach (string geneDefName in targetGenes)
+                {
+                    GeneDef gene = DefDatabase<GeneDef>.GetNamedSilentFail(geneDefName);
+                    if (gene != null && targetPawn.genes.HasActiveGene(gene))
+                    {
+                        hasDemonGene = true;
+                        break;
+                    }
+                }
+
+                if (!hasDemonGene)
+                    return;
+
+                var damageInfos = __result.ToList();
+                var bonusDamageInfos = new List<DamageInfo>();
+
+                foreach (var bodyPart in targetPawn.health.hediffSet.GetNotMissingParts())
+                {
+                    if (bodyPart.def.defName == "Neck" || bodyPart.def.defName == "AA_DemonNeck")
+                    {
+                        float damageAmount = materialDefName == "Scarlet_Ore" ? 50f : 40f;
+
+                        var bonusDamage = new DamageInfo(
+                            DamageDefOf.Cut,
+                            damageAmount,
+                            0.8f, 
+                            -1f,  
+                            __instance.caster,
+                            bodyPart,
+                            weapon.def,
+                            DamageInfo.SourceCategory.ThingOrUnknown,
+                            weapon
+                        );
+                        bonusDamageInfos.Add(bonusDamage);
+                        break; 
+                    }
+                }
+
+                if (bonusDamageInfos.Any())
+                {
+                    __result = damageInfos.Concat(bonusDamageInfos);
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"[ScarletMaterials] Error in demon damage patch: {ex}");
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Projectile), "Impact")]
+    public static class Projectile_Impact_Patch
+    {
+        public static void Prefix(Projectile __instance, Thing hitThing)
+        {
+            try
+            {
+                var launcher = __instance.Launcher;
+                if (launcher == null)
+                    return;
+
+                if (!(launcher is Pawn pawn) || pawn.equipment?.Primary?.Stuff == null)
+                    return;
+
+                var weapon = pawn.equipment.Primary;
+                string materialDefName = weapon.Stuff.defName;
+
+                if (materialDefName != "Scarlet_Crimson_Iron_Sand" && materialDefName != "Scarlet_Ore")
+                    return;
+
+                if (!(hitThing is Pawn targetPawn) || targetPawn.genes == null)
+                    return;
+
+                List<string> targetGenes = new List<string>
+                {
+                    "BloodDemonArt_LowerMoon",
+                    "BloodDemonArt_UpperMoon",
+                    "BloodDemonArt",
+                };
+
+                bool hasDemonGene = false;
+                foreach (string geneDefName in targetGenes)
+                {
+                    GeneDef gene = DefDatabase<GeneDef>.GetNamedSilentFail(geneDefName);
+                    if (gene != null && targetPawn.genes.HasActiveGene(gene))
+                    {
+                        hasDemonGene = true;
+                        break;
+                    }
+                }
+
+                if (!hasDemonGene)
+                    return;
+
+                var neckPart = targetPawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(
+                    bp => bp.def.defName == "Neck" || bp.def.defName == "AA_DemonNeck");
+
+                if (neckPart != null)
+                {
+                    float damageAmount = materialDefName == "Scarlet_Ore" ? 50f : 40f;
+
+                    var bonusDamage = new DamageInfo(
+                        DamageDefOf.Cut,
+                        damageAmount,
+                        0.8f,
+                        -1f,
+                        pawn,
+                        neckPart,
+                        weapon.def,
+                        DamageInfo.SourceCategory.ThingOrUnknown,
+                        weapon
+                    );
+
+                    targetPawn.TakeDamage(bonusDamage);
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"[ScarletMaterials] Error in ranged demon damage patch: {ex}");
             }
         }
     }

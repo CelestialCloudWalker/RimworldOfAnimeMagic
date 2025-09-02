@@ -58,7 +58,7 @@
 
       
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
+        <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>100</experienceRequired>
         <description>An improved dash that can be performed twice in quick succession.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
@@ -86,9 +86,9 @@
 
       
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
+        <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>A masterful dash technique that grants temporary speed and can be chained three times.</description>
+        <description>A Erelongful dash technique that grants temporary speed and can be chained three times.</description>
         <resourceCostMultiplier>1.5</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
@@ -115,7 +115,7 @@
 
       
       <li>
-        <labelSuffix> (Master)</labelSuffix>
+        <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>500</experienceRequired>
         <description>The ultimate dash technique - grants immunity, speed, mood boost, and restores stamina.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>

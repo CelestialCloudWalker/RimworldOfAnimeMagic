@@ -7,7 +7,7 @@
     <handlerClass>Talented.ActiveTreeHandler</handlerClass>
     <skin>DefaultTreeSkin</skin>
     <nodes>
-      <li>Node_1753485192176_7309</li>
+      <li>Node_1756759455148_4268</li>
     </nodes>
     <availablePaths>
       <li>
@@ -69,30 +69,50 @@
   </Talented.TalentTreeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_7309</defName>
-    <label>BloodDemonArts 1</label>
+    <defName>Node_1756759455148_4268</defName>
+    <label>Pain Blade</label>
     <style>DefaultNodeStyle</style>
-    <position>(112,322)</position>
+    <position>(44,430)</position>
     <type>Start</type>
     <upgrades>
       <li>Blood_Demon_Arts_Pain_Blade_Talent</li>
     </upgrades>
     <connections>
-      <li>Node_1753485192176_3736</li>
-      <li>Node_1753485192176_1908</li>
-      
-      <li>Node_1753485192176_7326</li>
-      <li>Node_1753485192176_7735</li>
-      
-      <li>Node_1753485192176_8613</li>
+      <li>Node_1756759455148_594</li>
+      <li>Node_1756759455148_8067</li>
+      <li>Node_1756759455148_1199</li>
+      <li>Node_1756759455148_6827</li>
+      <li>Node_1756759455148_5296</li>
+      <li>Node_1756759455148_7931</li>
+      <li>Node_1756759455148_6538</li>
+      <li>Node_1756759455148_6762</li>
+      <li>Node_1756759455148_9136</li>
+      <li>Node_1756759455148_6966</li>
+      <li>Node_1756759455148_1330</li>
+      <li>Node_1756759455148_54</li>
+      <li>Node_1756759455148_2802</li>
+      <li>Node_1756759455148_9792</li>
+      <li>Node_1756759455148_6097</li>
+      <li>Node_1756759455148_7616</li>
+      <li>Node_1756759455148_6107</li>
+      <li>Node_1756759455148_8248</li>
+      <li>Node_1756759455148_7141</li>
+      <li>Node_1756759455148_8415</li>
+      <li>Node_1756759455148_6355</li>
+      <li>Node_1756759455148_8200</li>
+      <li>Node_1756759455148_9739</li>
+      <li>Node_1756759455148_6306</li>
+      <li>Node_1756759455148_4776</li>
+      <li>Node_1756759455148_4296</li>
+      <li>Node_1756759455148_1312</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_8472</defName>
+    <defName>Node_1756759455148_6097</defName>
     <label>Quick Step</label>
     <style>DefaultNodeStyle</style>
-    <position>(218,167)</position>
+    <position>(201,170)</position>
     <type>Normal</type>
     <upgrades>
       <li>Quick_Step_Talent2</li>
@@ -100,17 +120,13 @@
       <li>Quick_Step_Talent4</li>
       <li>Quick_Step_Talent5</li>
     </upgrades>
-    <path>Physical_Conditioning</path>
-    <connections>
-      <li>Node_1753485192176_7078</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_7078</defName>
+    <defName>Node_1756759455148_9792</defName>
     <label>Prone Mobility</label>
     <style>DefaultNodeStyle</style>
-    <position>(272,166)</position>
+    <position>(309,175)</position>
     <type>Normal</type>
     <upgrades>
       <li>Prone_Mobility_Talent2</li>
@@ -118,17 +134,13 @@
       <li>Prone_Mobility_Talent4</li>
       <li>Prone_Mobility_Talent5</li>
     </upgrades>
-    <path>Physical_Conditioning</path>
-    <connections>
-      <li>Node_1753485192176_5063</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_1908</defName>
+    <defName>Node_1756759455148_54</defName>
     <label>Quick Reflexes</label>
     <style>DefaultNodeStyle</style>
-    <position>(167,168)</position>
+    <position>(121,175)</position>
     <type>Normal</type>
     <upgrades>
       <li>Quick_Reflexes_Talent2</li>
@@ -136,17 +148,13 @@
       <li>Quick_Reflexes_Talent4</li>
       <li>Quick_Reflexes_Talent5</li>
     </upgrades>
-    <path>Physical_Conditioning</path>
-    <connections>
-      <li>Node_1753485192176_8472</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_2793</defName>
+    <defName>Node_1756759455148_8248</defName>
     <label>Vitality Surge</label>
     <style>DefaultNodeStyle</style>
-    <position>(280,118)</position>
+    <position>(397,96)</position>
     <type>Normal</type>
     <upgrades>
       <li>Vitality_Surge_Talent2</li>
@@ -154,46 +162,35 @@
       <li>Vitality_Surge_Talent4</li>
       <li>Vitality_Surge_Talent5</li>
     </upgrades>
-    <path>Vitality</path>
-    <connections>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_3736</defName>
-    <label>BloodDemonArts 2</label>
+    <defName>Node_1756759455148_1312</defName>
+    <label>Moon Breathing</label>
     <style>DefaultNodeStyle</style>
-    <position>(112,281)</position>
+    <position>(482,0)</position>
     <type>Normal</type>
     <upgrades>
-      <li>Blood_Demon_Arts_Blood_Ascension_Talent</li>
+      <li>Moon_Breathing_GeneGive_Talent</li>
     </upgrades>
-    <path>Forms</path>
-    <connections>
-      <li>Node_1753485192176_3870</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_3870</defName>
-    <label>BloodDemonArts 3</label>
+    <defName>Node_1756759455148_6966</defName>
+    <label>Demons Embrace</label>
     <style>DefaultNodeStyle</style>
-    <position>(111,239)</position>
+    <position>(44,306)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Arts_Demons_Embrace_Talent</li>
     </upgrades>
-    <path>Forms</path>
-    <connections>
-      <li>Node_1753485192176_3606</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_1907</defName>
+    <defName>Node_1756759455148_7141</defName>
     <label>Weight Training</label>
     <style>DefaultNodeStyle</style>
-    <position>(223,118)</position>
+    <position>(265,85)</position>
     <type>Normal</type>
     <upgrades>
       <li>Weight_Training_Talent2</li>
@@ -201,47 +198,35 @@
       <li>Weight_Training_Talent4</li>
       <li>Weight_Training_Talent5</li>
     </upgrades>
-    <path>Vitality</path>
-    <connections>
-      <li>Node_1753485192176_2793</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_3606</defName>
-    <label>BloodDemonArts 4</label>
+    <defName>Node_1756759455148_1330</defName>
+    <label>Crush</label>
     <style>DefaultNodeStyle</style>
-    <position>(112,201)</position>
+    <position>(47,198)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Arts_Graviton_Crush_Talent</li>
     </upgrades>
-    <path>Forms</path>
-    <connections>
-      <li>Node_1753485192176_4308</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_4308</defName>
-    <label>BloodDemonArts 5</label>
+    <defName>Node_1756759455148_7616</defName>
+    <label>Spirial</label>
     <style>DefaultNodeStyle</style>
-    <position>(113,160)</position>
+    <position>(47,102)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Arts_Spiral_of_Torment_Talent</li>
     </upgrades>
-    <path>Forms</path>
-    <connections>
-      <li>Node_1753485192176_6709</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_7326</defName>
+    <defName>Node_1756759455148_6107</defName>
     <label>Tough Body</label>
     <style>DefaultNodeStyle</style>
-    <position>(169,120)</position>
+    <position>(132,85)</position>
     <type>Normal</type>
     <upgrades>
       <li>Tough_Body_Talent2</li>
@@ -249,17 +234,13 @@
       <li>Tough_Body_Talent4</li>
       <li>Tough_Body_Talent5</li>
     </upgrades>
-    <path>Vitality</path>
-    <connections>
-      <li>Node_1753485192176_1907</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_7735</defName>
+    <defName>Node_1756759455148_594</defName>
     <label>Breath Pool</label>
     <style>DefaultNodeStyle</style>
-    <position>(164,320)</position>
+    <position>(124,430)</position>
     <type>Normal</type>
     <upgrades>
       <li>BloodDemonArts_Increase</li>
@@ -267,17 +248,13 @@
       <li>BloodDemonArts_Increase3</li>
       <li>BloodDemonArts_Increase4</li>
     </upgrades>
-    <path>Resource_Mastery</path>
-    <connections>
-      <li>Node_1753485192176_7327</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_7327</defName>
+    <defName>Node_1756759455148_8067</defName>
     <label>Cost Control</label>
     <style>DefaultNodeStyle</style>
-    <position>(213,321)</position>
+    <position>(198,430)</position>
     <type>Normal</type>
     <upgrades>
       <li>BloodDemonArts_Cost_Talent</li>
@@ -285,17 +262,13 @@
       <li>BloodDemonArts_Cost_Talent3</li>
       <li>BloodDemonArts_Cost_Talent4</li>
     </upgrades>
-    <path>Resource_Mastery</path>
-    <connections>
-      <li>Node_1753485192176_6620</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_6620</defName>
+    <defName>Node_1756759455148_1199</defName>
     <label>Regen Ticks</label>
     <style>DefaultNodeStyle</style>
-    <position>(261,320)</position>
+    <position>(298,430)</position>
     <type>Normal</type>
     <upgrades>
       <li>BloodDemonArts_RegenTicks_Talent</li>
@@ -303,17 +276,13 @@
       <li>BloodDemonArts_RegenTicks_Talent3</li>
       <li>BloodDemonArts_RegenTicks_Talent4</li>
     </upgrades>
-    <path>Resource_Mastery</path>
-    <connections>
-      <li>Node_1753485192176_13</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_13</defName>
+    <defName>Node_1756759455148_6827</defName>
     <label>Regen Rate</label>
     <style>DefaultNodeStyle</style>
-    <position>(308,320)</position>
+    <position>(389,430)</position>
     <type>Normal</type>
     <upgrades>
       <li>AnimeArsenal_BloodDemonArtsRegenSpeed_Talent</li>
@@ -321,17 +290,13 @@
       <li>AnimeArsenal_BloodDemonArtsRegenSpeed_Talent3</li>
       <li>AnimeArsenal_BloodDemonArtsRegenSpeed_Talent4</li>
     </upgrades>
-    <path>Resource_Mastery</path>
-    <connections>
-      <li>Node_1753485192176_8953</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_8613</defName>
+    <defName>Node_1756759455148_7931</defName>
     <label>Enhanced Strikes</label>
     <style>DefaultNodeStyle</style>
-    <position>(168,234)</position>
+    <position>(121,294)</position>
     <type>Normal</type>
     <upgrades>
       <li>Enhanced_Strikes_Talent2</li>
@@ -339,17 +304,13 @@
       <li>Enhanced_Strikes_Talent4</li>
       <li>Enhanced_Strikes_Talent5</li>
     </upgrades>
-    <path>Combat_Mastery</path>
-    <connections>
-      <li>Node_1753485192176_8398</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_8398</defName>
+    <defName>Node_1756759455148_6538</defName>
     <label>Heavy Impact</label>
     <style>DefaultNodeStyle</style>
-    <position>(227,237)</position>
+    <position>(220,294)</position>
     <type>Normal</type>
     <upgrades>
       <li>Heavy_Impact_Talent2</li>
@@ -357,17 +318,13 @@
       <li>Heavy_Impact_Talent4</li>
       <li>Heavy_Impact_Talent5</li>
     </upgrades>
-    <path>Combat_Mastery</path>
-    <connections>
-      <li>Node_1753485192176_4051</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_4051</defName>
+    <defName>Node_1756759455148_6762</defName>
     <label>Steady Hand</label>
     <style>DefaultNodeStyle</style>
-    <position>(285,232)</position>
+    <position>(314,294)</position>
     <type>Normal</type>
     <upgrades>
       <li>Steady_Hand_Talent2</li>
@@ -375,17 +332,13 @@
       <li>Steady_Hand_Talent4</li>
       <li>Steady_Hand_Talent5</li>
     </upgrades>
-    <path>Combat_Mastery</path>
-    <connections>
-      <li>Node_1753485192176_2559</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_2559</defName>
+    <defName>Node_1756759455148_9136</defName>
     <label>Swift Attacks</label>
     <style>DefaultNodeStyle</style>
-    <position>(344,233)</position>
+    <position>(394,294)</position>
     <type>Normal</type>
     <upgrades>
       <li>Swift_Attacks_Talent2</li>
@@ -393,14 +346,13 @@
       <li>Swift_Attacks_Talent4</li>
       <li>Swift_Attacks_Talent5</li>
     </upgrades>
-    <path>Combat_Mastery</path>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_5063</defName>
+    <defName>Node_1756759455148_2802</defName>
     <label>Precise Form</label>
     <style>DefaultNodeStyle</style>
-    <position>(334,164)</position>
+    <position>(394,187)</position>
     <type>Normal</type>
     <upgrades>
       <li>Precise_Form_Talent2</li>
@@ -408,14 +360,13 @@
       <li>Precise_Form_Talent4</li>
       <li>Precise_Form_Talent5</li>
     </upgrades>
-    <path>Physical_Conditioning</path>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_8953</defName>
+    <defName>Node_1756759455148_5296</defName>
     <label>Regen Amount</label>
     <style>DefaultNodeStyle</style>
-    <position>(357,319)</position>
+    <position>(488,430)</position>
     <type>Normal</type>
     <upgrades>
       <li>BloodDemonArts_RegenAmount_Talent</li>
@@ -423,98 +374,79 @@
       <li>BloodDemonArts_RegenAmount_Talent3</li>
       <li>BloodDemonArts_RegenAmount_Talent4</li>
     </upgrades>
-    <path>Resource_Mastery</path>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_6709</defName>
-    <label>BloodDemonArts 6</label>
+    <defName>Node_1756759455148_8415</defName>
+    <label>Thunderous Wrath</label>
     <style>DefaultNodeStyle</style>
-    <position>(112,116)</position>
+    <position>(47,0)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Arts_Thunderous_Wrath_Talent</li>
     </upgrades>
-    <connections>
-      <li>Node_1753485192176_6538</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_6538</defName>
-    <label>BloodDemonArts 7</label>
+    <defName>Node_1756759455148_6355</defName>
+    <label>Vicisous Rush</label>
     <style>DefaultNodeStyle</style>
-    <position>(113,70)</position>
+    <position>(94,0)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Arts_Vicious_Rush_Talent</li>
     </upgrades>
-    <connections>
-      <li>Node_1753485192176_5268</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_5268</defName>
-    <label>BloodDemonArts 8</label>
+    <defName>Node_1756759455148_8200</defName>
+    <label>Silk Web Slash</label>
     <style>DefaultNodeStyle</style>
-    <position>(169,66)</position>
+    <position>(149,0)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Silken_Web_Slash_Talent</li>
     </upgrades>
-    <connections>
-      <li>Node_1753485192176_2047</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_2047</defName>
-    <label>BloodDemonArts 9</label>
+    <defName>Node_1756759455148_9739</defName>
+    <label>GroundLash</label>
     <style>DefaultNodeStyle</style>
-    <position>(223,66)</position>
+    <position>(209,0)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Art_Groundlash_Tentacles_Talent</li>
     </upgrades>
-    <connections>
-      <li>Node_1753485192176_5495</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_5495</defName>
-    <label>BloodDemonArts 10</label>
+    <defName>Node_1756759455148_6306</defName>
+    <label>Devour</label>
     <style>DefaultNodeStyle</style>
-    <position>(277,65)</position>
+    <position>(270,0)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Arts_Devour_Talent</li>
     </upgrades>
-    <connections>
-      <li>Node_1753485192176_2594</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_2594</defName>
-    <label>BloodDemonArts 11</label>
+    <defName>Node_1756759455148_4776</defName>
+    <label>Dream Needle</label>
     <style>DefaultNodeStyle</style>
-    <position>(332,65)</position>
+    <position>(339,0)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Arts_DreamNeedle_Talent</li>
     </upgrades>
-    <connections>
-      <li>Node_1753485192176_5603</li>
-    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1753485192176_5603</defName>
-    <label>BloodDemonArts 12</label>
+    <defName>Node_1756759455148_4296</defName>
+    <label>Sleep Abilities</label>
     <style>DefaultNodeStyle</style>
-    <position>(342,108)</position>
+    <position>(411,0)</position>
     <type>Normal</type>
     <upgrades>
       <li>Blood_Demon_Arts_Abyssal_Visions_Talent</li>

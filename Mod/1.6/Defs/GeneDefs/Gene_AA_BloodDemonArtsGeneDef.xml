@@ -13,10 +13,10 @@
     <displayCategory>DemonBloodArts</displayCategory>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
 
-  
+
     <regenTicks>BloodDemonArts_RegenTicks</regenTicks>
     <regenStat>BloodDemonArts_RegenAmount</regenStat>
     <regenSpeedStat>AnimeArsenal_BloodDemonArtsRegenSpeed</regenSpeedStat>
     <costMult>BloodDemonArts_Cost</costMult>
-    </AnimeArsenal.BloodDemonArtsGeneDef>
+  </AnimeArsenal.BloodDemonArtsGeneDef>
 </Defs>

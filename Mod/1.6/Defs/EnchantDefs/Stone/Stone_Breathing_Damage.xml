@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Stone_Breathing_Damage</defName>
+    <label>Stone Breathing</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was crushed to death.</deathMessage>
+    <hediff>SmashOfStone</hediff>
+    <hediffSkin>SmashOfStone</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Blunt</armorCategory>
+    <impactSoundType>Blunt</impactSoundType>
+    <bluntInnerHitChance>0.8</bluntInnerHitChance>
+    <bluntInnerHitDamageFractionToConvert>0.2~0.4</bluntInnerHitDamageFractionToConvert>
+    <bluntInnerHitDamageFractionToAdd>0.1~0.3</bluntInnerHitDamageFractionToAdd>
+    <bluntStunDuration>2.5</bluntStunDuration>
+    <bluntStunChancePerDamagePctOfCorePartToHeadCurve>
+      <points>
+        <li>(0.1, 0.1)</li>
+        <li>(0.3, 0.3)</li>
+        <li>(0.5, 0.6)</li>
+        <li>(0.8, 0.9)</li>
+      </points>
+    </bluntStunChancePerDamagePctOfCorePartToHeadCurve>
+    <bluntStunChancePerDamagePctOfCorePartToBodyCurve>
+      <points>
+        <li>(0.2, 0.05)</li>
+        <li>(0.4, 0.15)</li>
+        <li>(0.6, 0.3)</li>
+        <li>(0.8, 0.5)</li>
+      </points>
+    </bluntStunChancePerDamagePctOfCorePartToBodyCurve>
+  </DamageDef>
+  <HediffDef ParentName="InjuryBase">
+    <defName>SmashOfStone</defName>
+    <label>Smash Of Stone</label>
+    <labelNoun>crushing wounds</labelNoun>
+    <description>Severe blunt trauma from a massive force. Bones fractured. flesh brusied and broken.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.65</severityPerDayTended>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.008</averagePainPerSeverityPermanent>
+      <bleedRate>0.02</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Crushed</destroyedLabel>
+      <destroyedOutLabel>Shattered</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

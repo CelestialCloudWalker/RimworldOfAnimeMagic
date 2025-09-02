@@ -4,18 +4,17 @@
     <defName>Blood_Demon_Arts_Graviton_Crush</defName>
     <label>Blood Demon Arts: Graviton Crush</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>BloodDemonArts_GravitonCrush_Group</groupDef>
     <description>Causes an overwhelming gravitational force to bear down on pawns in the target area, dealing crushing damage. Power and area increase with mastery.</description>
     <iconPath>UI/Abilities/CrushAbilityIcon</iconPath>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <displayOrder>10</displayOrder>
-    
+
     <aiCanUse>true</aiCanUse>
     <targetRequired>true</targetRequired>
     <hostile>true</hostile>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
 
-    
+
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>12</baseExperienceGain>
@@ -34,7 +33,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_Crush">
         <baseDamage>10</baseDamage>
@@ -54,7 +53,7 @@
     </comps>
 
     <levels>
-      
+
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
@@ -81,7 +80,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>100</experienceRequired>
@@ -108,7 +107,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>250</experienceRequired>
@@ -135,7 +134,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>450</experienceRequired>

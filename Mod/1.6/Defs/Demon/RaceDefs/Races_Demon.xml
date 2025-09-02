@@ -101,9 +101,13 @@
         </whiteXenotypeList>
         <xenotypeList>
           <li>AA_DemonBloodArts_User</li>
+          <li>AA_DemonBloodArts_LowerMoon</li>
+          <li>AA_DemonBloodArts_UpperMoon</li>
         </xenotypeList>
         <whiteGeneList>
           <li>BloodDemonArt</li>
+          <li>BloodDemonArt_UpperMoon</li>
+          <li>BloodDemonArt_LowerMoon</li>
         </whiteGeneList>
 
         <whiteTraitList>

@@ -6,121 +6,11 @@
     <displayOrder>10007</displayOrder>
   </AbilityCategoryDef>
 
-  <AbilityGroupDef>
-    <defName>BeastBreathing_EightFang_Group</defName>
-    <label>Eight Fang Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BeastBreathing_FourthFang_Group</defName>
-    <label>Fourth Fang Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BeastBreathing_SevenFang_Group</defName>
-    <label>Seven Fang Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BeastBreathing_TenthFang_Group</defName>
-    <label>Tenth Fang Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BeastBreathing_TwelfthFang_Group</defName>
-    <label>Twelfth Fang Group</label>
-  </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>BloodDemonArts_AbilityCaterogry</defName>
     <label>Blood Demon Arts</label>
     <displayOrder>10005</displayOrder>
   </AbilityCategoryDef>
-
-  <AbilityGroupDef>
-    <defName>BloodDemonArts_BloodAcension_Group</defName>
-    <label>Blood Ascension Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BloodDemonArts_DreamNeedle_Group</defName>
-    <label>Dream Needle Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Blood_Demon_Arts_Devour_Group</defName>
-    <label>Devour Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Blood_Demon_Arts_Dream_of_Serenity_Group</defName>
-    <label>Serene Dreams Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Blood_Demon_Arts_Memory_Manipulation_Group</defName>
-    <label>Memory Manipulation Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Blood_Demon_Arts_Hearts_Manipulation_Group</defName>
-    <label>Heart's Manipulation Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Blood_Demon_Arts_Memory_Dream_Parasite_Group</defName>
-    <label>Dream Parasite Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Blood_Demon_Arts_Memory_Harvest_Group</defName>
-    <label>Memory Harvest Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Blood_Demon_Art_Groundlash_Tentacles_Group</defName>
-    <label>Bursting Tentacle Whips Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Blood_Demon_Arts_Abyssal_Visions_Group</defName>
-    <label>Abyssal Visions Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BloodDemonArts_Demons_Embrace_Group</defName>
-    <label>Demons Embrace Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BloodDemonArts_GravitonCrush_Group</defName>
-    <label>Graviton Crush Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BloodDemonArts_PainBlade_Group</defName>
-    <label>Pain Blade Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BloodDemonArts_SpiralOfTorment_Group</defName>
-    <label>Spiral Of Torment Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BloodDemonArts_ThunderousWrath_Group</defName>
-    <label>Thunderous Wrath Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BloodDemonArts_ViciousRush_Group</defName>
-    <label>Vicious Rush Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>BloodDemonArts_SilkenWebSlash_Group</defName>
-    <label>Silken Web Slash Group</label>
-  </AbilityGroupDef>
 
   <AbilityCategoryDef>
     <defName>FlameBreathing_Ability_Catergory</defName>
@@ -128,61 +18,11 @@
     <displayOrder>10004</displayOrder>
   </AbilityCategoryDef>
 
-  <AbilityGroupDef>
-    <defName>FlameBreathing_EleventhForm_Group</defName>
-    <label>Eleventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FlameBreathing_FirstForm_Group</defName>
-    <label>First Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FlameBreathing_SecondForm_Group</defName>
-    <label>Second Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FlameBreathing_ThirteenthForm_Group</defName>
-    <label>Thirteenth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FlameBreathing_TwelthForm_Group</defName>
-    <label>Twelth Form Group</label>
-  </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>FlowerBreathing_Ability_Catergory</defName>
     <label>Flower Breathing</label>
     <displayOrder>10002</displayOrder>
   </AbilityCategoryDef>
-
-  <AbilityGroupDef>
-    <defName>FlowerBreathing_EleventhForm_Group</defName>
-    <label>Eleventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FlowerBreathing_FourthForm_Group</defName>
-    <label>Fourth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FlowerBreathing_SecondForm_Group</defName>
-    <label>Second Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FlowerBreathing_SeventhForm_Group</defName>
-    <label>Seventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FlowerBreathing_ThirdForm_Group</defName>
-    <label>Third Form Group</label>
-  </AbilityGroupDef>
 
   <AbilityCategoryDef>
     <defName>ForestsBreathing_Ability_Catergory</defName>
@@ -195,87 +35,17 @@
     <label>Fifth Form Group</label>
   </AbilityGroupDef>
 
-  <AbilityGroupDef>
-    <defName>ForestsBreathing_FirstForm_Group</defName>
-    <label>First Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>ForestsBreathing_FourthForm_Group</defName>
-    <label>Fourth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>ForestsBreathing_SecondForm_Group</defName>
-    <label>Second Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>ForestsBreathing_ThirdForm_Group</defName>
-    <label>Third Form Group</label>
-  </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>FrostBreathing_Ability_Catergory</defName>
     <label>Frost Breathing</label>
     <displayOrder>10008</displayOrder>
   </AbilityCategoryDef>
 
-  <AbilityGroupDef>
-    <defName>FrostBreathing_FifthForm_Group</defName>
-    <label>Fifth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FrostBreathing_FirstForm_Group</defName>
-    <label>First Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FrostBreathing_FourthForm_Group</defName>
-    <label>Fourth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FrostBreathing_SecondForm_Group</defName>
-    <label>Second Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>FrostBreathing_ThirdForm_Group</defName>
-    <label>Third Form Group</label>
-  </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>InsectBreathing_Ability_Catergory</defName>
     <label>Insect Breathing</label>
     <displayOrder>10009</displayOrder>
   </AbilityCategoryDef>
-
-  <AbilityGroupDef>
-    <defName>InsectBreathing_Dance_Of_The_Cicada_Group</defName>
-    <label>Dance of the Cicada Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Insectreathing_Dance_Of_The_Firefly_Group</defName>
-    <label>Dance of the Firefly Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Insectreathing_Dance_Of_The_Grasshopper_Group</defName>
-    <label>Dance of the Grasshopper Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Insectreathing_Dance_Of_The_Mantis_Group</defName>
-    <label>Dance of the Mantis Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>Insectreathing_Dance_Of_The_Scorpin_Group</defName>
-    <label>Dance of the Scorpin Group</label>
-  </AbilityGroupDef>
 
   <AbilityCategoryDef>
     <defName>LoveBreathing_Ability_Catergory</defName>
@@ -288,56 +58,11 @@
     <label>Eight Form Group</label>
   </AbilityGroupDef>
 
-  <AbilityGroupDef>
-    <defName>LoveBreathing_FourthForm_Group</defName>
-    <label>Fourth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>LoveBreathing_NinthForm_Group</defName>
-    <label>Ninth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>LoveBreathing_SeventhForm_Group</defName>
-    <label>Seventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>LoveBreathing_TenthForm_Group</defName>
-    <label>Tenth Form Group</label>
-  </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>MistBreathing_Ability_Catergory</defName>
     <label>Mist Breathing</label>
     <displayOrder>10011</displayOrder>
   </AbilityCategoryDef>
-
-  <AbilityGroupDef>
-    <defName>MistBreathing_EightForm_Group</defName>
-    <label>Eight Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>MistBreathing_FourthForm_Group</defName>
-    <label>Fourth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>MistBreathing_NinthForm_Group</defName>
-    <label>Ninth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>MistBreathing_FifthForm_Group</defName>
-    <label>Fifth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>MistBreathing_ThirdForm_Group</defName>
-    <label>Third Form Group</label>
-  </AbilityGroupDef>
 
   <AbilityCategoryDef>
     <defName>SerpentBreathing_Ability_Catergory</defName>
@@ -349,57 +74,11 @@
     <defName>SerpentBreathing_FifthForm_Group</defName>
     <label>Fifth Form Group</label>
   </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>SerpentBreathing_FirstForm_Group</defName>
-    <label>First Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>SerpentBreathing_FourthForm_Group</defName>
-    <label>Fourth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>SerpentBreathing_SeventhForm_Group</defName>
-    <label>Seventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>SerpentBreathing_SixthForm_Group</defName>
-    <label>Sixth Form Group</label>
-  </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>SoundBreathing_Ability_Catergory</defName>
     <label>Sound Breathing</label>
     <displayOrder>10012</displayOrder>
   </AbilityCategoryDef>
-
-  <AbilityGroupDef>
-    <defName>SoundBreathing_FourthForm_Group</defName>
-    <label>Fourth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>SoundBreathing_SecondForm_Group</defName>
-    <label>Second Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>SoundBreathing_SeventhForm_Group</defName>
-    <label>Seventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>SoundBreathing_SixthForm_Group</defName>
-    <label>Sixth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>SoundBreathing_ThirdForm_Group</defName>
-    <label>Third Form Group</label>
-  </AbilityGroupDef>
 
   <AbilityCategoryDef>
     <defName>StoneBreathing_Ability_Catergory</defName>
@@ -412,56 +91,11 @@
     <label>Eight Form Group</label>
   </AbilityGroupDef>
 
-  <AbilityGroupDef>
-    <defName>StoneBreathing_EleventhForm_Group</defName>
-    <label>Eleventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>StoneBreathing_NinthForm_Group</defName>
-    <label>Ninth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>StoneBreathing_SeventhForm_Group</defName>
-    <label>Seventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>StoneBreathing_SixthForm_Group</defName>
-    <label>Sixth Form Group</label>
-  </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>ThunderBreathing_Ability_Catergory</defName>
     <label>Thunder Breathing</label>
     <displayOrder>10014</displayOrder>
   </AbilityCategoryDef>
-
-  <AbilityGroupDef>
-    <defName>ThunderBreathing_EightForm_Group</defName>
-    <label>Eight Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>ThunderBreathing_EleventhForm_Group</defName>
-    <label>Eleventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>ThunderBreathing_NinthForm_Group</defName>
-    <label>Ninth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>ThunderBreathing_TenthForm_Group</defName>
-    <label>Tenth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>ThunderBreathing_TwelfthForm_Group</defName>
-    <label>Twelfth Form Group</label>
-  </AbilityGroupDef>
 
   <AbilityCategoryDef>
     <defName>WaterBreathing_Ability_Catergory</defName>
@@ -469,30 +103,6 @@
     <displayOrder>10015</displayOrder>
   </AbilityCategoryDef>
 
-  <AbilityGroupDef>
-    <defName>WaterBreathing_FirstForm_Group</defName>
-    <label>First Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>WaterBreathing_SeventhForm_Group</defName>
-    <label>Seventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>WaterBreathing_ThirdForm_Group</defName>
-    <label>Third Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>WaterBreathing_ThirteenthForm_Group</defName>
-    <label>Thirteenth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>WaterBreathing_TwelfthForm_Group</defName>
-    <label>Twelfth Form Group</label>
-  </AbilityGroupDef>
 
   <AbilityCategoryDef>
     <defName>WindBreathing_Ability_Catergory</defName>
@@ -500,46 +110,23 @@
     <displayOrder>10016</displayOrder>
   </AbilityCategoryDef>
 
-  <AbilityGroupDef>
-    <defName>WindBreathing_EleventhForm_Group</defName>
-    <label>Eleventh Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>WindBreathing_TenthForm_Group</defName>
-    <label>Tenth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>WindBreathing_ThirteenthForm_Group</defName>
-    <label>Thirteenth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>WindBreathing_TwelfthForm_Group</defName>
-    <label>Twelfth Form Group</label>
-  </AbilityGroupDef>
-
-  <AbilityGroupDef>
-    <defName>WindBreathing_FourteenthForm_Group</defName>
-    <label>Fourteenth Form Group</label>
-  </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>SlayerCorp_Ability_Catergory</defName>
     <label>Slayer Corp</label>
     <displayOrder>10017</displayOrder>
   </AbilityCategoryDef>
 
-  <AbilityGroupDef>
-    <defName>SlayerCorp_DashForward_Group</defName>
-    <label>Dash Forward Group</label>
-  </AbilityGroupDef>
+  <AbilityCategoryDef>
+    <defName>MoonBreathing_Ability_Catergory</defName>
+    <label>Moon Breathing</label>
+    <displayOrder>10018</displayOrder>
+  </AbilityCategoryDef>
 
-  <AbilityGroupDef>
-    <defName>SlayerCorp_RetreatDash_Group</defName>
-    <label>Retreat Dash Group</label>
-  </AbilityGroupDef>
+  <AbilityCategoryDef>
+    <defName>SunBreathing_Ability_Catergory</defName>
+    <label>Sun Breathing</label>
+    <displayOrder>10018</displayOrder>
+  </AbilityCategoryDef>
 
 
 </Defs>

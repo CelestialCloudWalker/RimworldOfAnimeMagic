@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Sun_Breathing_Multi_Strike</defName>
+    <label>Sun Breathing: Multi Strike</label>
+    <category>SunBreathing_Ability_Catergory</category>
+    <description>The user vanishes in a blitz of Sun dashes, leaving a scorching trail that burns enemies. Gains experience with each use and becomes more powerful.</description>
+    <iconPath>UI/Abilities/AbilityMultiDash</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+
+    <requiredGeneDefName>Gene_SunBreath</requiredGeneDefName>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>25</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>15</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>4</maxJumps>
+        <ticksBetweenJumps>4</ticksBetweenJumps>
+        <jumpDistance>4</jumpDistance>
+        <targetSearchRadius>15</targetSearchRadius>
+        <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
+        <jumpDamage>3~4</jumpDamage>
+        <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+        <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Flash)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A basic Sun dash sequence that burns enemies with moderate searing damage.</description>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Gleam)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>An improved scorching trail with more dashes and increased burning damage.</description>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>5</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>4</jumpDistance>
+            <targetSearchRadius>16</targetSearchRadius>
+            <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>4~5</jumpDamage>
+            <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Mirage)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>A devastating Sun trail with extended range, more dashes, and faster execution that leaves intense burning.</description>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>6</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>5</jumpDistance>
+            <targetSearchRadius>18</targetSearchRadius>
+            <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>5~6</jumpDamage>
+            <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Erelong)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <description>The ultimate scorching trail - maximum dashes, devastating searing damage, and lightning-fast execution that incinerates everything in its path.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>7</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>20</targetSearchRadius>
+            <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>6~8</jumpDamage>
+            <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

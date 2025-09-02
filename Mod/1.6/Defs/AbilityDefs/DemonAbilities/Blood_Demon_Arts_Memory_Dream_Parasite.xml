@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Memory_Dream_Parasite</defName>
     <label>Blood Demon Arts: Dream Parasite</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>Blood_Demon_Arts_Memory_Dream_Parasite_Group</groupDef>
     <description>Enter a sleeping target's dreams and steal their knowledge and skills for yourself. Transfer efficiency and predictability increase with mastery.</description>
     <iconPath>UI/Abilities/DemonAbilitySkillSteal</iconPath>
     <displayOrder>214</displayOrder>
@@ -13,7 +12,7 @@
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
 
-    
+
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>30</resourceCost>
     <baseExperienceGain>20</baseExperienceGain>
@@ -30,7 +29,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
         <dreamEffectType>SkillTransfer</dreamEffectType>
@@ -41,7 +40,7 @@
     </comps>
 
     <levels>
-      
+
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
@@ -59,7 +58,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>150</experienceRequired>
@@ -77,7 +76,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>300</experienceRequired>
@@ -95,7 +94,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>500</experienceRequired>

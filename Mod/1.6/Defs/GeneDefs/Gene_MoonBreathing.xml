@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
+    <defName>Gene_MoonBreath</defName>
+    <label>Moon Breath</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
+    <resourceName>Moon Breath</resourceName>
+    <description>Carriers of this gene embody the elegance and fluidity of blooming flowers, unleashing techniques that blend agility and vision with deadly precision. Their attacks are a mesmerizing dance of petals and blossoms, with enhanced perception at the cost of potential strain on their eyesight.</description>
+    <iconPath>UI/Icons/Genes/moon</iconPath>
+    <resourceLabel>Serpent Breath</resourceLabel>
+    <resourceDescription>Current stored Breath, charged with the essence of serpents. This energy powers devastating snake-like abilities, ensnaring and striking enemies with lethal precision.</resourceDescription>
+    <TalentTrees>
+      <li>Moon_BreathingStyleBlankTree</li>
+    </TalentTrees>
+    <experienceFormula>Basic_LinearXP</experienceFormula>
+    <experienceGainSettings>
+      <experienceTypes>
+        <li Class="Talented.DamageTakenExperienceTypeDef">
+          <baseXP>50</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <li Class="Talented.DamageDealtExperienceTypeDef">
+          <baseXP>100</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Shooting</SkillDef>
+          <baseXP>2</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>HaulToCell</SkillDef>
+          <baseXP>1</baseXP>
+        </li>
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_BeatFire</VerbClassName>
+          <baseXP>1</baseXP>
+        </li>
+      </experienceTypes>
+    </experienceGainSettings>
+    <modExtensions>
+      <li Class="AnimeArsenal.GeneDamageModExtension">
+        <damageType>Cut</damageType>
+        <damageAmount>30</damageAmount>
+        <targetGene>BloodDemonArt</targetGene>
+        <armorPenetration>0.8</armorPenetration>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </targetBodyParts>
+        <damageOnHit>true</damageOnHit>
+        <continuousDamage>false</continuousDamage>
+        <applyOnGeneAdd>false</applyOnGeneAdd>
+        <applyOnGeneRemove>false</applyOnGeneRemove>
+      </li>
+      <li Class="DeathTimerExtension">
+        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
+        <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
+        <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>
+        <curseHediffDescription>Grants immense power in exchange for a shortened lifespan. Their body burns with strength, but their time is now limited—death before the age of 25 is inevitable.</curseHediffDescription>
+        <curseStageLabel>Breathing Mark Curse</curseStageLabel>
+        <deathCause>OrganFailure</deathCause>
+        <maxAgeInYears>25</maxAgeInYears>
+        <minDaysEarlyDeath>1</minDaysEarlyDeath>
+        <maxDaysEarlyDeath>365</maxDaysEarlyDeath>
+        <immediateDeathMinDays>1</immediateDeathMinDays>
+        <immediateDeathMaxDays>30</immediateDeathMaxDays>
+        <createCurseHediff>true</createCurseHediff>
+        <activateOnGeneAdd>false</activateOnGeneAdd>
+      </li>
+    </modExtensions>
+    <maxStat>MoonBreath</maxStat>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>BreathingTechnique</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(138, 43, 226)</barColor>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <exhaustionHediff>SerpentBreathing_Fatigue</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+    <TabLabel>Talents</TabLabel>
+    <regenTicks>MoonBreath_RegenTicks</regenTicks>
+    <regenStat>MoonBreath_RegenAmount</regenStat>
+    <regenSpeedStat>MoonBreath_RegenRate</regenSpeedStat>
+    <costMult>MoonBreath_Cost</costMult>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
+</Defs>

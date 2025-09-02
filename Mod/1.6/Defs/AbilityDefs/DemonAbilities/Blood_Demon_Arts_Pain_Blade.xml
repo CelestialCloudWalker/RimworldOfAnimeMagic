@@ -4,7 +4,6 @@
     <defName>Blood_Demon_Arts_Pain_Blade</defName>
     <label>Blood Demon Arts: Pain Blade</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>BloodDemonArts_PainBlade_Group</groupDef>
     <description>Launches a blade of crystallized blood that slices through targets. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/AbilityProjectile</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
@@ -14,7 +13,7 @@
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
 
-    
+
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
@@ -33,7 +32,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
         <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile</projectileDef>
@@ -41,14 +40,14 @@
     </comps>
 
     <levels>
-      
+
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
         <description>A basic blood blade projectile that causes bleeding wounds.</description>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>100</experienceRequired>
@@ -63,7 +62,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>250</experienceRequired>
@@ -78,7 +77,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>500</experienceRequired>

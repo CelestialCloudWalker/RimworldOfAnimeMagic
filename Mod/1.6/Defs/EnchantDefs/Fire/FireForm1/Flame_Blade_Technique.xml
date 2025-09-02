@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Flame_Blade_Technique</defName>
     <label>Flame Blade Technique</label>
     <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Burning_Spirit</enchantHediff>
+    <enchantHediff>Flame_Heart</enchantHediff>
     <resourceGene>Gene_FlameBreath</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Flame_Blade_Technique_Enhanced</defName>
     <label>Enhanced Flame Blade</label>
     <description>An improved technique with stronger flame energy and better efficiency.</description>
-    <enchantHediff>Burning_Spirit_Enhanced</enchantHediff>
+    <enchantHediff>Flame_Heart_Enhanced</enchantHediff>
     <resourceGene>Gene_FlameBreath</resourceGene>
     <ticksBetweenCost>400</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Flame_Blade_Technique_Superior</defName>
     <label>Superior Flame Blade</label>
     <description>A superior technique with powerful flame energy and high efficiency.</description>
-    <enchantHediff>Burning_Spirit_Superior</enchantHediff>
+    <enchantHediff>Flame_Heart_Superior</enchantHediff>
     <resourceGene>Gene_FlameBreath</resourceGene>
     <ticksBetweenCost>350</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
-  
+
   <AnimeArsenal.EnchantDef>
-    <defName>Flame_Blade_Technique_Master</defName>
+    <defName>Flame_Blade_Technique_Erelong</defName>
     <label>Master Flame Blade</label>
     <description>The ultimate technique with devastating flame energy and maximum efficiency.</description>
-    <enchantHediff>Burning_Spirit_Master</enchantHediff>
+    <enchantHediff>Flame_Heart_Master</enchantHediff>
     <resourceGene>Gene_FlameBreath</resourceGene>
     <ticksBetweenCost>300</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>

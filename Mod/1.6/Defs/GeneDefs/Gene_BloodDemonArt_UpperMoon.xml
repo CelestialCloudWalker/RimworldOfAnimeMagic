@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.BloodDemonArtsGeneDef ParentName="AA_BloodDemonArtsGene">
+    <defName>BloodDemonArt_UpperMoon</defName>
+    <label>Blood Demon Art</label>
+    <resourceName>Blood Art</resourceName>
+    <description>Carriers of this gene channel Blood Art.</description>
+    <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+    <resourceLabel>Blood Art</resourceLabel>
+    <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
+
+    <TalentTrees>
+      <li>BloodDemonArtStyleTree</li>
+    </TalentTrees>
+
+    <experienceFormula>Basic_LinearXP</experienceFormula>
+    <experienceGainSettings>
+      <experienceTypes>
+        <li Class="Talented.DamageTakenExperienceTypeDef">
+          <baseXP>10</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <li Class="Talented.DamageDealtExperienceTypeDef">
+          <baseXP>10</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Shooting</SkillDef>
+          <baseXP>2</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>HaulToCell</SkillDef>
+          <baseXP>1</baseXP>
+        </li>
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_BeatFire</VerbClassName>
+          <baseXP>1</baseXP>
+        </li>
+      </experienceTypes>
+    </experienceGainSettings>
+
+    <maxStat>BloodDemonArts</maxStat>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>BloodDemonArts</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(0.545, 0.0, 0.0, 1.0)</barColor>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+
+    <makeImmuneTo>
+      <li>Flu</li>
+      <li>Malaria</li>
+      <li>SleepingSickness</li>
+      <li>Plague</li>
+      <li>WoundInfection</li>
+      <li>LungRot</li>
+      <li>GutWorms</li>
+      <li>MuscleParasites</li>
+      <li>OrganDecay</li>
+    </makeImmuneTo>
+    <hediffGiversCannotGive>
+      <li>Carcinoma</li>
+      <li>HeartAttack</li>
+      <li>HeartArteryBlockage</li>
+    </hediffGiversCannotGive>
+
+    <modExtensions>
+      <li Class="AnimeArsenal.RegenerationExtension">
+        <healingMultiplier>1.5</healingMultiplier>
+        <ticksBetweenHealing>120</ticksBetweenHealing>
+        <healingPerTick>0.5</healingPerTick>
+        <instantLimbRegeneration>false</instantLimbRegeneration>
+        <instantOrganRegeneration>false</instantOrganRegeneration>
+        <canRegenerateOrgans>false</canRegenerateOrgans>
+        <canRegenerateBrain>false</canRegenerateBrain>
+        <canRegenerateHeart>false</canRegenerateHeart>
+        <canRegenerateHead>false</canRegenerateHead>
+        <scarHealChance>0.1</scarHealChance>
+        <scarHealInterval>2500</scarHealInterval>
+        <consumeResourcesOnRegeneration>true</consumeResourcesOnRegeneration>
+        <resourceCostPerHeal>3</resourceCostPerHeal>
+        <resourceCostPerLimbRegen>100</resourceCostPerLimbRegen>
+        <resourceCostPerOrganRegen>200</resourceCostPerOrganRegen>
+        <resourceCostPerScarHeal>50</resourceCostPerScarHeal>
+        <preventRegenIfInsufficientResources>true</preventRegenIfInsufficientResources>
+        <minimumResourcesRequired>0.2</minimumResourcesRequired>
+        <showResourceWarnings>true</showResourceWarnings>
+        <resourceWarningCooldownTicks>2500</resourceWarningCooldownTicks>
+        <preventDeathFromVitalLoss>false</preventDeathFromVitalLoss>
+        <fatalBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+        </fatalBodyParts>
+        <onlyNotifyMajorParts>true</onlyNotifyMajorParts>
+        <resourceName>Blood Art</resourceName>
+      </li>
+      <li Class="AnimeArsenal.SunlightDamageExtension">
+        <damagePerTick>0.4</damagePerTick>
+        <damageThresholdBeforeDeath>55</damageThresholdBeforeDeath>
+        <ticksBetweenDamage>280</ticksBetweenDamage>
+        <ticksToResetDamage>6000</ticksToResetDamage>
+        <minimumCoverageForProtection>0.35</minimumCoverageForProtection>
+        <requireHeadCoverage>true</requireHeadCoverage>
+      </li>
+
+      <li Class="AnimeArsenal.BodyDisappearExtension">
+        <leaveAshFilth>true</leaveAshFilth>
+        <filthAmount>3</filthAmount>
+        <disappearMessage>Body turned to ash!</disappearMessage>
+        <playEffect>true</playEffect>
+      </li>
+    </modExtensions>
+
+    <TabLabel>Talents</TabLabel>
+  </AnimeArsenal.BloodDemonArtsGeneDef>
+</Defs>

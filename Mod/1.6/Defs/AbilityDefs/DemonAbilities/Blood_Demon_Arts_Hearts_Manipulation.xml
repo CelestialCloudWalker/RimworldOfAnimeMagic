@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Hearts_Manipulation</defName>
     <label>Blood Demon Arts: Heart's Manipulation</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>Blood_Demon_Arts_Hearts_Manipulation_Group</groupDef>
     <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. Emotional impact increases with mastery.</description>
     <iconPath>UI/Abilities/DemonSleepAbility1</iconPath>
     <displayOrder>215</displayOrder>
@@ -13,7 +12,7 @@
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
 
-    
+
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
@@ -30,7 +29,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
         <dreamEffectType>MoodManipulation</dreamEffectType>
@@ -43,7 +42,7 @@
     </comps>
 
     <levels>
-      
+
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
@@ -63,7 +62,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>80</experienceRequired>
@@ -83,7 +82,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>180</experienceRequired>
@@ -103,7 +102,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>320</experienceRequired>

@@ -82,7 +82,7 @@
     <barColor>(255, 215, 0)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
     <exhaustionPerTick>0.0004</exhaustionPerTick>
-    <exhaustionHediff>Sonic_Overload</exhaustionHediff>
+    <exhaustionHediff>SoundBreathing_Fatigue</exhaustionHediff>
     <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
     <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
     <exhausationCooldownTicks>3000</exhausationCooldownTicks>

@@ -4,7 +4,6 @@
     <defName>Blood_Demon_Arts_Thunderous_Wrath</defName>
     <label>Blood Demon Arts: Thunderous Wrath</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>BloodDemonArts_ThunderousWrath_Group</groupDef>
     <description>Summons escalating lightning strikes at the target location. Higher mastery creates devastating chain reactions hitting multiple enemies.</description>
     <iconPath>UI/Abilities/LightingAbilityIcon</iconPath>
     <displayOrder>140</displayOrder>
@@ -15,7 +14,7 @@
     <targetRequired>true</targetRequired>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
 
-    
+
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>8</baseExperienceGain>
@@ -33,7 +32,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityLightningStrike">
         <lightning>true</lightning>
@@ -46,7 +45,7 @@
     </comps>
 
     <levels>
-      
+
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
@@ -66,7 +65,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>80</experienceRequired>
@@ -87,7 +86,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>200</experienceRequired>
@@ -109,7 +108,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>350</experienceRequired>

@@ -4,7 +4,6 @@
     <defName>Blood_Demon_Art_Groundlash_Tentacles</defName>
     <label>Blood Demon Art: Groundlash Tentacles</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>Blood_Demon_Art_Groundlash_Tentacles_Group</groupDef>
     <description>Demon tentacles come out and launch targets in the area. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/DemonAbilityWhip</iconPath>
     <cooldownTicksRange>300</cooldownTicksRange>

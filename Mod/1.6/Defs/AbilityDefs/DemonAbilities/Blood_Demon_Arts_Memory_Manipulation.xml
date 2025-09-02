@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Memory_Manipulation</defName>
     <label>Blood Demon Arts: Memory Manipulation</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>Blood_Demon_Arts_Memory_Manipulation_Group</groupDef>
     <description>Plant false memories and thoughts into a sleeping target's mind. Memory complexity increases with mastery.</description>
     <iconPath>UI/Abilities/DemonSleepAbility3</iconPath>
     <displayOrder>213</displayOrder>

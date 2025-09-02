@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Dream_of_Serenity</defName>
     <label>Blood Demon Arts: Serene Dreams</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>Blood_Demon_Arts_Dream_of_Serenity_Group</groupDef>
     <description>Grant peaceful, restorative dreams to a sleeping target, improving their mood and rest quality. Effects become more potent with mastery.</description>
     <iconPath>UI/Abilities/DemonSleepAbility6</iconPath>
     <displayOrder>211</displayOrder>

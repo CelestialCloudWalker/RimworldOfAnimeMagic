@@ -9,7 +9,7 @@
     <iconPath>UI/Icons/Genes/beast</iconPath>
     <resourceLabel>Beast Breath</resourceLabel>
     <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
-
+    
     <TalentTrees>
       <li>Beast_BreathingStyleBlankTree</li>
     </TalentTrees>
@@ -82,7 +82,7 @@
     <barColor>(139, 69, 19)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
     <exhaustionPerTick>0.0006</exhaustionPerTick>
-    <exhaustionHediff>Feral_Overexertion</exhaustionHediff>
+    <exhaustionHediff>BeastBreathing_Fatigue</exhaustionHediff>
     <ticksBeforeExhaustionStart>2000</ticksBeforeExhaustionStart>
     <ticksPerExhaustionIncrease>1200</ticksPerExhaustionIncrease>
     <exhausationCooldownTicks>3500</exhausationCooldownTicks>

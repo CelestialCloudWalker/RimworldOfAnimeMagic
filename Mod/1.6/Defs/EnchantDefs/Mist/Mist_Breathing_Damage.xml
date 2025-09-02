@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Mist_Breathing_Damage</defName>
+    <label>Mist Breathing</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was lost in the mist.</deathMessage>
+    <hediff>PhantomsOfMist</hediff>
+    <hediffSkin>PhantomsOfMist</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+    <causeStun>true</causeStun>
+    <constantStunDurationTicks>360</constantStunDurationTicks>
+  </DamageDef>
+  <HediffDef ParentName="InjuryBase">
+    <defName>PhantomsOfMist</defName>
+    <label>Phantoms of Mist</label>
+    <labelNoun>disorientation</labelNoun>
+    <description>Vision blurred and senses dulled. Coordination and awareness failing.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <severityPerDayTended>-0.72</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_CauseMentalState">
+        <humanMentalState>Wander_Psychotic</humanMentalState>
+        <animalMentalState>Manhunter</animalMentalState>
+        <mtbDaysToCauseMentalState>0.1</mtbDaysToCauseMentalState>
+        <minSeverity>0.2</minSeverity>
+        <endMentalStateOnCure>true</endMentalStateOnCure>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.6</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.9</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <injuryProps>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.035</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Dissipated</destroyedLabel>
+      <destroyedOutLabel>Completely dissipated</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

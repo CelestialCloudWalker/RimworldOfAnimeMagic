@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>Passionate_Heart</defName>
+    <label>Passionate Heart</label>
+    <description>Emanating a passionate aura that flows with graceful movements.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.4, 0.7)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Love_Breathing_Damage</damageType>
+        <damageValue>7</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Passionate_Heart_Enhanced</defName>
+    <label>Enhanced Passionate Heart</label>
+    <description>Emanating an enhanced passionate aura with greater loving power.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.3, 0.6)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Love_Breathing_Damage</damageType>
+        <damageValue>10</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Passionate_Heart_Superior</defName>
+    <label>Superior Passionate Heart</label>
+    <description>Emanating a superior passionate aura with powerful loving energy.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.2, 0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Love_Breathing_Damage</damageType>
+        <damageValue>14</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Passionate_Heart_Master</defName>
+    <label>Master Passionate Heart</label>
+    <description>Emanating the ultimate passionate aura with overwhelming loving power.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.1, 0.4)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Love_Breathing_Damage</damageType>
+        <damageValue>20</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

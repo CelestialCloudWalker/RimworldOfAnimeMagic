@@ -4,7 +4,6 @@
     <defName>Blood_Demon_Arts_DreamNeedle</defName>
     <label>Blood Demon Arts: Dream Needle</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>BloodDemonArts_DreamNeedle_Group</groupDef>
     <description>Causes targets to fall asleep instantly. Becomes more powerful and affects more targets as mastery increases.</description>
     <iconPath>UI/Abilities/DemonSleepAbilitySleep</iconPath>
     <cooldownTicksRange>100</cooldownTicksRange>
@@ -13,7 +12,7 @@
     <hostile>true</hostile>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 
-    
+
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
@@ -32,7 +31,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
         <useSleepHediff>false</useSleepHediff>
@@ -42,7 +41,7 @@
     </comps>
 
     <levels>
-      
+
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
@@ -62,7 +61,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>75</experienceRequired>
@@ -83,7 +82,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>200</experienceRequired>
@@ -106,7 +105,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>400</experienceRequired>

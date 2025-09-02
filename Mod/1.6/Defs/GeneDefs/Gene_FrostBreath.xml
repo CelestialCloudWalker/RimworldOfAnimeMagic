@@ -82,7 +82,7 @@
     <barColor>(173, 216, 230)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
     <exhaustionPerTick>0.0004</exhaustionPerTick>
-    <exhaustionHediff>Hypothermic_Fatigue</exhaustionHediff>
+    <exhaustionHediff>FrostBreathing_Fatigue</exhaustionHediff>
     <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
     <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
     <exhausationCooldownTicks>3000</exhausationCooldownTicks>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StatDef>
+    <defName>MoonBreath_Cost</defName>
+    <label>Moon Breath Cost Multiplier</label>
+    <category>PawnMisc</category>
+    <description>Moon Breath Cost Multiplier.</description>
+    <defaultBaseValue>1.1</defaultBaseValue>
+    <minValue>0</minValue>
+    <maxValue>2</maxValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <showOnDefaultValue>false</showOnDefaultValue>
+  </StatDef>
+
+</Defs>

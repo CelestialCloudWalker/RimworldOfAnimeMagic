@@ -4,7 +4,6 @@
     <defName>Blood_Demon_Arts_Devour</defName>
     <label>Blood Demon Art: Devour</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <groupDef>Blood_Demon_Arts_Devour_Group</groupDef>
     <description>Devour a target to heal wounds and restore blood demon arts energy. Can target corpses or living enemies. Gains experience with each use and becomes more powerful.</description>
     <iconPath>UI/Abilities/DemonEatAbilityIcon</iconPath>
     <cooldownTicksRange>3600</cooldownTicksRange>
@@ -13,7 +12,7 @@
     <hostile>true</hostile>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
 
-    
+
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>15</baseExperienceGain>
@@ -30,7 +29,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.AbilityCompProperties_DemonConsume">
         <nutritionGain>0.8</nutritionGain>
@@ -48,7 +47,7 @@
     </comps>
 
     <levels>
-      
+
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
@@ -73,7 +72,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>100</experienceRequired>
@@ -98,7 +97,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>250</experienceRequired>
@@ -123,7 +122,7 @@
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>500</experienceRequired>
@@ -150,7 +149,7 @@
     </levels>
   </AnimeArsenal.TalentedLevelingAbilityDef>
 
-  
+
   <ThoughtDef>
     <defName>DemonConsumptionMemory</defName>
     <durationDays>3</durationDays>

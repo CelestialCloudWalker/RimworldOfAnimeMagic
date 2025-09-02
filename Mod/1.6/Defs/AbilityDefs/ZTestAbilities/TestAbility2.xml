@@ -4,7 +4,7 @@
     <defName>ConeGasSpray</defName>
     <label>Toxic Gas Spray</label>
     <description>Spray a toxic gas that lingers in the area, continuously damaging enemies caught within.</description>
-    <iconPath>UI/Abilities/GasSpray</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>30000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayOrder>300</displayOrder>

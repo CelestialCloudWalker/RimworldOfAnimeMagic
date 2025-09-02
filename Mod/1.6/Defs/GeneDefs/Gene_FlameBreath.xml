@@ -82,7 +82,7 @@
     <barColor>(255, 69, 0)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
     <exhaustionPerTick>0.0005</exhaustionPerTick>
-    <exhaustionHediff>Ember_Fatigue</exhaustionHediff>
+    <exhaustionHediff>FlameBreathing_Fatigue</exhaustionHediff>
     <ticksBeforeExhaustionStart>1500</ticksBeforeExhaustionStart>
     <ticksPerExhaustionIncrease>1250</ticksPerExhaustionIncrease>
     <exhausationCooldownTicks>3500</exhausationCooldownTicks>

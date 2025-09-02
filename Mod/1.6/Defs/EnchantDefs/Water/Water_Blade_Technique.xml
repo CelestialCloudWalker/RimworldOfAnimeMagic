@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Water_Blade_Technique</defName>
     <label>Water Blade Technique</label>
-    <description>A technique that allows a Water Breathing user to imbue their attacks with flowing water.</description>
-    <enchantHediff>Flowing_Heart</enchantHediff>
+    <description>A technique that allows a Water Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Water_Heart</enchantHediff>
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Water_Blade_Technique_Enhanced</defName>
-    <label>Enhanced Water Blade</label>
-    <description>An improved technique with stronger water pressure and better efficiency.</description>
-    <enchantHediff>Flowing_Heart_Enhanced</enchantHediff>
+    <label>Water Blade Technique</label>
+    <description>A technique that allows a Water Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Water_Heart_Enhanced</enchantHediff>
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>400</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Water_Blade_Technique_Superior</defName>
-    <label>Superior Water Blade</label>
-    <description>A superior technique with powerful torrential force and high efficiency.</description>
-    <enchantHediff>Flowing_Heart_Superior</enchantHediff>
+    <label>Water Blade Technique</label>
+    <description>A technique that allows a Water Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Water_Heart_Superior</enchantHediff>
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>350</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
-  
+
   <AnimeArsenal.EnchantDef>
-    <defName>Water_Blade_Technique_Master</defName>
-    <label>Master Water Blade</label>
-    <description>The ultimate technique with devastating oceanic power and maximum efficiency.</description>
-    <enchantHediff>Flowing_Heart_Master</enchantHediff>
+    <defName>Water_Blade_Technique_Erelong</defName>
+    <label>Water Blade Technique</label>
+    <description>A technique that allows a Water Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Water_Heart_Master</enchantHediff>
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>300</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
