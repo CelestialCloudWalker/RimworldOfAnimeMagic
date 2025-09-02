@@ -12,13 +12,13 @@
         <ticksBetweenMotes>20</ticksBetweenMotes>
         <positionLerpFactor>0</positionLerpFactor>
         <positionRadius>0</positionRadius>
-        <moteDef>AnimeArsenal_InsectHitMote2</moteDef>
+        <moteDef>AnimeArsenal_InsecthitMotea</moteDef>
       </li>
     </children>
   </EffecterDef>
 
   <ThingDef ParentName="MoteBase">
-    <defName>AnimeArsenal_InsectHitMote2</defName>
+    <defName>AnimeArsenal_InsecthitMotea</defName>
     <thingClass>MoteAttached</thingClass>
     <graphicData>
       <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>

@@ -39,7 +39,7 @@
           <canTargetNeutral>true</canTargetNeutral>
           <canTargetFriendly>false</canTargetFriendly>
         </friendlyFireParms>
-        <explosionEffecterDef>AnimeArsenal_StoneHitMote2</explosionEffecterDef>
+        <explosionEffecterDef>AnimeArsenal_StoneHit2</explosionEffecterDef>
       </li>
     </comps>
 

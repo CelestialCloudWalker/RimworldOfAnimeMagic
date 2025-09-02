@@ -41,7 +41,7 @@
           <canTargetNeutral>true</canTargetNeutral>
           <canTargetFriendly>false</canTargetFriendly>
         </friendlyFireParms>
-        <explosionEffecterDef>AnimeArsenal_FlowerHitMote2</explosionEffecterDef>
+        <explosionEffecterDef>AnimeArsenal_FlowerHit2</explosionEffecterDef>
       </li>
     </comps>
 

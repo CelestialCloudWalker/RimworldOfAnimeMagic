@@ -12,13 +12,13 @@
         <ticksBetweenMotes>20</ticksBetweenMotes>
         <positionLerpFactor>0</positionLerpFactor>
         <positionRadius>0</positionRadius>
-        <moteDef>AnimeArsenal_WaterHitMote2</moteDef>
+        <moteDef>AnimeArsenal_WaterhitMotea</moteDef>
       </li>
     </children>
   </EffecterDef>
 
   <ThingDef ParentName="MoteBase">
-    <defName>AnimeArsenal_WaterHitMote2</defName>
+    <defName>AnimeArsenal_WaterhitMotea</defName>
     <thingClass>MoteAttached</thingClass>
     <graphicData>
       <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
