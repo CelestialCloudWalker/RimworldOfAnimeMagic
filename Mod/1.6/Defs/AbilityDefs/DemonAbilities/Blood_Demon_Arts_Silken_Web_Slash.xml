@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Silken_Web_Slash</defName>
     <label>Blood Demon Arts: Silken Web Slash</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Launches the target away, then slashes them with demonic silk threads. Power and number of cuts increase with mastery.</description>
+    <description>A blood demon art that creates web slashes in an area.</description>
     <iconPath>UI/Abilities/DemonAbilityWeb</iconPath>
     <displayOrder>100</displayOrder>
 
@@ -53,7 +53,7 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic silk thread attack with moderate cutting power.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>1.0</cooldownMultiplier>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
@@ -76,7 +76,7 @@
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>75</experienceRequired>
-        <description>Enhanced silk threads that cut deeper and faster.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.9</cooldownMultiplier>
         <resourceCostMultiplier>0.95</resourceCostMultiplier>
@@ -99,7 +99,7 @@
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>200</experienceRequired>
-        <description>Razor-sharp silk threads that slice through armor with ease.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.8</cooldownMultiplier>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
@@ -122,7 +122,7 @@
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>350</experienceRequired>
-        <description>Ultimate silk mastery - threads move at lightning speed, delivering devastating cuts.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.7</cooldownMultiplier>
         <resourceCostMultiplier>0.85</resourceCostMultiplier>

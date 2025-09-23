@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Thunderous_Wrath</defName>
     <label>Blood Demon Arts: Thunderous Wrath</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Summons escalating lightning strikes at the target location. Higher mastery creates devastating chain reactions hitting multiple enemies.</description>
+    <description>A blood demon art that calls down lightning on the target.</description>
     <iconPath>UI/Abilities/LightingAbilityIcon</iconPath>
     <displayOrder>140</displayOrder>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
@@ -49,7 +49,7 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic lightning strike followed by a second bolt.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>1.0</cooldownMultiplier>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
@@ -69,7 +69,7 @@
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>80</experienceRequired>
-        <description>Triple lightning strikes that can chain to nearby enemies.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.9</cooldownMultiplier>
         <resourceCostMultiplier>0.95</resourceCostMultiplier>
@@ -90,7 +90,7 @@
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>200</experienceRequired>
-        <description>Devastating chain lightning that seeks out enemies with increasing power.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.8</cooldownMultiplier>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
@@ -112,7 +112,7 @@
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>350</experienceRequired>
-        <description>Divine storm of escalating lightning - each strike more devastating than the last.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.7</cooldownMultiplier>
         <resourceCostMultiplier>0.85</resourceCostMultiplier>

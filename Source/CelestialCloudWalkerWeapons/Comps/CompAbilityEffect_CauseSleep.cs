@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -33,9 +31,9 @@ namespace AnimeArsenal
                 }
             }
 
-            foreach (Pawn targetPawn in targets)
+            foreach (Pawn pawn in targets)
             {
-                ApplySleepEffect(targetPawn);
+                ApplySleepEffect(pawn);
             }
 
             if (Props.effectSound != null)
@@ -56,9 +54,7 @@ namespace AnimeArsenal
                 targets.Add(centerTarget.Pawn);
             }
 
-            var cellsInRange = GenRadial.RadialCellsAround(centerTarget.Cell, Props.areaRadius, true)
-                .Take(100) 
-                .ToList();
+            var cellsInRange = GenRadial.RadialCellsAround(centerTarget.Cell, Props.areaRadius, true);
 
             foreach (var cell in cellsInRange)
             {
@@ -108,68 +104,61 @@ namespace AnimeArsenal
 
         private void ApplySleepEffect(Pawn pawn)
         {
-            try
+            if (pawn.needs?.rest != null)
             {
-                if (pawn.needs?.rest != null)
+                pawn.needs.rest.CurLevel = 0f;
+            }
+
+            if (Props.useSleepHediff)
+            {
+                HediffDef hediffToUse = Props.sleepHediffDef ?? HediffDefOf.Anesthetic;
+                Hediff existingHediff = pawn.health.hediffSet.GetFirstHediffOfDef(hediffToUse);
+
+                if (existingHediff != null)
                 {
-                    pawn.needs.rest.CurLevel = 0f;
+                    existingHediff.Severity = Math.Max(existingHediff.Severity, Props.sleepSeverity);
                 }
-
-                if (Props.useSleepHediff)
+                else
                 {
-                    HediffDef hediffToUse = Props.sleepHediffDef ?? HediffDefOf.Anesthetic;
-                    Hediff existingHediff = pawn.health.hediffSet.GetFirstHediffOfDef(hediffToUse);
-
-                    if (existingHediff != null)
-                    {
-                        existingHediff.Severity = Math.Max(existingHediff.Severity, Props.sleepSeverity);
-                    }
-                    else
-                    {
-                        Hediff sleepHediff = HediffMaker.MakeHediff(hediffToUse, pawn);
-                        sleepHediff.Severity = Props.sleepSeverity;
-                        pawn.health.AddHediff(sleepHediff);
-                    }
-                }
-
-                if (Props.sleepDurationHours > 0)
-                {
-                    ApplyTimedSleep(pawn, Props.sleepDurationHours);
-                }
-
-                if (Props.forceImmediateSleep)
-                {
-                    if (pawn.jobs.curJob != null)
-                    {
-                        pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
-                    }
-
-                    IntVec3 sleepSpot = pawn.Position;
-                    Building_Bed bed = RestUtility.FindBedFor(pawn);
-                    if (bed != null && pawn.CanReach(bed, PathEndMode.OnCell, Danger.Some))
-                    {
-                        sleepSpot = bed.Position;
-                    }
-
-                    Job sleepJob = JobMaker.MakeJob(JobDefOf.LayDown, sleepSpot);
-                    sleepJob.forceSleep = true;
-                    pawn.jobs.TryTakeOrderedJob(sleepJob, JobTag.SatisfyingNeeds);
-                }
-
-                if (Props.deepSleep)
-                {
-                    ApplyDeepSleepEffects(pawn);
-                }
-
-                if (Props.showMessage && (pawn.IsColonist || pawn.IsPrisonerOfColony))
-                {
-                    string sleepType = Props.deepSleep ? "deep sleep" : "sleep";
-                    Messages.Message($"{pawn.LabelShort} has fallen into {sleepType}!", pawn, MessageTypeDefOf.NeutralEvent);
+                    Hediff sleepHediff = HediffMaker.MakeHediff(hediffToUse, pawn);
+                    sleepHediff.Severity = Props.sleepSeverity;
+                    pawn.health.AddHediff(sleepHediff);
                 }
             }
-            catch (Exception ex)
+
+            if (Props.sleepDurationHours > 0)
             {
-                Log.Error($"AnimeArsenal: Error applying sleep effect to {pawn?.LabelShort}: {ex}");
+                ApplyTimedSleep(pawn, Props.sleepDurationHours);
+            }
+
+            if (Props.forceImmediateSleep)
+            {
+                if (pawn.jobs.curJob != null)
+                {
+                    pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                }
+
+                IntVec3 sleepSpot = pawn.Position;
+                Building_Bed bed = RestUtility.FindBedFor(pawn);
+                if (bed != null && pawn.CanReach(bed, PathEndMode.OnCell, Danger.Some))
+                {
+                    sleepSpot = bed.Position;
+                }
+
+                Job sleepJob = JobMaker.MakeJob(JobDefOf.LayDown, sleepSpot);
+                sleepJob.forceSleep = true;
+                pawn.jobs.TryTakeOrderedJob(sleepJob, JobTag.SatisfyingNeeds);
+            }
+
+            if (Props.deepSleep)
+            {
+                ApplyDeepSleepEffects(pawn);
+            }
+
+            if (Props.showMessage && (pawn.IsColonist || pawn.IsPrisonerOfColony))
+            {
+                string sleepType = Props.deepSleep ? "deep sleep" : "sleep";
+                Messages.Message($"{pawn.LabelShort} has fallen into {sleepType}!", pawn, MessageTypeDefOf.NeutralEvent);
             }
         }
 
@@ -178,7 +167,7 @@ namespace AnimeArsenal
             HediffDef timedSleepHediff = Props.sleepHediffDef ?? HediffDefOf.Anesthetic;
             Hediff sleepEffect = HediffMaker.MakeHediff(timedSleepHediff, pawn);
 
-            sleepEffect.Severity = Mathf.Clamp(hours / 8f, 0.5f, 2f); 
+            sleepEffect.Severity = Mathf.Clamp(hours / 8f, 0.5f, 2f);
             pawn.health.AddHediff(sleepEffect);
         }
 
@@ -188,7 +177,7 @@ namespace AnimeArsenal
             {
                 HediffDef deepSleepHediff = HediffDefOf.Anesthetic;
                 Hediff deepSleep = HediffMaker.MakeHediff(deepSleepHediff, pawn);
-                deepSleep.Severity = 1.5f + Props.wakeResistance; 
+                deepSleep.Severity = 1.5f + Props.wakeResistance;
                 pawn.health.AddHediff(deepSleep);
             }
         }
@@ -211,17 +200,7 @@ namespace AnimeArsenal
             if (!CanFallAsleep(pawn))
             {
                 if (throwMessages)
-                {
-                    string reason = "cannot fall asleep";
-                    if (pawn.RaceProps.IsMechanoid)
-                        reason = "is a mechanoid";
-                    else if (pawn.health.InPainShock)
-                        reason = "is in pain shock";
-                    else if (pawn.Downed)
-                        reason = "is already downed";
-
-                    Messages.Message($"{pawn.LabelShort} {reason}", MessageTypeDefOf.RejectInput);
-                }
+                    Messages.Message("Target cannot sleep", MessageTypeDefOf.RejectInput);
                 return false;
             }
 
@@ -245,7 +224,7 @@ namespace AnimeArsenal
         public float areaRadius = 3f;
         public bool canPenetrateMindShields = false;
         public bool deepSleep = false;
-        public float wakeResistance = 0f; 
+        public float wakeResistance = 0f;
 
         public CompProperties_AbilityEffect_CauseSleep()
         {

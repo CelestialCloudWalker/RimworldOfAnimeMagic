@@ -15,49 +15,39 @@ namespace AnimeArsenal
         }
     }
 
-
-
-
     public class Comp_Effecter : ThingComp
     {
-        private Effecter effecter;
+        private Effecter fx;
 
         public CompProperties_Effecter Props => (CompProperties_Effecter)props;
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-
             if (Props.effecterDef != null)
             {
-                effecter = Props.effecterDef.Spawn();
-                EffectTick();
+                fx = Props.effecterDef.Spawn();
+                TriggerEffect();
             }
         }
 
         public override void CompTick()
         {
             base.CompTick();
-            EffectTick();
+            TriggerEffect();
         }
 
-        private void EffectTick()
+        private void TriggerEffect()
         {
-            if (effecter != null && parent.Spawned)
-            {
-                effecter.EffectTick(parent, parent);
-            }
+            if (fx != null && parent.Spawned)
+                fx.EffectTick(parent, parent);
         }
 
         public override void PostDeSpawn(Map map, DestroyMode mode)
         {
             base.PostDeSpawn(map);
-
-            if (effecter != null)
-            {
-                effecter.Cleanup();
-                effecter = null;
-            }
+            fx?.Cleanup();
+            fx = null;
         }
     }
 }

@@ -8,8 +8,6 @@
     <xenotypeSet>
       <xenotypeChances>
         <AA_DemonBloodArts_User>999</AA_DemonBloodArts_User>
-        <AA_DemonBloodArts_LowerMoon>2</AA_DemonBloodArts_LowerMoon>
-        <AA_DemonBloodArts_UpperMoon>1</AA_DemonBloodArts_UpperMoon>
       </xenotypeChances>
     </xenotypeSet>
     <apparelRequired>
@@ -25,8 +23,6 @@
     <xenotypeSet>
       <xenotypeChances>
         <AA_DemonBloodArts_User>999</AA_DemonBloodArts_User>
-        <AA_DemonBloodArts_LowerMoon>2</AA_DemonBloodArts_LowerMoon>
-        <AA_DemonBloodArts_UpperMoon>1</AA_DemonBloodArts_UpperMoon>
       </xenotypeChances>
     </xenotypeSet>
     <chemicalAddictionChance>0.1</chemicalAddictionChance>

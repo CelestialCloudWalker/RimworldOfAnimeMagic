@@ -5,11 +5,11 @@
     <label>Beast Breath</label>
     <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Beast Breath</resourceName>
-    <description>Carriers of this gene channel the primal instincts and raw strength of a beast, unleashing techniques that emphasize ferocity, speed, and relentless pursuit.</description>
+    <description>Beast Breathing Gene.</description>
     <iconPath>UI/Icons/Genes/beast</iconPath>
     <resourceLabel>Beast Breath</resourceLabel>
-    <resourceDescription>Current stored Breath, charged with primal energy.</resourceDescription>
-    
+    <resourceDescription>Current stored Breath.</resourceDescription>
+
     <TalentTrees>
       <li>Beast_BreathingStyleBlankTree</li>
     </TalentTrees>

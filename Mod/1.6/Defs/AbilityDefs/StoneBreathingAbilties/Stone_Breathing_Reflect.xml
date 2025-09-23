@@ -4,7 +4,7 @@
     <defName>Stone_Breathing_Reflect</defName>
     <label>Stone Breathing: Reflect</label>
     <category>StoneBreathing_Ability_Catergory</category>
-    <description>An instinctive counter that deflects incoming projectiles with the immovable strength of a mountain. Gains experience with each use and becomes more powerful.</description>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
     <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
 
@@ -35,7 +35,7 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic stone barrier that deflects incoming projectiles in a moderate area.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
@@ -52,7 +52,7 @@
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>120</experienceRequired>
-        <description>An improved stone barrier with larger radius and longer duration, like an unyielding cliff face.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -70,7 +70,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>300</experienceRequired>
-        <description>A superior stone barrier with wide coverage and extended protection, as immovable as a mountain peak.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -88,7 +88,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>600</experienceRequired>
-        <description>The ultimate mountain's rejection - massive radius, extended duration, and the absolute defense of an eternal mountain range.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -106,8 +106,8 @@
 
   <HediffDef>
     <defName>AnimeArsenal_StoneRejectionField</defName>
-    <label>stone rejection field</label>
-    <description>A barrier of hardened stone energy that deflects incoming projectiles with mountain-like resilience.</description>
+    <label>breathing deflection</label>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
     <hediffClass>AnimeArsenal.Hediff_DeflectionField</hediffClass>
     <defaultLabelColor>(0.7, 0.6, 0.5)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>

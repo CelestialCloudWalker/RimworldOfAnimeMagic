@@ -17,32 +17,23 @@ namespace AnimeArsenal
             base.Apply(target, dest);
 
             Pawn targetPawn = target.Pawn;
-            if (targetPawn == null || targetPawn.Dead)
+            if (targetPawn == null || targetPawn.Dead || !IsTargetAsleep(targetPawn))
                 return;
 
-            
-            if (!IsTargetAsleep(targetPawn))
-                return;
-
-            
             ApplyDreamEffect(targetPawn);
         }
 
         private bool IsTargetAsleep(Pawn pawn)
         {
-            
             if (pawn.CurJob?.def == JobDefOf.LayDown)
                 return true;
 
-            
             if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Anesthetic) != null)
                 return true;
 
-            
             if (pawn.Downed && pawn.health.capacities.GetLevel(PawnCapacityDefOf.Consciousness) < 0.3f)
                 return true;
 
-            
             if (pawn.needs?.rest != null && pawn.needs.rest.CurLevel < 0.1f)
                 return true;
 
@@ -51,85 +42,53 @@ namespace AnimeArsenal
 
         private void ApplyDreamEffect(Pawn pawn)
         {
-            try
+            switch (Props.dreamEffectType)
             {
-                switch (Props.dreamEffectType)
-                {
-                    case DreamEffectType.Nightmare:
-                        ApplyNightmare(pawn);
-                        break;
-                    case DreamEffectType.PleasantDream:
-                        ApplyPleasantDream(pawn);
-                        break;
-                    case DreamEffectType.MemoryExtraction:
-                        ApplyMemoryExtraction(pawn);
-                        break;
-                    case DreamEffectType.MemoryImplantation:
-                        ApplyMemoryImplantation(pawn);
-                        break;
-                    case DreamEffectType.MoodManipulation:
-                        ApplyMoodManipulation(pawn);
-                        break;
-                    case DreamEffectType.SkillTransfer:
-                        ApplySkillTransfer(pawn);
-                        break;
-                }
-
-                
-                AddEffects(pawn);
-
-                
-                if (Props.showMessage)
-                {
-                    string effectName = Props.dreamEffectType.ToString().Replace("_", " ");
-                    Messages.Message($"{pawn.LabelShort} is experiencing {effectName.ToLower()}!",
-                        pawn, MessageTypeDefOf.NeutralEvent);
-                }
+                case DreamEffectType.Nightmare:
+                    ApplyNightmare(pawn);
+                    break;
+                case DreamEffectType.PleasantDream:
+                    ApplyPleasantDream(pawn);
+                    break;
+                case DreamEffectType.MemoryExtraction:
+                    ApplyMemoryExtraction(pawn);
+                    break;
+                case DreamEffectType.MemoryImplantation:
+                    ApplyMemoryImplantation(pawn);
+                    break;
+                case DreamEffectType.MoodManipulation:
+                    ApplyMoodManipulation(pawn);
+                    break;
+                case DreamEffectType.SkillTransfer:
+                    ApplySkillTransfer(pawn);
+                    break;
             }
-            catch (Exception ex)
+
+            AddEffects(pawn);
+
+            if (Props.showMessage)
             {
-                Log.Error($"AnimeArsenal: Error applying dream effect to {pawn?.LabelShort}: {ex}");
+                string effectName = Props.dreamEffectType.ToString().Replace("_", " ");
+                Messages.Message($"{pawn.LabelShort} is experiencing {effectName.ToLower()}!",
+                    pawn, MessageTypeDefOf.NeutralEvent);
             }
         }
 
         private void ApplyNightmare(Pawn pawn)
         {
-            
             if (pawn.needs?.mood?.thoughts?.memories != null && Props.nightmareThought != null)
             {
-                try
-                {
-                    Thought_Memory thought = (Thought_Memory)ThoughtMaker.MakeThought(Props.nightmareThought);
-                    if (thought != null)
-                    {
-                        pawn.needs.mood.thoughts.memories.TryGainMemory(thought);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Warning($"AnimeArsenal: Failed to add nightmare thought to {pawn.LabelShort}: {ex.Message}");
-                }
+                Thought_Memory thought = (Thought_Memory)ThoughtMaker.MakeThought(Props.nightmareThought);
+                pawn.needs.mood.thoughts.memories.TryGainMemory(thought);
             }
 
-            
             if (Props.nightmareHediff != null)
             {
-                try
-                {
-                    Hediff hediff = HediffMaker.MakeHediff(Props.nightmareHediff, pawn);
-                    if (hediff != null)
-                    {
-                        hediff.Severity = Props.effectSeverity;
-                        pawn.health.AddHediff(hediff);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Warning($"AnimeArsenal: Failed to add nightmare hediff to {pawn.LabelShort}: {ex.Message}");
-                }
+                Hediff hediff = HediffMaker.MakeHediff(Props.nightmareHediff, pawn);
+                hediff.Severity = Props.effectSeverity;
+                pawn.health.AddHediff(hediff);
             }
 
-            
             if (pawn.needs?.rest != null)
             {
                 pawn.needs.rest.CurLevel = Math.Max(0, pawn.needs.rest.CurLevel - Props.restPenalty);
@@ -138,42 +97,19 @@ namespace AnimeArsenal
 
         private void ApplyPleasantDream(Pawn pawn)
         {
-            
             if (pawn.needs?.mood?.thoughts?.memories != null && Props.pleasantDreamThought != null)
             {
-                try
-                {
-                    Thought_Memory thought = (Thought_Memory)ThoughtMaker.MakeThought(Props.pleasantDreamThought);
-                    if (thought != null)
-                    {
-                        pawn.needs.mood.thoughts.memories.TryGainMemory(thought);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Warning($"AnimeArsenal: Failed to add pleasant dream thought to {pawn.LabelShort}: {ex.Message}");
-                }
+                Thought_Memory thought = (Thought_Memory)ThoughtMaker.MakeThought(Props.pleasantDreamThought);
+                pawn.needs.mood.thoughts.memories.TryGainMemory(thought);
             }
 
-            
             if (Props.pleasantDreamHediff != null)
             {
-                try
-                {
-                    Hediff hediff = HediffMaker.MakeHediff(Props.pleasantDreamHediff, pawn);
-                    if (hediff != null)
-                    {
-                        hediff.Severity = Props.effectSeverity;
-                        pawn.health.AddHediff(hediff);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Warning($"AnimeArsenal: Failed to add pleasant dream hediff to {pawn.LabelShort}: {ex.Message}");
-                }
+                Hediff hediff = HediffMaker.MakeHediff(Props.pleasantDreamHediff, pawn);
+                hediff.Severity = Props.effectSeverity;
+                pawn.health.AddHediff(hediff);
             }
 
-            
             if (pawn.needs?.rest != null)
             {
                 pawn.needs.rest.CurLevel = Math.Min(1f, pawn.needs.rest.CurLevel + Props.restBonus);
@@ -182,202 +118,97 @@ namespace AnimeArsenal
 
         private void ApplyMemoryExtraction(Pawn pawn)
         {
-            
-            List<string> extractedInfo = new List<string>();
+            var info = new List<string>();
 
-            
             if (pawn.Faction != null)
-                extractedInfo.Add($"Faction: {pawn.Faction.Name}");
+                info.Add($"Faction: {pawn.Faction.Name}");
 
-            
             if (pawn.skills != null)
             {
                 var topSkill = pawn.skills.skills.OrderByDescending(s => s.Level).FirstOrDefault();
                 if (topSkill != null)
-                    extractedInfo.Add($"Best skill: {topSkill.def.LabelCap} ({topSkill.Level})");
+                    info.Add($"Best skill: {topSkill.def.LabelCap} ({topSkill.Level})");
             }
 
-            
             if (pawn.story?.Childhood != null)
-                extractedInfo.Add($"Childhood: {pawn.story.Childhood.title}");
+                info.Add($"Childhood: {pawn.story.Childhood.title}");
 
-            
             if (pawn.story?.traits != null && pawn.story.traits.allTraits.Any())
             {
                 var trait = pawn.story.traits.allTraits.First();
-                extractedInfo.Add($"Trait: {trait.LabelCap}");
+                info.Add($"Trait: {trait.LabelCap}");
             }
 
-            
-            if (extractedInfo.Any())
+            if (info.Any())
             {
-                string info = string.Join(", ", extractedInfo);
-                Messages.Message($"Memory extracted from {pawn.LabelShort}'s dreams: {info}",
+                string extractedInfo = string.Join(", ", info);
+                Messages.Message($"Memory extracted from {pawn.LabelShort}: {extractedInfo}",
                     pawn, MessageTypeDefOf.PositiveEvent);
-
-                
-                Log.Message($"[Dream Extraction] Successfully extracted: {info}");
-            }
-            else
-            {
-                Messages.Message($"Failed to extract meaningful memories from {pawn.LabelShort}'s dreams.",
-                    pawn, MessageTypeDefOf.NeutralEvent);
-                Log.Warning($"[Dream Extraction] No information could be extracted from {pawn.LabelShort}");
             }
 
-            
             if (Props.memoryExtractionHediff != null)
             {
-                try
-                {
-                    
-                    var existing = pawn.health.hediffSet.GetFirstHediffOfDef(Props.memoryExtractionHediff);
-                    if (existing != null)
-                    {
-                        pawn.health.RemoveHediff(existing);
-                    }
+                var existing = pawn.health.hediffSet.GetFirstHediffOfDef(Props.memoryExtractionHediff);
+                if (existing != null)
+                    pawn.health.RemoveHediff(existing);
 
-                    Hediff hediff = HediffMaker.MakeHediff(Props.memoryExtractionHediff, pawn);
-                    if (hediff != null)
-                    {
-                        hediff.Severity = Props.effectSeverity;
-                        pawn.health.AddHediff(hediff);
-
-                        Messages.Message($"{pawn.LabelShort} looks confused and disoriented.",
-                            pawn, MessageTypeDefOf.NeutralEvent);
-                        Log.Message($"[Dream Extraction] Added confusion hediff to {pawn.LabelShort}");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Error($"AnimeArsenal: Failed to add memory extraction hediff to {pawn.LabelShort}: {ex}");
-                }
+                Hediff hediff = HediffMaker.MakeHediff(Props.memoryExtractionHediff, pawn);
+                hediff.Severity = Props.effectSeverity;
+                pawn.health.AddHediff(hediff);
             }
         }
 
         private void ApplyMemoryImplantation(Pawn pawn)
         {
-            int implantedCount = 0;
+            int implanted = 0;
 
-            
             if (pawn.needs?.mood?.thoughts?.memories != null && Props.implantedMemoryThoughts != null)
             {
                 foreach (var thoughtDef in Props.implantedMemoryThoughts)
                 {
                     if (thoughtDef != null)
                     {
-                        try
-                        {
-                            Thought_Memory thought = (Thought_Memory)ThoughtMaker.MakeThought(thoughtDef);
-                            if (thought != null)
-                            {
-                                pawn.needs.mood.thoughts.memories.TryGainMemory(thought);
-                                implantedCount++;
-                                Log.Message($"[Memory Implant] Added thought {thoughtDef.defName} to {pawn.LabelShort}");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Log.Error($"AnimeArsenal: Failed to add implanted memory thought {thoughtDef.defName} to {pawn.LabelShort}: {ex}");
-                        }
+                        Thought_Memory thought = (Thought_Memory)ThoughtMaker.MakeThought(thoughtDef);
+                        pawn.needs.mood.thoughts.memories.TryGainMemory(thought);
+                        implanted++;
                     }
                 }
             }
 
-            
-            if (implantedCount > 0)
+            if (implanted > 0)
             {
-                Messages.Message($"Implanted {implantedCount} false memories into {pawn.LabelShort}'s mind.",
+                Messages.Message($"Implanted {implanted} false memories into {pawn.LabelShort}",
                     pawn, MessageTypeDefOf.NeutralEvent);
             }
-            else
-            {
-                Messages.Message($"Failed to implant memories into {pawn.LabelShort}'s mind.",
-                    pawn, MessageTypeDefOf.RejectInput);
-                Log.Warning($"[Memory Implant] No memories were successfully implanted into {pawn.LabelShort}");
-            }
 
-            
             if (Props.memoryImplantHediff != null)
             {
-                try
-                {
-                    
-                    var existing = pawn.health.hediffSet.GetFirstHediffOfDef(Props.memoryImplantHediff);
-                    if (existing != null)
-                    {
-                        pawn.health.RemoveHediff(existing);
-                    }
+                var existing = pawn.health.hediffSet.GetFirstHediffOfDef(Props.memoryImplantHediff);
+                if (existing != null)
+                    pawn.health.RemoveHediff(existing);
 
-                    Hediff hediff = HediffMaker.MakeHediff(Props.memoryImplantHediff, pawn);
-                    if (hediff != null)
-                    {
-                        hediff.Severity = Props.effectSeverity;
-                        pawn.health.AddHediff(hediff);
-
-                        Messages.Message($"{pawn.LabelShort} appears disoriented from the false memories.",
-                            pawn, MessageTypeDefOf.NeutralEvent);
-                        Log.Message($"[Memory Implant] Added disorientation hediff to {pawn.LabelShort}");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Error($"AnimeArsenal: Failed to add memory implant hediff to {pawn.LabelShort}: {ex}");
-                }
+                Hediff hediff = HediffMaker.MakeHediff(Props.memoryImplantHediff, pawn);
+                hediff.Severity = Props.effectSeverity;
+                pawn.health.AddHediff(hediff);
             }
         }
 
         private void ApplyMoodManipulation(Pawn pawn)
         {
             if (pawn.needs?.mood?.thoughts?.memories == null)
-            {
-                Log.Warning($"[Mood Control] {pawn.LabelShort} has no mood/thoughts system");
                 return;
-            }
 
-            
-            bool applyPositive = Props.moodChange >= 0;
-
-          
-
-            ThoughtDef thoughtToUse = applyPositive ? Props.positiveMoodThought : Props.negativeMoodThought;
-            string moodType = applyPositive ? "positive" : "negative";
+            bool positive = Props.moodChange >= 0;
+            ThoughtDef thoughtToUse = positive ? Props.positiveMoodThought : Props.negativeMoodThought;
 
             if (thoughtToUse != null)
             {
-                try
-                {
-                    Thought_Memory thought = (Thought_Memory)ThoughtMaker.MakeThought(thoughtToUse);
-                    if (thought != null)
-                    {
-                        pawn.needs.mood.thoughts.memories.TryGainMemory(thought);
+                Thought_Memory thought = (Thought_Memory)ThoughtMaker.MakeThought(thoughtToUse);
+                pawn.needs.mood.thoughts.memories.TryGainMemory(thought);
 
-                        Messages.Message($"Manipulated {pawn.LabelShort}'s mood through dreams ({moodType} effect).",
-                            pawn, applyPositive ? MessageTypeDefOf.PositiveEvent : MessageTypeDefOf.NegativeEvent);
-                        Log.Message($"[Mood Control] Applied {moodType} mood manipulation to {pawn.LabelShort}");
-
-                        
-                        if (pawn.needs.mood != null)
-                        {
-                            float moodLevel = pawn.needs.mood.CurLevel;
-                            Log.Message($"[Mood Control] {pawn.LabelShort}'s mood level is now {moodLevel:F2}");
-                        }
-                    }
-                    else
-                    {
-                        Log.Warning($"[Mood Control] Failed to create thought from {thoughtToUse.defName}");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Error($"AnimeArsenal: Failed to add mood manipulation thought to {pawn.LabelShort}: {ex}");
-                }
-            }
-            else
-            {
-                Log.Warning($"[Mood Control] No {moodType} mood thought defined in properties");
-                Messages.Message($"Mood manipulation failed - no {moodType} effect configured.",
-                    pawn, MessageTypeDefOf.RejectInput);
+                string moodType = positive ? "positive" : "negative";
+                Messages.Message($"Manipulated {pawn.LabelShort}'s mood ({moodType})",
+                    pawn, positive ? MessageTypeDefOf.PositiveEvent : MessageTypeDefOf.NegativeEvent);
             }
         }
 
@@ -388,107 +219,43 @@ namespace AnimeArsenal
             Pawn caster = parent.pawn;
             if (caster?.skills == null) return;
 
-            
-            var transferableSkills = new List<SkillRecord>();
+            var availableSkills = pawn.skills.skills.Where(s => s.Level > 0 && !s.TotallyDisabled).ToList();
+            if (!availableSkills.Any()) return;
 
-            
-            foreach (var skillRecord in pawn.skills.skills)
-            {
-                if (skillRecord != null && skillRecord.Level > 0 && !skillRecord.TotallyDisabled)
-                {
-                    transferableSkills.Add(skillRecord);
-                }
-            }
-
-            
-            if (!transferableSkills.Any())
-            {
-                Messages.Message($"{pawn.LabelShort} has no skills that can be drained!",
-                    caster, MessageTypeDefOf.RejectInput);
-                Log.Warning($"[Skill Transfer] {pawn.LabelShort} has no transferable skills");
-                return;
-            }
-
-            
-            var randomSkillRecord = transferableSkills.RandomElement();
-            var randomSkill = randomSkillRecord.def;
-
-            
+            var randomSkill = availableSkills.RandomElement();
             int transferAmount = Rand.RangeInclusive(1, 3);
 
-            var targetSkill = pawn.skills.GetSkill(randomSkill);
-            var casterSkill = caster.skills.GetSkill(randomSkill);
+            var targetSkill = pawn.skills.GetSkill(randomSkill.def);
+            var casterSkill = caster.skills.GetSkill(randomSkill.def);
 
-            if (targetSkill != null && casterSkill != null)
+            if (Props.transferFromTarget)
             {
-                
+                if (casterSkill.TotallyDisabled) return;
+
                 transferAmount = Math.Min(transferAmount, targetSkill.Level);
+                targetSkill.Level = Math.Max(0, targetSkill.Level - transferAmount);
+                casterSkill.Level = Math.Min(20, casterSkill.Level + transferAmount);
 
-                if (Props.transferFromTarget)
-                {
-                    
-                    int oldTargetLevel = targetSkill.Level;
-                    int oldCasterLevel = casterSkill.Level;
+                Messages.Message($"Drained {transferAmount} {randomSkill.def.LabelCap} from {pawn.LabelShort}",
+                    caster, MessageTypeDefOf.PositiveEvent);
+            }
+            else
+            {
+                if (casterSkill.Level <= 0) return;
 
-                    
-                    if (casterSkill.TotallyDisabled)
-                    {
-                        Messages.Message($"Cannot transfer {randomSkill.LabelCap} - {caster.LabelShort} is incapable of this skill!",
-                            caster, MessageTypeDefOf.RejectInput);
-                        return;
-                    }
+                transferAmount = Math.Min(transferAmount, casterSkill.Level);
+                casterSkill.Level = Math.Max(0, casterSkill.Level - transferAmount);
+                targetSkill.Level = Math.Min(20, targetSkill.Level + transferAmount);
 
-                    targetSkill.Level = Math.Max(0, targetSkill.Level - transferAmount);
-                    casterSkill.Level = Math.Min(20, casterSkill.Level + transferAmount);
-
-                    Messages.Message($"Drained {transferAmount} levels of {randomSkill.LabelCap} from {pawn.LabelShort}! ({oldTargetLevel}→{targetSkill.Level}) {caster.LabelShort} gained: ({oldCasterLevel}→{casterSkill.Level})",
-                        caster, MessageTypeDefOf.PositiveEvent);
-
-                    Log.Message($"[Skill Transfer] Transferred {transferAmount} {randomSkill.LabelCap} from {pawn.LabelShort} (now {targetSkill.Level}) to {caster.LabelShort} (now {casterSkill.Level})");
-                }
-                else
-                {
-                    
-                    if (casterSkill.Level <= 0)
-                    {
-                        Messages.Message($"{caster.LabelShort} has no {randomSkill.LabelCap} skill to transfer!",
-                            caster, MessageTypeDefOf.RejectInput);
-                        return;
-                    }
-
-                    int oldTargetLevel = targetSkill.Level;
-                    int oldCasterLevel = casterSkill.Level;
-
-                    transferAmount = Math.Min(transferAmount, casterSkill.Level);
-
-                    casterSkill.Level = Math.Max(0, casterSkill.Level - transferAmount);
-                    targetSkill.Level = Math.Min(20, targetSkill.Level + transferAmount);
-
-                    Messages.Message($"Transferred {transferAmount} levels of {randomSkill.LabelCap} to {pawn.LabelShort}! ({oldCasterLevel}→{casterSkill.Level}) Target gained: ({oldTargetLevel}→{targetSkill.Level})",
-                        caster, MessageTypeDefOf.PositiveEvent);
-                }
-
-                
-                string[] flavorTexts = {
-                    $"Knowledge of {randomSkill.LabelCap} flows through the dream connection...",
-                    $"Memories of {randomSkill.LabelCap} training are absorbed...",
-                    $"Experience with {randomSkill.LabelCap} transfers through the ethereal link...",
-                    $"The essence of {randomSkill.LabelCap} mastery shifts between minds..."
-                };
-
-                Messages.Message(flavorTexts.RandomElement(), caster, MessageTypeDefOf.NeutralEvent);
+                Messages.Message($"Transferred {transferAmount} {randomSkill.def.LabelCap} to {pawn.LabelShort}",
+                    caster, MessageTypeDefOf.PositiveEvent);
             }
         }
 
         private void AddEffects(Pawn pawn)
         {
-           
-            if (Props.effectSound != null)
-            {
-                Props.effectSound.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
-            }
+            Props.effectSound?.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
 
-            
             if (Props.dreamEffecter != null)
             {
                 Effecter effecter = Props.dreamEffecter.Spawn();
@@ -518,7 +285,7 @@ namespace AnimeArsenal
             if (!IsTargetAsleep(pawn))
             {
                 if (throwMessages)
-                    Messages.Message($"{pawn.LabelShort} must be asleep for dream manipulation", MessageTypeDefOf.RejectInput);
+                    Messages.Message($"{pawn.LabelShort} must be asleep", MessageTypeDefOf.RejectInput);
                 return false;
             }
 
@@ -542,7 +309,6 @@ namespace AnimeArsenal
         public float effectSeverity = 1.0f;
         public bool showMessage = true;
 
-        
         public HediffDef nightmareHediff = null;
         public HediffDef pleasantDreamHediff = null;
         public ThoughtDef nightmareThought = null;
@@ -550,22 +316,18 @@ namespace AnimeArsenal
         public float restPenalty = 0.3f;
         public float restBonus = 0.3f;
 
-        
         public HediffDef memoryExtractionHediff = null;
         public HediffDef memoryImplantHediff = null;
         public List<ThoughtDef> implantedMemoryThoughts = null;
 
-        
         public float moodChange = 0f;
         public ThoughtDef positiveMoodThought = null;
         public ThoughtDef negativeMoodThought = null;
 
-       
-        public SkillDef skillToTransfer = null; 
-        public int skillTransferAmount = 1; 
+        public SkillDef skillToTransfer = null;
+        public int skillTransferAmount = 1;
         public bool transferFromTarget = true;
 
-        
         public SoundDef effectSound = null;
         public EffecterDef dreamEffecter = null;
 

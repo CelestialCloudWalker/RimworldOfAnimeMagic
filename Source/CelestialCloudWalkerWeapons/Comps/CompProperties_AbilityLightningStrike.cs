@@ -14,7 +14,6 @@ namespace AnimeArsenal
         public int explosionDamage = 50;
         public SoundDef soundOnImpact;
 
-        
         public int strikeCount = 1;
         public float strikeDelay = 0.5f;
         public float chainRange = 0f;
@@ -33,25 +32,21 @@ namespace AnimeArsenal
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            Map map = parent.pawn.Map;
-            IntVec3 initialLocation = target.Cell;
+            var map = parent.pawn.Map;
+            var location = target.Cell;
 
-            GameComponent_DelayedEffects delayedEffects = Current.Game.GetComponent<GameComponent_DelayedEffects>();
-            if (delayedEffects != null)
-            {
-                delayedEffects.StartLightningChain(map, initialLocation, parent.pawn, Props);
-            }
+            var delayedEffects = Current.Game.GetComponent<GameComponent_DelayedEffects>();
+            delayedEffects?.StartLightningChain(map, location, parent.pawn, Props);
         }
 
         private int lastUsedTick = -999999;
-        private const int aiDecisionCooldown = 300;
+        private const int aiCooldown = 300;
 
         public override bool AICanTargetNow(LocalTargetInfo target)
         {
-            if (Find.TickManager.TicksGame < lastUsedTick + aiDecisionCooldown)
-            {
+            if (Find.TickManager.TicksGame < lastUsedTick + aiCooldown)
                 return false;
-            }
+
             lastUsedTick = Find.TickManager.TicksGame;
             return true;
         }
@@ -64,40 +59,40 @@ namespace AnimeArsenal
 
     public class GameComponent_DelayedEffects : GameComponent
     {
-        private List<LightningChainData> activeLightningChains = new List<LightningChainData>();
+        private List<LightningChainData> activeChains = new List<LightningChainData>();
 
         public GameComponent_DelayedEffects(Game game) { }
 
-        public void StartLightningChain(Map map, IntVec3 initialTarget, Pawn caster, CompProperties_AbilityLightningStrike props)
+        public void StartLightningChain(Map map, IntVec3 target, Pawn caster, CompProperties_AbilityLightningStrike props)
         {
-            LightningChainData chainData = new LightningChainData
+            var chainData = new LightningChainData
             {
                 map = map,
                 caster = caster,
                 props = props,
                 currentStrike = 0,
                 nextStrikeTick = Find.TickManager.TicksGame,
-                lastStrikeLocation = initialTarget,
+                lastLocation = target,
                 hitTargets = new HashSet<IntVec3>()
             };
 
-            activeLightningChains.Add(chainData);
+            activeChains.Add(chainData);
         }
 
         public override void GameComponentTick()
         {
-            for (int i = activeLightningChains.Count - 1; i >= 0; i--)
+            for (int i = activeChains.Count - 1; i >= 0; i--)
             {
-                LightningChainData chain = activeLightningChains[i];
+                var chain = activeChains[i];
 
                 if (Find.TickManager.TicksGame >= chain.nextStrikeTick)
                 {
-                    ExecuteLightningStrike(chain);
+                    ExecuteStrike(chain);
                     chain.currentStrike++;
 
                     if (chain.currentStrike >= chain.props.strikeCount)
                     {
-                        activeLightningChains.RemoveAt(i);
+                        activeChains.RemoveAt(i);
                     }
                     else
                     {
@@ -107,70 +102,64 @@ namespace AnimeArsenal
             }
         }
 
-        private void ExecuteLightningStrike(LightningChainData chain)
+        private void ExecuteStrike(LightningChainData chain)
         {
-            IntVec3 strikeLocation = chain.lastStrikeLocation;
+            var location = chain.lastLocation;
 
             if (chain.currentStrike > 0 && chain.props.chainRange > 0)
             {
-                strikeLocation = FindChainTarget(chain);
+                location = FindChainTarget(chain);
             }
 
-            WeatherEvent_LightningStrike lightningStrike = new WeatherEvent_LightningStrike(chain.map, strikeLocation);
-            lightningStrike.FireEvent();
+            var lightning = new WeatherEvent_LightningStrike(chain.map, location);
+            lightning.FireEvent();
 
-            float currentDamage = chain.props.explosionDamage * Mathf.Pow(chain.props.damageEscalation, chain.currentStrike);
+            var damage = chain.props.explosionDamage * Mathf.Pow(chain.props.damageEscalation, chain.currentStrike);
 
             if (chain.props.explosionRadius > 0f)
             {
                 GenExplosion.DoExplosion(
-                    strikeLocation,
+                    location,
                     chain.map,
                     chain.props.explosionRadius,
                     DamageDefOf.Bomb,
                     chain.caster,
-                    Mathf.RoundToInt(currentDamage),
+                    Mathf.RoundToInt(damage),
                     -1f
                 );
             }
 
-            if (chain.props.soundOnImpact != null)
-            {
-                chain.props.soundOnImpact.PlayOneShot(new TargetInfo(strikeLocation, chain.map));
-            }
+            chain.props.soundOnImpact?.PlayOneShot(new TargetInfo(location, chain.map));
 
-            chain.hitTargets.Add(strikeLocation);
-            chain.lastStrikeLocation = strikeLocation;
+            chain.hitTargets.Add(location);
+            chain.lastLocation = location;
         }
 
         private IntVec3 FindChainTarget(LightningChainData chain)
         {
-            List<Pawn> potentialTargets = new List<Pawn>();
+            var targets = new List<Pawn>();
 
-            foreach (Pawn pawn in chain.map.mapPawns.AllPawnsSpawned)
+            foreach (var pawn in chain.map.mapPawns.AllPawnsSpawned)
             {
                 if (pawn == chain.caster) continue;
-                if (pawn.Position.DistanceTo(chain.lastStrikeLocation) > chain.props.chainRange) continue;
+                if (pawn.Position.DistanceTo(chain.lastLocation) > chain.props.chainRange) continue;
                 if (chain.hitTargets.Contains(pawn.Position)) continue;
-                if (pawn.Faction == chain.caster.Faction) continue; 
+                if (pawn.Faction == chain.caster.Faction) continue;
 
-                potentialTargets.Add(pawn);
+                targets.Add(pawn);
             }
 
-            if (potentialTargets.Count > 0)
+            if (targets.Count > 0)
             {
-                Pawn closestTarget = potentialTargets.MinBy(p => p.Position.DistanceTo(chain.lastStrikeLocation));
-                return closestTarget.Position;
+                var closest = targets.MinBy(p => p.Position.DistanceTo(chain.lastLocation));
+                return closest.Position;
             }
-            else
-            {
-                IntVec3 randomCell = chain.lastStrikeLocation + IntVec3Utility.RandomHorizontalOffset(chain.props.chainRange);
-                if (randomCell.InBounds(chain.map) && randomCell.Standable(chain.map))
-                {
-                    return randomCell;
-                }
-                return chain.lastStrikeLocation; 
-            }
+
+            var randomCell = chain.lastLocation + IntVec3Utility.RandomHorizontalOffset(chain.props.chainRange);
+            if (randomCell.InBounds(chain.map) && randomCell.Standable(chain.map))
+                return randomCell;
+
+            return chain.lastLocation;
         }
 
         public override void ExposeData()
@@ -186,7 +175,7 @@ namespace AnimeArsenal
         public CompProperties_AbilityLightningStrike props;
         public int currentStrike;
         public int nextStrikeTick;
-        public IntVec3 lastStrikeLocation;
+        public IntVec3 lastLocation;
         public HashSet<IntVec3> hitTargets;
     }
 }

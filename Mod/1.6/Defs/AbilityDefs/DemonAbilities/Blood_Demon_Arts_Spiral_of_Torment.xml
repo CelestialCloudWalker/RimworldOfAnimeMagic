@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Spiral_of_Torment</defName>
     <label>Blood Demon Arts: Spiral of Torment</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Command limbs in an area to twist into bloody messes. Radius and damage increase with mastery.</description>
+    <description>A blood demon art that twists the targets’s body.</description>
     <iconPath>UI/Abilities/DemonAbilityTwist</iconPath>
     <displayOrder>150</displayOrder>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
@@ -45,7 +45,7 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic area twist that affects nearby enemies.</description>
+        <description>A blood demon art that twists the targets’s body.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>1.0</cooldownMultiplier>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
@@ -62,7 +62,7 @@
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>Enhanced twisting power affects more enemies in a larger area.</description>
+        <description>A blood demon art that twists the targets’s body.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.9</cooldownMultiplier>
         <resourceCostMultiplier>0.95</resourceCostMultiplier>
@@ -79,7 +79,7 @@
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>Devastating twisting forces that can cripple entire groups.</description>
+        <description>A blood demon art that twists the targets’s body.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.8</cooldownMultiplier>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
@@ -96,7 +96,7 @@
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>400</experienceRequired>
-        <description>Ultimate mastery of limb manipulation - a true spiral of endless torment.</description>
+        <description>A blood demon art that twists the targets’s body.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.7</cooldownMultiplier>
         <resourceCostMultiplier>0.85</resourceCostMultiplier>

@@ -3,15 +3,15 @@
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>AA_RetreatDash</defName>
     <label>Retreat Dash</label>
-    <description>Quickly dash away from the target to a safe position. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that dashes away from enemies.</description>
     <iconPath>UI/Abilities/AbilityRetreat</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <targetRequired>true</targetRequired>
 
-    
-    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName> 
+
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
     <resourceCost>15</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -27,7 +27,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityRetreatDash">
         <minDashDistance>8</minDashDistance>
@@ -38,26 +38,22 @@
         <castEffecter>AnimeArsenal_BeastJump</castEffecter>
         <landEffecter>AnimeArsenal_DashBack</landEffecter>
         <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
-        <grantTemporaryImmunity>false</grantTemporaryImmunity>
-        <grantSpeedBoost>false</grantSpeedBoost>
-        <grantMoodBoost>false</grantMoodBoost>
-        <restoreStamina>false</restoreStamina>
       </li>
     </comps>
 
     <levels>
-      
+
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic retreat dash technique to escape from danger.</description>
+        <description>A technique that dashes away from enemies.</description>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>An improved retreat that can be performed twice and better avoids enemies.</description>
+        <description>A technique that dashes away from enemies.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -70,19 +66,15 @@
             <castEffecter>AnimeArsenal_BeastJump</castEffecter>
             <landEffecter>AnimeArsenal_DashBack</landEffecter>
             <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
-            <grantTemporaryImmunity>true</grantTemporaryImmunity>
-            <grantSpeedBoost>false</grantSpeedBoost>
-            <grantMoodBoost>false</grantMoodBoost>
-            <restoreStamina>false</restoreStamina>
           </li>
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>A Erelongful retreat technique that grants temporary speed and excellent enemy avoidance.</description>
+        <description>A technique that dashes away from enemies.</description>
         <resourceCostMultiplier>1.5</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
@@ -96,19 +88,15 @@
             <castEffecter>AnimeArsenal_BeastJump</castEffecter>
             <landEffecter>AnimeArsenal_DashBack</landEffecter>
             <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
-            <grantTemporaryImmunity>true</grantTemporaryImmunity>
-            <grantSpeedBoost>true</grantSpeedBoost>
-            <grantMoodBoost>false</grantMoodBoost>
-            <restoreStamina>false</restoreStamina>
           </li>
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>The ultimate retreat technique - grants immunity, speed, mood boost, restores stamina, and maximizes safety.</description>
+        <description>A technique that dashes away from enemies.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.6</cooldownMultiplier>
@@ -122,10 +110,6 @@
             <castEffecter>AnimeArsenal_BeastJump</castEffecter>
             <landEffecter>AnimeArsenal_DashBack</landEffecter>
             <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
-            <grantTemporaryImmunity>true</grantTemporaryImmunity>
-            <grantSpeedBoost>true</grantSpeedBoost>
-            <grantMoodBoost>true</grantMoodBoost>
-            <restoreStamina>true</restoreStamina>
           </li>
         </levelComps>
       </li>

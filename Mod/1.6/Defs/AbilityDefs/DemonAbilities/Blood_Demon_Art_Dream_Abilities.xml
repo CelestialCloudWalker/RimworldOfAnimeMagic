@@ -8,7 +8,7 @@
     <stages>
       <li>
         <label>nightmare</label>
-        <description>I had terrible nightmares that felt so real. The images still haunt me.</description>
+        <description>I had nightmares that felt so real. I watched demons eat the ones I love.</description>
         <baseMoodEffect>-8</baseMoodEffect>
       </li>
     </stages>
@@ -22,7 +22,7 @@
     <stages>
       <li>
         <label>pleasant dreams</label>
-        <description>I had the most wonderful dreams. I feel refreshed and optimistic.</description>
+        <description>I had the most wonderful dream. I got to spent time with the ones I love.</description>
         <baseMoodEffect>+12</baseMoodEffect>
       </li>
     </stages>
@@ -36,7 +36,7 @@
     <stages>
       <li>
         <label>betrayed by friend</label>
-        <description>I remember being betrayed by someone I trusted. The memory feels so real.</description>
+        <description>I remember being betrayed by someone I loved. The memory feels so real.</description>
         <baseMoodEffect>-15</baseMoodEffect>
       </li>
     </stages>
@@ -49,7 +49,7 @@
     <stackLimit>1</stackLimit>
     <stages>
       <li>
-        <label>glorious victory</label>
+        <label>great victory</label>
         <description>I remember achieving a great victory. It fills me with confidence.</description>
         <baseMoodEffect>+10</baseMoodEffect>
       </li>
@@ -101,7 +101,7 @@
   <HediffDef>
     <defName>NightmareTrauma</defName>
     <label>nightmare trauma</label>
-    <description>Psychological trauma from experiencing terrifying nightmares.</description>
+    <description>Psychological trauma from experiencing nightmares.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <initialSeverity>0.5</initialSeverity>

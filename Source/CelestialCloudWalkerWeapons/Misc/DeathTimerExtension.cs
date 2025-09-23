@@ -8,25 +8,23 @@ using System.Reflection;
 
 public class DeathTimerExtension : DefModExtension
 {
-    public string hediffToWatch; 
+    public string hediffToWatch;
     public string activationMessage = "{0} has activated a deadly power. Their lifespan has been drastically shortened.";
     public string deathMessage = "{0} has succumbed to the curse, their body unable to sustain the supernatural power any longer.";
 
-    
     public string curseHediffLabel = "cursed";
     public string curseHediffDescription = "This person is cursed to die before their 25th birthday due to using forbidden power.";
-    public string curseStageLabel = "cursed"; 
+    public string curseStageLabel = "cursed";
 
-    
     public DeathCauseType deathCause = DeathCauseType.HeartFailure;
 
-    public int maxAgeInYears = 25; 
-    public int minDaysEarlyDeath = 1; 
-    public int maxDaysEarlyDeath = 365; 
-    public int immediateDeathMinDays = 1; 
-    public int immediateDeathMaxDays = 30; 
-    public bool createCurseHediff = true; 
-    public bool activateOnGeneAdd = false; 
+    public int maxAgeInYears = 25;
+    public int minDaysEarlyDeath = 1;
+    public int maxDaysEarlyDeath = 365;
+    public int immediateDeathMinDays = 1;
+    public int immediateDeathMaxDays = 30;
+    public bool createCurseHediff = true;
+    public bool activateOnGeneAdd = false;
 }
 
 
@@ -71,8 +69,8 @@ public static class DeathTimerManager
             get
             {
                 if (deathTick <= 0) return -1;
-                int ticksRemaining = deathTick - Find.TickManager.TicksGame;
-                return ticksRemaining <= 0 ? 0 : ticksRemaining / 60000;
+                int ticksLeft = deathTick - Find.TickManager.TicksGame;
+                return ticksLeft <= 0 ? 0 : ticksLeft / 60000;
             }
         }
 
@@ -174,22 +172,25 @@ public static class DeathTimerManager
         var extension = deathTimer.Extension;
         deathTimer.powerActivated = true;
 
-        
+       
         long currentAge = deathTimer.Pawn.ageTracker.AgeBiologicalTicks;
         long maxAgeInTicks = (long)extension.maxAgeInYears * 3600000L;
 
         if (currentAge >= maxAgeInTicks)
         {
+            
             int daysUntilDeath = Rand.Range(extension.immediateDeathMinDays, extension.immediateDeathMaxDays + 1);
             deathTimer.deathTick = Find.TickManager.TicksGame + (daysUntilDeath * 60000);
         }
         else
         {
+            
             long ticksUntilMaxAge = maxAgeInTicks - currentAge;
             int earlyDeathDays = Rand.Range(extension.minDaysEarlyDeath, extension.maxDaysEarlyDeath + 1);
             long earlyDeathTicks = (long)earlyDeathDays * 60000L;
             deathTimer.deathTick = Find.TickManager.TicksGame + (int)(ticksUntilMaxAge - earlyDeathTicks);
 
+            
             if (deathTimer.deathTick < Find.TickManager.TicksGame + 60000)
             {
                 deathTimer.deathTick = Find.TickManager.TicksGame + 60000;
@@ -218,8 +219,8 @@ public static class DeathTimerManager
         {
             curseDef = new HediffDef();
             curseDef.defName = curseDefName;
-            curseDef.label = extension.curseHediffLabel; 
-            curseDef.description = extension.curseHediffDescription; 
+            curseDef.label = extension.curseHediffLabel;
+            curseDef.description = extension.curseHediffDescription;
             curseDef.hediffClass = typeof(Hediff_DeathCurse);
             curseDef.defaultLabelColor = new UnityEngine.Color(0.8f, 0.2f, 0.2f);
             curseDef.makesSickThought = false;
@@ -231,7 +232,7 @@ public static class DeathTimerManager
 
             curseDef.stages = new List<HediffStage>();
             HediffStage stage = new HediffStage();
-            stage.label = extension.curseStageLabel; 
+            stage.label = extension.curseStageLabel;
             stage.minSeverity = 0f;
             curseDef.stages.Add(stage);
 
@@ -260,7 +261,6 @@ public static class DeathTimerManager
             Messages.Message(message, deathTimer.Pawn, MessageTypeDefOf.PawnDeath);
         }
 
-        // Choose death method based on configuration
         DeathCauseType causeToUse = extension.deathCause;
         if (causeToUse == DeathCauseType.Random)
         {
@@ -284,7 +284,7 @@ public static class DeathTimerManager
                 KillByAsphyxiation(deathTimer.Pawn);
                 break;
             default:
-                KillByHeartFailure(deathTimer.Pawn); 
+                KillByHeartFailure(deathTimer.Pawn);
                 break;
         }
     }
@@ -294,15 +294,15 @@ public static class DeathTimerManager
         BodyPartRecord heart = pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def.defName == "Heart");
         if (heart != null)
         {
-            DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, heart);
-            damageInfo.SetIgnoreArmor(true);
-            pawn.TakeDamage(damageInfo);
+            DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, heart);
+            dmg.SetIgnoreArmor(true);
+            pawn.TakeDamage(dmg);
         }
         else
         {
-            DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f);
-            damageInfo.SetIgnoreArmor(true);
-            pawn.TakeDamage(damageInfo);
+            DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f);
+            dmg.SetIgnoreArmor(true);
+            pawn.TakeDamage(dmg);
         }
     }
 
@@ -316,30 +316,31 @@ public static class DeathTimerManager
             var organ = bodyParts.FirstOrDefault(x => x.def.defName == organName);
             if (organ != null)
             {
-                DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, organ);
-                damageInfo.SetIgnoreArmor(true);
-                pawn.TakeDamage(damageInfo);
-                break; 
+                DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, organ);
+                dmg.SetIgnoreArmor(true);
+                pawn.TakeDamage(dmg);
+                break;
             }
         }
 
+        
         if (vitalOrgans.All(organName => bodyParts.All(bp => bp.def.defName != organName)))
         {
-            DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f);
-            damageInfo.SetIgnoreArmor(true);
-            pawn.TakeDamage(damageInfo);
+            DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f);
+            dmg.SetIgnoreArmor(true);
+            pawn.TakeDamage(dmg);
         }
     }
 
     private static void KillByBloodLoss(Pawn pawn)
     {
         Hediff bloodLoss = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, pawn);
-        bloodLoss.Severity = 1.0f; 
+        bloodLoss.Severity = 1.0f;
         pawn.health.AddHediff(bloodLoss);
 
-        DamageInfo damageInfo = new DamageInfo(DamageDefOf.Cut, 50f);
-        damageInfo.SetIgnoreArmor(true);
-        pawn.TakeDamage(damageInfo);
+        DamageInfo dmg = new DamageInfo(DamageDefOf.Cut, 50f);
+        dmg.SetIgnoreArmor(true);
+        pawn.TakeDamage(dmg);
     }
 
     private static void KillByAsphyxiation(Pawn pawn)
@@ -349,16 +350,16 @@ public static class DeathTimerManager
         {
             foreach (var lung in lungs)
             {
-                DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, lung);
-                damageInfo.SetIgnoreArmor(true);
-                pawn.TakeDamage(damageInfo);
+                DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, lung);
+                dmg.SetIgnoreArmor(true);
+                pawn.TakeDamage(dmg);
             }
         }
         else
         {
-            DamageInfo damageInfo = new DamageInfo(DamageDefOf.Deterioration, 999f);
-            damageInfo.SetIgnoreArmor(true);
-            pawn.TakeDamage(damageInfo);
+            DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f);
+            dmg.SetIgnoreArmor(true);
+            pawn.TakeDamage(dmg);
         }
     }
 

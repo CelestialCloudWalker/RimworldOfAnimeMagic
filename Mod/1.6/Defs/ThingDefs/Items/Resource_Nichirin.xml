@@ -3,7 +3,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>Scarlet_Crimson_Iron_Sand</defName>
     <label>Scarlet Crimson Iron Sand</label>
-    <description>Rare crimson iron sand found in mountains. Essential component for forging Nichirin weapons.</description>
+    <description>Rare crimson iron sand found in mountains. A component for forging Nichirin weapons.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Silver</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -68,7 +68,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>Scarlet_Ore</defName>
     <label>Scarlet Ore</label>
-    <description>Rare scarlet mineral ore found in mountains. Essential component for forging Nichirin weapons.</description>
+    <description>Rare scarlet mineral ore found in mountains. A component for forging Nichirin weapons.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Steel</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

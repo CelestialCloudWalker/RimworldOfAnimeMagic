@@ -5,10 +5,10 @@
     <label>Serpent Breath</label>
     <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Serpent Breath</resourceName>
-    <description>Carriers of this gene embody the elegance and fluidity of blooming flowers, unleashing techniques that blend agility and vision with deadly precision. Their attacks are a mesmerizing dance of petals and blossoms, with enhanced perception at the cost of potential strain on their eyesight.</description>
+    <description>Serpent Breathing Gene.</description>
     <iconPath>UI/Icons/Genes/serpent</iconPath>
     <resourceLabel>Serpent Breath</resourceLabel>
-    <resourceDescription>Current stored Breath, charged with the essence of serpents. This energy powers devastating snake-like abilities, ensnaring and striking enemies with lethal precision.</resourceDescription>
+    <resourceDescription>Current stored Breath.</resourceDescription>
     <TalentTrees>
       <li>Serpent_BreathingStyleBlankTree</li>
     </TalentTrees>

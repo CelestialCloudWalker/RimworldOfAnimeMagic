@@ -4,7 +4,7 @@
     <defName>Serpent_Breathing_Disperse</defName>
     <label>Serpent Breathing: Disperse</label>
     <category>SerpentBreathing_Ability_Catergory</category>
-    <description>WIP.</description>
+    <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -41,23 +41,23 @@
           <canTargetNeutral>true</canTargetNeutral>
           <canTargetFriendly>false</canTargetFriendly>
         </friendlyFireParms>
-        <explosionEffecterDef>AnimeArsenal_SerpentHit2</explosionEffecterDef>
+        <explosionEffecterDef>AnimeArsenal_StoneHit2</explosionEffecterDef>
       </li>
     </comps>
 
     <levels>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Wip.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
 
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>Wip.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -81,7 +81,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>Wip.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -106,7 +106,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>800</experienceRequired>
-        <description>Wip.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>2.2</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

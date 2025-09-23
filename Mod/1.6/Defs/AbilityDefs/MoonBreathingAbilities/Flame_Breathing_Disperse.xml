@@ -4,7 +4,7 @@
     <defName>Moon_Breathing_Disperse</defName>
     <label>Moon Breathing: Disperse</label>
     <category>MoonBreathing_Ability_Catergory</category>
-    <description>The user releases a devastating roar of Moons that incinerates all enemies in a wide radius around them. The raw power of the Moon breathing technique burns through anything nearby. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -41,7 +41,7 @@
           <canTargetNeutral>true</canTargetNeutral>
           <canTargetFriendly>false</canTargetFriendly>
         </friendlyFireParms>
-        <explosionEffecterDef>AnimeArsenal_SerpentHit2</explosionEffecterDef>
+        <explosionEffecterDef>AnimeArsenal_StoneHit2</explosionEffecterDef>
       </li>
     </comps>
 
@@ -50,14 +50,14 @@
       <li>
         <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic area roar that incinerates nearby enemies with moderate searing damage.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
 
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>An improved rampage with wider reach and increased burning damage per target.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -80,7 +80,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>A devastating rampage with extended radius and brutal searing damage that can melt through armor.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -104,7 +104,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>800</experienceRequired>
-        <description>The ultimate Moon rampage - maximum area coverage with devastating searing damage that can incinerate buildings and burn any enemy to ash.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.6</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

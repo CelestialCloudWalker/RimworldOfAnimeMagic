@@ -15,43 +15,31 @@ namespace AnimeArsenal
 
     public class CompAbility_DemonifyWorkSlave : CompAbilityEffect
     {
-        private const string BLOOD_DEMON_ART_GENE = "BloodDemonArt";
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
 
-            if (target.Pawn != null)
+            if (target.Pawn == null) return;
+
+            var pawn = target.Pawn;
+
+            var hediff = HediffMaker.MakeHediff(DefDatabase<HediffDef>.GetNamed("DemonWorkSlaveHediff"), pawn);
+            pawn.health.AddHediff(hediff);
+
+            var slaveComp = hediff.TryGetComp<HediffComp_DemonWorkSlaveEffect>();
+            slaveComp?.SetSlaveMaster(parent.pawn);
+
+            if (pawn.genes != null)
             {
-                Pawn targetPawn = target.Pawn;
-
-                
-                Hediff demonSlaveHediff = HediffMaker.MakeHediff(DefDatabase<HediffDef>.GetNamed("DemonWorkSlaveHediff"), targetPawn);
-                targetPawn.health.AddHediff(demonSlaveHediff);
-
-                
-                if (demonSlaveHediff.TryGetComp<HediffComp_DemonWorkSlaveEffect>() is HediffComp_DemonWorkSlaveEffect slaveComp)
+                var bloodDemonGene = DefDatabase<GeneDef>.GetNamed("BloodDemonArt");
+                if (!pawn.genes.HasActiveGene(bloodDemonGene))
                 {
-                    slaveComp.SetSlaveMaster(parent.pawn);
-                }
-
-                if (targetPawn.genes != null)
-                {
-                    GeneDef bloodDemonArtGene = DefDatabase<GeneDef>.GetNamed(BLOOD_DEMON_ART_GENE);
-
-                    if (!targetPawn.genes.HasActiveGene(bloodDemonArtGene))
+                    var gene = pawn.genes.AddGene(bloodDemonGene, true);
+                    if (gene is Gene_BasicResource resourceGene)
                     {
-                        Gene gene = targetPawn.genes.AddGene(bloodDemonArtGene, true);
-
-                        if (gene is Gene_BasicResource resourceGene)
-                        {
-                            resourceGene.EnableResource = true;
-
-                            float maxResource = resourceGene.Max;
-                            resourceGene.Value = maxResource * 0.5f;
-
-                            resourceGene.ResetRegenTicks();
-                        }
+                        resourceGene.EnableResource = true;
+                        resourceGene.Value = resourceGene.Max * 0.5f;
+                        resourceGene.ResetRegenTicks();
                     }
                 }
             }

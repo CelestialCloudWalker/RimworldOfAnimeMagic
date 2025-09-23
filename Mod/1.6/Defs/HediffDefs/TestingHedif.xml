@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>Test1_Invisibility</defName>
+    <label>Selfless State 2</label>
+    <description>This pawn is invisible to almost all other creatures.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <duplicationAllowed>false</duplicationAllowed>
+    <comps>
+      <li Class="HediffCompProperties_Invisibility">
+        <fadeDurationTicks>100</fadeDurationTicks>
+        <visibleToPlayer>true</visibleToPlayer>
+      </li>
+    </comps>
+  </HediffDef>
+  <HediffDef>
+    <defName>Test2_Invisibility</defName>
+    <label>Selfless State</label>
+    <description>This pawn is invisible to almost all other creatures.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <duplicationAllowed>false</duplicationAllowed>
+    <comps>
+      <li Class="HediffCompProperties_Invisibility">
+        <fadeDurationTicks>100</fadeDurationTicks>
+        <visibleToPlayer>false</visibleToPlayer>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

@@ -1,10 +1,7 @@
 ﻿using RimWorld;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
-using Verse.AI;
 using Verse.Sound;
 
 namespace AnimeArsenal
@@ -22,57 +19,42 @@ namespace AnimeArsenal
 
             IntVec3 originalTarget = target.Cell;
 
-            
             for (int dashCount = 0; dashCount < Props.numberOfDashes; dashCount++)
             {
                 IntVec3 currentPos = caster.Position;
 
-               
                 if (dashCount == 0 && Props.castEffecter != null)
                 {
-                    Effecter castEffect = Props.castEffecter.Spawn();
+                    var castEffect = Props.castEffecter.Spawn();
                     castEffect.Trigger(new TargetInfo(currentPos, caster.Map), new TargetInfo(currentPos, caster.Map));
                     castEffect.Cleanup();
                 }
                 else if (dashCount > 0 && Props.retryEffecter != null)
                 {
-                    Effecter retryEffect = Props.retryEffecter.Spawn();
+                    var retryEffect = Props.retryEffecter.Spawn();
                     retryEffect.Trigger(new TargetInfo(currentPos, caster.Map), new TargetInfo(currentPos, caster.Map));
                     retryEffect.Cleanup();
                 }
 
-                
                 IntVec3 dashTarget = CalculateRetreatPosition(caster, originalTarget);
 
                 if (dashTarget.IsValid)
                 {
-                    
                     caster.Position = dashTarget;
                     caster.Notify_Teleported(false, false);
 
-                    
                     if (Props.landEffecter != null)
                     {
-                        Effecter landEffect = Props.landEffecter.Spawn();
+                        var landEffect = Props.landEffecter.Spawn();
                         landEffect.Trigger(new TargetInfo(dashTarget, caster.Map), new TargetInfo(dashTarget, caster.Map));
                         landEffect.Cleanup();
                     }
 
-                    
                     if (dashCount == 0 && Props.castSound != null)
-                    {
                         Props.castSound.PlayOneShot(new TargetInfo(currentPos, caster.Map));
-                    }
 
                     if (Props.landSound != null)
-                    {
                         Props.landSound.PlayOneShot(new TargetInfo(dashTarget, caster.Map));
-                    }
-
-                   
-                    if (dashCount < Props.numberOfDashes - 1 && Props.dashDelay > 0)
-                    {
-                    }
                 }
                 else
                 {
@@ -86,19 +68,15 @@ namespace AnimeArsenal
             Map map = caster.Map;
             IntVec3 casterPos = caster.Position;
 
-            
             Vector3 retreatDirection = (casterPos - fromCell).ToVector3Shifted().normalized;
 
-            
             for (int dist = Props.minDashDistance; dist <= Props.maxDashDistance; dist++)
             {
                 Vector3 targetVector = casterPos.ToVector3Shifted() + (retreatDirection * dist);
                 IntVec3 candidate = targetVector.ToIntVec3();
 
                 if (IsValidRetreatCell(candidate, caster, map))
-                {
                     return candidate;
-                }
 
                 for (int angle = -45; angle <= 45; angle += 15)
                 {
@@ -107,12 +85,11 @@ namespace AnimeArsenal
                     IntVec3 rotatedCandidate = rotatedVector.ToIntVec3();
 
                     if (IsValidRetreatCell(rotatedCandidate, caster, map))
-                    {
                         return rotatedCandidate;
-                    }
                 }
             }
 
+            // fallback to random positions
             for (int i = 0; i < 20; i++)
             {
                 float randomAngle = Rand.Range(0f, 360f);
@@ -124,9 +101,7 @@ namespace AnimeArsenal
                     IntVec3 randomCandidate = randomVector.ToIntVec3();
 
                     if (IsValidRetreatCell(randomCandidate, caster, map))
-                    {
                         return randomCandidate;
-                    }
                 }
             }
 
@@ -179,21 +154,13 @@ namespace AnimeArsenal
         public int maxDashDistance = 8;
         public bool avoidEnemies = true;
         public float enemyAvoidanceRadius = 5f;
-        public int numberOfDashes = 1; 
-        public int dashDelay = 0;
+        public int numberOfDashes = 1;
 
-        
-        public EffecterDef castEffecter; 
-        public EffecterDef landEffecter; 
+        public EffecterDef castEffecter;
+        public EffecterDef landEffecter;
         public EffecterDef retryEffecter;
         public SoundDef castSound;
         public SoundDef landSound;
-
-        
-        public bool grantTemporaryImmunity = false;
-        public bool grantSpeedBoost = false;
-        public bool grantMoodBoost = false;
-        public bool restoreStamina = false;
 
         public CompProperties_AbilityRetreatDash()
         {

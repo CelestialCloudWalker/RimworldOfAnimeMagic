@@ -4,7 +4,7 @@
     <defName>Insect_Breathing_Disperse</defName>
     <label>Insect Breathing: Disperse</label>
     <category>InsectBreathing_Ability_Catergory</category>
-    <description>The user unleashes a devastating swarm of poisonous stingers that pierce through all enemies in a wide radius around them. The precise power of the insect breathing technique injects venom into anything nearby. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -48,16 +48,16 @@
     <levels>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic swarm attack that surrounds enemies with venomous stingers dealing moderate poison damage.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
 
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>An improved storm with wider swarm spread and increased stinging damage per target.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -80,7 +80,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>A devastating storm with extended radius and brutal venomous stings that can pierce through armor with deadly precision.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -104,7 +104,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>800</experienceRequired>
-        <description>The ultimate thousand stinger storm - maximum area coverage with devastating venomous damage that can inject lethal toxins through buildings and poison any enemy with the concentrated fury of a thousand insects.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.6</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

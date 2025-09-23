@@ -101,13 +101,9 @@
         </whiteXenotypeList>
         <xenotypeList>
           <li>AA_DemonBloodArts_User</li>
-          <li>AA_DemonBloodArts_LowerMoon</li>
-          <li>AA_DemonBloodArts_UpperMoon</li>
         </xenotypeList>
         <whiteGeneList>
           <li>BloodDemonArt</li>
-          <li>BloodDemonArt_UpperMoon</li>
-          <li>BloodDemonArt_LowerMoon</li>
         </whiteGeneList>
 
         <whiteTraitList>
@@ -145,6 +141,31 @@
             <li>Male_AverageNormal</li>
             <li>Female_AverageNormal</li>
           </headTypes>
+          <bodyAddons>
+            <li>
+              <path>DemonHorns/Demon_Horn</path>
+              <alignWithHead>true</alignWithHead>
+              <inFrontOfBody>true</inFrontOfBody>
+              <colorChannel>skin</colorChannel>
+              <shaderType>CutoutComplex</shaderType>
+              <userCustomizable>false</userCustomizable>
+              <drawSize>(1.0, 1.0)</drawSize>
+              <offsets>
+                <south>
+                  <offset>(0.0, 0.0)</offset>
+                  <layerOffset>0.1</layerOffset>
+                </south>
+                <north>
+                  <offset>(0.0, 0.02)</offset>
+                  <layerOffset>0.1</layerOffset>
+                </north>
+                <east>
+                  <offset>(0.0, 0.0)</offset>
+                  <layerOffset>0.1</layerOffset>
+                </east>
+              </offsets>
+            </li>
+          </bodyAddons>
         </alienPartGenerator>
         <reproduction>
           <maleFertilityAgeFactor>

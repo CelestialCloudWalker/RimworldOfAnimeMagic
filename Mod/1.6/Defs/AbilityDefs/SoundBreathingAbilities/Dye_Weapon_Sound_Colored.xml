@@ -4,7 +4,7 @@
     <defName>Dye_Weapon_Sound_Colored</defName>
     <label>Dye Weapon: Sound Colored</label>
     <category>SoundBreathing_Ability_Catergory</category>
-    <description>The user channels their breathing style into their weapon, creating powerful sonic vibrations. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that channels focused breathing into attacks.</description>
     <iconPath>UI/Abilities/AbilityEmbu</iconPath>
     <targetRequired>false</targetRequired>
 
@@ -27,13 +27,13 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic weapon enchantment that imbues attacks with sonic vibrations.</description>
+        <description>A technique that channels focused breathing into attacks.</description>
       </li>
 
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>200</experienceRequired>
-        <description>An improved enchantment with stronger sonic resonance and reduced maintenance cost.</description>
+        <description>A technique that channels focused breathing into attacks.</description>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
@@ -45,7 +45,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>450</experienceRequired>
-        <description>A superior enchantment that significantly enhances sonic damage and efficiency.</description>
+        <description>A technique that channels focused breathing into attacks.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
@@ -57,7 +57,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>750</experienceRequired>
-        <description>The ultimate weapon enchantment - maximum sonic damage with minimal resource drain.</description>
+        <description>A technique that channels focused breathing into attacks.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">

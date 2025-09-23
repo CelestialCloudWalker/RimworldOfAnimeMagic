@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StatDef>
+    <defName>BreathingPotential_RegenRate</defName>
+    <label>Breathing Potential Breath Regen Rate</label>
+    <category>PawnMisc</category>
+    <description>Rate of Breathing Potential Breath regeneration per tick.</description>
+    <defaultBaseValue>.8</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <showOnDefaultValue>false</showOnDefaultValue>
+  </StatDef>
+</Defs>

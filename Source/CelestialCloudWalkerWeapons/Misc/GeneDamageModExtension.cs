@@ -8,25 +8,17 @@ namespace AnimeArsenal
     public class GeneDamageModExtension : DefModExtension
     {
         public DamageDef damageType;
-
         public float damageAmount = 1f;
-
         public string targetGene;
-
         public float damageMultiplier = 1f;
-
         public bool useMultiplier = false;
-
         public List<BodyPartDef> targetBodyParts;
-
         public float armorPenetration = 0f;
-
         public bool continuousDamage = false;
         public int damageInterval = 60;
         public bool applyOnGeneAdd = false;
         public bool applyOnGeneRemove = false;
-
-        public bool damageOnHit = true; 
+        public bool damageOnHit = true;
     }
 
     public class HediffComp_GeneDamage : HediffComp
@@ -35,159 +27,120 @@ namespace AnimeArsenal
 
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {
-            if (dinfo.HasValue)
+            if (!dinfo.HasValue) return;
+
+            var ext = Def.GetModExtension<GeneDamageModExtension>();
+            if (ext?.applyOnGeneAdd == true)
             {
-                GeneDamageModExtension modExt = Def.GetModExtension<GeneDamageModExtension>();
-                if (modExt != null && modExt.applyOnGeneAdd)
-                {
-                    ProcessGeneDamageForHediff(dinfo.Value, modExt);
-                }
+                HandleDamageFromHediff(dinfo.Value, ext);
             }
         }
 
         public override void CompPostTick(ref float severityAdjustment)
         {
-            GeneDamageModExtension modExt = Def.GetModExtension<GeneDamageModExtension>();
-            if (modExt != null && modExt.continuousDamage)
+            var ext = Def.GetModExtension<GeneDamageModExtension>();
+            if (ext?.continuousDamage == true && parent.ageTicks % ext.damageInterval == 0)
             {
-                if (parent.ageTicks % modExt.damageInterval == 0)
-                {
-                    ProcessContinuousGeneDamage(modExt);
-                }
+                DoContinuousDamage(ext);
             }
         }
 
-        private void ProcessGeneDamageForHediff(DamageInfo dinfo, GeneDamageModExtension modExt)
+        private void HandleDamageFromHediff(DamageInfo original, GeneDamageModExtension ext)
         {
-            if (!(Pawn.genes?.GenesListForReading?.Any(g => g.def.defName == modExt.targetGene) ?? false))
-                return;
+            if (!HasTargetGene(ext.targetGene)) return;
 
-            float extraDamage = modExt.useMultiplier ?
-                dinfo.Amount * modExt.damageMultiplier :
-                modExt.damageAmount;
+            float damage = ext.useMultiplier ? original.Amount * ext.damageMultiplier : ext.damageAmount;
 
-            DamageInfo extraDamageInfo = new DamageInfo(
-                modExt.damageType,
-                extraDamage,
-                modExt.armorPenetration,
-                instigator: dinfo.Instigator,
-                hitPart: dinfo.HitPart
-            );
+            var info = new DamageInfo(ext.damageType, damage, ext.armorPenetration,
+                instigator: original.Instigator, hitPart: original.HitPart);
 
-            Pawn.TakeDamage(extraDamageInfo);
+            Pawn.TakeDamage(info);
         }
 
-        private void ProcessContinuousGeneDamage(GeneDamageModExtension modExt)
+        private void DoContinuousDamage(GeneDamageModExtension ext)
         {
-            if (!(Pawn.genes?.GenesListForReading?.Any(g => g.def.defName == modExt.targetGene) ?? false))
-                return;
+            if (!HasTargetGene(ext.targetGene)) return;
 
-            DamageInfo damageInfo = new DamageInfo(
-                modExt.damageType,
-                modExt.damageAmount,
-                modExt.armorPenetration
-            );
+            var damage = new DamageInfo(ext.damageType, ext.damageAmount, ext.armorPenetration);
 
-            if (modExt.targetBodyParts != null && modExt.targetBodyParts.Count > 0)
+            if (ext.targetBodyParts?.Count > 0)
             {
-                foreach (BodyPartDef bodyPartDef in modExt.targetBodyParts)
+                foreach (var partDef in ext.targetBodyParts)
                 {
-                    BodyPartRecord bodyPart = Pawn.RaceProps.body.AllParts.FirstOrDefault(p => p.def == bodyPartDef);
-                    if (bodyPart != null)
+                    var part = Pawn.RaceProps.body.AllParts.FirstOrDefault(p => p.def == partDef);
+                    if (part != null)
                     {
-                        DamageInfo targetedDamage = damageInfo;
-                        targetedDamage.SetHitPart(bodyPart);
-                        Pawn.TakeDamage(targetedDamage);
+                        var targeted = damage;
+                        targeted.SetHitPart(part);
+                        Pawn.TakeDamage(targeted);
                     }
                 }
             }
             else
             {
-                Pawn.TakeDamage(damageInfo);
+                Pawn.TakeDamage(damage);
             }
         }
+
+        private bool HasTargetGene(string geneName) =>
+            Pawn.genes?.GenesListForReading?.Any(g => g.def.defName == geneName) ?? false;
     }
 
     public class Gene_GeneDamage : Gene
     {
+        private GeneDamageModExtension cachedExt;
+
+        private GeneDamageModExtension Ext => cachedExt ?? (cachedExt = def.GetModExtension<GeneDamageModExtension>());
+
         public override void PostAdd()
         {
             base.PostAdd();
-            GeneDamageModExtension modExt = def.GetModExtension<GeneDamageModExtension>();
-            if (modExt != null && modExt.applyOnGeneAdd)
-            {
-                ProcessGeneAddDamage(modExt);
-            }
+            if (Ext?.applyOnGeneAdd == true)
+                CheckAndApplyDamage();
         }
 
         public override void PostRemove()
         {
             base.PostRemove();
-            GeneDamageModExtension modExt = def.GetModExtension<GeneDamageModExtension>();
-            if (modExt != null && modExt.applyOnGeneRemove)
-            {
-                ProcessGeneRemoveDamage(modExt);
-            }
+            if (Ext?.applyOnGeneRemove == true)
+                DealDamage();
         }
 
         public override void Tick()
         {
             base.Tick();
-            GeneDamageModExtension modExt = def.GetModExtension<GeneDamageModExtension>();
-            if (modExt != null && modExt.continuousDamage)
+            if (Ext?.continuousDamage == true && pawn.IsHashIntervalTick(Ext.damageInterval))
             {
-                if (pawn.IsHashIntervalTick(modExt.damageInterval))
+                CheckAndApplyDamage();
+            }
+        }
+
+        private void CheckAndApplyDamage()
+        {
+            if (pawn.genes?.GenesListForReading?.Any(g => g.def.defName == Ext.targetGene) == true)
+                DealDamage();
+        }
+
+        private void DealDamage()
+        {
+            var info = new DamageInfo(Ext.damageType, Ext.damageAmount, Ext.armorPenetration);
+
+            if (Ext.targetBodyParts?.Count > 0)
+            {
+                foreach (var partDef in Ext.targetBodyParts)
                 {
-                    ProcessContinuousGeneDamage(modExt);
-                }
-            }
-        }
-
-        private void ProcessGeneAddDamage(GeneDamageModExtension modExt)
-        {
-            if (pawn.genes?.GenesListForReading?.Any(g => g.def.defName == modExt.targetGene) ?? false)
-            {
-                ApplyGeneDamage(modExt);
-            }
-        }
-
-        private void ProcessGeneRemoveDamage(GeneDamageModExtension modExt)
-        {
-            ApplyGeneDamage(modExt);
-        }
-
-        private void ProcessContinuousGeneDamage(GeneDamageModExtension modExt)
-        {
-            if (pawn.genes?.GenesListForReading?.Any(g => g.def.defName == modExt.targetGene) ?? false)
-            {
-                ApplyGeneDamage(modExt);
-            }
-        }
-
-        private void ApplyGeneDamage(GeneDamageModExtension modExt)
-        {
-            DamageInfo damageInfo = new DamageInfo(
-                modExt.damageType,
-                modExt.damageAmount,
-                modExt.armorPenetration
-            );
-
-            if (modExt.targetBodyParts != null && modExt.targetBodyParts.Count > 0)
-            {
-                foreach (BodyPartDef bodyPartDef in modExt.targetBodyParts)
-                {
-                    BodyPartRecord bodyPart = pawn.RaceProps.body.AllParts.FirstOrDefault(p => p.def == bodyPartDef);
+                    var bodyPart = pawn.RaceProps.body.AllParts.FirstOrDefault(p => p.def == partDef);
                     if (bodyPart != null)
                     {
-                        DamageInfo targetedDamage = damageInfo;
-                        targetedDamage.SetHitPart(bodyPart);
-                        pawn.TakeDamage(targetedDamage);
+                        var targeted = info;
+                        targeted.SetHitPart(bodyPart);
+                        pawn.TakeDamage(targeted);
                     }
                 }
             }
             else
             {
-                pawn.TakeDamage(damageInfo);
+                pawn.TakeDamage(info);
             }
         }
     }

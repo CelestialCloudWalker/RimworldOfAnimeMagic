@@ -12,11 +12,500 @@
     </resourceGizmoThresholds>
     <displayCategory>DemonBloodArts</displayCategory>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-
-
     <regenTicks>BloodDemonArts_RegenTicks</regenTicks>
     <regenStat>BloodDemonArts_RegenAmount</regenStat>
     <regenSpeedStat>AnimeArsenal_BloodDemonArtsRegenSpeed</regenSpeedStat>
     <costMult>BloodDemonArts_Cost</costMult>
+
+    <modExtensions>
+      <li Class="AnimeArsenal.RegenerationExtension">
+        <healingMultiplier>1.2</healingMultiplier>
+        <ticksBetweenHealing>180</ticksBetweenHealing>
+        <healingPerTick>0.3</healingPerTick>
+        <instantLimbRegeneration>false</instantLimbRegeneration>
+        <instantOrganRegeneration>false</instantOrganRegeneration>
+        <canRegenerateOrgans>false</canRegenerateOrgans>
+        <canRegenerateBrain>false</canRegenerateBrain>
+        <canRegenerateHeart>false</canRegenerateHeart>
+        <canRegenerateHead>false</canRegenerateHead>
+        <scarHealChance>0.05</scarHealChance>
+        <scarHealInterval>4000</scarHealInterval>
+        <consumeResourcesOnRegeneration>true</consumeResourcesOnRegeneration>
+        <resourceCostPerHeal>3</resourceCostPerHeal>
+        <resourceCostPerLimbRegen>120</resourceCostPerLimbRegen>
+        <resourceCostPerOrganRegen>250</resourceCostPerOrganRegen>
+        <resourceCostPerScarHeal>60</resourceCostPerScarHeal>
+        <preventRegenIfInsufficientResources>true</preventRegenIfInsufficientResources>
+        <minimumResourcesRequired>0.3</minimumResourcesRequired>
+        <showResourceWarnings>true</showResourceWarnings>
+        <resourceWarningCooldownTicks>2500</resourceWarningCooldownTicks>
+        <preventDeathFromVitalLoss>false</preventDeathFromVitalLoss>
+        <fatalBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+          <li>Head</li>
+          <li>Brain</li>
+        </fatalBodyParts>
+        <onlyNotifyMajorParts>true</onlyNotifyMajorParts>
+        <resourceName>Blood Art</resourceName>
+      </li>
+
+      <li Class="AnimeArsenal.SunlightDamageExtension">
+        <damagePerTick>3.5</damagePerTick>
+        <damageThresholdBeforeDeath>15</damageThresholdBeforeDeath>
+        <ticksBetweenDamage>90</ticksBetweenDamage>
+        <ticksToResetDamage>1500</ticksToResetDamage>
+        <minimumCoverageForProtection>0.35</minimumCoverageForProtection>
+        <requireHeadCoverage>true</requireHeadCoverage>
+      </li>
+
+      <li Class="AnimeArsenal.BodyDisappearExtension">
+        <leaveAshFilth>true</leaveAshFilth>
+        <filthAmount>1</filthAmount>
+        <disappearMessage>Weak demon body turned to ash!</disappearMessage>
+        <playEffect>true</playEffect>
+      </li>
+
+      <li Class="AnimeArsenal.DemonProgressionExtension">
+        <startingRank>WeakDemon</startingRank>
+        <canProgressThroughTalents>true</canProgressThroughTalents>
+
+        <bloodPoolBonusPerPawnEaten>5</bloodPoolBonusPerPawnEaten>
+        <bloodRestoredPerPawnEaten>15</bloodRestoredPerPawnEaten>
+
+        <pawnsRequiredPerRank>
+          <li>2</li>
+          <li>4</li>
+          <li>7</li>
+          <li>11</li>
+          <li>16</li>
+          <li>22</li>
+          <li>30</li>
+          <li>40</li>
+          <li>52</li>
+          <li>66</li>
+          <li>82</li>
+          <li>100</li>
+          <li>120</li>
+        </pawnsRequiredPerRank>
+
+        <sunlightDamagePerTick>
+          <li>3.5</li>
+          <li>3.0</li>
+          <li>2.8</li>
+          <li>2.5</li>
+          <li>2.2</li>
+          <li>1.9</li>
+          <li>1.6</li>
+          <li>1.3</li>
+          <li>1.0</li>
+          <li>0.8</li>
+          <li>0.6</li>
+          <li>0.4</li>
+          <li>0.2</li>
+          <li>0.1</li>
+        </sunlightDamagePerTick>
+        <sunlightDamageThreshold>
+          <li>15</li>
+          <li>20</li>
+          <li>25</li>
+          <li>32</li>
+          <li>40</li>
+          <li>50</li>
+          <li>62</li>
+          <li>76</li>
+          <li>92</li>
+          <li>110</li>
+          <li>130</li>
+          <li>152</li>
+          <li>176</li>
+          <li>200</li>
+        </sunlightDamageThreshold>
+        <sunlightTicksBetweenDamage>
+          <li>90</li>
+          <li>105</li>
+          <li>120</li>
+          <li>138</li>
+          <li>158</li>
+          <li>180</li>
+          <li>205</li>
+          <li>232</li>
+          <li>262</li>
+          <li>295</li>
+          <li>330</li>
+          <li>368</li>
+          <li>410</li>
+          <li>455</li>
+        </sunlightTicksBetweenDamage>
+        <sunlightTicksToReset>
+          <li>1500</li>
+          <li>1750</li>
+          <li>2000</li>
+          <li>2300</li>
+          <li>2650</li>
+          <li>3050</li>
+          <li>3500</li>
+          <li>4000</li>
+          <li>4550</li>
+          <li>5150</li>
+          <li>5800</li>
+          <li>6500</li>
+          <li>7250</li>
+          <li>8050</li>
+        </sunlightTicksToReset>
+        <sunlightMinCoverage>
+          <li>0.35</li>
+          <li>0.40</li>
+          <li>0.43</li>
+          <li>0.46</li>
+          <li>0.49</li>
+          <li>0.52</li>
+          <li>0.55</li>
+          <li>0.58</li>
+          <li>0.61</li>
+          <li>0.64</li>
+          <li>0.67</li>
+          <li>0.70</li>
+          <li>0.73</li>
+          <li>0.76</li>
+        </sunlightMinCoverage>
+
+        <regenHealingMultiplier>
+          <li>1.2</li>
+          <li>1.4</li>
+          <li>1.6</li>
+          <li>1.8</li>
+          <li>2.1</li>
+          <li>2.4</li>
+          <li>2.8</li>
+          <li>3.2</li>
+          <li>3.7</li>
+          <li>4.2</li>
+          <li>4.8</li>
+          <li>5.5</li>
+          <li>6.2</li>
+          <li>7.0</li>
+        </regenHealingMultiplier>
+        <regenTicksBetweenHealing>
+          <li>180</li>
+          <li>165</li>
+          <li>150</li>
+          <li>138</li>
+          <li>126</li>
+          <li>115</li>
+          <li>105</li>
+          <li>96</li>
+          <li>87</li>
+          <li>79</li>
+          <li>72</li>
+          <li>65</li>
+          <li>59</li>
+          <li>53</li>
+        </regenTicksBetweenHealing>
+        <regenHealingPerTick>
+          <li>0.3</li>
+          <li>0.4</li>
+          <li>0.5</li>
+          <li>0.6</li>
+          <li>0.7</li>
+          <li>0.9</li>
+          <li>1.1</li>
+          <li>1.3</li>
+          <li>1.6</li>
+          <li>1.9</li>
+          <li>2.3</li>
+          <li>2.7</li>
+          <li>3.2</li>
+          <li>3.8</li>
+        </regenHealingPerTick>
+        <regenInstantLimb>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </regenInstantLimb>
+        <regenInstantOrgan>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </regenInstantOrgan>
+        <regenCanRegenerateOrgans>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </regenCanRegenerateOrgans>
+        <regenCanRegenerateHeart>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </regenCanRegenerateHeart>
+        <regenScarHealChance>
+          <li>0.05</li>
+          <li>0.08</li>
+          <li>0.11</li>
+          <li>0.14</li>
+          <li>0.17</li>
+          <li>0.21</li>
+          <li>0.25</li>
+          <li>0.29</li>
+          <li>0.34</li>
+          <li>0.39</li>
+          <li>0.45</li>
+          <li>0.51</li>
+          <li>0.58</li>
+          <li>0.65</li>
+        </regenScarHealChance>
+        <regenScarHealInterval>
+          <li>4000</li>
+          <li>3700</li>
+          <li>3400</li>
+          <li>3100</li>
+          <li>2850</li>
+          <li>2600</li>
+          <li>2375</li>
+          <li>2175</li>
+          <li>1975</li>
+          <li>1800</li>
+          <li>1625</li>
+          <li>1475</li>
+          <li>1325</li>
+          <li>1200</li>
+        </regenScarHealInterval>
+        <regenResourceCostPerHeal>
+          <li>3.0</li>
+          <li>2.7</li>
+          <li>2.4</li>
+          <li>2.2</li>
+          <li>2.0</li>
+          <li>1.8</li>
+          <li>1.6</li>
+          <li>1.5</li>
+          <li>1.3</li>
+          <li>1.2</li>
+          <li>1.1</li>
+          <li>1.0</li>
+          <li>0.9</li>
+          <li>0.8</li>
+        </regenResourceCostPerHeal>
+        <regenResourceCostPerLimb>
+          <li>120</li>
+          <li>110</li>
+          <li>100</li>
+          <li>92</li>
+          <li>84</li>
+          <li>77</li>
+          <li>70</li>
+          <li>64</li>
+          <li>58</li>
+          <li>52</li>
+          <li>47</li>
+          <li>42</li>
+          <li>38</li>
+          <li>34</li>
+        </regenResourceCostPerLimb>
+        <regenResourceCostPerOrgan>
+          <li>250</li>
+          <li>225</li>
+          <li>200</li>
+          <li>180</li>
+          <li>162</li>
+          <li>146</li>
+          <li>131</li>
+          <li>118</li>
+          <li>106</li>
+          <li>95</li>
+          <li>86</li>
+          <li>77</li>
+          <li>69</li>
+          <li>62</li>
+        </regenResourceCostPerOrgan>
+        <regenMinResourcesRequired>
+          <li>0.30</li>
+          <li>0.27</li>
+          <li>0.24</li>
+          <li>0.22</li>
+          <li>0.20</li>
+          <li>0.18</li>
+          <li>0.16</li>
+          <li>0.15</li>
+          <li>0.13</li>
+          <li>0.12</li>
+          <li>0.11</li>
+          <li>0.09</li>
+          <li>0.08</li>
+          <li>0.06</li>
+        </regenMinResourcesRequired>
+
+        <bodyDisappearLeaveAsh>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </bodyDisappearLeaveAsh>
+        <bodyDisappearFilthAmount>
+          <li>1</li>
+          <li>1</li>
+          <li>2</li>
+          <li>2</li>
+          <li>3</li>
+          <li>3</li>
+          <li>4</li>
+          <li>4</li>
+          <li>5</li>
+          <li>5</li>
+          <li>6</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+        </bodyDisappearFilthAmount>
+        <bodyDisappearPlayEffect>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </bodyDisappearPlayEffect>
+        <bodyDisappearMessage>
+          <li>Weak demon body turned to ash!</li>
+          <li>Demon body turned to ash!</li>
+          <li>Lower Rank Six demon body turned to ash!</li>
+          <li>Lower Rank Five demon body turned to ash!</li>
+          <li>Lower Rank Four demon body turned to ash!</li>
+          <li>Lower Rank Three demon body turned to ash!</li>
+          <li>Lower Rank Two demon body turned to ash!</li>
+          <li>Lower Rank One demon body turned to ash!</li>
+          <li>Upper Rank Six demon body turned to ash!</li>
+          <li>Upper Rank Five demon body turned to ash!</li>
+          <li>Upper Rank Four demon body turned to ash!</li>
+          <li>Upper Rank Three demon body turned to ash!</li>
+          <li>Upper Rank Two demon body turned to ash!</li>
+          <li>Upper Rank One demon body turned to ash!</li>
+        </bodyDisappearMessage>
+      </li>
+    </modExtensions>
+  </AnimeArsenal.BloodDemonArtsGeneDef>
+
+  <AnimeArsenal.BloodDemonArtsGeneDef ParentName="AA_BloodDemonArtsGene">
+    <defName>BloodDemonArt</defName>
+    <label>Blood Demon Art</label>
+    <resourceName>Blood Art</resourceName>
+    <description>A demon with blood arts that grow stronger with kills and training.</description>
+    <iconPath>UI/Icons/Genes/Demon</iconPath>
+    <resourceLabel>Blood Art</resourceLabel>
+    <resourceDescription>Demon Blood Art that evolves with power.</resourceDescription>
+
+    <TalentTrees>
+      <li>BloodDemonArtStyleTree</li>
+    </TalentTrees>
+
+    <experienceFormula>Basic_LinearXP</experienceFormula>
+    <experienceGainSettings>
+      <experienceTypes>
+        <li Class="Talented.DamageTakenExperienceTypeDef">
+          <baseXP>10</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <li Class="Talented.DamageDealtExperienceTypeDef">
+          <baseXP>10</baseXP>
+          <damageFactor>0.1</damageFactor>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Shooting</SkillDef>
+          <baseXP>2</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>HaulToCell</SkillDef>
+          <baseXP>1</baseXP>
+        </li>
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_BeatFire</VerbClassName>
+          <baseXP>1</baseXP>
+        </li>
+      </experienceTypes>
+    </experienceGainSettings>
+
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <barColor>(0.545, 0.0, 0.0, 1.0)</barColor>
+
+    <makeImmuneTo>
+      <li>Flu</li>
+      <li>Malaria</li>
+      <li>SleepingSickness</li>
+      <li>Plague</li>
+      <li>WoundInfection</li>
+      <li>LungRot</li>
+      <li>GutWorms</li>
+      <li>MuscleParasites</li>
+      <li>OrganDecay</li>
+    </makeImmuneTo>
+    <hediffGiversCannotGive>
+      <li>Carcinoma</li>
+      <li>HeartAttack</li>
+      <li>HeartArteryBlockage</li>
+    </hediffGiversCannotGive>
+
+    <TabLabel>Talents</TabLabel>
   </AnimeArsenal.BloodDemonArtsGeneDef>
 </Defs>

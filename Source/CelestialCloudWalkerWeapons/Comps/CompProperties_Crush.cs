@@ -12,7 +12,6 @@ namespace AnimeArsenal
         public float radius = 10f;
         public int maxTargets = 10;
         public float baseDamage = 10f;
-
         public float stunChance = 0f;
         public int stunDuration = 1;
         public bool canCrushBuildings = false;
@@ -40,281 +39,161 @@ namespace AnimeArsenal
 
             if (parent.pawn?.Map == null) return;
 
-            IntVec3 targetCell = target.Cell;
             Map map = parent.pawn.Map;
+            IntVec3 center = target.Cell;
 
-            CreateCrushEffects(targetCell, map);
+            DoVisualEffects(center, map);
 
-            List<Thing> targets = FindTargetsInRadius(targetCell, map);
+            var targets = GetNearbyTargets(center, map);
+            ProcessTargets(targets);
 
-            foreach (Thing thing in targets.Take(Props.maxTargets))
-            {
-                if (thing is Pawn pawn)
-                {
-                    ApplyCrushToPawn(pawn);
-                }
-                else if (Props.canCrushBuildings && thing.def.category == ThingCategory.Building)
-                {
-                    ApplyCrushToBuilding(thing);
-                }
-            }
-
-            if (Props.createCrater)
-            {
-                CreateCrater(targetCell, map);
-            }
-
-            if (Props.blackHoleEffect)
-            {
-                CreateBlackHoleEffects(targetCell, map);
-            }
+            if (Props.createCrater) MakeCrater(center, map);
+            if (Props.blackHoleEffect) DoBlackHoleStuff(center, map);
         }
 
-        private List<Thing> FindTargetsInRadius(IntVec3 center, Map map)
+        private List<Thing> GetNearbyTargets(IntVec3 center, Map map)
         {
-            List<Thing> targets = new List<Thing>();
+            var targets = new List<Thing>();
+            var cells = GenRadial.RadialCellsAround(center, Props.radius, true);
 
-            var cellsInRadius = GenRadial.RadialCellsAround(center, Props.radius, true);
-
-            foreach (IntVec3 cell in cellsInRadius)
+            foreach (var cell in cells.Where(c => c.InBounds(map)))
             {
-                if (!cell.InBounds(map)) continue;
-
-                List<Thing> thingsInCell = cell.GetThingList(map);
-                foreach (Thing thing in thingsInCell)
+                var things = cell.GetThingList(map);
+                foreach (var thing in things)
                 {
-                    if (IsValidTarget(thing))
-                    {
+                    if (thing == parent.pawn) continue;
+
+                    if (thing is Pawn p && !p.Dead)
                         targets.Add(thing);
-                    }
+                    else if (Props.canCrushBuildings && thing.def.category == ThingCategory.Building)
+                        targets.Add(thing);
                 }
             }
 
+            return targets.OrderBy(t => t.Position.DistanceTo(center)).Take(Props.maxTargets).ToList();
+        }
+
+        private void ProcessTargets(List<Thing> targets)
+        {
+            foreach (var target in targets)
+            {
+                if (target is Pawn pawn)
+                    CrushPawn(pawn);
+                else if (target.def.category == ThingCategory.Building)
+                    CrushBuilding(target);
+            }
+        }
+
+        private void CrushPawn(Pawn target)
+        {
             
-            return targets.OrderBy(t => t.Position.DistanceTo(center)).ToList();
-        }
-
-        private bool IsValidTarget(Thing thing)
-        {
-            if (thing == parent.pawn) return false; 
-
-            if (thing is Pawn pawn)
+            if (Props.instantKillChance > 0f && Rand.Chance(Props.instantKillChance))
             {
-                return !pawn.Dead;
-            }
-
-            if (Props.canCrushBuildings && thing.def.category == ThingCategory.Building)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        private void ApplyCrushToPawn(Pawn target)
-        {
-            if (Props.instantKillChance > 0f && Rand.Range(0f, 1f) <= Props.instantKillChance)
-            {
-                PerformInstantKill(target);
+                var killDamage = new DamageInfo(CelestialDefof.TwistDamage, target.MaxHitPoints * 3f,
+                    Props.armorPenetration, -1f, parent.pawn);
+                target.TakeDamage(killDamage);
+                Messages.Message($"{target.LabelShort} is utterly crushed by gravitational forces!",
+                    target, MessageTypeDefOf.NegativeEvent);
                 return;
             }
 
-            float damage = CalculateDamage(target);
+            
+            float damage = Props.baseDamage * target.BodySize * Rand.Range(0.8f, 1.2f);
+            var parts = target.health.hediffSet.GetNotMissingParts().Where(p =>
+                p.def.tags.Contains(BodyPartTagDefOf.MovingLimbCore) ||
+                p.def.tags.Contains(BodyPartTagDefOf.MovingLimbSegment) ||
+                p.def == BodyPartDefOf.Torso).ToList();
 
-            ApplyCrushDamage(target, damage);
+            if (!parts.Any()) parts = target.health.hediffSet.GetNotMissingParts().ToList();
 
-            ApplyStunEffect(target);
-            ApplyKnockdownEffect(target);
-        }
+            int hitCount = Mathf.Min(3, parts.Count);
+            float damagePerHit = damage / hitCount;
 
-        private void PerformInstantKill(Pawn target)
-        {
-            Messages.Message($"{target.LabelShort} is utterly crushed by gravitational forces!",
-                target, MessageTypeDefOf.NegativeEvent);
-
-            DamageInfo killDamage = new DamageInfo(
-                CelestialDefof.TwistDamage,
-                target.MaxHitPoints * 3f,
-                Props.armorPenetration,
-                -1f,
-                parent.pawn,
-                null,
-                null,
-                DamageInfo.SourceCategory.ThingOrUnknown
-            );
-
-            target.TakeDamage(killDamage);
-        }
-
-        private float CalculateDamage(Pawn target)
-        {
-            float damage = Props.baseDamage;
-
-            damage *= target.BodySize;
-
-            damage *= Rand.Range(0.8f, 1.2f);
-
-            return damage;
-        }
-
-        private void ApplyCrushDamage(Pawn target, float totalDamage)
-        {
-            var bodyParts = target.health.hediffSet.GetNotMissingParts().ToList();
-
-            var crushTargets = bodyParts.Where(part =>
-                part.def.tags.Contains(BodyPartTagDefOf.MovingLimbCore) ||
-                part.def.tags.Contains(BodyPartTagDefOf.MovingLimbSegment) ||
-                part.def == BodyPartDefOf.Torso).ToList();
-
-            if (!crushTargets.Any())
-                crushTargets = bodyParts;
-
-            int partsToHit = Mathf.Min(3, crushTargets.Count);
-            float damagePerPart = totalDamage / partsToHit;
-
-            for (int i = 0; i < partsToHit; i++)
+            for (int i = 0; i < hitCount; i++)
             {
-                BodyPartRecord part = crushTargets.RandomElement();
-
-                DamageInfo dinfo = new DamageInfo(
-                    CelestialDefof.TwistDamage,
-                    damagePerPart,
-                    Props.armorPenetration,
-                    -1f,
-                    parent.pawn,
-                    part,
-                    null,
-                    DamageInfo.SourceCategory.ThingOrUnknown
-                );
-
+                var part = parts.RandomElement();
+                var dinfo = new DamageInfo(CelestialDefof.TwistDamage, damagePerHit,
+                    Props.armorPenetration, -1f, parent.pawn, part);
                 target.TakeDamage(dinfo);
             }
-        }
 
-        private void ApplyStunEffect(Pawn target)
-        {
-            if (Props.stunChance <= 0f || target.Dead) return;
-
-            if (Rand.Range(0f, 1f) <= Props.stunChance)
+            
+            if (Props.stunChance > 0f && Rand.Chance(Props.stunChance) && !target.Dead)
             {
-                HediffDef stunHediff = HediffDefOf.Anesthetic; 
-                Hediff stun = HediffMaker.MakeHediff(stunHediff, target);
-                stun.Severity = Props.stunDuration / 10f; 
+                var stun = HediffMaker.MakeHediff(HediffDefOf.Anesthetic, target);
+                stun.Severity = Props.stunDuration / 10f;
                 target.health.AddHediff(stun);
-
                 Messages.Message($"{target.LabelShort} is stunned by the crushing force!",
                     target, MessageTypeDefOf.NeutralEvent);
             }
-        }
 
-        private void ApplyKnockdownEffect(Pawn target)
-        {
-            if (Props.knockdownChance <= 0f || target.Dead || target.Downed) return;
-
-            if (Rand.Range(0f, 1f) <= Props.knockdownChance)
+            if (Props.knockdownChance > 0f && Rand.Chance(Props.knockdownChance) &&
+                !target.Dead && !target.Downed)
             {
-                target.stances.stunner.StunFor(Props.stunDuration * 60, parent.pawn); // Convert to ticks
-
+                target.stances.stunner.StunFor(Props.stunDuration * 60, parent.pawn);
                 Messages.Message($"{target.LabelShort} is knocked down by gravitational force!",
                     target, MessageTypeDefOf.NeutralEvent);
             }
         }
 
-        private void ApplyCrushToBuilding(Thing building)
+        private void CrushBuilding(Thing building)
         {
             if (Props.buildingDamage <= 0f) return;
 
-            DamageInfo buildingDamage = new DamageInfo(
-                DamageDefOf.Crush,
-                Props.buildingDamage,
-                Props.armorPenetration,
-                -1f,
-                parent.pawn,
-                null,
-                null,
-                DamageInfo.SourceCategory.ThingOrUnknown
-            );
-
-            building.TakeDamage(buildingDamage);
+            var damage = new DamageInfo(DamageDefOf.Crush, Props.buildingDamage,
+                Props.armorPenetration, -1f, parent.pawn);
+            building.TakeDamage(damage);
 
             if (building.Destroyed)
-            {
                 Messages.Message($"{building.LabelShort} is crushed to rubble!",
                     building, MessageTypeDefOf.NeutralEvent);
-            }
         }
 
-        private void CreateCrushEffects(IntVec3 center, Map map)
+        private void DoVisualEffects(IntVec3 center, Map map)
         {
-            
             for (int i = 0; i < 5; i++)
             {
-                IntVec3 randomCell = center + GenRadial.RadialPattern[Rand.Range(0, GenRadial.RadialPattern.Length)];
+                var randomCell = center + GenRadial.RadialPattern[Rand.Range(0, GenRadial.RadialPattern.Length)];
                 if (randomCell.InBounds(map))
-                {
                     FleckMaker.ThrowDustPuffThick(randomCell.ToVector3(), map, 2f, Color.gray);
-                }
             }
         }
 
-        private void CreateCrater(IntVec3 center, Map map)
+        private void MakeCrater(IntVec3 center, Map map)
         {
-            
-            var craterCells = GenRadial.RadialCellsAround(center, 2f, true);
-
-            foreach (IntVec3 cell in craterCells)
-            {
-                if (cell.InBounds(map))
-                {
-                    FilthMaker.TryMakeFilth(cell, map, ThingDefOf.Filth_RubbleRock, 2);
-                }
-            }
+            var cells = GenRadial.RadialCellsAround(center, 2f, true);
+            foreach (var cell in cells.Where(c => c.InBounds(map)))
+                FilthMaker.TryMakeFilth(cell, map, ThingDefOf.Filth_RubbleRock, 2);
 
             Messages.Message("The gravitational force leaves a crater in the ground!",
                 MessageTypeDefOf.NeutralEvent);
         }
 
-        private void CreateBlackHoleEffects(IntVec3 center, Map map)
+        private void DoBlackHoleStuff(IntVec3 center, Map map)
         {
+            var centerVec = center.ToVector3Shifted();
             for (int i = 0; i < 10; i++)
             {
-                Vector3 centerVec = center.ToVector3Shifted();
-                Vector3 randomOffset = new Vector3(
-                    Rand.Range(-Props.radius, Props.radius),
-                    0f,
-                    Rand.Range(-Props.radius, Props.radius)
-                );
-                Vector3 randomPos = centerVec + randomOffset;
-
-                FleckMaker.ThrowSmoke(randomPos, map, 3f);
-
-                FleckMaker.ThrowFireGlow(randomPos, map, 2f);
+                var offset = new Vector3(Rand.Range(-Props.radius, Props.radius), 0f,
+                    Rand.Range(-Props.radius, Props.radius));
+                var pos = centerVec + offset;
+                FleckMaker.ThrowSmoke(pos, map, 3f);
+                FleckMaker.ThrowFireGlow(pos, map, 2f);
             }
 
-            ApplyBlackHolePull(center, map);
-        }
-
-        private void ApplyBlackHolePull(IntVec3 center, Map map)
-        {
-            var affectedCells = GenRadial.RadialCellsAround(center, Props.radius, true);
-
-            foreach (IntVec3 cell in affectedCells)
+            
+            var cells = GenRadial.RadialCellsAround(center, Props.radius, true);
+            foreach (var cell in cells.Where(c => c.InBounds(map)))
             {
-                if (!cell.InBounds(map)) continue;
+                var items = cell.GetThingList(map).Where(t => t.def.category == ThingCategory.Item &&
+                    t.stackCount < 10).ToList();
 
-                var items = cell.GetThingList(map).Where(t => t.def.category == ThingCategory.Item).ToList();
-
-                foreach (Thing item in items)
+                foreach (var item in items)
                 {
-                    if (item.stackCount < 10) 
-                    {
-                        IntVec3 direction = center - cell;
-                        IntVec3 pullTarget = cell + direction / 2; 
-                        if (pullTarget.InBounds(map) && pullTarget.Standable(map))
-                        {
-                            item.Position = pullTarget;
-                        }
-                    }
+                    var direction = center - cell;
+                    var pullTarget = cell + direction / 2;
+                    if (pullTarget.InBounds(map) && pullTarget.Standable(map))
+                        item.Position = pullTarget;
                 }
             }
         }
@@ -322,22 +201,20 @@ namespace AnimeArsenal
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
             if (!base.Valid(target, throwMessages)) return false;
-
             if (target.IsValid) return true;
 
             if (throwMessages)
                 Messages.Message("Must target a valid location", MessageTypeDefOf.RejectInput);
-
             return false;
         }
 
         public static void TwistTargetLimb(Pawn Target, Pawn Caster, float BaseDamage, float Scale)
         {
-            BodyPartRecord targetLimb = AnimeArsenalUtility.GetRandomLimb(Target);
-            if (targetLimb != null)
+            var limb = AnimeArsenalUtility.GetRandomLimb(Target);
+            if (limb != null)
             {
-                float damage = BaseDamage * Scale;
-                DamageInfo dinfo = new DamageInfo(CelestialDefof.TwistDamage, damage, 1f, -1f, Caster, targetLimb);
+                var damage = BaseDamage * Scale;
+                var dinfo = new DamageInfo(CelestialDefof.TwistDamage, damage, 1f, -1f, Caster, limb);
                 Target.TakeDamage(dinfo);
             }
         }

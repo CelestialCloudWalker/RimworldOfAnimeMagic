@@ -23,7 +23,6 @@ namespace AnimeArsenal
 
         protected override void RunInt()
         {
-            Slate slate = QuestGen.slate;
             QuestGen.quest.AddPart(new QuestPart_GetFlexibleRewards
             {
                 inSignalEnable = QuestGenUtility.HardcodedSignalWithQuestID("ColonistsReturned"),
@@ -51,113 +50,80 @@ namespace AnimeArsenal
             if (signal.tag == inSignalEnable && quest?.PartsListForReading != null)
             {
                 var lendPart = quest.PartsListForReading.OfType<QuestPart_LendColonistsToFaction>().FirstOrDefault();
-                if (lendPart?.LentColonistsListForReading != null)
+                if (lendPart?.LentColonistsListForReading == null) return;
+
+                List<Pawn> survivors = new List<Pawn>();
+                List<Pawn> casualties = new List<Pawn>();
+                var originalPawns = lendPart.LentColonistsListForReading.ToList();
+
+                foreach (Pawn pawn in originalPawns)
                 {
-                    List<Pawn> survivors = new List<Pawn>();
-                    List<Pawn> casualties = new List<Pawn>();
-
-                    var originalPawns = lendPart.LentColonistsListForReading.ToList();
-
-                    foreach (Pawn pawn in originalPawns)
+                    if (SurvivesTrialRoll(pawn))
                     {
-                        if (SurvivesTrialRoll(pawn))
-                        {
-                            survivors.Add(pawn);
-                            TryGiveFlexibleReward(pawn);
-                        }
-                        else
-                        {
-                            casualties.Add(pawn);
-                        }
-                    }
-
-                    foreach (Pawn casualty in casualties)
-                    {
-                        HandleCasualtyDestruction(casualty);
-
-                        string deathMessage = !string.IsNullOrEmpty(customDeathMessage)
-                            ? customDeathMessage.Replace("{PAWN}", casualty.LabelShort)
-                            : $"{casualty.LabelShort} did not survive the trial.";
-
-                        Messages.Message(deathMessage, MessageTypeDefOf.PawnDeath, false);
-                    }
-
-                    lendPart.LentColonistsListForReading.Clear();
-                    if (survivors.Any())
-                    {
-                        lendPart.LentColonistsListForReading.AddRange(survivors);
-
-                        string survivorNames = survivors.Count == 1 ? survivors[0].LabelShort :
-                                             string.Join(", ", survivors.Take(survivors.Count - 1).Select(p => p.LabelShort)) +
-                                             " and " + survivors.Last().LabelShort;
-
-                        string survivalMessage = !string.IsNullOrEmpty(customSurvivalMessage)
-                            ? customSurvivalMessage.Replace("{PAWNS}", survivorNames)
-                            : $"{survivorNames} survived the trial!";
-
-                        Messages.Message(survivalMessage, MessageTypeDefOf.PositiveEvent, false);
+                        survivors.Add(pawn);
+                        TryGiveFlexibleReward(pawn);
                     }
                     else
                     {
-                        Messages.Message("No one survived the trial.", MessageTypeDefOf.ThreatBig, false);
+                        casualties.Add(pawn);
                     }
+                }
+
+                foreach (Pawn casualty in casualties)
+                {
+                    HandleCasualtyDestruction(casualty);
+                    string deathMessage = !string.IsNullOrEmpty(customDeathMessage)
+                        ? customDeathMessage.Replace("{PAWN}", casualty.LabelShort)
+                        : $"{casualty.LabelShort} did not survive the trial.";
+                    Messages.Message(deathMessage, MessageTypeDefOf.PawnDeath, false);
+                }
+
+                lendPart.LentColonistsListForReading.Clear();
+                if (survivors.Any())
+                {
+                    lendPart.LentColonistsListForReading.AddRange(survivors);
+                    string survivorNames = survivors.Count == 1 ? survivors[0].LabelShort :
+                                         string.Join(", ", survivors.Take(survivors.Count - 1).Select(p => p.LabelShort)) +
+                                         " and " + survivors.Last().LabelShort;
+
+                    string survivalMessage = !string.IsNullOrEmpty(customSurvivalMessage)
+                        ? customSurvivalMessage.Replace("{PAWNS}", survivorNames)
+                        : $"{survivorNames} survived the trial!";
+                    Messages.Message(survivalMessage, MessageTypeDefOf.PositiveEvent, false);
+                }
+                else
+                {
+                    Messages.Message("No one survived the trial.", MessageTypeDefOf.ThreatBig, false);
                 }
             }
         }
 
         private void HandleCasualtyDestruction(Pawn casualty)
         {
-            try
+            if (casualty == null || casualty.Destroyed) return;
+
+            if (Find.WorldPawns.Contains(casualty))
+                Find.WorldPawns.RemovePawn(casualty);
+
+            if (!casualty.Dead)
+                casualty.Kill(new DamageInfo(DamageDefOf.Deterioration, 9999f, 999f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
+
+            if (casualty.Corpse != null && !casualty.Corpse.Destroyed)
             {
-                if (casualty == null || casualty.Destroyed)
-                {
-                    return;
-                }
-
-                if (Find.WorldPawns.Contains(casualty))
-                {
-                    Find.WorldPawns.RemovePawn(casualty);
-                }
-
-                if (!casualty.Dead)
-                {
-                    casualty.Kill(new DamageInfo(DamageDefOf.Deterioration, 9999f, 999f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
-                }
-
-                if (casualty.Corpse != null && !casualty.Corpse.Destroyed)
-                {
-                    if (casualty.Corpse.Spawned)
-                    {
-                        casualty.Corpse.DeSpawn(DestroyMode.Vanish);
-                    }
-
-                    casualty.Corpse.Destroy(DestroyMode.Vanish);
-                }
-
-                if (casualty.Faction != null)
-                {
-                    casualty.SetFaction(null);
-                }
-
-                if (Find.ColonistBar.GetColonistsInOrder().Contains(casualty))
-                {
-                    Find.ColonistBar.MarkColonistsDirty();
-                }
-
-                Log.Message($"Successfully processed casualty: {casualty.LabelShort}");
+                if (casualty.Corpse.Spawned)
+                    casualty.Corpse.DeSpawn(DestroyMode.Vanish);
+                casualty.Corpse.Destroy(DestroyMode.Vanish);
             }
-            catch (Exception ex)
-            {
-                Log.Error($"Error processing casualty {casualty?.LabelShort}: {ex}");
-            }
+
+            casualty.SetFaction(null);
+
+            if (Find.ColonistBar.GetColonistsInOrder().Contains(casualty))
+                Find.ColonistBar.MarkColonistsDirty();
         }
 
         private bool SurvivesTrialRoll(Pawn pawn)
         {
-            if (survivalSettings == null)
-            {
-                return Rand.Chance(0.7f);
-            }
+            if (survivalSettings == null) return Rand.Chance(0.7f);
 
             float survivalChance = survivalSettings.baseSurvivalChance;
 
@@ -166,9 +132,7 @@ namespace AnimeArsenal
                 foreach (var skillBonus in survivalSettings.skillBonuses)
                 {
                     if (pawn.skills.GetSkill(skillBonus.skillDef).Level >= skillBonus.minimumLevel)
-                    {
                         survivalChance += skillBonus.bonus;
-                    }
                 }
             }
 
@@ -177,21 +141,17 @@ namespace AnimeArsenal
                 foreach (var traitModifier in survivalSettings.traitModifiers)
                 {
                     if (pawn.story.traits.HasTrait(traitModifier.traitDef))
-                    {
                         survivalChance += traitModifier.modifier;
-                    }
                 }
             }
 
             survivalChance = Mathf.Clamp(survivalChance, survivalSettings.minimumSurvivalChance, survivalSettings.maximumSurvivalChance);
-
             return Rand.Chance(survivalChance);
         }
 
         private void TryGiveFlexibleReward(Pawn pawn)
         {
-            if (flexibleRewards == null || !flexibleRewards.Any())
-                return;
+            if (flexibleRewards == null || !flexibleRewards.Any()) return;
 
             var availableRewards = GetAvailableFlexibleRewards(pawn);
             if (!availableRewards.Any())
@@ -226,17 +186,13 @@ namespace AnimeArsenal
                 if (reward.rewardType == FlexibleRewardType.Gene && reward.geneDef != null)
                 {
                     if (pawn.genes != null && pawn.genes.HasActiveGene(reward.geneDef))
-                    {
                         canGive = false;
-                    }
                 }
 
                 if (reward.rewardType == FlexibleRewardType.Trait && reward.traitDef != null)
                 {
                     if (pawn.story?.traits != null && pawn.story.traits.HasTrait(reward.traitDef))
-                    {
                         canGive = false;
-                    }
                 }
 
                 if (canGive && reward.requirements != null && reward.requirements.Any())
@@ -251,10 +207,7 @@ namespace AnimeArsenal
                     }
                 }
 
-                if (canGive)
-                {
-                    available.Add(reward);
-                }
+                if (canGive) available.Add(reward);
             }
 
             return available;
@@ -266,19 +219,14 @@ namespace AnimeArsenal
             {
                 case FlexibleRequirementType.HasGene:
                     return pawn.genes != null && pawn.genes.HasActiveGene(requirement.geneDef);
-
                 case FlexibleRequirementType.HasTrait:
                     return pawn.story?.traits != null && pawn.story.traits.HasTrait(requirement.traitDef);
-
                 case FlexibleRequirementType.SkillLevel:
                     return pawn.skills.GetSkill(requirement.skillDef).Level >= requirement.minimumValue;
-
                 case FlexibleRequirementType.DoesNotHaveGene:
                     return pawn.genes == null || !pawn.genes.HasActiveGene(requirement.geneDef);
-
                 case FlexibleRequirementType.DoesNotHaveTrait:
                     return pawn.story?.traits == null || !pawn.story.traits.HasTrait(requirement.traitDef);
-
                 default:
                     return true;
             }
@@ -299,20 +247,15 @@ namespace AnimeArsenal
                             : $"{pawn.LabelShort} gained the {reward.geneDef.label} gene!";
                     }
                     break;
-
                 case FlexibleRewardType.Trait:
                     if (pawn.story?.traits != null && reward.traitDef != null)
                     {
                         int degreeToUse = reward.traitDegree;
-
                         if (reward.traitDef.degreeDatas != null && reward.traitDef.degreeDatas.Any())
                         {
                             var availableDegrees = reward.traitDef.degreeDatas.Select(d => d.degree).ToList();
                             if (!availableDegrees.Contains(degreeToUse))
-                            {
                                 degreeToUse = availableDegrees.First();
-                                Log.Message($"Trait {reward.traitDef.defName} doesn't have degree {reward.traitDegree}, using degree {degreeToUse} instead.");
-                            }
                         }
 
                         pawn.story.traits.GainTrait(new Trait(reward.traitDef, degreeToUse));
@@ -324,9 +267,7 @@ namespace AnimeArsenal
             }
 
             if (!string.IsNullOrEmpty(rewardMessage))
-            {
                 Messages.Message(rewardMessage, MessageTypeDefOf.PositiveEvent);
-            }
         }
 
         public override void ExposeData()

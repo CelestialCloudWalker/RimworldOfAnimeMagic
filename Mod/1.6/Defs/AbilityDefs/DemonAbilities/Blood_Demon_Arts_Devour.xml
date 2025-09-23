@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Devour</defName>
     <label>Blood Demon Art: Devour</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Devour a target to heal wounds and restore blood demon arts energy. Can target corpses or living enemies. Gains experience with each use and becomes more powerful.</description>
+    <description>A blood demon art that feeds on a target to regen.</description>
     <iconPath>UI/Abilities/DemonEatAbilityIcon</iconPath>
     <cooldownTicksRange>3600</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -51,7 +51,7 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic consumption ability that restores health and energy from fallen enemies.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>1.0</cooldownMultiplier>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
@@ -76,7 +76,7 @@
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>Enhanced consumption that provides greater healing and can drain life from living targets.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.9</cooldownMultiplier>
         <resourceCostMultiplier>0.95</resourceCostMultiplier>
@@ -101,7 +101,7 @@
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>Advanced consumption technique that can affect multiple targets and provides significant regeneration.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.8</cooldownMultiplier>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
@@ -126,7 +126,7 @@
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>Ultimate consumption mastery - can devour multiple enemies at once with devastating life drain and massive regeneration.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.7</cooldownMultiplier>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
@@ -159,7 +159,7 @@
     <stages>
       <li>
         <label>consumed flesh</label>
-        <description>I devoured another being. The power flows through me.</description>
+        <description>I devoured another being.</description>
         <baseMoodEffect>5</baseMoodEffect>
         <baseOpinionOffset>0</baseOpinionOffset>
       </li>
@@ -174,8 +174,8 @@
     <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
     <stages>
       <li>
-        <label>witnessed demon consumption</label>
-        <description>I saw someone devour another person like a monster. It was horrifying.</description>
+        <label>witnessed demon eating a person</label>
+        <description>I saw someone devour another person like a demon. It was horrifying.</description>
         <baseMoodEffect>-15</baseMoodEffect>
         <baseOpinionOffset>-20</baseOpinionOffset>
       </li>
@@ -185,7 +185,7 @@
   <HediffDef>
     <defName>DemonBloodlust</defName>
     <label>demon bloodlust</label>
-    <description>The taste of flesh has awakened a demonic hunger.</description>
+    <description>The taste of flesh has awakened a hunger.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
     <isBad>false</isBad>
@@ -238,7 +238,7 @@
   <HediffDef>
     <defName>DemonDrain</defName>
     <label>demon drain</label>
-    <description>Life force is being drained by demonic consumption.</description>
+    <description>Drained.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.5, 0.1, 0.1)</defaultLabelColor>
     <isBad>true</isBad>

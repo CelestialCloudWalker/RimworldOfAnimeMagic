@@ -75,10 +75,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BreathingPotentialGene.cs" />
+    <Compile Include="BreathingPotentialGeneDef.cs" />
     <Compile Include="CompAbilityStealBite.cs" />
     <Compile Include="CompProperties_AbilityGasSpray.cs" />
+    <Compile Include="DemonSlayerNames.cs" />
     <Compile Include="GeneEffect.cs" />
     <Compile Include="GeneEffectDef.cs" />
+    <Compile Include="HediffCompProperties_SelflessState.cs" />
+    <Compile Include="HediffComp_TransparentWorld.cs" />
     <Compile Include="IncidentWorker_RaidNightOnly.cs" />
     <Compile Include="Misc\AMConstants.cs" />
     <Compile Include="AnimeArsenalUtility.cs" />
@@ -95,7 +100,6 @@
     <Compile Include="Comps\HediffCompProperties_Overlay.cs" />
     <Compile Include="Misc\DeathTimerExtension.cs" />
     <Compile Include="Misc\DemonConsumeandHeal.cs" />
-    <Compile Include="Misc\DemonSlayerWeaponComp.cs" />
     <Compile Include="Misc\DrawOffsetExt.cs" />
     <Compile Include="Misc\EmosGraphic_MoteWithAgeSecsCustom.cs" />
     <Compile Include="Misc\GeneDamageModExtension.cs" />

@@ -4,7 +4,7 @@
     <defName>Thunder_Breathing_Disperse</defName>
     <label>Thunder Breathing: Disperse</label>
     <category>ThunderBreathing_Ability_Catergory</category>
-    <description>A powerful Thunder Breathing technique that creates a dispersing wave of cutting energy, slicing through multiple enemies in a wide radius.</description>
+    <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -45,15 +45,15 @@
 
     <levels>
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic Erelongy of the Thunder Breathing: Disperse technique. Creates a moderate cutting wave.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>Improved technique with greater range and power. The dispersing wave cuts deeper.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -75,7 +75,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>Mirage-level technique with significantly enhanced range and damage. The wave disperses with deadly precision.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -98,7 +98,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>800</experienceRequired>
-        <description>Erelong-level Thunder Breathing technique. Creates a devastating dispersing wave that cuts through enemies with lightning-like speed and precision.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>2.2</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

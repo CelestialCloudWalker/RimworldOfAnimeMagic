@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>FlowingCombat</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>

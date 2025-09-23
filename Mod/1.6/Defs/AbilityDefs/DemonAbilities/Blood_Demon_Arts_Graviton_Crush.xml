@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Graviton_Crush</defName>
     <label>Blood Demon Arts: Graviton Crush</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Causes an overwhelming gravitational force to bear down on pawns in the target area, dealing crushing damage. Power and area increase with mastery.</description>
+    <description>A blood demon art that alters gravity to crush targets</description>
     <iconPath>UI/Abilities/CrushAbilityIcon</iconPath>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <displayOrder>10</displayOrder>
@@ -57,7 +57,7 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic gravitational crush that affects a small area with moderate force.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>1.0</cooldownMultiplier>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
@@ -84,7 +84,7 @@
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>Enhanced gravitational force with increased damage and larger area of effect.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.9</cooldownMultiplier>
         <resourceCostMultiplier>0.95</resourceCostMultiplier>
@@ -111,7 +111,7 @@
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>Devastating gravitational collapse that can crush buildings and heavily armored targets.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.8</cooldownMultiplier>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
@@ -138,7 +138,7 @@
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>450</experienceRequired>
-        <description>Ultimate gravitational mastery - creates a localized black hole effect that devastates everything in a massive area.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <cooldownMultiplier>0.7</cooldownMultiplier>
         <resourceCostMultiplier>0.85</resourceCostMultiplier>

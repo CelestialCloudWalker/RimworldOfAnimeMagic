@@ -5,7 +5,7 @@
 		<defName>AA_DemonChild</defName>
 		<title>demon child</title>
 		<titleShort>demon child</titleShort>
-		<baseDesc>A child that surived being turned into demon.</baseDesc>
+		<baseDesc>[PAWN_nameDef] surived being turned into demon as a child.</baseDesc>
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>AA_DemonRace</li>
@@ -20,47 +20,17 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AA_DemonWild</defName>
-		<title>wild demon</title>
-		<titleShort>wild demon</titleShort>
-		<baseDesc>A Demon who was unable to control their hunger and now only exist to feed.</baseDesc>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>AA_DemonRace</li>
-		</spawnCategories>
-		<skillGains>
-			<Melee>3</Melee>
-			<Shooting>2</Shooting>
-			<Construction>4</Construction>
-			<Mining>3</Mining>
-			<Cooking>2</Cooking>
-			<Plants>2</Plants>
-		</skillGains>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AA_DemonFletchling</defName>
-		<title>fletchling demon</title>
-		<titleShort>fletchlig demon</titleShort>
-		<baseDesc>A freshly turned demon that seeks pawns to feast upon for its first mealA freshly turned demon that seeks pawns to feast upon for its first meal.</baseDesc>
-		<slot>Adulthood</slot>
+		<defName>DemonChildhoodStory</defName>
+		<title>demon child</title>
+		<titleShort>demon child</titleShort>
+		<baseDesc>[PAWN_nameDef] surived being turned into demon as a child.</baseDesc>
+		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>AA_DemonRace</li>
 		</spawnCategories>
 		<skillGains>
 			<Melee>4</Melee>
-			<Shooting>3</Shooting>
-			<Construction>4</Construction>
-			<Mining>2</Mining>
-			<Cooking>1</Cooking>
-			<Plants>4</Plants>
-			<Artistic>2</Artistic>
-			<Medicine>6</Medicine>
-			<Social>4</Social>
-			<Intellectual>4</Intellectual>
+			<Shooting>1</Shooting>
 		</skillGains>
 		<requiredWorkTags>
 			<li>Violent</li>
@@ -68,99 +38,98 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AA_Demon_Demon</defName>
+		<defName>RK_Lower_Moon_Demon</defName>
+		<title>Lower Moon</title>
+		<titleShort>Lower Moon</titleShort>
+		<baseDesc>[PAWN_nameDef] holds a position among the Lower Moons, dangerous but replaceable within the Demon's hierarchy.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>RimKetsu</li>
+			<li>Demons</li>
+		</spawnCategories>
+		<skillGains>
+			<Construction>3</Construction>
+			<Melee>6</Melee>
+		</skillGains>
+		<workDisables>
+			<li>Social</li>
+			<li>Caring</li>
+			<li>PlantWork</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<forcedTraits>
+			<Tough>0</Tough>
+			<Bloodlust>0</Bloodlust>
+		</forcedTraits>
+		<disallowedTraits>
+			<Wimp>0</Wimp>
+			<Kind>0</Kind>
+		</disallowedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RK_Upper_Moon_Demon</defName>
+		<title>Upper Moon</title>
+		<titleShort>Upper Moon</titleShort>
+		<baseDesc>[PAWN_nameDef] holds a seat among the Upper Moons, commanding strength and authority unmatched by most demons.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>RimKetsu</li>
+			<li>Demons</li>
+		</spawnCategories>
+		<skillGains>
+			<Construction>3</Construction>
+			<Melee>8</Melee>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+		<workDisables>
+			<li>Social</li>
+			<li>Caring</li>
+			<li>PlantWork</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<forcedTraits>
+			<Tough>0</Tough>
+			<Bloodlust>0</Bloodlust>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
+		<disallowedTraits>
+			<Wimp>0</Wimp>
+			<Kind>0</Kind>
+		</disallowedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RK_Demon</defName>
 		<title>Demon</title>
 		<titleShort>Demon</titleShort>
-		<baseDesc>Demons are just trying to make a name for Themselves. These Demons have just begun what they believe is their journey to the top and will do whatever they think will get them there.</baseDesc>
+		<baseDesc>[PAWN_nameDef] is a demon, a predator that hunts humans for sustenance.</baseDesc>
 		<slot>Adulthood</slot>
 		<spawnCategories>
-			<li>AA_DemonRace</li>
+			<li>RimKetsu</li>
+			<li>Demons</li>
 		</spawnCategories>
 		<skillGains>
-			<Melee>2</Melee>
-			<Shooting>2</Shooting>
-			<Social>-1</Social>
+			<Construction>3</Construction>
+			<Melee>8</Melee>
 		</skillGains>
 		<workDisables>
-			<li>ManualDumb</li>
-		</workDisables>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AA_DemonLowerRankKizuki</defName>
-		<title>lower rank kizuki</title>
-		<titleShort>lower rank</titleShort>
-		<baseDesc>Lower Rank Kizuki Demons have tasted the start of what their true power can be, at this point, they start to specialize into what kind of demon they will be.</baseDesc>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>AA_DemonRace</li>
-		</spawnCategories>
-		<skillGains>
-			<Melee>5</Melee>
-			<Shooting>4</Shooting>
-			<Social>-1</Social>
-		</skillGains>
-		<workDisables>
-			<li>ManualDumb</li>
-		</workDisables>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-		<forcedTraitsChance>
-			<li>
-				<defName>Abrasive</defName>
-				<chance>100</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AA_DemonAugmented</defName>
-		<title>Augmented Demon</title>
-		<titleShort>Augmented Demon</titleShort>
-		<baseDesc>These demons are the Lower Kizuki who fail to handle their increased power.</baseDesc>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>AA_DemonRace</li>
-		</spawnCategories>
-		<skillGains>
-			<Melee>4</Melee>
-			<Shooting>4</Shooting>
-			<Intellectual>-2</Intellectual>
-		</skillGains>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AA_DemonUpperRankKizuki</defName>
-		<title>lower rank kizuki</title>
-		<titleShort>lower rank kizuki</titleShort>
-		<baseDesc>An immensely powerful Demon. Due to his power he sees others as weak or useless.</baseDesc>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>AA_DemonRace</li>
-		</spawnCategories>
-		<skillGains>
-			<Melee>9</Melee>
-			<Shooting>9</Shooting>
-			<Intellectual>9</Intellectual>
-		</skillGains>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-		<workDisables>
+			<li>Social</li>
 			<li>Caring</li>
+			<li>PlantWork</li>
 		</workDisables>
-		<forcedTraitsChance>
-			<li>
-				<defName>Bloodlust</defName>
-				<chance>100</chance>
-			</li>
-		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<forcedTraits>
+			<Tough>0</Tough>
+		</forcedTraits>
+		<disallowedTraits>
+			<Wimp>0</Wimp>
+		</disallowedTraits>
 	</AlienRace.AlienBackstoryDef>
 </Defs>

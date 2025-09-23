@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>CompoundEyes</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Shooting</li>
     </forcedPassions>
@@ -53,7 +53,7 @@
 
   <TraitDef>
     <defName>HiveMind</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
     </forcedPassions>
@@ -129,7 +129,7 @@
 
   <TraitDef>
     <defName>InsectoidDigestion</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>insectoid digestion</label>

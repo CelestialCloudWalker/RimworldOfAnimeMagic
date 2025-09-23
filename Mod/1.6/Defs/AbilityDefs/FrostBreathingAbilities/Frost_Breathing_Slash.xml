@@ -4,7 +4,7 @@
     <defName>Frost_Breathing_Slash</defName>
     <label>Beast Breathing: Slash</label>
     <category>FrostBreathing_Ability_Catergory</category>
-    <description>The user delivers a diagonal slash with its sword, launching an icy projectile attack. Gains experience with each use and becomes more powerful.</description>
+    <description>A ranged technique that sends a slash toward targets.</description>
     <iconPath>UI/Abilities/AbilityProjectile</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -40,16 +40,16 @@
     <levels>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic diagonal slash that launches an icy projectile.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
       </li>
 
 
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>An improved slash with enhanced projectile speed and freezing power.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.1</resourceCostMultiplier>
         <rangeMultiplier>1.2</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -64,7 +64,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>A devastating slash that launches multiple ice shards in a spread pattern.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.3</rangeMultiplier>
         <cooldownMultiplier>0.85</cooldownMultiplier>
@@ -79,7 +79,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>The ultimate winter's piercing shard - launches a barrage of devastating ice shards with maximum freezing power.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.6</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

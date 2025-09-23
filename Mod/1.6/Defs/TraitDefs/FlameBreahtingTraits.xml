@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>InnerFire</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Cooking</li>
     </forcedPassions>
@@ -29,7 +29,7 @@
 
   <TraitDef>
     <defName>BurningPassion</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Crafting</li>
       <li>Artistic</li>
@@ -53,7 +53,7 @@
 
   <TraitDef>
     <defName>ForgeMaster</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Crafting</li>
       <li>Construction</li>
@@ -80,7 +80,7 @@
 
   <TraitDef>
     <defName>BlazingSpirit</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
     </forcedPassions>

@@ -4,7 +4,7 @@
     <defName>Flower_Breathing_Disperse</defName>
     <label>Flower Breathing: Disperse</label>
     <category>FlowerBreathing_Ability_Catergory</category>
-    <description>The user releases a devastating shower of razor-sharp petals that slice through all enemies in a wide radius around them. The graceful yet deadly power of the flower breathing technique cuts through anything nearby. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -50,14 +50,14 @@
       <li>
         <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic area attack that surrounds enemies with cutting petals dealing moderate slashing damage.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
 
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>An improved rampage with wider petal spread and increased cutting damage per target.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -80,7 +80,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>A devastating rampage with extended radius and brutal petal slashes that can slice through armor with elegant precision.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -104,7 +104,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>800</experienceRequired>
-        <description>The ultimate petal storm rampage - maximum area coverage with devastating slashing damage that can shred buildings and elegantly cut down any enemy in a beautiful dance of destruction.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.6</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

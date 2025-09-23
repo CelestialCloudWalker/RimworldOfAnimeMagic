@@ -4,7 +4,7 @@
     <defName>Water_Breathing_Disperse</defName>
     <label>Water Breathing: Disperse</label>
     <category>WaterBreathing_Ability_Catergory</category>
-    <description>The user unleashes a devastating tidal wave that crashes into all enemies in a wide radius around them. The overwhelming water pressure tears through anything nearby with crushing force. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <iconPath>UI/Abilities/AbilityDash</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -49,16 +49,16 @@
     <levels>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic tidal wave that damages nearby enemies with moderate water pressure damage.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
 
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>An improved tidal rampage with wider reach and increased water pressure per target.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -82,7 +82,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>A devastating tidal rampage with extended radius and crushing water pressure that can penetrate heavy armor.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -107,7 +107,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>800</experienceRequired>
-        <description>The ultimate tidal rampage - maximum area coverage with devastating water pressure that can flood battlefields and crush any enemy with overwhelming force.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.6</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

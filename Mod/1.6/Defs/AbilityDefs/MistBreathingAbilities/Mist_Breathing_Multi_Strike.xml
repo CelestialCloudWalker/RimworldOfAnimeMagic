@@ -4,7 +4,7 @@
     <defName>Mist_Breathing_Multi_Strike</defName>
     <label>Mist Breathing: Multi Strike</label>
     <category>MistBreathing_Ability_Catergory</category>
-    <description>The user vanishes in a blitz of dashes through misty clouds, automatically targeting nearby enemies with each jump. Gains experience with each use and becomes more powerful.</description>
+    <description>An offensive technique using quick dashes to strike multiple enemies.</description>
     <iconPath>UI/Abilities/AbilityMultiDash</iconPath>
     <cooldownTicksRange>600</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -47,14 +47,14 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic multi-dash attack through misty clouds that targets nearby enemies with moderate damage.</description>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
       </li>
 
 
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>200</experienceRequired>
-        <description>An improved dash through denser mist with more jumps and increased damage per strike.</description>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
         <resourceCostMultiplier>1.1</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -75,7 +75,7 @@
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>450</experienceRequired>
-        <description>A devastating dash through an expanding sea of haze with extended range, more jumps, and faster execution between strikes.</description>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
         <resourceCostMultiplier>1.25</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -97,7 +97,7 @@
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>750</experienceRequired>
-        <description>The ultimate sea of clouds and haze - maximum jumps, devastating damage, and lightning-fast execution through an ocean of disorienting mist.</description>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

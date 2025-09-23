@@ -5,7 +5,7 @@
     <label>Forest Breath</label>
     <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Forest Breath</resourceName>
-    <description>Forest Breathing is a combat style that channels the force of the natural world through fluid, elemental movements.</description>
+    <description>Forest Breathing Gene.</description>
     <iconPath>UI/Icons/Genes/forest</iconPath>
     <resourceLabel>Forest Breath</resourceLabel>
     <resourceDescription>Current stored Breath.</resourceDescription>

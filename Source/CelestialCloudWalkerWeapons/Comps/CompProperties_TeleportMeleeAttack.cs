@@ -1,7 +1,6 @@
 ﻿using RimWorld;
 using Verse;
 using System.Collections.Generic;
-using System;
 using Verse.AI;
 
 namespace AnimeArsenal
@@ -26,190 +25,133 @@ namespace AnimeArsenal
 
     public class CompAbilityEffect_TeleportMeleeAttack : CompAbilityEffect
     {
-        private Thing TargetThing;
-        private bool effecterPlayed = false;
-        private bool damageApplied = false;
+        private Thing target;
+        private bool impactPlayed = false;
 
         private new CompProperties_TeleportMeleeAttack Props => (CompProperties_TeleportMeleeAttack)props;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            if (!target.HasThing || target.Thing == null || target.Thing.Map == null || parent?.pawn == null)
-            {
-                Log.Warning("TeleportMeleeAttack - Invalid target or state");
-                return;
-            }
 
-            effecterPlayed = false;
-            damageApplied = false;
+            if (!target.HasThing || parent?.pawn == null) return;
 
-            if (Props.casterEffecter != null)
-            {
-                Effecter effecter = Props.casterEffecter.Spawn();
-                effecter.Trigger(new TargetInfo(parent.pawn.Position, parent.pawn.Map), new TargetInfo(parent.pawn.Position, parent.pawn.Map));
-                effecter.Cleanup();
-            }
+            this.target = target.Thing;
+            impactPlayed = false;
 
-            TargetThing = target.Thing;
-            IntVec3 destination = TargetThing.Position;
-
-            ExecuteTeleport(destination);
+            SpawnCasterEffect();
+            StartTeleport();
         }
 
-        private void ExecuteTeleport(IntVec3 destination)
+        private void SpawnCasterEffect()
         {
-            if (TargetThing == null || parent?.pawn == null || TargetThing.Map == null)
-            {
-                return;
-            }
-            try
-            {
-                PawnFlyer pawnFlyer = PawnFlyer.MakeFlyer(CelestialDefof.AnimeArsenal_TPStrikeFlyer, parent.pawn, destination, null, null);
-                if (pawnFlyer != null)
-                {
-                    DelegateFlyer flyer = GenSpawn.Spawn(pawnFlyer, destination, TargetThing.Map) as DelegateFlyer;
-                    if (flyer != null)
-                    {
-                        flyer.OnRespawnPawn += Flyer_OnRespawnPawn;
-                    }
-                }
-            }
-            catch (System.Exception ex)
-            {
-                Log.Error($"TeleportMeleeAttack - Error during teleport: {ex}");
-            }
+            if (Props.casterEffecter == null) return;
+
+            var effecter = Props.casterEffecter.Spawn();
+            var casterInfo = new TargetInfo(parent.pawn.Position, parent.pawn.Map);
+            effecter.Trigger(casterInfo, casterInfo);
+            effecter.Cleanup();
+        }
+
+        private void StartTeleport()
+        {
+            var flyer = PawnFlyer.MakeFlyer(CelestialDefof.AnimeArsenal_TPStrikeFlyer, parent.pawn, target.Position, null, null);
+            var spawnedFlyer = GenSpawn.Spawn(flyer, target.Position, target.Map) as DelegateFlyer;
+
+            if (spawnedFlyer != null)
+                spawnedFlyer.OnRespawnPawn += OnTeleportComplete;
         }
 
         public override bool AICanTargetNow(LocalTargetInfo target)
         {
-            return target.HasThing && target.Thing != null;
+            return target.HasThing;
         }
 
-        private void Flyer_OnRespawnPawn(Pawn pawn, PawnFlyer flyer, Map map)
+        private void OnTeleportComplete(Pawn pawn, PawnFlyer flyer, Map map)
         {
-            if (flyer is DelegateFlyer delegateFlyer)
+            if (flyer is DelegateFlyer df) df.OnRespawnPawn -= OnTeleportComplete;
+            if (target?.Map == null) return;
+
+            PositionPawn(map);
+            ApplyDamage();
+        }
+
+        private void PositionPawn(Map map)
+        {
+            var adjacentCell = target.RandomAdjacentCell8Way();
+            if (adjacentCell.InBounds(map) && adjacentCell.Standable(map))
             {
-                delegateFlyer.OnRespawnPawn -= Flyer_OnRespawnPawn;
-            }
-            if (TargetThing == null || parent?.pawn == null || TargetThing.Map == null)
-            {
-                return;
-            }
-
-            if (damageApplied)
-            {
-                Log.Warning("TeleportMeleeAttack - Damage already applied, skipping");
-                return;
-            }
-
-            try
-            {
-                IntVec3 adjacentCell = TargetThing.RandomAdjacentCell8Way();
-                if (adjacentCell.InBounds(map) && adjacentCell.Standable(map))
-                {
-                    parent.pawn.Position = adjacentCell;
-
-                    if (parent.pawn.stances != null)
-                    {
-                        parent.pawn.stances.SetStance(new Stance_Mobile());
-                    }
-
-                    if (Props.effectRadius <= 0f)
-                    {
-                        ApplyDamageToTarget(TargetThing, true);
-                    }
-                    else
-                    {
-                        ApplyAreaDamage(TargetThing.Position, map);
-                    }
-
-                    damageApplied = true;
-                }
-            }
-            catch (System.Exception ex)
-            {
-                Log.Error($"TeleportMeleeAttack - Error during respawn: {ex}");
-
-                try
-                {
-                    if (parent.pawn?.stances != null)
-                    {
-                        parent.pawn.stances.SetStance(new Stance_Mobile());
-                    }
-                }
-                catch {  }
+                parent.pawn.Position = adjacentCell;
+                parent.pawn.stances?.SetStance(new Stance_Mobile());
             }
         }
 
-        private void ApplyDamageToTarget(Thing target, bool playImpactEffecter = false)
+        private void ApplyDamage()
         {
-            if (target == null || damageApplied) return;
+            if (Props.effectRadius <= 0f)
+                DamageTarget(target);
+            else
+                DamageArea();
+        }
 
-            int finalDamage = Props.damageAmount;
-            if (Props.additionalDamageFactorFromMeleeSkill > 0 && parent.pawn != null)
-            {
-                int meleeSkill = parent.pawn.skills?.GetSkill(SkillDefOf.Melee)?.Level ?? 0;
-                finalDamage += (int)(meleeSkill * Props.additionalDamageFactorFromMeleeSkill * Props.damageAmount);
-            }
+        private void DamageTarget(Thing target)
+        {
+            var damage = CalculateDamage();
+            var damageType = Props.damageType ?? DamageDefOf.Cut;
 
-            DamageDef damageToUse = Props.damageType ?? DamageDefOf.Cut;
-
-            DamageInfo dinfo = new DamageInfo(
-                damageToUse,
-                finalDamage,
-                Props.armorPenetration,
-                -1f,
-                parent.pawn,
-                null,
-                null,
-                DamageInfo.SourceCategory.ThingOrUnknown,
-                target);
+            var dinfo = new DamageInfo(damageType, damage, Props.armorPenetration, -1f, parent.pawn, null, null,
+                DamageInfo.SourceCategory.ThingOrUnknown, target);
 
             target.TakeDamage(dinfo);
-
-            if (playImpactEffecter && Props.impactEffecter != null && !effecterPlayed)
-            {
-                Effecter effecter = Props.impactEffecter.Spawn();
-                effecter.Trigger(new TargetInfo(target.Position, target.Map), new TargetInfo(target.Position, target.Map));
-                effecter.Cleanup();
-                effecterPlayed = true;
-            }
-
-            if (Props.stunDuration > 0 && target is Pawn targetPawn)
-            {
-                targetPawn.stances?.stunner?.StunFor(Props.stunDuration, parent.pawn);
-            }
+            PlayImpactEffect(target.Position);
+            ApplyStun(target);
         }
 
-        private void ApplyAreaDamage(IntVec3 center, Map map)
+        private void DamageArea()
         {
-            if (damageApplied) return;
+            var center = target.Position;
+            var map = target.Map;
+            var targets = new List<Thing>();
 
-            List<Thing> affectedThings = new List<Thing>();
-
-            foreach (Thing thing in GenRadial.RadialDistinctThingsAround(center, map, Props.effectRadius, true))
+            foreach (var thing in GenRadial.RadialDistinctThingsAround(center, map, Props.effectRadius, true))
             {
                 if (thing != parent.pawn && (thing is Pawn || thing.def.useHitPoints))
-                {
-                    affectedThings.Add(thing);
-                }
+                    targets.Add(thing);
             }
 
-            bool isFirstTarget = true;
-            foreach (Thing thing in affectedThings)
-            {
-                ApplyDamageToTarget(thing, isFirstTarget);
-                isFirstTarget = false;
-            }
+            foreach (var thing in targets)
+                DamageTarget(thing);
 
-            if (affectedThings.Count == 0 && Props.impactEffecter != null && !effecterPlayed)
+            if (targets.Count == 0)
+                PlayImpactEffect(center);
+        }
+
+        private int CalculateDamage()
+        {
+            var baseDamage = Props.damageAmount;
+            if (Props.additionalDamageFactorFromMeleeSkill > 0)
             {
-                Effecter effecter = Props.impactEffecter.Spawn();
-                effecter.Trigger(new TargetInfo(center, map), new TargetInfo(center, map));
-                effecter.Cleanup();
-                effecterPlayed = true;
+                var meleeLevel = parent.pawn?.skills?.GetSkill(SkillDefOf.Melee)?.Level ?? 0;
+                baseDamage += (int)(meleeLevel * Props.additionalDamageFactorFromMeleeSkill * Props.damageAmount);
             }
+            return baseDamage;
+        }
+
+        private void PlayImpactEffect(IntVec3 position)
+        {
+            if (Props.impactEffecter == null || impactPlayed) return;
+
+            var effecter = Props.impactEffecter.Spawn();
+            var targetInfo = new TargetInfo(position, target.Map);
+            effecter.Trigger(targetInfo, targetInfo);
+            effecter.Cleanup();
+            impactPlayed = true;
+        }
+
+        private void ApplyStun(Thing target)
+        {
+            if (Props.stunDuration > 0 && target is Pawn pawn)
+                pawn.stances?.stunner?.StunFor(Props.stunDuration, parent.pawn);
         }
     }
 }

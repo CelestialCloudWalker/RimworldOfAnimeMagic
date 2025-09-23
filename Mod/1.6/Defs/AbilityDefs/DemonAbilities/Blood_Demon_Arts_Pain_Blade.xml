@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Pain_Blade</defName>
     <label>Blood Demon Arts: Pain Blade</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Launches a blade of crystallized blood that slices through targets. Gains experience with each use and becomes more powerful.</description>
+    <description>A ranged technique that sends a slash toward targets.</description>
     <iconPath>UI/Abilities/AbilityProjectile</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -44,14 +44,14 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic blood blade projectile that causes bleeding wounds.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
       </li>
 
 
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>An improved blood blade with enhanced cutting power and deeper wounds.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.1</resourceCostMultiplier>
         <rangeMultiplier>1.2</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -66,7 +66,7 @@
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>A devastating barrage of blood blades that shred through multiple targets.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.3</rangeMultiplier>
         <cooldownMultiplier>0.85</cooldownMultiplier>
@@ -81,7 +81,7 @@
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>The ultimate pain blade technique - launches a storm of razor-sharp blood projectiles with devastating cutting power.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.6</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

@@ -4,7 +4,7 @@
     <defName>Frost_Breathing_Disperse</defName>
     <label>Frost Breathing: Disperse</label>
     <category>FrostBreathing_Ability_Catergory</category>
-    <description>The user unleashes a devastating blizzard of freezing energy that encases all enemies in a wide radius around them in ice. The frigid power of the frost breathing technique freezes anything nearby solid. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -48,16 +48,16 @@
     <levels>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic area attack that freezes nearby enemies with moderate chilling damage.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
 
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>An improved rampage with wider frost spread and increased freezing damage per target.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -80,7 +80,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>A devastating rampage with extended radius and brutal freezing damage that can shatter armor with absolute zero temperatures.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -104,7 +104,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>800</experienceRequired>
-        <description>The ultimate blizzard storm rampage - maximum area coverage with devastating freezing damage that can instantly freeze buildings and entomb any enemy in eternal ice.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.6</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

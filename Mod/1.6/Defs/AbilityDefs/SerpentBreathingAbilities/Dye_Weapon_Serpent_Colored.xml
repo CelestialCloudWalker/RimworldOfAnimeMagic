@@ -4,7 +4,7 @@
     <defName>Dye_Weapon_Serpent_Colored</defName>
     <label>Dye Weapon: Serpent Colored</label>
     <category>SerpentBreathing_Ability_Catergory</category>
-    <description>The user channels their breathing style into their weapon, creating a serpentine enchantment. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that channels focused breathing into attacks.</description>
     <iconPath>UI/Abilities/AbilityEmbu</iconPath>
     <targetRequired>false</targetRequired>
 
@@ -25,15 +25,15 @@
     <levels>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic weapon enchantment that imbues attacks with serpentine energy.</description>
+        <description>A technique that channels focused breathing into attacks.</description>
       </li>
 
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>200</experienceRequired>
-        <description>An improved enchantment with stronger serpentine energy and reduced maintenance cost.</description>
+        <description>A technique that channels focused breathing into attacks.</description>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
@@ -45,7 +45,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>450</experienceRequired>
-        <description>A superior enchantment that significantly enhances weapon damage and efficiency.</description>
+        <description>A technique that channels focused breathing into attacks.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
@@ -57,7 +57,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>750</experienceRequired>
-        <description>The ultimate weapon enchantment - maximum serpentine damage with minimal resource drain.</description>
+        <description>A technique that channels focused breathing into attacks.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">

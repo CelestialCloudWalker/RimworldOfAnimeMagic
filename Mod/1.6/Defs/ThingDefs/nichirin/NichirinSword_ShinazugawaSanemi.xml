@@ -3,7 +3,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>NichirinSword_ShinazugawaSanemi</defName>
     <label>Sanemi's Nichirin Blade</label>
-    <description>forged from a unique metal that absorbs sunlight, making them effective against demons, and they change color when drawn by their owner, reflecting the wielder's skill and personality.</description>
+    <description>A nichirin blade capable of killing demons.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_ShinazugawaSanemi</texPath>

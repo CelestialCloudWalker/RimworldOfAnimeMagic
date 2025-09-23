@@ -7,77 +7,48 @@ namespace AnimeArsenal
 {
     public class Projectile_ImpactAOE : ScalingStatDamageProjectile
     {
-        public  ProjectileProperties_ImpactAOE Props => (ProjectileProperties_ImpactAOE)this.def.projectile;
-
-        
+        public ProjectileProperties_ImpactAOE Props => (ProjectileProperties_ImpactAOE)def.projectile;
 
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
-           
-            List<Thing> ThingsToHit = AnimeArsenalUtility.GetThingsInRange(this.Position, this.MapHeld, this.Props.ExplosionRadius, TargetValidator).ToList();
-            AnimeArsenalUtility.DealDamageToThingsInRange(ThingsToHit, Props.damageDef, Props.BaseDamage, Props.GetArmorPenetration(this.launcher));
+            var targets = AnimeArsenalUtility.GetThingsInRange(Position, MapHeld, Props.ExplosionRadius, IsValidTarget).ToList();
+            AnimeArsenalUtility.DealDamageToThingsInRange(targets, Props.damageDef, Props.BaseDamage, Props.GetArmorPenetration(launcher));
 
-            foreach (var thingToHit in ThingsToHit)
+            foreach (var target in targets.OfType<Pawn>().Where(p => !p.Destroyed))
             {
-                if (!thingToHit.Destroyed && thingToHit is Pawn pawnToHit)
-                {
-                    PushBack(pawnToHit);
-                }
+                TryPushBack(target);
             }
 
-            if (this.Props.ExplosionEffect != null)
-            {
-                this.Props.ExplosionEffect.Spawn(this.Position, this.MapHeld);
-            }
-
+            Props.ExplosionEffect?.Spawn(Position, MapHeld);
             base.Impact(hitThing, blockedByShield);
         }
 
-        private bool TargetValidator(Thing HitThing)
+        private bool IsValidTarget(Thing target)
         {
-            if (HitThing == this)
-            {
+            if (target == this || (launcher != null && target == launcher && !Props.CanHitCaster))
                 return false;
-            }
 
-            if (this.launcher != null && HitThing == this.launcher && !Props.CanHitCaster)
-            {
+            if (target.Faction != null && !target.Faction.HostileTo(launcher.Faction) && !Props.CanHitFriendly)
                 return false;
-            }
-
-            if (HitThing.Faction != null)
-            {
-                if (!HitThing.Faction.HostileTo(this.launcher.Faction) && !Props.CanHitFriendly)
-                {
-                    return false;
-                }
-            }
 
             return true;
         }
 
-        private void PushBack(Pawn HitPawn)
+        private void TryPushBack(Pawn target)
         {
-            if (launcher == null || launcher.Map == null)
+            if (launcher?.Map == null) return;
+
+            var direction = target.Position - launcher.Position;
+            var knockback = target.Position + direction * Rand.Range(1, 4);
+            knockback = knockback.ClampInsideMap(launcher.Map);
+
+            if (GenAdj.TryFindRandomAdjacentCell8WayWithRoom(target, out var destination))
             {
-                return;
-            }
-
-            Map map = launcher.Map;
-
-            IntVec3 launchDirection = HitPawn.Position - launcher.Position;
-
-            IntVec3 destination = HitPawn.Position + launchDirection * Rand.Range(1, 4);
-            destination = destination.ClampInsideMap(launcher.Map);
-
-            IntVec3 finalDestinattion = IntVec3.Zero;
-
-            if (GenAdj.TryFindRandomAdjacentCell8WayWithRoom(HitPawn, out finalDestinattion))
-            {
-                if (finalDestinattion.IsValid && finalDestinattion.InBounds(map) && finalDestinattion.Walkable(map))
+                var map = launcher.Map;
+                if (destination.IsValid && destination.InBounds(map) && destination.Walkable(map))
                 {
-                    PawnFlyer pawnFlyer = PawnFlyer.MakeFlyer(CelestialDefof.AnimeArsenal_Flyer, HitPawn, finalDestinattion, null, null);
-                    GenSpawn.Spawn(pawnFlyer, HitPawn.Position, launcher.Map);
+                    var flyer = PawnFlyer.MakeFlyer(CelestialDefof.AnimeArsenal_Flyer, target, destination, null, null);
+                    GenSpawn.Spawn(flyer, target.Position, map);
                 }
             }
         }

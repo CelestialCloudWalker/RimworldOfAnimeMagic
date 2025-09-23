@@ -1,12 +1,8 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
-using Verse.AI;
 
 namespace AnimeArsenal
 {
@@ -14,96 +10,63 @@ namespace AnimeArsenal
     {
         public CompProperties_RangeToggle()
         {
-            this.compClass = typeof(CompRangeToggle);
-            Log.Message("[RangeToggle] CompProperties_RangeToggle constructor called");
+            compClass = typeof(CompRangeToggle);
         }
     }
 
     public class CompRangeToggle : ThingComp
     {
-        private bool extendedRangeEnabled = false;
-
-        public override void Initialize(CompProperties props)
-        {
-            base.Initialize(props);
-        }
-
-        public override void PostSpawnSetup(bool respawningAfterLoad)
-        {
-            base.PostSpawnSetup(respawningAfterLoad);
-        }
+        private bool isExtended = false;
+        private const float EXTENDED_RANGE = 500f;
+        private const float NORMAL_RANGE = 1.5f;
 
         public override void Notify_Equipped(Pawn pawn)
         {
-            base.Notify_Equipped(pawn);
-
-            var equipmentComp = parent.GetComp<CompEquippable>();
-            var extendedVerb = equipmentComp.AllVerbs
-                .FirstOrDefault(v => v is Verb_ExtendedMeleeAttack) as Verb_ExtendedMeleeAttack;
-
-            if (extendedVerb != null)
-            {
-                extendedVerb.SetRange(500f);
-                Log.Message($"[RangeToggle] Range set to: {extendedVerb.EffectiveRange}");
-            }
+            var verb = GetExtendedVerb();
+            verb?.SetRange(EXTENDED_RANGE);
         }
 
         public override void PostExposeData()
         {
-            base.PostExposeData();
-            Scribe_Values.Look(ref extendedRangeEnabled, "extendedRangeEnabled", false);
+            Scribe_Values.Look(ref isExtended, "extendedRange", false);
         }
-
 
         public override IEnumerable<Gizmo> CompGetWornGizmosExtra()
         {
-            Log.Message($"CompGetGizmosExtra");
-
-            foreach (var item in base.CompGetWornGizmosExtra())
-            {
-                yield return item;
-            }
-
-            yield return ToggleAction();
+            yield return CreateToggleButton();
         }
-
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            Log.Message($"CompGetGizmosExtra");
-
-            foreach (var item in base.CompGetGizmosExtra())
-            {
-                yield return item;
-            }
-
-            yield return ToggleAction();
+            yield return CreateToggleButton();
         }
 
-        private Command_Action ToggleAction()
+        private Verb_ExtendedMeleeAttack GetExtendedVerb()
+        {
+            return parent.GetComp<CompEquippable>()?.AllVerbs
+                .OfType<Verb_ExtendedMeleeAttack>()
+                .FirstOrDefault();
+        }
+
+        private Command_Action CreateToggleButton()
         {
             return new Command_Action
             {
                 defaultLabel = "Extended Range",
                 defaultDesc = "Toggle extended range attacks",
-                icon = ContentFinder<Texture2D>.Get("UI/Commands/Attack", true),
-                action = () =>
-                {
-                    extendedRangeEnabled = !extendedRangeEnabled;
-                    var equipmentComp = parent.GetComp<CompEquippable>();
-                    var extendedVerb = equipmentComp.AllVerbs
-                        .FirstOrDefault(v => v is Verb_ExtendedMeleeAttack) as Verb_ExtendedMeleeAttack;
-
-                    Log.Message($"[RangeToggle] Toggle pressed. EquipmentComp: {equipmentComp != null}, ExtendedVerb found: {extendedVerb != null}");
-
-                    if (extendedVerb != null)
-                    {
-                        extendedVerb.SetRange(extendedRangeEnabled ? 500f : 1.5f);
-                        Log.Message($"[RangeToggle] Range set to: {extendedVerb.EffectiveRange}");
-                    }
-                }
+                icon = ContentFinder<Texture2D>.Get("UI/Commands/Attack"),
+                action = ToggleRange
             };
         }
-    }
 
+        private void ToggleRange()
+        {
+            isExtended = !isExtended;
+            var verb = GetExtendedVerb();
+            if (verb != null)
+            {
+                verb.SetRange(isExtended ? EXTENDED_RANGE : NORMAL_RANGE);
+            }
+        }
+    }
 }

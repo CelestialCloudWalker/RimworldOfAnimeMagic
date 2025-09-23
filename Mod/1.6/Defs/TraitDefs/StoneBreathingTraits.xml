@@ -34,7 +34,7 @@
 
   <TraitDef>
     <defName>MountainEndurance</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>mountain endurance</label>
@@ -58,7 +58,7 @@
 
   <TraitDef>
     <defName>GeologicalKnowledge</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Mining</li>
       <li>Crafting</li>

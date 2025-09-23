@@ -1,20 +1,23 @@
 ﻿using Talented;
 using Verse;
+using RimWorld;
+using System.Collections.Generic;
+
 namespace AnimeArsenal
 {
     public class BreathingTechniqueGeneDef : TalentedGeneDef
     {
+        public float exhaustionPerTick = 0.001f;
         public HediffDef exhaustionHediff;
-        public float exhaustionPerTick = 0.1f;
-        public int ticksBeforeExhaustionStart = 2500;
-        public int ticksPerExhaustionIncrease = 1250;
-        public int exhausationCooldownTicks = 2500;
-        public bool scaleWithBreathing = false;
+        public int ticksBeforeExhaustionStart = 1000;
+        public int ticksPerExhaustionIncrease = 1000;
+        public int exhausationCooldownTicks = 2000;
+
+        public bool scaleWithBreathing = true;
 
         public BreathingTechniqueGeneDef()
         {
-            geneClass = typeof(BreathingTechniqueGene);
-            this.resourceGizmoType = typeof(GeneGizmoBreath);
+            this.geneClass = typeof(BreathingTechniqueGene);
         }
     }
 }

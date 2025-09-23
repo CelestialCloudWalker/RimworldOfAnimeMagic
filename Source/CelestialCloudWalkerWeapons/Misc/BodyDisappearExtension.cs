@@ -20,73 +20,91 @@ namespace AnimeArsenal
         [HarmonyPostfix]
         public static void Postfix(Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit)
         {
-            if (!HasBodyDisappearGene(__instance)) return;
-            BodyDisappearUtility.RegisterPawnForDisappearance(__instance);
+            if (ShouldPawnDisappear(__instance))
+            {
+                BodyDisappearUtility.MarkForDisappearance(__instance);
+            }
         }
 
-        private static bool HasBodyDisappearGene(Pawn pawn)
+        private static bool ShouldPawnDisappear(Pawn pawn)
         {
             if (pawn.genes == null) return false;
 
-            return pawn.genes.GenesListForReading.Any(gene =>
-                gene.Active && gene.def.GetModExtension<BodyDisappearExtension>() != null);
+            foreach (var gene in pawn.genes.GenesListForReading)
+            {
+                if (gene.Active && gene.def.GetModExtension<BodyDisappearExtension>() != null)
+                    return true;
+            }
+            return false;
         }
     }
 
     public static class BodyDisappearUtility
     {
-        private static HashSet<int> pawnsToDisappear = new HashSet<int>();
+        private static HashSet<int> markedPawns = new HashSet<int>();
 
-        public static void RegisterPawnForDisappearance(Pawn pawn)
+        public static void MarkForDisappearance(Pawn pawn)
         {
-            if (pawn == null) return;
-            pawnsToDisappear.Add(pawn.thingIDNumber);
+            if (pawn != null)
+                markedPawns.Add(pawn.thingIDNumber);
         }
 
-        public static void ProcessCorpseDisappearance(Corpse corpse)
+        public static void HandleCorpseDisappearance(Corpse corpse)
         {
             if (corpse?.InnerPawn == null) return;
-            if (!pawnsToDisappear.Contains(corpse.InnerPawn.thingIDNumber)) return;
-            pawnsToDisappear.Remove(corpse.InnerPawn.thingIDNumber);
 
-            var extension = GetBodyDisappearExtension(corpse.InnerPawn);
-            if (extension == null) return;
+            int pawnId = corpse.InnerPawn.thingIDNumber;
+            if (!markedPawns.Contains(pawnId)) return;
 
-            Map map = corpse.Map;
-            IntVec3 position = corpse.Position;
+            markedPawns.Remove(pawnId);
 
-            if (extension.playEffect && map != null)
-            {
-                EffecterDef effectDef = DefDatabase<EffecterDef>.GetNamed("Deflect_Metal");
-                if (effectDef != null)
-                {
-                    Effecter disappearEffecter = effectDef.Spawn();
-                    disappearEffecter.Trigger(new TargetInfo(position, map), new TargetInfo(position, map));
-                    disappearEffecter.Cleanup();
-                }
+            var settings = FindDisappearSettings(corpse.InnerPawn);
+            if (settings == null) return;
 
-                if (!string.IsNullOrEmpty(extension.disappearMessage))
-                {
-                    MoteMaker.ThrowText(corpse.DrawPos, map, extension.disappearMessage, 3f);
-                }
-            }
-
-            if (extension.leaveAshFilth && map != null)
-            {
-                FilthMaker.TryMakeFilth(position, map, ThingDefOf.Filth_Ash, extension.filthAmount);
-            }
-
+            ApplyDisappearEffects(corpse, settings);
             corpse.Destroy();
         }
 
-        private static BodyDisappearExtension GetBodyDisappearExtension(Pawn pawn)
+        private static BodyDisappearExtension FindDisappearSettings(Pawn pawn)
         {
             if (pawn.genes == null) return null;
 
-            var gene = pawn.genes.GenesListForReading.FirstOrDefault(g =>
-                g.Active && g.def.GetModExtension<BodyDisappearExtension>() != null);
+            foreach (var gene in pawn.genes.GenesListForReading)
+            {
+                if (gene.Active)
+                {
+                    var ext = gene.def.GetModExtension<BodyDisappearExtension>();
+                    if (ext != null) return ext;
+                }
+            }
+            return null;
+        }
 
-            return gene?.def.GetModExtension<BodyDisappearExtension>();
+        private static void ApplyDisappearEffects(Corpse corpse, BodyDisappearExtension settings)
+        {
+            Map map = corpse.Map;
+            IntVec3 pos = corpse.Position;
+
+            if (settings.playEffect && map != null)
+            {
+                var effect = DefDatabase<EffecterDef>.GetNamed("Deflect_Metal");
+                if (effect != null)
+                {
+                    var effecter = effect.Spawn();
+                    effecter.Trigger(new TargetInfo(pos, map), new TargetInfo(pos, map));
+                    effecter.Cleanup();
+                }
+
+                if (!settings.disappearMessage.NullOrEmpty())
+                {
+                    MoteMaker.ThrowText(corpse.DrawPos, map, settings.disappearMessage, 3f);
+                }
+            }
+
+            if (settings.leaveAshFilth && map != null)
+            {
+                FilthMaker.TryMakeFilth(pos, map, ThingDefOf.Filth_Ash, settings.filthAmount);
+            }
         }
     }
 
@@ -98,15 +116,14 @@ namespace AnimeArsenal
         {
             base.MapComponentTick();
 
+            
             if (Find.TickManager.TicksGame % 10 != 0) return;
 
-            List<Corpse> corpses = map.listerThings.ThingsInGroup(ThingRequestGroup.Corpse)
-                .OfType<Corpse>()
-                .ToList();
+            var corpses = map.listerThings.ThingsInGroup(ThingRequestGroup.Corpse).OfType<Corpse>();
 
-            foreach (Corpse corpse in corpses)
+            foreach (var corpse in corpses.ToList())
             {
-                BodyDisappearUtility.ProcessCorpseDisappearance(corpse);
+                BodyDisappearUtility.HandleCorpseDisappearance(corpse);
             }
         }
     }

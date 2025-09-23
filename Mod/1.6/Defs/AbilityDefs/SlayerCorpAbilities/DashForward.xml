@@ -3,15 +3,15 @@
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>AA_ForwardDash</defName>
     <label>Forward Dash</label>
-    <description>Quickly dash forward toward the target to close the distance. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that dashes toward enemies.</description>
     <iconPath>UI/Abilities/AbilityDashforward</iconPath>
     <cooldownTicksRange>1800</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <targetRequired>true</targetRequired>
 
-    
-    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName> 
+
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
     <resourceCost>15</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -27,7 +27,7 @@
       </targetParams>
     </verbProperties>
 
-    
+
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
         <minDashDistance>8</minDashDistance>
@@ -41,26 +41,22 @@
         <castEffecter>AnimeArsenal_BeastJump</castEffecter>
         <landEffecter>AnimeArsenal_DashBack</landEffecter>
         <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
-        <grantTemporaryImmunity>false</grantTemporaryImmunity>
-        <grantSpeedBoost>false</grantSpeedBoost>
-        <grantMoodBoost>false</grantMoodBoost>
-        <restoreStamina>false</restoreStamina>
       </li>
     </comps>
 
     <levels>
-      
+
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic forward dash technique.</description>
+        <description>A technique that dashes toward enemies.</description>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>An improved dash that can be performed twice in quick succession.</description>
+        <description>A technique that dashes toward enemies.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -76,19 +72,15 @@
             <castEffecter>AnimeArsenal_BeastJump</castEffecter>
             <landEffecter>AnimeArsenal_DashBack</landEffecter>
             <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
-            <grantTemporaryImmunity>true</grantTemporaryImmunity>
-            <grantSpeedBoost>false</grantSpeedBoost>
-            <grantMoodBoost>false</grantMoodBoost>
-            <restoreStamina>false</restoreStamina>
           </li>
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>A Erelongful dash technique that grants temporary speed and can be chained three times.</description>
+        <description>A technique that dashes toward enemies.</description>
         <resourceCostMultiplier>1.5</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
@@ -105,19 +97,15 @@
             <castEffecter>AnimeArsenal_BeastJump</castEffecter>
             <landEffecter>AnimeArsenal_DashBack</landEffecter>
             <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
-            <grantTemporaryImmunity>true</grantTemporaryImmunity>
-            <grantSpeedBoost>true</grantSpeedBoost>
-            <grantMoodBoost>false</grantMoodBoost>
-            <restoreStamina>false</restoreStamina>
           </li>
         </levelComps>
       </li>
 
-      
+
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>The ultimate dash technique - grants immunity, speed, mood boost, and restores stamina.</description>
+        <description>A technique that dashes toward enemies.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.6</cooldownMultiplier>
@@ -134,10 +122,6 @@
             <castEffecter>AnimeArsenal_BeastJump</castEffecter>
             <landEffecter>AnimeArsenal_DashBack</landEffecter>
             <retryEffecter>AnimeArsenal_DashBack</retryEffecter>
-            <grantTemporaryImmunity>true</grantTemporaryImmunity>
-            <grantSpeedBoost>true</grantSpeedBoost>
-            <grantMoodBoost>true</grantMoodBoost>
-            <restoreStamina>true</restoreStamina>
           </li>
         </levelComps>
       </li>

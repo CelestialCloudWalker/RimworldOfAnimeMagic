@@ -3,7 +3,7 @@
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>DemonSlayerCorp_UniformSkirtA</defName>
     <label>Demon Slayer Corp Skirt B</label>
-    <description>The Demon Slayer Corps uniform is a durable, dark-colored, high-collared outfit designed for mobility and protection.</description>
+    <description>A durable Demon Slayer Corps uniform designed for mobility and protection.</description>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <skillRequirements>

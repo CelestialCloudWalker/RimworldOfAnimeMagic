@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_DemonSlayerTrainee</defName>
+    <title>Demon Slayer Trainee</title>
+    <titleShort>Demon Slayer Trainee</titleShort>
+    <baseDesc>[PAWN_nameDef] has been trained by a formar Hashira as a child, learning basic sword techniques.</baseDesc>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>3</Melee>
+      <Medicine>1</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_SurvivorChild</defName>
+    <title>Survivor Child</title>
+    <titleShort>Survivor Child</titleShort>
+    <baseDesc>[PAWN_nameDef]'s family was killed by demons at a young age, learning to survive on their own.</baseDesc>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>3</Melee>
+      <Construction>2</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Orphaned_by_Demons</defName>
+    <title>Orphaned by Demons</title>
+    <titleShort>Orphaned by Demons</titleShort>
+    <baseDesc>[PAWN_nameDef]'s parents where killed by demons, taken in by the Corps who taught them basic skills.</baseDesc>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>3</Melee>
+      <Social>1</Social>
+      <Medicine>1</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Psychopath>0</Psychopath>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Mountain_Hermit_Child</defName>
+    <title>Mountain Hermit Child</title>
+    <titleShort>Mountain Hermit Child</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up isolated in the mountains, learning to live off the land and fight wild animals.</baseDesc>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>3</Melee>
+      <Construction>1</Construction>
+      <Animals>1</Animals>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Beast_Breathing_Hashira</defName>
+    <title>Beast Breathing Hashira</title>
+    <titleShort>Beast Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Beast Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>2</Animals>
+      <Melee>6</Melee>
+      <Construction>4</Construction>
+    </skillGains>
+    <workDisables>
+      <li>Intellectual</li>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Animals</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Brawler>0</Brawler>
+      <Bloodlust>0</Bloodlust>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Kind>0</Kind>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Flame_Breathing_Hashira</defName>
+    <title>Flame Breathing Hashira</title>
+    <titleShort>Flame Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Flame Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+      <Melee>8</Melee>
+      <Construction>3</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Brawler>0</Brawler>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Water_Breathing_Hashira</defName>
+    <title>Water Breathing Hashira</title>
+    <titleShort>Water Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Water Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>2</Medicine>
+      <Melee>8</Melee>
+      <Construction>3</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Kind>0</Kind>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Thunder_Breathing_Hashira</defName>
+    <title>Thunder Breathing Hashira</title>
+    <titleShort>Thunder Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Thunder Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>1</Medicine>
+      <Melee>8</Melee>
+      <Shooting>4</Shooting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Shooting</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Neurotic>1</Neurotic>
+      <SpeedOffset>1</SpeedOffset>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Flower_Breathing_Hashira</defName>
+    <title>Flower Breathing Hashira</title>
+    <titleShort>Flower Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Flower Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>2</Medicine>
+      <Melee>8</Melee>
+      <Artistic>2</Artistic>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Artistic</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Beauty>1</Beauty>
+      <SpeedOffset>1</SpeedOffset>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Stone_Breathing_Hashira</defName>
+    <title>Stone Breathing Hashira</title>
+    <titleShort>Stone Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Stone Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Mining>2</Mining>
+      <Melee>9</Melee>
+      <Construction>1</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Brawler>0</Brawler>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Wind_Breathing_Hashira</defName>
+    <title>Wind Breathing Hashira</title>
+    <titleShort>Wind Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Wind Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>1</Shooting>
+      <Melee>8</Melee>
+      <Construction>4</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Bloodlust>0</Bloodlust>
+      <Abrasive>0</Abrasive>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Kind>0</Kind>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Insect_Breathing_Hashira</defName>
+    <title>Insect Breathing Hashira</title>
+    <titleShort>Insect Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Insect Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>4</Medicine>
+      <Melee>7</Melee>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Intellectual</li>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <SpeedOffset>1</SpeedOffset>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Love_Breathing_Hashira</defName>
+    <title>Love Breathing Hashira</title>
+    <titleShort>Love Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Love Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>4</Cooking>
+      <Melee>8</Melee>
+      <Social>3</Social>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Social</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Kind>0</Kind>
+      <Beauty>1</Beauty>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Psychopath>0</Psychopath>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Sound_Breathing_Hashira</defName>
+    <title>Sound Breathing Hashira</title>
+    <titleShort>Sound Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Sound Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Artistic>2</Artistic>
+      <Melee>8</Melee>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Artistic</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Beauty>1</Beauty>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Mist_Breathing_Hashira</defName>
+    <title>Mist Breathing Hashira</title>
+    <titleShort>Mist Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Mist Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>2</Construction>
+      <Melee>8</Melee>
+      <Shooting>3</Shooting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Shooting</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <SpeedOffset>1</SpeedOffset>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Serpent_Breathing_Hashira</defName>
+    <title>Serpent Breathing Hashira</title>
+    <titleShort>Serpent Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Serpent Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>3</Construction>
+      <Melee>8</Melee>
+      <Medicine>1</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Abrasive>0</Abrasive>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Kind>0</Kind>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Sun_Breathing_Hashira</defName>
+    <title>Sun Breathing Hashira</title>
+    <titleShort>Sun Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Sun Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>4</Construction>
+      <Melee>10</Melee>
+      <Medicine>3</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <SpeedOffset>1</SpeedOffset>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Forest_Breathing_Hashira</defName>
+    <title>Forest Breathing Hashira</title>
+    <titleShort>Forest Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Forest Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>4</Construction>
+      <Melee>8</Melee>
+      <Plants>1</Plants>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Frost_Breathing_Hashira</defName>
+    <title>Frost Breathing Hashira</title>
+    <titleShort>Frost Breathing Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Frost Breathing.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>3</Construction>
+      <Melee>8</Melee>
+      <Medicine>2</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Former_Hashira</defName>
+    <title>Former Breathing Hashira</title>
+    <titleShort>Former Breathing Hashira</titleShort>
+    <baseDesc>No longer a Hashira, [PAWN_nameDef] lives in quiet retirement.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>3</Intellectual>
+      <Melee>7</Melee>
+      <Medicine>2</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Retired_Slayer</defName>
+    <title>Retired Slayer</title>
+    <titleShort>Retired Slayer</titleShort>
+    <baseDesc>One of the few to survive long enough to retire, [PAWN_nameDef] stands as proof of the Corps’ harsh trials.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>2</Construction>
+      <Melee>4</Melee>
+      <Medicine>2</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Cultivator</defName>
+    <title>Cultivator</title>
+    <titleShort>Cultivator</titleShort>
+    <baseDesc>Veteran of the Corps, [PAWN_nameDef] now dedicates themselves to cultivating new talent.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+      <Melee>5</Melee>
+      <Medicine>2</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Kakushi</defName>
+    <title>Kakushi</title>
+    <titleShort>Kakushi</titleShort>
+    <baseDesc>A member of the Kakushi, [PAWN_nameDef] supports the Demon Slayers in both battlefield care and daily duties.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>3</Social>
+      <Melee>2</Melee>
+      <Medicine>4</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Bloodlust>0</Bloodlust>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Swordsmith</defName>
+    <title>Swordsmith</title>
+    <titleShort>Swordsmith</titleShort>
+    <baseDesc>[PAWN_nameDef] is devoted to the sacred art of swordmaking.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>3</Social>
+      <Crafting>8</Crafting>
+      <Artistic>4</Artistic>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Crafting</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Bloodlust>0</Bloodlust>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Demon_Slayer_Corps_Member</defName>
+    <title>Demon Slayer Corps Member</title>
+    <titleShort>Demon Slayer Corps Member</titleShort>
+    <baseDesc>[PAWN_nameDef] is a member of the Demon Slayer Corps, dedicated to hunting demons and protecting humanity.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>6</Melee>
+      <Construction>2</Construction>
+      <Artistic>1</Artistic>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Crafting</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+</Defs>

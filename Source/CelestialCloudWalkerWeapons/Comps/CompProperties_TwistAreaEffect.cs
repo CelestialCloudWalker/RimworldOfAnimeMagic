@@ -27,81 +27,77 @@ namespace AnimeArsenal
         {
             if (target.IsValid && target.Cell.IsValid)
             {
-                TwistPawnsInArea(target.Cell);
+                DoTwistAttack(target.Cell);
             }
         }
 
-        private void TwistPawnsInArea(IntVec3 center)
+        private void DoTwistAttack(IntVec3 targetPos)
         {
             Map map = parent.pawn.Map;
-            List<Pawn> pawnsToTwist = GetEnemyPawnsInRange(center, map, Props.radius);
+            var enemies = FindTargetsInRadius(targetPos, map);
 
-            int targetCount = Mathf.Min(pawnsToTwist.Count, Props.maxTargets);
+            int numToHit = Mathf.Min(enemies.Count, Props.maxTargets);
 
-            for (int i = 0; i < targetCount; i++)
+            for (int i = 0; i < numToHit; i++)
             {
-                Pawn enemyPawn = pawnsToTwist[i];
-                if (enemyPawn != null && !enemyPawn.Dead && !enemyPawn.Destroyed)
+                Pawn target = enemies[i];
+                if (target?.Dead == false && !target.Destroyed)
                 {
-                    float CEScale = 1f; 
+                    float scaleFactor = 1f;
                     try
                     {
-                        CEScale = AnimeArsenalUtility.CalcAstralPulseScalingFactor(parent.pawn, enemyPawn);
+                        scaleFactor = AnimeArsenalUtility.CalcAstralPulseScalingFactor(parent.pawn, target);
                     }
                     catch
                     {
-                        CEScale = 1f;
                     }
 
-                    TwistTargetLimb(enemyPawn, parent.pawn, Props.baseDamage, CEScale);
+                    TwistLimb(target, parent.pawn, Props.baseDamage * scaleFactor);
                 }
             }
         }
 
-        private List<Pawn> GetEnemyPawnsInRange(IntVec3 center, Map map, float radius)
+        private List<Pawn> FindTargetsInRadius(IntVec3 center, Map map)
         {
-            List<Pawn> validTargets = new List<Pawn>();
+            List<Pawn> targets = new List<Pawn>();
 
-            var cellsInRadius = GenRadial.RadialCellsAround(center, radius, true).ToList();
-
-            foreach (IntVec3 cell in cellsInRadius)
+            foreach (IntVec3 cell in GenRadial.RadialCellsAround(center, Props.radius, true))
             {
                 if (!cell.InBounds(map)) continue;
 
-                List<Thing> thingsInCell = new List<Thing>(cell.GetThingList(map));
-
-                foreach (Thing thing in thingsInCell)
+                foreach (Thing thing in cell.GetThingList(map))
                 {
-                    if (thing is Pawn pawn && IsValidTarget(pawn))
+                    if (thing is Pawn p && CanTarget(p))
                     {
-                        validTargets.Add(pawn);
+                        targets.Add(p);
                     }
                 }
             }
 
-            
-            return validTargets.OrderBy(p => p.Position.DistanceTo(center)).ToList();
+            return targets.OrderBy(p => p.Position.DistanceTo(center)).ToList();
         }
 
-        private bool IsValidTarget(Pawn pawn)
+        private bool CanTarget(Pawn pawn)
         {
-            if (pawn == null || pawn.Dead || pawn.Destroyed) return false;
-            if (pawn == parent.pawn) return false; 
+            if (pawn?.Dead != false || pawn.Destroyed)
+                return false;
 
-            
-            if (pawn.Faction != null && pawn.Faction == parent.pawn?.Faction) return false;
+            if (pawn == parent.pawn)
+                return false;
+
+            if (pawn.Faction == parent.pawn?.Faction)
+                return false;
 
             return true;
         }
 
-        public static void TwistTargetLimb(Pawn Target, Pawn Caster, float BaseDamage, float Scale)
+        public static void TwistLimb(Pawn target, Pawn caster, float totalDamage)
         {
-            BodyPartRecord targetLimb = AnimeArsenalUtility.GetRandomLimb(Target);
-            if (targetLimb != null)
+            BodyPartRecord limb = AnimeArsenalUtility.GetRandomLimb(target);
+            if (limb != null)
             {
-                float damage = BaseDamage * Scale;
-                DamageInfo dinfo = new DamageInfo(CelestialDefof.TwistDamage, damage, 1f, -1f, Caster, targetLimb);
-                Target.TakeDamage(dinfo);
+                DamageInfo dmg = new DamageInfo(CelestialDefof.TwistDamage, totalDamage, 1f, -1f, caster, limb);
+                target.TakeDamage(dmg);
             }
         }
     }

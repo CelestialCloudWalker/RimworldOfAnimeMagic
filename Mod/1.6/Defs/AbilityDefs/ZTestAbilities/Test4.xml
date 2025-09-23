@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>TransparentWorldAbility24</defName>
+    <label>Selfess State</label>
+    <category>BeastBreathing_Ability_Catergory</category>
+    <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
+    <iconPath>Things/Mote/SpeechSymbols/Speech</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <targetRequired>false</targetRequired>
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>AnimeArsenal_SelflessFlash</hediffDef>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Flash)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>AnimeArsenal_SelflessFlash</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Gleam)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>AnimeArsenal_SelflessGleam</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Mirage)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>AnimeArsenal_SelflessMirage</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Erelong)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>AnimeArsenal_SelflessErelong</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+
+  <HediffDef>
+    <defName>AnimeArsenal_SelflessFlash</defName>
+    <label>Selfless State</label>
+    <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
+    <hediffClass>AnimeArsenal.Hediff_SelflessState</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 0.25)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <duplicationAllowed>false</duplicationAllowed>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>1.0</MoveSpeed>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.85</IncomingDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="AnimeArsenal.SelflessStateProperties">
+        <durationTicks>2400</durationTicks>
+        <fadeDurationTicks>50</fadeDurationTicks>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>AnimeArsenal_SelflessGleam</defName>
+    <label>Selfless State</label>
+    <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
+    <hediffClass>AnimeArsenal.Hediff_SelflessState</hediffClass>
+    <defaultLabelColor>(0.7, 0.7, 0.3)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <duplicationAllowed>false</duplicationAllowed>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>2.0</MoveSpeed>
+          <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+          <ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.7</IncomingDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="AnimeArsenal.SelflessStateProperties">
+        <durationTicks>2880</durationTicks>
+        <fadeDurationTicks>75</fadeDurationTicks>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>AnimeArsenal_SelflessMirage</defName>
+    <label>Selfless State</label>
+    <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
+    <hediffClass>AnimeArsenal.Hediff_SelflessState</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <duplicationAllowed>false</duplicationAllowed>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>3.0</MoveSpeed>
+          <WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+          <ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.6</IncomingDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.4</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="AnimeArsenal.SelflessStateProperties">
+        <durationTicks>3600</durationTicks>
+        <fadeDurationTicks>100</fadeDurationTicks>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>AnimeArsenal_SelflessErelong</defName>
+    <label>Selfless State</label>
+    <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
+    <hediffClass>AnimeArsenal.Hediff_SelflessState</hediffClass>
+    <defaultLabelColor>(0.9, 0.9, 0.45)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <duplicationAllowed>false</duplicationAllowed>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>5.0</MoveSpeed>
+          <WorkSpeedGlobal>0.6</WorkSpeedGlobal>
+          <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.4</IncomingDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.6</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.4</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.4</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="AnimeArsenal.SelflessStateProperties">
+        <durationTicks>4320</durationTicks>
+        <fadeDurationTicks>150</fadeDurationTicks>
+      </li>
+    </modExtensions>
+  </HediffDef>
+</Defs>

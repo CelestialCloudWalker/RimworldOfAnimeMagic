@@ -2,8 +2,8 @@
 <Defs>
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>DemonSlayerCorp_Haori_KamadoTanjiro</defName>
-    <label>Haori</label>
-    <description>A long cape of elegant design. It hangs over one side of the torso. It seems to vanish with the wind.</description>
+    <label> Tanjiro's Haori</label>
+    <description>A Demon Slayer Corps haori worn over uniforms.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Haori_KamadoTanjiro/Haori_KamadoTanjiro_Male_north</texPath>

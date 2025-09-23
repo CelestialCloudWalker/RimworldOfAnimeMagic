@@ -3,7 +3,7 @@
   <HediffDef>
     <defName>DemonWorkSlaveHediff</defName>
     <label>Demon work slave</label>
-    <description>This pawn has been turned into a Demon work slave. They have no needs, no thoughts, and are focused solely on work. They will die after a week due to the unstable nature of their form.</description>
+    <description>This pawn has been turned into a Demon work slave. They have no needs, no thoughts, and are focused solely on commands.</description>
     <hediffClass>AnimeArsenal.Hediff_DemonWorkSlave</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
     <initialSeverity>0.1</initialSeverity>

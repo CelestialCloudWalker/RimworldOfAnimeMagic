@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>IceInVeins</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <conflictingTraits>
       <li>Neurotic</li>
     </conflictingTraits>
@@ -31,7 +31,7 @@
 
   <TraitDef>
     <defName>FrozenFocus</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Intellectual</li>
     </forcedPassions>

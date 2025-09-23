@@ -4,7 +4,7 @@
     <defName>Forest_Breathing_Reflect</defName>
     <label>Forest Breathing: Reflect</label>
     <category>ForestsBreathing_Ability_Catergory</category>
-    <description>The user performs a powerful and swift circular slash that can blow away incoming projectiles. Gains experience with each use and becomes more powerful.</description>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
     <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
 
@@ -35,7 +35,7 @@
       <li>
         <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic circular slash that deflects incoming projectiles in a moderate area.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
@@ -52,7 +52,7 @@
       <li>
         <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>120</experienceRequired>
-        <description>An improved earthen technique with larger radius and longer duration.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -70,7 +70,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>300</experienceRequired>
-        <description>A superior earthen technique with wide coverage and extended protection.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -88,7 +88,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>600</experienceRequired>
-        <description>The ultimate earthen storm reflection - massive radius, extended duration, and can deflect enormous volleys.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>

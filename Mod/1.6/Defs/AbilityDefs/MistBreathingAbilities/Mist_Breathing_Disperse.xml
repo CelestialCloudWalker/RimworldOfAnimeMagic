@@ -4,7 +4,7 @@
     <defName>Mist_Breathing_Disperse</defName>
     <label>Mist Breathing: Disperse</label>
     <category>MistBreathing_Ability_Catergory</category>
-    <description>The user releases a devastating wave of disorienting mist that envelops all enemies in a wide radius around them. The shifting mist confuses and damages anything caught within its obscuring embrace. Gains experience with each use and becomes more powerful.</description>
+    <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -48,16 +48,16 @@
     <levels>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic area mist wave that disorients nearby enemies with moderate disorienting damage.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
 
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
+        <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>An improved rampage with wider mist coverage and increased disorienting effects per target.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
         <levelComps>
@@ -79,9 +79,9 @@
 
 
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
+        <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>A devastating mist rampage with extended radius and brutal disorienting effects that can confuse and disorient multiple enemies simultaneously.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -104,9 +104,9 @@
 
 
       <li>
-        <labelSuffix> (Master)</labelSuffix>
+        <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>800</experienceRequired>
-        <description>The ultimate obscuring mist rampage - maximum area coverage with devastating disorienting effects that can completely overwhelm enemy formations and leave them helpless in the shifting mist.</description>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.6</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

@@ -18,116 +18,98 @@ namespace AnimeArsenal
     {
         new CompProperties_ToggleEnchantDemon Props => (CompProperties_ToggleEnchantDemon)props;
 
-        private int resourceCostTimer = 0;
+        private int tickCounter = 0;
+        private Gene_BasicResource cachedResourceGene;
 
-        private Gene_BasicResource _ResourceGene;
-        private Gene_BasicResource ResourceGene
+        private Gene_BasicResource GetResourceGene()
         {
-            get
+            if (cachedResourceGene != null)
+                return cachedResourceGene;
+
+            if (Props.enchantDef.resourceGene != null)
             {
-                if (_ResourceGene != null)
-                    return _ResourceGene;
-
-                if (Props.enchantDef.resourceGene != null)
-                {
-                    _ResourceGene = (Gene_BasicResource)parent.pawn.genes.GetGene(Props.enchantDef.resourceGene);
-                    if (_ResourceGene != null)
-                        return _ResourceGene;
-                }
-
-                _ResourceGene = parent.pawn.genes.GetFirstGeneOfType<Gene_BasicResource>();
-                return _ResourceGene;
+                cachedResourceGene = (Gene_BasicResource)parent.pawn.genes.GetGene(Props.enchantDef.resourceGene);
+                if (cachedResourceGene != null)
+                    return cachedResourceGene;
             }
+
+            // fallback
+            cachedResourceGene = parent.pawn.genes.GetFirstGeneOfType<Gene_BasicResource>();
+            return cachedResourceGene;
         }
 
-        private BloodDemonArtsGene BloodDemonArtsGene => this.parent.pawn.genes.GetFirstGeneOfType<BloodDemonArtsGene>();
+        private BloodDemonArtsGene DemonGene => this.parent.pawn.genes.GetFirstGeneOfType<BloodDemonArtsGene>();
 
         public override void OnToggleOff()
         {
-            RemoveHediff(this.parent.pawn);
+            var hediff = parent.pawn.health.hediffSet.GetFirstHediffOfDef(Props.enchantDef.enchantHediff);
+            if (hediff != null)
+            {
+                parent.pawn.health.RemoveHediff(hediff);
+                Messages.Message("Removed " + Props.enchantDef.enchantHediff.label + " from " + parent.pawn.Label,
+                    MessageTypeDefOf.NeutralEvent);
+            }
         }
 
         public override void OnToggleOn()
         {
-            ApplyHediff(this.parent.pawn);
+            parent.pawn.health.GetOrAddHediff(Props.enchantDef.enchantHediff);
+            Messages.Message("Added " + Props.enchantDef.enchantHediff.label + " to " + parent.pawn.Label,
+                MessageTypeDefOf.NeutralEvent);
         }
 
         public override void CompTick()
         {
             base.CompTick();
-            if (IsActive)
+            if (!IsActive) return;
+
+            tickCounter++;
+            if (tickCounter >= Props.enchantDef.ticksBetweenCost)
             {
-                resourceCostTimer += 1;
-
-                if (resourceCostTimer >= Props.enchantDef.ticksBetweenCost)
+                var resourceGene = GetResourceGene();
+                if (resourceGene != null)
                 {
-                    if (ResourceGene != null)
-                    {
-                        ResourceGene.Consume(Props.enchantDef.resourceCostPerTick);
-                    }
-
-                    if (ShouldCancel())
-                    {
-                        this.OnToggleOff();
-                    }
-
-                    resourceCostTimer = 0;
+                    resourceGene.Consume(Props.enchantDef.resourceCostPerTick);
                 }
+
+                // check if we should stop
+                if (NeedToCancel())
+                {
+                    this.OnToggleOff();
+                }
+
+                tickCounter = 0;
             }
         }
 
         public override bool CanStart()
         {
-            if (Props.enchantDef == null)
-            {
-                return false;
-            }
+            if (Props.enchantDef == null) return false;
 
-            if (ResourceGene != null)
+            var resourceGene = GetResourceGene();
+            if (resourceGene != null)
             {
-                return Props.enchantDef.resourceCostPerTick > 0 && ResourceGene.Has(GetChannelCost());
+                float cost = Props.enchantDef.resourceCostPerTick;
+                return cost > 0 && resourceGene.Has(cost);
             }
             return true;
         }
 
-        private float GetChannelCost()
+        private bool NeedToCancel()
         {
-            return Props.enchantDef != null ? Props.enchantDef.resourceCostPerTick : 5f;
-        }
-
-        private bool ShouldCancel()
-        {
-            if (ResourceGene != null)
+            var resourceGene = GetResourceGene();
+            if (resourceGene != null)
             {
-                return Props.enchantDef.resourceCostPerTick > 0 && !ResourceGene.Has(GetChannelCost());
+                float cost = Props.enchantDef.resourceCostPerTick;
+                return cost > 0 && !resourceGene.Has(cost);
             }
-
             return false;
-        }
-
-        private void ApplyHediff(Pawn Pawn)
-        {
-            Pawn.health.GetOrAddHediff(Props.enchantDef.enchantHediff);
-            Messages.Message("Added " + Props.enchantDef.enchantHediff.label + " to " + Pawn.Label,
-                MessageTypeDefOf.NeutralEvent);
-        }
-
-        private void RemoveHediff(Pawn Pawn)
-        {
-            Hediff existingHediff = Pawn.health.hediffSet.GetFirstHediffOfDef(Props.enchantDef.enchantHediff);
-
-            if (existingHediff != null)
-            {
-                Pawn.health.RemoveHediff(existingHediff);
-                Messages.Message("Removed " + Props.enchantDef.enchantHediff.label + " from " + Pawn.Label,
-                    MessageTypeDefOf.NeutralEvent);
-            }
         }
 
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look(ref resourceCostTimer, "resourceCostTimer", 0);
+            Scribe_Values.Look(ref tickCounter, "tickCounter", 0);
         }
     }
 }

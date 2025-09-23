@@ -20,7 +20,6 @@ namespace AnimeArsenal
 
         public float nutritionGain = 0.8f;
         public bool canTargetCorpses = true;
-
         public bool canTargetLiving = false;
         public float healAmount = 15f;
         public float resourceRestore = 10f;
@@ -40,92 +39,75 @@ namespace AnimeArsenal
     public class CompAbilityEffect_DemonConsume : CompAbilityEffect
     {
         public new AbilityCompProperties_DemonConsume Props => (AbilityCompProperties_DemonConsume)props;
-
         private BloodDemonArtsGene BloodGene => parent.pawn.genes?.GetFirstGeneOfType<BloodDemonArtsGene>();
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            List<LocalTargetInfo> targets = new List<LocalTargetInfo>();
+            var targets = new List<LocalTargetInfo>();
 
             if (Props.areaOfEffect && Props.maxTargets > 1)
-            {
-                targets = FindTargetsInArea(target, Props.maxTargets);
-            }
+                targets = GetNearbyTargets(target, Props.maxTargets);
             else
-            {
                 targets.Add(target);
-            }
 
-            foreach (var tgt in targets)
-            {
-                ProcessSingleTarget(tgt);
-            }
+            foreach (var t in targets)
+                ConsumeTarget(t);
         }
 
-        private List<LocalTargetInfo> FindTargetsInArea(LocalTargetInfo centerTarget, int maxTargets)
+        private List<LocalTargetInfo> GetNearbyTargets(LocalTargetInfo center, int max)
         {
-            List<LocalTargetInfo> targets = new List<LocalTargetInfo>();
-            targets.Add(centerTarget);
+            var targets = new List<LocalTargetInfo> { center };
 
-            if (centerTarget.Thing?.Map == null) return targets;
+            if (center.Thing?.Map == null) return targets;
 
-            var cellsInRange = GenRadial.RadialCellsAround(centerTarget.Cell, Props.range, true)
-                .Take(100) 
-                .ToList();
+            var cells = GenRadial.RadialCellsAround(center.Cell, Props.range, true).Take(100);
 
-            foreach (var cell in cellsInRange)
+            foreach (var cell in cells)
             {
-                if (targets.Count >= maxTargets) break;
+                if (targets.Count >= max) break;
 
-                var things = cell.GetThingList(centerTarget.Thing.Map);
-                foreach (var thing in things)
+                foreach (var thing in cell.GetThingList(center.Thing.Map))
                 {
-                    if (targets.Count >= maxTargets) break;
+                    if (targets.Count >= max) break;
 
-                    LocalTargetInfo potentialTarget = new LocalTargetInfo(thing);
-                    if (thing != centerTarget.Thing && Valid(potentialTarget, false))
-                    {
-                        targets.Add(potentialTarget);
-                    }
+                    var potential = new LocalTargetInfo(thing);
+                    if (thing != center.Thing && Valid(potential, false))
+                        targets.Add(potential);
                 }
             }
 
             return targets;
         }
 
-        private void ProcessSingleTarget(LocalTargetInfo target)
+        private void ConsumeTarget(LocalTargetInfo target)
         {
-            Pawn targetPawn = null;
-            Corpse targetCorpse = null;
+            Pawn pawn = null;
+            Corpse corpse = null;
 
-            if (target.Thing is Pawn pawn)
+            if (target.Thing is Pawn p)
+                pawn = p;
+            else if (target.Thing is Corpse c)
             {
-                targetPawn = pawn;
-            }
-            else if (target.Thing is Corpse corpse)
-            {
-                targetCorpse = corpse;
-                targetPawn = corpse.InnerPawn;
+                corpse = c;
+                pawn = c.InnerPawn;
             }
 
-            if (targetPawn == null) return;
+            if (pawn == null) return;
 
-            ConsumeTarget(targetPawn, targetCorpse);
+            DoConsume(pawn, corpse);
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            Pawn targetPawn = null;
-            Corpse targetCorpse = null;
+            Pawn pawn = null;
+            Corpse corpse = null;
 
-            if (target.Thing is Pawn pawn)
+            if (target.Thing is Pawn p)
+                pawn = p;
+            else if (target.Thing is Corpse c && Props.canTargetCorpses)
             {
-                targetPawn = pawn;
-            }
-            else if (target.Thing is Corpse corpse && Props.canTargetCorpses)
-            {
-                targetCorpse = corpse;
-                targetPawn = corpse.InnerPawn;
+                corpse = c;
+                pawn = c.InnerPawn;
             }
             else
             {
@@ -134,47 +116,42 @@ namespace AnimeArsenal
                 return false;
             }
 
-            if (targetPawn == parent.pawn)
+            if (pawn == parent.pawn)
             {
                 if (throwMessages)
                     Messages.Message("Cannot target self", MessageTypeDefOf.RejectInput, false);
                 return false;
             }
 
-            bool isValidTarget = false;
+            bool canConsume = false;
 
-            if (targetCorpse != null)
+            if (corpse != null)
             {
-                isValidTarget = true;
+                canConsume = true;
             }
-            else if (targetPawn != null)
+            else if (pawn != null)
             {
-                if (Props.canTargetLiving && !targetPawn.Dead)
-                {
-                    isValidTarget = true;
-                }
-                else if (targetPawn.Dead || targetPawn.Downed)
-                {
-                    isValidTarget = true;
-                }
-                else if (targetPawn.health.InPainShock || targetPawn.health.capacities.CanBeAwake == false)
-                {
-                    isValidTarget = true;
-                }
+                if (Props.canTargetLiving && !pawn.Dead)
+                    canConsume = true;
+                else if (pawn.Dead || pawn.Downed)
+                    canConsume = true;
+                else if (pawn.health.InPainShock || !pawn.health.capacities.CanBeAwake)
+                    canConsume = true;
             }
 
-            if (!isValidTarget)
+            if (!canConsume)
             {
-                string message = Props.canTargetLiving ?
-                    "Cannot target this pawn" :
-                    "Can only consume downed, incapacitated, or dead pawns";
-
                 if (throwMessages)
-                    Messages.Message(message, MessageTypeDefOf.RejectInput, false);
+                {
+                    string msg = Props.canTargetLiving ?
+                        "Cannot target this pawn" :
+                        "Can only consume downed, incapacitated, or dead pawns";
+                    Messages.Message(msg, MessageTypeDefOf.RejectInput, false);
+                }
                 return false;
             }
 
-            if (targetCorpse != null && targetCorpse.GetRotStage() == RotStage.Dessicated)
+            if (corpse?.GetRotStage() == RotStage.Dessicated)
             {
                 if (throwMessages)
                     Messages.Message("Corpse too dessicated to consume", MessageTypeDefOf.RejectInput, false);
@@ -184,93 +161,85 @@ namespace AnimeArsenal
             return true;
         }
 
-        private void ConsumeTarget(Pawn target, Corpse corpse = null)
+        private void DoConsume(Pawn target, Corpse corpse = null)
         {
-            Pawn caster = parent.pawn;
+            var caster = parent.pawn;
 
+            
             if (!target.Dead && Props.instantKillChance > 0f && Rand.Range(0f, 1f) <= Props.instantKillChance)
             {
-                PerformInstantKill(target, corpse);
+                DevourCompletely(target, corpse);
                 return;
             }
 
-            float healAmount = CalculateHealAmount(target, corpse);
-            float resourceGain = CalculateResourceGain(target, corpse);
-            float nutritionGain = CalculateNutritionGain(target, corpse);
+            float heal = GetHealAmount(target, corpse);
+            float resource = GetResourceGain(target, corpse);
+            float nutrition = GetNutritionGain(target, corpse);
 
-            var bloodLossHediff = caster.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
-            if (bloodLossHediff != null)
+            
+            var bloodLoss = caster.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
+            if (bloodLoss != null)
             {
-                bloodLossHediff.Severity = Mathf.Max(0f, bloodLossHediff.Severity - (healAmount * 0.01f));
-                if (bloodLossHediff.Severity <= 0f)
-                {
-                    caster.health.RemoveHediff(bloodLossHediff);
-                }
+                bloodLoss.Severity = Mathf.Max(0f, bloodLoss.Severity - (heal * 0.01f));
+                if (bloodLoss.Severity <= 0f)
+                    caster.health.RemoveHediff(bloodLoss);
             }
 
+            
             var injuries = caster.health.hediffSet.hediffs
                 .OfType<Hediff_Injury>()
                 .Where(x => x.Severity > 0)
                 .ToList();
 
-            float remainingHeal = healAmount;
-
+            float healLeft = heal;
             for (int i = injuries.Count - 1; i >= 0; i--)
             {
-                if (remainingHeal <= 0) break;
+                if (healLeft <= 0) break;
 
                 var injury = injuries[i];
-                float healThisInjury = Mathf.Min(remainingHeal, injury.Severity);
-                injury.Severity = Mathf.Max(0f, injury.Severity - healThisInjury);
-                remainingHeal -= healThisInjury;
+                float healThis = Mathf.Min(healLeft, injury.Severity);
+                injury.Severity = Mathf.Max(0f, injury.Severity - healThis);
+                healLeft -= healThis;
 
                 if (injury.Severity <= 0f)
-                {
                     injury.PostRemoved();
-                }
             }
 
+            
             if (BloodGene != null)
-            {
                 BloodGene.Value = Mathf.Min(BloodGene.Max, BloodGene.Value + Props.resourceRestore);
-            }
 
-            RestoreHunger(caster, nutritionGain);
+            
+            FeedCaster(caster, nutrition);
 
-            ApplyConsumptionHediffs(caster, target);
+            
+            TryApplyHediffs(caster, target);
 
-            CreateConsumptionEffects(corpse != null ? corpse.Position : target.Position, corpse?.Map ?? target.Map);
+            
+            MakeEffects(corpse?.Position ?? target.Position, corpse?.Map ?? target.Map);
 
-            ProcessTargetAfterConsumption(target, corpse);
+            
+            ProcessTarget(target, corpse);
 
-            AddConsumptionThoughts(caster, target, corpse != null);
+            
+            HandleThoughts(caster, target, corpse != null);
         }
 
-        private void PerformInstantKill(Pawn target, Corpse corpse = null)
+        private void DevourCompletely(Pawn target, Corpse corpse = null)
         {
-            Pawn caster = parent.pawn;
+            var caster = parent.pawn;
 
             if (target.Dead) return;
 
             Messages.Message($"{caster.LabelShort} devours {target.LabelShort} completely!",
                 caster, MessageTypeDefOf.NeutralEvent, false);
 
-            DamageInfo killDamage = new DamageInfo(
-                DamageDefOf.Bite,
-                target.MaxHitPoints * 2f,
-                999f,
-                -1f,
-                caster,
-                null,
-                null,
-                DamageInfo.SourceCategory.ThingOrUnknown
-            );
+            var killDmg = new DamageInfo(DamageDefOf.Bite, target.MaxHitPoints * 2f, 999f, -1f, caster, null, null, DamageInfo.SourceCategory.ThingOrUnknown);
+            target.TakeDamage(killDmg);
 
-            target.TakeDamage(killDamage);
-
-            float healAmount = Props.healAmount * 1.5f; 
-            float resourceGain = Props.resourceRestore * 1.5f;
-            float nutritionGain = Props.nutritionGain * 1.2f;
+            float heal = Props.healAmount * 1.5f;
+            float resource = Props.resourceRestore * 1.5f;
+            float nutrition = Props.nutritionGain * 1.2f;
 
             var injuries = caster.health.hediffSet.hediffs
                 .OfType<Hediff_Injury>()
@@ -279,250 +248,182 @@ namespace AnimeArsenal
 
             foreach (var injury in injuries.Take(3))
             {
-                injury.Severity = Mathf.Max(0f, injury.Severity - (healAmount / 3f));
+                injury.Severity = Mathf.Max(0f, injury.Severity - (heal / 3f));
                 if (injury.Severity <= 0f)
-                {
                     injury.PostRemoved();
-                }
             }
 
             if (BloodGene != null)
-            {
-                BloodGene.Value = Mathf.Min(BloodGene.Max, BloodGene.Value + resourceGain);
-            }
+                BloodGene.Value = Mathf.Min(BloodGene.Max, BloodGene.Value + resource);
 
-            RestoreHunger(caster, nutritionGain);
-
-            CreateConsumptionEffects(target.Position, target.Map);
+            FeedCaster(caster, nutrition);
+            MakeEffects(target.Position, target.Map);
 
             if (target.Dead)
             {
-                Corpse newCorpse = target.Corpse;
+                var newCorpse = target.Corpse;
                 if (newCorpse != null && !newCorpse.Destroyed)
-                {
                     newCorpse.Destroy();
-                }
             }
 
-            AddConsumptionThoughts(caster, target, false);
+            HandleThoughts(caster, target, false);
         }
 
-        private void RestoreHunger(Pawn caster, float nutritionAmount)
+        private void FeedCaster(Pawn caster, float amount)
         {
-            if (caster.needs?.food != null)
-            {
-                caster.needs.food.CurLevel = Mathf.Min(caster.needs.food.MaxLevel,
-                    caster.needs.food.CurLevel + nutritionAmount);
+            if (caster.needs?.food == null) return;
 
-                if (nutritionAmount > 0.1f)
-                {
-                    Messages.Message($"{caster.LabelShort} feels satisfied from the consumption.",
-                        caster, MessageTypeDefOf.PositiveEvent, false);
-                }
-            }
+            caster.needs.food.CurLevel = Mathf.Min(caster.needs.food.MaxLevel,
+                caster.needs.food.CurLevel + amount);
+
+            if (amount > 0.1f)
+                Messages.Message($"{caster.LabelShort} feels satisfied from the consumption.",
+                    caster, MessageTypeDefOf.PositiveEvent, false);
         }
 
-        private void ApplyConsumptionHediffs(Pawn caster, Pawn target)
+        private void TryApplyHediffs(Pawn caster, Pawn target)
         {
             if (Props.hediffToApplyOnSelf != null && Rand.Range(0f, 1f) <= Props.hediffChanceOnSelf)
             {
-                Hediff hediff = caster.health.GetOrAddHediff(Props.hediffToApplyOnSelf);
-                hediff.Severity = Props.bloodlustSeverity; 
+                var h = caster.health.GetOrAddHediff(Props.hediffToApplyOnSelf);
+                h.Severity = Props.bloodlustSeverity;
             }
 
             if (!target.Dead && Props.hediffToApplyOnTarget != null && Rand.Range(0f, 1f) <= Props.hediffChanceOnTarget)
             {
-                Hediff hediff = target.health.GetOrAddHediff(Props.hediffToApplyOnTarget);
-                hediff.Severity = Props.drainSeverity; 
+                var h = target.health.GetOrAddHediff(Props.hediffToApplyOnTarget);
+                h.Severity = Props.drainSeverity;
             }
         }
 
-        private float CalculateHealAmount(Pawn target, Corpse corpse = null)
+        private float GetHealAmount(Pawn target, Corpse corpse = null)
         {
-            float baseHeal = Props.healAmount; 
-
-            float sizeFactor = target.BodySize;
-            float healthFactor = corpse != null ? 0.7f : target.health.summaryHealth.SummaryHealthPercent;
+            float heal = Props.healAmount;
+            float size = target.BodySize;
+            float health = corpse != null ? 0.7f : target.health.summaryHealth.SummaryHealthPercent;
 
             if (corpse != null)
             {
                 switch (corpse.GetRotStage())
                 {
-                    case RotStage.Fresh:
-                        healthFactor = 0.9f;
-                        break;
-                    case RotStage.Rotting:
-                        healthFactor = 0.6f;
-                        break;
-                    case RotStage.Dessicated:
-                        healthFactor = 0.2f;
-                        break;
+                    case RotStage.Fresh: health = 0.9f; break;
+                    case RotStage.Rotting: health = 0.6f; break;
+                    case RotStage.Dessicated: health = 0.2f; break;
                 }
             }
 
-            return baseHeal * sizeFactor * (0.5f + healthFactor * 0.5f);
+            return heal * size * (0.5f + health * 0.5f);
         }
 
-        private float CalculateResourceGain(Pawn target, Corpse corpse = null)
+        private float GetResourceGain(Pawn target, Corpse corpse = null)
         {
-            float baseResource = Props.resourceRestore / 100f;
+            float resource = Props.resourceRestore / 100f;
 
-            if (target.RaceProps.BloodDef != null)
-                baseResource += 0.1f;
-
-            if (target.RaceProps.IsFlesh)
-                baseResource += 0.1f;
+            if (target.RaceProps.BloodDef != null) resource += 0.1f;
+            if (target.RaceProps.IsFlesh) resource += 0.1f;
 
             if (corpse != null)
             {
                 switch (corpse.GetRotStage())
                 {
-                    case RotStage.Fresh:
-                        baseResource *= 0.9f;
-                        break;
-                    case RotStage.Rotting:
-                        baseResource *= 0.6f;
-                        break;
-                    case RotStage.Dessicated:
-                        baseResource *= 0.3f;
-                        break;
+                    case RotStage.Fresh: resource *= 0.9f; break;
+                    case RotStage.Rotting: resource *= 0.6f; break;
+                    case RotStage.Dessicated: resource *= 0.3f; break;
                 }
             }
 
-            return baseResource * 100f; 
+            return resource * 100f;
         }
 
-        private float CalculateNutritionGain(Pawn target, Corpse corpse = null)
+        private float GetNutritionGain(Pawn target, Corpse corpse = null)
         {
-            float baseNutrition = Props.nutritionGain;
-
-            float sizeFactor = target.BodySize;
-            baseNutrition *= sizeFactor;
+            float nutrition = Props.nutritionGain * target.BodySize;
 
             if (corpse != null)
             {
                 switch (corpse.GetRotStage())
                 {
-                    case RotStage.Fresh:
-                        baseNutrition *= 0.95f;
-                        break;
-                    case RotStage.Rotting:
-                        baseNutrition *= 0.7f;
-                        break;
-                    case RotStage.Dessicated:
-                        baseNutrition *= 0.4f;
-                        break;
+                    case RotStage.Fresh: nutrition *= 0.95f; break;
+                    case RotStage.Rotting: nutrition *= 0.7f; break;
+                    case RotStage.Dessicated: nutrition *= 0.4f; break;
                 }
             }
 
-            return Mathf.Min(baseNutrition, 1.0f);
+            return Mathf.Min(nutrition, 1.0f);
         }
 
-        private void CreateConsumptionEffects(IntVec3 position, Map map)
+        private void MakeEffects(IntVec3 pos, Map map)
         {
             if (map != null)
             {
-                FilthMaker.TryMakeFilth(position, map, ThingDefOf.Filth_Blood, 3);
-
-                SoundDefOf.Pawn_Melee_Punch_HitPawn.PlayOneShot(new TargetInfo(position, map));
+                FilthMaker.TryMakeFilth(pos, map, ThingDefOf.Filth_Blood, 3);
+                SoundDefOf.Pawn_Melee_Punch_HitPawn.PlayOneShot(new TargetInfo(pos, map));
             }
         }
 
-        private void ProcessTargetAfterConsumption(Pawn target, Corpse corpse = null)
+        private void ProcessTarget(Pawn target, Corpse corpse = null)
         {
             if (corpse != null)
             {
                 if (!corpse.Destroyed)
-                {
                     corpse.Destroy();
-                }
             }
             else if (target.Dead)
             {
-                Corpse targetCorpse = target.Corpse;
+                var targetCorpse = target.Corpse;
                 if (targetCorpse != null && !targetCorpse.Destroyed)
-                {
                     targetCorpse.Destroy();
-                }
             }
             else
             {
-                
-                float drainDamage = target.MaxHitPoints * 0.6f * (Props.drainSeverity / 2f); 
-
-                DamageInfo damage = new DamageInfo(
-                    DamageDefOf.Bite,
-                    drainDamage,
-                    999f,
-                    -1f,
-                    parent.pawn,
-                    null,
-                    null,
-                    DamageInfo.SourceCategory.ThingOrUnknown
-                );
-
-                target.TakeDamage(damage);
+                float drainDmg = target.MaxHitPoints * 0.6f * (Props.drainSeverity / 2f);
+                var dmg = new DamageInfo(DamageDefOf.Bite, drainDmg, 999f, -1f, parent.pawn, null, null, DamageInfo.SourceCategory.ThingOrUnknown);
+                target.TakeDamage(dmg);
 
                 if (!target.Dead)
                 {
-                    Hediff bloodLoss = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, target);
-                    bloodLoss.Severity = Props.drainSeverity * 0.3f; 
+                    var bloodLoss = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, target);
+                    bloodLoss.Severity = Props.drainSeverity * 0.3f;
                     target.health.AddHediff(bloodLoss);
                 }
                 else
                 {
-                    Corpse newCorpse = target.Corpse;
+                    var newCorpse = target.Corpse;
                     if (newCorpse != null && !newCorpse.Destroyed)
-                    {
                         newCorpse.Destroy();
-                    }
                 }
             }
         }
 
-        private void AddConsumptionThoughts(Pawn caster, Pawn target, bool wasCorpse)
+        private void HandleThoughts(Pawn caster, Pawn target, bool wasCorpse)
         {
             if (caster.needs?.mood?.thoughts?.memories == null) return;
 
             try
             {
                 string thoughtName = wasCorpse ? "DemonCorpseConsumptionMemory" : "DemonConsumptionMemory";
-                var consumeThought = DefDatabase<ThoughtDef>.GetNamedSilentFail(thoughtName);
-                if (consumeThought != null)
-                {
-                    caster.needs.mood.thoughts.memories.TryGainMemory(consumeThought);
-                }
-                else
-                {
-                    consumeThought = DefDatabase<ThoughtDef>.GetNamedSilentFail("DemonConsumptionMemory");
-                    if (consumeThought != null)
-                    {
-                        caster.needs.mood.thoughts.memories.TryGainMemory(consumeThought);
-                    }
-                }
+                var thought = DefDatabase<ThoughtDef>.GetNamedSilentFail(thoughtName) ??
+                             DefDatabase<ThoughtDef>.GetNamedSilentFail("DemonConsumptionMemory");
+
+                if (thought != null)
+                    caster.needs.mood.thoughts.memories.TryGainMemory(thought);
 
                 if (caster.Map != null)
                 {
-                    string witnessThoughtName = wasCorpse ? "WitnessedCorpseConsumptionMemory" : "WitnessedDemonConsumptionMemory";
-                    var witnessThought = DefDatabase<ThoughtDef>.GetNamedSilentFail(witnessThoughtName);
-                    if (witnessThought == null)
-                    {
-                        witnessThought = DefDatabase<ThoughtDef>.GetNamedSilentFail("WitnessedDemonConsumptionMemory");
-                    }
+                    string witnessName = wasCorpse ? "WitnessedCorpseConsumptionMemory" : "WitnessedDemonConsumptionMemory";
+                    var witnessThought = DefDatabase<ThoughtDef>.GetNamedSilentFail(witnessName) ??
+                                       DefDatabase<ThoughtDef>.GetNamedSilentFail("WitnessedDemonConsumptionMemory");
 
                     if (witnessThought != null)
                     {
-                        var witnessRadius = GenRadial.RadialDistinctThingsAround(caster.Position, caster.Map, 10f, true);
-                        foreach (var thing in witnessRadius)
+                        var nearby = GenRadial.RadialDistinctThingsAround(caster.Position, caster.Map, 10f, true);
+                        foreach (var thing in nearby)
                         {
                             if (thing is Pawn witness && witness != caster && witness.RaceProps.Humanlike)
                             {
                                 if (GenSight.LineOfSight(caster.Position, witness.Position, caster.Map))
                                 {
-                                    if (witness.needs?.mood?.thoughts?.memories != null)
-                                    {
-                                        witness.needs.mood.thoughts.memories.TryGainMemory(witnessThought, caster);
-                                    }
+                                    witness.needs?.mood?.thoughts?.memories?.TryGainMemory(witnessThought, caster);
                                 }
                             }
                         }

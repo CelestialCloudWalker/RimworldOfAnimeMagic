@@ -42,27 +42,19 @@ namespace AnimeArsenal
         {
             base.MapComponentTick();
 
-            List<Pawn> pawnsWithSunlightVulnerability = map.mapPawns.AllPawnsSpawned
-                .Where(p => HasSunlightVulnerability(p))
-                .ToList();
+            var vulnPawns = map.mapPawns.AllPawnsSpawned.Where(p => HasSunlightVuln(p)).ToList();
 
-            foreach (Pawn pawn in pawnsWithSunlightVulnerability)
+            foreach (var pawn in vulnPawns)
             {
                 if (pawn?.Destroyed != true)
                 {
-                    var extension = GetSunlightExtension(pawn);
-                    if (extension != null)
-                    {
-                        ProcessPawnSunlightStatus(pawn, extension);
-                    }
+                    var ext = GetSunlightExt(pawn);
+                    if (ext != null) ProcessPawn(pawn, ext);
                 }
             }
 
-            List<int> pawnsToRemove = accumulatedDamage.Keys
-                .Where(id => !map.mapPawns.AllPawnsSpawned.Any(p => p.thingIDNumber == id))
-                .ToList();
-
-            foreach (int id in pawnsToRemove)
+            var toRemove = accumulatedDamage.Keys.Where(id => !map.mapPawns.AllPawnsSpawned.Any(p => p.thingIDNumber == id)).ToList();
+            foreach (int id in toRemove)
             {
                 accumulatedDamage.Remove(id);
                 ticksOutOfSun.Remove(id);
@@ -70,166 +62,107 @@ namespace AnimeArsenal
             }
         }
 
-        private void ProcessPawnSunlightStatus(Pawn pawn, SunlightDamageExtension extension)
+        private void ProcessPawn(Pawn pawn, SunlightDamageExtension ext)
         {
-            bool isExposed = IsExposedToSunlight(pawn, extension);
-            int pawnId = pawn.thingIDNumber;
+            bool exposed = IsExposed(pawn, ext);
+            int id = pawn.thingIDNumber;
 
-            if (isExposed)
+            if (exposed)
             {
-                ticksOutOfSun.Remove(pawnId);
-
-                if (Find.TickManager.TicksGame % extension.ticksBetweenDamage == 0)
+                ticksOutOfSun.Remove(id);
+                if (Find.TickManager.TicksGame % ext.ticksBetweenDamage == 0)
                 {
-                    BuildSunlightMeter(pawn);
+                    DoDamage(pawn);
                 }
             }
             else
             {
-                if (!ticksOutOfSun.ContainsKey(pawnId))
-                {
-                    ticksOutOfSun[pawnId] = 0;
-                }
-                ticksOutOfSun[pawnId]++;
+                if (!ticksOutOfSun.ContainsKey(id)) ticksOutOfSun[id] = 0;
+                ticksOutOfSun[id]++;
 
-                if (ticksOutOfSun[pawnId] >= extension.ticksToResetDamage)
+                if (ticksOutOfSun[id] >= ext.ticksToResetDamage)
                 {
-                    if (accumulatedDamage.ContainsKey(pawnId))
+                    if (accumulatedDamage.ContainsKey(id))
                     {
-                        accumulatedDamage.Remove(pawnId);
-                        lastWarningTick.Remove(pawnId);
+                        accumulatedDamage.Remove(id);
+                        lastWarningTick.Remove(id);
                         MoteMaker.ThrowText(pawn.DrawPos, map, "Sunlight damage reset", 2f);
                     }
-                    ticksOutOfSun.Remove(pawnId);
+                    ticksOutOfSun.Remove(id);
                 }
             }
         }
 
-        private bool HasSunlightVulnerability(Pawn pawn)
+        private bool HasSunlightVuln(Pawn pawn)
         {
             if (pawn.genes == null) return false;
-
-            return pawn.genes.GenesListForReading.Any(gene =>
-                gene.Active && gene.def.GetModExtension<SunlightDamageExtension>() != null);
+            return pawn.genes.GenesListForReading.Any(gene => gene.Active && gene.def.GetModExtension<SunlightDamageExtension>() != null);
         }
 
-        private SunlightDamageExtension GetSunlightExtension(Pawn pawn)
+        private SunlightDamageExtension GetSunlightExt(Pawn pawn)
         {
             if (pawn.genes == null) return null;
-
-            var gene = pawn.genes.GenesListForReading.FirstOrDefault(g =>
-                g.Active && g.def.GetModExtension<SunlightDamageExtension>() != null);
-
+            var gene = pawn.genes.GenesListForReading.FirstOrDefault(g => g.Active && g.def.GetModExtension<SunlightDamageExtension>() != null);
             return gene?.def.GetModExtension<SunlightDamageExtension>();
         }
 
-        private bool IsExposedToSunlight(Pawn pawn, SunlightDamageExtension extension)
+        private bool IsExposed(Pawn pawn, SunlightDamageExtension ext)
         {
-            if (map.skyManager.CurSkyGlow <= 0.5f || pawn.Position.Roofed(map))
-            {
-                return false;
-            }
+            if (map.skyManager.CurSkyGlow <= 0.5f || pawn.Position.Roofed(map)) return false;
+            if (ext.requireHeadCoverage && !HasHeadCover(pawn)) return true;
 
-            if (extension.requireHeadCoverage && !HasHeadCoverage(pawn))
-            {
-                return true;
-            }
-
-            
-            float totalCoverage = CalculateArmorCoverage(pawn);
-
-            return totalCoverage < extension.minimumCoverageForProtection;
+            float coverage = CalcCoverage(pawn);
+            return coverage < ext.minimumCoverageForProtection;
         }
 
-        private bool HasHeadCoverage(Pawn pawn)
+        private bool HasHeadCover(Pawn pawn)
         {
-            if (pawn.apparel?.WornApparel == null || pawn.apparel.WornApparel.Count == 0)
-            {
-                return false;
-            }
+            if (pawn.apparel?.WornApparel == null || pawn.apparel.WornApparel.Count == 0) return false;
 
-            
-            List<string> headPartNames = new List<string>
-            {
-                "FullHead",
-                "UpperHead",
-                "Eyes"
-            };
+            var headParts = new List<string> { "FullHead", "UpperHead", "Eyes" };
 
-            foreach (string partName in headPartNames)
+            foreach (string partName in headParts)
             {
                 var bodyPart = DefDatabase<BodyPartGroupDef>.GetNamedSilentFail(partName);
                 if (bodyPart != null)
                 {
-                    
-                    foreach (Apparel apparel in pawn.apparel.WornApparel)
+                    foreach (Apparel app in pawn.apparel.WornApparel)
                     {
-                        if (apparel.def.apparel.bodyPartGroups.Contains(bodyPart))
-                        {
-                            return true; 
-                        }
+                        if (app.def.apparel.bodyPartGroups.Contains(bodyPart)) return true;
                     }
                 }
             }
-
-            return false; 
+            return false;
         }
 
-        private float CalculateArmorCoverage(Pawn pawn)
+        private float CalcCoverage(Pawn pawn)
         {
-            if (pawn.apparel?.WornApparel == null || pawn.apparel.WornApparel.Count == 0)
-            {
-                return 0f;
-            }
+            if (pawn.apparel?.WornApparel == null || pawn.apparel.WornApparel.Count == 0) return 0f;
 
-            
-            List<string> criticalBodyPartNames = new List<string>
-            {
-                "Torso",
-                "Neck",
-                "Shoulders",
-                "Arms",
-                "Legs",
-                "FullHead",
-                "UpperHead",
-                "Eyes",
-                "Face",
-                "Hands",
-                "Feet"
-            };
+            var criticalParts = new List<string>
+            { "Torso", "Neck", "Shoulders", "Arms", "Legs", "FullHead", "UpperHead", "Eyes", "Face", "Hands", "Feet" };
 
-            List<BodyPartGroupDef> criticalBodyParts = new List<BodyPartGroupDef>();
-
-            
-            foreach (string partName in criticalBodyPartNames)
+            var bodyParts = new List<BodyPartGroupDef>();
+            foreach (string partName in criticalParts)
             {
                 var bodyPart = DefDatabase<BodyPartGroupDef>.GetNamedSilentFail(partName);
-                if (bodyPart != null)
-                {
-                    criticalBodyParts.Add(bodyPart);
-                }
+                if (bodyPart != null) bodyParts.Add(bodyPart);
             }
 
-            if (criticalBodyParts.Count == 0)
-            {
-                
-                return pawn.apparel.WornApparel.Any(a => a.def.IsApparel) ? 0.8f : 0f;
-            }
+            if (bodyParts.Count == 0) return pawn.apparel.WornApparel.Any(a => a.def.IsApparel) ? 0.8f : 0f;
 
             float totalCoverage = 0f;
             int coveredParts = 0;
 
-            foreach (BodyPartGroupDef bodyPartGroup in criticalBodyParts)
+            foreach (var bodyPartGroup in bodyParts)
             {
                 float partCoverage = 0f;
-
-                foreach (Apparel apparel in pawn.apparel.WornApparel)
+                foreach (var apparel in pawn.apparel.WornApparel)
                 {
                     if (apparel.def.apparel.bodyPartGroups.Contains(bodyPartGroup))
                     {
-                        
-                        float apparelCoverage = GetApparelCoverage(apparel);
-                        partCoverage = Mathf.Max(partCoverage, apparelCoverage);
+                        float apparelCov = GetApparelCov(apparel);
+                        partCoverage = Mathf.Max(partCoverage, apparelCov);
                     }
                 }
 
@@ -240,70 +173,50 @@ namespace AnimeArsenal
                 }
             }
 
-            
-            if (criticalBodyParts.Count == 0) return 0f;
+            if (bodyParts.Count == 0) return 0f;
 
-            
-            float bodyPartsCoveredRatio = (float)coveredParts / criticalBodyParts.Count;
-            float averagePartCoverage = coveredParts > 0 ? totalCoverage / coveredParts : 0f;
-
-            
-            return bodyPartsCoveredRatio * averagePartCoverage;
+            float bodyPartsCoveredRatio = (float)coveredParts / bodyParts.Count;
+            float avgPartCoverage = coveredParts > 0 ? totalCoverage / coveredParts : 0f;
+            return bodyPartsCoveredRatio * avgPartCoverage;
         }
 
-        private float GetApparelCoverage(Apparel apparel)
+        private float GetApparelCov(Apparel apparel)
         {
-            
-            ApparelLayerDef layer = apparel.def.apparel.LastLayer;
+            var layer = apparel.def.apparel.LastLayer;
 
-            if (layer == ApparelLayerDefOf.Shell || layer == ApparelLayerDefOf.Middle)
-            {
-                return 1.0f; 
-            }
-            else if (layer == ApparelLayerDefOf.OnSkin)
-            {
-                return 0.6f; 
-            }
+            if (layer == ApparelLayerDefOf.Shell || layer == ApparelLayerDefOf.Middle) return 1.0f;
+            else if (layer == ApparelLayerDefOf.OnSkin) return 0.6f;
 
-            
-            if (apparel.def.apparel.bodyPartGroups.Count >= 2)
-            {
-                return 0.8f; 
-            }
-
-            return 0.5f; 
+            if (apparel.def.apparel.bodyPartGroups.Count >= 2) return 0.8f;
+            return 0.5f;
         }
 
-        private void BuildSunlightMeter(Pawn pawn)
+        private void DoDamage(Pawn pawn)
         {
-            var extension = GetSunlightExtension(pawn);
-            if (extension == null) return;
+            var ext = GetSunlightExt(pawn);
+            if (ext == null) return;
 
             if (burningEffecter != null)
             {
                 burningEffecter.Trigger(new TargetInfo(pawn.Position, map), new TargetInfo(pawn.Position, map));
             }
 
-            if (!accumulatedDamage.ContainsKey(pawn.thingIDNumber))
-            {
-                accumulatedDamage[pawn.thingIDNumber] = 0f;
-            }
-            accumulatedDamage[pawn.thingIDNumber] += extension.damagePerTick;
+            if (!accumulatedDamage.ContainsKey(pawn.thingIDNumber)) accumulatedDamage[pawn.thingIDNumber] = 0f;
+            accumulatedDamage[pawn.thingIDNumber] += ext.damagePerTick;
 
-            int currentTick = Find.TickManager.TicksGame;
-            float damagePercent = (accumulatedDamage[pawn.thingIDNumber] / extension.damageThresholdBeforeDeath) * 100f;
+            int tick = Find.TickManager.TicksGame;
+            float damagePercent = (accumulatedDamage[pawn.thingIDNumber] / ext.damageThresholdBeforeDeath) * 100f;
 
-            
-            if (currentTick % 1000 == 0)
+            if (tick % 1000 == 0)
             {
-                float coverage = CalculateArmorCoverage(pawn);
-                bool hasHeadCoverage = HasHeadCoverage(pawn);
-                string headStatus = hasHeadCoverage ? "Protected" : "EXPOSED";
+                float coverage = CalcCoverage(pawn);
+                bool hasHeadCover = HasHeadCover(pawn);
+                string headStatus = hasHeadCover ? "Protected" : "EXPOSED";
                 MoteMaker.ThrowText(pawn.DrawPos, map, $"Head: {headStatus} | Coverage: {coverage:P0} | Exposure: {damagePercent:F1}%", 2f);
             }
-            else if (currentTick % 500 == 0)
+            else if (tick % 500 == 0)
             {
-                if (extension.requireHeadCoverage && !HasHeadCoverage(pawn))
+                if (ext.requireHeadCoverage && !HasHeadCover(pawn))
                 {
                     MoteMaker.ThrowText(pawn.DrawPos, map, $"Head exposed! Damage: {damagePercent:F1}%", 2f);
                 }
@@ -313,52 +226,37 @@ namespace AnimeArsenal
                 }
             }
 
-            if (accumulatedDamage[pawn.thingIDNumber] >= extension.damageThresholdBeforeDeath * 0.8f)
+            if (accumulatedDamage[pawn.thingIDNumber] >= ext.damageThresholdBeforeDeath * 0.8f)
             {
-                if (!lastWarningTick.ContainsKey(pawn.thingIDNumber) ||
-                    currentTick - lastWarningTick[pawn.thingIDNumber] >= 1000)
+                if (!lastWarningTick.ContainsKey(pawn.thingIDNumber) || tick - lastWarningTick[pawn.thingIDNumber] >= 1000)
                 {
-                    string warningMessage = extension.requireHeadCoverage && !HasHeadCoverage(pawn)
+                    string warning = ext.requireHeadCoverage && !HasHeadCover(pawn)
                         ? "WARNING: Head exposed to sunlight!"
                         : "WARNING: High sunlight exposure!";
-                    MoteMaker.ThrowText(pawn.DrawPos, map, warningMessage, 3f);
-                    lastWarningTick[pawn.thingIDNumber] = currentTick;
+                    MoteMaker.ThrowText(pawn.DrawPos, map, warning, 3f);
+                    lastWarningTick[pawn.thingIDNumber] = tick;
                 }
             }
 
-            if (accumulatedDamage[pawn.thingIDNumber] >= extension.damageThresholdBeforeDeath)
-            {
-                KillPawn(pawn);
-            }
+            if (accumulatedDamage[pawn.thingIDNumber] >= ext.damageThresholdBeforeDeath) KillPawn(pawn);
         }
 
         public float GetSunlightDamageLevel(Pawn pawn)
         {
-            if (accumulatedDamage.ContainsKey(pawn.thingIDNumber))
-            {
-                return accumulatedDamage[pawn.thingIDNumber];
-            }
+            if (accumulatedDamage.ContainsKey(pawn.thingIDNumber)) return accumulatedDamage[pawn.thingIDNumber];
             return 0f;
         }
 
         public float GetSunlightDamagePercentage(Pawn pawn)
         {
-            var extension = GetSunlightExtension(pawn);
-            if (extension == null) return 0f;
-
+            var ext = GetSunlightExt(pawn);
+            if (ext == null) return 0f;
             float currentDamage = GetSunlightDamageLevel(pawn);
-            return (currentDamage / extension.damageThresholdBeforeDeath) * 100f;
+            return (currentDamage / ext.damageThresholdBeforeDeath) * 100f;
         }
 
-        public float GetArmorCoverage(Pawn pawn)
-        {
-            return CalculateArmorCoverage(pawn);
-        }
-
-        public bool GetHeadCoverage(Pawn pawn)
-        {
-            return HasHeadCoverage(pawn);
-        }
+        public float GetArmorCoverage(Pawn pawn) => CalcCoverage(pawn);
+        public bool GetHeadCoverage(Pawn pawn) => HasHeadCover(pawn);
 
         private void KillPawn(Pawn pawn)
         {
@@ -368,7 +266,6 @@ namespace AnimeArsenal
             }
 
             FilthMaker.TryMakeFilth(pawn.Position, map, ThingDefOf.Filth_Blood, 3);
-
             pawn.Kill(null);
 
             accumulatedDamage.Remove(pawn.thingIDNumber);
@@ -379,14 +276,8 @@ namespace AnimeArsenal
         public override void FinalizeInit()
         {
             base.FinalizeInit();
-            if (burningEffecter == null)
-            {
-                burningEffecter = CelestialDefof.SunlightBurningEffect.Spawn();
-            }
-            if (deathEffecter == null)
-            {
-                deathEffecter = CelestialDefof.SunlightDeathEffect.Spawn();
-            }
+            if (burningEffecter == null) burningEffecter = CelestialDefof.SunlightBurningEffect.Spawn();
+            if (deathEffecter == null) deathEffecter = CelestialDefof.SunlightDeathEffect.Spawn();
         }
 
         public override void MapRemoved()

@@ -7,6 +7,7 @@
     <description>Maximum blood demon arts resource amount.</description>
     <defaultBaseValue>100</defaultBaseValue>
     <minValue>0</minValue>
+    <maxValue>999999</maxValue>
     <toStringStyle>Integer</toStringStyle>
     <showOnDefaultValue>false</showOnDefaultValue>
   </StatDef>

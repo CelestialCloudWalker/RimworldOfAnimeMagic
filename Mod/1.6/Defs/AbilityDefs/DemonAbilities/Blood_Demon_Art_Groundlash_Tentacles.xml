@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Art_Groundlash_Tentacles</defName>
     <label>Blood Demon Art: Groundlash Tentacles</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Demon tentacles come out and launch targets in the area. Gains experience with each use and becomes more powerful.</description>
+    <description>A blood demon art that creates tentacles to throw targets around.</description>
     <iconPath>UI/Abilities/DemonAbilityWhip</iconPath>
     <cooldownTicksRange>300</cooldownTicksRange>
     <aiCanUse>false</aiCanUse>
@@ -50,7 +50,7 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic demon tentacles emerge from the ground to lash at enemies.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
@@ -74,7 +74,7 @@
       <li>
         <labelSuffix> (Adept)</labelSuffix>
         <experienceRequired>150</experienceRequired>
-        <description>Stronger tentacles with increased range and damage capability.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -99,7 +99,7 @@
       <li>
         <labelSuffix> (Expert)</labelSuffix>
         <experienceRequired>350</experienceRequired>
-        <description>Advanced tentacle control with wider area coverage and brutal efficiency.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -124,7 +124,7 @@
       <li>
         <labelSuffix> (Master)</labelSuffix>
         <experienceRequired>700</experienceRequired>
-        <description>Ultimate tentacle mastery - devastating area control with maximum reach and power.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>

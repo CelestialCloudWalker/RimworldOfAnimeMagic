@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>GraceUnderPressure</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Artistic</li>
     </forcedPassions>
@@ -30,7 +30,7 @@
 
   <TraitDef>
     <defName>BotanicalKnowledge</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Plants</li>
     </forcedPassions>
@@ -85,7 +85,7 @@
 
   <TraitDef>
     <defName>NaturalHarmony</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Animals</li>
     </forcedPassions>

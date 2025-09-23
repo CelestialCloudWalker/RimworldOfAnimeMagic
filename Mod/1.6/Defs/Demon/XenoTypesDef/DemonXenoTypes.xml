@@ -15,34 +15,4 @@
       <li>LowSleep</li>
     </genes>
   </XenotypeDef>
-  <XenotypeDef>
-    <defName>AA_DemonBloodArts_LowerMoon</defName>
-    <label>LowerMoon</label>
-    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a hunger for human flesh.</description>
-    <descriptionShort>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a hunger for human flesh.</descriptionShort>
-    <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
-    <inheritable>true</inheritable>
-    <genes>
-      <li>BloodDemonArt_LowerMoon</li>
-      <li>MeleeDamage_Strong</li>
-      <li>DarkVision</li>
-      <li>Aggression_Aggressive</li>
-      <li>LowSleep</li>
-    </genes>
-  </XenotypeDef>
-  <XenotypeDef>
-    <defName>AA_DemonBloodArts_UpperMoon</defName>
-    <label>UpperMoon</label>
-    <description>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a hunger for human flesh.</description>
-    <descriptionShort>Demons are powerful, malevolent beings transformed by Muzan Kibutsuji's blood, possessing superhuman abilities, regenerative powers, and a hunger for human flesh.</descriptionShort>
-    <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
-    <inheritable>true</inheritable>
-    <genes>
-      <li>BloodDemonArt_UpperMoon</li>
-      <li>MeleeDamage_Strong</li>
-      <li>DarkVision</li>
-      <li>Aggression_Aggressive</li>
-      <li>LowSleep</li>
-    </genes>
-  </XenotypeDef>
 </Defs>

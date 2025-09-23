@@ -16,123 +16,112 @@ namespace AnimeArsenal
             if (!base.CanFireNowSub(parms))
                 return false;
 
-            // More robust faction checking
             if (parms.faction == null || parms.faction.def.defName != "AA_Twelve_Demon_Moons")
                 return base.CanFireNowSub(parms);
 
             Map map = (Map)parms.target;
-            if (map?.skyManager == null)
+            if (map == null || map.skyManager == null)
                 return false;
-
-            float skyGlow = map.skyManager.CurSkyGlow;
-            return skyGlow < 0.3f;
+            return map.skyManager.CurSkyGlow < 0.3f;
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
-            // Double-check time restriction even in dev mode
-            if (parms.faction?.def.defName == "AA_Twelve_Demon_Moons")
+            if (parms.faction != null && parms.faction.def.defName == "AA_Twelve_Demon_Moons")
             {
                 Map map = (Map)parms.target;
-                if (map?.skyManager == null)
+                if (map == null || map.skyManager == null)
                 {
-                    Log.Warning("Demon raid blocked - no sky manager");
+                    Log.Warning("[AnimeArsenal] Demon raid failed - no sky manager found");
                     return false;
                 }
 
                 float skyGlow = map.skyManager.CurSkyGlow;
-
                 if (skyGlow >= 0.3f)
                 {
-                    Log.Message("Demon raid blocked - too bright outside (skyGlow: " + skyGlow + ")");
                     return false;
                 }
             }
 
-            bool result = base.TryExecuteWorker(parms);
+            bool success = base.TryExecuteWorker(parms);
 
-            if (result && parms.faction?.def.defName == "AA_Twelve_Demon_Moons")
+            if (success && parms.faction != null && parms.faction.def.defName == "AA_Twelve_Demon_Moons")
             {
                 Map map = (Map)parms.target;
-                Lord raidLord = map.lordManager.lords.LastOrDefault(l => l.faction == parms.faction);
+
+                Lord raidLord = null;
+                for (int i = map.lordManager.lords.Count - 1; i >= 0; i--)
+                {
+                    if (map.lordManager.lords[i].faction == parms.faction)
+                    {
+                        raidLord = map.lordManager.lords[i];
+                        break;
+                    }
+                }
 
                 if (raidLord != null)
                 {
-
-                    LordJob_AssaultColonyNightRaid nightRaidJob = new LordJob_AssaultColonyNightRaid(
-                        parms.faction,
-                        true,
-                        true,
-                        false,
-                        false,
-                        true
-                    );
-
-                    raidLord.SetJob(nightRaidJob);
+                    LordJob_AssaultColonyNightRaid nightJob = new LordJob_AssaultColonyNightRaid(
+                        parms.faction, true, true, false, false, true);
+                    raidLord.SetJob(nightJob);
                 }
             }
 
-            return result;
+            return success;
         }
     }
 
-
-
-
     public class LordJob_AssaultColonyNightRaid : LordJob_AssaultColony
     {
-        private int lastLightCheck = -1;
-        private bool hasRetreated = false;
+        private int lightCheckTick = -1;
+        private bool retreatedAlready = false;
 
         public LordJob_AssaultColonyNightRaid() { }
 
-        public LordJob_AssaultColonyNightRaid(Faction faction, bool canKidnap, bool canTimeoutOrFlee, bool sappers, bool useAvoidGridSmart, bool canSteal)
+        public LordJob_AssaultColonyNightRaid(Faction faction, bool canKidnap, bool canTimeoutOrFlee,
+            bool sappers, bool useAvoidGridSmart, bool canSteal)
             : base(faction, canKidnap, canTimeoutOrFlee, sappers, useAvoidGridSmart, canSteal) { }
 
         public override void LordJobTick()
         {
             base.LordJobTick();
 
-            if (hasRetreated) return;
+            if (retreatedAlready)
+                return;
 
-            if (Find.TickManager.TicksGame - lastLightCheck > 60)
+            if (Find.TickManager.TicksGame - lightCheckTick > 60)
             {
-                lastLightCheck = Find.TickManager.TicksGame;
-                CheckForSunrise();
-            }
-        }
+                lightCheckTick = Find.TickManager.TicksGame;
 
-        private void CheckForSunrise()
-        {
-            if (lord?.Map == null) return;
-
-            float skyGlow = lord.Map.skyManager.CurSkyGlow;
-
-            if (skyGlow > 0.5f)
-            {
-                hasRetreated = true;
-                lord.ReceiveMemo("SunUp");
+                if (lord != null && lord.Map != null)
+                {
+                    float glow = lord.Map.skyManager.CurSkyGlow;
+                    if (glow > 0.5f)
+                    {
+                        retreatedAlready = true;
+                        lord.ReceiveMemo("SunUp");
+                    }
+                }
             }
         }
 
         public override StateGraph CreateGraph()
         {
-            StateGraph stateGraph = base.CreateGraph();
+            StateGraph graph = base.CreateGraph();
 
-            LordToil_SunriseRetreat sunriseRetreat = new LordToil_SunriseRetreat();
-            stateGraph.AddToil(sunriseRetreat);
+            LordToil_SunriseRetreat retreatToil = new LordToil_SunriseRetreat();
+            graph.AddToil(retreatToil);
 
-            foreach (LordToil toil in stateGraph.lordToils)
+            foreach (LordToil toil in graph.lordToils)
             {
-                if (toil != sunriseRetreat)
-                {
-                    Transition transition = new Transition(toil, sunriseRetreat);
-                    transition.AddTrigger(new Trigger_Memo("SunUp"));
-                    stateGraph.AddTransition(transition);
-                }
+                if (toil == retreatToil) continue;
+
+                Transition sunUpTransition = new Transition(toil, retreatToil);
+                sunUpTransition.AddTrigger(new Trigger_Memo("SunUp"));
+                graph.AddTransition(sunUpTransition);
             }
 
-            return stateGraph;
+            return graph;
         }
     }
 
@@ -141,16 +130,14 @@ namespace AnimeArsenal
         public override void Init()
         {
             base.Init();
-
-            Messages.Message("The Demons flee as the sun rises!", MessageTypeDefOf.NeutralEvent);
+            Messages.Message("The demons retreat as dawn breaks!", MessageTypeDefOf.NeutralEvent);
         }
 
         public override void UpdateAllDuties()
         {
             for (int i = 0; i < lord.ownedPawns.Count; i++)
             {
-                Pawn pawn = lord.ownedPawns[i];
-                pawn.mindState.duty = new PawnDuty(DutyDefOf.ExitMapBest);
+                lord.ownedPawns[i].mindState.duty = new PawnDuty(DutyDefOf.ExitMapBest);
             }
         }
     }

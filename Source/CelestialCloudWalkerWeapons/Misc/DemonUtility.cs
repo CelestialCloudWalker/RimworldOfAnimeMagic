@@ -18,99 +18,68 @@ namespace AnimeArsenal
             WorkTypeDefOf.Cleaning,
             WorkTypeDefOf.PlantCutting,
             WorkTypeDefOf.Smithing
-
         };
 
-
-        public static void ForceIntoDemonSlave(Pawn Pawn, Pawn Slaver, int SkillLevels = 5, BackstoryDef ChildHoodBackStoryOverWrite = null, BackstoryDef AdultHoodBackStoryOverwrite = null)
+        public static void ForceIntoDemonSlave(Pawn pawn, Pawn slaver, int skillLevels = 5,
+            BackstoryDef childhoodOverride = null, BackstoryDef adulthoodOverride = null)
         {
-            if (Pawn == null)
-            {
-                return;
-            }
+            if (pawn?.story == null || slaver?.Faction == null) return;
 
-            if (Slaver == null)
-            {
-                return;
-            }
+            pawn.story.Childhood = childhoodOverride ?? CelestialDefof.DemonChildhoodStory;
+            pawn.story.Adulthood = adulthoodOverride ?? CelestialDefof.DemonAdulthoodStory;
 
-            Pawn.story.Childhood = ChildHoodBackStoryOverWrite == null ? CelestialDefof.DemonChildhoodStory : ChildHoodBackStoryOverWrite;
-            Pawn.story.Adulthood = AdultHoodBackStoryOverwrite == null ? CelestialDefof.DemonAdulthoodStory : AdultHoodBackStoryOverwrite;
+            pawn.jobs.ClearQueuedJobs(false);
+            pawn.guest.SetGuestStatus(slaver.Faction, GuestStatus.Slave);
 
+            SetSkillLevels(pawn, skillLevels);
 
-            Pawn.jobs.ClearQueuedJobs(false);
-            Pawn.guest.SetGuestStatus(Slaver.Faction, GuestStatus.Slave);
+            var traits = pawn.story.traits.allTraits.ToList();
+            traits.ForEach(t => pawn.story.traits.RemoveTrait(t));
 
-            SetSkillLevels(Pawn, SkillLevels);
+            ConfigureWorkPriorities(pawn);
 
-            foreach (var item in Pawn.story.traits.allTraits.ToList())
-            {
-                Pawn.story.traits.RemoveTrait(item);
-            }
+            slaver.GetLord()?.AddPawn(pawn);
 
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Mining, Pawn_WorkSettings.DefaultPriority);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Growing, Pawn_WorkSettings.DefaultPriority);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Construction, Pawn_WorkSettings.DefaultPriority);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Handling, Pawn_WorkSettings.DefaultPriority);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Crafting, Pawn_WorkSettings.DefaultPriority);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Hauling, Pawn_WorkSettings.DefaultPriority);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Cleaning, Pawn_WorkSettings.DefaultPriority);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.PlantCutting, Pawn_WorkSettings.DefaultPriority);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Smithing, Pawn_WorkSettings.DefaultPriority);
-
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Childcare, 0);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Warden, 0);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Research, 0);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.DarkStudy, 0);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Firefighter, 0);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Handling, 0);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.DarkStudy, 0);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Doctor, 0);
-            SetWorkTypePriority(Pawn, WorkTypeDefOf.Hunting, 0);
-
-
-
-            if (Slaver.GetLord() != null)
-            {
-                Slaver.GetLord().AddPawn(Pawn);
-            }
-
-            if (Pawn.playerSettings != null)
-            {
-                
-                Pawn.playerSettings.medCare = MedicalCareCategory.NoCare;
-            }
-
-
-            if (Pawn.mindState != null)
-            {
-                
-                Pawn.mindState.mentalStateHandler.Reset();
-            }
+            pawn.playerSettings.medCare = MedicalCareCategory.NoCare;
+            pawn.mindState?.mentalStateHandler.Reset();
         }
 
-        public static void SetSkillLevels(Pawn pawn, int Level)
+        private static void ConfigureWorkPriorities(Pawn pawn)
         {
-            foreach (SkillRecord skill in pawn.skills.skills)
+            var enabledWork = new[]
             {
-                skill.Level = Level;
+                WorkTypeDefOf.Mining, WorkTypeDefOf.Growing, WorkTypeDefOf.Construction,
+                WorkTypeDefOf.Crafting, WorkTypeDefOf.Hauling, WorkTypeDefOf.Cleaning,
+                WorkTypeDefOf.PlantCutting, WorkTypeDefOf.Smithing
+            };
+
+            var disabledWork = new[]
+            {
+                WorkTypeDefOf.Childcare, WorkTypeDefOf.Warden, WorkTypeDefOf.Research,
+                WorkTypeDefOf.DarkStudy, WorkTypeDefOf.Firefighter, WorkTypeDefOf.Handling,
+                WorkTypeDefOf.Doctor, WorkTypeDefOf.Hunting
+            };
+
+            foreach (var work in enabledWork)
+                SetWorkTypePriority(pawn, work, Pawn_WorkSettings.DefaultPriority);
+
+            foreach (var work in disabledWork)
+                SetWorkTypePriority(pawn, work, 0);
+        }
+
+        public static void SetSkillLevels(Pawn pawn, int level)
+        {
+            foreach (var skill in pawn.skills.skills)
+            {
+                skill.Level = level;
                 skill.passion = Passion.None;
             }
         }
 
-        public static void SetWorkTypePriority(Pawn pawn, WorkTypeDef workType, int prio = 1)
+        public static void SetWorkTypePriority(Pawn pawn, WorkTypeDef workType, int priority = 1)
         {
-            if (workType != null)
-            {
-                int CurrentPrio = pawn.workSettings.GetPriority(workType);
-                if (CurrentPrio > 0)
-                {
-                    pawn.workSettings.SetPriority(workType, prio);
-                }
-            }
+            if (workType != null && pawn.workSettings.GetPriority(workType) > 0)
+                pawn.workSettings.SetPriority(workType, priority);
         }
     }
-
-
-
 }

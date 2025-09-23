@@ -12,12 +12,13 @@
     <li>1.5</li>
     <li>1.6</li>
   </supportedVersions>
-  <packageId>WILL.DemonSlayerRimworldMod</packageId> 
+  <packageId>WILL.DemonSlayerRimworldMod</packageId>
   <loadAfter>
     <li>brrainz.harmony</li>
     <li>erdelf.HumanoidAlienRaces</li>
     <li>Ludeon.RimWorld.Biotech</li>
     <li>com.emo.talented</li>
+    <li>com.emo.framework</li>
   </loadAfter>
   <modDependencies>
     <li>

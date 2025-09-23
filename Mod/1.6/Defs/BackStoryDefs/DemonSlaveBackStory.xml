@@ -13,18 +13,4 @@
   <bodyTypeMale>Thin</bodyTypeMale>
   <shuffleable>False</shuffleable>
 </BackstoryDef>
-
-<BackstoryDef>
-  <defName>DemonChildhoodStory</defName>
-  <identifier>DemonChild</identifier>
-  <slot>Childhood</slot>
-  <title>Demonified</title>
-  <titleShort>Demon</titleShort>
-  <description>Stripped of everything that made them an individual, this pawn now lives only to serve it's master until it degrades into nothing.</description>
-  <requiredWorkTags>None</requiredWorkTags>
-  <bodyTypeGlobal>Thin</bodyTypeGlobal>
-  <bodyTypeFemale>Thin</bodyTypeFemale>
-  <bodyTypeMale>Thin</bodyTypeMale>
-  <shuffleable>False</shuffleable>
-</BackstoryDef>
 </Defs>

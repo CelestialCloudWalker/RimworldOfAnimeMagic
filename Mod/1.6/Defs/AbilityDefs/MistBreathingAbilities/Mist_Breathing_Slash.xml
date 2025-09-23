@@ -4,7 +4,7 @@
     <defName>Mist_Breathing_Slash</defName>
     <label>Mist Breathing: Slash</label>
     <category>MistBreathing_Ability_Catergory</category>
-    <description>The user delivers a powerful slash through the mist, launching a disorienting projectile attack. Gains experience with each use and becomes more powerful.</description>
+    <description>A ranged technique that sends a slash toward targets.</description>
     <iconPath>UI/Abilities/AbilityProjectile</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <targetRequired>true</targetRequired>
@@ -35,15 +35,15 @@
     <levels>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Flash)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic mist-shrouded projectile attack that disorients enemies.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
       </li>
 
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
+        <labelSuffix> (Gleam)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>An improved mist cutter with enhanced speed, damage, and disorientation effects.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
         <rangeMultiplier>1.2</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
@@ -55,9 +55,9 @@
       </li>
 
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
+        <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>A superior mist cutter with significantly increased damage and area of effect.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.1</resourceCostMultiplier>
         <rangeMultiplier>1.3</rangeMultiplier>
         <cooldownMultiplier>0.85</cooldownMultiplier>
@@ -69,9 +69,9 @@
       </li>
 
       <li>
-        <labelSuffix> (Master)</labelSuffix>
+        <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>The ultimate phantom mist cutter - devastating damage with maximum disorientation and piercing capability.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>

@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>FeralInstincts</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Animals</li>
       <li>Melee</li>
@@ -43,7 +43,7 @@
 
   <TraitDef>
     <defName>PackHunter</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Shooting</li>
       <li>Melee</li>
@@ -74,7 +74,7 @@
 
   <TraitDef>
     <defName>WildSenses</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Shooting</li>
       <li>Animals</li>
@@ -100,7 +100,7 @@
 
   <TraitDef>
     <defName>Territorial</defName>
-    <commonality>1</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Construction</li>
       <li>Melee</li>

@@ -16,87 +16,65 @@ namespace AnimeArsenal
 {
     public static class AnimeArsenalUtility
     {
-        public static void CreateLightningStrike(Map Map, IntVec3 Position, Thing Instigator, DamageDef DamageDef, int DamageAmount = 10, float Arp = -1, float radius = 1f)
+        public static void CreateLightningStrike(Map map, IntVec3 pos, Thing source, DamageDef dmg, int amt = 10, float pen = -1, float rad = 1f)
         {
-            WeatherEvent_LightningStrike lightningStrike = new WeatherEvent_LightningStrike(Map, Position);
-            lightningStrike.FireEvent();
+            var strike = new WeatherEvent_LightningStrike(map, pos);
+            strike.FireEvent();
 
-            if (radius > 0f)
+            if (rad > 0f)
             {
-                GenExplosion.DoExplosion(
-                    Position,
-                    Map,
-                    radius,
-                    DamageDef,
-                    Instigator,
-                    DamageAmount,
-                    Arp
-                );
+                GenExplosion.DoExplosion(pos, map, rad, dmg, source, amt, pen);
             }
         }
 
-
-        public static int TicksInSeconds(int Seconds)
-        {
-            return 60 * Seconds;
-        }
+        public static int TicksInSeconds(int secs) => 60 * secs;
 
         public static IEnumerable<HediffComp_SelectiveDamageImmunity> GetSelectiveDamageImmunityComps(this Pawn pawn)
         {
-            return pawn.health.hediffSet.GetAllComps()
-                .OfType<HediffComp_SelectiveDamageImmunity>();
+            return pawn.health.hediffSet.GetAllComps().OfType<HediffComp_SelectiveDamageImmunity>();
         }
 
-        public static bool HasSelectiveDamageImmunity(this Pawn pawn)
-        {
-            return pawn.GetSelectiveDamageImmunityComps().Any();
-        }
+        public static bool HasSelectiveDamageImmunity(this Pawn pawn) => pawn.GetSelectiveDamageImmunityComps().Any();
 
-        public static void TrainPawn(Pawn PawnToTrain, Pawn Trainer = null)
+        public static void TrainPawn(Pawn target, Pawn trainer = null)
         {
-            if (PawnToTrain.training != null)
+            if (target.training == null) return;
+
+            foreach (var def in DefDatabase<TrainableDef>.AllDefsListForReading)
             {
-                foreach (var item in DefDatabase<TrainableDef>.AllDefsListForReading)
-                {
-                    if (PawnToTrain.training.CanAssignToTrain(item).Accepted)
-                    {
-                        PawnToTrain.training.SetWantedRecursive(item, true);
-                        PawnToTrain.training.Train(item, Trainer, true);
-                    }
-
-                }
-            }
-        }
-        public static void DealDamageToThingsInRange(List<Thing> ThingsInRadius, DamageDef DamageDef, float Damage, float ArmourPen = 0, float Angle = -1f, Thing Instigator = null, EffecterDef EffectorToPlay = null, Func<Thing, bool> Predicate = null)
-        {
-            foreach (var item in ThingsInRadius)
-            {
-                if (!item.Destroyed)
-                {
-                    if (EffectorToPlay != null)
-                    {
-                        EffectorToPlay.SpawnMaintained(item.Position, item.Map);
-                    }
-                    item.TakeDamage(new DamageInfo(DamageDef, Damage, ArmourPen, Angle, Instigator));
-                }
+                if (!target.training.CanAssignToTrain(def).Accepted) continue;
+                target.training.SetWantedRecursive(def, true);
+                target.training.Train(def, trainer, true);
             }
         }
 
-
-        public static void DealDamageToThingsInRange(IntVec3 center, Map map, float radius, DamageDef DamageDef, float Damage, float ArmourPen = 0, float Angle = -1f, Thing Instigator = null, EffecterDef EffectorToPlay = null, Func<Thing, bool> Predicate = null)
+        public static void DealDamageToThingsInRange(List<Thing> targets, DamageDef dmgDef, float dmg, float pen = 0, float angle = -1f, Thing source = null, EffecterDef fx = null, Func<Thing, bool> filter = null)
         {
-            List<Thing> ThingsInRadius = AnimeArsenalUtility.GetThingsInRange(center, map, radius).ToList();
-            DealDamageToThingsInRange(ThingsInRadius, DamageDef, Damage, ArmourPen, Angle, Instigator, EffectorToPlay, Predicate);
+            foreach (var thing in targets)
+            {
+                if (thing.Destroyed) continue;
+
+                if (fx != null)
+                    fx.SpawnMaintained(thing.Position, thing.Map);
+
+                thing.TakeDamage(new DamageInfo(dmgDef, dmg, pen, angle, source));
+            }
         }
 
+        public static void DealDamageToThingsInRange(IntVec3 center, Map map, float radius, DamageDef dmgDef, float dmg, float pen = 0, float angle = -1f, Thing source = null, EffecterDef fx = null, Func<Thing, bool> filter = null)
+        {
+            var things = GetThingsInRange(center, map, radius).ToList();
+            DealDamageToThingsInRange(things, dmgDef, dmg, pen, angle, source, fx, filter);
+        }
 
-        public static IEnumerable<Thing> GetThingsInRange(IntVec3 center, Map map, float radius, Func<Thing, bool> Predicate = null)
+        public static IEnumerable<Thing> GetThingsInRange(IntVec3 center, Map map, float radius, Func<Thing, bool> filter = null)
         {
             return GenRadial.RadialCellsAround(center, radius, true)
                 .SelectMany(c => c.GetThingList(map))
                 .OfType<Thing>()
-                .Where(p => Predicate == null || Predicate(p));
+                .Where(p => filter?.Invoke(p) ?? true);
         }
+
         public static IEnumerable<Pawn> GetEnemyPawnsInRange(IntVec3 center, Map map, float radius)
         {
             return GenRadial.RadialCellsAround(center, radius, true)
@@ -107,27 +85,28 @@ namespace AnimeArsenal
 
         public static BodyPartRecord GetRandomLimb(Pawn pawn)
         {
-            List<BodyPartRecord> limbs = pawn.health.hediffSet.GetNotMissingParts()
+            var limbs = pawn.health.hediffSet.GetNotMissingParts()
                 .Where(part => part.def.tags.Contains(BodyPartTagDefOf.MovingLimbCore))
                 .ToList();
 
             return limbs.RandomElementWithFallback();
         }
-        public static float CalcAstralPulseScalingFactor(Pawn casterPawn, Pawn targetPawn, float min = 0.5f, float max = 1.5f)
-        {
-            float casterAstralPulse = casterPawn.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
-            float targetAstralPulse = targetPawn.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
 
-            return Mathf.Lerp(min, max, casterAstralPulse / targetAstralPulse);
+        public static float CalcAstralPulseScalingFactor(Pawn caster, Pawn target, float min = 0.5f, float max = 1.5f)
+        {
+            float casterPulse = caster.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
+            float targetPulse = target.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
+
+            return Mathf.Lerp(min, max, casterPulse / targetPulse);
         }
 
-        public static BodyPartRecord GetRandomPartByTagDef(Pawn pawn, List<BodyPartTagDef> PartTags)
+        public static BodyPartRecord GetRandomPartByTagDef(Pawn pawn, List<BodyPartTagDef> tags)
         {
-            List<BodyPartRecord> limbs = pawn.health.hediffSet.GetNotMissingParts()
-                .Where(part => part.def.tags.Any(x => PartTags.Contains(x)))
+            var parts = pawn.health.hediffSet.GetNotMissingParts()
+                .Where(part => part.def.tags.Any(x => tags.Contains(x)))
                 .ToList();
-            return limbs.RandomElementWithFallback();
+            return parts.RandomElementWithFallback();
         }
-
     }
+
 }

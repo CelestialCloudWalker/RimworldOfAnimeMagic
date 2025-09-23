@@ -4,7 +4,7 @@
     <defName>Serpent_Breathing_Reflect</defName>
     <label>Serpent Breathing: Reflect</label>
     <category>SerpentBreathing_Ability_Catergory</category>
-    <description>The user creates a protective barrier of serpentine scales that deflects incoming projectiles. Gains experience with each use and becomes more powerful.</description>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
     <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
 
@@ -35,7 +35,7 @@
       <li>
         <labelSuffix> (Novice)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A basic serpentine barrier that deflects incoming projectiles with protective scales.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
@@ -52,7 +52,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>120</experienceRequired>
-        <description>Reinforced serpent scales provide wider protection and deflect more projectiles.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -70,7 +70,7 @@
       <li>
         <labelSuffix> (Mirage)</labelSuffix>
         <experienceRequired>300</experienceRequired>
-        <description>Hardened serpentine scales form an extensive protective barrier with enhanced duration and efficiency.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -88,7 +88,7 @@
       <li>
         <labelSuffix> (Erelong)</labelSuffix>
         <experienceRequired>600</experienceRequired>
-        <description>The ultimate serpent's scale shield - an impenetrable fortress of serpentine protection that deflects massive volleys with incredible efficiency.</description>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
@@ -106,8 +106,8 @@
 
   <HediffDef>
     <defName>AnimeArsenal_SerpentScaleShield</defName>
-    <label>serpent scale shield</label>
-    <description>A protective barrier of serpentine scales that deflects incoming projectiles.</description>
+    <label>breathing deflection</label>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
     <hediffClass>AnimeArsenal.Hediff_DeflectionField</hediffClass>
     <defaultLabelColor>(0.6, 0.9, 0.6)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>

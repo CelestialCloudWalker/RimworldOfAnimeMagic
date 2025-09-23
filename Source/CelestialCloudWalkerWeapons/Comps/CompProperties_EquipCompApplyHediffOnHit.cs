@@ -9,9 +9,7 @@ namespace AnimeArsenal
         public bool ApplyToSelf = false;
         public bool ApplyOnTarget = true;
         public float ApplyChance = 0.5f;
-
         public float Severity = 1f;
-
         public HediffDef hediffToApply;
 
         public CompProperties_EquipCompApplyHediffOnHit()
@@ -22,7 +20,7 @@ namespace AnimeArsenal
 
     public class EquipComp_ApplyHediffOnHit : BaseTraitComp
     {
-        public  CompProperties_EquipCompApplyHediffOnHit Props => (CompProperties_EquipCompApplyHediffOnHit)props;
+        public CompProperties_EquipCompApplyHediffOnHit Props => (CompProperties_EquipCompApplyHediffOnHit)props;
 
         public override string TraitName => $"Apply {Props.hediffToApply.label}";
 
@@ -30,28 +28,23 @@ namespace AnimeArsenal
 
         public override DamageWorker.DamageResult Notify_ApplyMeleeDamageToTarget(LocalTargetInfo target, DamageWorker.DamageResult DamageWorkerResult)
         {
-            if (Props.ApplyOnTarget && target.Pawn != null)
+            if (Rand.Chance(Props.ApplyChance))
             {
-                if (Rand.Range(0, 1) <= Props.ApplyChance)
+                Pawn targetPawn = null;
+
+                if (Props.ApplyOnTarget && target.Pawn != null)
+                    targetPawn = target.Pawn;
+                else if (Props.ApplyToSelf && _EquipOwner != null)
+                    targetPawn = _EquipOwner;
+
+                if (targetPawn != null)
                 {
-                    Hediff hediff = target.Pawn.health.GetOrAddHediff(Props.hediffToApply);
+                    var hediff = targetPawn.health.GetOrAddHediff(Props.hediffToApply);
                     hediff.Severity = Props.Severity;
-                    return base.Notify_ApplyMeleeDamageToTarget(target, DamageWorkerResult);
-                }
-            }
-            else if (Props.ApplyToSelf && _EquipOwner != null)
-            {
-                if (Rand.Range(0, 1) <= Props.ApplyChance)
-                {
-                    Hediff hediff = _EquipOwner.health.GetOrAddHediff(Props.hediffToApply);
-                    hediff.Severity = Props.Severity;
-                    return base.Notify_ApplyMeleeDamageToTarget(target, DamageWorkerResult);
                 }
             }
 
             return base.Notify_ApplyMeleeDamageToTarget(target, DamageWorkerResult);
         }
     }
-
-
 }
