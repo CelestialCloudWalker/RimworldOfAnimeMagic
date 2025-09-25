@@ -688,22 +688,30 @@ public static class CorpseEatingPatches
             Log.Error($"[AnimeArsenal] Error in job completion tracking: {ex}");
         }
     }
-}
-[HarmonyPatch]
-public static class BloodDemonArtsMaxPatch
-{
-    [HarmonyPatch(typeof(Gene_BasicResource), "Max", MethodType.Getter)]
-    [HarmonyPostfix]
-    public static void Postfix_Max(Gene_BasicResource __instance, ref float __result)
+    [HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
+    public static class StatWorker_BloodPoolBonus
     {
-        if (__instance is BloodDemonArtsGene demonGene)
-        {
-            var progressionExt = demonGene.def.GetModExtension<DemonProgressionExtension>();
-            float baseMax = 100f;
-            float eatBonus = demonGene.TotalPawnsEaten * (progressionExt?.bloodPoolBonusPerPawnEaten ?? 5f);
-            __result = baseMax + eatBonus;
+        private static readonly FieldInfo statField = AccessTools.Field(typeof(StatWorker), "stat");
 
-            Log.Message($"[DEBUG] Max patched - TotalPawnsEaten: {demonGene.TotalPawnsEaten}, result: {__result}");
+        public static void Postfix(StatWorker __instance, StatRequest req, ref float __result)
+        {
+            if (req.Thing is Pawn pawn && pawn.genes != null)
+            {
+                var demonGene = pawn.genes.GenesListForReading
+                    .OfType<BloodDemonArtsGene>()
+                    .FirstOrDefault();
+
+                if (demonGene != null)
+                {
+                    // Use reflection to access the protected stat field
+                    StatDef currentStat = (StatDef)statField.GetValue(__instance);
+                    float offset = demonGene.GetStatOffset(currentStat);
+                    if (offset != 0f)
+                    {
+                        __result += offset;
+                    }
+                }
+            }
         }
     }
 }

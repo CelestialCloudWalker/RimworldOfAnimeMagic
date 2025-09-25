@@ -28,11 +28,13 @@ namespace AnimeArsenal
     public class DemonProgressionExtension : DefModExtension
     {
         public DemonRank startingRank = DemonRank.WeakDemon;
-        public List<int> pawnsRequiredPerRank = new List<int> { 3, 7, 15 }; 
+        public List<int> pawnsRequiredPerRank = new List<int> { 3, 7, 15 };
         public bool canProgressThroughTalents = true;
 
-        public float bloodPoolBonusPerPawnEaten = 5f; 
-        public float bloodRestoredPerPawnEaten = 15f; 
+        // Stat to modify and amount per pawn eaten
+        public StatDef bloodPoolStat; // The stat to increase
+        public float bloodPoolBonusPerPawnEaten = 5f;
+        public float bloodRestoredPerPawnEaten = 15f;
 
         public List<float> sunlightDamagePerTick = new List<float> { 2.5f, 1.8f, 1.0f, 0.6f };
         public List<float> sunlightDamageThreshold = new List<float> { 20f, 45f, 65f, 100f };
@@ -75,20 +77,78 @@ namespace AnimeArsenal
         private int exhaustionCooldownRemaining = 0;
         private int exhaustionHediffTimer = 0;
 
+        // Rank system variables
         private DemonRank currentRank = DemonRank.WeakDemon;
         private int totalPawnsEaten = 0;
         private DemonProgressionExtension progressionExt;
 
-        
+        public override float Max
+        {
+            get
+            {
+                if (Def?.maxStat == null)
+                {
+                    return 100f;
+                }
+                if (pawn == null)
+                {
+                    return 100f;
+                }
+                return pawn.GetStatValue(Def.maxStat, true);
+            }
+        }
 
         public float MinValue => 0f;
         public float MaxValue => Max;
         public float InitialValue => Max * 0.5f;
 
+        // Add a field to track bonus blood from eating pawns
+        private float bonusBloodFromPawns = 0f;
+
+        // Override Value to include the bonus blood
+        public override float Value
+        {
+            get => base.Value + bonusBloodFromPawns;
+            set
+            {
+                // When setting value, prioritize base value first, then bonus
+                if (value <= base.Value)
+                {
+                    base.Value = value;
+                    bonusBloodFromPawns = 0f;
+                }
+                else
+                {
+                    base.Value = Math.Min(value, InitialValue); // Keep base at reasonable level
+                    bonusBloodFromPawns = value - base.Value;
+                }
+                PostValueChanged();
+            }
+        }
+
+        // Add this method to handle post-value-change logic
+        private void PostValueChanged()
+        {
+            // Multiple attempts to force UI refresh
+            if (pawn?.IsColonist == true)
+            {
+                Find.ColonistBar.MarkColonistsDirty();
+            }
+
+            // Try to refresh the gizmos directly
+            if (pawn?.Map != null)
+            {
+                pawn.Map.mapDrawer.WholeMapChanged(MapMeshFlagDefOf.Buildings);
+            }
+        }
+
         public virtual float ExhaustionProgress
         {
             get
             {
+                if (Def?.exhausationCooldownTicks == null || Def?.ticksBeforeExhaustionStart == null)
+                    return 0f;
+
                 if (isExhausted)
                 {
                     return Mathf.Clamp01((float)exhaustionCooldownRemaining / (float)Def.exhausationCooldownTicks);
@@ -145,7 +205,7 @@ namespace AnimeArsenal
             if (progressionExt == null) return;
 
             int rankIndex = (int)currentRank;
-            if (rankIndex >= progressionExt.pawnsRequiredPerRank.Count) return; 
+            if (rankIndex >= progressionExt.pawnsRequiredPerRank.Count) return;
 
             int pawnsNeeded = progressionExt.pawnsRequiredPerRank[rankIndex];
             if (totalPawnsEaten >= pawnsNeeded)
@@ -156,10 +216,13 @@ namespace AnimeArsenal
 
         public void RankUp()
         {
-            if ((int)currentRank >= 13) return; 
+            if ((int)currentRank >= 13) return;
 
             currentRank = (DemonRank)((int)currentRank + 1);
             UpdateModExtensionValues();
+
+            // Refresh stats since the stat offset changed
+            pawn.health.capacities.Notify_CapacityLevelsDirty();
 
             Messages.Message($"{pawn.Name.ToStringShort} has evolved to {currentRank}!",
                            pawn, MessageTypeDefOf.PositiveEvent);
@@ -167,12 +230,35 @@ namespace AnimeArsenal
 
         public void AddPawnEaten()
         {
+            Log.Message($"[DEBUG] AddPawnEaten called - BEFORE: totalPawnsEaten={totalPawnsEaten}, base.Value={base.Value}, bonusBlood={bonusBloodFromPawns}, Total Value={Value}, Max={Max}");
+
             totalPawnsEaten++;
+
+            // Add blood using the new bonus system
             if (progressionExt?.bloodRestoredPerPawnEaten > 0)
             {
-                Value += progressionExt.bloodRestoredPerPawnEaten;
-                if (Value > Max) Value = Max; 
+                float oldTotalValue = Value;
+                bonusBloodFromPawns += progressionExt.bloodRestoredPerPawnEaten;
+
+                Log.Message($"[DEBUG] Added {progressionExt.bloodRestoredPerPawnEaten} bonus blood. Total Value: {oldTotalValue} -> {Value}");
             }
+
+            // Refresh stats to update the Max value
+            pawn.health.capacities.Notify_CapacityLevelsDirty();
+
+            // Cap to max if needed
+            if (Value > Max)
+            {
+                Log.Message($"[DEBUG] Capping total value from {Value} to {Max}");
+                // Reduce bonus blood instead of base value
+                float excess = Value - Max;
+                bonusBloodFromPawns = Math.Max(0, bonusBloodFromPawns - excess);
+            }
+
+            // UI refresh
+            PostValueChanged();
+
+            Log.Message($"[DEBUG] AddPawnEaten completed - AFTER: totalPawnsEaten={totalPawnsEaten}, base.Value={base.Value}, bonusBlood={bonusBloodFromPawns}, Total Value={Value}, Max={Max}");
         }
 
         public void ForceRankUp()
@@ -181,6 +267,16 @@ namespace AnimeArsenal
             {
                 RankUp();
             }
+        }
+
+        // Method to get stat offset for the blood pool stat
+        public float GetStatOffset(StatDef stat)
+        {
+            if (progressionExt?.bloodPoolStat == stat)
+            {
+                return totalPawnsEaten * progressionExt.bloodPoolBonusPerPawnEaten;
+            }
+            return 0f;
         }
 
         private void UpdateModExtensionValues()
@@ -268,6 +364,8 @@ namespace AnimeArsenal
 
         public void TickActiveExhaustion()
         {
+            if (Def == null) return;
+
             timeUntilExhaustedTimer++;
             if (timeUntilExhaustedTimer >= Def.ticksBeforeExhaustionStart)
             {
@@ -275,11 +373,12 @@ namespace AnimeArsenal
                 OnExhaustionStarted();
             }
             exhaustionHediffTimer++;
+            // FIXED: Changed timeUntilExhaustedTimer to exhaustionHediffTimer
             if (exhaustionHediffTimer >= Def.ticksPerExhaustionIncrease)
             {
-                if (Def.exhaustionHediff != null && ShouldApplyExhausation())
+                if (Def.exhaustionHediff != null && ShouldApplyExhaustion())
                 {
-                    Hediff hediff = this.pawn.health.GetOrAddHediff(Def.exhaustionHediff);
+                    Hediff hediff = pawn.health.GetOrAddHediff(Def.exhaustionHediff);
                     if (hediff != null)
                     {
                         hediff.Severity += Def.exhaustionPerTick;
@@ -289,15 +388,16 @@ namespace AnimeArsenal
             }
         }
 
-        public virtual bool ShouldApplyExhausation()
+        // FIXED: Changed method name from ShouldApplyExhausation to ShouldApplyExhaustion
+        public virtual bool ShouldApplyExhaustion()
         {
-            return true;
+            return pawn != null && !pawn.Dead && !pawn.Downed;
         }
 
         private void OnExhaustionStarted()
         {
             isExhausted = true;
-            exhaustionCooldownRemaining = Def.exhausationCooldownTicks;
+            exhaustionCooldownRemaining = Def?.exhausationCooldownTicks ?? 0;
         }
 
         private void OnExhaustionEnded()
@@ -337,10 +437,11 @@ namespace AnimeArsenal
                     defaultLabel = $"Demon Rank: {currentRank}",
                     defaultDesc = $"Current demon rank: {currentRank}\nPawns eaten: {totalPawnsEaten}\nBlood pool: {Value:F1}/{Max:F1}{pawnsNeeded}",
                     icon = ContentFinder<Texture2D>.Get("UI/Icons/Genes/Demon", true),
-                    action = () => { } 
+                    action = () => { }
                 };
             }
 
+            // ADDED: Dev mode commands that were missing
             if (Prefs.DevMode)
             {
                 yield return new Command_Action
@@ -355,20 +456,6 @@ namespace AnimeArsenal
                     defaultLabel = $"DEV: {this.Label} Max Experience",
                     defaultDesc = "Fill Experience Bar (Debug)",
                     action = () => GainExperience(MaxExperienceForLevel(CurrentLevel) - CurrentExperience - 0.1f)
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = $"DEV: Force Rank Up",
-                    defaultDesc = $"Force rank up to next level (Current: {currentRank})",
-                    action = () => ForceRankUp()
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = $"DEV: Add Pawn Eaten",
-                    defaultDesc = $"Add 1 eaten pawn (Current: {totalPawnsEaten})",
-                    action = () => AddPawnEaten()
                 };
 
                 foreach (var treeData in AvailableTrees())
@@ -436,7 +523,7 @@ namespace AnimeArsenal
                     }
                 };
 
-                if (Def.exhaustionHediff != null)
+                if (Def?.exhaustionHediff != null)
                 {
                     yield return new Command_Action
                     {
@@ -447,7 +534,7 @@ namespace AnimeArsenal
                             Hediff hediff = pawn.health.GetOrAddHediff(Def.exhaustionHediff);
                             if (hediff != null)
                             {
-                                hediff.Severity += Def.exhaustionPerTick * 10; // Add 10 ticks worth
+                                hediff.Severity += Def.exhaustionPerTick * 10;
                             }
                         }
                     };
@@ -474,7 +561,7 @@ namespace AnimeArsenal
                     action = () =>
                     {
                         isExhausted = true;
-                        exhaustionCooldownRemaining = Def.exhausationCooldownTicks;
+                        exhaustionCooldownRemaining = Def?.exhausationCooldownTicks ?? 0;
                     }
                 };
 
@@ -490,6 +577,20 @@ namespace AnimeArsenal
                         exhaustionHediffTimer = 0;
                     }
                 };
+
+                yield return new Command_Action
+                {
+                    defaultLabel = $"DEV: Force Rank Up",
+                    defaultDesc = $"Force rank up to next level (Current: {currentRank})",
+                    action = () => ForceRankUp()
+                };
+
+                yield return new Command_Action
+                {
+                    defaultLabel = $"DEV: Add Pawn Eaten",
+                    defaultDesc = $"Add 1 eaten pawn (Current: {totalPawnsEaten})",
+                    action = () => AddPawnEaten()
+                };
             }
         }
 
@@ -503,6 +604,7 @@ namespace AnimeArsenal
 
             Scribe_Values.Look(ref currentRank, "currentRank", DemonRank.WeakDemon);
             Scribe_Values.Look(ref totalPawnsEaten, "totalPawnsEaten", 0);
+            Scribe_Values.Look(ref bonusBloodFromPawns, "bonusBloodFromPawns", 0f);
         }
     }
 }

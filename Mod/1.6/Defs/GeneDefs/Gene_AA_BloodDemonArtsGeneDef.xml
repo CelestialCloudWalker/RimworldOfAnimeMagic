@@ -16,60 +16,14 @@
     <regenStat>BloodDemonArts_RegenAmount</regenStat>
     <regenSpeedStat>AnimeArsenal_BloodDemonArtsRegenSpeed</regenSpeedStat>
     <costMult>BloodDemonArts_Cost</costMult>
+    <maxStat>BloodDemonArts</maxStat>
 
     <modExtensions>
-      <li Class="AnimeArsenal.RegenerationExtension">
-        <healingMultiplier>1.2</healingMultiplier>
-        <ticksBetweenHealing>180</ticksBetweenHealing>
-        <healingPerTick>0.3</healingPerTick>
-        <instantLimbRegeneration>false</instantLimbRegeneration>
-        <instantOrganRegeneration>false</instantOrganRegeneration>
-        <canRegenerateOrgans>false</canRegenerateOrgans>
-        <canRegenerateBrain>false</canRegenerateBrain>
-        <canRegenerateHeart>false</canRegenerateHeart>
-        <canRegenerateHead>false</canRegenerateHead>
-        <scarHealChance>0.05</scarHealChance>
-        <scarHealInterval>4000</scarHealInterval>
-        <consumeResourcesOnRegeneration>true</consumeResourcesOnRegeneration>
-        <resourceCostPerHeal>3</resourceCostPerHeal>
-        <resourceCostPerLimbRegen>120</resourceCostPerLimbRegen>
-        <resourceCostPerOrganRegen>250</resourceCostPerOrganRegen>
-        <resourceCostPerScarHeal>60</resourceCostPerScarHeal>
-        <preventRegenIfInsufficientResources>true</preventRegenIfInsufficientResources>
-        <minimumResourcesRequired>0.3</minimumResourcesRequired>
-        <showResourceWarnings>true</showResourceWarnings>
-        <resourceWarningCooldownTicks>2500</resourceWarningCooldownTicks>
-        <preventDeathFromVitalLoss>false</preventDeathFromVitalLoss>
-        <fatalBodyParts>
-          <li>Neck</li>
-          <li>AA_DemonNeck</li>
-          <li>Head</li>
-          <li>Brain</li>
-        </fatalBodyParts>
-        <onlyNotifyMajorParts>true</onlyNotifyMajorParts>
-        <resourceName>Blood Art</resourceName>
-      </li>
-
-      <li Class="AnimeArsenal.SunlightDamageExtension">
-        <damagePerTick>3.5</damagePerTick>
-        <damageThresholdBeforeDeath>15</damageThresholdBeforeDeath>
-        <ticksBetweenDamage>90</ticksBetweenDamage>
-        <ticksToResetDamage>1500</ticksToResetDamage>
-        <minimumCoverageForProtection>0.35</minimumCoverageForProtection>
-        <requireHeadCoverage>true</requireHeadCoverage>
-      </li>
-
-      <li Class="AnimeArsenal.BodyDisappearExtension">
-        <leaveAshFilth>true</leaveAshFilth>
-        <filthAmount>1</filthAmount>
-        <disappearMessage>Weak demon body turned to ash!</disappearMessage>
-        <playEffect>true</playEffect>
-      </li>
-
       <li Class="AnimeArsenal.DemonProgressionExtension">
         <startingRank>WeakDemon</startingRank>
         <canProgressThroughTalents>true</canProgressThroughTalents>
 
+        <bloodPoolStat>BloodDemonArts</bloodPoolStat>
         <bloodPoolBonusPerPawnEaten>5</bloodPoolBonusPerPawnEaten>
         <bloodRestoredPerPawnEaten>15</bloodRestoredPerPawnEaten>
 
@@ -443,6 +397,53 @@
           <li>Upper Rank Two demon body turned to ash!</li>
           <li>Upper Rank One demon body turned to ash!</li>
         </bodyDisappearMessage>
+      </li>
+      <li Class="AnimeArsenal.RegenerationExtension">
+        <healingMultiplier>1.2</healingMultiplier>
+        <ticksBetweenHealing>180</ticksBetweenHealing>
+        <healingPerTick>0.3</healingPerTick>
+        <instantLimbRegeneration>false</instantLimbRegeneration>
+        <instantOrganRegeneration>false</instantOrganRegeneration>
+        <canRegenerateOrgans>false</canRegenerateOrgans>
+        <canRegenerateBrain>false</canRegenerateBrain>
+        <canRegenerateHeart>false</canRegenerateHeart>
+        <canRegenerateHead>false</canRegenerateHead>
+        <scarHealChance>0.05</scarHealChance>
+        <scarHealInterval>4000</scarHealInterval>
+        <consumeResourcesOnRegeneration>true</consumeResourcesOnRegeneration>
+        <resourceCostPerHeal>3</resourceCostPerHeal>
+        <resourceCostPerLimbRegen>120</resourceCostPerLimbRegen>
+        <resourceCostPerOrganRegen>250</resourceCostPerOrganRegen>
+        <resourceCostPerScarHeal>60</resourceCostPerScarHeal>
+        <preventRegenIfInsufficientResources>true</preventRegenIfInsufficientResources>
+        <minimumResourcesRequired>0.3</minimumResourcesRequired>
+        <showResourceWarnings>true</showResourceWarnings>
+        <resourceWarningCooldownTicks>2500</resourceWarningCooldownTicks>
+        <preventDeathFromVitalLoss>false</preventDeathFromVitalLoss>
+        <fatalBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+          <li>Head</li>
+          <li>Brain</li>
+        </fatalBodyParts>
+        <onlyNotifyMajorParts>true</onlyNotifyMajorParts>
+        <resourceName>Blood Art</resourceName>
+      </li>
+
+      <li Class="AnimeArsenal.SunlightDamageExtension">
+        <damagePerTick>3.5</damagePerTick>
+        <damageThresholdBeforeDeath>15</damageThresholdBeforeDeath>
+        <ticksBetweenDamage>90</ticksBetweenDamage>
+        <ticksToResetDamage>1500</ticksToResetDamage>
+        <minimumCoverageForProtection>0.35</minimumCoverageForProtection>
+        <requireHeadCoverage>true</requireHeadCoverage>
+      </li>
+
+      <li Class="AnimeArsenal.BodyDisappearExtension">
+        <leaveAshFilth>true</leaveAshFilth>
+        <filthAmount>1</filthAmount>
+        <disappearMessage>Weak demon body turned to ash!</disappearMessage>
+        <playEffect>true</playEffect>
       </li>
     </modExtensions>
   </AnimeArsenal.BloodDemonArtsGeneDef>
