@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AnimeArsenal.BreathingPotentialGeneDef>
+
+  <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_BreathingPotential</defName>
     <label>Breathing Potential</label>
+    <prerequisite>Gene_BreathingPotential</prerequisite>
     <resourceName>Breath</resourceName>
     <description>Basic breathing potential - the foundation for all breathing techniques.</description>
     <iconPath>UI/Icons/Genes/breathing_potential</iconPath>
     <resourceLabel>Breath</resourceLabel>
-    <resourceDescription>Current stored breathing potential.</resourceDescription>
-
+    <resourceDescription>Current stored Breath.</resourceDescription>
     <TalentTrees>
       <li>BreathingPotentialTreee3</li>
     </TalentTrees>
-
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>
       <experienceTypes>
-        <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>10</baseXP>
+        <li Class="Talented.DamageTakenExperienceTypeDef">
+          <baseXP>50</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
-        <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>10</baseXP>
+        <li Class="Talented.DamageDealtExperienceTypeDef">
+          <baseXP>100</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
         <li Class="Talented.SkillExperienceTypeDef">
@@ -55,7 +55,6 @@
         <applyOnGeneRemove>false</applyOnGeneRemove>
       </li>
     </modExtensions>
-
     <maxStat>BreathingPotential</maxStat>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
@@ -68,18 +67,17 @@
     <resourceLossPerDay>0</resourceLossPerDay>
     <barColor>(200, 200, 200)</barColor>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-
-    <!-- BreathingPotential specific exhaustion settings -->
     <exhaustionPerTick>0.0005</exhaustionPerTick>
-    <exhaustionHediff>BeastBreathing_Fatigue</exhaustionHediff>
-    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1500</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>4000</exhausationCooldownTicks>
-
+    <exhaustionHediff>FlowerBreathing_Fatigue</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2200</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1600</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3500</exhausationCooldownTicks>
     <TabLabel>Talents</TabLabel>
-    <regenTicks>BreathingPotential_RegenTicks</regenTicks>
-    <regenStat>BreathingPotential_RegenAmount</regenStat>
-    <regenSpeedStat>BreathingPotential_RegenRate</regenSpeedStat>
-    <costMult>BreathingPotential_Cost</costMult>
-  </AnimeArsenal.BreathingPotentialGeneDef>
+    <regenTicks>FlowerBreath_RegenTicks</regenTicks>
+    <regenStat>FlowerBreath_RegenAmount</regenStat>
+    <regenSpeedStat>FlowerBreath_RegenRate</regenSpeedStat>
+    <costMult>FlowerBreath_Cost</costMult>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
+
+
 </Defs>

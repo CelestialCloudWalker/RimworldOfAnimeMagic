@@ -111,34 +111,101 @@ namespace AnimeArsenal
             get => base.Value + bonusBloodFromPawns;
             set
             {
-                // When setting value, prioritize base value first, then bonus
-                if (value <= base.Value)
+                float oldTotal = base.Value + bonusBloodFromPawns;
+                Log.Message($"[DEBUG] BloodDemon Value set: {oldTotal} -> {value} (base: {base.Value}, bonus: {bonusBloodFromPawns})");
+
+                // Calculate how much we need to drain or add
+                float change = value - oldTotal;
+
+                if (change < 0) // Draining resource (abilities using it)
                 {
-                    base.Value = value;
-                    bonusBloodFromPawns = 0f;
+                    float drainAmount = Math.Abs(change);
+                    Log.Message($"[DEBUG] Draining {drainAmount} blood");
+
+                    // First drain from bonus blood
+                    if (bonusBloodFromPawns > 0)
+                    {
+                        float bonusDrain = Math.Min(bonusBloodFromPawns, drainAmount);
+                        bonusBloodFromPawns -= bonusDrain;
+                        drainAmount -= bonusDrain;
+                        Log.Message($"[DEBUG] Drained {bonusDrain} from bonus, remaining drain: {drainAmount}");
+                    }
+
+                    // Then drain from base value
+                    if (drainAmount > 0)
+                    {
+                        float oldBase = base.Value;
+                        base.Value = Math.Max(0, base.Value - drainAmount);
+                        Log.Message($"[DEBUG] Drained {oldBase - base.Value} from base value");
+                    }
+                }
+                else if (change > 0) // Adding resource
+                {
+                    Log.Message($"[DEBUG] Adding {change} blood");
+                    base.Value += change;
                 }
                 else
                 {
-                    base.Value = Math.Min(value, InitialValue); // Keep base at reasonable level
-                    bonusBloodFromPawns = value - base.Value;
+                    Log.Message($"[DEBUG] No change in blood value");
                 }
+
+                Log.Message($"[DEBUG] Final values - base: {base.Value}, bonus: {bonusBloodFromPawns}, total: {base.Value + bonusBloodFromPawns}");
                 PostValueChanged();
             }
+        }
+
+        // Add a method to properly consume resources
+        public void ConsumeBlood(float amount)
+        {
+            if (amount <= 0) return;
+
+            float currentTotal = Value;
+            Log.Message($"[DEBUG] BloodDemon ConsumeBlood: {amount} from total {currentTotal} (base: {base.Value}, bonus: {bonusBloodFromPawns})");
+
+            // First consume from bonus blood
+            if (bonusBloodFromPawns > 0)
+            {
+                float bonusToConsume = Math.Min(bonusBloodFromPawns, amount);
+                bonusBloodFromPawns -= bonusToConsume;
+                amount -= bonusToConsume;
+                Log.Message($"[DEBUG] Consumed {bonusToConsume} from bonus, remaining to consume: {amount}");
+            }
+
+            // Then consume from base value if needed
+            if (amount > 0)
+            {
+                float newBaseValue = Math.Max(0, base.Value - amount);
+                base.Value = newBaseValue;
+                Log.Message($"[DEBUG] Consumed {amount} from base value");
+            }
+
+            PostValueChanged();
         }
 
         // Add this method to handle post-value-change logic
         private void PostValueChanged()
         {
-            // Multiple attempts to force UI refresh
-            if (pawn?.IsColonist == true)
+            // Only try to refresh UI if we're actually in a game with a loaded map
+            try
             {
-                Find.ColonistBar.MarkColonistsDirty();
-            }
+                if (Current.ProgramState == ProgramState.Playing)
+                {
+                    // Multiple attempts to force UI refresh
+                    if (pawn?.IsColonist == true && Find.ColonistBar != null)
+                    {
+                        Find.ColonistBar.MarkColonistsDirty();
+                    }
 
-            // Try to refresh the gizmos directly
-            if (pawn?.Map != null)
+                    // Try to refresh the gizmos directly
+                    if (pawn?.Map != null)
+                    {
+                        pawn.Map.mapDrawer.WholeMapChanged(MapMeshFlagDefOf.Buildings);
+                    }
+                }
+            }
+            catch
             {
-                pawn.Map.mapDrawer.WholeMapChanged(MapMeshFlagDefOf.Buildings);
+                // Ignore UI refresh errors during pawn generation
             }
         }
 
@@ -172,7 +239,7 @@ namespace AnimeArsenal
                 Value = Max * 0.5f;
             }
 
-            progressionExt = def.GetModExtension<DemonProgressionExtension>();
+            progressionExt = def?.GetModExtension<DemonProgressionExtension>();
             if (progressionExt != null)
             {
                 currentRank = progressionExt.startingRank;
@@ -234,7 +301,7 @@ namespace AnimeArsenal
 
             totalPawnsEaten++;
 
-            // Add blood using the new bonus system
+            // Add blood using the bonus system
             if (progressionExt?.bloodRestoredPerPawnEaten > 0)
             {
                 float oldTotalValue = Value;
@@ -281,46 +348,55 @@ namespace AnimeArsenal
 
         private void UpdateModExtensionValues()
         {
-            int rankIndex = (int)currentRank;
-
-            var sunlightExt = def.GetModExtension<SunlightDamageExtension>();
-            if (sunlightExt != null && progressionExt != null)
+            try
             {
-                sunlightExt.damagePerTick = GetValueAtRank(progressionExt.sunlightDamagePerTick, rankIndex);
-                sunlightExt.damageThresholdBeforeDeath = GetValueAtRank(progressionExt.sunlightDamageThreshold, rankIndex);
-                sunlightExt.ticksBetweenDamage = (int)GetValueAtRank(progressionExt.sunlightTicksBetweenDamage, rankIndex);
-                sunlightExt.ticksToResetDamage = (int)GetValueAtRank(progressionExt.sunlightTicksToReset, rankIndex);
-                sunlightExt.minimumCoverageForProtection = GetValueAtRank(progressionExt.sunlightMinCoverage, rankIndex);
-            }
+                if (def == null || progressionExt == null) return;
 
-            var regenExt = def.GetModExtension<RegenerationExtension>();
-            if (regenExt != null && progressionExt != null)
-            {
-                regenExt.healingMultiplier = GetValueAtRank(progressionExt.regenHealingMultiplier, rankIndex);
-                regenExt.ticksBetweenHealing = (int)GetValueAtRank(progressionExt.regenTicksBetweenHealing, rankIndex);
-                regenExt.healingPerTick = GetValueAtRank(progressionExt.regenHealingPerTick, rankIndex);
-                regenExt.instantLimbRegeneration = GetBoolAtRank(progressionExt.regenInstantLimb, rankIndex);
-                regenExt.instantOrganRegeneration = GetBoolAtRank(progressionExt.regenInstantOrgan, rankIndex);
-                regenExt.canRegenerateOrgans = GetBoolAtRank(progressionExt.regenCanRegenerateOrgans, rankIndex);
-                regenExt.canRegenerateHeart = GetBoolAtRank(progressionExt.regenCanRegenerateHeart, rankIndex);
-                regenExt.scarHealChance = GetValueAtRank(progressionExt.regenScarHealChance, rankIndex);
-                regenExt.scarHealInterval = (int)GetValueAtRank(progressionExt.regenScarHealInterval, rankIndex);
-                regenExt.resourceCostPerHeal = GetValueAtRank(progressionExt.regenResourceCostPerHeal, rankIndex);
-                regenExt.resourceCostPerLimbRegen = GetValueAtRank(progressionExt.regenResourceCostPerLimb, rankIndex);
-                regenExt.resourceCostPerOrganRegen = GetValueAtRank(progressionExt.regenResourceCostPerOrgan, rankIndex);
-                regenExt.minimumResourcesRequired = GetValueAtRank(progressionExt.regenMinResourcesRequired, rankIndex);
-            }
+                int rankIndex = (int)currentRank;
 
-            var bodyDisappearExt = def.GetModExtension<BodyDisappearExtension>();
-            if (bodyDisappearExt != null && progressionExt != null)
-            {
-                bodyDisappearExt.leaveAshFilth = GetBoolAtRank(progressionExt.bodyDisappearLeaveAsh, rankIndex);
-                bodyDisappearExt.filthAmount = (int)GetValueAtRank(progressionExt.bodyDisappearFilthAmount, rankIndex);
-                bodyDisappearExt.playEffect = GetBoolAtRank(progressionExt.bodyDisappearPlayEffect, rankIndex);
-                if (progressionExt.bodyDisappearMessage != null && rankIndex < progressionExt.bodyDisappearMessage.Count)
+                var sunlightExt = def.GetModExtension<SunlightDamageExtension>();
+                if (sunlightExt != null && progressionExt != null)
                 {
-                    bodyDisappearExt.disappearMessage = progressionExt.bodyDisappearMessage[rankIndex];
+                    sunlightExt.damagePerTick = GetValueAtRank(progressionExt.sunlightDamagePerTick, rankIndex);
+                    sunlightExt.damageThresholdBeforeDeath = GetValueAtRank(progressionExt.sunlightDamageThreshold, rankIndex);
+                    sunlightExt.ticksBetweenDamage = (int)GetValueAtRank(progressionExt.sunlightTicksBetweenDamage, rankIndex);
+                    sunlightExt.ticksToResetDamage = (int)GetValueAtRank(progressionExt.sunlightTicksToReset, rankIndex);
+                    sunlightExt.minimumCoverageForProtection = GetValueAtRank(progressionExt.sunlightMinCoverage, rankIndex);
                 }
+
+                var regenExt = def.GetModExtension<RegenerationExtension>();
+                if (regenExt != null && progressionExt != null)
+                {
+                    regenExt.healingMultiplier = GetValueAtRank(progressionExt.regenHealingMultiplier, rankIndex);
+                    regenExt.ticksBetweenHealing = (int)GetValueAtRank(progressionExt.regenTicksBetweenHealing, rankIndex);
+                    regenExt.healingPerTick = GetValueAtRank(progressionExt.regenHealingPerTick, rankIndex);
+                    regenExt.instantLimbRegeneration = GetBoolAtRank(progressionExt.regenInstantLimb, rankIndex);
+                    regenExt.instantOrganRegeneration = GetBoolAtRank(progressionExt.regenInstantOrgan, rankIndex);
+                    regenExt.canRegenerateOrgans = GetBoolAtRank(progressionExt.regenCanRegenerateOrgans, rankIndex);
+                    regenExt.canRegenerateHeart = GetBoolAtRank(progressionExt.regenCanRegenerateHeart, rankIndex);
+                    regenExt.scarHealChance = GetValueAtRank(progressionExt.regenScarHealChance, rankIndex);
+                    regenExt.scarHealInterval = (int)GetValueAtRank(progressionExt.regenScarHealInterval, rankIndex);
+                    regenExt.resourceCostPerHeal = GetValueAtRank(progressionExt.regenResourceCostPerHeal, rankIndex);
+                    regenExt.resourceCostPerLimbRegen = GetValueAtRank(progressionExt.regenResourceCostPerLimb, rankIndex);
+                    regenExt.resourceCostPerOrganRegen = GetValueAtRank(progressionExt.regenResourceCostPerOrgan, rankIndex);
+                    regenExt.minimumResourcesRequired = GetValueAtRank(progressionExt.regenMinResourcesRequired, rankIndex);
+                }
+
+                var bodyDisappearExt = def.GetModExtension<BodyDisappearExtension>();
+                if (bodyDisappearExt != null && progressionExt != null)
+                {
+                    bodyDisappearExt.leaveAshFilth = GetBoolAtRank(progressionExt.bodyDisappearLeaveAsh, rankIndex);
+                    bodyDisappearExt.filthAmount = (int)GetValueAtRank(progressionExt.bodyDisappearFilthAmount, rankIndex);
+                    bodyDisappearExt.playEffect = GetBoolAtRank(progressionExt.bodyDisappearPlayEffect, rankIndex);
+                    if (progressionExt.bodyDisappearMessage != null && rankIndex < progressionExt.bodyDisappearMessage.Count)
+                    {
+                        bodyDisappearExt.disappearMessage = progressionExt.bodyDisappearMessage[rankIndex];
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Warning($"[AnimeArsenal] Error in UpdateModExtensionValues(): {ex.Message}");
             }
         }
 
@@ -373,7 +449,6 @@ namespace AnimeArsenal
                 OnExhaustionStarted();
             }
             exhaustionHediffTimer++;
-            // FIXED: Changed timeUntilExhaustedTimer to exhaustionHediffTimer
             if (exhaustionHediffTimer >= Def.ticksPerExhaustionIncrease)
             {
                 if (Def.exhaustionHediff != null && ShouldApplyExhaustion())
@@ -388,7 +463,6 @@ namespace AnimeArsenal
             }
         }
 
-        // FIXED: Changed method name from ShouldApplyExhausation to ShouldApplyExhaustion
         public virtual bool ShouldApplyExhaustion()
         {
             return pawn != null && !pawn.Dead && !pawn.Downed;
@@ -418,30 +492,7 @@ namespace AnimeArsenal
                 yield return gizmo;
             }
 
-            if (progressionExt != null)
-            {
-                string pawnsNeeded = "";
-                int rankIndex = (int)currentRank;
-                if (rankIndex < progressionExt.pawnsRequiredPerRank.Count)
-                {
-                    int needed = progressionExt.pawnsRequiredPerRank[rankIndex];
-                    pawnsNeeded = $" ({totalPawnsEaten}/{needed} pawns eaten to next rank)";
-                }
-                else
-                {
-                    pawnsNeeded = " (Max Rank)";
-                }
-
-                yield return new Command_Action
-                {
-                    defaultLabel = $"Demon Rank: {currentRank}",
-                    defaultDesc = $"Current demon rank: {currentRank}\nPawns eaten: {totalPawnsEaten}\nBlood pool: {Value:F1}/{Max:F1}{pawnsNeeded}",
-                    icon = ContentFinder<Texture2D>.Get("UI/Icons/Genes/Demon", true),
-                    action = () => { }
-                };
-            }
-
-            // ADDED: Dev mode commands that were missing
+            // Dev mode commands
             if (Prefs.DevMode)
             {
                 yield return new Command_Action

@@ -99,7 +99,7 @@ namespace AnimeArsenal
                     p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
                 if (neck != null && !pawn.health.hediffSet.PartIsMissing(neck))
                 {
-                    __result = false; 
+                    __result = false;
                 }
             }
         }
@@ -140,15 +140,15 @@ namespace AnimeArsenal
 
                         if (capacity == PawnCapacityDefOf.BloodPumping && hasHeart)
                         {
-                            __result = Mathf.Max(__result, 0.5f); 
+                            __result = Mathf.Max(__result, 0.5f);
                         }
                         else if (capacity == PawnCapacityDefOf.Consciousness && hasBrain && hasHead && hasSkull)
                         {
-                            __result = Mathf.Max(__result, 0.5f); 
+                            __result = Mathf.Max(__result, 0.5f);
                         }
                         else if (capacity == PawnCapacityDefOf.Moving && hasHeart && hasBrain && hasHead)
                         {
-                            __result = Mathf.Max(__result, 0.3f); 
+                            __result = Mathf.Max(__result, 0.3f);
                         }
                     }
                 }
@@ -337,8 +337,8 @@ namespace AnimeArsenal
                         var bonusDamage = new DamageInfo(
                             DamageDefOf.Cut,
                             damageAmount,
-                            0.8f, 
-                            -1f,  
+                            0.8f,
+                            -1f,
                             __instance.caster,
                             bodyPart,
                             weapon.def,
@@ -346,7 +346,7 @@ namespace AnimeArsenal
                             weapon
                         );
                         bonusDamageInfos.Add(bonusDamage);
-                        break; 
+                        break;
                     }
                 }
 
@@ -448,7 +448,7 @@ namespace AnimeArsenal
                 if (isCustomGene && gizmo is Command_Action cmd && Prefs.DevMode &&
                     cmd.defaultLabel.Contains("Refund all trees"))
                 {
-                    continue; 
+                    continue;
                 }
                 yield return gizmo;
             }
@@ -582,7 +582,7 @@ public static class CorpseEatingPatches
                                        ingester, MessageTypeDefOf.PositiveEvent);
                         Log.Message($"[AnimeArsenal] Demon {ingester.Name.ToStringShort} ate corpse via Ingested patch");
 
-                        
+
                         if (processedCorpses.Count > 100)
                         {
                             processedCorpses.Clear();
@@ -607,7 +607,7 @@ public static class CorpseEatingPatches
             if (mode != DestroyMode.Vanish && mode != DestroyMode.KillFinalize) return;
 
             int corpseId = __instance.thingIDNumber;
-            if (processedCorpses.Contains(corpseId)) return; 
+            if (processedCorpses.Contains(corpseId)) return;
 
             var map = __instance.Map;
             if (map?.mapPawns?.AllPawns == null) return;
@@ -633,7 +633,7 @@ public static class CorpseEatingPatches
                         {
                             processedCorpses.Clear();
                         }
-                        break; 
+                        break;
                     }
                 }
             }

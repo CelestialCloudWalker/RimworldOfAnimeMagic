@@ -14,8 +14,8 @@ namespace AnimeArsenal
         public float baseExperienceGain = 1f;
         public bool showExperienceInTooltip = true;
 
-        
-        public string requiredGeneDefName; 
+
+        public string requiredGeneDefName;
         public float resourceCost = 1f;
 
         public TalentedLevelingAbilityDef()
@@ -167,15 +167,21 @@ namespace AnimeArsenal
 
                 if (talentGene == null)
                 {
-                    FindTalentGene(); 
+                    FindTalentGene();
                     if (talentGene == null)
                         return "Missing required gene";
                 }
 
+                // Check resource availability for both gene types
                 if (talentGene is BreathingTechniqueGene breathingGene)
                 {
                     if (breathingGene.Value < TalentedLevelingDef.resourceCost)
                         return "Not enough breath";
+                }
+                else if (talentGene is BloodDemonArtsGene bloodGene)
+                {
+                    if (bloodGene.Value < TalentedLevelingDef.resourceCost)
+                        return "Not enough blood";
                 }
 
                 var effectiveComps = GetEffectiveComps();
@@ -254,10 +260,14 @@ namespace AnimeArsenal
         {
             if (talentGene is BreathingTechniqueGene breathingGene)
             {
-                
-                breathingGene.Consume(TalentedLevelingDef.resourceCost);
+                // For breathing technique, use direct value subtraction (works fine)
+                breathingGene.Value -= TalentedLevelingDef.resourceCost;
             }
-            
+            else if (talentGene is BloodDemonArtsGene bloodGene)
+            {
+                // For blood demon, use the specialized consumption method
+                bloodGene.ConsumeBlood(TalentedLevelingDef.resourceCost);
+            }
         }
 
         public void GainExperience(float amount)
@@ -303,7 +313,7 @@ namespace AnimeArsenal
             experience = Mathf.Max(0, experience - usedExp);
             if (currentLevel < MaxLevel - 1 && experience >= GetExperienceForNextLevel())
             {
-                LevelUp(); 
+                LevelUp();
             }
         }
 
@@ -336,12 +346,12 @@ namespace AnimeArsenal
 
             if (Scribe.mode == LoadSaveMode.LoadingVars)
             {
-                
+
                 if (this.Id == -1)
                 {
                     this.Id = Find.UniqueIDsManager.GetNextAbilityID();
                 }
-                initialized = false; 
+                initialized = false;
             }
 
             if (levelComps != null)

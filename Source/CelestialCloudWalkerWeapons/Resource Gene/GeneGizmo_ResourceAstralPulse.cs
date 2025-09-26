@@ -4,6 +4,7 @@ using RimWorld;
 using Talented;
 using UnityEngine;
 using Verse;
+
 namespace AnimeArsenal
 {
     public class GeneGizmo_ResourceAstral : GeneGizmo_Resource
@@ -19,6 +20,7 @@ namespace AnimeArsenal
                 this.IsDraggingBar = value;
             }
         }
+
         protected override string Title
         {
             get
@@ -37,6 +39,7 @@ namespace AnimeArsenal
                 return result;
             }
         }
+
         public GeneGizmo_ResourceAstral(Gene_Resource gene, List<IGeneResourceDrain> drainGenes, Color barColor, Color barHighlightColor) : base(gene, drainGenes, barColor, barHighlightColor)
         {
             bool flag = gene == null;
@@ -45,6 +48,7 @@ namespace AnimeArsenal
                 Log.Error("GeneGizmo_ResourceAstral created with null gene");
             }
         }
+
         protected override IEnumerable<float> GetBarThresholds()
         {
             Gene_BasicResource resourceGene = this.gene as Gene_BasicResource;
@@ -56,6 +60,7 @@ namespace AnimeArsenal
                 yield return resourceGene.Max * 0.75f;
             }
         }
+
         protected override string GetTooltip()
         {
             Gene_BasicResource resourceGene = this.gene as Gene_BasicResource;
@@ -71,6 +76,20 @@ namespace AnimeArsenal
                     resourceGene.Def.resourceLabel.CapitalizeFirst().Colorize(ColoredText.TipSectionTitleColor),
                     resourceGene.ValueForDisplay,
                     resourceGene.MaxForDisplay);
+
+                // Only add demon info if this is actually a BloodDemonArtsGene and everything is initialized
+                if (resourceGene.def.defName == "BloodDemonArt" && resourceGene is BloodDemonArtsGene demonGene && resourceGene.pawn != null)
+                {
+                    try
+                    {
+                        text += "\n" + "Demon Progression".Colorize(ColoredText.TipSectionTitleColor);
+                    }
+                    catch
+                    {
+                        // Skip demon info if there's any error
+                    }
+                }
+
                 string regen = string.Format("\nRegenerates {0} every {1}",
                     resourceGene.RegenAmount,
                     resourceGene.RegenTicks.ToStringTicksToPeriod(true, false, true, true, false));
@@ -83,6 +102,7 @@ namespace AnimeArsenal
             }
             return result;
         }
+
         private const float TotalPulsateTime = 0.85f;
         private List<Pair<IGeneResourceDrain, float>> tmpDrainGenes = new List<Pair<IGeneResourceDrain, float>>();
         protected bool IsDraggingBar = false;
