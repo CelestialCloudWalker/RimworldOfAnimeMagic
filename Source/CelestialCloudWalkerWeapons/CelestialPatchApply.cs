@@ -703,7 +703,6 @@ public static class CorpseEatingPatches
 
                 if (demonGene != null)
                 {
-                    // Use reflection to access the protected stat field
                     StatDef currentStat = (StatDef)statField.GetValue(__instance);
                     float offset = demonGene.GetStatOffset(currentStat);
                     if (offset != 0f)

@@ -14,27 +14,38 @@ namespace AnimeArsenal
         private int exhaustionCooldownRemaining = 0;
         private int exhaustionHediffTimer = 0;
 
+        private float lastKnownMax = -1f;
+
         public override float Max
         {
             get
             {
                 if (Def?.maxStat == null)
                 {
-                    return 100f; 
+                    return 100f;
                 }
 
                 if (pawn == null)
                 {
-                    return 100f; 
+                    return 100f;
                 }
 
-                return pawn.GetStatValue(Def.maxStat);
+                float currentMax = pawn.GetStatValue(Def.maxStat);
+
+                if (lastKnownMax != currentMax)
+                {
+                    lastKnownMax = currentMax;
+                    
+                    this.SetMax(currentMax);
+                }
+
+                return currentMax;
             }
         }
 
         public float MinValue => 0f;
-        public float MaxValue => Max; 
-        public float InitialValue => Max * 0.5f; 
+        public float MaxValue => Max;
+        public float InitialValue => Max * 0.5f;
 
         public virtual float ExhaustionProgress
         {
@@ -57,7 +68,7 @@ namespace AnimeArsenal
 
             if (Value <= 0f)
             {
-                Value = Max * 0.5f; 
+                Value = Max * 0.5f;
             }
         }
 
@@ -68,6 +79,25 @@ namespace AnimeArsenal
             {
                 Value = InitialValue;
             }
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+
+            if (pawn.IsHashIntervalTick(250))
+            {
+                float currentMax = Max; 
+            }
+        }
+
+        private void ForceResourceSync()
+        {
+            float currentMax = pawn.GetStatValue(Def.maxStat);
+            lastKnownMax = currentMax;
+            this.SetMax(currentMax);
+
+            Log.Message($"[DEBUG] BreathingTechnique ForceResourceSync - Set max to {currentMax}, Current Value: {Value}");
         }
 
         public void TickExhausted()
@@ -144,7 +174,7 @@ namespace AnimeArsenal
                     if (label.Contains("dev:") || label.Contains("debug") ||
                         label.Contains("refund") || label.Contains("reset"))
                     {
-                        continue; 
+                        continue;
                     }
                 }
                 yield return gizmo;
@@ -217,7 +247,9 @@ namespace AnimeArsenal
                     defaultDesc = "Fill " + resourceLabel.ToLower() + " to max (Debug)",
                     action = () =>
                     {
+                        ForceResourceSync();
                         Value = Max;
+                        Log.Message($"[DEBUG] Fill command - Set Value to {Value}, Max is {Max}");
                     }
                 };
 
@@ -231,7 +263,17 @@ namespace AnimeArsenal
                     }
                 };
 
-                
+                yield return new Command_Action
+                {
+                    defaultLabel = "DEV: Force Resource Sync",
+                    defaultDesc = "Force resource max to sync with stat",
+                    action = () =>
+                    {
+                        ForceResourceSync();
+                        Log.Message($"[DEBUG] Manual sync - Value: {Value}, Max: {Max}");
+                    }
+                };
+
                 if (Def.exhaustionHediff != null)
                 {
                     yield return new Command_Action
@@ -243,7 +285,7 @@ namespace AnimeArsenal
                             Hediff hediff = pawn.health.GetOrAddHediff(Def.exhaustionHediff);
                             if (hediff != null)
                             {
-                                hediff.Severity += Def.exhaustionPerTick * 10; 
+                                hediff.Severity += Def.exhaustionPerTick * 10;
                             }
                         }
                     };
@@ -296,6 +338,7 @@ namespace AnimeArsenal
             Scribe_Values.Look(ref isExhausted, "isExhausted", false);
             Scribe_Values.Look(ref exhaustionCooldownRemaining, "exhaustionCooldownRemaining", 0);
             Scribe_Values.Look(ref exhaustionHediffTimer, "exhaustionHediffTimer", 0);
+            Scribe_Values.Look(ref lastKnownMax, "lastKnownMax", -1f);
         }
     }
 }

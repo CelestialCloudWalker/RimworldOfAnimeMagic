@@ -54,7 +54,6 @@ namespace AnimeArsenal
             Gene_BasicResource resourceGene = this.gene as Gene_BasicResource;
             if (resourceGene != null)
             {
-                // Return thresholds at 25%, 50%, 75% of max resource
                 yield return resourceGene.Max * 0.25f;
                 yield return resourceGene.Max * 0.5f;
                 yield return resourceGene.Max * 0.75f;
@@ -77,7 +76,6 @@ namespace AnimeArsenal
                     resourceGene.ValueForDisplay,
                     resourceGene.MaxForDisplay);
 
-                // Only add demon info if this is actually a BloodDemonArtsGene and everything is initialized
                 if (resourceGene.def.defName == "BloodDemonArt" && resourceGene is BloodDemonArtsGene demonGene && resourceGene.pawn != null)
                 {
                     try
@@ -86,7 +84,7 @@ namespace AnimeArsenal
                     }
                     catch
                     {
-                        // Skip demon info if there's any error
+                       
                     }
                 }
 

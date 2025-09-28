@@ -172,7 +172,6 @@ namespace AnimeArsenal
                         return "Missing required gene";
                 }
 
-                // Check resource availability for both gene types
                 if (talentGene is BreathingTechniqueGene breathingGene)
                 {
                     if (breathingGene.Value < TalentedLevelingDef.resourceCost)
@@ -260,13 +259,11 @@ namespace AnimeArsenal
         {
             if (talentGene is BreathingTechniqueGene breathingGene)
             {
-                // For breathing technique, use direct value subtraction (works fine)
                 breathingGene.Value -= TalentedLevelingDef.resourceCost;
             }
             else if (talentGene is BloodDemonArtsGene bloodGene)
             {
-                // For blood demon, use the specialized consumption method
-                bloodGene.ConsumeBlood(TalentedLevelingDef.resourceCost);
+                bloodGene.Value -= TalentedLevelingDef.resourceCost;
             }
         }
 

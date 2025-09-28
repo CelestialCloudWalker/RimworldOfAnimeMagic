@@ -38,9 +38,9 @@ namespace AnimeArsenal
                 string text = "";
                 try
                 {
-                    // Calculate total blood directly (base value + bonus from pawns eaten)
+                   
                     float baseBlood = BloodDemonArtsGene.Value;
-                    float totalBlood = baseBlood; // For now, just use base value until we can access bonusBloodFromPawns
+                    float totalBlood = baseBlood; 
                     float maxBlood = BloodDemonArtsGene.pawn.GetStatValue(BloodDemonArtsGene.Def.maxStat);
 
                     text = string.Format("{0}: {1} / {2}",
@@ -53,14 +53,12 @@ namespace AnimeArsenal
                     return "Blood Art Resource";
                 }
 
-                // Add demon progression info safely
                 try
                 {
                     text += "\n\n" + "Demon Progression".Colorize(ColoredText.TipSectionTitleColor);
                     text += string.Format("\nCurrent Rank: {0}", BloodDemonArtsGene.CurrentRank.ToString());
                     text += string.Format("\nPawns Eaten: {0}", BloodDemonArtsGene.TotalPawnsEaten);
 
-                    // Show progress to next rank
                     var progressionExt = BloodDemonArtsGene.def?.GetModExtension<DemonProgressionExtension>();
                     if (progressionExt?.pawnsRequiredPerRank != null && progressionExt.pawnsRequiredPerRank.Count > 0)
                     {
@@ -79,10 +77,9 @@ namespace AnimeArsenal
                 }
                 catch
                 {
-                    // Skip demon info if there's an error
+
                 }
 
-                // Add regeneration info safely
                 try
                 {
                     if (BloodDemonArtsGene.RegenAmount > 0)
@@ -93,7 +90,6 @@ namespace AnimeArsenal
                 }
                 catch { }
 
-                // Add description safely
                 try
                 {
                     if (BloodDemonArtsGene.Def?.resourceDescription != null && !BloodDemonArtsGene.Def.resourceDescription.NullOrEmpty())

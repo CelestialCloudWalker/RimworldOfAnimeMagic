@@ -31,8 +31,7 @@ namespace AnimeArsenal
         public List<int> pawnsRequiredPerRank = new List<int> { 3, 7, 15 };
         public bool canProgressThroughTalents = true;
 
-        // Stat to modify and amount per pawn eaten
-        public StatDef bloodPoolStat; // The stat to increase
+        public StatDef bloodPoolStat; 
         public float bloodPoolBonusPerPawnEaten = 5f;
         public float bloodRestoredPerPawnEaten = 15f;
 
@@ -77,10 +76,11 @@ namespace AnimeArsenal
         private int exhaustionCooldownRemaining = 0;
         private int exhaustionHediffTimer = 0;
 
-        // Rank system variables
         private DemonRank currentRank = DemonRank.WeakDemon;
         private int totalPawnsEaten = 0;
         private DemonProgressionExtension progressionExt;
+
+        private float lastKnownMax = -1f;
 
         public override float Max
         {
@@ -94,120 +94,23 @@ namespace AnimeArsenal
                 {
                     return 100f;
                 }
-                return pawn.GetStatValue(Def.maxStat, true);
+
+                float currentMax = pawn.GetStatValue(Def.maxStat, true);
+
+                if (lastKnownMax != currentMax)
+                {
+                    lastKnownMax = currentMax;
+                    
+                    this.SetMax(currentMax);
+                }
+
+                return currentMax;
             }
         }
 
         public float MinValue => 0f;
         public float MaxValue => Max;
         public float InitialValue => Max * 0.5f;
-
-        // Add a field to track bonus blood from eating pawns
-        private float bonusBloodFromPawns = 0f;
-
-        // Override Value to include the bonus blood
-        public override float Value
-        {
-            get => base.Value + bonusBloodFromPawns;
-            set
-            {
-                float oldTotal = base.Value + bonusBloodFromPawns;
-                Log.Message($"[DEBUG] BloodDemon Value set: {oldTotal} -> {value} (base: {base.Value}, bonus: {bonusBloodFromPawns})");
-
-                // Calculate how much we need to drain or add
-                float change = value - oldTotal;
-
-                if (change < 0) // Draining resource (abilities using it)
-                {
-                    float drainAmount = Math.Abs(change);
-                    Log.Message($"[DEBUG] Draining {drainAmount} blood");
-
-                    // First drain from bonus blood
-                    if (bonusBloodFromPawns > 0)
-                    {
-                        float bonusDrain = Math.Min(bonusBloodFromPawns, drainAmount);
-                        bonusBloodFromPawns -= bonusDrain;
-                        drainAmount -= bonusDrain;
-                        Log.Message($"[DEBUG] Drained {bonusDrain} from bonus, remaining drain: {drainAmount}");
-                    }
-
-                    // Then drain from base value
-                    if (drainAmount > 0)
-                    {
-                        float oldBase = base.Value;
-                        base.Value = Math.Max(0, base.Value - drainAmount);
-                        Log.Message($"[DEBUG] Drained {oldBase - base.Value} from base value");
-                    }
-                }
-                else if (change > 0) // Adding resource
-                {
-                    Log.Message($"[DEBUG] Adding {change} blood");
-                    base.Value += change;
-                }
-                else
-                {
-                    Log.Message($"[DEBUG] No change in blood value");
-                }
-
-                Log.Message($"[DEBUG] Final values - base: {base.Value}, bonus: {bonusBloodFromPawns}, total: {base.Value + bonusBloodFromPawns}");
-                PostValueChanged();
-            }
-        }
-
-        // Add a method to properly consume resources
-        public void ConsumeBlood(float amount)
-        {
-            if (amount <= 0) return;
-
-            float currentTotal = Value;
-            Log.Message($"[DEBUG] BloodDemon ConsumeBlood: {amount} from total {currentTotal} (base: {base.Value}, bonus: {bonusBloodFromPawns})");
-
-            // First consume from bonus blood
-            if (bonusBloodFromPawns > 0)
-            {
-                float bonusToConsume = Math.Min(bonusBloodFromPawns, amount);
-                bonusBloodFromPawns -= bonusToConsume;
-                amount -= bonusToConsume;
-                Log.Message($"[DEBUG] Consumed {bonusToConsume} from bonus, remaining to consume: {amount}");
-            }
-
-            // Then consume from base value if needed
-            if (amount > 0)
-            {
-                float newBaseValue = Math.Max(0, base.Value - amount);
-                base.Value = newBaseValue;
-                Log.Message($"[DEBUG] Consumed {amount} from base value");
-            }
-
-            PostValueChanged();
-        }
-
-        // Add this method to handle post-value-change logic
-        private void PostValueChanged()
-        {
-            // Only try to refresh UI if we're actually in a game with a loaded map
-            try
-            {
-                if (Current.ProgramState == ProgramState.Playing)
-                {
-                    // Multiple attempts to force UI refresh
-                    if (pawn?.IsColonist == true && Find.ColonistBar != null)
-                    {
-                        Find.ColonistBar.MarkColonistsDirty();
-                    }
-
-                    // Try to refresh the gizmos directly
-                    if (pawn?.Map != null)
-                    {
-                        pawn.Map.mapDrawer.WholeMapChanged(MapMeshFlagDefOf.Buildings);
-                    }
-                }
-            }
-            catch
-            {
-                // Ignore UI refresh errors during pawn generation
-            }
-        }
 
         public virtual float ExhaustionProgress
         {
@@ -264,6 +167,8 @@ namespace AnimeArsenal
             if (pawn.IsHashIntervalTick(250))
             {
                 CheckForRankUp();
+
+                float currentMax = Max;
             }
         }
 
@@ -288,8 +193,8 @@ namespace AnimeArsenal
             currentRank = (DemonRank)((int)currentRank + 1);
             UpdateModExtensionValues();
 
-            // Refresh stats since the stat offset changed
             pawn.health.capacities.Notify_CapacityLevelsDirty();
+            ForceResourceSync();
 
             Messages.Message($"{pawn.Name.ToStringShort} has evolved to {currentRank}!",
                            pawn, MessageTypeDefOf.PositiveEvent);
@@ -297,35 +202,30 @@ namespace AnimeArsenal
 
         public void AddPawnEaten()
         {
-            Log.Message($"[DEBUG] AddPawnEaten called - BEFORE: totalPawnsEaten={totalPawnsEaten}, base.Value={base.Value}, bonusBlood={bonusBloodFromPawns}, Total Value={Value}, Max={Max}");
+            Log.Message($"[DEBUG] AddPawnEaten called - BEFORE: totalPawnsEaten={totalPawnsEaten}, Value={Value}, Max={Max}");
 
             totalPawnsEaten++;
 
-            // Add blood using the bonus system
+            pawn.health.capacities.Notify_CapacityLevelsDirty();
+            ForceResourceSync();
+
             if (progressionExt?.bloodRestoredPerPawnEaten > 0)
             {
-                float oldTotalValue = Value;
-                bonusBloodFromPawns += progressionExt.bloodRestoredPerPawnEaten;
-
-                Log.Message($"[DEBUG] Added {progressionExt.bloodRestoredPerPawnEaten} bonus blood. Total Value: {oldTotalValue} -> {Value}");
+                float oldValue = Value;
+                Value += progressionExt.bloodRestoredPerPawnEaten;
+                Log.Message($"[DEBUG] Added {progressionExt.bloodRestoredPerPawnEaten} blood. Value: {oldValue} -> {Value}");
             }
 
-            // Refresh stats to update the Max value
-            pawn.health.capacities.Notify_CapacityLevelsDirty();
+            Log.Message($"[DEBUG] AddPawnEaten completed - AFTER: totalPawnsEaten={totalPawnsEaten}, Value={Value}, Max={Max}");
+        }
 
-            // Cap to max if needed
-            if (Value > Max)
-            {
-                Log.Message($"[DEBUG] Capping total value from {Value} to {Max}");
-                // Reduce bonus blood instead of base value
-                float excess = Value - Max;
-                bonusBloodFromPawns = Math.Max(0, bonusBloodFromPawns - excess);
-            }
+        private void ForceResourceSync()
+        {
+            float currentMax = pawn.GetStatValue(Def.maxStat, true);
+            lastKnownMax = currentMax;
+            this.SetMax(currentMax);
 
-            // UI refresh
-            PostValueChanged();
-
-            Log.Message($"[DEBUG] AddPawnEaten completed - AFTER: totalPawnsEaten={totalPawnsEaten}, base.Value={base.Value}, bonusBlood={bonusBloodFromPawns}, Total Value={Value}, Max={Max}");
+            Log.Message($"[DEBUG] ForceResourceSync - Set max to {currentMax}, Current Value: {Value}");
         }
 
         public void ForceRankUp()
@@ -336,7 +236,6 @@ namespace AnimeArsenal
             }
         }
 
-        // Method to get stat offset for the blood pool stat
         public float GetStatOffset(StatDef stat)
         {
             if (progressionExt?.bloodPoolStat == stat)
@@ -484,50 +383,7 @@ namespace AnimeArsenal
         {
             foreach (var gizmo in base.GetGizmos())
             {
-                if (gizmo is Command_Action cmd && Prefs.DevMode &&
-                    (cmd.defaultLabel.Contains("DEV:") || cmd.defaultLabel.Contains("Debug")))
-                {
-                    continue;
-                }
                 yield return gizmo;
-            }
-
-            // Dev mode commands
-            if (Prefs.DevMode)
-            {
-                yield return new Command_Action
-                {
-                    defaultLabel = $"DEV: {this.Label} Gain Level",
-                    defaultDesc = "Gain 1 Level (Debug)",
-                    action = () => GainLevel(1)
-                };
-
-                yield return new Command_Action
-                {
-                    defaultLabel = $"DEV: {this.Label} Max Experience",
-                    defaultDesc = "Fill Experience Bar (Debug)",
-                    action = () => GainExperience(MaxExperienceForLevel(CurrentLevel) - CurrentExperience - 0.1f)
-                };
-
-                foreach (var treeData in AvailableTrees())
-                {
-                    var treeDef = treeData.treeDef;
-                    var handler = treeData.handler;
-
-                    string treeName = !string.IsNullOrEmpty(treeDef.label) ? treeDef.label : treeDef.defName;
-
-                    yield return new Command_Action
-                    {
-                        defaultLabel = $"DEV: Reset {treeName} Tree",
-                        defaultDesc = $"Reset all talents in the {treeName} tree and refund spent points",
-                        action = () =>
-                        {
-                            ResetTreeTracker.AllowCustomTreeReset = true;
-                            handler.ResetTree();
-                            ResetTreeTracker.AllowCustomTreeReset = false;
-                        }
-                    };
-                }
             }
 
             if (Prefs.DevMode && DebugSettings.godMode)
@@ -560,6 +416,7 @@ namespace AnimeArsenal
                     defaultDesc = "Fill " + resourceLabel.ToLower() + " to max (Debug)",
                     action = () =>
                     {
+                        ForceResourceSync();
                         Value = Max;
                     }
                 };
@@ -655,7 +512,7 @@ namespace AnimeArsenal
 
             Scribe_Values.Look(ref currentRank, "currentRank", DemonRank.WeakDemon);
             Scribe_Values.Look(ref totalPawnsEaten, "totalPawnsEaten", 0);
-            Scribe_Values.Look(ref bonusBloodFromPawns, "bonusBloodFromPawns", 0f);
+            Scribe_Values.Look(ref lastKnownMax, "lastKnownMax", -1f);
         }
     }
 }
