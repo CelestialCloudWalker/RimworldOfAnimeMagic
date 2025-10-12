@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using HarmonyLib;
 
 namespace AnimeArsenal
 {
@@ -10,13 +11,14 @@ namespace AnimeArsenal
     {
         public float sightRange = 15f;
         public int durationTicks = 3600;
+        public float organHitChanceBonus = 0f; 
+        public float vitalOrganChanceMultiplier = 1f; 
     }
 
     public class Hediff_TransparentWorld : Hediff
     {
         private int ticksRemaining;
         private bool initialized = false;
-
         private TransparentWorldProperties Properties => def.GetModExtension<TransparentWorldProperties>();
 
         public override void PostAdd(DamageInfo? dinfo)
@@ -55,7 +57,7 @@ namespace AnimeArsenal
                 }
                 catch
                 {
-                    
+
                 }
             }
         }
@@ -77,7 +79,6 @@ namespace AnimeArsenal
         }
     }
 
-    
     public class CompProperties_GiveHediff : CompProperties_AbilityEffect
     {
         public HediffDef hediffDef;

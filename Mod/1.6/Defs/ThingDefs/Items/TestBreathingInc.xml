@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Small Gourd - Beginner Level -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>AnimeArsenal_BreathingGourd_Small</defName>
+    <label>small breathing gourd</label>
+    <description>A small training gourd for beginners. Increases breathing capacity with moderate risk. Reward: +10% breathing, Risk: Low damage on failure.</description>
+    <thingClass>AnimeArsenal.Building_TrainingItem</thingClass>
+    <graphicData>
+      <texPath>Things/Item/FinalSelectionInvitation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <pathCost>50</pathCost>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>15</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>Fabrication</li>
+    </researchPrerequisites>
+    <modExtensions>
+      <li Class="AnimeArsenal.TrainingItemExtension">
+        <capacityToBoost>Breathing</capacityToBoost>
+        <statToBoost></statToBoost>
+        <increaseAmount>0.10</increaseAmount>
+        <successChance>0.75</successChance>
+        <failureBodyParts>
+          <li>Lung</li>
+        </failureBodyParts>
+        <failureDamage>12</failureDamage>
+        <trainingTime>1000</trainingTime>
+        <cooldownTime>120000</cooldownTime>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Medium Gourd - Intermediate Level -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>AnimeArsenal_BreathingGourd_Medium</defName>
+    <label>medium breathing gourd</label>
+    <description>A medium training gourd for intermediate practitioners. Greater rewards with increased risk. Reward: +15% breathing, Risk: Moderate damage on failure.</description>
+    <thingClass>AnimeArsenal.Building_TrainingItem</thingClass>
+    <graphicData>
+      <texPath>Things/Item/FinalSelectionInvitation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <pathCost>50</pathCost>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>Fabrication</li>
+    </researchPrerequisites>
+    <modExtensions>
+      <li Class="AnimeArsenal.TrainingItemExtension">
+        <capacityToBoost>Breathing</capacityToBoost>
+        <statToBoost></statToBoost>
+        <increaseAmount>0.15</increaseAmount>
+        <successChance>0.65</successChance>
+        <failureBodyParts>
+          <li>Lung</li>
+        </failureBodyParts>
+        <failureDamage>20</failureDamage>
+        <trainingTime>2000</trainingTime>
+        <cooldownTime>180000</cooldownTime>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Large Gourd - Advanced Level -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>AnimeArsenal_BreathingGourd_Large</defName>
+    <label>large breathing gourd</label>
+    <description>A large training gourd for advanced practitioners. High rewards but dangerous. Reward: +20% breathing, Risk: High damage on failure.</description>
+    <thingClass>AnimeArsenal.Building_TrainingItem</thingClass>
+    <graphicData>
+      <texPath>Things/Item/FinalSelectionInvitation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <pathCost>50</pathCost>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>40</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <Plasteel>10</Plasteel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>Fabrication</li>
+    </researchPrerequisites>
+    <modExtensions>
+      <li Class="AnimeArsenal.TrainingItemExtension">
+        <capacityToBoost>Breathing</capacityToBoost>
+        <statToBoost></statToBoost>
+        <increaseAmount>0.20</increaseAmount>
+        <successChance>0.55</successChance>
+        <failureBodyParts>
+          <li>Lung</li>
+        </failureBodyParts>
+        <failureDamage>30</failureDamage>
+        <trainingTime>3000</trainingTime>
+        <cooldownTime>300000</cooldownTime>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Extra Large Gourd - Master Level -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>AnimeArsenal_BreathingGourd_ExtraLarge</defName>
+    <label>extra large breathing gourd</label>
+    <description>An enormous training gourd for masters only. Extreme rewards with severe risk. Reward: +30% breathing, Risk: Severe damage and potential death on failure.</description>
+    <thingClass>AnimeArsenal.Building_TrainingItem</thingClass>
+    <graphicData>
+      <texPath>Things/Item/FinalSelectionInvitation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.5,2.5)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <pathCost>50</pathCost>
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <Plasteel>20</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>Fabrication</li>
+    </researchPrerequisites>
+    <modExtensions>
+      <li Class="AnimeArsenal.TrainingItemExtension">
+        <capacityToBoost>Breathing</capacityToBoost>
+        <statToBoost></statToBoost>
+        <increaseAmount>0.30</increaseAmount>
+        <successChance>0.40</successChance>
+        <failureBodyParts>
+          <li>Lung</li>
+          <li>Heart</li>
+        </failureBodyParts>
+        <failureDamage>45</failureDamage>
+        <trainingTime>4000</trainingTime>
+        <cooldownTime>600000</cooldownTime>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <JobDef>
+    <defName>AnimeArsenal_UseTrainingItem</defName>
+    <driverClass>AnimeArsenal.JobDriver_UseTrainingItem</driverClass>
+    <reportString>training at TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+</Defs>

@@ -17,6 +17,18 @@ namespace AnimeArsenal
 
         protected override bool TestRunInt(Slate slate)
         {
+            if (genes == null || !genes.Any())
+            {
+                Log.Warning("QuestNode_GetGene: genes list is null or empty");
+                return false;
+            }
+
+            if (survivalSettings == null)
+            {
+                Log.Warning("QuestNode_GetGene: survivalSettings is null");
+                return false;
+            }
+
             return true;
         }
 
@@ -175,6 +187,8 @@ namespace AnimeArsenal
             }
 
             survivalChance = Mathf.Clamp(survivalChance, survivalSettings.minimumSurvivalChance, survivalSettings.maximumSurvivalChance);
+
+            Log.Message($"Final Selection survival roll for {pawn.LabelShort}: {survivalChance * 100f:F1}% chance");
 
             return Rand.Chance(survivalChance);
         }

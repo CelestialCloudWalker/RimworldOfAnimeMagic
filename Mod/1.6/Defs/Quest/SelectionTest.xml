@@ -12,15 +12,10 @@
 
   <QuestScriptDef>
     <defName>AnimeArsenal_MountSagiriFinalSelection</defName>
-    <rootSelectionWeight>0.3</rootSelectionWeight>
-    <rootMinPoints>1500</rootMinPoints>
-    <rootEarliestDay>20</rootEarliestDay>
-    <minRefireDays>120</minRefireDays>
+    <rootSelectionWeight>1.2</rootSelectionWeight>
+    <rootMinPoints>800</rootMinPoints>
+    <canGiveRoyalFavor>false</canGiveRoyalFavor>
     <expireDaysRange>7~14</expireDaysRange>
-    <epic>true</epic>
-    <isRootSpecial>true</isRootSpecial>
-    <questAvailableLetterLabel>Final Selection - Mount Sagiri</questAvailableLetterLabel>
-    <questAvailableLetterDef>PositiveEvent</questAvailableLetterDef>
     <successHistoryEvent>AnimeArsenal_GeneTrainingCompleted</successHistoryEvent>
     <failedOrExpiredHistoryEvent>AnimeArsenal_FinalSelectionFailed</failedOrExpiredHistoryEvent>
 
@@ -32,11 +27,13 @@
         <li>questName->Seven Days of Survival</li>
       </rulesStrings>
     </questNameRules>
+
     <questDescriptionRules>
       <rulesStrings>
         <li>questDescription->A former Demon Slayer Corp member has appeared at your settlement. They offer to escort three of your colonists to Mount Sagiri for the Final Selection - a seven-day survival trial where participants fight captured demons in a wisteria-enclosed mountain.\n\nOnly those who survive all seven nights and claim their ore at dawn will join the Demon Slayer Corps. Your colonist may develop enhanced breathing techniques and supernatural reflexes... if they can endure.\n\nThe retired slayer's scarred face speaks volumes: "Many climb Mount Sagiri. Most feed the demons. The worthy few descend forever changed."\n\nSurvival depends on combat skills, physical resilience, and sheer determination. Skilled fighters and tough individuals have better odds, while the frail face greater peril.</li>
       </rulesStrings>
     </questDescriptionRules>
+
     <root Class="QuestNode_Sequence">
       <nodes>
 

@@ -89,7 +89,6 @@ namespace AnimeArsenal
                 }
             }
 
-            // fallback to random positions
             for (int i = 0; i < 20; i++)
             {
                 float randomAngle = Rand.Range(0f, 360f);

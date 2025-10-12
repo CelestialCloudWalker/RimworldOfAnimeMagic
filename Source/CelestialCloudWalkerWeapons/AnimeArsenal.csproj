@@ -77,14 +77,18 @@
   <ItemGroup>
     <Compile Include="BreathingPotentialGene.cs" />
     <Compile Include="BreathingPotentialGeneDef.cs" />
+    <Compile Include="Building_TrainingItem.cs" />
     <Compile Include="CompAbilityStealBite.cs" />
     <Compile Include="CompProperties_AbilityGasSpray.cs" />
+    <Compile Include="CompProperties_UseEffect_StartQuest.cs" />
     <Compile Include="DemonSlayerNames.cs" />
     <Compile Include="GeneEffect.cs" />
     <Compile Include="GeneEffectDef.cs" />
     <Compile Include="HediffCompProperties_SelflessState.cs" />
     <Compile Include="HediffComp_TransparentWorld.cs" />
+    <Compile Include="IncidentWorker_MountSagiriFinalSelection.cs" />
     <Compile Include="IncidentWorker_RaidNightOnly.cs" />
+    <Compile Include="JobDriver_UseTrainingItem.cs" />
     <Compile Include="Misc\AMConstants.cs" />
     <Compile Include="AnimeArsenalUtility.cs" />
     <Compile Include="Misc\AssetBundleShaderManager.cs" />
@@ -175,6 +179,8 @@
     <Compile Include="Misc\TrackedMotePos.cs" />
     <Compile Include="Misc\Verb_ExtendedMeleeAttack.cs" />
     <Compile Include="TalentedLevelingAbilityDef.cs" />
+    <Compile Include="TrainingComp.cs" />
+    <Compile Include="TrainingItemExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony">

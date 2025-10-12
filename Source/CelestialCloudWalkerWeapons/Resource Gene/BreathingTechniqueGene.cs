@@ -32,10 +32,16 @@ namespace AnimeArsenal
 
                 float currentMax = pawn.GetStatValue(Def.maxStat);
 
+                if (Def.scaleWithBreathing)
+                {
+                    float breathingCapacity = pawn.health.capacities.GetLevel(PawnCapacityDefOf.Breathing);
+                    currentMax *= breathingCapacity;
+                }
+
                 if (lastKnownMax != currentMax)
                 {
                     lastKnownMax = currentMax;
-                    
+
                     this.SetMax(currentMax);
                 }
 
@@ -87,13 +93,13 @@ namespace AnimeArsenal
 
             if (pawn.IsHashIntervalTick(250))
             {
-                float currentMax = Max; 
+                float currentMax = Max;
             }
         }
 
         private void ForceResourceSync()
         {
-            float currentMax = pawn.GetStatValue(Def.maxStat);
+            float currentMax = Max;
             lastKnownMax = currentMax;
             this.SetMax(currentMax);
 

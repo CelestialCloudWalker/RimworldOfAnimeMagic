@@ -33,7 +33,6 @@ namespace AnimeArsenal
                     return cachedResourceGene;
             }
 
-            // fallback
             cachedResourceGene = parent.pawn.genes.GetFirstGeneOfType<Gene_BasicResource>();
             return cachedResourceGene;
         }
@@ -72,7 +71,6 @@ namespace AnimeArsenal
                     resourceGene.Consume(Props.enchantDef.resourceCostPerTick);
                 }
 
-                // check if we should stop
                 if (NeedToCancel())
                 {
                     this.OnToggleOff();

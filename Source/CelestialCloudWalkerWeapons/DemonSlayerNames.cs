@@ -46,7 +46,7 @@ namespace AnimeArsenal
 
                 var unisexFirstNames = new List<string>
                 {
-                    "Yushiro", "Tecchin"
+                    "Yushiro", "Tecchin", "Nowa"
                 };
 
                 var lastNames = new List<string>
@@ -74,7 +74,7 @@ namespace AnimeArsenal
 
                 var unisexNickNames = new List<string>
                 {
-                    "Sen", "Gen"
+                    "Sen", "Gen", "Nowa"
                 };
 
                 for (int i = 0; i < 15; i++) 

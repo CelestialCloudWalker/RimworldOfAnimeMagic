@@ -4,7 +4,7 @@
     <defName>TransparentWorld_Flash</defName>
     <hediffClass>AnimeArsenal.Hediff_TransparentWorld</hediffClass>
     <label>transparent world (flash)</label>
-    <description>Basic heightened perception allows brief glimpses through obstacles and slight combat improvements.</description>
+    <description>Basic heightened perception allows brief glimpses through obstacles and slight combat improvements. Occasionally reveals enemy weak points.</description>
     <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <stages>
@@ -33,6 +33,8 @@
       <li Class="AnimeArsenal.TransparentWorldProperties">
         <sightRange>12</sightRange>
         <durationTicks>2400</durationTicks>
+        <organHitChanceBonus>0.5</organHitChanceBonus>
+        <vitalOrganChanceMultiplier>1.1</vitalOrganChanceMultiplier>
       </li>
     </modExtensions>
   </HediffDef>
@@ -41,7 +43,7 @@
     <defName>TransparentWorld_Gleam</defName>
     <hediffClass>AnimeArsenal.Hediff_TransparentWorld</hediffClass>
     <label>transparent world (gleam)</label>
-    <description>Enhanced perception provides clearer sight through obstacles and improved reflexes.</description>
+    <description>Enhanced perception provides clearer sight through obstacles and improved reflexes. Can more reliably target enemy vital points.</description>
     <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <stages>
@@ -70,6 +72,8 @@
       <li Class="AnimeArsenal.TransparentWorldProperties">
         <sightRange>15</sightRange>
         <durationTicks>2880</durationTicks>
+        <organHitChanceBonus>1</organHitChanceBonus>
+        <vitalOrganChanceMultiplier>1.2</vitalOrganChanceMultiplier>
       </li>
     </modExtensions>
   </HediffDef>
@@ -78,7 +82,7 @@
     <defName>TransparentWorld_Mirage</defName>
     <hediffClass>AnimeArsenal.Hediff_TransparentWorld</hediffClass>
     <label>transparent world (mirage)</label>
-    <description>Advanced perception reveals enemy weak points and dramatically improves combat prowess.</description>
+    <description>Advanced perception reveals enemy weak points and dramatically improves combat prowess. Can consistently target vital organs.</description>
     <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <stages>
@@ -108,6 +112,8 @@
       <li Class="AnimeArsenal.TransparentWorldProperties">
         <sightRange>18</sightRange>
         <durationTicks>3600</durationTicks>
+        <organHitChanceBonus>1</organHitChanceBonus>
+        <vitalOrganChanceMultiplier>1.3</vitalOrganChanceMultiplier>
       </li>
     </modExtensions>
   </HediffDef>
@@ -116,7 +122,7 @@
     <defName>TransparentWorld_Erelong</defName>
     <hediffClass>AnimeArsenal.Hediff_TransparentWorld</hediffClass>
     <label>transparent world (erelong)</label>
-    <description>Mastered perception grants near-omniscient battlefield awareness and supernatural combat abilities.</description>
+    <description>Mastered perception grants near-omniscient battlefield awareness and supernatural combat abilities. Can precisely target any vital organ at will.</description>
     <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <stages>
@@ -147,6 +153,8 @@
       <li Class="AnimeArsenal.TransparentWorldProperties">
         <sightRange>22</sightRange>
         <durationTicks>4320</durationTicks>
+        <organHitChanceBonus>1</organHitChanceBonus>
+        <vitalOrganChanceMultiplier>1.5</vitalOrganChanceMultiplier>
       </li>
     </modExtensions>
   </HediffDef>

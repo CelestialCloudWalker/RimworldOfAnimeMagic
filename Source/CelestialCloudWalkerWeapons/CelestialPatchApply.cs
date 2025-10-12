@@ -713,4 +713,129 @@ public static class CorpseEatingPatches
             }
         }
     }
+
+
+    [HarmonyPatch(typeof(DamageWorker_AddInjury), "ChooseHitPart")]
+    public static class Patch_ChooseHitPart
+    {
+        public static void Postfix(ref BodyPartRecord __result, DamageInfo dinfo, Pawn pawn)
+        {
+            Log.Message($"[TransparentWorld DEBUG] ChooseHitPart called - Instigator: {dinfo.Instigator?.GetType()?.Name ?? "null"}");
+
+            if (dinfo.Instigator is Pawn attacker && attacker.health?.hediffSet != null)
+            {
+                Log.Message($"[TransparentWorld DEBUG] Attacker is pawn: {attacker.Name}");
+
+                var transparentWorldHediff = attacker.health.hediffSet.hediffs
+                    .FirstOrDefault(h => h.def.defName.StartsWith("TransparentWorld_"));
+
+                if (transparentWorldHediff != null)
+                {
+                    Log.Message($"[TransparentWorld DEBUG] Found hediff: {transparentWorldHediff.def.defName}");
+
+                    var props = transparentWorldHediff.def.GetModExtension<TransparentWorldProperties>();
+                    if (props != null)
+                    {
+                        Log.Message($"[TransparentWorld DEBUG] Props found - organHitChanceBonus: {props.organHitChanceBonus}");
+
+                        string originalPart = __result?.def?.defName ?? "null";
+
+                        if (props.organHitChanceBonus > 0f)
+                        {
+                            var organs = pawn.health.hediffSet.GetNotMissingParts()
+                                .Where(part => part.def.tags?.Contains(BodyPartTagDefOf.BloodPumpingSource) == true ||
+                                              part.def.tags?.Contains(BodyPartTagDefOf.BreathingSource) == true ||
+                                              part.def.tags?.Contains(BodyPartTagDefOf.ConsciousnessSource) == true ||
+                                              part.def.tags?.Contains(BodyPartTagDefOf.BloodFiltrationSource) == true ||
+                                              part.def.tags?.Contains(BodyPartTagDefOf.MetabolismSource) == true)
+                                .ToList();
+
+                            Log.Message($"[TransparentWorld DEBUG] Found {organs.Count} organs on {pawn.Name}");
+                            foreach (var organ in organs)
+                            {
+                                Log.Message($"[TransparentWorld DEBUG] - {organ.def.defName}");
+                            }
+
+                            if (organs.Any() && Rand.Chance(Mathf.Clamp01(props.organHitChanceBonus)))
+                            {
+                                var oldResult = __result;
+                                __result = organs.RandomElement();
+
+                                Log.Message($"[TransparentWorld SUCCESS] {attacker.Name} targeted organ: {originalPart} -> {__result.def.defName}");
+                            }
+                            else
+                            {
+                                Log.Message($"[TransparentWorld DEBUG] No organ hit - chance: {props.organHitChanceBonus}, organs available: {organs.Count}");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Log.Message($"[TransparentWorld DEBUG] No props found for hediff");
+                    }
+                }
+                else
+                {
+                    Log.Message($"[TransparentWorld DEBUG] No transparent world hediff found on {attacker.Name}");
+                }
+            }
+            else
+            {
+                Log.Message($"[TransparentWorld DEBUG] Instigator is not a pawn or has no health");
+            }
+        }
+    }
+    [StaticConstructorOnStartup]
+    public static class StatPatches
+    {
+        static StatPatches()
+        {
+            var harmony = new Harmony("com.animearsenal.trainingitems");
+            harmony.PatchAll();
+        }
+    }
+
+    [HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
+    public static class StatWorker_GetValueUnfinalized_Patch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(StatRequest req, ref float __result, StatDef ___stat)
+        {
+            if (!req.HasThing || !(req.Thing is Pawn pawn))
+                return;
+
+            TrainingComp comp = pawn.TryGetComp<TrainingComp>();
+            if (comp == null)
+                return;
+
+            float boost = comp.GetStatBoost(___stat.defName);
+            if (boost != 0f)
+            {
+                __result += boost;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(PawnCapacityUtility), "CalculateCapacityLevel")]
+    public static class PawnCapacityUtility_CalculateCapacityLevel_Patch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(HediffSet diffSet, PawnCapacityDef capacity, ref float __result)
+        {
+            Pawn pawn = diffSet?.pawn;
+            if (pawn == null)
+                return;
+
+            TrainingComp comp = pawn.TryGetComp<TrainingComp>();
+            if (comp == null)
+                return;
+
+            float boost = comp.GetCapacityBoost(capacity.defName);
+            if (boost != 0f)
+            {
+                __result += boost;
+                __result = UnityEngine.Mathf.Clamp(__result, 0f, 999f);
+            }
+        }
+    }
 }
