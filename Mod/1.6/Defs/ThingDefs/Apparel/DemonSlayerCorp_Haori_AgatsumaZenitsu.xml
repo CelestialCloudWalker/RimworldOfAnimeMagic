@@ -4,6 +4,9 @@
     <defName>DemonSlayerCorp_Haori_AgatsumaZenitsu</defName>
     <label>Zenitsu Haori</label>
     <description>A Demon Slayer Corps haori worn over uniforms.</description>
+    <recipeMaker>
+      <researchPrerequisite>AA_HaoriResearch</researchPrerequisite>
+    </recipeMaker>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Haori_AgatsumaZenitsu/Haori_AgatsumaZenitsu_Male_north</texPath>

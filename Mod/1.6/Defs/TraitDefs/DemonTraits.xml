@@ -67,7 +67,7 @@
     <degreeDatas>
       <li>
         <label>night predator</label>
-        <description>[PAWN_nameDef] thrives in darkness like a true creature of the night. [PAWN_possessive] enhanced senses and predatory instincts make [PAWN_objective] deadly in the shadows, but daylight weakens [PAWN_possessive] abilities.</description>
+        <description>[PAWN_nameDef] thrives in darkness like a true creature of the night. [PAWN_possessive] LevelTwo senses and predatory instincts make [PAWN_objective] deadly in the shadows, but daylight weakens [PAWN_possessive] abilities.</description>
         <degree>1</degree>
         <statOffsets>
           <HuntingStealth>1.0</HuntingStealth>

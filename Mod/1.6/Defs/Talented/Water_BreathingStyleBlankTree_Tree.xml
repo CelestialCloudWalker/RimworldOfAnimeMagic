@@ -2,597 +2,14 @@
 <Defs>
   <Talented.TalentTreeDef>
     <defName>Water_BreathingStyleBlankTree</defName>
-    <treeName>Water_BreathingStyleBlankTree</treeName>
-    <dimensions>(640,480)</dimensions>
+    <treeName>Water Breathing</treeName>
+    <dimensions>(308,512)</dimensions>
     <handlerClass>Talented.ActiveTreeHandler</handlerClass>
-    <skin>DefaultTreeSkin</skin>
+    <skin>WaterBreathingTreeSkin</skin>
     <nodes>
       <li>Node_1756696513766_9405</li>
     </nodes>
     <availablePaths>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Physical_Conditioning</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Medical_Training</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Marksmanship</li>
-          <li>Bodily_Enhancement</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Vitality</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Marksmanship</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-          <li>Medical_Training</li>
-          <li>Physical_Conditioning</li>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Forms</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Resource_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Mental_Fortitude</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
-      <li>
-        <name>Combat_Mastery</name>
-        <pathDescription></pathDescription>
-        <exclusiveWith>
-        </exclusiveWith>
-      </li>
       <li>
         <name>Physical_Conditioning</name>
         <pathDescription></pathDescription>
@@ -655,149 +72,31 @@
     <defName>Node_1756696513766_9405</defName>
     <label>Dye Weapon</label>
     <style>DefaultNodeStyle</style>
-    <position>(60,471)</position>
+    <position>(154,630)</position>
     <type>Start</type>
     <upgrades>
       <li>Dye_Weapon_Water_Colored</li>
     </upgrades>
     <connections>
       <li>Node_1756696513766_5101</li>
-      <li>Node_1756696513766_9250</li>
-      <li>Node_1756696513766_3270</li>
-      <li>Node_1756696513766_393</li>
-      <li>Node_1756696513766_773</li>
-      <li>Node_1756696513766_5192</li>
-      <li>Node_1756696513766_4336</li>
       <li>Node_1756696513766_8941</li>
       <li>Node_1756696513766_3798</li>
       <li>Node_1756696513766_4824</li>
       <li>Node_1756696513766_3160</li>
-      <li>Node_1756696513766_4347</li>
-      <li>Node_1756696513766_8531</li>
-      <li>Node_1756696513766_9137</li>
-      <li>Node_1756696513766_8669</li>
-      <li>Node_1756696513766_1597</li>
-      <li>Node_1756696513766_4685</li>
-      <li>Node_1756696513766_3489</li>
-      <li>Node_1756680079018_2553</li>
-      <li>Node_1756696513766_2959</li>
-      <li>Node_1756696513766_8107</li>
-      <li>Node_1756696513766_3878</li>
-      <li>Node_1756696513766_9707</li>
-      <li>Node_1756696513766_4550</li>
-      <li>Node_1756696513766_3996</li>
-      <li>Node_1756696513766_9050</li>
-      <li>Node_1756696513766_473</li>
-      <li>Node_1756696513766_2333</li>
-      <li>Node_1756696513766_6656</li>
       <li>Node_1756696513766_7512</li>
-      <li>Node_1756696513766_1216</li>
+      <li>Node_1756696513766_6656</li>
+      <li>Node_1756696513766_2333</li>
+      <li>Node_1756696513766_473</li>
+      <li>Node_1756696513766_5501</li>
     </connections>
   </Talented.TalentTreeNodeDef>
 
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_8107</defName>
-    <label>Quick Step</label>
-    <style>DefaultNodeStyle</style>
-    <position>(229,283)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Quick_Step_Talent2</li>
-      <li>Quick_Step_Talent3</li>
-      <li>Quick_Step_Talent4</li>
-      <li>Quick_Step_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_3878</defName>
-    <label>Prone Mobility</label>
-    <style>DefaultNodeStyle</style>
-    <position>(314,283)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Prone_Mobility_Talent2</li>
-      <li>Prone_Mobility_Talent3</li>
-      <li>Prone_Mobility_Talent4</li>
-      <li>Prone_Mobility_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_9250</defName>
-    <label>Quick Reflexes</label>
-    <style>DefaultNodeStyle</style>
-    <position>(145,283)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Quick_Reflexes_Talent2</li>
-      <li>Quick_Reflexes_Talent3</li>
-      <li>Quick_Reflexes_Talent4</li>
-      <li>Quick_Reflexes_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_3489</defName>
-    <label>Healing Expertise</label>
-    <style>DefaultNodeStyle</style>
-    <position>(229,188)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Healing_Expertise_Talent2</li>
-      <li>Healing_Expertise_Talent3</li>
-      <li>Healing_Expertise_Talent4</li>
-      <li>Healing_Expertise_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_3270</defName>
-    <label>Medical Haste</label>
-    <style>DefaultNodeStyle</style>
-    <position>(145,188)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Medical_Haste_Talent2</li>
-      <li>Medical_Haste_Talent3</li>
-      <li>Medical_Haste_Talent4</li>
-      <li>Medical_Haste_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_9137</defName>
-    <label>Vitality Surge</label>
-    <style>DefaultNodeStyle</style>
-    <position>(410,0)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Vitality_Surge_Talent2</li>
-      <li>Vitality_Surge_Talent3</li>
-      <li>Vitality_Surge_Talent4</li>
-      <li>Vitality_Surge_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_773</defName>
-    <label>Steady Aim</label>
-    <style>DefaultNodeStyle</style>
-    <position>(229,0)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Steady_Aim_Talent2</li>
-      <li>Steady_Aim_Talent3</li>
-      <li>Steady_Aim_Talent4</li>
-      <li>Steady_Aim_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
     <defName>Node_1756696513766_5101</defName>
     <label>Strike</label>
     <style>DefaultNodeStyle</style>
-    <position>(60,377)</position>
+    <position>(30,580)</position>
     <type>Branch</type>
     <upgrades>
       <li>Water_Breathing_Strike</li>
@@ -808,7 +107,7 @@
     <defName>Node_1756696513766_8941</defName>
     <label>Reflect</label>
     <style>DefaultNodeStyle</style>
-    <position>(60,283)</position>
+    <position>(30,490)</position>
     <type>Branch</type>
     <upgrades>
       <li>Water_Breathing_Reflect</li>
@@ -816,24 +115,10 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_8531</defName>
-    <label>Weight Training</label>
-    <style>DefaultNodeStyle</style>
-    <position>(145,94)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Weight_Training_Talent2</li>
-      <li>Weight_Training_Talent3</li>
-      <li>Weight_Training_Talent4</li>
-      <li>Weight_Training_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
     <defName>Node_1756696513766_3798</defName>
     <label>Disperse</label>
     <style>DefaultNodeStyle</style>
-    <position>(60,188)</position>
+    <position>(30,400)</position>
     <type>Branch</type>
     <upgrades>
       <li>Water_Breathing_Disperse</li>
@@ -844,7 +129,7 @@
     <defName>Node_1756696513766_4824</defName>
     <label>Slash</label>
     <style>DefaultNodeStyle</style>
-    <position>(60,94)</position>
+    <position>(30,310)</position>
     <type>Branch</type>
     <upgrades>
       <li>Water_Breathing_Slash</li>
@@ -852,87 +137,68 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_393</defName>
-    <label>Tough Body</label>
+    <defName>Node_1756696513766_3160</defName>
+    <label>Multi Strike</label>
     <style>DefaultNodeStyle</style>
-    <position>(229,94)</position>
-    <type>Normal</type>
+    <position>(30,220)</position>
+    <type>Branch</type>
     <upgrades>
-      <li>Tough_Body_Talent2</li>
-      <li>Tough_Body_Talent3</li>
-      <li>Tough_Body_Talent4</li>
-      <li>Tough_Body_Talent5</li>
+      <li>Water_Breathing_Multi_Strike</li>
     </upgrades>
   </Talented.TalentTreeNodeDef>
 
+
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_4347</defName>
-    <label>Swift Aim</label>
+    <defName>Node_1756696513766_5501</defName>
+    <label>Breathing Mark</label>
     <style>DefaultNodeStyle</style>
-    <position>(145,0)</position>
+    <position>(154,490)</position>
     <type>Normal</type>
     <upgrades>
-      <li>Swift_Aim_Talent2</li>
-      <li>Swift_Aim_Talent3</li>
-      <li>Swift_Aim_Talent4</li>
-      <li>Swift_Aim_Talent5</li>
+      <li>BreathingMark_Talent_Giyu</li>
     </upgrades>
+    <connections>
+      <li>Node_1756696513766_8842</li>
+    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_2959</defName>
-    <label>Surgical Talent</label>
+    <defName>Node_1756696513766_8842</defName>
+    <label>Transparent World</label>
     <style>DefaultNodeStyle</style>
-    <position>(410,188)</position>
+    <position>(154,370)</position>
     <type>Normal</type>
     <upgrades>
-      <li>Surgical_Talent_Talent2</li>
-      <li>Surgical_Talent_Talent3</li>
-      <li>Surgical_Talent_Talent4</li>
-      <li>Surgical_Talent_Talent5</li>
+      <li>TransparentWorld_Talent</li>
     </upgrades>
+    <connections>
+      <li>Node_1756696513766_3729</li>
+    </connections>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_1216</defName>
-    <label>Breath Pool</label>
+    <defName>Node_1756696513766_3729</defName>
+    <label>Selfless State</label>
     <style>DefaultNodeStyle</style>
-    <position>(145,471)</position>
+    <position>(154,250)</position>
     <type>Normal</type>
     <upgrades>
-      <li>WaterBreath_Breath_Increase</li>
-      <li>WaterBreath_Breath_Increase2</li>
-      <li>WaterBreath_Breath_Increase3</li>
-      <li>WaterBreath_Breath_Increase4</li>
-      <li>WaterBreath_Breath_Increase</li>
+      <li>Sefless_State_Talent</li>
     </upgrades>
   </Talented.TalentTreeNodeDef>
 
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_473</defName>
-    <label>Cost Control</label>
-    <style>DefaultNodeStyle</style>
-    <position>(229,471)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>WaterBreath_Cost_Talent</li>
-      <li>WaterBreath_Cost_Talent2</li>
-      <li>WaterBreath_Cost_Talent3</li>
-      <li>WaterBreath_Cost_Talent4</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_2333</defName>
-    <label>Regen Ticks</label>
+    <defName>Node_1756696513766_7512</defName>
+    <label>Regen Amount</label>
     <style>DefaultNodeStyle</style>
-    <position>(314,471)</position>
+    <position>(278,580)</position>
     <type>Normal</type>
     <upgrades>
-      <li>WaterBreath_RegenTicks_Talent</li>
-      <li>WaterBreath_RegenTicks_Talent2</li>
-      <li>WaterBreath_RegenTicks_Talent3</li>
-      <li>WaterBreath_RegenTicks_Talent4</li>
+      <li>WaterBreath_RegenAmount_Talent</li>
+      <li>WaterBreath_RegenAmount_Talent2</li>
+      <li>WaterBreath_RegenAmount_Talent3</li>
+      <li>WaterBreath_RegenAmount_Talent4</li>
     </upgrades>
   </Talented.TalentTreeNodeDef>
 
@@ -940,7 +206,7 @@
     <defName>Node_1756696513766_6656</defName>
     <label>Regen Rate</label>
     <style>DefaultNodeStyle</style>
-    <position>(410,471)</position>
+    <position>(278,490)</position>
     <type>Normal</type>
     <upgrades>
       <li>WaterBreath_RegenRate_Talent</li>
@@ -951,153 +217,30 @@
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_5192</defName>
-    <label>Calm Mind</label>
+    <defName>Node_1756696513766_2333</defName>
+    <label>Regen Ticks</label>
     <style>DefaultNodeStyle</style>
-    <position>(314,94)</position>
+    <position>(278,400)</position>
     <type>Normal</type>
     <upgrades>
-      <li>Calm_Mind_Talent2</li>
-      <li>Calm_Mind_Talent3</li>
-      <li>Calm_Mind_Talent4</li>
-      <li>Calm_Mind_Talent5</li>
+      <li>WaterBreath_RegenTicks_Talent</li>
+      <li>WaterBreath_RegenTicks_Talent2</li>
+      <li>WaterBreath_RegenTicks_Talent3</li>
+      <li>WaterBreath_RegenTicks_Talent4</li>
     </upgrades>
   </Talented.TalentTreeNodeDef>
 
   <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_8669</defName>
-    <label>Mental Fortress</label>
+    <defName>Node_1756696513766_473</defName>
+    <label>Cost Control</label>
     <style>DefaultNodeStyle</style>
-    <position>(410,94)</position>
+    <position>(278,310)</position>
     <type>Normal</type>
     <upgrades>
-      <li>Mental_Fortress_Talent2</li>
-      <li>Mental_Fortress_Talent3</li>
-      <li>Mental_Fortress_Talent4</li>
-      <li>Mental_Fortress_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_1597</defName>
-    <label>Pure Body</label>
-    <style>DefaultNodeStyle</style>
-    <position>(314,0)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Pure_Body_Talent2</li>
-      <li>Pure_Body_Talent3</li>
-      <li>Pure_Body_Talent4</li>
-      <li>Pure_Body_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_4685</defName>
-    <label>Recovery Boost</label>
-    <style>DefaultNodeStyle</style>
-    <position>(314,188)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Recovery_Boost_Talent2</li>
-      <li>Recovery_Boost_Talent3</li>
-      <li>Recovery_Boost_Talent4</li>
-      <li>Recovery_Boost_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_4336</defName>
-    <label>Enhanced Strikes</label>
-    <style>DefaultNodeStyle</style>
-    <position>(145,377)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Enhanced_Strikes_Talent2</li>
-      <li>Enhanced_Strikes_Talent3</li>
-      <li>Enhanced_Strikes_Talent4</li>
-      <li>Enhanced_Strikes_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_4550</defName>
-    <label>Heavy Impact</label>
-    <style>DefaultNodeStyle</style>
-    <position>(229,377)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Heavy_Impact_Talent2</li>
-      <li>Heavy_Impact_Talent3</li>
-      <li>Heavy_Impact_Talent4</li>
-      <li>Heavy_Impact_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_3996</defName>
-    <label>Steady Hand</label>
-    <style>DefaultNodeStyle</style>
-    <position>(314,377)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Steady_Hand_Talent2</li>
-      <li>Steady_Hand_Talent3</li>
-      <li>Steady_Hand_Talent4</li>
-      <li>Steady_Hand_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_9050</defName>
-    <label>Swift Attacks</label>
-    <style>DefaultNodeStyle</style>
-    <position>(410,377)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Swift_Attacks_Talent2</li>
-      <li>Swift_Attacks_Talent3</li>
-      <li>Swift_Attacks_Talent4</li>
-      <li>Swift_Attacks_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_9707</defName>
-    <label>Precise Form</label>
-    <style>DefaultNodeStyle</style>
-    <position>(410,283)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>Precise_Form_Talent2</li>
-      <li>Precise_Form_Talent3</li>
-      <li>Precise_Form_Talent4</li>
-      <li>Precise_Form_Talent5</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_7512</defName>
-    <label>Regen Amount</label>
-    <style>DefaultNodeStyle</style>
-    <position>(507,471)</position>
-    <type>Normal</type>
-    <upgrades>
-      <li>WaterBreath_RegenAmount_Talent</li>
-      <li>WaterBreath_RegenAmount_Talent2</li>
-      <li>WaterBreath_RegenAmount_Talent3</li>
-      <li>WaterBreath_RegenRate_Talent4</li>
-    </upgrades>
-  </Talented.TalentTreeNodeDef>
-
-  <Talented.TalentTreeNodeDef>
-    <defName>Node_1756696513766_3160</defName>
-    <label>Multi Strike</label>
-    <style>DefaultNodeStyle</style>
-    <position>(60,0)</position>
-    <type>Branch</type>
-    <upgrades>
-      <li>Water_Breathing_Multi_Strike</li>
+      <li>WaterBreath_Cost_Talent</li>
+      <li>WaterBreath_Cost_Talent2</li>
+      <li>WaterBreath_Cost_Talent3</li>
+      <li>WaterBreath_Cost_Talent4</li>
     </upgrades>
   </Talented.TalentTreeNodeDef>
 

@@ -159,7 +159,7 @@
     <degreeDatas>
       <li>
         <label>storm front</label>
-        <description>[PAWN_nameDef] can sense changing weather patterns and atmospheric conditions. [PAWN_possessive] connection to air currents provides enhanced environmental awareness and mood stability.</description>
+        <description>[PAWN_nameDef] can sense changing weather patterns and atmospheric conditions. [PAWN_possessive] connection to air currents provides LevelTwo environmental awareness and mood stability.</description>
         <degree>1</degree>
         <statOffsets>
           <ResearchSpeed>0.3</ResearchSpeed>

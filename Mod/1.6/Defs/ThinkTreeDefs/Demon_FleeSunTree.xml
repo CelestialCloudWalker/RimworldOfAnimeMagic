@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- <ThinkTreeDef>
+  <ThinkTreeDef>
     <defName>Demon_FleeSunLightTree</defName>
     <insertTag>Humanlike_PreMain</insertTag>
     <thinkRoot Class="ThinkNode_Priority">
@@ -49,5 +49,5 @@
         </li>
       </subNodes>
     </thinkRoot>
-  </ThinkTreeDef> -->
+  </ThinkTreeDef>
 </Defs>

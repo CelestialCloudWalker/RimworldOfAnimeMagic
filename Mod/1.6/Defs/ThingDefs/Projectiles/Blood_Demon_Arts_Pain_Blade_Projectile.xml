@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
   <ThingDef ParentName="BaseBullet">
     <defName>Blood_Demon_Arts_Pain_Blade_Projectile</defName>
     <label>Blood Blade</label>
@@ -26,7 +26,7 @@
       <speed>25</speed>
       <CanHitFriendly>true</CanHitFriendly>
       <CanHitCaster>false</CanHitCaster>
-      <BaseDamage>7</BaseDamage>
+      <aoeDamage>7</aoeDamage>
     </projectile>
     <comps>
       <li Class="CompProperties_Glower">
@@ -42,10 +42,52 @@
     </comps>
   </ThingDef>
 
-  
+  <!-- Level 2 Projectile -->
   <ThingDef ParentName="BaseBullet">
-    <defName>Blood_Demon_Arts_Pain_Blade_Projectile_Enhanced</defName>
-    <label>Enhanced Blood Blade</label>
+    <defName>Blood_Demon_Arts_Pain_Blade_Projectile_LevelTwo</defName>
+    <label>Improved Blood Blade</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.6</drawSize>
+      <shaderParameters>
+        <_Color>(210, 45, 45, 255)</_Color>
+        <_brightnessMultiplier>1.1</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+      <ExplosionRadius>2.2</ExplosionRadius>
+      <stoppingPower>1.1</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>27</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>8</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(210, 45, 45, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.23</MoteInterval>
+        <MoteDuration>32</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Level 3 Projectile -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_Pain_Blade_Projectile_LevelThree</defName>
+    <label>LevelTwo Blood Blade</label>
     <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
     <tickerType>Normal</tickerType>
     <graphicData>
@@ -68,7 +110,7 @@
       <speed>30</speed>
       <CanHitFriendly>true</CanHitFriendly>
       <CanHitCaster>false</CanHitCaster>
-      <BaseDamage>10</BaseDamage>
+      <aoeDamage>10</aoeDamage>
     </projectile>
     <comps>
       <li Class="CompProperties_Glower">
@@ -84,9 +126,9 @@
     </comps>
   </ThingDef>
 
-  
+  <!-- Level 4 Projectile -->
   <ThingDef ParentName="BaseBullet">
-    <defName>Blood_Demon_Arts_Pain_Blade_Projectile_Multi</defName>
+    <defName>Blood_Demon_Arts_Pain_Blade_Projectile_LevelFour</defName>
     <label>Multi Blood Blade</label>
     <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
     <tickerType>Normal</tickerType>
@@ -103,14 +145,14 @@
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
       <damageDef>Blood_Slash</damageDef>
       <damageAmountBase>1</damageAmountBase>
-      <armorPenetrationBase>0.5</armorPenetrationBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
       <ExplosionRadius>3</ExplosionRadius>
-      <stoppingPower>1.5</stoppingPower>
+      <stoppingPower>2</stoppingPower>
       <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
       <speed>35</speed>
       <CanHitFriendly>true</CanHitFriendly>
       <CanHitCaster>false</CanHitCaster>
-      <BaseDamage>13</BaseDamage>
+      <aoeDamage>13</aoeDamage>
     </projectile>
     <comps>
       <li Class="CompProperties_Glower">
@@ -126,7 +168,49 @@
     </comps>
   </ThingDef>
 
-  
+  <!-- Level 5 Projectile -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_Pain_Blade_Projectile_Advanced</defName>
+    <label>Advanced Blood Blade</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.3</drawSize>
+      <shaderParameters>
+        <_Color>(250, 25, 25, 255)</_Color>
+        <_brightnessMultiplier>1.5</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.6</armorPenetrationBase>
+      <ExplosionRadius>1</ExplosionRadius>
+      <stoppingPower>1.8</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>38</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>16</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>24</glowRadius>
+        <glowColor>(250, 25, 25, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.12</MoteInterval>
+        <MoteDuration>45</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Level 6 Projectile -->
   <ThingDef ParentName="BaseBullet">
     <defName>Blood_Demon_Arts_Pain_Blade_Projectile_Master</defName>
     <label>Master Blood Blade</label>
@@ -152,7 +236,7 @@
       <speed>40</speed>
       <CanHitFriendly>true</CanHitFriendly>
       <CanHitCaster>false</CanHitCaster>
-      <BaseDamage>18</BaseDamage>
+      <aoeDamage>20</aoeDamage>
     </projectile>
     <comps>
       <li Class="CompProperties_Glower">

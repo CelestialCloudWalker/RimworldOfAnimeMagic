@@ -82,7 +82,7 @@
     <degreeDatas>
       <li>
         <label>wild senses</label>
-        <description>[PAWN_nameDef] has heightened senses like those of a wild animal. [PAWN_pronoun] can detect danger before others but requires more food to sustain [PAWN_possessive] enhanced metabolism.</description>
+        <description>[PAWN_nameDef] has heightened senses like those of a wild animal. [PAWN_pronoun] can detect danger before others but requires more food to sustain [PAWN_possessive] LevelTwo metabolism.</description>
         <degree>1</degree>
         <statOffsets>
           <TrapSpringChance>-0.6</TrapSpringChance>

@@ -4,6 +4,9 @@
     <defName>DemonSlayerCorp_Haori_HimejimaGyomei</defName>
     <label>Himejima's Haori</label>
     <description>A Demon Slayer Corps haori worn over uniforms.</description>
+    <recipeMaker>
+      <researchPrerequisite>AA_HaoriResearch</researchPrerequisite>
+    </recipeMaker>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Haori_HimejimaGyomei/Haori_HimejimaGyomei_Male_north</texPath>

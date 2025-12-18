@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Small Gourd - Beginner Level -->
   <ThingDef ParentName="BuildingBase">
     <defName>AnimeArsenal_BreathingGourd_Small</defName>
     <label>small breathing gourd</label>
@@ -24,8 +23,8 @@
       <Flammability>0.5</Flammability>
     </statBases>
     <costList>
-      <Steel>50</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
+      <Scarlet_Thread_Fabric>15</Scarlet_Thread_Fabric>
+      <Scarlet_Steel>8</Scarlet_Steel>
     </costList>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
@@ -33,7 +32,7 @@
     <designationCategory>Misc</designationCategory>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <researchPrerequisites>
-      <li>Fabrication</li>
+      <li>AA_BreathingGourdCrafting</li>
     </researchPrerequisites>
     <modExtensions>
       <li Class="AnimeArsenal.TrainingItemExtension">
@@ -51,7 +50,6 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Medium Gourd - Intermediate Level -->
   <ThingDef ParentName="BuildingBase">
     <defName>AnimeArsenal_BreathingGourd_Medium</defName>
     <label>medium breathing gourd</label>
@@ -74,8 +72,8 @@
       <Flammability>0.5</Flammability>
     </statBases>
     <costList>
-      <Steel>75</Steel>
-      <ComponentIndustrial>5</ComponentIndustrial>
+      <Scarlet_Thread_Fabric>25</Scarlet_Thread_Fabric>
+      <Scarlet_Steel>15</Scarlet_Steel>
     </costList>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
@@ -83,7 +81,7 @@
     <designationCategory>Misc</designationCategory>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <researchPrerequisites>
-      <li>Fabrication</li>
+      <li>AA_BreathingGourdCrafting</li>
     </researchPrerequisites>
     <modExtensions>
       <li Class="AnimeArsenal.TrainingItemExtension">
@@ -101,7 +99,6 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Large Gourd - Advanced Level -->
   <ThingDef ParentName="BuildingBase">
     <defName>AnimeArsenal_BreathingGourd_Large</defName>
     <label>large breathing gourd</label>
@@ -124,9 +121,8 @@
       <Flammability>0.5</Flammability>
     </statBases>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>8</ComponentIndustrial>
-      <Plasteel>10</Plasteel>
+      <Scarlet_Thread_Fabric>40</Scarlet_Thread_Fabric>
+      <Scarlet_Steel>25</Scarlet_Steel>
     </costList>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
@@ -134,7 +130,7 @@
     <designationCategory>Misc</designationCategory>
     <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
     <researchPrerequisites>
-      <li>Fabrication</li>
+      <li>AA_BreathingGourdCrafting</li>
     </researchPrerequisites>
     <modExtensions>
       <li Class="AnimeArsenal.TrainingItemExtension">
@@ -152,7 +148,6 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- Extra Large Gourd - Master Level -->
   <ThingDef ParentName="BuildingBase">
     <defName>AnimeArsenal_BreathingGourd_ExtraLarge</defName>
     <label>extra large breathing gourd</label>
@@ -175,10 +170,8 @@
       <Flammability>0.5</Flammability>
     </statBases>
     <costList>
-      <Steel>150</Steel>
-      <ComponentIndustrial>12</ComponentIndustrial>
-      <Plasteel>20</Plasteel>
-      <ComponentSpacer>2</ComponentSpacer>
+      <Scarlet_Thread_Fabric>60</Scarlet_Thread_Fabric>
+      <Scarlet_Steel>40</Scarlet_Steel>
     </costList>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
@@ -186,7 +179,7 @@
     <designationCategory>Misc</designationCategory>
     <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
     <researchPrerequisites>
-      <li>Fabrication</li>
+      <li>AA_BreathingGourdCrafting</li>
     </researchPrerequisites>
     <modExtensions>
       <li Class="AnimeArsenal.TrainingItemExtension">

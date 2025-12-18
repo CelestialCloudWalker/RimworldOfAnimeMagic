@@ -4,6 +4,9 @@
     <defName>NichirinSword_Basic</defName>
     <label>Nichirin Blade</label>
     <description>A nichirin blade capable of killing demonsy.</description>
+    <recipeMaker>
+      <researchPrerequisite>AA_NichinrinBladeResearch</researchPrerequisite>
+    </recipeMaker>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_Normal</texPath>
@@ -18,10 +21,9 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList>
-      <Scarlet_Crimson_Iron_Sand>20</Scarlet_Crimson_Iron_Sand>
-      <Scarlet_Ore>20</Scarlet_Ore>
+      <Scarlet_Steel>20</Scarlet_Steel>
     </costList>
-    <costStuffCount>100</costStuffCount>
+
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <WorkToMake>25000</WorkToMake>

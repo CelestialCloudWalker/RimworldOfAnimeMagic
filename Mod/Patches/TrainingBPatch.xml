@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-  <!--
-    This adds the TrainingComp to all humanlike pawns.
-    This is required for the training system to work!
-  -->
-
   <Operation Class="PatchOperationSequence">
     <operations>
       <li Class="PatchOperationAdd">

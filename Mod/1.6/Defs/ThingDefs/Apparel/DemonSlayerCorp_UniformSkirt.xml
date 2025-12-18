@@ -6,8 +6,7 @@
     <label>Demon Slayer Corp Skirt</label>
     <description>A durable Demon Slayer Corps uniform designed for mobility and protection.</description>
     <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
-      <displayPriority>205</displayPriority>
+      <researchPrerequisite>AA_SlayerCorpsUniformResearch</researchPrerequisite>
     </recipeMaker>
     <graphicData>
       <shaderType>CutoutComplex</shaderType>
@@ -15,7 +14,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costList>
-      <Cloth>75</Cloth>
+      <Scarlet_Thread_Fabric>80</Scarlet_Thread_Fabric>
     </costList>
     <smeltable>false</smeltable>
     <thingCategories>

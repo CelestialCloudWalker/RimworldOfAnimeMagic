@@ -4,7 +4,9 @@
     <defName>DemonSlayerCorp_Haori</defName>
     <label>Haori</label>
     <description>A Demon Slayer Corps haori worn over uniforms.</description>
-    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <researchPrerequisite>AA_HaoriResearch</researchPrerequisite>
+    </recipeMaker>
     <graphicData>
       <texPath>Haori/Haori_Normal_Male_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>

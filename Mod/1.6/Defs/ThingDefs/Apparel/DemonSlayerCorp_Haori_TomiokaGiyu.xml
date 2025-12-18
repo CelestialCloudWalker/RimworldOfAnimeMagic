@@ -4,6 +4,9 @@
     <defName>DemonSlayerCorp_Haori_TomiokaGiyu</defName>
     <label> Giyu's Haori</label>
     <description>A Demon Slayer Corps haori worn over uniforms.</description>
+    <recipeMaker>
+      <researchPrerequisite>AA_HaoriResearch</researchPrerequisite>
+    </recipeMaker>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Haori_TomiokaGiyu/Haori_TomiokaGiyu_Male_north</texPath>
@@ -11,11 +14,9 @@
       <drawSize>1.05</drawSize>
     </graphicData>
     <smeltable>false</smeltable>
-    <costStuffCount>80</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-    </stuffCategories>
+    <costList>
+      <Scarlet_Thread_Fabric>80</Scarlet_Thread_Fabric>
+    </costList>
     <thingCategories>
       <li>ApparelNoble</li>
     </thingCategories>

@@ -4,6 +4,9 @@
     <defName>NichirinSword_AgatsumaZenitsu</defName>
     <label>Zenitsu's Nichirin Blade</label>
     <description>A nichirin blade capable of killing demons.</description>
+    <recipeMaker>
+      <researchPrerequisite>AA_NichinrinBladeResearch</researchPrerequisite>
+    </recipeMaker>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_AgatsumaZenitsu</texPath>
@@ -13,8 +16,7 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <equipmentType>Primary</equipmentType>
     <costList>
-      <Scarlet_Crimson_Iron_Sand>20</Scarlet_Crimson_Iron_Sand>
-      <Scarlet_Ore>20</Scarlet_Ore>
+      <Scarlet_Steel>20</Scarlet_Steel>
       <Steel>20</Steel>
       <Silver>20</Silver>
       <ComponentIndustrial>20</ComponentIndustrial>

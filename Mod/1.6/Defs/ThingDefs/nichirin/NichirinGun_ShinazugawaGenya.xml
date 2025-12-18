@@ -24,15 +24,9 @@
       <li>SimpleGun</li>
       <li>Gun</li>
     </weaponTags>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-    </stuffCategories>
     <costList>
-      <Scarlet_Crimson_Iron_Sand>20</Scarlet_Crimson_Iron_Sand>
-      <Scarlet_Ore>20</Scarlet_Ore>
+      <Scarlet_Steel>20</Scarlet_Steel>
     </costList>
-    <costStuffCount>100</costStuffCount>
     <recipeMaker>
       <skillRequirements>
         <Crafting>10</Crafting>

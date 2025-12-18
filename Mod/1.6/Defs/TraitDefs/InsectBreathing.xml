@@ -10,7 +10,7 @@
     <degreeDatas>
       <li>
         <label>compound eyes</label>
-        <description>[PAWN_nameDef] sees the world through multifaceted compound eyes. [PAWN_possessive] enhanced vision grants superior accuracy and the ability to work effectively even in complete darkness.</description>
+        <description>[PAWN_nameDef] sees the world through multifaceted compound eyes. [PAWN_possessive] LevelTwo vision grants LevelThree accuracy and the ability to work effectively even in complete darkness.</description>
         <degree>1</degree>
         <statOffsets>
           <ShootingAccuracyPawn>8</ShootingAccuracyPawn>

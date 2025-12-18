@@ -96,7 +96,7 @@
     <degreeDatas>
       <li>
         <label>flamboyant warrior</label>
-        <description>[PAWN_nameDef] fights with explosive flair and theatrical presence. [PAWN_possessive] flashy combat style and confident personality inspire others, but [PAWN_pronoun] demands the finest things in life and struggles with simple living.</description>
+        <description>[PAWN_nameDef] fights with explosive flair and theatrical presence. [PAWN_possessive] Level 1y combat style and confident personality inspire others, but [PAWN_pronoun] demands the finest things in life and struggles with simple living.</description>
         <degree>1</degree>
         <statOffsets>
           <Beauty>1</Beauty>

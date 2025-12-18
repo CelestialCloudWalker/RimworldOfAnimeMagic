@@ -6,7 +6,7 @@
     <description>Rate at which blood demon arts resource regenerates.</description>
     <category>BasicsPawn</category>
     <defaultBaseValue>5.0</defaultBaseValue>
-    <minValue>0</minValue>
+    <minValue>1</minValue>
     <showOnDefaultValue>false</showOnDefaultValue>
   </StatDef>
 </Defs>

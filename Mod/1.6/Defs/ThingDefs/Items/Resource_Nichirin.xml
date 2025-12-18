@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
   <ThingDef ParentName="ResourceBase">
     <defName>Scarlet_Crimson_Iron_Sand</defName>
-    <label>Scarlet Crimson Iron Sand</label>
-    <description>Rare crimson iron sand found in mountains. A component for forging Nichirin weapons.</description>
+    <label>scarlet crimson iron sand</label>
+    <description>Rare crimson iron sand found in mountains. A component for forging Nichirin weapons. Must be refined before use.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Silver</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>Things/Scarlet_Crimson_Iron_Sand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <resourceReadoutPriority>First</resourceReadoutPriority>
     <soundInteract>Silver_Drop</soundInteract>
@@ -17,13 +18,6 @@
     <statBases>
       <MarketValue>12</MarketValue>
       <Mass>0.010</Mass>
-      <StuffPower_Armor_Sharp>1.60</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.95</StuffPower_Armor_Blunt>
-      <StuffPower_Armor_Heat>1.40</StuffPower_Armor_Heat>
-      <StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
-      <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
-      <SharpDamageMultiplier>1.50</SharpDamageMultiplier>
-      <BluntDamageMultiplier>1.20</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>
@@ -34,44 +28,19 @@
     <deepCountPerPortion>30</deepCountPerPortion>
     <deepLumpSizeRange>2~6</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>true</smeltable>
+    <smeltable>false</smeltable>
     <possessionCount>20</possessionCount>
-    <stuffProps>
-      <categories>
-        <li>Metallic</li>
-      </categories>
-      <appearance>Metal</appearance>
-      <color>(220,60,60)</color>
-      <commonality>0.015</commonality>
-      <constructEffect>ConstructMetal</constructEffect>
-      <isAirtight>true</isAirtight>
-      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
-      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
-      <statOffsets>
-        <Beauty>15</Beauty>
-        <WorkToMake>2000</WorkToMake>
-      </statOffsets>
-      <statFactors>
-        <MaxHitPoints>2.2</MaxHitPoints>
-        <Flammability>0.15</Flammability>
-        <Beauty>3.8</Beauty>
-        <WorkToBuild>1.5</WorkToBuild>
-        <DeteriorationRate>0.25</DeteriorationRate>
-      </statFactors>
-    </stuffProps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <allowedArchonexusCount>300</allowedArchonexusCount>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
     <defName>Scarlet_Ore</defName>
-    <label>Scarlet Ore</label>
-    <description>Rare scarlet mineral ore found in mountains. A component for forging Nichirin weapons.</description>
+    <label>scarlet ore</label>
+    <description>Rare scarlet mineral ore found in mountains. A component for forging Nichirin weapons. Must be refined before use.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Steel</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>Things/Scarlet_Ore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <resourceReadoutPriority>First</resourceReadoutPriority>
     <soundInteract>Silver_Drop</soundInteract>
@@ -82,13 +51,6 @@
     <statBases>
       <MarketValue>15</MarketValue>
       <Mass>0.012</Mass>
-      <StuffPower_Armor_Sharp>1.85</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>1.10</StuffPower_Armor_Blunt>
-      <StuffPower_Armor_Heat>1.65</StuffPower_Armor_Heat>
-      <StuffPower_Insulation_Cold>12</StuffPower_Insulation_Cold>
-      <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
-      <SharpDamageMultiplier>1.70</SharpDamageMultiplier>
-      <BluntDamageMultiplier>1.25</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>
@@ -99,15 +61,100 @@
     <deepCountPerPortion>25</deepCountPerPortion>
     <deepLumpSizeRange>1~5</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>true</smeltable>
+    <smeltable>false</smeltable>
     <possessionCount>18</possessionCount>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <allowedArchonexusCount>250</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Refined_Scarlet_Crimson_Iron</defName>
+    <label>refined scarlet crimson iron</label>
+    <description>Purified crimson iron extracted from iron sand. When combined with refined scarlet ore, it creates the mystical scarlet steel used for Nichirin blades.</description>
+    <graphicData>
+      <texPath>Things/Scarlet_Steel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(220,60,60)</color>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.4</Mass>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Refined_Scarlet_Ore</defName>
+    <label>refined scarlet ore</label>
+    <description>Purified scarlet metal extracted from raw ore. When combined with refined crimson iron, it creates the mystical scarlet steel used for Nichirin blades.</description>
+    <graphicData>
+      <texPath>Things/Scarlet_Steel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(180,40,40)</color>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>22</MarketValue>
+      <Mass>0.45</Mass>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Scarlet_Steel</defName>
+    <label>scarlet steel</label>
+    <description>A mystical alloy forged by combining refined scarlet ore and refined crimson iron. This legendary crimson-hued steel is incredibly strong and is the only material capable of forging true Nichirin blades.</description>
+    <graphicData>
+      <texPath>Things/Scarlet_Steel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(200,50,50)</color>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>35</MarketValue>
+      <Mass>0.5</Mass>
+      <SharpDamageMultiplier>1.70</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.25</BluntDamageMultiplier>
+      <StuffPower_Armor_Sharp>1.85</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.10</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.65</StuffPower_Armor_Heat>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Metallic</li>
       </categories>
       <appearance>Metal</appearance>
-      <color>(180,40,40)</color>
-      <commonality>0.012</commonality>
+      <color>(200,50,50)</color>
+      <commonality>0.01</commonality>
       <constructEffect>ConstructMetal</constructEffect>
       <isAirtight>true</isAirtight>
       <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
@@ -115,19 +162,66 @@
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
       <statOffsets>
-        <Beauty>18</Beauty>
-        <WorkToMake>2500</WorkToMake>
+        <Beauty>20</Beauty>
       </statOffsets>
       <statFactors>
         <MaxHitPoints>2.5</MaxHitPoints>
         <Flammability>0.10</Flammability>
-        <Beauty>4.2</Beauty>
+        <Beauty>4.5</Beauty>
         <WorkToBuild>1.8</WorkToBuild>
+        <WorkToMake>2.5</WorkToMake>
         <DeteriorationRate>0.2</DeteriorationRate>
         <MeleeWeapon_CooldownMultiplier>0.90</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <allowedArchonexusCount>250</allowedArchonexusCount>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <allowedArchonexusCount>150</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Scarlet_Thread_Fabric</defName>
+    <label>scarlet thread fabric</label>
+    <description>A specialized fabric woven with microscopic scarlet iron particles. Flexible yet surprisingly protective, this crimson cloth is used to craft demon slayer uniforms and haoris.</description>
+    <graphicData>
+      <texPath>Things/Scarlet_Thread_Fabric</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(150,30,30)</color>
+    </graphicData>
+    <soundInteract>Cloth_Drop</soundInteract>
+    <soundDrop>Cloth_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <Mass>0.03</Mass>
+      <StuffPower_Armor_Sharp>1.60</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.95</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.40</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+    </statBases>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+    <burnableByRecipe>true</burnableByRecipe>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <commonality>0.01</commonality>
+      <color>(150,30,30)</color>
+      <statOffsets>
+        <Beauty>15</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>2.2</MaxHitPoints>
+        <Flammability>0.15</Flammability>
+        <Beauty>3.8</Beauty>
+        <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+        <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        <EquipDelay>0.9</EquipDelay>
+      </statFactors>
+    </stuffProps>
+    <allowedArchonexusCount>150</allowedArchonexusCount>
   </ThingDef>
 </Defs>
