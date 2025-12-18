@@ -1,10 +1,7 @@
 ﻿using RimWorld;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
-using Verse.AI;
 using Verse.Sound;
 
 namespace AnimeArsenal
@@ -21,126 +18,58 @@ namespace AnimeArsenal
             if (caster == null) return;
 
             IntVec3 targetCell = target.Cell;
+            IntVec3 startPos = caster.Position;
 
-            
-            for (int dashCount = 0; dashCount < Props.numberOfDashes; dashCount++)
+            if (Props.castEffecter != null)
             {
-                IntVec3 currentPos = caster.Position;
+                var castEffect = Props.castEffecter.Spawn();
+                castEffect.Trigger(new TargetInfo(startPos, caster.Map), new TargetInfo(startPos, caster.Map));
+                castEffect.Cleanup();
+            }
 
-                
-                if (dashCount == 0 && Props.castEffecter != null)
+            if (Props.castSound != null)
+                Props.castSound.PlayOneShot(new TargetInfo(startPos, caster.Map));
+
+            IntVec3 dashTarget = FindBestDashPosition(caster, targetCell);
+
+            if (dashTarget.IsValid)
+            {
+                caster.Position = dashTarget;
+                caster.Notify_Teleported(false, false);
+
+                if (Props.landEffecter != null)
                 {
-                    Effecter castEffect = Props.castEffecter.Spawn();
-                    castEffect.Trigger(new TargetInfo(currentPos, caster.Map), new TargetInfo(currentPos, caster.Map));
-                    castEffect.Cleanup();
-                }
-                else if (dashCount > 0 && Props.retryEffecter != null)
-                {
-                    Effecter retryEffect = Props.retryEffecter.Spawn();
-                    retryEffect.Trigger(new TargetInfo(currentPos, caster.Map), new TargetInfo(currentPos, caster.Map));
-                    retryEffect.Cleanup();
+                    var landEffect = Props.landEffecter.Spawn();
+                    landEffect.Trigger(new TargetInfo(dashTarget, caster.Map), new TargetInfo(dashTarget, caster.Map));
+                    landEffect.Cleanup();
                 }
 
-                
-                IntVec3 dashTarget = CalculateForwardPosition(caster, targetCell);
-
-                if (dashTarget.IsValid)
-                {
-                   
-                    caster.Position = dashTarget;
-                    caster.Notify_Teleported(false, false);
-
-                   
-                    if (Props.landEffecter != null)
-                    {
-                        Effecter landEffect = Props.landEffecter.Spawn();
-                        landEffect.Trigger(new TargetInfo(dashTarget, caster.Map), new TargetInfo(dashTarget, caster.Map));
-                        landEffect.Cleanup();
-                    }
-
-                    
-                    if (dashCount == 0 && Props.castSound != null)
-                    {
-                        Props.castSound.PlayOneShot(new TargetInfo(currentPos, caster.Map));
-                    }
-
-                    if (Props.landSound != null)
-                    {
-                        Props.landSound.PlayOneShot(new TargetInfo(dashTarget, caster.Map));
-                    }
-
-                    
-                    if (dashCount < Props.numberOfDashes - 1 && Props.dashDelay > 0)
-                    {
-                       
-                    }
-                }
-                else
-                {
-                    
-                    break;
-                }
+                if (Props.landSound != null)
+                    Props.landSound.PlayOneShot(new TargetInfo(dashTarget, caster.Map));
             }
         }
 
-        private IntVec3 CalculateForwardPosition(Pawn caster, IntVec3 targetCell)
+        private IntVec3 FindBestDashPosition(Pawn caster, IntVec3 targetCell)
         {
             Map map = caster.Map;
-            IntVec3 casterPos = caster.Position;
+            float maxRange = parent.def.verbProperties.range;
 
-            
-            Vector3 forwardDirection = (targetCell - casterPos).ToVector3Shifted().normalized;
+            if (IsValidDashCell(targetCell, caster, map, maxRange))
+                return targetCell;
 
-           
-            for (int dist = Props.minDashDistance; dist <= Props.maxDashDistance; dist++)
+            for (int radius = 1; radius <= 3; radius++)
             {
-                Vector3 targetVector = casterPos.ToVector3Shifted() + (forwardDirection * dist);
-                IntVec3 candidate = targetVector.ToIntVec3();
-
-                if (IsValidForwardCell(candidate, caster, map, targetCell))
+                foreach (IntVec3 cell in GenRadial.RadialCellsAround(targetCell, radius, true))
                 {
-                    return candidate;
-                }
-
-                
-                for (int angle = -30; angle <= 30; angle += 10)
-                {
-                    Vector3 rotatedDir = forwardDirection.RotatedBy(angle);
-                    Vector3 rotatedVector = casterPos.ToVector3Shifted() + (rotatedDir * dist);
-                    IntVec3 rotatedCandidate = rotatedVector.ToIntVec3();
-
-                    if (IsValidForwardCell(rotatedCandidate, caster, map, targetCell))
-                    {
-                        return rotatedCandidate;
-                    }
-                }
-            }
-
-            
-            if (Props.allowRandomDirection)
-            {
-                for (int i = 0; i < 20; i++)
-                {
-                    float randomAngle = Rand.Range(0f, 360f);
-                    Vector3 randomDir = Vector3.forward.RotatedBy(randomAngle);
-
-                    for (int dist = Props.minDashDistance; dist <= Props.maxDashDistance; dist++)
-                    {
-                        Vector3 randomVector = casterPos.ToVector3Shifted() + (randomDir * dist);
-                        IntVec3 randomCandidate = randomVector.ToIntVec3();
-
-                        if (IsValidForwardCell(randomCandidate, caster, map, targetCell))
-                        {
-                            return randomCandidate;
-                        }
-                    }
+                    if (IsValidDashCell(cell, caster, map, maxRange))
+                        return cell;
                 }
             }
 
             return IntVec3.Invalid;
         }
 
-        private bool IsValidForwardCell(IntVec3 cell, Pawn caster, Map map, IntVec3 originalTarget)
+        private bool IsValidDashCell(IntVec3 cell, Pawn caster, Map map, float maxRange)
         {
             if (!cell.InBounds(map) || !cell.Standable(map))
                 return false;
@@ -148,11 +77,9 @@ namespace AnimeArsenal
             if (cell.GetEdifice(map)?.def.passability == Traversability.Impassable)
                 return false;
 
-            
-            if (Props.maintainMinDistanceFromTarget && cell.DistanceTo(originalTarget) < Props.minDistanceFromTarget)
+            if (caster.Position.DistanceTo(cell) > maxRange)
                 return false;
 
-            
             if (Props.avoidEnemies)
             {
                 var enemies = map.mapPawns.AllPawnsSpawned.Where(p =>
@@ -173,9 +100,8 @@ namespace AnimeArsenal
             if (caster == null)
                 return false;
 
-            
-            IntVec3 forwardPos = CalculateForwardPosition(caster, target.Cell);
-            if (!forwardPos.IsValid)
+            IntVec3 dashPos = FindBestDashPosition(caster, target.Cell);
+            if (!dashPos.IsValid)
             {
                 if (throwMessages)
                     Messages.Message("No valid dash position found.", MessageTypeDefOf.RejectInput);
@@ -188,30 +114,13 @@ namespace AnimeArsenal
 
     public class CompProperties_AbilityForwardDash : CompProperties_AbilityEffect
     {
-        public int minDashDistance = 3;
-        public int maxDashDistance = 8;
-        public bool avoidEnemies = false; 
-        public float enemyAvoidanceRadius = 5f;
-        public int numberOfDashes = 1; 
-        public int dashDelay = 0; 
+        public bool avoidEnemies = false;
+        public float enemyAvoidanceRadius = 3f;
 
-        
-        public bool allowRandomDirection = false;
-        public bool maintainMinDistanceFromTarget = false; 
-        public float minDistanceFromTarget = 2f; 
-
-        
-        public EffecterDef castEffecter; 
-        public EffecterDef landEffecter; 
-        public EffecterDef retryEffecter; 
+        public EffecterDef castEffecter;
+        public EffecterDef landEffecter;
         public SoundDef castSound;
         public SoundDef landSound;
-
-        
-        public bool grantTemporaryImmunity = false;
-        public bool grantSpeedBoost = false;
-        public bool grantMoodBoost = false;
-        public bool restoreStamina = false;
 
         public CompProperties_AbilityForwardDash()
         {

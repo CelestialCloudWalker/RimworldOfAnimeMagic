@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelTwo</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelTwo</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>410</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelThree</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelThree</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>370</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelFour</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelFour</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>330</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelFive</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelFive</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>290</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelSix</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelSix</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>250</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

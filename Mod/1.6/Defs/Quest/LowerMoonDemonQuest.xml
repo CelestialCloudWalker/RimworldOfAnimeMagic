@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HistoryEventDef>
+    <defName>AnimeArsenal_LowerMoonHuntCompleted</defName>
+    <label>Lower Moon Hunt Completed</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>AnimeArsenal_LowerMoonHuntFailed</defName>
+    <label>Lower Moon Hunt Failed</label>
+  </HistoryEventDef>
+
+  <QuestScriptDef>
+    <defName>AnimeArsenal_LowerMoonDemonHunt</defName>
+    <rootSelectionWeight>0.4</rootSelectionWeight>
+    <rootMinPoints>500</rootMinPoints>
+    <rootEarliestDay>15</rootEarliestDay>
+    <minRefireDays>60</minRefireDays>
+    <expireDaysRange>3~6</expireDaysRange>
+    <isRootSpecial>false</isRootSpecial>
+    <questAvailableLetterLabel>Lower Moon Demon Hunt</questAvailableLetterLabel>
+    <questAvailableLetterDef>ThreatBig</questAvailableLetterDef>
+    <successHistoryEvent>AnimeArsenal_LowerMoonHuntCompleted</successHistoryEvent>
+    <failedOrExpiredHistoryEvent>AnimeArsenal_LowerMoonHuntFailed</failedOrExpiredHistoryEvent>
+
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Lower Moon Elimination</li>
+        <li>questName->Hunt for Lower Rank Demons</li>
+        <li>questName->Lesser Demon Extermination</li>
+        <li>questName->Lower Moon Threat</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->A Lower Moon demon has been spotted terrorizing a nearby settlement. The Demon Slayer Corps has identified its location and is requesting assistance from anyone with breathing techniques to eliminate this threat.\n\n"This demon is powerful, but not invincible. Those who have mastered even basic breathing forms should be able to face it with proper preparation. The hunt will be dangerous, but you'll emerge stronger - we've seen hunters develop new abilities after confronting demons of this caliber."\n\nThe mission will take several days. Success will be measured by survival and growth - those who return will have proven their worth.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+
+        <li Class="QuestNode_GetPawn">
+          <storeAs>asker</storeAs>
+          <mustBeFactionLeader>true</mustBeFactionLeader>
+          <mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+          <factionMustBePermanent>true</factionMustBePermanent>
+          <excludeFactionDefs>
+            <li>AA_Twelve_Demon_Moons</li>
+          </excludeFactionDefs>
+        </li>
+
+        <li Class="QuestNode_Set">
+          <name>huntDays</name>
+          <value>4</value>
+        </li>
+
+        <li Class="QuestNode_GetMap">
+          <storeAs>map</storeAs>
+          <preferMapWithMinFreeColonists>1</preferMapWithMinFreeColonists>
+        </li>
+
+        <li Class="AnimeArsenal.QuestNode_GetFlexibleRewards">
+          <flexibleRewards>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>ZephyrSteps</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_WindBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>ZephyrSteps</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>GaleForce</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_WindBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>GaleForce</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>WhirlwindStrike</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_WindBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>WhirlwindStrike</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>FlowingCombat</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_WaterBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>FlowingCombat</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>HealingSprings</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_WaterBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>HealingSprings</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>WhirlpoolTechnique</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_WaterBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>WhirlpoolTechnique</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>LightningReflexes</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_ThunderBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>LightningReflexes</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>LightningReflexes</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_ThunderBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>LightningReflexes</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>MountainEndurance</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_StoneBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>MountainEndurance</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>GeologicalKnowledge</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_StoneBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>GeologicalKnowledge</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>ExplosiveResonance</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_SoundBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>ExplosiveResonance</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>RhythmicCombat</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_SoundBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>RhythmicCombat</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>FlexibleForm</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_SerpentBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>FlexibleForm</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>VenomousStrike</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_SerpentBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>VenomousStrike</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>EtherealForm</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_MistBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>EtherealForm</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>PhaseWalking</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_MistBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>PhaseWalking</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>ProtectiveInstinct</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_LoveBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>ProtectiveInstinct</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>OverwhelmingAffection</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_LoveBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>OverwhelmingAffection</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>CompoundEyes</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_InsectBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>CompoundEyes</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>HiveMind</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_InsectBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>HiveMind</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>IceInVeins</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_FrostBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>IceInVeins</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>FrozenFocus</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_FrostBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>FrozenFocus</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>WoodlandSurvivor</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_ForestBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>WoodlandSurvivor</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>NaturesGuardian</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_ForestBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>NaturesGuardian</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>GraceUnderPressure</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_FlowerBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>GraceUnderPressure</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>PetalDance</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_FlowerBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>PetalDance</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>InnerFire</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_FlameBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>InnerFire</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>BlazingSpirit</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_FlameBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>BlazingSpirit</traitDef>
+                </li>
+              </requirements>
+            </li>
+
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>FeralInstincts</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_BeastBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>FeralInstincts</traitDef>
+                </li>
+              </requirements>
+            </li>
+            <li>
+              <rewardType>Trait</rewardType>
+              <traitDef>WildSenses</traitDef>
+              <traitDegree>1</traitDegree>
+              <weight>2</weight>
+              <requirements>
+                <li>
+                  <requirementType>HasGene</requirementType>
+                  <geneDef>Gene_BeastBreath</geneDef>
+                </li>
+                <li>
+                  <requirementType>DoesNotHaveTrait</requirementType>
+                  <traitDef>WildSenses</traitDef>
+                </li>
+              </requirements>
+            </li>
+          </flexibleRewards>
+
+          <survivalSettings>
+            <baseSurvivalChance>0.75</baseSurvivalChance>
+            <minimumSurvivalChance>0.5</minimumSurvivalChance>
+            <maximumSurvivalChance>0.95</maximumSurvivalChance>
+
+            <skillBonuses>
+              <li>
+                <skillDef>Melee</skillDef>
+                <minimumLevel>8</minimumLevel>
+                <bonus>0.08</bonus>
+              </li>
+              <li>
+                <skillDef>Shooting</skillDef>
+                <minimumLevel>6</minimumLevel>
+                <bonus>0.05</bonus>
+              </li>
+              <li>
+                <skillDef>Medicine</skillDef>
+                <minimumLevel>5</minimumLevel>
+                <bonus>0.04</bonus>
+              </li>
+            </skillBonuses>
+
+            <traitModifiers>
+              <li>
+                <traitDef>Tough</traitDef>
+                <modifier>0.08</modifier>
+              </li>
+              <li>
+                <traitDef>Brawler</traitDef>
+                <modifier>0.06</modifier>
+              </li>
+              <li>
+                <traitDef>Wimp</traitDef>
+                <modifier>-0.2</modifier>
+              </li>
+              <li>
+                <traitDef>Nerves</traitDef>
+                <modifier>-0.12</modifier>
+              </li>
+            </traitModifiers>
+          </survivalSettings>
+
+          <customSurvivalMessage>{PAWNS} returned victorious from the Lower Moon hunt, their breathing techniques refined through combat!</customSurvivalMessage>
+          <customDeathMessage>{PAWN} fell in battle against the Lower Moon demon, unable to withstand its demonic power.</customDeathMessage>
+          <customRewardMessage>{PAWN} has awakened {REWARD} through their harrowing battle with the demon!</customRewardMessage>
+        </li>
+
+        <li Class="QuestNode_ShuttleDelay">
+          <delayTicks>2500</delayTicks>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_SubScript">
+                <def>Util_TransportShip_Pickup</def>
+                <parms>
+                  <leaveDelayTicks>120000</leaveDelayTicks>
+                  <leaveImmediatelyWhenSatisfied>true</leaveImmediatelyWhenSatisfied>
+                  <acceptColonists>true</acceptColonists>
+                  <acceptChildren>false</acceptChildren>
+                  <onlyAcceptColonists>true</onlyAcceptColonists>
+                  <onlyAcceptHealthy>true</onlyAcceptHealthy>
+                  <requireColonistCount>2</requireColonistCount>
+                </parms>
+              </li>
+
+              <li Class="QuestNode_Letter">
+                <label>Lower Moon Demon Sighting</label>
+                <text>A messenger from the Demon Slayer Corps has arrived with urgent news. A Lower Moon demon has been spotted in a nearby region, and they're requesting assistance from anyone who has mastered breathing techniques.\n\n"We've tracked this demon to its lair. It's a Lower Moon - dangerous, but not as formidable as the upper ranks. Anyone with breathing techniques should be capable of handling it. This is an excellent opportunity to test your abilities in real combat. Two volunteers should be sufficient."\n\nThis hunt will be perilous, but those who survive will emerge stronger, with their techniques refined through battle.</text>
+                <lookTargets>$pickupShipThing</lookTargets>
+              </li>
+            </nodes>
+          </node>
+        </li>
+
+        <li Class="QuestNode_Signal">
+          <inSignal>pickupShipThing.SentSatisfied</inSignal>
+          <node Class="QuestNode_LendColonistsToFaction">
+            <shuttle>$pickupShipThing</shuttle>
+            <lendColonistsToFactionOf>$asker</lendColonistsToFactionOf>
+            <returnLentColonistsInTicks>$($huntDays*60000)</returnLentColonistsInTicks>
+            <outSignalComplete>ColonistsReturned</outSignalComplete>
+            <outSignalColonistsDied>ColonistsDied</outSignalColonistsDied>
+          </node>
+        </li>
+
+        <li Class="QuestNode_Signal">
+          <inSignal>ColonistsReturned</inSignal>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label>Demon Hunt Complete</label>
+                <text>Your demon slayers have returned from the hunt. Their breathing techniques have been tested in true combat against a Lower Moon demon, and they've grown stronger from the experience.</text>
+                <letterDef>PositiveEvent</letterDef>
+                <useColonistsFromCaravanArg>true</useColonistsFromCaravanArg>
+              </li>
+
+              <li Class="QuestNode_End">
+                <outcome>Success</outcome>
+              </li>
+            </nodes>
+          </node>
+        </li>
+
+        <li Class="QuestNode_Signal">
+          <inSignal>ColonistsDied</inSignal>
+          <node Class="QuestNode_Letter">
+            <label>Hunt Failed</label>
+            <text>The Lower Moon demon proved too powerful. Your colonist did not survive the encounter.</text>
+            <letterDef>Death</letterDef>
+          </node>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+</Defs>

@@ -16,31 +16,79 @@
     <experienceGainSettings>
       <experienceTypes>
         <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>50</baseXP>
-          <damageFactor>0.1</damageFactor>
+          <baseXP>8</baseXP>
+          <damageFactor>0.14</damageFactor>
         </li>
         <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>100</baseXP>
-          <damageFactor>0.1</damageFactor>
+          <baseXP>16</baseXP>
+          <damageFactor>0.21</damageFactor>
+        </li>
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_CastAbility</VerbClassName>
+          <baseXP>16</baseXP>
+        </li>
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_MeleeAttack</VerbClassName>
+          <baseXP>13</baseXP>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Melee</SkillDef>
+          <baseXP>3.8</baseXP>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Medicine</SkillDef>
+          <baseXP>2</baseXP>
         </li>
         <li Class="Talented.SkillExperienceTypeDef">
           <SkillDef>Shooting</SkillDef>
-          <baseXP>2</baseXP>
+          <baseXP>1.5</baseXP>
         </li>
         <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>HaulToCell</SkillDef>
-          <baseXP>1</baseXP>
+          <SkillDef>AttackMelee</SkillDef>
+          <baseXP>18</baseXP>
         </li>
-        <li Class="Talented.VerbExperienceTypeDef">
-          <VerbClassName>Verb_BeatFire</VerbClassName>
-          <baseXP>1</baseXP>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>AttackStatic</SkillDef>
+          <baseXP>15</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Meditate</SkillDef>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>GoSwimming</SkillDef>
+          <baseXP>16</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Hunt</SkillDef>
+          <baseXP>12</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Fish</SkillDef>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>FishAnimal</SkillDef>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Clean</SkillDef>
+          <baseXP>8</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>TendPatient</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Wait_Combat</SkillDef>
+          <baseXP>5</baseXP>
         </li>
       </experienceTypes>
     </experienceGainSettings>
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>
-        <damageAmount>30</damageAmount>
+        <damageAmount>1</damageAmount>
         <targetGene>BloodDemonArt</targetGene>
         <armorPenetration>0.8</armorPenetration>
         <targetBodyParts>
@@ -53,7 +101,7 @@
         <applyOnGeneRemove>false</applyOnGeneRemove>
       </li>
       <li Class="DeathTimerExtension">
-        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <hediffToWatch>BreathingMarkApplyGiyu</hediffToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
         <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
         <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>

@@ -15,26 +15,82 @@
     <experienceFormula>Basic_LinearXP</experienceFormula>
     <experienceGainSettings>
       <experienceTypes>
-        <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>50</baseXP>
-          <damageFactor>0.1</damageFactor>
-        </li>
-        <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>100</baseXP>
-          <damageFactor>0.1</damageFactor>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Shooting</SkillDef>
-          <baseXP>2</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>HaulToCell</SkillDef>
-          <baseXP>1</baseXP>
-        </li>
-        <li Class="Talented.VerbExperienceTypeDef">
-          <VerbClassName>Verb_BeatFire</VerbClassName>
-          <baseXP>1</baseXP>
-        </li>
+      <li Class="Talented.DamageTakenExperienceTypeDef">
+        <baseXP>12</baseXP>
+        <damageFactor>0.19</damageFactor>
+      </li>
+      <li Class="Talented.DamageDealtExperienceTypeDef">
+        <baseXP>22</baseXP>
+        <damageFactor>0.28</damageFactor>
+      </li>
+      <li Class="Talented.VerbExperienceTypeDef">
+        <VerbClassName>Verb_CastAbility</VerbClassName>
+        <baseXP>22</baseXP>
+      </li>
+      <li Class="Talented.VerbExperienceTypeDef">
+        <VerbClassName>Verb_MeleeAttack</VerbClassName>
+        <baseXP>18</baseXP>
+      </li>
+      <li Class="Talented.SkillExperienceTypeDef">
+        <SkillDef>Melee</SkillDef>
+        <baseXP>5</baseXP>
+      </li>
+      <li Class="Talented.SkillExperienceTypeDef">
+        <SkillDef>Intellectual</SkillDef>
+        <baseXP>3</baseXP>
+      </li>
+      <li Class="Talented.SkillExperienceTypeDef">
+        <SkillDef>Shooting</SkillDef>
+        <baseXP>2.5</baseXP>
+      </li>
+      <li Class="Talented.SkillExperienceTypeDef">
+        <SkillDef>Social</SkillDef>
+        <baseXP>2</baseXP>
+      </li>
+      <li Class="Talented.SkillExperienceTypeDef">
+        <SkillDef>Medicine</SkillDef>
+        <baseXP>2</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>AttackMelee</SkillDef>
+        <baseXP>25</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>AttackStatic</SkillDef>
+        <baseXP>20</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>Meditate</SkillDef>
+        <baseXP>16</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>Research</SkillDef>
+        <baseXP>12</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>Hunt</SkillDef>
+        <baseXP>16</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>Wait_Combat</SkillDef>
+        <baseXP>7</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>DoBill</SkillDef>
+        <baseXP>10</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>TendPatient</SkillDef>
+        <baseXP>10</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>SocialRelax</SkillDef>
+        <baseXP>10</baseXP>
+      </li>
+      <li Class="Talented.JobExperienceTypeDef">
+        <SkillDef>GiveSpeech</SkillDef>
+        <baseXP>14</baseXP>
+      </li>
       </experienceTypes>
     </experienceGainSettings>
     <modExtensions>
@@ -53,7 +109,7 @@
         <applyOnGeneRemove>false</applyOnGeneRemove>
       </li>
       <li Class="DeathTimerExtension">
-        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <hediffToWatch>BreathingMarkApplyTanjiro</hediffToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
         <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
         <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>

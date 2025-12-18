@@ -3,7 +3,7 @@
   <HediffDef>
     <defName>BloodDemonRegeneration</defName>
     <label>demon regeneration</label>
-    <description>Enhanced healing capabilities from consuming flesh. Wounds heal faster and scars fade over time.</description>
+    <description>LevelTwo healing capabilities from consuming flesh. Wounds heal faster and scars fade over time.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 1.0, 0.8)</defaultLabelColor>
     <isBad>false</isBad>

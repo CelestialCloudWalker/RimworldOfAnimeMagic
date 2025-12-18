@@ -14,7 +14,6 @@ namespace AnimeArsenal
         public float baseExperienceGain = 1f;
         public bool showExperienceInTooltip = true;
 
-
         public string requiredGeneDefName;
         public float resourceCost = 1f;
 
@@ -62,6 +61,7 @@ namespace AnimeArsenal
             {
                 FindTalentGene();
                 InitializeLevelComps();
+                UpdateVerbProperties();
                 initialized = true;
             }
         }
@@ -93,10 +93,7 @@ namespace AnimeArsenal
             if (levelData?.levelComps != null && levelData.levelComps.Any())
             {
                 levelComps = new List<AbilityComp>();
-                if (levelData.cumulativeEffects && base.comps != null)
-                {
-                    levelComps.AddRange(base.comps);
-                }
+
                 foreach (var compProps in levelData.levelComps)
                 {
                     try
@@ -111,11 +108,70 @@ namespace AnimeArsenal
                         Log.Error($"Failed to create level comp: {e}");
                     }
                 }
+
+                if (base.comps != null)
+                {
+                    foreach (var baseComp in base.comps)
+                    {
+                        bool alreadyHasThisType = levelComps.Any(c => c.GetType() == baseComp.GetType());
+                        if (!alreadyHasThisType)
+                        {
+                            try
+                            {
+                                var compProps = baseComp.props;
+                                var comp = (AbilityComp)System.Activator.CreateInstance(compProps.compClass);
+                                comp.parent = this;
+                                comp.Initialize(compProps);
+                                levelComps.Add(comp);
+                            }
+                            catch (System.Exception e)
+                            {
+                                Log.Error($"Failed to recreate base comp: {e}");
+                            }
+                        }
+                    }
+                }
             }
             else
             {
                 levelComps = null;
             }
+        }
+
+        private void UpdateVerbProperties()
+        {
+            var levelData = TalentedLevelingDef.GetLevelData(currentLevel);
+            if (levelData?.verbProperties == null) return;
+
+            if (verb?.verbProps != null)
+            {
+                verb.verbProps.range = levelData.verbProperties.range;
+                if (levelData.verbProperties.warmupTime > 0)
+                {
+                    verb.verbProps.warmupTime = levelData.verbProperties.warmupTime;
+                }
+            }
+        }
+
+        public float GetCurrentRange()
+        {
+            var levelData = TalentedLevelingDef.GetLevelData(currentLevel);
+            if (levelData?.verbProperties != null && levelData.verbProperties.range > 0)
+            {
+                return levelData.verbProperties.range;
+            }
+            return def.verbProperties?.range ?? 0f;
+        }
+
+        private float GetCurrentResourceCost()
+        {
+            float baseCost = TalentedLevelingDef.resourceCost;
+            var levelData = TalentedLevelingDef.GetLevelData(currentLevel);
+            if (levelData != null && levelData.resourceCostMultiplier > 0f && levelData.resourceCostMultiplier != 1f)
+            {
+                return baseCost * levelData.resourceCostMultiplier;
+            }
+            return baseCost;
         }
 
         public override string Tooltip
@@ -139,6 +195,14 @@ namespace AnimeArsenal
                     float nextLevelExp = GetExperienceForNextLevel();
 
                     baseTooltip += $"\n\nLevel: {currentLevel + 1}/{MaxLevel}";
+
+                    float currentRange = GetCurrentRange();
+                    if (currentRange > 0)
+                    {
+                        baseTooltip += $"\nRange: {currentRange:F1} tiles";
+                    }
+
+                    baseTooltip += $"\nCost: {GetCurrentResourceCost():F0}";
 
                     if (currentLevel < MaxLevel - 1)
                     {
@@ -172,14 +236,16 @@ namespace AnimeArsenal
                         return "Missing required gene";
                 }
 
+                float currentCost = GetCurrentResourceCost();
+
                 if (talentGene is BreathingTechniqueGene breathingGene)
                 {
-                    if (breathingGene.Value < TalentedLevelingDef.resourceCost)
+                    if (breathingGene.Value < currentCost)
                         return "Not enough breath";
                 }
                 else if (talentGene is BloodDemonArtsGene bloodGene)
                 {
-                    if (bloodGene.Value < TalentedLevelingDef.resourceCost)
+                    if (bloodGene.Value < currentCost)
                         return "Not enough blood";
                 }
 
@@ -221,6 +287,7 @@ namespace AnimeArsenal
         public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
         {
             EnsureInitialized();
+            UpdateVerbProperties();
 
             var canCast = this.CanCast;
             if (!canCast)
@@ -237,8 +304,6 @@ namespace AnimeArsenal
             }
 
             var effectComps = GetEffectiveEffectComps();
-
-            Log.Message($"EffectComps count: {effectComps.Count}, Level: {currentLevel}, LevelComps count: {levelComps?.Count ?? 0}");
 
             if (effectComps.Any())
             {
@@ -257,13 +322,15 @@ namespace AnimeArsenal
 
         protected virtual void ConsumeResource()
         {
+            float currentCost = GetCurrentResourceCost();
+
             if (talentGene is BreathingTechniqueGene breathingGene)
             {
-                breathingGene.Value -= TalentedLevelingDef.resourceCost;
+                breathingGene.Value -= currentCost;
             }
             else if (talentGene is BloodDemonArtsGene bloodGene)
             {
-                bloodGene.Value -= TalentedLevelingDef.resourceCost;
+                bloodGene.Value -= currentCost;
             }
         }
 
@@ -305,6 +372,7 @@ namespace AnimeArsenal
             );
 
             InitializeLevelComps();
+            UpdateVerbProperties();
 
             float usedExp = GetExperienceForNextLevel();
             experience = Mathf.Max(0, experience - usedExp);
@@ -343,7 +411,6 @@ namespace AnimeArsenal
 
             if (Scribe.mode == LoadSaveMode.LoadingVars)
             {
-
                 if (this.Id == -1)
                 {
                     this.Id = Find.UniqueIDsManager.GetNextAbilityID();

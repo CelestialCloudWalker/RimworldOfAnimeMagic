@@ -17,24 +17,140 @@
     <experienceGainSettings>
       <experienceTypes>
         <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>50</baseXP>
+          <baseXP>5</baseXP>
           <damageFactor>0.1</damageFactor>
         </li>
         <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>100</baseXP>
-          <damageFactor>0.1</damageFactor>
+          <baseXP>14</baseXP>
+          <damageFactor>0.18</damageFactor>
         </li>
         <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Shooting</SkillDef>
+          <SkillDef>Melee</SkillDef>
+          <baseXP>3</baseXP>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Artistic</SkillDef>
+          <baseXP>3.5</baseXP>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Plants</SkillDef>
+          <baseXP>2.5</baseXP>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Social</SkillDef>
           <baseXP>2</baseXP>
         </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>HaulToCell</SkillDef>
-          <baseXP>1</baseXP>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Medicine</SkillDef>
+          <baseXP>1.5</baseXP>
         </li>
-        <li Class="Talented.VerbExperienceTypeDef">
-          <VerbClassName>Verb_BeatFire</VerbClassName>
-          <baseXP>1</baseXP>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>AttackMelee</SkillDef>
+          <baseXP>16</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>ViewArt</SkillDef>
+          <baseXP>12</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>DoBill</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Harvest</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>HarvestDesignated</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Sow</SkillDef>
+          <baseXP>8</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>PlantSeed</SkillDef>
+          <baseXP>8</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>SocialRelax</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Dance</SkillDef>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Play_MusicalInstrument</SkillDef>
+          <baseXP>12</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>MarryAdjacentPawn</SkillDef>
+          <baseXP>25</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>SpectateCeremony</SkillDef>
+          <baseXP>8</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>StandAndBeSociallyActive</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>GotoAndBeSociallyActive</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>TryRomance</SkillDef>
+          <baseXP>16</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Rescue</SkillDef>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>OfferHelp</SkillDef>
+          <baseXP>12</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>TradeWithPawn</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>PrisonerAttemptRecruit</SkillDef>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>PrisonerConvert</SkillDef>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>SlaveEmancipation</SkillDef>
+          <baseXP>16</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Breastfeed</SkillDef>
+          <baseXP>12</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>BottleFeedBaby</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>BringBabyToSafety</SkillDef>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>TendPatient</SkillDef>
+          <baseXP>8</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>VisitSickPawn</SkillDef>
+          <baseXP>8</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Lovin</SkillDef>
+          <baseXP>10</baseXP>
         </li>
       </experienceTypes>
     </experienceGainSettings>
@@ -42,7 +158,7 @@
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>
-        <damageAmount>30</damageAmount>
+        <damageAmount>1</damageAmount>
         <targetGene>BloodDemonArt</targetGene>
         <armorPenetration>0.8</armorPenetration>
         <targetBodyParts>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>AA_BreathingGourdCrafting</defName>
+    <label>Breathing Gourd Crafting</label>
+    <tab>RimKetsu</tab>
+    <description>Learn to craft specialized breathing training gourds. These tools are essential for enhancing a demon slayer's breathing capacity and lung function.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>AA_ScarletIronWorking</li>
+    </prerequisites>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>0.50</researchViewY>
+  </ResearchProjectDef>
+
+  <RecipeDef>
+    <defName>Craft_BreathingGourd_Small</defName>
+    <label>craft small breathing gourd</label>
+    <description>Craft a small training gourd for beginners.</description>
+    <jobString>Crafting small breathing gourd.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Thread_Fabric</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Steel</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+    </ingredients>
+    <products>
+      <AnimeArsenal_BreathingGourd_Small>1</AnimeArsenal_BreathingGourd_Small>
+    </products>
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+    <researchPrerequisite>AA_BreathingGourdCrafting</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Craft_BreathingGourd_Medium</defName>
+    <label>craft medium breathing gourd</label>
+    <description>Craft a medium training gourd for intermediate practitioners.</description>
+    <jobString>Crafting medium breathing gourd.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Thread_Fabric</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Steel</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <products>
+      <AnimeArsenal_BreathingGourd_Medium>1</AnimeArsenal_BreathingGourd_Medium>
+    </products>
+    <workAmount>5000</workAmount>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+    <researchPrerequisite>AA_BreathingGourdCrafting</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Craft_BreathingGourd_Large</defName>
+    <label>craft large breathing gourd</label>
+    <description>Craft a large training gourd for advanced practitioners.</description>
+    <jobString>Crafting large breathing gourd.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Thread_Fabric</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Steel</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <products>
+      <AnimeArsenal_BreathingGourd_Large>1</AnimeArsenal_BreathingGourd_Large>
+    </products>
+    <workAmount>8000</workAmount>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+    <researchPrerequisite>AA_BreathingGourdCrafting</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Craft_BreathingGourd_ExtraLarge</defName>
+    <label>craft extra large breathing gourd</label>
+    <description>Craft an extra large training gourd for masters.</description>
+    <jobString>Crafting extra large breathing gourd.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Thread_Fabric</li>
+          </thingDefs>
+        </filter>
+        <count>60</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Steel</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <products>
+      <AnimeArsenal_BreathingGourd_ExtraLarge>1</AnimeArsenal_BreathingGourd_ExtraLarge>
+    </products>
+    <workAmount>12000</workAmount>
+    <skillRequirements>
+      <Crafting>12</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+    <researchPrerequisite>AA_BreathingGourdCrafting</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Refine_ScarletOre</defName>
+    <label>refine scarlet ore</label>
+    <description>Smelt and purify scarlet ore to extract refined scarlet ore.</description>
+    <jobString>Refining scarlet ore.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Ore</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <products>
+      <Refined_Scarlet_Ore>10</Refined_Scarlet_Ore>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Scarlet_Ore</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workAmount>1400</workAmount>
+    <recipeUsers>
+      <li>ElectricSmelter</li>
+    </recipeUsers>
+    <researchPrerequisite>AA_ScarletIronWorking</researchPrerequisite>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Refine_ScarletIronSand</defName>
+    <label>refine scarlet crimson iron sand</label>
+    <description>Smelt and purify scarlet crimson iron sand to extract refined scarlet crimson iron.</description>
+    <jobString>Refining scarlet iron sand.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Scarlet_Crimson_Iron_Sand</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <products>
+      <Refined_Scarlet_Crimson_Iron>10</Refined_Scarlet_Crimson_Iron>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Scarlet_Crimson_Iron_Sand</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workAmount>1600</workAmount>
+    <recipeUsers>
+      <li>ElectricSmelter</li>
+    </recipeUsers>
+    <researchPrerequisite>AA_ScarletIronWorking</researchPrerequisite>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Forge_ScarletSteel</defName>
+    <label>forge scarlet steel</label>
+    <description>Combine refined scarlet ore and refined scarlet crimson iron to forge legendary scarlet steel. This mystical alloy is essential for creating Nichirin blades.</description>
+    <jobString>Forging scarlet steel.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Refined_Scarlet_Ore</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Refined_Scarlet_Crimson_Iron</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <Scarlet_Steel>8</Scarlet_Steel>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Refined_Scarlet_Ore</li>
+        <li>Refined_Scarlet_Crimson_Iron</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>ElectricSmelter</li>
+    </recipeUsers>
+    <researchPrerequisite>AA_ScarletIronWorking</researchPrerequisite>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Weave_ScarletThreadFabric</defName>
+    <label>weave scarlet thread fabric</label>
+    <description>Weave refined scarlet crimson iron and cloth into protective scarlet thread fabric.</description>
+    <jobString>Weaving scarlet thread fabric.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Refined_Scarlet_Crimson_Iron</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Textiles</li>
+          </categories>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <products>
+      <Scarlet_Thread_Fabric>30</Scarlet_Thread_Fabric>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Refined_Scarlet_Crimson_Iron</li>
+      </thingDefs>
+      <categories>
+        <li>Textiles</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Refined_Scarlet_Crimson_Iron</li>
+      </thingDefs>
+      <categories>
+        <li>Textiles</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Hyperweave</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <workAmount>2400</workAmount>
+    <recipeUsers>
+      <li>ElectricTailoringBench</li>
+      <li>HandTailoringBench</li>
+    </recipeUsers>
+    <researchPrerequisite>AA_ScarletThreadWeaving</researchPrerequisite>
+  </RecipeDef>
+</Defs>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Memory_Manipulation</defName>
     <label>Blood Demon Arts: Memory Manipulation</label>
@@ -31,7 +30,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
         <dreamEffectType>MemoryImplantation</dreamEffectType>
-        <effectSeverity>0.5</effectSeverity>
+        <effectSeverity>0.4</effectSeverity>
         <memoryImplantHediff>MemoryDisorientation</memoryImplantHediff>
         <implantedMemoryThoughts>
           <li>ImplantedMemory_Loss</li>
@@ -42,19 +41,26 @@
 
     <levels>
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>1.0</cooldownMultiplier>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 3 tiles. Basic memory implantation.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 3.5 tiles. More convincing false memories.</description>
+        <resourceCostMultiplier>0.94</resourceCostMultiplier>
+        <verbProperties>
+          <range>3.5</range>
+          <warmupTime>3.8</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MemoryImplantation</dreamEffectType>
-            <effectSeverity>0.7</effectSeverity>
+            <effectSeverity>0.55</effectSeverity>
             <memoryImplantHediff>MemoryDisorientation</memoryImplantHediff>
             <implantedMemoryThoughts>
-              <li>ImplantedMemory_Betrayal</li>
               <li>ImplantedMemory_Loss</li>
             </implantedMemoryThoughts>
             <showMessage>true</showMessage>
@@ -63,12 +69,38 @@
       </li>
 
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>120</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 4 tiles. Can implant more complex memories.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <verbProperties>
+          <range>4</range>
+          <warmupTime>3.6</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.7</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Betrayal</li>
+              <li>ImplantedMemory_Victory</li>
+              <li>ImplantedMemory_Loss</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 4.5 tiles. Deeply rooted false memories.</description>
+        <resourceCostMultiplier>0.86</resourceCostMultiplier>
+        <verbProperties>
+          <range>5</range>
+          <warmupTime>3.4</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MemoryImplantation</dreamEffectType>
@@ -85,12 +117,14 @@
       </li>
 
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>250</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.7</cooldownMultiplier>
-        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 6 tiles. Masterful memory fabrication.</description>
+        <resourceCostMultiplier>0.82</resourceCostMultiplier>
+        <verbProperties>
+          <range>6</range>
+          <warmupTime>3.2</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MemoryImplantation</dreamEffectType>
@@ -107,16 +141,18 @@
       </li>
 
       <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>400</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.6</cooldownMultiplier>
-        <resourceCostMultiplier>0.75</resourceCostMultiplier>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 6.5 tiles. Perfect memory rewriting - the past becomes what you decide.</description>
+        <resourceCostMultiplier>0.78</resourceCostMultiplier>
+        <verbProperties>
+          <range>7</range>
+          <warmupTime>3.0</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MemoryImplantation</dreamEffectType>
-            <effectSeverity>1.3</effectSeverity>
+            <effectSeverity>1.35</effectSeverity>
             <memoryImplantHediff>MemoryDisorientation</memoryImplantHediff>
             <implantedMemoryThoughts>
               <li>ImplantedMemory_Betrayal</li>

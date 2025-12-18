@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Sun_Breathing_Strike</defName>
+    <label>Sun Breathing: Strike</label>
+    <category>SunBreathing_Ability_Catergory</category>
+    <description>A technique that dashes to a target and strikes them.</description>
+    <iconPath>UI/Abilities/AbilityDash</iconPath>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+
+    <requiredGeneDefName>Gene_SunBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>19</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+        <damageAmount>7</damageAmount>
+        <damageType>Sun_Breathing_Damage</damageType>
+        <armorPenetration>0.27</armorPenetration>
+        <additionalDamageFactorFromMeleeSkill>0.09</additionalDamageFactorFromMeleeSkill>
+        <stunDuration>2</stunDuration>
+        <effectRadius>0.8</effectRadius>
+        <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+        <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>10</damageAmount>
+            <damageType>Sun_Breathing_Damage</damageType>
+            <armorPenetration>0.34</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.12</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>2</stunDuration>
+            <effectRadius>1.2</effectRadius>
+            <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>280</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>1.3</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>13</damageAmount>
+            <damageType>Sun_Breathing_Damage</damageType>
+            <armorPenetration>0.42</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.15</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>3</stunDuration>
+            <effectRadius>1.8</effectRadius>
+            <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>480</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.6</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>17</damageAmount>
+            <damageType>Sun_Breathing_Damage</damageType>
+            <armorPenetration>0.52</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.19</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>3</stunDuration>
+            <effectRadius>2.4</effectRadius>
+            <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>720</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.9</rangeMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>22</damageAmount>
+            <damageType>Sun_Breathing_Damage</damageType>
+            <armorPenetration>0.65</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.24</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>4</stunDuration>
+            <effectRadius>3</effectRadius>
+            <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>2.2</rangeMultiplier>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>28</damageAmount>
+            <damageType>Sun_Breathing_Damage</damageType>
+            <armorPenetration>0.8</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.3</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>5</stunDuration>
+            <effectRadius>4</effectRadius>
+            <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

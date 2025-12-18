@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
   <TattooDef>
-    <defName>Face_Tiger1</defName>
-    <label>tiger</label>
+    <defName>Face_Tanjiro</defName>
+    <label>Tanjiro Breathing Mark</label>
     <texPath>Tattoo/Test_Mark/TestMark</texPath>
     <tattooType>Face</tattooType>
     <category>Tribal</category>
-    <styleTags>
-      <li>TattooFaceTribal</li>
-    </styleTags>
+  </TattooDef>
+  <TattooDef>
+    <defName>Face_Sanemi</defName>
+    <label>Sanemi Breathing Mark</label>
+    <texPath>Tattoo/Mark_ShinazugawaSanemi/normal</texPath>
+    <tattooType>Face</tattooType>
+    <category>Tribal</category>
+  </TattooDef>
+  <TattooDef>
+    <defName>Face_Muichiro</defName>
+    <label>Muichiro Breathing Mark</label>
+    <texPath>Tattoo/Mark_TokitoMuichiro/normal</texPath>
+    <tattooType>Face</tattooType>
+    <category>Tribal</category>
+  </TattooDef>
+  <TattooDef>
+    <defName>Face_BreathingMark</defName>
+    <label>Breathing Mark</label>
+    <texPath>Tattoo/Face_BreathingMark/Face_Tattoo1</texPath>
+    <tattooType>Face</tattooType>
+    <category>Tribal</category>
+  </TattooDef>
+  <TattooDef>
+    <defName>Face_Giyu</defName>
+    <label>Giyu Breathing Mark</label>
+    <texPath>Tattoo/Mark_TomiokaGiyu/normal</texPath>
+    <tattooType>Face</tattooType>
+    <category>Tribal</category>
   </TattooDef>
 </Defs>

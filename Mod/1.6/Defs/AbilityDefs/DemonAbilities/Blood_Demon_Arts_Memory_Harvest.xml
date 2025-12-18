@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Memory_Harvest</defName>
     <label>Blood Demon Arts: Memory Harvest</label>
@@ -31,7 +30,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
         <dreamEffectType>MemoryExtraction</dreamEffectType>
-        <effectSeverity>0.3</effectSeverity>
+        <effectSeverity>0.25</effectSeverity>
         <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
         <showMessage>true</showMessage>
       </li>
@@ -39,16 +38,24 @@
 
     <levels>
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that dives into sleeping targets' dreams to extract information.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>1.0</cooldownMultiplier>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>A blood demon art that dives into sleeping targets' dreams to extract information. Range: 3 tiles. Basic memory reading.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>65</experienceRequired>
+        <description>A blood demon art that dives into sleeping targets' dreams to extract information. Range: 3.5 tiles. Improved extraction clarity.</description>
+        <resourceCostMultiplier>0.94</resourceCostMultiplier>
+        <verbProperties>
+          <range>3.5</range>
+          <warmupTime>2.8</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MemoryExtraction</dreamEffectType>
-            <effectSeverity>0.5</effectSeverity>
+            <effectSeverity>0.4</effectSeverity>
             <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
             <showMessage>true</showMessage>
           </li>
@@ -56,16 +63,18 @@
       </li>
 
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>100</experienceRequired>
-        <description>A blood demon art that dives into sleeping targets' dreams to extract information.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>A blood demon art that dives into sleeping targets' dreams to extract information. Range: 4 tiles. LevelTwo memory reading.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <verbProperties>
+          <range>4</range>
+          <warmupTime>2.6</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MemoryExtraction</dreamEffectType>
-            <effectSeverity>0.7</effectSeverity>
+            <effectSeverity>0.55</effectSeverity>
             <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
             <showMessage>true</showMessage>
           </li>
@@ -73,16 +82,18 @@
       </li>
 
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>200</experienceRequired>
-        <description>A blood demon art that dives into sleeping targets' dreams to extract information.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.7</cooldownMultiplier>
-        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>270</experienceRequired>
+        <description>A blood demon art that dives into sleeping targets' dreams to extract information. Range: 4.5 tiles. Advanced memory extraction.</description>
+        <resourceCostMultiplier>0.86</resourceCostMultiplier>
+        <verbProperties>
+          <range>5</range>
+          <warmupTime>2.4</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MemoryExtraction</dreamEffectType>
-            <effectSeverity>0.9</effectSeverity>
+            <effectSeverity>0.75</effectSeverity>
             <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
             <showMessage>true</showMessage>
           </li>
@@ -90,16 +101,37 @@
       </li>
 
       <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>350</experienceRequired>
-        <description>A blood demon art that dives into sleeping targets' dreams to extract information.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.6</cooldownMultiplier>
-        <resourceCostMultiplier>0.75</resourceCostMultiplier>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>420</experienceRequired>
+        <description>A blood demon art that dives into sleeping targets' dreams to extract information. Range: 6 tiles. Deep memory diving.</description>
+        <resourceCostMultiplier>0.82</resourceCostMultiplier>
+        <verbProperties>
+          <range>6</range>
+          <warmupTime>2.2</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MemoryExtraction</dreamEffectType>
-            <effectSeverity>1.2</effectSeverity>
+            <effectSeverity>0.95</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>650</experienceRequired>
+        <description>A blood demon art that dives into sleeping targets' dreams to extract information. Range: 6.5 tiles. Perfect memory extraction - no secret is safe.</description>
+        <resourceCostMultiplier>0.78</resourceCostMultiplier>
+        <verbProperties>
+          <range>7</range>
+          <warmupTime>2.0</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>1.25</effectSeverity>
             <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
             <showMessage>true</showMessage>
           </li>

@@ -38,9 +38,9 @@ namespace AnimeArsenal
                 string text = "";
                 try
                 {
-                   
+
                     float baseBlood = BloodDemonArtsGene.Value;
-                    float totalBlood = baseBlood; 
+                    float totalBlood = baseBlood;
                     float maxBlood = BloodDemonArtsGene.pawn.GetStatValue(BloodDemonArtsGene.Def.maxStat);
 
                     text = string.Format("{0}: {1} / {2}",
@@ -79,6 +79,46 @@ namespace AnimeArsenal
                 {
 
                 }
+
+                // ADD SUNLIGHT INFORMATION
+                try
+                {
+                    var map = BloodDemonArtsGene.pawn.Map;
+                    if (map != null)
+                    {
+                        var sunlightComp = map.GetComponent<MapComponent_SunlightDamage>();
+                        if (sunlightComp != null)
+                        {
+                            text += "\n\n" + "Sunlight Status".Colorize(ColoredText.TipSectionTitleColor);
+
+                            float tolerancePercent = sunlightComp.GetSunTolerancePercentage(BloodDemonArtsGene.pawn);
+                            float damagePercent = sunlightComp.GetSunlightDamagePercentage(BloodDemonArtsGene.pawn);
+
+                            // Color code tolerance based on how much is left
+                            Color toleranceColor = tolerancePercent > 50f ? Color.green :
+                                                   tolerancePercent > 20f ? Color.yellow :
+                                                   Color.red;
+
+                            text += string.Format("\nSun Tolerance: {0}",
+                                tolerancePercent.ToString("F1").Colorize(toleranceColor) + "%");
+
+                            if (damagePercent > 0)
+                            {
+                                Color damageColor = damagePercent < 50f ? Color.yellow : Color.red;
+                                text += string.Format("\nSun Damage: {0}",
+                                    damagePercent.ToString("F1").Colorize(damageColor) + "%");
+                            }
+
+                            // Show armor coverage
+                            float coverage = sunlightComp.GetArmorCoverage(BloodDemonArtsGene.pawn);
+                            bool hasHeadCover = sunlightComp.GetHeadCoverage(BloodDemonArtsGene.pawn);
+
+                            text += string.Format("\nBody Coverage: {0:P0}", coverage);
+                            text += string.Format("\nHead: {0}", hasHeadCover ? "Protected".Colorize(Color.green) : "EXPOSED".Colorize(Color.red));
+                        }
+                    }
+                }
+                catch { }
 
                 try
                 {

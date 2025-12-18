@@ -8,14 +8,12 @@
     <iconPath>UI/Abilities/DemonAbilityWeb</iconPath>
     <displayOrder>100</displayOrder>
 
-
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
     <hostile>true</hostile>
     <aiCanUse>true</aiCanUse>
     <targetRequired>true</targetRequired>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
-
 
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
@@ -33,7 +31,6 @@
       </targetParams>
     </verbProperties>
 
-
     <comps>
       <li Class="AnimeArsenal.CompProperties_Cleave">
         <NumberOfCuts>3</NumberOfCuts>
@@ -49,94 +46,128 @@
     </comps>
 
     <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A blood demon art that creates web slashes in an area. Range: 20 tiles. Basic web formation.</description>
+      </li>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
-        <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>1.0</cooldownMultiplier>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <description>A blood demon art that creates web slashes in an area. Range: 21 tiles. More cuts, sharper threads.</description>
+        <resourceCostMultiplier>1.03</resourceCostMultiplier>
+        <verbProperties>
+          <range>21</range>
+          <warmupTime>0.48</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_Cleave">
             <NumberOfCuts>5</NumberOfCuts>
             <BaseDamage>5</BaseDamage>
-            <TicksBetweenCuts>15</TicksBetweenCuts>
+            <TicksBetweenCuts>18</TicksBetweenCuts>
             <DamageDef>Cut</DamageDef>
             <ScaleStat>MeleeDamageFactor</ScaleStat>
             <CleaveDamageEffecter>AA_CleaveDamageEffect</CleaveDamageEffecter>
-            <radius>8</radius>
+            <radius>8.5</radius>
             <maxTargets>5</maxTargets>
-            <range>20</range>
+            <range>21</range>
           </li>
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>75</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.9</cooldownMultiplier>
-        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <description>A blood demon art that creates web slashes in an area. Range: 22 tiles. Denser web pattern.</description>
+        <resourceCostMultiplier>1.06</resourceCostMultiplier>
+        <verbProperties>
+          <range>22</range>
+          <warmupTime>0.46</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_Cleave">
-            <NumberOfCuts>8</NumberOfCuts>
-            <BaseDamage>8</BaseDamage>
-            <TicksBetweenCuts>12</TicksBetweenCuts>
+            <NumberOfCuts>7</NumberOfCuts>
+            <BaseDamage>7</BaseDamage>
+            <TicksBetweenCuts>15</TicksBetweenCuts>
             <DamageDef>Cut</DamageDef>
             <ScaleStat>MeleeDamageFactor</ScaleStat>
             <CleaveDamageEffecter>AA_CleaveDamageEffect</CleaveDamageEffecter>
             <radius>9</radius>
             <maxTargets>6</maxTargets>
-            <range>20</range>
+            <range>22</range>
           </li>
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>200</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.8</cooldownMultiplier>
-        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <description>A blood demon art that creates web slashes in an area. Range: 24 tiles. Rapid-fire web slashes.</description>
+        <resourceCostMultiplier>1.09</resourceCostMultiplier>
+        <verbProperties>
+          <range>24</range>
+          <warmupTime>0.44</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_Cleave">
-            <NumberOfCuts>12</NumberOfCuts>
-            <BaseDamage>12</BaseDamage>
-            <TicksBetweenCuts>10</TicksBetweenCuts>
+            <NumberOfCuts>10</NumberOfCuts>
+            <BaseDamage>10</BaseDamage>
+            <TicksBetweenCuts>12</TicksBetweenCuts>
             <DamageDef>Cut</DamageDef>
             <ScaleStat>MeleeDamageFactor</ScaleStat>
             <CleaveDamageEffecter>AA_CleaveDamageEffect</CleaveDamageEffecter>
             <radius>10</radius>
             <maxTargets>7</maxTargets>
-            <range>20</range>
+            <range>24</range>
           </li>
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>350</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.7</cooldownMultiplier>
-        <resourceCostMultiplier>0.85</resourceCostMultiplier>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <description>A blood demon art that creates web slashes in an area. Range: 26 tiles. Devastating web cascade.</description>
+        <resourceCostMultiplier>1.12</resourceCostMultiplier>
+        <verbProperties>
+          <range>26</range>
+          <warmupTime>0.42</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_Cleave">
-            <NumberOfCuts>18</NumberOfCuts>
-            <BaseDamage>18</BaseDamage>
+            <NumberOfCuts>14</NumberOfCuts>
+            <BaseDamage>14</BaseDamage>
+            <TicksBetweenCuts>10</TicksBetweenCuts>
+            <DamageDef>Cut</DamageDef>
+            <ScaleStat>MeleeDamageFactor</ScaleStat>
+            <CleaveDamageEffecter>AA_CleaveDamageEffect</CleaveDamageEffecter>
+            <radius>11</radius>
+            <maxTargets>8</maxTargets>
+            <range>26</range>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>A blood demon art that creates web slashes in an area. Range: 29 tiles. Perfect web mastery - a storm of razor threads.</description>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <verbProperties>
+          <range>29</range>
+          <warmupTime>0.4</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>20</NumberOfCuts>
+            <BaseDamage>20</BaseDamage>
             <TicksBetweenCuts>8</TicksBetweenCuts>
             <DamageDef>Cut</DamageDef>
             <ScaleStat>MeleeDamageFactor</ScaleStat>
             <CleaveDamageEffecter>AA_CleaveDamageEffect</CleaveDamageEffecter>
             <radius>12</radius>
-            <maxTargets>8</maxTargets>
-            <range>20</range>
+            <maxTargets>10</maxTargets>
+            <range>29</range>
           </li>
         </levelComps>
       </li>

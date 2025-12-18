@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <Talented.TalentTreeSkinDef>
+    <defName>BeastBreathingTreeSkin</defName>
+    <label>Beast Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/BeastBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>FlameBreathingTreeSkin</defName>
+    <label>Flame Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/FlameBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>FlowerBreathingTreeSkin</defName>
+    <label>Flower Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/FlowerBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+
+  <Talented.TalentTreeSkinDef>
+    <defName>BreathingPotentialTreeSkin</defName>
+    <label>Breathing Potential Tree Skin</label>
+    <description>Optimized spacing for Breathing Potential talent tree</description>
+    <backgroundTexturePath>Things/BreathingPotBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+    <nodeSpacing>130</nodeSpacing>
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>WindBreathingTreeSkin</defName>
+    <label>Wind Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/WindBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>WaterBreathingTreeSkin</defName>
+    <label>Water Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/WaterBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>ThunderBreathingTreeSkin</defName>
+    <label>Thunder Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/ThunderBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>SunBreathingTreeSkin</defName>
+    <label>Sun Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/SunBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>StoneBreathingTreeSkin</defName>
+    <label>Stone Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/StoneBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>SoundBreathingTreeSkin</defName>
+    <label>Sound Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/SoundBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>SerpentBreathingTreeSkin</defName>
+    <label>Serpent Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/SerpentBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>MoonBreathingTreeSkin</defName>
+    <label>Moon Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/MoonBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>MistBreathingTreeSkin</defName>
+    <label>Mist Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/MistBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>LoveBreathingTreeSkin</defName>
+    <label>Love Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/LoveBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>InsectBreathingTreeSkin</defName>
+    <label>Insect Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/InsectBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>FrostBreathingTreeSkin</defName>
+    <label>Frost Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/FrostBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>ForestBreathingTreeSkin</defName>
+    <label>Forest Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/ForestBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+  <Talented.TalentTreeSkinDef>
+    <defName>DemonBreathingTreeSkin</defName>
+    <label>Demon Breathing Tree skin</label>
+    <description>Default visual style for upgrade trees</description>
+
+    <backgroundTexturePath>Things/DemonBackground</backgroundTexturePath>
+    <backgroundColor>(1, 1, 1)</backgroundColor>
+    <backgroundScaleMode>StretchToFill</backgroundScaleMode>
+    <windowMargin>0</windowMargin>
+    <treeListbackgroundScaleMode>ScaleToFit</treeListbackgroundScaleMode>
+
+    <nodeSpacing>20</nodeSpacing>
+
+    <connectionTexturePath>UI/Tree/connection_lineglow</connectionTexturePath>
+    <connectionThickness>2</connectionThickness>
+    <showConnectionArrows>true</showConnectionArrows>
+    <arrowSize>10</arrowSize>
+
+    <unlockedNodeColor>(0.2, 0.8, 0.2)</unlockedNodeColor>
+    <availableNodeColor>(0.5, 0.5, 0.5)</availableNodeColor>
+    <lockedNodeColor>(0.4, 0.4, 0.4)</lockedNodeColor>
+    <pathSelectedColor>(1, 1, 0)</pathSelectedColor>
+    <pathExcludedColor>(1, 0, 0)</pathExcludedColor>
+    <pathAvailableColor>(1, 1, 1)</pathAvailableColor>
+
+    <unlockedConnectionColor>(0.2, 0.8, 0.2, 0.8)</unlockedConnectionColor>
+    <activeConnectionColor>(0.8, 0.8, 0.2, 0.6)</activeConnectionColor>
+    <inactiveConnectionColor>(0.5, 0.5, 0.5, 0.3)</inactiveConnectionColor>
+
+    <labelOffset>-5</labelOffset>
+    <pathLabelOffset>25</pathLabelOffset>
+    <labelFont>Medium</labelFont>
+    <labelColor>(1, 1, 1)</labelColor>
+  </Talented.TalentTreeSkinDef>
+
+
+</Defs>

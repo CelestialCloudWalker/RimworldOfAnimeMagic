@@ -165,7 +165,13 @@ namespace AnimeArsenal
         {
             var caster = parent.pawn;
 
-            
+            // FIX: Add XP tracking for humanlike pawns
+            if (target.RaceProps.Humanlike && BloodGene != null)
+            {
+                BloodGene.AddPawnEaten();
+                Log.Message($"[AnimeArsenal] {caster.LabelShort} consumed {target.LabelShort} via ability - XP granted");
+            }
+
             if (!target.Dead && Props.instantKillChance > 0f && Rand.Range(0f, 1f) <= Props.instantKillChance)
             {
                 DevourCompletely(target, corpse);
@@ -176,7 +182,6 @@ namespace AnimeArsenal
             float resource = GetResourceGain(target, corpse);
             float nutrition = GetNutritionGain(target, corpse);
 
-            
             var bloodLoss = caster.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
             if (bloodLoss != null)
             {
@@ -185,7 +190,6 @@ namespace AnimeArsenal
                     caster.health.RemoveHediff(bloodLoss);
             }
 
-            
             var injuries = caster.health.hediffSet.hediffs
                 .OfType<Hediff_Injury>()
                 .Where(x => x.Severity > 0)
@@ -205,23 +209,13 @@ namespace AnimeArsenal
                     injury.PostRemoved();
             }
 
-            
             if (BloodGene != null)
                 BloodGene.Value = Mathf.Min(BloodGene.Max, BloodGene.Value + Props.resourceRestore);
 
-            
             FeedCaster(caster, nutrition);
-
-            
             TryApplyHediffs(caster, target);
-
-            
             MakeEffects(corpse?.Position ?? target.Position, corpse?.Map ?? target.Map);
-
-            
             ProcessTarget(target, corpse);
-
-            
             HandleThoughts(caster, target, corpse != null);
         }
 
@@ -233,6 +227,13 @@ namespace AnimeArsenal
 
             Messages.Message($"{caster.LabelShort} devours {target.LabelShort} completely!",
                 caster, MessageTypeDefOf.NeutralEvent, false);
+
+            // FIX: Add XP tracking for instant kill devour
+            if (target.RaceProps.Humanlike && BloodGene != null)
+            {
+                BloodGene.AddPawnEaten();
+                Log.Message($"[AnimeArsenal] {caster.LabelShort} devoured {target.LabelShort} completely - XP granted");
+            }
 
             var killDmg = new DamageInfo(DamageDefOf.Bite, target.MaxHitPoints * 2f, 999f, -1f, caster, null, null, DamageInfo.SourceCategory.ThingOrUnknown);
             target.TakeDamage(killDmg);
@@ -259,11 +260,15 @@ namespace AnimeArsenal
             FeedCaster(caster, nutrition);
             MakeEffects(target.Position, target.Map);
 
+            // FIX: Ensure corpse is properly removed
             if (target.Dead)
             {
                 var newCorpse = target.Corpse;
                 if (newCorpse != null && !newCorpse.Destroyed)
-                    newCorpse.Destroy();
+                {
+                    newCorpse.Destroy(DestroyMode.Vanish);
+                    Log.Message($"[AnimeArsenal] Destroyed corpse of {target.LabelShort} after devouring");
+                }
             }
 
             HandleThoughts(caster, target, false);
@@ -363,16 +368,23 @@ namespace AnimeArsenal
 
         private void ProcessTarget(Pawn target, Corpse corpse = null)
         {
+            // FIX: Improved corpse destruction with explicit DestroyMode
             if (corpse != null)
             {
                 if (!corpse.Destroyed)
-                    corpse.Destroy();
+                {
+                    corpse.Destroy(DestroyMode.Vanish);
+                    Log.Message($"[AnimeArsenal] Destroyed corpse directly via ability");
+                }
             }
             else if (target.Dead)
             {
                 var targetCorpse = target.Corpse;
                 if (targetCorpse != null && !targetCorpse.Destroyed)
-                    targetCorpse.Destroy();
+                {
+                    targetCorpse.Destroy(DestroyMode.Vanish);
+                    Log.Message($"[AnimeArsenal] Destroyed target's corpse after consumption");
+                }
             }
             else
             {
@@ -388,9 +400,13 @@ namespace AnimeArsenal
                 }
                 else
                 {
+                    // FIX: Also destroy corpse if target died from drain damage
                     var newCorpse = target.Corpse;
                     if (newCorpse != null && !newCorpse.Destroyed)
-                        newCorpse.Destroy();
+                    {
+                        newCorpse.Destroy(DestroyMode.Vanish);
+                        Log.Message($"[AnimeArsenal] Destroyed corpse after draining killed target");
+                    }
                 }
             }
         }

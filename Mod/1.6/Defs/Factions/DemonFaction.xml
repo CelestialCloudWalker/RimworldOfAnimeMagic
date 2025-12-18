@@ -22,19 +22,11 @@
     </backstoryFilters>
     <hidden>false</hidden>
     <autoFlee>false</autoFlee>
-    <apparelStuffFilter>
-      <thingDefs>
-        <li>Synthread</li>
-        <li>Hyperweave</li>
-        <li>Plasteel</li>
-      </thingDefs>
-    </apparelStuffFilter>
     <allowedCultures><li>AA_DemonCulture</li></allowedCultures>
     <disallowedMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
     </disallowedMemes>
     <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
-
 
     <raidLootMaker>AA_DemonRaidLootMaker</raidLootMaker>
     <raidLootValueFromPointsCurve>
@@ -64,12 +56,11 @@
       <li>(0.7, 0.0, 0.2)</li>
     </colorSpectrum>
 
-
     <pawnGroupMakers>
+
       <li>
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
-        <maxTotalPoints>10000</maxTotalPoints>
         <options>
           <AA_FletclingDemonRaider>10</AA_FletclingDemonRaider>
           <AA_FletclingDemonWarrior>8</AA_FletclingDemonWarrior>
@@ -77,10 +68,10 @@
           <AA_FletclingDemonBoss>3</AA_FletclingDemonBoss>
         </options>
       </li>
+
       <li>
         <kindDef>Combat</kindDef>
         <commonality>50</commonality>
-        <maxTotalPoints>10000</maxTotalPoints>
         <options>
           <AA_LowerMoon6Demon>5</AA_LowerMoon6Demon>
           <AA_LowerMoon5Demon>4</AA_LowerMoon5Demon>
@@ -90,10 +81,10 @@
           <AA_LowerMoon1Demon>1</AA_LowerMoon1Demon>
         </options>
       </li>
+
       <li>
         <kindDef>Combat</kindDef>
         <commonality>25</commonality>
-        <maxTotalPoints>10000</maxTotalPoints>
         <options>
           <AA_UpperMoon6Demon>3</AA_UpperMoon6Demon>
           <AA_UpperMoon5Demon>2</AA_UpperMoon5Demon>
@@ -103,10 +94,10 @@
           <AA_UpperMoon1Demon>1</AA_UpperMoon1Demon>
         </options>
       </li>
+
       <li>
         <kindDef>Combat</kindDef>
         <commonality>5</commonality>
-        <maxTotalPoints>20000</maxTotalPoints>
         <options>
           <AA_DemonKing>1</AA_DemonKing>
         </options>
@@ -118,13 +109,27 @@
     <permanentEnemyToEveryoneExcept>
       <li>AA_Twelve_Demon_Moons</li>
     </permanentEnemyToEveryoneExcept>
-    <canSiege>true</canSiege>
-    <canStageAttacks>true</canStageAttacks>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
     <canUseAvoidGrid>true</canUseAvoidGrid>
-    <earliestRaidDays>5</earliestRaidDays>
+
+
+    <disallowedRaidStrategies>
+      <li>Siege</li>
+      <li>ImmediateAttackSmart</li>
+      <li>ImmediateAttackSappers</li>
+      <li>StageThenAttack</li>
+    </disallowedRaidStrategies>
+
+
+    <arrivalModeWhitelist>
+      <li>EdgeWalkIn</li>
+    </arrivalModeWhitelist>
+
+    
     <raidCommonalityFromPointsCurve>
       <points>
-        <li>(0, 0)</li>
+        <li>(0, 1)</li>
         <li>(500, 1)</li>
         <li>(1400, 2)</li>
         <li>(2800, 3)</li>
@@ -135,6 +140,17 @@
         <li>(100000, 6)</li>
       </points>
     </raidCommonalityFromPointsCurve>
+
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0, 35)</li>
+        <li>(700, 150)</li>
+        <li>(2000, 300)</li>
+        <li>(5000, 500)</li>
+        <li>(10000, 800)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
   </FactionDef>
 
   <CultureDef>
@@ -189,4 +205,5 @@
       </li>
     </styleItemTags>
   </CultureDef>
+
 </Defs>

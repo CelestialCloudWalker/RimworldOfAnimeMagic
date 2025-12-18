@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Water_Breathing_Strike</defName>
+    <label>Water Breathing: Strike</label>
+    <description>A technique that dashes to a target and strikes them.</description>
+    <iconPath>UI/Abilities/AbilityDash</iconPath>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+    <requiredGeneDefName>Gene_WaterBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+        <damageAmount>6</damageAmount>
+        <damageType>Water_Breathing_Damage</damageType>
+        <armorPenetration>0.25</armorPenetration>
+        <additionalDamageFactorFromMeleeSkill>0.08</additionalDamageFactorFromMeleeSkill>
+        <stunDuration>1</stunDuration>
+        <effectRadius>0</effectRadius>
+        <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <verbProperties>
+          <range>22</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>8</damageAmount>
+            <damageType>Water_Breathing_Damage</damageType>
+            <armorPenetration>0.3</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>2</stunDuration>
+            <effectRadius>0</effectRadius>
+            <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>280</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>1.3</resourceCostMultiplier>
+        <verbProperties>
+          <range>26</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>11</damageAmount>
+            <damageType>Water_Breathing_Damage</damageType>
+            <armorPenetration>0.38</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.13</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>2</stunDuration>
+            <effectRadius>0.8</effectRadius>
+            <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>480</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <verbProperties>
+          <range>30</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>14</damageAmount>
+            <damageType>Water_Breathing_Damage</damageType>
+            <armorPenetration>0.48</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.16</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>3</stunDuration>
+            <effectRadius>2</effectRadius>
+            <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>720</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>1.75</resourceCostMultiplier>
+        <verbProperties>
+          <range>35</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>18</damageAmount>
+            <damageType>Water_Breathing_Damage</damageType>
+            <armorPenetration>0.6</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.2</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>4</stunDuration>
+            <effectRadius>2.2</effectRadius>
+            <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+        <resourceCostMultiplier>2.0</resourceCostMultiplier>
+        <verbProperties>
+          <range>40</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>23</damageAmount>
+            <damageType>Water_Breathing_Damage</damageType>
+            <armorPenetration>0.75</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.25</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>5</stunDuration>
+            <effectRadius>3.0</effectRadius>
+            <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

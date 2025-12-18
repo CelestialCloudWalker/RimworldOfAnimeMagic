@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>Sound_Heart</defName>
+    <label>Resonant Heart</label>
+    <description>Strikes echo with impact, rattling bones.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Sound_Breathing_Damage</damageType>
+        <damageValue>11</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Sound_Heart_LevelTwo</defName>
+    <label>Resonant Heart</label>
+    <description>Strikes echo with impact, rattling bones.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Sound_Breathing_Damage</damageType>
+        <damageValue>15</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Sound_Heart_LevelThree</defName>
+    <label>Resonant Heart</label>
+    <description>Strikes echo with impact, rattling bones.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Sound_Breathing_Damage</damageType>
+        <damageValue>19</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Sound_Heart_LevelFour</defName>
+    <label>Resonant Heart</label>
+    <description>Strikes echo with impact, rattling bones.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Sound_Breathing_Damage</damageType>
+        <damageValue>24</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Sound_Heart_LevelFive</defName>
+    <label>Resonant Heart</label>
+    <description>Strikes echo with impact, rattling bones.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Sound_Breathing_Damage</damageType>
+        <damageValue>30</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Sound_Heart_LevelSix</defName>
+    <label>Resonant Heart</label>
+    <description>Strikes echo with impact, rattling bones.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Sound_Breathing_Damage</damageType>
+        <damageValue>37</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

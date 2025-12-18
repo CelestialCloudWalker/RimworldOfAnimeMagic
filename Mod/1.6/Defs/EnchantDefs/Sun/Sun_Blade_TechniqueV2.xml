@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Sun_Blade_Technique</defName>
+    <label>Sun Blade Technique</label>
+    <description>A technique that allows a Sun Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Sun_Heart</enchantHediff>
+    <resourceGene>Gene_SunBreath</resourceGene>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Sun_Blade_Technique_LevelTwo</defName>
+    <label>Sun Blade Technique</label>
+    <description>A technique that allows a Sun Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Sun_Heart_LevelTwo</enchantHediff>
+    <resourceGene>Gene_SunBreath</resourceGene>
+    <ticksBetweenCost>400</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Sun_Blade_Technique_LevelThree</defName>
+    <label>Sun Blade Technique</label>
+    <description>A technique that allows a Sun Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Sun_Heart_LevelThree</enchantHediff>
+    <resourceGene>Gene_SunBreath</resourceGene>
+    <ticksBetweenCost>350</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Sun_Blade_Technique_LevelFour</defName>
+    <label>Sun Blade Technique</label>
+    <description>A technique that allows a Sun Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Sun_Heart_LevelFour</enchantHediff>
+    <resourceGene>Gene_SunBreath</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Sun_Blade_Technique_LevelFive</defName>
+    <label>Sun Blade Technique</label>
+    <description>A technique that allows a Sun Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Sun_Heart_LevelFive</enchantHediff>
+    <resourceGene>Gene_SunBreath</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Sun_Blade_Technique_LevelSix</defName>
+    <label>Sun Blade Technique</label>
+    <description>A technique that allows a Sun Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Sun_Heart_LevelSix</enchantHediff>
+    <resourceGene>Gene_SunBreath</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

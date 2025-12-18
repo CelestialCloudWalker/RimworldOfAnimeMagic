@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Hearts_Manipulation</defName>
     <label>Blood Demon Arts: Heart's Manipulation</label>
@@ -11,7 +10,6 @@
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-
 
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
@@ -29,12 +27,11 @@
       </targetParams>
     </verbProperties>
 
-
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
         <dreamEffectType>MoodManipulation</dreamEffectType>
-        <effectSeverity>0.4</effectSeverity>
-        <moodChange>10</moodChange>
+        <effectSeverity>0.3</effectSeverity>
+        <moodChange>8</moodChange>
         <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
         <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
         <showMessage>true</showMessage>
@@ -42,18 +39,25 @@
     </comps>
 
     <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic emotional manipulation with mild mood effects. Range: 4 tiles.</description>
+      </li>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
-        <experienceRequired>0</experienceRequired>
-        <description>Basic emotional manipulation with mild mood effects.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>1.0</cooldownMultiplier>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>55</experienceRequired>
+        <description>Improved emotional influence with more noticeable mood changes. Range: 5 tiles.</description>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <verbProperties>
+          <range>5</range>
+          <warmupTime>2.4</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MoodManipulation</dreamEffectType>
-            <effectSeverity>0.6</effectSeverity>
+            <effectSeverity>0.45</effectSeverity>
             <moodChange>15</moodChange>
             <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
             <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
@@ -62,19 +66,41 @@
         </levelComps>
       </li>
 
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>130</experienceRequired>
+        <description>LevelTwo emotional control with stronger mood swings and longer-lasting effects. Range: 6 tiles.</description>
+        <resourceCostMultiplier>0.92</resourceCostMultiplier>
+        <verbProperties>
+          <range>6</range>
+          <warmupTime>2.3</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>0.6</effectSeverity>
+            <moodChange>22</moodChange>
+            <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
 
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>80</experienceRequired>
-        <description>Enhanced emotional control with stronger mood swings and longer-lasting effects.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.85</cooldownMultiplier>
-        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>240</experienceRequired>
+        <description>Advanced emotional manipulation that can create intense emotional responses and behavioral changes. Range: 7.5 tiles.</description>
+        <resourceCostMultiplier>0.88</resourceCostMultiplier>
+        <verbProperties>
+          <range>7.5</range>
+          <warmupTime>2.2</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MoodManipulation</dreamEffectType>
             <effectSeverity>0.8</effectSeverity>
-            <moodChange>25</moodChange>
+            <moodChange>30</moodChange>
             <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
             <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
             <showMessage>true</showMessage>
@@ -82,39 +108,41 @@
         </levelComps>
       </li>
 
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>390</experienceRequired>
+        <description>Profound emotional manipulation that can reshape personality and loyalties. Range: 9 tiles.</description>
+        <resourceCostMultiplier>0.84</resourceCostMultiplier>
+        <verbProperties>
+          <range>9</range>
+          <warmupTime>2.1</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>1.05</effectSeverity>
+            <moodChange>40</moodChange>
+            <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
 
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>180</experienceRequired>
-        <description>Advanced emotional manipulation that can create intense emotional responses and behavioral changes.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>Perfect emotional control that can completely rewrite a target's emotional state and core personality. Range: 11 tiles.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <verbProperties>
+          <range>11</range>
+          <warmupTime>2.0</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>MoodManipulation</dreamEffectType>
-            <effectSeverity>1.0</effectSeverity>
-            <moodChange>35</moodChange>
-            <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
-            <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
-            <showMessage>true</showMessage>
-          </li>
-        </levelComps>
-      </li>
-
-
-      <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>320</experienceRequired>
-        <description>Perfect emotional control that can completely rewrite a target's emotional state and personality.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.6</cooldownMultiplier>
-        <resourceCostMultiplier>0.75</resourceCostMultiplier>
-        <levelComps>
-          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
-            <dreamEffectType>MoodManipulation</dreamEffectType>
-            <effectSeverity>1.3</effectSeverity>
-            <moodChange>50</moodChange>
+            <effectSeverity>1.35</effectSeverity>
+            <moodChange>55</moodChange>
             <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
             <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
             <showMessage>true</showMessage>

@@ -14,6 +14,7 @@ namespace AnimeArsenal
         public int ticksToResetDamage = 2500;
         public float minimumCoverageForProtection = 0.95f;
         public bool requireHeadCoverage = true;
+        public float sunTolerancePool = 15f;
     }
 
     public class MapComponent_SunlightDamage : MapComponent
@@ -21,6 +22,7 @@ namespace AnimeArsenal
         private Dictionary<int, float> accumulatedDamage = new Dictionary<int, float>();
         private Dictionary<int, int> ticksOutOfSun = new Dictionary<int, int>();
         private Dictionary<int, int> lastWarningTick = new Dictionary<int, int>();
+        private Dictionary<int, float> sunTolerance = new Dictionary<int, float>();
         private Effecter burningEffecter;
         private Effecter deathEffecter;
 
@@ -36,11 +38,27 @@ namespace AnimeArsenal
             Scribe_Collections.Look(ref accumulatedDamage, "accumulatedDamage", LookMode.Value, LookMode.Value);
             Scribe_Collections.Look(ref ticksOutOfSun, "ticksOutOfSun", LookMode.Value, LookMode.Value);
             Scribe_Collections.Look(ref lastWarningTick, "lastWarningTick", LookMode.Value, LookMode.Value);
+            Scribe_Collections.Look(ref sunTolerance, "sunTolerance", LookMode.Value, LookMode.Value);
+
+            // Initialize dictionaries if they're null after loading
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                if (accumulatedDamage == null) accumulatedDamage = new Dictionary<int, float>();
+                if (ticksOutOfSun == null) ticksOutOfSun = new Dictionary<int, int>();
+                if (lastWarningTick == null) lastWarningTick = new Dictionary<int, int>();
+                if (sunTolerance == null) sunTolerance = new Dictionary<int, float>();
+            }
         }
 
         public override void MapComponentTick()
         {
             base.MapComponentTick();
+
+            // Safety check - ensure dictionaries are initialized
+            if (sunTolerance == null) sunTolerance = new Dictionary<int, float>();
+            if (accumulatedDamage == null) accumulatedDamage = new Dictionary<int, float>();
+            if (ticksOutOfSun == null) ticksOutOfSun = new Dictionary<int, int>();
+            if (lastWarningTick == null) lastWarningTick = new Dictionary<int, int>();
 
             var vulnPawns = map.mapPawns.AllPawnsSpawned.Where(p => HasSunlightVuln(p)).ToList();
 
@@ -59,6 +77,7 @@ namespace AnimeArsenal
                 accumulatedDamage.Remove(id);
                 ticksOutOfSun.Remove(id);
                 lastWarningTick.Remove(id);
+                sunTolerance.Remove(id);
             }
         }
 
@@ -72,7 +91,19 @@ namespace AnimeArsenal
                 ticksOutOfSun.Remove(id);
                 if (Find.TickManager.TicksGame % ext.ticksBetweenDamage == 0)
                 {
-                    DoDamage(pawn);
+                    // Check if tolerance is depleted before applying damage
+                    float currentTolerance = GetSunTolerance(pawn, ext);
+
+                    if (currentTolerance <= 0)
+                    {
+                        // Tolerance depleted - now apply actual damage
+                        DoDamage(pawn);
+                    }
+                    else
+                    {
+                        // Still have tolerance - just deplete it
+                        DepleteTolerance(pawn, ext);
+                    }
                 }
             }
             else
@@ -88,7 +119,60 @@ namespace AnimeArsenal
                         lastWarningTick.Remove(id);
                         MoteMaker.ThrowText(pawn.DrawPos, map, "Sunlight damage reset", 2f);
                     }
+                    if (sunTolerance.ContainsKey(id))
+                    {
+                        sunTolerance.Remove(id);
+                        MoteMaker.ThrowText(pawn.DrawPos, map, "Sun tolerance restored", 2f);
+                    }
                     ticksOutOfSun.Remove(id);
+                }
+            }
+        }
+
+        private float GetSunTolerance(Pawn pawn, SunlightDamageExtension ext)
+        {
+            if (sunTolerance == null) sunTolerance = new Dictionary<int, float>();
+
+            int id = pawn.thingIDNumber;
+            if (!sunTolerance.ContainsKey(id))
+            {
+                // Initialize tolerance - use sunTolerancePool if available, otherwise fall back to threshold
+                float initialTolerance = ext.sunTolerancePool > 0 ? ext.sunTolerancePool : ext.damageThresholdBeforeDeath;
+                sunTolerance[id] = initialTolerance;
+
+                Log.Message($"[SunlightDamage] Initialized tolerance for {pawn.LabelShort}: {initialTolerance}");
+            }
+            return sunTolerance[id];
+        }
+
+        private void DepleteTolerance(Pawn pawn, SunlightDamageExtension ext)
+        {
+            if (sunTolerance == null) sunTolerance = new Dictionary<int, float>();
+
+            int id = pawn.thingIDNumber;
+            if (!sunTolerance.ContainsKey(id))
+            {
+                float initialTolerance = ext.sunTolerancePool > 0 ? ext.sunTolerancePool : ext.damageThresholdBeforeDeath;
+                sunTolerance[id] = initialTolerance;
+            }
+
+            sunTolerance[id] -= ext.damagePerTick;
+
+            float maxTolerance = ext.sunTolerancePool > 0 ? ext.sunTolerancePool : ext.damageThresholdBeforeDeath;
+            float tolerancePercent = (sunTolerance[id] / maxTolerance) * 100f;
+
+            if (Find.TickManager.TicksGame % 500 == 0)
+            {
+                MoteMaker.ThrowText(pawn.DrawPos, map, $"Sun tolerance: {tolerancePercent:F1}%", 2f);
+            }
+
+            // Warning when tolerance is getting low
+            if (sunTolerance[id] <= maxTolerance * 0.2f && sunTolerance[id] > 0)
+            {
+                if (!lastWarningTick.ContainsKey(id) || Find.TickManager.TicksGame - lastWarningTick[id] >= 1000)
+                {
+                    MoteMaker.ThrowText(pawn.DrawPos, map, "WARNING: Sun tolerance depleting!", 3f);
+                    lastWarningTick[id] = Find.TickManager.TicksGame;
                 }
             }
         }
@@ -243,8 +327,8 @@ namespace AnimeArsenal
 
         public float GetSunlightDamageLevel(Pawn pawn)
         {
-            if (accumulatedDamage.ContainsKey(pawn.thingIDNumber)) return accumulatedDamage[pawn.thingIDNumber];
-            return 0f;
+            if (accumulatedDamage == null || !accumulatedDamage.ContainsKey(pawn.thingIDNumber)) return 0f;
+            return accumulatedDamage[pawn.thingIDNumber];
         }
 
         public float GetSunlightDamagePercentage(Pawn pawn)
@@ -253,6 +337,17 @@ namespace AnimeArsenal
             if (ext == null) return 0f;
             float currentDamage = GetSunlightDamageLevel(pawn);
             return (currentDamage / ext.damageThresholdBeforeDeath) * 100f;
+        }
+
+        public float GetSunTolerancePercentage(Pawn pawn)
+        {
+            var ext = GetSunlightExt(pawn);
+            if (ext == null) return 100f;
+
+            float currentTolerance = GetSunTolerance(pawn, ext);
+            float maxTolerance = ext.sunTolerancePool > 0 ? ext.sunTolerancePool : ext.damageThresholdBeforeDeath;
+
+            return (currentTolerance / maxTolerance) * 100f;
         }
 
         public float GetArmorCoverage(Pawn pawn) => CalcCoverage(pawn);
@@ -271,11 +366,19 @@ namespace AnimeArsenal
             accumulatedDamage.Remove(pawn.thingIDNumber);
             ticksOutOfSun.Remove(pawn.thingIDNumber);
             lastWarningTick.Remove(pawn.thingIDNumber);
+            sunTolerance.Remove(pawn.thingIDNumber);
         }
 
         public override void FinalizeInit()
         {
             base.FinalizeInit();
+
+            // Ensure all dictionaries are initialized
+            if (accumulatedDamage == null) accumulatedDamage = new Dictionary<int, float>();
+            if (ticksOutOfSun == null) ticksOutOfSun = new Dictionary<int, int>();
+            if (lastWarningTick == null) lastWarningTick = new Dictionary<int, int>();
+            if (sunTolerance == null) sunTolerance = new Dictionary<int, float>();
+
             if (burningEffecter == null) burningEffecter = CelestialDefof.SunlightBurningEffect.Spawn();
             if (deathEffecter == null) deathEffecter = CelestialDefof.SunlightDeathEffect.Spawn();
         }

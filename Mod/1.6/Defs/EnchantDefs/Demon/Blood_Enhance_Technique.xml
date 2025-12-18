@@ -13,10 +13,10 @@
 
   
   <AnimeArsenal.EnchantDef>
-    <defName>Blood_Enhance_Technique_Enhanced</defName>
-    <label>Enhanced Blood Technique</label>
+    <defName>Blood_Enhance_Technique_LevelTwo</defName>
+    <label>LevelTwo Blood Technique</label>
     <description>An improved blood enhancement with stronger demonic energy and better efficiency.</description>
-    <enchantHediff>Blood_Enhance_Enhanced</enchantHediff>
+    <enchantHediff>Blood_Enhance_LevelTwo</enchantHediff>
     <resourceGene>BloodDemonArt</resourceGene>
     <ticksBetweenCost>400</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
@@ -24,10 +24,10 @@
 
   
   <AnimeArsenal.EnchantDef>
-    <defName>Blood_Enhance_Technique_Superior</defName>
-    <label>Superior Blood Technique</label>
-    <description>A superior blood enhancement with powerful demonic energy and high efficiency.</description>
-    <enchantHediff>Blood_Enhance_Superior</enchantHediff>
+    <defName>Blood_Enhance_Technique_LevelThree</defName>
+    <label>LevelThree Blood Technique</label>
+    <description>A LevelThree blood enhancement with powerful demonic energy and high efficiency.</description>
+    <enchantHediff>Blood_Enhance_LevelThree</enchantHediff>
     <resourceGene>BloodDemonArt</resourceGene>
     <ticksBetweenCost>350</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>

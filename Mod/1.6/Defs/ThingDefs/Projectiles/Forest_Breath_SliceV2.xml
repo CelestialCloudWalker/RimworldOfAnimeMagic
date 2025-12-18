@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Forest_Breath_Slice_Projectile</defName>
+    <label>Forest Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.5</drawSize>
+      <shaderParameters>
+        <_Color>(34, 139, 34, 255)</_Color>
+        <_brightnessMultiplier>1</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Forest_Breathing_Damage</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <ExplosionRadius>2</ExplosionRadius>
+      <stoppingPower>1.2</stoppingPower>
+      <ExplosionEffect>ForestBreathingExplosionEffect</ExplosionEffect>
+      <speed>18</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>2</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(34, 139, 34, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Nature_Projectile_Mote</TrailMote>
+        <MoteInterval>0.25</MoteInterval>
+        <MoteDuration>30</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Forest_Breath_Slice_Projectile_LevelTwo</defName>
+    <label>Forest Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.8</drawSize>
+      <shaderParameters>
+        <_Color>(50, 170, 50, 255)</_Color>
+        <_brightnessMultiplier>1.2</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Forest_Breathing_Damage</damageDef>
+      <damageAmountBase>7</damageAmountBase>
+      <armorPenetrationBase>0.25</armorPenetrationBase>
+      <ExplosionRadius>2.4</ExplosionRadius>
+      <stoppingPower>1.4</stoppingPower>
+      <ExplosionEffect>ForestBreathingExplosionEffect</ExplosionEffect>
+      <speed>21</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>3</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(50, 170, 50, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Nature_Projectile_Mote</TrailMote>
+        <MoteInterval>0.2</MoteInterval>
+        <MoteDuration>35</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Forest_Breath_Slice_Projectile_LevelThree</defName>
+    <label>Forest Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.0</drawSize>
+      <shaderParameters>
+        <_Color>(70, 200, 70, 255)</_Color>
+        <_brightnessMultiplier>1.4</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Forest_Breathing_Damage</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <armorPenetrationBase>0.32</armorPenetrationBase>
+      <ExplosionRadius>2.8</ExplosionRadius>
+      <stoppingPower>1.6</stoppingPower>
+      <ExplosionEffect>ForestBreathingExplosionEffect</ExplosionEffect>
+      <speed>24</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>4</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>22</glowRadius>
+        <glowColor>(70, 200, 70, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Nature_Projectile_Mote</TrailMote>
+        <MoteInterval>0.15</MoteInterval>
+        <MoteDuration>40</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Forest_Breath_Slice_Projectile_LevelFour</defName>
+    <label>Forest Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(100, 255, 100, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Forest_Breathing_Damage</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationBase>0.42</armorPenetrationBase>
+      <ExplosionRadius>3.4</ExplosionRadius>
+      <stoppingPower>1.9</stoppingPower>
+      <ExplosionEffect>ForestBreathingExplosionEffect</ExplosionEffect>
+      <speed>28</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>6</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(100, 255, 100, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Nature_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Forest_Breath_Slice_Projectile_LevelFive</defName>
+    <label>Forest Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(100, 255, 100, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Forest_Breathing_Damage</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <armorPenetrationBase>0.54</armorPenetrationBase>
+      <ExplosionRadius>4</ExplosionRadius>
+      <stoppingPower>2.2</stoppingPower>
+      <ExplosionEffect>ForestBreathingExplosionEffect</ExplosionEffect>
+      <speed>32</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>7</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(100, 255, 100, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Nature_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Forest_Breath_Slice_Projectile_LevelSix</defName>
+    <label>Forest Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(100, 255, 100, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Forest_Breathing_Damage</damageDef>
+      <damageAmountBase>19</damageAmountBase>
+      <armorPenetrationBase>0.7</armorPenetrationBase>
+      <ExplosionRadius>5</ExplosionRadius>
+      <stoppingPower>2.7</stoppingPower>
+      <ExplosionEffect>ForestBreathingExplosionEffect</ExplosionEffect>
+      <speed>36</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>8</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(100, 255, 100, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Nature_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

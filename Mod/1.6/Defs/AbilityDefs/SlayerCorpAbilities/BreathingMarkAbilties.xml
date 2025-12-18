@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>BreathingMarkAbilityTanjiro</defName>
+    <label>Breathing Mark Tanjiro</label>
+    <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
+    <resourceCost>15</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <statBases>
+      <Ability_Duration>40</Ability_Duration>
+    </statBases>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BreathingMarkApplyTanjiro</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+      </li>
+      <li>
+        <labelSuffix> (Mastery)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplyTanjiroMastery</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Transcendence)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplyTanjiroTranscendence</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>BreathingMarkAbilitySanemi</defName>
+    <label>Breathing Mark Sanemi</label>
+    <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
+    <resourceCost>15</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <statBases>
+      <Ability_Duration>40</Ability_Duration>
+    </statBases>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BreathingMarkApplySanemi</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+      </li>
+      <li>
+        <labelSuffix> (Mastery)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplySanemiMastery</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Transcendence)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplySanemiTranscendence</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>BreathingMarkAbilityMuichiro</defName>
+    <label>Breathing Mark Muichiro</label>
+    <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
+    <resourceCost>15</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <statBases>
+      <Ability_Duration>40</Ability_Duration>
+    </statBases>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BreathingMarkApplyMuichiro</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+      </li>
+      <li>
+        <labelSuffix> (Mastery)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplyMuichiroMastery</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Transcendence)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplyMuichiroTranscendence</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>BreathingMarkAbility</defName>
+    <label>Breathing Mark</label>
+    <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
+    <resourceCost>15</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <statBases>
+      <Ability_Duration>40</Ability_Duration>
+    </statBases>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BreathingMarkApply</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+      </li>
+      <li>
+        <labelSuffix> (Mastery)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplyMastery</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Transcendence)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplyTranscendence</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>BreathingMarkAbilityGiyu</defName>
+    <label>Breathing Mark Giyu</label>
+    <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
+    <resourceCost>15</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <statBases>
+      <Ability_Duration>40</Ability_Duration>
+    </statBases>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BreathingMarkApplyGiyu</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+      </li>
+      <li>
+        <labelSuffix> (Mastery)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplyGiyuMastery</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Transcendence)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>BreathingMarkApplyGiyuTranscendence</hediffDef>
+            <onlyApplyToSelf>true</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

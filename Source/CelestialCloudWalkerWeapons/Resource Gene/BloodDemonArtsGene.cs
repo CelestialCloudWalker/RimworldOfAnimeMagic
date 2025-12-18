@@ -31,7 +31,7 @@ namespace AnimeArsenal
         public List<int> pawnsRequiredPerRank = new List<int> { 3, 7, 15 };
         public bool canProgressThroughTalents = true;
 
-        public StatDef bloodPoolStat; 
+        public StatDef bloodPoolStat;
         public float bloodPoolBonusPerPawnEaten = 5f;
         public float bloodRestoredPerPawnEaten = 15f;
 
@@ -40,6 +40,7 @@ namespace AnimeArsenal
         public List<int> sunlightTicksBetweenDamage = new List<int> { 120, 150, 200, 300 };
         public List<int> sunlightTicksToReset = new List<int> { 2000, 3000, 4000, 6000 };
         public List<float> sunlightMinCoverage = new List<float> { 0.45f, 0.50f, 0.60f, 0.70f };
+        public List<float> sunlightTolerancePool = new List<float> { 15f, 25f, 45f, 75f };
 
         public List<float> regenHealingMultiplier = new List<float> { 1.5f, 2.2f, 3.5f, 5.0f };
         public List<int> regenTicksBetweenHealing = new List<int> { 120, 90, 70, 40 };
@@ -100,7 +101,7 @@ namespace AnimeArsenal
                 if (lastKnownMax != currentMax)
                 {
                     lastKnownMax = currentMax;
-                    
+
                     this.SetMax(currentMax);
                 }
 
@@ -148,6 +149,9 @@ namespace AnimeArsenal
                 currentRank = progressionExt.startingRank;
                 UpdateModExtensionValues();
             }
+
+            // REMOVED ForceXenotypeExtension handling - it was resetting traits
+            // The xenotype should be applied manually through Character Editor
         }
 
         public override void PostMake()
@@ -261,6 +265,7 @@ namespace AnimeArsenal
                     sunlightExt.ticksBetweenDamage = (int)GetValueAtRank(progressionExt.sunlightTicksBetweenDamage, rankIndex);
                     sunlightExt.ticksToResetDamage = (int)GetValueAtRank(progressionExt.sunlightTicksToReset, rankIndex);
                     sunlightExt.minimumCoverageForProtection = GetValueAtRank(progressionExt.sunlightMinCoverage, rankIndex);
+                    sunlightExt.sunTolerancePool = GetValueAtRank(progressionExt.sunlightTolerancePool, rankIndex);
                 }
 
                 var regenExt = def.GetModExtension<RegenerationExtension>();

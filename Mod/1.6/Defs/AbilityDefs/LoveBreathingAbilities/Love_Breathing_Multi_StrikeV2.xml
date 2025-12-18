@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Love_Breathing_Multi_Strike</defName>
+    <label>Love Breathing: Multi Strike</label>
+    <category>LoveBreathing_Ability_Catergory</category>
+    <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+    <iconPath>UI/Abilities/AbilityMultiDash</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+
+
+    <requiredGeneDefName>Gene_LoveBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>25</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>15</range>
+      <drawAimPie>true</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>4</maxJumps>
+        <ticksBetweenJumps>4</ticksBetweenJumps>
+        <jumpDistance>5</jumpDistance>
+        <targetSearchRadius>17</targetSearchRadius>
+        <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+        <jumpDamage>2~3</jumpDamage>
+        <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>4</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>20</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>3~4</jumpDamage>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>6</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>23</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>3~5</jumpDamage>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>7</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>26</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>4~6</jumpDamage>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>9</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>30</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>5~7</jumpDamage>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>11</maxJumps>
+            <ticksBetweenJumps>1</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>35</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>5~8</jumpDamage>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

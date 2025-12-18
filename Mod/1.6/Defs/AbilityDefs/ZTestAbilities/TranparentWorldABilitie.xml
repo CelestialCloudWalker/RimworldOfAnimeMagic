@@ -5,7 +5,7 @@
     <label>Transparent World</label>
     <category>BeastBreathing_Ability_Catergory</category>
     <description>Activate heightened perception to see through obstacles and enhance combat abilities.</description>
-    <iconPath>Things/Mote/SpeechSymbols/Speech</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1200</cooldownTicksRange>
     <targetRequired>false</targetRequired>
     <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
@@ -24,53 +24,53 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_GiveHediff">
-        <hediffDef>TransparentWorld_Flash</hediffDef>
+        <hediffDef>TransparentWorld_LevelOne</hediffDef>
       </li>
     </comps>
     <levels>
       <li>
-        <labelSuffix> (Flash)</labelSuffix>
+        <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
         <description>Basic heightened perception allows brief glimpses through obstacles and slight combat improvements.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_GiveHediff">
-            <hediffDef>TransparentWorld_Flash</hediffDef>
+            <hediffDef>TransparentWorld_LevelOne</hediffDef>
           </li>
         </levelComps>
       </li>
       <li>
-        <labelSuffix> (Gleam)</labelSuffix>
+        <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>200</experienceRequired>
-        <description>Enhanced perception provides clearer sight through obstacles and improved reflexes.</description>
+        <description>LevelTwo perception provides clearer sight through obstacles and improved reflexes.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_GiveHediff">
-            <hediffDef>TransparentWorld_Gleam</hediffDef>
+            <hediffDef>TransparentWorld_LevelTwo</hediffDef>
           </li>
         </levelComps>
       </li>
       <li>
-        <labelSuffix> (Mirage)</labelSuffix>
+        <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>450</experienceRequired>
         <description>Advanced perception reveals enemy weak points and dramatically improves combat prowess.</description>
         <resourceCostMultiplier>1.5</resourceCostMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_GiveHediff">
-            <hediffDef>TransparentWorld_Mirage</hediffDef>
+            <hediffDef>TransparentWorld_LevelThree</hediffDef>
           </li>
         </levelComps>
       </li>
       <li>
-        <labelSuffix> (Erelong)</labelSuffix>
+        <labelSuffix> (LevelFour)</labelSuffix>
         <experienceRequired>750</experienceRequired>
         <description>Mastered perception grants near-omniscient battlefield awareness and supernatural combat abilities.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>
         <cooldownMultiplier>0.7</cooldownMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_GiveHediff">
-            <hediffDef>TransparentWorld_Erelong</hediffDef>
+            <hediffDef>TransparentWorld_LevelFour</hediffDef>
           </li>
         </levelComps>
       </li>

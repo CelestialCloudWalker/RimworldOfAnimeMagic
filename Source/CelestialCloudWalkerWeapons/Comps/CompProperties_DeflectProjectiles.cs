@@ -7,7 +7,7 @@ namespace AnimeArsenal
 {
     public class CompProperties_DeflectProjectiles : CompProperties_AbilityEffect
     {
-        public float Radius = 5f;
+        public float radius = 5f;
         public int TicksActive = 1250;
         public int MaxShotsToReflect = 10;
         public EffecterDef effecterDef;
@@ -31,13 +31,13 @@ namespace AnimeArsenal
             var hediffDef = Props.hediffDef ?? DeflectionHediffDefOf.AnimeArsenal_DeflectionField;
             if (hediffDef == null) return;
 
-            // remove existing deflection if any
+            
             var existing = parent.pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef);
             if (existing != null)
                 parent.pawn.health.RemoveHediff(existing);
 
             var hediff = (Hediff_DeflectionField)HediffMaker.MakeHediff(hediffDef, parent.pawn);
-            hediff.Setup(Props.Radius, Props.TicksActive, Props.MaxShotsToReflect, Props.effecterDef);
+            hediff.Setup(Props.radius, Props.TicksActive, Props.MaxShotsToReflect, Props.effecterDef);
             parent.pawn.health.AddHediff(hediff);
         }
     }

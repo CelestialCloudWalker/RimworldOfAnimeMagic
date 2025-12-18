@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Serpent_Breathing_Multi_Strike</defName>
+    <label>Serpent Breathing: Multi Strike</label>
+    <category>SerpentBreathing_Ability_Catergory</category>
+    <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+    <iconPath>UI/Abilities/AbilityMultiDash</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+
+    <requiredGeneDefName>Gene_SerpentBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>25</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>15</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>4</maxJumps>
+        <ticksBetweenJumps>5</ticksBetweenJumps>
+        <jumpDistance>5</jumpDistance>
+        <targetSearchRadius>16</targetSearchRadius>
+        <jumpDamageDef>Serpent_Breathing_Damage</jumpDamageDef>
+        <jumpDamage>3~5</jumpDamage>
+        <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>5</maxJumps>
+            <ticksBetweenJumps>4</ticksBetweenJumps>
+            <jumpDistance>5</jumpDistance>
+            <targetSearchRadius>19</targetSearchRadius>
+            <jumpDamageDef>Serpent_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>4~6</jumpDamage>
+            <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>6</maxJumps>
+            <ticksBetweenJumps>4</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>22</targetSearchRadius>
+            <jumpDamageDef>Serpent_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>5~7</jumpDamage>
+            <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>7</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>25</targetSearchRadius>
+            <jumpDamageDef>Serpent_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>6~9</jumpDamage>
+            <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>8</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>29</targetSearchRadius>
+            <jumpDamageDef>Serpent_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>7~11</jumpDamage>
+            <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>10</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>34</targetSearchRadius>
+            <jumpDamageDef>Serpent_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>8~13</jumpDamage>
+            <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

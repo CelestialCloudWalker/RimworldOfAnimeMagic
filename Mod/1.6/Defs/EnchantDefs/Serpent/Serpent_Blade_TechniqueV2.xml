@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Serpent_Blade_Technique</defName>
+    <label>Serpent Blade Technique</label>
+    <description>A technique that allows a Serpent Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Serpent_Heart</enchantHediff>
+    <resourceGene>Gene_SerpentBreath</resourceGene>
+    <ticksBetweenCost>460</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Serpent_Blade_Technique_LevelTwo</defName>
+    <label>Serpent Blade Technique</label>
+    <description>A technique that allows a Serpent Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Serpent_Heart_LevelTwo</enchantHediff>
+    <resourceGene>Gene_SerpentBreath</resourceGene>
+    <ticksBetweenCost>420</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Serpent_Blade_Technique_LevelThree</defName>
+    <label>Serpent Blade Technique</label>
+    <description>A technique that allows a Serpent Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Serpent_Heart_LevelThree</enchantHediff>
+    <resourceGene>Gene_SerpentBreath</resourceGene>
+    <ticksBetweenCost>380</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Serpent_Blade_Technique_LevelFour</defName>
+    <label>Serpent Blade Technique</label>
+    <description>A technique that allows a Serpent Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Serpent_Heart_LevelFour</enchantHediff>
+    <resourceGene>Gene_SerpentBreath</resourceGene>
+    <ticksBetweenCost>340</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Serpent_Blade_Technique_LevelFive</defName>
+    <label>Serpent Blade Technique</label>
+    <description>A technique that allows a Serpent Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Serpent_Heart_LevelFive</enchantHediff>
+    <resourceGene>Gene_SerpentBreath</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>2</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Serpent_Blade_Technique_LevelSix</defName>
+    <label>Serpent Blade Technique</label>
+    <description>A technique that allows a Serpent Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Serpent_Heart_LevelSix</enchantHediff>
+    <resourceGene>Gene_SerpentBreath</resourceGene>
+    <ticksBetweenCost>260</ticksBetweenCost>
+    <resourceCostPerTick>2</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

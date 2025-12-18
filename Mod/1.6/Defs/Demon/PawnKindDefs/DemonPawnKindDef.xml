@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
   <PawnKindDef ParentName="BasePlayerPawnKind">
     <defName>AA_DemonColonist</defName>
     <label>Demon</label>
@@ -11,28 +12,233 @@
       </xenotypeChances>
     </xenotypeSet>
     <apparelRequired>
-        <li>Apparel_Duster</li>
+      <li>Apparel_Duster</li>
     </apparelRequired>
-
     <initialResistanceRange>13~21</initialResistanceRange>
   </PawnKindDef>
 
-  <PawnKindDef Name="DemonBase" ParentName="BasePlayerPawnKind" Abstract="True">
+  <PawnKindDef Name="FletchlingDemonBase" Abstract="True">
     <race>AA_DemonRace</race>
-    <defaultFactionType>Pirate</defaultFactionType>
+    <defaultFactionType>AA_Twelve_Demon_Moons</defaultFactionType>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <invNutrition>5.10</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <backstoryCryptosleepCommonality>0.02</backstoryCryptosleepCommonality>
+    <maxGenerationAge>200</maxGenerationAge>
+    <combatEnhancingDrugsChance>0.25</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>1~3</combatEnhancingDrugsCount>
+    <biocodeWeaponChance>0</biocodeWeaponChance>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+    <apparelDisallowTags>
+      <li>Apparel</li>
+    </apparelDisallowTags>
+    <initialWillRange>15~25</initialWillRange>
+    <initialResistanceRange>15~25</initialResistanceRange>
+    <inventoryOptions />
     <xenotypeSet>
       <xenotypeChances>
         <AA_DemonBloodArts_User>999</AA_DemonBloodArts_User>
       </xenotypeChances>
     </xenotypeSet>
-    <chemicalAddictionChance>0.1</chemicalAddictionChance>
-    <invNutrition>2.55</invNutrition>
-    <itemQuality>Normal</itemQuality>
-    <backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
-    <maxGenerationAge>65</maxGenerationAge>
-    <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
-    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
-    <biocodeWeaponChance>0.1</biocodeWeaponChance>
+    <apparelRequired>
+    </apparelRequired>
+    <aiAvoidCover>false</aiAvoidCover>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_FletclingDemonRaider</defName>
+    <label>Demon</label>
+    <combatPower>100</combatPower>
+    <abilities>
+      <li>Blood_Demon_Arts_Vicious_Rush</li>
+      <li>Blood_Demon_Arts_Devour</li>
+    </abilities>
+    <titleSelectOne>
+      <li>AA_Demon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_FletclingDemonWarrior</defName>
+    <label>demon</label>
+    <combatPower>140</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Blood_Demon_Arts_Graviton_Crush</li>
+      <li>Blood_Demon_Arts_Spiral_of_Torment</li>
+    </abilities>
+    <titleSelectOne>
+      <li>AA_Demon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_FletclingDemonInvader</defName>
+    <label>demon</label>
+    <combatPower>140</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Blood_Demon_Arts_DreamNeedle</li>
+      <li>Blood_Demon_Arts_Devour</li>
+    </abilities>
+    <titleSelectOne>
+      <li>AA_Demon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_FletclingDemonBoss</defName>
+    <label>Demon</label>
+    <labelPlural>Demon</labelPlural>
+    <combatPower>300</combatPower>
+    <factionLeader>true</factionLeader>
+    <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Blood_Demon_Art_Groundlash_Tentacles</li>
+      <li>Blood_Demon_Arts_Devour</li>
+    </abilities>
+    <titleSelectOne>
+      <li>AA_Demon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_LowerMoon6Demon</defName>
+    <label>Lower Moon Six</label>
+    <combatPower>800</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Blood_Demon_Art_Groundlash_Tentacles</li>
+      <li>Blood_Demon_Arts_Devour</li>
+    </abilities>
+    <titleSelectOne>
+      <li>AA_LowerMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_LowerMoon5Demon</defName>
+    <label>Lower Moon Five</label>
+    <combatPower>1000</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_LowerMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_LowerMoon4Demon</defName>
+    <label>Lower Moon Four</label>
+    <combatPower>1300</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_LowerMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_LowerMoon3Demon</defName>
+    <label>Lower Moon Three</label>
+    <combatPower>1600</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_LowerMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_LowerMoon2Demon</defName>
+    <label>Lower Moon Two</label>
+    <combatPower>2000</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_LowerMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_LowerMoon1Demon</defName>
+    <label>Lower Moon One</label>
+    <combatPower>2500</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_LowerMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_UpperMoon6Demon</defName>
+    <label>Upper Moon Six</label>
+    <combatPower>3500</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_UpperMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_UpperMoon5Demon</defName>
+    <label>Upper Moon Five</label>
+    <combatPower>4500</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_UpperMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_UpperMoon4Demon</defName>
+    <label>Upper Moon Four</label>
+    <combatPower>6000</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_UpperMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_UpperMoon3Demon</defName>
+    <label>Upper Moon Three</label>
+    <combatPower>8000</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_UpperMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_UpperMoon2Demon</defName>
+    <label>Upper Moon Two</label>
+    <combatPower>10000</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <titleSelectOne>
+      <li>AA_UpperMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_UpperMoon1Demon</defName>
+    <label>Upper Moon One</label>
+    <combatPower>12000</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <factionLeader>true</factionLeader>
+    <titleSelectOne>
+      <li>AA_UpperMoon</li>
+    </titleSelectOne>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FletchlingDemonBase">
+    <defName>AA_DemonKing</defName>
+    <label>Demon King</label>
+    <labelPlural>Demon Kings</labelPlural>
+    <combatPower>15000</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <factionLeader>true</factionLeader>
+    <titleSelectOne>
+      <li>AA_DemonKing</li>
+    </titleSelectOne>
   </PawnKindDef>
 
 </Defs>

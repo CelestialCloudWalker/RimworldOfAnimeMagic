@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Spiral_of_Torment</defName>
     <label>Blood Demon Arts: Spiral of Torment</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>A blood demon art that twists the targets’s body.</description>
+    <description>A blood demon art that twists the targets's body.</description>
     <iconPath>UI/Abilities/DemonAbilityTwist</iconPath>
     <displayOrder>150</displayOrder>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
@@ -13,13 +13,10 @@
     <aiCanUse>true</aiCanUse>
     <targetRequired>true</targetRequired>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
-
-
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>25</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
-
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <drawAimPie>true</drawAimPie>
@@ -30,81 +27,101 @@
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
-
-
     <comps>
       <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
-        <baseDamage>8</baseDamage>
+        <baseDamage>7</baseDamage>
         <maxTargets>3</maxTargets>
         <radius>4</radius>
       </li>
     </comps>
-
     <levels>
-
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that twists the targets’s body.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>1.0</cooldownMultiplier>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>A blood demon art that twists the targets's body. Range: 15 tiles. Basic body contortion.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>65</experienceRequired>
+        <description>A blood demon art that twists the targets's body. Range: 16 tiles. More forceful twisting.</description>
+        <resourceCostMultiplier>1.03</resourceCostMultiplier>
+        <verbProperties>
+          <range>16</range>
+          <warmupTime>0.95</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
-            <baseDamage>12</baseDamage>
+            <baseDamage>10</baseDamage>
+            <maxTargets>3</maxTargets>
+            <radius>5</radius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>A blood demon art that twists the targets's body. Range: 17 tiles. Affects more targets.</description>
+        <resourceCostMultiplier>1.06</resourceCostMultiplier>
+        <verbProperties>
+          <range>17</range>
+          <warmupTime>0.9</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>13</baseDamage>
             <maxTargets>4</maxTargets>
             <radius>5</radius>
           </li>
         </levelComps>
       </li>
-
-
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>100</experienceRequired>
-        <description>A blood demon art that twists the targets’s body.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.9</cooldownMultiplier>
-        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>270</experienceRequired>
+        <description>A blood demon art that twists the targets's body. Range: 18 tiles. Gruesome contortions.</description>
+        <resourceCostMultiplier>1.09</resourceCostMultiplier>
+        <verbProperties>
+          <range>18</range>
+          <warmupTime>0.85</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
-            <baseDamage>18</baseDamage>
-            <maxTargets>6</maxTargets>
-            <radius>7</radius>
+            <baseDamage>17</baseDamage>
+            <maxTargets>5</maxTargets>
+            <radius>6</radius>
           </li>
         </levelComps>
       </li>
-
-
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>250</experienceRequired>
-        <description>A blood demon art that twists the targets’s body.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.8</cooldownMultiplier>
-        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>430</experienceRequired>
+        <description>A blood demon art that twists the targets's body. Range: 19 tiles. Bone-shattering spiral.</description>
+        <resourceCostMultiplier>1.12</resourceCostMultiplier>
+        <verbProperties>
+          <range>19</range>
+          <warmupTime>0.8</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
-            <baseDamage>25</baseDamage>
-            <maxTargets>8</maxTargets>
+            <baseDamage>21</baseDamage>
+            <maxTargets>7</maxTargets>
+            <radius>7.5</radius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>670</experienceRequired>
+        <description>A blood demon art that twists the targets's body. Range: 20 tiles. Perfect spiral mastery - bodies torn asunder by overwhelming force.</description>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <verbProperties>
+          <range>20</range>
+          <warmupTime>0.75</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>28</baseDamage>
+            <maxTargets>9</maxTargets>
             <radius>9</radius>
-          </li>
-        </levelComps>
-      </li>
-
-
-      <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>400</experienceRequired>
-        <description>A blood demon art that twists the targets’s body.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.7</cooldownMultiplier>
-        <resourceCostMultiplier>0.85</resourceCostMultiplier>
-        <levelComps>
-          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
-            <baseDamage>35</baseDamage>
-            <maxTargets>12</maxTargets>
-            <radius>12</radius>
           </li>
         </levelComps>
       </li>

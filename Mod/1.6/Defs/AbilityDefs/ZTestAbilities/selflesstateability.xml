@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AnimeArsenal.TalentedLevelingAbilityDef>
-    <defName>TransparentWorldAbility24</defName>
+    <defName>AA_Selfess_State_Ability</defName>
     <label>Selfess State</label>
     <category>BeastBreathing_Ability_Catergory</category>
     <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
-    <iconPath>Things/Mote/SpeechSymbols/Speech</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1200</cooldownTicksRange>
     <targetRequired>false</targetRequired>
     <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
@@ -24,53 +24,53 @@
     </verbProperties>
     <comps>
       <li Class="AnimeArsenal.CompProperties_GiveHediff">
-        <hediffDef>AnimeArsenal_SelflessFlash</hediffDef>
+        <hediffDef>AnimeArsenal_SelflessLevelOne</hediffDef>
       </li>
     </comps>
     <levels>
       <li>
-        <labelSuffix> (Flash)</labelSuffix>
+        <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
         <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_GiveHediff">
-            <hediffDef>AnimeArsenal_SelflessFlash</hediffDef>
+            <hediffDef>AnimeArsenal_SelflessLevelOne</hediffDef>
           </li>
         </levelComps>
       </li>
       <li>
-        <labelSuffix> (Gleam)</labelSuffix>
+        <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>200</experienceRequired>
         <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_GiveHediff">
-            <hediffDef>AnimeArsenal_SelflessGleam</hediffDef>
+            <hediffDef>AnimeArsenal_SelflessLevelTwo</hediffDef>
           </li>
         </levelComps>
       </li>
       <li>
-        <labelSuffix> (Mirage)</labelSuffix>
+        <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>450</experienceRequired>
         <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
         <resourceCostMultiplier>1.5</resourceCostMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_GiveHediff">
-            <hediffDef>AnimeArsenal_SelflessMirage</hediffDef>
+            <hediffDef>AnimeArsenal_SelflessLevelThree</hediffDef>
           </li>
         </levelComps>
       </li>
       <li>
-        <labelSuffix> (Erelong)</labelSuffix>
+        <labelSuffix> (LevelFour)</labelSuffix>
         <experienceRequired>750</experienceRequired>
         <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>
         <cooldownMultiplier>0.7</cooldownMultiplier>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_GiveHediff">
-            <hediffDef>AnimeArsenal_SelflessErelong</hediffDef>
+            <hediffDef>AnimeArsenal_SelflessLevelFour</hediffDef>
           </li>
         </levelComps>
       </li>
@@ -78,7 +78,7 @@
   </AnimeArsenal.TalentedLevelingAbilityDef>
 
   <HediffDef>
-    <defName>AnimeArsenal_SelflessFlash</defName>
+    <defName>AnimeArsenal_SelflessLevelOne</defName>
     <label>Selfless State</label>
     <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
     <hediffClass>AnimeArsenal.Hediff_SelflessState</hediffClass>
@@ -117,7 +117,7 @@
   </HediffDef>
 
   <HediffDef>
-    <defName>AnimeArsenal_SelflessGleam</defName>
+    <defName>AnimeArsenal_SelflessLevelTwo</defName>
     <label>Selfless State</label>
     <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
     <hediffClass>AnimeArsenal.Hediff_SelflessState</hediffClass>
@@ -161,7 +161,7 @@
   </HediffDef>
 
   <HediffDef>
-    <defName>AnimeArsenal_SelflessMirage</defName>
+    <defName>AnimeArsenal_SelflessLevelThree</defName>
     <label>Selfless State</label>
     <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
     <hediffClass>AnimeArsenal.Hediff_SelflessState</hediffClass>
@@ -209,7 +209,7 @@
   </HediffDef>
 
   <HediffDef>
-    <defName>AnimeArsenal_SelflessErelong</defName>
+    <defName>AnimeArsenal_SelflessLevelFour</defName>
     <label>Selfless State</label>
     <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
     <hediffClass>AnimeArsenal.Hediff_SelflessState</hediffClass>

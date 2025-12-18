@@ -20,9 +20,9 @@
   </HediffDef>
   
   <HediffDef>
-    <defName>Blood_Enhance_Enhanced</defName>
-    <label>Enhanced Blood Power</label>
-    <description>Blood surges with enhanced demonic energy, increasing combat effectiveness.</description>
+    <defName>Blood_Enhance_LevelTwo</defName>
+    <label>LevelTwo Blood Power</label>
+    <description>Blood surges with LevelTwo demonic energy, increasing combat effectiveness.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
@@ -38,9 +38,9 @@
   </HediffDef>
   
   <HediffDef>
-    <defName>Blood_Enhance_Superior</defName>
-    <label>Superior Blood Mastery</label>
-    <description>Blood flows with superior demonic power, greatly enhancing all attacks.</description>
+    <defName>Blood_Enhance_LevelThree</defName>
+    <label>LevelThree Blood Mastery</label>
+    <description>Blood flows with LevelThree demonic power, greatly enhancing all attacks.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1.0, 0.0, 0.0)</defaultLabelColor>

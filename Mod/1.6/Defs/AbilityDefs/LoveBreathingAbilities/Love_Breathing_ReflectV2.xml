@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Love_Breathing_Reflect</defName>
+    <label>Love Breathing: Reflect</label>
+    <category>LoveBreathing_Ability_Catergory</category>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+    <iconPath>UI/Abilities/DeflectAbility</iconPath>
+    <targetRequired>false</targetRequired>
+
+
+    <requiredGeneDefName>Gene_LoveBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <radius>4</radius>
+        <TicksActive>900</TicksActive>
+        <MaxShotsToReflect>15</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+        <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>4</radius>
+            <TicksActive>900</TicksActive>
+            <MaxShotsToReflect>15</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>5</radius>
+            <TicksActive>1100</TicksActive>
+            <MaxShotsToReflect>20</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>5</radius>
+            <TicksActive>1350</TicksActive>
+            <MaxShotsToReflect>26</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>6</radius>
+            <TicksActive>1650</TicksActive>
+            <MaxShotsToReflect>34</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>7</radius>
+            <TicksActive>2000</TicksActive>
+            <MaxShotsToReflect>44</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1050</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>9</radius>
+            <TicksActive>2500</TicksActive>
+            <MaxShotsToReflect>60</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_LoveDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField_Love</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+
+  <HediffDef>
+    <defName>AnimeArsenal_DeflectionField_Love</defName>
+    <label>breathing deflection</label>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+    <hediffClass>AnimeArsenal.Hediff_DeflectionField</hediffClass>
+    <defaultLabelColor>(1.0, 0.7, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>1250</min>
+          <max>1250</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

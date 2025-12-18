@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Flame_Breathing_Disperse</defName>
+    <label>Flame Breathing: Disperse</label>
+    <category>FlameBreathing_Ability_Catergory</category>
+    <description>A technique that creates cutting attacks around a targeted enemy</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+
+    <requiredGeneDefName>Gene_FlameBreath</requiredGeneDefName>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>1.0</warmupTime>
+      <noiseRadius>8</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+
+    <comps>
+      <li Class="EMF.CompProperties_AbilityDamageInRadius">
+        <radius>4</radius>
+        <damageParms>
+          <damageAmount>8~12</damageAmount>
+          <damageDef>Flame_Breathing_Damage</damageDef>
+        </damageParms>
+        <friendlyFireParms>
+          <canTargetHostile>true</canTargetHostile>
+          <canTargetNeutral>true</canTargetNeutral>
+          <canTargetFriendly>false</canTargetFriendly>
+        </friendlyFireParms>
+        <explosionEffecterDef>AnimeArsenal_Flamehit2</explosionEffecterDef>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>5</radius>
+            <damageParms>
+              <damageAmount>11~16</damageAmount>
+              <damageDef>Flame_Breathing_Damage</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>5</radius>
+            <damageParms>
+              <damageAmount>14~20</damageAmount>
+              <damageDef>Flame_Breathing_Damage</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>650</experienceRequired>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>5.5</radius>
+            <damageParms>
+              <damageAmount>18~25</damageAmount>
+              <damageDef>Flame_Breathing_Damage</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>950</experienceRequired>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>6</radius>
+            <damageParms>
+              <damageAmount>22~30</damageAmount>
+              <damageDef>Flame_Breathing_Damage</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1350</experienceRequired>
+        <description>A technique that creates cutting attacks around a targeted enemy.</description>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilityDamageInRadius">
+            <radius>7</radius>
+            <damageParms>
+              <damageAmount>27~36</damageAmount>
+              <damageDef>Flame_Breathing_Damage</damageDef>
+            </damageParms>
+            <friendlyFireParms>
+              <canTargetHostile>true</canTargetHostile>
+              <canTargetNeutral>true</canTargetNeutral>
+              <canTargetFriendly>false</canTargetFriendly>
+            </friendlyFireParms>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

@@ -84,10 +84,6 @@
       <baseBodySize>1</baseBodySize>
       <baseHealthScale>3</baseHealthScale>
       <baseHungerRate>1</baseHungerRate>
-      <alwaysViolent>true</alwaysViolent>
-      <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
-      <predator>true</predator>
       <maxPreyBodySize>2.0</maxPreyBodySize>
       <foodType>CarnivoreAnimal, OmnivoreHuman</foodType>
     </race>
@@ -99,35 +95,35 @@
         <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
         <whiteXenotypeList>
         </whiteXenotypeList>
+
+        <!-- This ensures demons always spawn with the Demon xenotype (which includes BloodDemonArt gene) -->
         <xenotypeList>
           <li>AA_DemonBloodArts_User</li>
         </xenotypeList>
-        <whiteGeneList>
-          <li>BloodDemonArt</li>
-        </whiteGeneList>
 
-        <whiteTraitList>
-          <li>Cannibal</li>
-          <li>Bloodlust</li>
-          <li>Psychopath</li>
-        </whiteTraitList>
+        <!-- REMOVED whiteGeneList - it was blocking other genes like Sharingan -->
+        <!-- The xenotypeList already ensures they have BloodDemonArt -->
+
+        <!-- Traits demons can NEVER have -->
         <blackTraitList>
           <li>DislikesMen</li>
           <li>DislikesWomen</li>
           <li>Kind</li>
           <li>Delicate</li>
         </blackTraitList>
-        <onlyGetRaceRestrictedTraits>true</onlyGetRaceRestrictedTraits>
+
+        <onlyGetRaceRestrictedTraits>false</onlyGetRaceRestrictedTraits>
+
         <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
       </raceRestriction>
       <generalSettings>
+        <!-- Traits that ALL demons ALWAYS have -->
         <forcedRaceTraitEntries>
           <li>Cannibal</li>
           <li>Bloodlust</li>
           <li>Psychopath</li>
         </forcedRaceTraitEntries>
         <disallowedTraits>
-
         </disallowedTraits>
         <humanRecipeImport>true</humanRecipeImport>
         <allowHumanBios>true</allowHumanBios>

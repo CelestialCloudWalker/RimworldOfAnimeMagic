@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Dream_of_Serenity</defName>
     <label>Blood Demon Arts: Serene Dreams</label>
@@ -31,8 +30,8 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
         <dreamEffectType>PleasantDream</dreamEffectType>
-        <effectSeverity>0.4</effectSeverity>
-        <restBonus>0.3</restBonus>
+        <effectSeverity>0.35</effectSeverity>
+        <restBonus>0.25</restBonus>
         <pleasantDreamThought>PleasantDream</pleasantDreamThought>
         <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
         <showMessage>true</showMessage>
@@ -41,17 +40,25 @@
 
     <levels>
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic restorative dreams that provide mild comfort and rest.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>1.0</cooldownMultiplier>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>Basic restorative dreams that provide mild comfort and rest. Range: 5 tiles.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>40</experienceRequired>
+        <description>Gentle dreams that soothe the mind and improve rest quality. Range: 6 tiles.</description>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <verbProperties>
+          <range>6</range>
+          <warmupTime>1.9</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>PleasantDream</dreamEffectType>
-            <effectSeverity>0.6</effectSeverity>
-            <restBonus>0.5</restBonus>
+            <effectSeverity>0.5</effectSeverity>
+            <restBonus>0.4</restBonus>
             <pleasantDreamThought>PleasantDream</pleasantDreamThought>
             <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
             <showMessage>true</showMessage>
@@ -60,12 +67,35 @@
       </li>
 
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>60</experienceRequired>
-        <description>Enhanced peaceful dreams that provide significant mood and rest benefits.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>LevelTwo peaceful dreams that provide significant mood and rest benefits. Range: 7 tiles.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <verbProperties>
+          <range>7</range>
+          <warmupTime>1.8</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.65</effectSeverity>
+            <restBonus>0.55</restBonus>
+            <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>190</experienceRequired>
+        <description>Deeply restorative dreams that heal both body and mind. Range: 9 tiles.</description>
+        <resourceCostMultiplier>0.85</resourceCostMultiplier>
+        <verbProperties>
+          <range>9</range>
+          <warmupTime>1.7</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>PleasantDream</dreamEffectType>
@@ -79,12 +109,14 @@
       </li>
 
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>150</experienceRequired>
-        <description>Deeply restorative dreams that heal both body and mind.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>310</experienceRequired>
+        <description>Blissful dreams that provide profound restoration and lasting happiness. Range: 11 tiles.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <verbProperties>
+          <range>11</range>
+          <warmupTime>1.6</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>PleasantDream</dreamEffectType>
@@ -98,16 +130,18 @@
       </li>
 
       <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>275</experienceRequired>
-        <description>Perfect dream serenity that provides complete restoration and blissful peace.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.5</cooldownMultiplier>
-        <resourceCostMultiplier>0.7</resourceCostMultiplier>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>480</experienceRequired>
+        <description>Perfect dream serenity that provides complete restoration and transcendent peace. Range: 14 tiles.</description>
+        <resourceCostMultiplier>0.75</resourceCostMultiplier>
+        <verbProperties>
+          <range>14</range>
+          <warmupTime>1.5</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>PleasantDream</dreamEffectType>
-            <effectSeverity>1.2</effectSeverity>
+            <effectSeverity>1.25</effectSeverity>
             <restBonus>1.2</restBonus>
             <pleasantDreamThought>PleasantDream</pleasantDreamThought>
             <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>

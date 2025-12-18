@@ -12,7 +12,13 @@ namespace AnimeArsenal
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
             var targets = AnimeArsenalUtility.GetThingsInRange(Position, MapHeld, Props.ExplosionRadius, IsValidTarget).ToList();
-            AnimeArsenalUtility.DealDamageToThingsInRange(targets, Props.damageDef, Props.BaseDamage, Props.GetArmorPenetration(launcher));
+
+            AnimeArsenalUtility.DealDamageToThingsInRange(
+                targets,
+                Props.damageDef,
+                Props.aoeDamage,
+                Props.GetArmorPenetration(launcher)
+            );
 
             foreach (var target in targets.OfType<Pawn>().Where(p => !p.Destroyed))
             {
@@ -20,6 +26,7 @@ namespace AnimeArsenal
             }
 
             Props.ExplosionEffect?.Spawn(Position, MapHeld);
+
             base.Impact(hitThing, blockedByShield);
         }
 
@@ -27,10 +34,8 @@ namespace AnimeArsenal
         {
             if (target == this || (launcher != null && target == launcher && !Props.CanHitCaster))
                 return false;
-
             if (target.Faction != null && !target.Faction.HostileTo(launcher.Faction) && !Props.CanHitFriendly)
                 return false;
-
             return true;
         }
 
@@ -56,10 +61,10 @@ namespace AnimeArsenal
 
     public class ProjectileProperties_ImpactAOE : ProjectileProperties
     {
-        public float BaseDamage = 1f;
         public float ExplosionRadius = 10f;
         public EffecterDef ExplosionEffect;
         public bool CanHitFriendly = true;
         public bool CanHitCaster = false;
+        public float aoeDamage = 7f; 
     }
 }

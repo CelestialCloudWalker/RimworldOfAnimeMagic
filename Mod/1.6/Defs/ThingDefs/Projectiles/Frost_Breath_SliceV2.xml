@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Frost_Breath_Slice_Projectile</defName>
+    <label>Frost Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.5</drawSize>
+      <shaderParameters>
+        <_Color>(150, 200, 255, 255)</_Color>
+        <_brightnessMultiplier>1</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Frost_Breathing_Damage</damageDef>
+      <damageAmountBase>6</damageAmountBase>
+      <armorPenetrationBase>0.25</armorPenetrationBase>
+      <ExplosionRadius>2</ExplosionRadius>
+      <stoppingPower>1</stoppingPower>
+      <ExplosionEffect>FrostBreathingExplosionEffect</ExplosionEffect>
+      <speed>22</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>3</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(150, 200, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Frost_Projectile_Mote</TrailMote>
+        <MoteInterval>0.25</MoteInterval>
+        <MoteDuration>30</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Frost_Breath_Slice_Projectile_LevelTwo</defName>
+    <label>Frost Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.8</drawSize>
+      <shaderParameters>
+        <_Color>(130, 180, 255, 255)</_Color>
+        <_brightnessMultiplier>1.2</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Frost_Breathing_Damage</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <armorPenetrationBase>0.25</armorPenetrationBase>
+      <ExplosionRadius>1.8</ExplosionRadius>
+      <stoppingPower>1.2</stoppingPower>
+      <ExplosionEffect>FrostBreathingExplosionEffect</ExplosionEffect>
+      <speed>25</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>4</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(130, 180, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Frost_Projectile_Mote</TrailMote>
+        <MoteInterval>0.2</MoteInterval>
+        <MoteDuration>35</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Frost_Breath_Slice_Projectile_LevelThree</defName>
+    <label>Frost Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.0</drawSize>
+      <shaderParameters>
+        <_Color>(100, 160, 255, 255)</_Color>
+        <_brightnessMultiplier>1.4</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Frost_Breathing_Damage</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationBase>0.38</armorPenetrationBase>
+      <ExplosionRadius>2.2</ExplosionRadius>
+      <stoppingPower>1.7</stoppingPower>
+      <ExplosionEffect>FrostBreathingExplosionEffect</ExplosionEffect>
+      <speed>28</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>5</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>22</glowRadius>
+        <glowColor>(100, 160, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Frost_Projectile_Mote</TrailMote>
+        <MoteInterval>0.15</MoteInterval>
+        <MoteDuration>40</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Frost_Breath_Slice_Projectile_LevelFour</defName>
+    <label>Frost Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(80, 140, 255, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Frost_Breathing_Damage</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <armorPenetrationBase>0.48</armorPenetrationBase>
+      <ExplosionRadius>2.6</ExplosionRadius>
+      <stoppingPower>1.7</stoppingPower>
+      <ExplosionEffect>FrostBreathingExplosionEffect</ExplosionEffect>
+      <speed>32</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>6</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(80, 140, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Frost_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Frost_Breath_Slice_Projectile_LevelFive</defName>
+    <label>Frost Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(80, 140, 255, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Frost_Breathing_Damage</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <armorPenetrationBase>0.6</armorPenetrationBase>
+      <ExplosionRadius>3.2</ExplosionRadius>
+      <stoppingPower>2.0</stoppingPower>
+      <ExplosionEffect>FrostBreathingExplosionEffect</ExplosionEffect>
+      <speed>36</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>8</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(80, 140, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Frost_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Frost_Breath_Slice_Projectile_LevelSix</defName>
+    <label>Frost Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(80, 140, 255, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Frost_Breathing_Damage</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <armorPenetrationBase>0.75</armorPenetrationBase>
+      <ExplosionRadius>4.0</ExplosionRadius>
+      <stoppingPower>2.5</stoppingPower>
+      <ExplosionEffect>FrostBreathingExplosionEffect</ExplosionEffect>
+      <speed>40</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>10</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(80, 140, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Frost_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

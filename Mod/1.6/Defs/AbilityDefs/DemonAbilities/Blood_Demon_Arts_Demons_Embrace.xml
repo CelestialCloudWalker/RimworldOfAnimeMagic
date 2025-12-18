@@ -13,19 +13,14 @@
     <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
     <hostile>true</hostile>
     <aiCanUse>true</aiCanUse>
-
-
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>50</resourceCost>
     <baseExperienceGain>15</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
-
-
     <cooldownTicksRange>
       <min>300</min>
       <max>300</max>
     </cooldownTicksRange>
-
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <drawAimPie>True</drawAimPie>
@@ -37,60 +32,76 @@
         <canTargetMechs>false</canTargetMechs>
       </targetParams>
     </verbProperties>
-
-
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
     </comps>
-
     <levels>
-
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that turns a target into a demon.</description>
-        <cooldownMultiplier>1.0</cooldownMultiplier>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
-        <cumulativeEffects>false</cumulativeEffects>
+        <description>A blood demon art that turns a target into a demon. Range: 4.9 tiles. The transformation is unstable.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>60</experienceRequired>
+        <description>A blood demon art that turns a target into a demon. Range: 6 tiles. Greater control over the transformation.</description>
+        <resourceCostMultiplier>0.96</resourceCostMultiplier>
+        <verbProperties>
+          <range>6</range>
+          <warmupTime>0.95</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
         </levelComps>
       </li>
-
-
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>75</experienceRequired>
-        <description>A blood demon art that turns a target into a demon.</description>
-        <cooldownMultiplier>0.8</cooldownMultiplier>
-        <resourceCostMultiplier>0.9</resourceCostMultiplier>
-        <cumulativeEffects>false</cumulativeEffects>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>140</experienceRequired>
+        <description>A blood demon art that turns a target into a demon. Range: 6.5 tiles. The demonic essence flows more readily.</description>
+        <resourceCostMultiplier>0.92</resourceCostMultiplier>
+        <verbProperties>
+          <range>7</range>
+          <warmupTime>0.9</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
         </levelComps>
       </li>
-
-
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>200</experienceRequired>
-        <description>A blood demon art that turns a target into a demon.</description>
-        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>260</experienceRequired>
+        <description>A blood demon art that turns a target into a demon. Range: 7.5 tiles. Proficiency in demonic conversion.</description>
+        <resourceCostMultiplier>0.88</resourceCostMultiplier>
+        <verbProperties>
+          <range>8</range>
+          <warmupTime>0.85</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>420</experienceRequired>
+        <description>A blood demon art that turns a target into a demon. Range: 9 tiles. Near-mastery of the cursed art.</description>
+        <resourceCostMultiplier>0.84</resourceCostMultiplier>
+        <verbProperties>
+          <range>9</range>
+          <warmupTime>0.8</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>650</experienceRequired>
+        <description>A blood demon art that turns a target into a demon. Range: 11 tiles. Perfect mastery - transformation is swift and inevitable.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
-        <cumulativeEffects>false</cumulativeEffects>
-        <levelComps>
-          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
-        </levelComps>
-      </li>
-
-
-      <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>450</experienceRequired>
-        <description>A blood demon art that turns a target into a demon.</description>
-        <cooldownMultiplier>0.4</cooldownMultiplier>
-        <resourceCostMultiplier>0.7</resourceCostMultiplier>
-        <cumulativeEffects>false</cumulativeEffects>
+        <verbProperties>
+          <range>11</range>
+          <warmupTime>0.75</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
         </levelComps>

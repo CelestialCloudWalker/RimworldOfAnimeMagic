@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Water_Breathing_Reflect</defName>
+    <label>Water Breathing: Reflect</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+    <iconPath>UI/Abilities/DeflectAbility</iconPath>
+    <targetRequired>false</targetRequired>
+
+    <requiredGeneDefName>Gene_WaterBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <radius>4</radius>
+        <TicksActive>800</TicksActive>
+        <MaxShotsToReflect>12</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_WaterDeflect</effecterDef>
+        <hediffDef>AnimeArsenal_WaterDeflectionField</hediffDef>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>4</radius>
+            <TicksActive>800</TicksActive>
+            <MaxShotsToReflect>12</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_WaterDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_WaterDeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>4</radius>
+            <TicksActive>1000</TicksActive>
+            <MaxShotsToReflect>15</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_WaterDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_WaterDeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>5</radius>
+            <TicksActive>1200</TicksActive>
+            <MaxShotsToReflect>20</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_WaterDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_WaterDeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>6</radius>
+            <TicksActive>1500</TicksActive>
+            <MaxShotsToReflect>28</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_WaterDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_WaterDeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>0.85</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>7</radius>
+            <TicksActive>1800</TicksActive>
+            <MaxShotsToReflect>38</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_WaterDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_WaterDeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1050</experienceRequired>
+        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>8</radius>
+            <TicksActive>2200</TicksActive>
+            <MaxShotsToReflect>50</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_WaterDeflect</effecterDef>
+            <hediffDef>AnimeArsenal_WaterDeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+
+  <HediffDef>
+    <defName>AnimeArsenal_WaterDeflectionField</defName>
+    <label>breathing deflection</label>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+    <hediffClass>AnimeArsenal.Hediff_DeflectionField</hediffClass>
+    <defaultLabelColor>(0.6, 0.8, 1.0)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>800</min>
+          <max>800</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

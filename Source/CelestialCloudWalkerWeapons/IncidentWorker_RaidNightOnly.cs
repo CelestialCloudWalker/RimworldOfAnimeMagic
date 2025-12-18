@@ -62,7 +62,8 @@ namespace AnimeArsenal
                 if (raidLord != null)
                 {
                     LordJob_AssaultColonyNightRaid nightJob = new LordJob_AssaultColonyNightRaid(
-                        parms.faction, true, true, false, false, true);
+                        parms.faction, false, true, false, false, true);
+                   
                     raidLord.SetJob(nightJob);
                 }
             }
@@ -82,6 +83,13 @@ namespace AnimeArsenal
             bool sappers, bool useAvoidGridSmart, bool canSteal)
             : base(faction, canKidnap, canTimeoutOrFlee, sappers, useAvoidGridSmart, canSteal) { }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref lightCheckTick, "lightCheckTick", -1);
+            Scribe_Values.Look(ref retreatedAlready, "retreatedAlready", false);
+        }
+
         public override void LordJobTick()
         {
             base.LordJobTick();
@@ -93,7 +101,7 @@ namespace AnimeArsenal
             {
                 lightCheckTick = Find.TickManager.TicksGame;
 
-                if (lord != null && lord.Map != null)
+                if (lord != null && lord.Map != null && lord.Map.skyManager != null)
                 {
                     float glow = lord.Map.skyManager.CurSkyGlow;
                     if (glow > 0.5f)
@@ -109,6 +117,23 @@ namespace AnimeArsenal
         {
             StateGraph graph = base.CreateGraph();
 
+            LordToil_AssaultColonyCannibal assaultToil = new LordToil_AssaultColonyCannibal();
+
+            LordToil originalAssault = graph.lordToils.FirstOrDefault(t => t is LordToil_AssaultColony);
+            if (originalAssault != null)
+            {
+                int index = graph.lordToils.IndexOf(originalAssault);
+                graph.lordToils[index] = assaultToil;
+
+                foreach (var transition in graph.transitions)
+                {
+                    if (transition.target == originalAssault)
+                    {
+                        transition.target = assaultToil;
+                    }
+                }
+            }
+
             LordToil_SunriseRetreat retreatToil = new LordToil_SunriseRetreat();
             graph.AddToil(retreatToil);
 
@@ -122,6 +147,115 @@ namespace AnimeArsenal
             }
 
             return graph;
+        }
+    }
+
+    public class LordToil_AssaultColonyCannibal : LordToil_AssaultColony
+    {
+        private int checkTickInterval = 60;
+        private int lastCheckTick = -999;
+
+        public override void UpdateAllDuties()
+        {
+            base.UpdateAllDuties();
+        }
+
+        public override void LordToilTick()
+        {
+            base.LordToilTick();
+
+            if (Find.TickManager.TicksGame - lastCheckTick < checkTickInterval)
+                return;
+
+            lastCheckTick = Find.TickManager.TicksGame;
+
+            for (int i = 0; i < lord.ownedPawns.Count; i++)
+            {
+                Pawn demon = lord.ownedPawns[i];
+
+                if (demon == null || demon.Dead || demon.Downed)
+                    continue;
+
+                if (demon.mindState?.enemyTarget != null)
+                    continue;
+
+                if (demon.needs?.food != null && demon.needs.food.CurLevelPercentage < 0.8f)
+                {
+                    TryMakeDemonEat(demon);
+                }
+            }
+        }
+
+        private void TryMakeDemonEat(Pawn demon)
+        {
+            if (demon?.Map == null || demon.CurJobDef == JobDefOf.Ingest)
+                return;
+
+            Thing foodSource = FindNearestFoodSource(demon);
+
+            if (foodSource != null)
+            {
+                Job eatJob = JobMaker.MakeJob(JobDefOf.Ingest, foodSource);
+                eatJob.count = 1;
+                eatJob.playerForced = true; 
+
+                if (demon.jobs != null)
+                {
+                    demon.jobs.StopAll();
+                    demon.jobs.StartJob(eatJob, JobCondition.InterruptForced);
+                }
+            }
+        }
+
+        private Thing FindNearestFoodSource(Pawn demon)
+        {
+            if (demon?.Map == null) return null;
+
+            float maxDist = 20f;
+            Thing closestFood = null;
+            float closestDistSq = maxDist * maxDist;
+
+            foreach (Pawn pawn in demon.Map.mapPawns.AllPawnsSpawned)
+            {
+                if (pawn.Downed &&
+                    !pawn.Dead &&
+                    pawn.Faction != demon.Faction &&
+                    pawn.RaceProps.Humanlike &&
+                    FoodUtility.WillEat(demon, pawn) &&
+                    demon.CanReserveAndReach(pawn, PathEndMode.Touch, Danger.Deadly))
+                {
+                    float distSq = (pawn.Position - demon.Position).LengthHorizontalSquared;
+                    if (distSq < closestDistSq)
+                    {
+                        closestDistSq = distSq;
+                        closestFood = pawn;
+                    }
+                }
+            }
+
+            if (closestFood == null)
+            {
+                List<Thing> corpses = demon.Map.listerThings.ThingsInGroup(ThingRequestGroup.Corpse);
+                foreach (Thing thing in corpses)
+                {
+                    Corpse corpse = thing as Corpse;
+                    if (corpse != null &&
+                        corpse.InnerPawn.RaceProps.Humanlike &&
+                        !corpse.IsDessicated() &&
+                        FoodUtility.WillEat(demon, corpse) &&
+                        demon.CanReserveAndReach(corpse, PathEndMode.Touch, Danger.Deadly))
+                    {
+                        float distSq = (corpse.Position - demon.Position).LengthHorizontalSquared;
+                        if (distSq < closestDistSq)
+                        {
+                            closestDistSq = distSq;
+                            closestFood = corpse;
+                        }
+                    }
+                }
+            }
+
+            return closestFood;
         }
     }
 

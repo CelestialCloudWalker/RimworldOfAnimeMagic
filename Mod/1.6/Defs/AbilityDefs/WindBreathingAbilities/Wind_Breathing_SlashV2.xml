@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Wind_Breathing_Slash</defName>
+    <label>Wind Breathing: Slash</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>A ranged technique that sends a slash toward targets.</description>
+    <iconPath>UI/Abilities/AbilityProjectile</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <requiredGeneDefName>Gene_WindBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>21</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Wind_Breath_Slice_Projectile</projectileDef>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.05</resourceCostMultiplier>
+        <verbProperties>
+          <range>25</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Wind_Breath_Slice_Projectile_LevelTwo</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <verbProperties>
+          <range>29</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Wind_Breath_Slice_Projectile_LevelThree</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <verbProperties>
+          <range>34</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Wind_Breath_Slice_Projectile_LevelFour</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <verbProperties>
+          <range>39</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Wind_Breath_Slice_Projectile_LevelFive</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1050</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <verbProperties>
+          <range>46</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Wind_Breath_Slice_Projectile_LevelSix</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

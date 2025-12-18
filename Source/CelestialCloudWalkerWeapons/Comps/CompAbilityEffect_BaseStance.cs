@@ -14,7 +14,7 @@ namespace AnimeArsenal
     {
         protected override bool Satisfied(Pawn pawn)
         {
-            //Log.Message($"{pawn.LabelShort} Is demon {pawn.genes.GenesListForReading.Any(x => x.def == CelestialDefof.BloodDemonArt)}");
+            
             return pawn.genes.GenesListForReading.Any(x => x.def == CelestialDefof.BloodDemonArt);
         }
     }
@@ -33,7 +33,7 @@ namespace AnimeArsenal
 
         protected override bool Satisfied(Pawn pawn)
         {
-            //Log.Message($"Isdalyt {pawn.Map.skyManager.CurSkyGlow}");
+            
             return pawn.Map != null && pawn.Map.skyManager.CurSkyGlow >= lightThreshold;
         }
     }
@@ -42,7 +42,7 @@ namespace AnimeArsenal
     {
         protected override bool Satisfied(Pawn pawn)
         {
-            //Log.Message($"is roofed {pawn.Map != null && pawn.Position.Roofed(pawn.Map)}");
+            
             return pawn.Map != null && pawn.Position.Roofed(pawn.Map);
         }
     }

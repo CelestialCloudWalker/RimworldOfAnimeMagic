@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Stone_Breath_Slice_Projectile</defName>
+    <label>Stone Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.5</drawSize>
+      <shaderParameters>
+        <_Color>(128, 128, 128, 255)</_Color>
+        <_brightnessMultiplier>1</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Stone_Breathing_Damage</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+      <ExplosionRadius>1.8</ExplosionRadius>
+      <stoppingPower>2</stoppingPower>
+      <ExplosionEffect>StoneBreathingExplosionEffect</ExplosionEffect>
+      <speed>16</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>5</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(128, 128, 128, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Stone_Projectile_Mote</TrailMote>
+        <MoteInterval>0.25</MoteInterval>
+        <MoteDuration>30</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Stone_Breath_Slice_Projectile_LevelTwo</defName>
+    <label>Stone Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.7</drawSize>
+      <shaderParameters>
+        <_Color>(140, 140, 140, 255)</_Color>
+        <_brightnessMultiplier>1.1</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Stone_Breathing_Damage</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <armorPenetrationBase>0.45</armorPenetrationBase>
+      <ExplosionRadius>2.2</ExplosionRadius>
+      <stoppingPower>1.9</stoppingPower>
+      <ExplosionEffect>StoneBreathingExplosionEffect</ExplosionEffect>
+      <speed>19</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>6</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>17</glowRadius>
+        <glowColor>(140, 140, 140, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Stone_Projectile_Mote</TrailMote>
+        <MoteInterval>0.22</MoteInterval>
+        <MoteDuration>33</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Stone_Breath_Slice_Projectile_LevelThree</defName>
+    <label>Stone Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.0</drawSize>
+      <shaderParameters>
+        <_Color>(160, 160, 160, 255)</_Color>
+        <_brightnessMultiplier>1.3</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Stone_Breathing_Damage</damageDef>
+      <damageAmountBase>17</damageAmountBase>
+      <armorPenetrationBase>0.55</armorPenetrationBase>
+      <ExplosionRadius>2.7</ExplosionRadius>
+      <stoppingPower>2.4</stoppingPower>
+      <ExplosionEffect>StoneBreathingExplosionEffect</ExplosionEffect>
+      <speed>22</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>8</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(160, 160, 160, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Stone_Projectile_Mote</TrailMote>
+        <MoteInterval>0.18</MoteInterval>
+        <MoteDuration>37</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Stone_Breath_Slice_Projectile_LevelFour</defName>
+    <label>Stone Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.3</drawSize>
+      <shaderParameters>
+        <_Color>(180, 180, 180, 255)</_Color>
+        <_brightnessMultiplier>1.5</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Stone_Breathing_Damage</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <armorPenetrationBase>0.68</armorPenetrationBase>
+      <ExplosionRadius>3.3</ExplosionRadius>
+      <stoppingPower>3</stoppingPower>
+      <ExplosionEffect>StoneBreathingExplosionEffect</ExplosionEffect>
+      <speed>25</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>11</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>23</glowRadius>
+        <glowColor>(180, 180, 180, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Stone_Projectile_Mote</TrailMote>
+        <MoteInterval>0.15</MoteInterval>
+        <MoteDuration>42</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Stone_Breath_Slice_Projectile_LevelFive</defName>
+    <label>Stone Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.7</drawSize>
+      <shaderParameters>
+        <_Color>(200, 200, 200, 255)</_Color>
+        <_brightnessMultiplier>1.7</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Stone_Breathing_Damage</damageDef>
+      <damageAmountBase>28</damageAmountBase>
+      <armorPenetrationBase>0.83</armorPenetrationBase>
+      <ExplosionRadius>4</ExplosionRadius>
+      <stoppingPower>3.7</stoppingPower>
+      <ExplosionEffect>StoneBreathingExplosionEffect</ExplosionEffect>
+      <speed>28</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>14</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>26</glowRadius>
+        <glowColor>(200, 200, 200, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Stone_Projectile_Mote</TrailMote>
+        <MoteInterval>0.12</MoteInterval>
+        <MoteDuration>47</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Stone_Breath_Slice_Projectile_LevelSix</defName>
+    <label>Stone Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.0</drawSize>
+      <shaderParameters>
+        <_Color>(224, 224, 224, 255)</_Color>
+        <_brightnessMultiplier>2.0</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Stone_Breathing_Damage</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <armorPenetrationBase>1.0</armorPenetrationBase>
+      <ExplosionRadius>5</ExplosionRadius>
+      <stoppingPower>5</stoppingPower>
+      <ExplosionEffect>StoneBreathingExplosionEffect</ExplosionEffect>
+      <speed>32</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>17</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>30</glowRadius>
+        <glowColor>(224, 224, 224, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Stone_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>52</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

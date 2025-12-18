@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Blood_Demon_Arts_Abyssal_Visions</defName>
     <label>Blood Demon Arts: Abyssal Visions</label>
@@ -11,7 +10,6 @@
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-
 
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
@@ -29,12 +27,11 @@
       </targetParams>
     </verbProperties>
 
-
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
         <dreamEffectType>Nightmare</dreamEffectType>
-        <effectSeverity>0.6</effectSeverity>
-        <restPenalty>0.3</restPenalty>
+        <effectSeverity>0.5</effectSeverity>
+        <restPenalty>0.25</restPenalty>
         <nightmareThought>NightmareDream</nightmareThought>
         <nightmareHediff>NightmareTrauma</nightmareHediff>
         <showMessage>true</showMessage>
@@ -42,19 +39,26 @@
     </comps>
 
     <levels>
-
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>1.0</cooldownMultiplier>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 5 tiles. A basic but unsettling ability.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 6 tiles. Nightmares grow more vivid.</description>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <verbProperties>
+          <range>6</range>
+          <warmupTime>1.9</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>Nightmare</dreamEffectType>
-            <effectSeverity>0.8</effectSeverity>
-            <restPenalty>0.4</restPenalty>
+            <effectSeverity>0.7</effectSeverity>
+            <restPenalty>0.35</restPenalty>
             <nightmareThought>NightmareDream</nightmareThought>
             <nightmareHediff>NightmareTrauma</nightmareHediff>
             <showMessage>true</showMessage>
@@ -62,19 +66,20 @@
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>75</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 7 tiles. The visions become deeply disturbing.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <verbProperties>
+          <range>7</range>
+          <warmupTime>1.8</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>Nightmare</dreamEffectType>
-            <effectSeverity>1.0</effectSeverity>
-            <restPenalty>0.6</restPenalty>
+            <effectSeverity>0.9</effectSeverity>
+            <restPenalty>0.5</restPenalty>
             <nightmareThought>NightmareDream</nightmareThought>
             <nightmareHediff>NightmareTrauma</nightmareHediff>
             <showMessage>true</showMessage>
@@ -82,14 +87,36 @@
         </levelComps>
       </li>
 
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 9 tiles. Abyssal terrors invade the mind.</description>
+        <resourceCostMultiplier>0.85</resourceCostMultiplier>
+        <verbProperties>
+          <range>9</range>
+          <warmupTime>1.7</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>1.1</effectSeverity>
+            <restPenalty>0.65</restPenalty>
+            <nightmareThought>NightmareDream</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
 
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>175</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 11 tiles. Victims may never sleep peacefully again.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <verbProperties>
+          <range>11</range>
+          <warmupTime>1.6</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>Nightmare</dreamEffectType>
@@ -102,18 +129,19 @@
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>300</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 14 tiles. Mastery of the abyss - nightmares so horrific they shatter the psyche.</description>
         <resourceCostMultiplier>0.75</resourceCostMultiplier>
+        <verbProperties>
+          <range>14</range>
+          <warmupTime>1.5</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
             <dreamEffectType>Nightmare</dreamEffectType>
-            <effectSeverity>1.5</effectSeverity>
+            <effectSeverity>1.6</effectSeverity>
             <restPenalty>1.0</restPenalty>
             <nightmareThought>NightmareDream</nightmareThought>
             <nightmareHediff>NightmareTrauma</nightmareHediff>

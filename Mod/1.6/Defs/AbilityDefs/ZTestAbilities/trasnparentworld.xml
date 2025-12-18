@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <HediffDef>
-    <defName>TransparentWorld_Flash</defName>
+    <defName>TransparentWorld_LevelOne</defName>
     <hediffClass>AnimeArsenal.Hediff_TransparentWorld</hediffClass>
-    <label>transparent world (flash)</label>
+    <label>transparent world (Level 1)</label>
     <description>Basic heightened perception allows brief glimpses through obstacles and slight combat improvements. Occasionally reveals enemy weak points.</description>
     <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
@@ -40,10 +40,10 @@
   </HediffDef>
 
   <HediffDef>
-    <defName>TransparentWorld_Gleam</defName>
+    <defName>TransparentWorld_LevelTwo</defName>
     <hediffClass>AnimeArsenal.Hediff_TransparentWorld</hediffClass>
-    <label>transparent world (gleam)</label>
-    <description>Enhanced perception provides clearer sight through obstacles and improved reflexes. Can more reliably target enemy vital points.</description>
+    <label>transparent world (Level 2)</label>
+    <description>LevelTwo perception provides clearer sight through obstacles and improved reflexes. Can more reliably target enemy vital points.</description>
     <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <stages>
@@ -79,9 +79,9 @@
   </HediffDef>
 
   <HediffDef>
-    <defName>TransparentWorld_Mirage</defName>
+    <defName>TransparentWorld_LevelThree</defName>
     <hediffClass>AnimeArsenal.Hediff_TransparentWorld</hediffClass>
-    <label>transparent world (mirage)</label>
+    <label>transparent world (Level 3)</label>
     <description>Advanced perception reveals enemy weak points and dramatically improves combat prowess. Can consistently target vital organs.</description>
     <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
@@ -119,9 +119,9 @@
   </HediffDef>
 
   <HediffDef>
-    <defName>TransparentWorld_Erelong</defName>
+    <defName>TransparentWorld_LevelFour</defName>
     <hediffClass>AnimeArsenal.Hediff_TransparentWorld</hediffClass>
-    <label>transparent world (erelong)</label>
+    <label>transparent world (LevelFour)</label>
     <description>Mastered perception grants near-omniscient battlefield awareness and supernatural combat abilities. Can precisely target any vital organ at will.</description>
     <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>

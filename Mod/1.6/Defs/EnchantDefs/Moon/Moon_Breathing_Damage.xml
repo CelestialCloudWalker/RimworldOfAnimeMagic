@@ -5,7 +5,7 @@
     <label>Moon Breathing</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was incinerated by blazing heat</deathMessage>
+    <deathMessage>{0} was scorched by the Moon’s glow</deathMessage>
     <hediff>RelfectionOfMoon</hediff>
     <hediffSkin>RelfectionOfMoon</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
@@ -18,7 +18,7 @@
     <defName>RelfectionOfMoon</defName>
     <label>Reflection of Moon</label>
     <labelNoun>burns</labelNoun>
-    <description>Severe burns from scorching heat.</description>
+    <description>Severe burns from the Moon's glow.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <severityPerDayTended>-0.75</severityPerDayTended>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Flower_Breath_Slice_Projectile</defName>
+    <label>Flower Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.5</drawSize>
+      <shaderParameters>
+        <_Color>(230, 128, 179, 255)</_Color>
+        <_brightnessMultiplier>1</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Flower_Breathing_Damage</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <armorPenetrationBase>0.22</armorPenetrationBase>
+      <ExplosionRadius>1.8</ExplosionRadius>
+      <stoppingPower>0.7</stoppingPower>
+      <ExplosionEffect>FlowerBreathingExplosionEffect</ExplosionEffect>
+      <speed>20</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>3</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(230, 128, 179, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Flower_Projectile_Mote</TrailMote>
+        <MoteInterval>0.25</MoteInterval>
+        <MoteDuration>30</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Flower_Breath_Slice_Projectile_LevelTwo</defName>
+    <label>Flower Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.8</drawSize>
+      <shaderParameters>
+        <_Color>(240, 150, 200, 255)</_Color>
+        <_brightnessMultiplier>1.2</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Flower_Breathing_Damage</damageDef>
+      <damageAmountBase>7</damageAmountBase>
+      <armorPenetrationBase>0.27</armorPenetrationBase>
+      <ExplosionRadius>2.2</ExplosionRadius>
+      <stoppingPower>0.9</stoppingPower>
+      <ExplosionEffect>FlowerBreathingExplosionEffect</ExplosionEffect>
+      <speed>23</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>3</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(240, 150, 200, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Flower_Projectile_Mote</TrailMote>
+        <MoteInterval>0.2</MoteInterval>
+        <MoteDuration>35</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Flower_Breath_Slice_Projectile_LevelThree</defName>
+    <label>Flower Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.0</drawSize>
+      <shaderParameters>
+        <_Color>(250, 170, 220, 255)</_Color>
+        <_brightnessMultiplier>1.4</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Flower_Breathing_Damage</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+      <ExplosionRadius>2.6</ExplosionRadius>
+      <stoppingPower>1.1</stoppingPower>
+      <ExplosionEffect>FlowerBreathingExplosionEffect</ExplosionEffect>
+      <speed>26</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>3</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>22</glowRadius>
+        <glowColor>(250, 170, 220, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Flower_Projectile_Mote</TrailMote>
+        <MoteInterval>0.15</MoteInterval>
+        <MoteDuration>40</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Flower_Breath_Slice_Projectile_LevelFour</defName>
+    <label>Flower Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(255, 190, 240, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Flower_Breathing_Damage</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <armorPenetrationBase>0.45</armorPenetrationBase>
+      <ExplosionRadius>3.0</ExplosionRadius>
+      <stoppingPower>1.3</stoppingPower>
+      <ExplosionEffect>FlowerBreathingExplosionEffect</ExplosionEffect>
+      <speed>30</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>5</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(255, 190, 240, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Flower_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Flower_Breath_Slice_Projectile_LevelFive</defName>
+    <label>Flower Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(255, 190, 240, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Flower_Breathing_Damage</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <armorPenetrationBase>0.57</armorPenetrationBase>
+      <ExplosionRadius>3.6</ExplosionRadius>
+      <stoppingPower>2</stoppingPower>
+      <ExplosionEffect>FlowerBreathingExplosionEffect</ExplosionEffect>
+      <speed>34</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>7</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(255, 190, 240, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Flower_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Flower_Breath_Slice_Projectile_LevelSix</defName>
+    <label>Flower Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(255, 190, 240, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Flower_Breathing_Damage</damageDef>
+      <damageAmountBase>17</damageAmountBase>
+      <armorPenetrationBase>0.72</armorPenetrationBase>
+      <ExplosionRadius>1</ExplosionRadius>
+      <stoppingPower>1.8</stoppingPower>
+      <ExplosionEffect>FlowerBreathingExplosionEffect</ExplosionEffect>
+      <speed>38</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>8</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(255, 190, 240, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Flower_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

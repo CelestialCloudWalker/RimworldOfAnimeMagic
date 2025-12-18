@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <HediffDef>
-    <defName>BreathingMarkApply</defName>
+  <HediffDef Name="BreathingMarkBase" Abstract="True">
     <label>Breathing Mark</label>
-    <description>A heightened state of awareness and physical enhancement.</description>
+    <description>A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in.</description>
     <hediffClass>HediffWithComps</hediffClass>
-    <comps>
-      <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>1000~2000</disappearsAfterTicks>
-      </li>
-      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
-        <tattooDef>Face_Tiger1</tattooDef>
-      </li>
-    </comps>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
     <stages>
       <li>
-        <label>Critical</label>
-        <minSeverity>0.5</minSeverity>
+        <label>minimal</label>
+        <minSeverity>0.0</minSeverity>
         <statFactors>
-          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+          <IncomingDamageFactor>0.95</IncomingDamageFactor>
         </statFactors>
+        <painFactor>0.95</painFactor>
+      </li>
+      <li>
+        <label>fading</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <IncomingDamageFactor>0.85</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.9</painFactor>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <IncomingDamageFactor>0.7</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.75</painFactor>
+      </li>
+      <li>
+        <label>strong</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <IncomingDamageFactor>0.6</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.6</painFactor>
+        <hungerRateFactor>0.9</hungerRateFactor>
+        <restFallFactor>0.9</restFallFactor>
+      </li>
+      <li>
+        <label>peak power</label>
+        <minSeverity>0.8</minSeverity>
         <capMods>
           <li>
             <capacity>Moving</capacity>
@@ -34,19 +88,157 @@
             <offset>0.2</offset>
           </li>
         </capMods>
-        <painFactor>0.5</painFactor>
-        <hungerRateFactor>0.8</hungerRateFactor>
-        <restFallFactor>0.8</restFallFactor>
+        <statFactors>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+        </statFactors>
         <statOffsets>
           <PainShockThreshold>0.15</PainShockThreshold>
         </statOffsets>
+        <painFactor>0.5</painFactor>
+        <hungerRateFactor>0.8</hungerRateFactor>
+        <restFallFactor>0.8</restFallFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef Name="BreathingMarkMasteryBase" Abstract="True">
+    <label>Breathing Mark</label>
+    <description>A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <label>minimal</label>
+        <minSeverity>0.0</minSeverity>
+        <statFactors>
+          <IncomingDamageFactor>0.93</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.93</painFactor>
       </li>
       <li>
-        <label>Severe</label>
-        <minSeverity>0.75</minSeverity>
+        <label>fading</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
         <statFactors>
-          <IncomingDamageFactor>0.6</IncomingDamageFactor>
+          <IncomingDamageFactor>0.8</IncomingDamageFactor>
         </statFactors>
+        <painFactor>0.85</painFactor>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <IncomingDamageFactor>0.65</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.7</painFactor>
+        <hungerRateFactor>0.95</hungerRateFactor>
+      </li>
+      <li>
+        <label>strong</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <IncomingDamageFactor>0.55</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.55</painFactor>
+        <hungerRateFactor>0.85</hungerRateFactor>
+        <restFallFactor>0.85</restFallFactor>
+      </li>
+      <li>
+        <label>peak power</label>
+        <minSeverity>0.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <IncomingDamageFactor>0.45</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <PainShockThreshold>0.2</PainShockThreshold>
+        </statOffsets>
+        <painFactor>0.45</painFactor>
+        <hungerRateFactor>0.75</hungerRateFactor>
+        <restFallFactor>0.75</restFallFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef Name="BreathingMarkTranscendenceBase" Abstract="True">
+    <label>Breathing Mark</label>
+    <description>A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <label>minimal</label>
+        <minSeverity>0.0</minSeverity>
+        <statFactors>
+          <IncomingDamageFactor>0.9</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.9</painFactor>
+      </li>
+      <li>
+        <label>fading</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <IncomingDamageFactor>0.75</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.8</painFactor>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.4</minSeverity>
         <capMods>
           <li>
             <capacity>Moving</capacity>
@@ -61,42 +253,304 @@
             <offset>0.1</offset>
           </li>
         </capMods>
-        <painFactor>0.6</painFactor>
+        <statFactors>
+          <IncomingDamageFactor>0.6</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.65</painFactor>
         <hungerRateFactor>0.9</hungerRateFactor>
-        <restFallFactor>0.9</restFallFactor>
       </li>
       <li>
-        <label>Moderate</label>
-        <minSeverity>0.8</minSeverity>
-        <statFactors>
-          <IncomingDamageFactor>0.7</IncomingDamageFactor>
-        </statFactors>
+        <label>strong</label>
+        <minSeverity>0.6</minSeverity>
         <capMods>
           <li>
+            <capacity>Moving</capacity>
+            <offset>0.45</offset>
+          </li>
+          <li>
             <capacity>Manipulation</capacity>
-            <offset>0.1</offset>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.2</offset>
           </li>
         </capMods>
-        <painFactor>0.75</painFactor>
-        <hungerRateFactor>1.0</hungerRateFactor>
-        <restFallFactor>1.0</restFallFactor>
+        <statFactors>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.5</painFactor>
+        <hungerRateFactor>0.8</hungerRateFactor>
+        <restFallFactor>0.8</restFallFactor>
       </li>
       <li>
-        <label>Minor</label>
-        <minSeverity>0.9</minSeverity>
+        <label>peak power</label>
+        <minSeverity>0.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.6</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.4</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
         <statFactors>
-          <IncomingDamageFactor>0.85</IncomingDamageFactor>
+          <IncomingDamageFactor>0.4</IncomingDamageFactor>
         </statFactors>
-        <painFactor>0.9</painFactor>
-      </li>
-      <li>
-        <label>Minimal</label>
-        <minSeverity>1</minSeverity>
-        <statFactors>
-          <IncomingDamageFactor>0.95</IncomingDamageFactor>
-        </statFactors>
-        <painFactor>0.95</painFactor>
+        <statOffsets>
+          <PainShockThreshold>0.25</PainShockThreshold>
+        </statOffsets>
+        <painFactor>0.4</painFactor>
+        <hungerRateFactor>0.7</hungerRateFactor>
+        <restFallFactor>0.7</restFallFactor>
       </li>
     </stages>
   </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkBase">
+    <defName>BreathingMarkApplyTanjiro</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-25</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Tanjiro</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkMasteryBase">
+    <defName>BreathingMarkApplyTanjiroMastery</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-20</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Tanjiro</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkTranscendenceBase">
+    <defName>BreathingMarkApplyTanjiroTranscendence</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-16.67</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Tanjiro</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkBase">
+    <defName>BreathingMarkApplySanemi</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-25</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Sanemi</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkMasteryBase">
+    <defName>BreathingMarkApplySanemiMastery</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-20</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Sanemi</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkTranscendenceBase">
+    <defName>BreathingMarkApplySanemiTranscendence</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-16.67</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Sanemi</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkBase">
+    <defName>BreathingMarkApplyMuichiro</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-25</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Muichiro</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkMasteryBase">
+    <defName>BreathingMarkApplyMuichiroMastery</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-20</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Muichiro</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkTranscendenceBase">
+    <defName>BreathingMarkApplyMuichiroTranscendence</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-16.67</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Muichiro</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkBase">
+    <defName>BreathingMarkApplyGiyu</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-25</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Giyu</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkMasteryBase">
+    <defName>BreathingMarkApplyGiyuMastery</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-20</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Giyu</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkTranscendenceBase">
+    <defName>BreathingMarkApplyGiyuTranscendence</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-16.67</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_Giyu</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkBase">
+    <defName>BreathingMarkApply</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-25</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_BreathingMark</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkMasteryBase">
+    <defName>BreathingMarkApplyMastery</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-20</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_BreathingMark</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BreathingMarkTranscendenceBase">
+    <defName>BreathingMarkApplyTranscendence</defName>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-16.67</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>Face_BreathingMark</tattooDef>
+      </li>
+    </comps>
+  </HediffDef>
+
 </Defs>

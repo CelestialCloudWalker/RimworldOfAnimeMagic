@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Beast_Blade_Technique</defName>
+    <label>Beast Blade Technique</label>
+    <description>A technique that allows a Beast Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Beast_Heart</enchantHediff>
+    <resourceGene>Gene_BeastBreath</resourceGene>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>6</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Beast_Blade_Technique_LevelTwo</defName>
+    <label>Beast Blade Technique</label>
+    <description>A technique that allows a Beast Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Beast_Heart_LevelTwo</enchantHediff>
+    <resourceGene>Gene_BeastBreath</resourceGene>
+    <ticksBetweenCost>380</ticksBetweenCost>
+    <resourceCostPerTick>6</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Beast_Blade_Technique_LevelThree</defName>
+    <label>Beast Blade Technique</label>
+    <description>A technique that allows a Beast Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Beast_Heart_LevelThree</enchantHediff>
+    <resourceGene>Gene_BeastBreath</resourceGene>
+    <ticksBetweenCost>340</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Beast_Blade_Technique_LevelFour</defName>
+    <label>Beast Blade Technique</label>
+    <description>A technique that allows a Beast Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Beast_Heart_LevelFour</enchantHediff>
+    <resourceGene>Gene_BeastBreath</resourceGene>
+    <ticksBetweenCost>300</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Beast_Blade_Technique_LevelFive</defName>
+    <label>Beast Blade Technique</label>
+    <description>A technique that allows a Beast Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Beast_Heart_LevelFive</enchantHediff>
+    <resourceGene>Gene_BeastBreath</resourceGene>
+    <ticksBetweenCost>260</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Beast_Blade_Technique_LevelSix</defName>
+    <label>Beast Blade Technique</label>
+    <description>A technique that allows a Beast Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Beast_Heart_LevelSix</enchantHediff>
+    <resourceGene>Gene_BeastBreath</resourceGene>
+    <ticksBetweenCost>220</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

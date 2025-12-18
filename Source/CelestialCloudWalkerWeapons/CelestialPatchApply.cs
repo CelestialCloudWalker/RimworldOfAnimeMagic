@@ -556,6 +556,42 @@ namespace AnimeArsenal
 public static class CorpseEatingPatches
 {
     private static readonly HashSet<int> processedCorpses = new HashSet<int>();
+    private static readonly Dictionary<int, Corpse> activeEatingCorpses = new Dictionary<int, Corpse>();
+
+    [HarmonyPatch(typeof(Pawn_JobTracker), "StartJob")]
+    [HarmonyPostfix]
+    public static void Postfix_StartJob(Pawn_JobTracker __instance, Job newJob)
+    {
+        try
+        {
+            if (newJob?.def != JobDefOf.Ingest) return;
+
+            var pawnField = AccessTools.Field(typeof(Pawn_JobTracker), "pawn");
+            var pawn = (Pawn)pawnField?.GetValue(__instance);
+
+            if (pawn?.genes == null) return;
+
+            var demonGene = pawn.genes.GenesListForReading
+                .FirstOrDefault(g => g.def.defName == "BloodDemonArt") as BloodDemonArtsGene;
+
+            if (demonGene == null) return;
+
+            var target = newJob.GetTarget(TargetIndex.A).Thing;
+            if (target is Corpse corpse && corpse.InnerPawn?.RaceProps?.Humanlike == true)
+            {
+                int corpseId = corpse.thingIDNumber;
+                if (!activeEatingCorpses.ContainsKey(corpseId))
+                {
+                    activeEatingCorpses[corpseId] = corpse;
+                    Log.Message($"[AnimeArsenal] Demon {pawn.LabelShort} started eating corpse {corpse.InnerPawn.LabelShort} (ID: {corpseId})");
+                }
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Log.Error($"[AnimeArsenal] Error in StartJob tracking: {ex}");
+        }
+    }
 
     [HarmonyPatch(typeof(Thing), "Ingested")]
     [HarmonyPostfix]
@@ -578,10 +614,16 @@ public static class CorpseEatingPatches
                     {
                         processedCorpses.Add(corpseId);
                         demonGene.AddPawnEaten();
-                        Messages.Message($"{ingester.Name.ToStringShort} consumed the essence of {corpse.InnerPawn.Name.ToStringShort}!",
+                        Messages.Message($"{ingester.Name.ToStringShort} consumed {corpse.InnerPawn.Name.ToStringShort}!",
                                        ingester, MessageTypeDefOf.PositiveEvent);
-                        Log.Message($"[AnimeArsenal] Demon {ingester.Name.ToStringShort} ate corpse via Ingested patch");
+                        Log.Message($"[AnimeArsenal] Demon {ingester.Name.ToStringShort} ate corpse via Ingested patch (ID: {corpseId})");
 
+                        // FIX: Destroy the corpse immediately after ingestion
+                        if (!corpse.Destroyed)
+                        {
+                            corpse.Destroy(DestroyMode.Vanish);
+                            Log.Message($"[AnimeArsenal] Destroyed corpse {corpseId} after ingestion");
+                        }
 
                         if (processedCorpses.Count > 100)
                         {
@@ -597,53 +639,6 @@ public static class CorpseEatingPatches
         }
     }
 
-    [HarmonyPatch(typeof(Corpse), "Destroy")]
-    [HarmonyPrefix]
-    public static void Prefix_CorpseDestroyed(Corpse __instance, DestroyMode mode)
-    {
-        try
-        {
-            if (__instance.InnerPawn?.RaceProps?.Humanlike != true) return;
-            if (mode != DestroyMode.Vanish && mode != DestroyMode.KillFinalize) return;
-
-            int corpseId = __instance.thingIDNumber;
-            if (processedCorpses.Contains(corpseId)) return;
-
-            var map = __instance.Map;
-            if (map?.mapPawns?.AllPawns == null) return;
-
-            foreach (var pawn in map.mapPawns.AllPawns)
-            {
-                if (pawn?.CurJob?.def == JobDefOf.Ingest &&
-                    pawn.CurJob.GetTarget(TargetIndex.A).Thing == __instance &&
-                    pawn.genes != null)
-                {
-                    var demonGene = pawn.genes.GenesListForReading
-                        .FirstOrDefault(g => g.def.defName == "BloodDemonArt") as BloodDemonArtsGene;
-
-                    if (demonGene != null)
-                    {
-                        processedCorpses.Add(corpseId);
-                        demonGene.AddPawnEaten();
-                        Messages.Message($"{pawn.Name.ToStringShort} consumed the essence of {__instance.InnerPawn.Name.ToStringShort}!",
-                                       pawn, MessageTypeDefOf.PositiveEvent);
-                        Log.Message($"[AnimeArsenal] Demon {pawn.Name.ToStringShort} ate corpse via Destroy patch");
-
-                        if (processedCorpses.Count > 100)
-                        {
-                            processedCorpses.Clear();
-                        }
-                        break;
-                    }
-                }
-            }
-        }
-        catch (System.Exception ex)
-        {
-            Log.Error($"[AnimeArsenal] Error in corpse destruction tracking: {ex}");
-        }
-    }
-
     [HarmonyPatch(typeof(Pawn_JobTracker), "EndCurrentJob")]
     [HarmonyPostfix]
     public static void Postfix_JobEnded(Pawn_JobTracker __instance, JobCondition condition)
@@ -654,7 +649,6 @@ public static class CorpseEatingPatches
             var pawn = (Pawn)pawnField?.GetValue(__instance);
 
             if (pawn?.genes == null) return;
-            if (condition != JobCondition.Succeeded) return;
             if (__instance.curJob?.def != JobDefOf.Ingest) return;
 
             var target = __instance.curJob.GetTarget(TargetIndex.A).Thing;
@@ -662,22 +656,45 @@ public static class CorpseEatingPatches
                 corpse.InnerPawn?.RaceProps?.Humanlike == true)
             {
                 int corpseId = corpse.thingIDNumber;
-                if (!processedCorpses.Contains(corpseId))
+
+                // Remove from active eating tracking
+                activeEatingCorpses.Remove(corpseId);
+
+                if (condition == JobCondition.Succeeded)
                 {
-                    var demonGene = pawn.genes.GenesListForReading
-                        .FirstOrDefault(g => g.def.defName == "BloodDemonArt") as BloodDemonArtsGene;
-
-                    if (demonGene != null)
+                    if (!processedCorpses.Contains(corpseId))
                     {
-                        processedCorpses.Add(corpseId);
-                        demonGene.AddPawnEaten();
-                        Messages.Message($"{pawn.Name.ToStringShort} consumed the essence of {corpse.InnerPawn.Name.ToStringShort}!",
-                                       pawn, MessageTypeDefOf.PositiveEvent);
-                        Log.Message($"[AnimeArsenal] Demon {pawn.Name.ToStringShort} ate corpse via Job End patch");
+                        var demonGene = pawn.genes.GenesListForReading
+                            .FirstOrDefault(g => g.def.defName == "BloodDemonArt") as BloodDemonArtsGene;
 
-                        if (processedCorpses.Count > 100)
+                        if (demonGene != null)
                         {
-                            processedCorpses.Clear();
+                            processedCorpses.Add(corpseId);
+                            demonGene.AddPawnEaten();
+                            Messages.Message($"{pawn.Name.ToStringShort} consumed {corpse.InnerPawn.Name.ToStringShort}!",
+                                           pawn, MessageTypeDefOf.PositiveEvent);
+                            Log.Message($"[AnimeArsenal] Demon {pawn.Name.ToStringShort} ate corpse via Job End patch (ID: {corpseId})");
+
+                            // FIX: Ensure corpse is destroyed at job completion
+                            if (!corpse.Destroyed)
+                            {
+                                corpse.Destroy(DestroyMode.Vanish);
+                                Log.Message($"[AnimeArsenal] Destroyed corpse {corpseId} after job completion");
+                            }
+
+                            if (processedCorpses.Count > 100)
+                            {
+                                processedCorpses.Clear();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // FIX: Even if already processed, ensure destruction
+                        if (!corpse.Destroyed)
+                        {
+                            corpse.Destroy(DestroyMode.Vanish);
+                            Log.Message($"[AnimeArsenal] Destroyed already-processed corpse {corpseId}");
                         }
                     }
                 }
@@ -688,6 +705,59 @@ public static class CorpseEatingPatches
             Log.Error($"[AnimeArsenal] Error in job completion tracking: {ex}");
         }
     }
+
+    [HarmonyPatch(typeof(Corpse), "Destroy")]
+    [HarmonyPrefix]
+    public static void Prefix_CorpseDestroyed(Corpse __instance, DestroyMode mode)
+    {
+        try
+        {
+            if (__instance.InnerPawn?.RaceProps?.Humanlike != true) return;
+
+            int corpseId = __instance.thingIDNumber;
+
+            // Check if a demon is actively eating this corpse
+            if (activeEatingCorpses.ContainsKey(corpseId))
+            {
+                var map = __instance.Map;
+                if (map?.mapPawns?.AllPawns != null)
+                {
+                    foreach (var pawn in map.mapPawns.AllPawns)
+                    {
+                        if (pawn?.CurJob?.def == JobDefOf.Ingest &&
+                            pawn.CurJob.GetTarget(TargetIndex.A).Thing == __instance &&
+                            pawn.genes != null)
+                        {
+                            var demonGene = pawn.genes.GenesListForReading
+                                .FirstOrDefault(g => g.def.defName == "BloodDemonArt") as BloodDemonArtsGene;
+
+                            if (demonGene != null && !processedCorpses.Contains(corpseId))
+                            {
+                                processedCorpses.Add(corpseId);
+                                demonGene.AddPawnEaten();
+                                Messages.Message($"{pawn.Name.ToStringShort} consumed {__instance.InnerPawn.Name.ToStringShort}!",
+                                               pawn, MessageTypeDefOf.PositiveEvent);
+                                Log.Message($"[AnimeArsenal] Demon {pawn.Name.ToStringShort} ate corpse via Destroy patch (ID: {corpseId})");
+
+                                if (processedCorpses.Count > 100)
+                                {
+                                    processedCorpses.Clear();
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
+                activeEatingCorpses.Remove(corpseId);
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Log.Error($"[AnimeArsenal] Error in corpse destruction tracking: {ex}");
+        }
+    }
+}
+
     [HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
     public static class StatWorker_BloodPoolBonus
     {
@@ -784,57 +854,57 @@ public static class CorpseEatingPatches
                 Log.Message($"[TransparentWorld DEBUG] Instigator is not a pawn or has no health");
             }
         }
-    }
-    [StaticConstructorOnStartup]
-    public static class StatPatches
+}
+[StaticConstructorOnStartup]
+public static class StatPatches
+{
+    static StatPatches()
     {
-        static StatPatches()
+        var harmony = new Harmony("com.animearsenal.trainingitems");
+        harmony.PatchAll();
+    }
+}
+
+[HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
+public static class StatWorker_GetValueUnfinalized_Patch
+{
+    [HarmonyPostfix]
+    public static void Postfix(StatRequest req, ref float __result, StatDef ___stat)
+    {
+        if (!req.HasThing || !(req.Thing is Pawn pawn))
+            return;
+        TrainingComp comp = pawn.TryGetComp<TrainingComp>();
+        if (comp == null)
+            return;
+        float boost = comp.GetStatBoost(___stat.defName);
+        if (boost != 0f)
         {
-            var harmony = new Harmony("com.animearsenal.trainingitems");
-            harmony.PatchAll();
+            __result += boost;
         }
     }
+}
 
-    [HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
-    public static class StatWorker_GetValueUnfinalized_Patch
+[HarmonyPatch(typeof(PawnCapacityUtility), "CalculateCapacityLevel")]
+public static class PawnCapacityUtility_CalculateCapacityLevel_Patch
+{
+    [HarmonyPostfix]
+    public static void Postfix(HediffSet diffSet, PawnCapacityDef capacity, ref float __result)
     {
-        [HarmonyPostfix]
-        public static void Postfix(StatRequest req, ref float __result, StatDef ___stat)
+        Pawn pawn = diffSet?.pawn;
+        if (pawn == null)
+            return;
+        TrainingComp comp = pawn.TryGetComp<TrainingComp>();
+        if (comp == null)
+            return;
+        float boost = comp.GetCapacityBoost(capacity.defName);
+        if (boost != 0f)
         {
-            if (!req.HasThing || !(req.Thing is Pawn pawn))
-                return;
+            __result += boost;
+            __result = UnityEngine.Mathf.Clamp(__result, 0f, 999f);
 
-            TrainingComp comp = pawn.TryGetComp<TrainingComp>();
-            if (comp == null)
-                return;
-
-            float boost = comp.GetStatBoost(___stat.defName);
-            if (boost != 0f)
+            if (capacity.defName == "Breathing" && boost > 0f)
             {
-                __result += boost;
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(PawnCapacityUtility), "CalculateCapacityLevel")]
-    public static class PawnCapacityUtility_CalculateCapacityLevel_Patch
-    {
-        [HarmonyPostfix]
-        public static void Postfix(HediffSet diffSet, PawnCapacityDef capacity, ref float __result)
-        {
-            Pawn pawn = diffSet?.pawn;
-            if (pawn == null)
-                return;
-
-            TrainingComp comp = pawn.TryGetComp<TrainingComp>();
-            if (comp == null)
-                return;
-
-            float boost = comp.GetCapacityBoost(capacity.defName);
-            if (boost != 0f)
-            {
-                __result += boost;
-                __result = UnityEngine.Mathf.Clamp(__result, 0f, 999f);
+                Log.Message($"[TrainingBoost] {pawn.LabelShort} - Breathing capacity boosted by {boost} = {__result}");
             }
         }
     }

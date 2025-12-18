@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Forest_Blade_Technique</defName>
+    <label>Forest Blade Technique</label>
+    <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Forest_Heart</enchantHediff>
+    <resourceGene>Gene_ForestBreath</resourceGene>
+    <ticksBetweenCost>540</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Forest_Blade_Technique_LevelTwo</defName>
+    <label>Forest Blade Technique</label>
+    <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Forest_Heart_LevelTwo</enchantHediff>
+    <resourceGene>Gene_ForestBreath</resourceGene>
+    <ticksBetweenCost>500</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Forest_Blade_Technique_LevelThree</defName>
+    <label>Forest Blade Technique</label>
+    <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Forest_Heart_LevelThree</enchantHediff>
+    <resourceGene>Gene_ForestBreath</resourceGene>
+    <ticksBetweenCost>460</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Forest_Blade_Technique_LevelFour</defName>
+    <label>Forest Blade Technique</label>
+    <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Forest_Heart_LevelFour</enchantHediff>
+    <resourceGene>Gene_ForestBreath</resourceGene>
+    <ticksBetweenCost>420</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Forest_Blade_Technique_LevelFive</defName>
+    <label>Forest Blade Technique</label>
+    <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Forest_Heart_LevelFive</enchantHediff>
+    <resourceGene>Gene_ForestBreath</resourceGene>
+    <ticksBetweenCost>380</ticksBetweenCost>
+    <resourceCostPerTick>2</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Forest_Blade_Technique_LevelSix</defName>
+    <label>Forest Blade Technique</label>
+    <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Forest_Heart_LevelSix</enchantHediff>
+    <resourceGene>Gene_ForestBreath</resourceGene>
+    <ticksBetweenCost>340</ticksBetweenCost>
+    <resourceCostPerTick>2</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+</Defs>

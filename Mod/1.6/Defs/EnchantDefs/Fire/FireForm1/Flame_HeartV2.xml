@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>Flame_Heart</defName>
+    <label>Burning Heart</label>
+    <description>Blows ignite with burning intesnity.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Flame_Breathing_Damage</damageType>
+        <damageValue>9</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Flame_Heart_LevelTwo</defName>
+    <label>Burning Heart</label>
+    <description>Blows ignite with burning intesnity.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.7, 0.2)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Flame_Breathing_Damage</damageType>
+        <damageValue>12</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Flame_Heart_LevelThree</defName>
+    <label>Burning Heart</label>
+    <description>Blows ignite with burning intesnity.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.6, 0.1)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Flame_Breathing_Damage</damageType>
+        <damageValue>16</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Flame_Heart_LevelFour</defName>
+    <label>Burning Heart</label>
+    <description>Blows ignite with burning intesnity.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.4, 0.0)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Flame_Breathing_Damage</damageType>
+        <damageValue>21</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Flame_Heart_LevelFive</defName>
+    <label>Burning Heart</label>
+    <description>Blows ignite with burning intesnity.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.4, 0.0)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Flame_Breathing_Damage</damageType>
+        <damageValue>26</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Flame_Heart_LevelSix</defName>
+    <label>Burning Heart</label>
+    <description>Blows ignite with burning intesnity.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.4, 0.0)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_Enchant">
+        <damageType>Flame_Breathing_Damage</damageType>
+        <damageValue>32</damageValue>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

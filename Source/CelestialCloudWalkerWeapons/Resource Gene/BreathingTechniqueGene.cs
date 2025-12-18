@@ -76,6 +76,9 @@ namespace AnimeArsenal
             {
                 Value = Max * 0.5f;
             }
+
+            
+            ForceResourceSync();
         }
 
         public override void PostMake()

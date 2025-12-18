@@ -17,102 +17,67 @@ namespace AnimeArsenal
             Pawn caster = parent.pawn;
             if (caster == null) return;
 
-            IntVec3 originalTarget = target.Cell;
+            IntVec3 targetCell = target.Cell;
+            IntVec3 startPos = caster.Position;
 
-            for (int dashCount = 0; dashCount < Props.numberOfDashes; dashCount++)
+            if (Props.castEffecter != null)
             {
-                IntVec3 currentPos = caster.Position;
+                var castEffect = Props.castEffecter.Spawn();
+                castEffect.Trigger(new TargetInfo(startPos, caster.Map), new TargetInfo(startPos, caster.Map));
+                castEffect.Cleanup();
+            }
 
-                if (dashCount == 0 && Props.castEffecter != null)
+            if (Props.castSound != null)
+                Props.castSound.PlayOneShot(new TargetInfo(startPos, caster.Map));
+
+            IntVec3 dashTarget = FindBestRetreatPosition(caster, targetCell);
+
+            if (dashTarget.IsValid)
+            {
+                caster.Position = dashTarget;
+                caster.Notify_Teleported(false, false);
+
+                if (Props.landEffecter != null)
                 {
-                    var castEffect = Props.castEffecter.Spawn();
-                    castEffect.Trigger(new TargetInfo(currentPos, caster.Map), new TargetInfo(currentPos, caster.Map));
-                    castEffect.Cleanup();
-                }
-                else if (dashCount > 0 && Props.retryEffecter != null)
-                {
-                    var retryEffect = Props.retryEffecter.Spawn();
-                    retryEffect.Trigger(new TargetInfo(currentPos, caster.Map), new TargetInfo(currentPos, caster.Map));
-                    retryEffect.Cleanup();
+                    var landEffect = Props.landEffecter.Spawn();
+                    landEffect.Trigger(new TargetInfo(dashTarget, caster.Map), new TargetInfo(dashTarget, caster.Map));
+                    landEffect.Cleanup();
                 }
 
-                IntVec3 dashTarget = CalculateRetreatPosition(caster, originalTarget);
-
-                if (dashTarget.IsValid)
-                {
-                    caster.Position = dashTarget;
-                    caster.Notify_Teleported(false, false);
-
-                    if (Props.landEffecter != null)
-                    {
-                        var landEffect = Props.landEffecter.Spawn();
-                        landEffect.Trigger(new TargetInfo(dashTarget, caster.Map), new TargetInfo(dashTarget, caster.Map));
-                        landEffect.Cleanup();
-                    }
-
-                    if (dashCount == 0 && Props.castSound != null)
-                        Props.castSound.PlayOneShot(new TargetInfo(currentPos, caster.Map));
-
-                    if (Props.landSound != null)
-                        Props.landSound.PlayOneShot(new TargetInfo(dashTarget, caster.Map));
-                }
-                else
-                {
-                    break;
-                }
+                if (Props.landSound != null)
+                    Props.landSound.PlayOneShot(new TargetInfo(dashTarget, caster.Map));
             }
         }
 
-        private IntVec3 CalculateRetreatPosition(Pawn caster, IntVec3 fromCell)
+        private IntVec3 FindBestRetreatPosition(Pawn caster, IntVec3 targetCell)
         {
             Map map = caster.Map;
-            IntVec3 casterPos = caster.Position;
+            float maxRange = parent.def.verbProperties.range;
 
-            Vector3 retreatDirection = (casterPos - fromCell).ToVector3Shifted().normalized;
+            if (IsValidRetreatCell(targetCell, caster, map, maxRange))
+                return targetCell;
 
-            for (int dist = Props.minDashDistance; dist <= Props.maxDashDistance; dist++)
+            for (int radius = 1; radius <= 3; radius++)
             {
-                Vector3 targetVector = casterPos.ToVector3Shifted() + (retreatDirection * dist);
-                IntVec3 candidate = targetVector.ToIntVec3();
-
-                if (IsValidRetreatCell(candidate, caster, map))
-                    return candidate;
-
-                for (int angle = -45; angle <= 45; angle += 15)
+                foreach (IntVec3 cell in GenRadial.RadialCellsAround(targetCell, radius, true))
                 {
-                    Vector3 rotatedDir = retreatDirection.RotatedBy(angle);
-                    Vector3 rotatedVector = casterPos.ToVector3Shifted() + (rotatedDir * dist);
-                    IntVec3 rotatedCandidate = rotatedVector.ToIntVec3();
-
-                    if (IsValidRetreatCell(rotatedCandidate, caster, map))
-                        return rotatedCandidate;
-                }
-            }
-
-            for (int i = 0; i < 20; i++)
-            {
-                float randomAngle = Rand.Range(0f, 360f);
-                Vector3 randomDir = Vector3.forward.RotatedBy(randomAngle);
-
-                for (int dist = Props.minDashDistance; dist <= Props.maxDashDistance; dist++)
-                {
-                    Vector3 randomVector = casterPos.ToVector3Shifted() + (randomDir * dist);
-                    IntVec3 randomCandidate = randomVector.ToIntVec3();
-
-                    if (IsValidRetreatCell(randomCandidate, caster, map))
-                        return randomCandidate;
+                    if (IsValidRetreatCell(cell, caster, map, maxRange))
+                        return cell;
                 }
             }
 
             return IntVec3.Invalid;
         }
 
-        private bool IsValidRetreatCell(IntVec3 cell, Pawn caster, Map map)
+        private bool IsValidRetreatCell(IntVec3 cell, Pawn caster, Map map, float maxRange)
         {
             if (!cell.InBounds(map) || !cell.Standable(map))
                 return false;
 
             if (cell.GetEdifice(map)?.def.passability == Traversability.Impassable)
+                return false;
+
+            if (caster.Position.DistanceTo(cell) > maxRange)
                 return false;
 
             if (Props.avoidEnemies)
@@ -135,7 +100,7 @@ namespace AnimeArsenal
             if (caster == null)
                 return false;
 
-            IntVec3 retreatPos = CalculateRetreatPosition(caster, target.Cell);
+            IntVec3 retreatPos = FindBestRetreatPosition(caster, target.Cell);
             if (!retreatPos.IsValid)
             {
                 if (throwMessages)
@@ -149,15 +114,11 @@ namespace AnimeArsenal
 
     public class CompProperties_AbilityRetreatDash : CompProperties_AbilityEffect
     {
-        public int minDashDistance = 3;
-        public int maxDashDistance = 8;
         public bool avoidEnemies = true;
         public float enemyAvoidanceRadius = 5f;
-        public int numberOfDashes = 1;
 
         public EffecterDef castEffecter;
         public EffecterDef landEffecter;
-        public EffecterDef retryEffecter;
         public SoundDef castSound;
         public SoundDef landSound;
 

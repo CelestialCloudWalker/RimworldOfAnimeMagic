@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbilityLevelData.cs" />
     <Compile Include="BreathingPotentialGene.cs" />
     <Compile Include="BreathingPotentialGeneDef.cs" />
     <Compile Include="Building_TrainingItem.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="CompProperties_AbilityGasSpray.cs" />
     <Compile Include="CompProperties_UseEffect_StartQuest.cs" />
     <Compile Include="DemonSlayerNames.cs" />
+    <Compile Include="ForceXenotypeExtension.cs" />
     <Compile Include="GeneEffect.cs" />
     <Compile Include="GeneEffectDef.cs" />
     <Compile Include="HediffCompProperties_SelflessState.cs" />

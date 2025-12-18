@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Dye_Weapon_Flower_Colored</defName>
+    <label>Dye Weapon: Flower Colored</label>
+    <category>FlowerBreathing_Ability_Catergory</category>
+    <description>A technique that channels focused breathing into attacks.</description>
+    <iconPath>UI/Abilities/DeflectAbility</iconPath>
+    <targetRequired>false</targetRequired>
+
+    <requiredGeneDefName>Gene_FlowerBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>5</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+        <enchantDef>Flower_Blade_Technique</enchantDef>
+      </li>
+    </comps>
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A technique that channels focused breathing into attacks.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>A technique that channels focused breathing into attacks.</description>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Flower_Blade_Technique_LevelTwo</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>A technique that channels focused breathing into attacks.</description>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Flower_Blade_Technique_LevelThree</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>A technique that channels focused breathing into attacks.</description>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Flower_Blade_Technique_LevelFour</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <description>A technique that channels focused breathing into attacks.</description>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Flower_Blade_Technique_LevelFive</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <description>A technique that channels focused breathing into attacks.</description>
+        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Flower_Blade_Technique_LevelSix</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

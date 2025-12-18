@@ -16,31 +16,95 @@
     <experienceGainSettings>
       <experienceTypes>
         <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>50</baseXP>
-          <damageFactor>0.1</damageFactor>
+          <baseXP>14</baseXP>
+          <damageFactor>0.22</damageFactor>
         </li>
         <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>100</baseXP>
-          <damageFactor>0.1</damageFactor>
+          <baseXP>14</baseXP>
+          <damageFactor>0.18</damageFactor>
+        </li>
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_CastAbility</VerbClassName>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.VerbExperienceTypeDef">
+          <VerbClassName>Verb_MeleeAttack</VerbClassName>
+          <baseXP>12</baseXP>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Melee</SkillDef>
+          <baseXP>3.5</baseXP>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Mining</SkillDef>
+          <baseXP>3</baseXP>
+        </li>
+        <li Class="Talented.SkillExperienceTypeDef">
+          <SkillDef>Construction</SkillDef>
+          <baseXP>2.5</baseXP>
         </li>
         <li Class="Talented.SkillExperienceTypeDef">
           <SkillDef>Shooting</SkillDef>
-          <baseXP>2</baseXP>
+          <baseXP>1.5</baseXP>
         </li>
         <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>HaulToCell</SkillDef>
-          <baseXP>1</baseXP>
+          <SkillDef>AttackMelee</SkillDef>
+          <baseXP>17</baseXP>
         </li>
-        <li Class="Talented.VerbExperienceTypeDef">
-          <VerbClassName>Verb_BeatFire</VerbClassName>
-          <baseXP>1</baseXP>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>AttackStatic</SkillDef>
+          <baseXP>15</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Mine</SkillDef>
+          <baseXP>14</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>SmoothWall</SkillDef>
+          <baseXP>12</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>SmoothFloor</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>OperateDeepDrill</SkillDef>
+          <baseXP>12</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>FinishFrame</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>PlaceNoCostFrame</SkillDef>
+          <baseXP>8</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Repair</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>FixBrokenDownBuilding</SkillDef>
+          <baseXP>12</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>BuildRoof</SkillDef>
+          <baseXP>10</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Deconstruct</SkillDef>
+          <baseXP>8</baseXP>
+        </li>
+        <li Class="Talented.JobExperienceTypeDef">
+          <SkillDef>Wait_Combat</SkillDef>
+          <baseXP>6</baseXP>
         </li>
       </experienceTypes>
     </experienceGainSettings>
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>
-        <damageAmount>30</damageAmount>
+        <damageAmount>1</damageAmount>
         <targetGene>BloodDemonArt</targetGene>
         <armorPenetration>0.8</armorPenetration>
         <targetBodyParts>

@@ -147,7 +147,7 @@
   <HediffDef>
     <defName>DreamBliss</defName>
     <label>dream bliss</label>
-    <description>A state of enhanced well-being from pleasant dreams.</description>
+    <description>A state of LevelTwo well-being from pleasant dreams.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.4, 0.8, 0.4)</defaultLabelColor>
     <initialSeverity>0.5</initialSeverity>

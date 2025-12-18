@@ -12,7 +12,6 @@
     <hostile>true</hostile>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 
-
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
@@ -31,65 +30,80 @@
       </targetParams>
     </verbProperties>
 
-
     <comps>
       <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
         <useSleepHediff>false</useSleepHediff>
         <forceImmediateSleep>true</forceImmediateSleep>
         <showMessage>true</showMessage>
+        <sleepDurationHours>4</sleepDurationHours>
+        <maxTargets>1</maxTargets>
+        <range>12</range>
+        <canPenetrateMindShields>false</canPenetrateMindShields>
       </li>
     </comps>
 
     <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Basic sleep induction technique. Puts a single target to sleep for a short duration. Range: 12 tiles.</description>
+      </li>
 
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
-        <experienceRequired>0</experienceRequired>
-        <description>Basic sleep induction technique. Puts a single target to sleep for a short duration.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>1.0</cooldownMultiplier>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <description>Improved sleep technique with slightly longer duration and extended range. Range: 14 tiles.</description>
+        <resourceCostMultiplier>0.96</resourceCostMultiplier>
+        <verbProperties>
+          <range>14</range>
+          <warmupTime>1.4</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
             <useSleepHediff>false</useSleepHediff>
             <forceImmediateSleep>true</forceImmediateSleep>
             <showMessage>true</showMessage>
-            <sleepDurationHours>4</sleepDurationHours>
+            <sleepDurationHours>5</sleepDurationHours>
             <maxTargets>1</maxTargets>
-            <range>12</range>
+            <range>14</range>
+            <canPenetrateMindShields>false</canPenetrateMindShields>
           </li>
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>75</experienceRequired>
-        <description>Enhanced sleep technique with longer duration and extended range.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.9</cooldownMultiplier>
-        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <description>LevelTwo sleep technique with longer duration and extended range. Range: 16 tiles.</description>
+        <resourceCostMultiplier>0.94</resourceCostMultiplier>
+        <verbProperties>
+          <range>16</range>
+          <warmupTime>1.3</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
             <useSleepHediff>false</useSleepHediff>
             <forceImmediateSleep>true</forceImmediateSleep>
             <showMessage>true</showMessage>
             <sleepDurationHours>6</sleepDurationHours>
-            <maxTargets>1</maxTargets>
-            <range>15</range>
+            <maxTargets>2</maxTargets>
+            <range>16</range>
+            <areaOfEffect>true</areaOfEffect>
+            <areaRadius>2</areaRadius>
             <canPenetrateMindShields>false</canPenetrateMindShields>
           </li>
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>200</experienceRequired>
-        <description>Advanced technique that can affect multiple targets in an area with deep sleep.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.8</cooldownMultiplier>
-        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <description>Advanced technique that can affect multiple targets in an area with deep sleep. Range: 19 tiles.</description>
+        <resourceCostMultiplier>0.92</resourceCostMultiplier>
+        <verbProperties>
+          <range>19</range>
+          <warmupTime>1.2</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
             <useSleepHediff>false</useSleepHediff>
@@ -97,35 +111,63 @@
             <showMessage>true</showMessage>
             <sleepDurationHours>8</sleepDurationHours>
             <maxTargets>3</maxTargets>
-            <range>18</range>
+            <range>19</range>
             <areaOfEffect>true</areaOfEffect>
             <areaRadius>3</areaRadius>
             <canPenetrateMindShields>true</canPenetrateMindShields>
+            <wakeResistance>0.3</wakeResistance>
           </li>
         </levelComps>
       </li>
 
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <description>Powerful sleep mastery that affects many targets over a wide area with extended deep sleep. Range: 22 tiles.</description>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <verbProperties>
+          <range>22</range>
+          <warmupTime>1.1</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>10</sleepDurationHours>
+            <maxTargets>4</maxTargets>
+            <range>22</range>
+            <areaOfEffect>true</areaOfEffect>
+            <areaRadius>4</areaRadius>
+            <canPenetrateMindShields>true</canPenetrateMindShields>
+            <deepSleep>true</deepSleep>
+            <wakeResistance>0.6</wakeResistance>
+          </li>
+        </levelComps>
+      </li>
 
       <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>400</experienceRequired>
-        <description>Ultimate sleep mastery - affects many targets over a wide area with extended deep sleep that's nearly impossible to wake from.</description>
-        <cumulativeEffects>false</cumulativeEffects>
-        <cooldownMultiplier>0.7</cooldownMultiplier>
-        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>Ultimate sleep mastery - affects many targets over a vast area with extended deep sleep that's nearly impossible to wake from. Range: 26 tiles.</description>
+        <resourceCostMultiplier>0.88</resourceCostMultiplier>
+        <verbProperties>
+          <range>26</range>
+          <warmupTime>1.0</warmupTime>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
             <useSleepHediff>false</useSleepHediff>
             <forceImmediateSleep>true</forceImmediateSleep>
             <showMessage>true</showMessage>
             <sleepDurationHours>12</sleepDurationHours>
-            <maxTargets>5</maxTargets>
-            <range>25</range>
+            <maxTargets>6</maxTargets>
+            <range>26</range>
             <areaOfEffect>true</areaOfEffect>
             <areaRadius>5</areaRadius>
             <canPenetrateMindShields>true</canPenetrateMindShields>
             <deepSleep>true</deepSleep>
-            <wakeResistance>0.8</wakeResistance>
+            <wakeResistance>0.9</wakeResistance>
           </li>
         </levelComps>
       </li>

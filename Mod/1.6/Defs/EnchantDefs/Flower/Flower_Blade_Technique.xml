@@ -7,40 +7,62 @@
     <description>A technique that allows a Flower Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Flower_Heart</enchantHediff>
     <resourceGene>Gene_FlowerBreath</resourceGene>
-    <ticksBetweenCost>450</ticksBetweenCost>
+    <ticksBetweenCost>520</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 
 
   <AnimeArsenal.EnchantDef>
-    <defName>Flower_Blade_Technique_Enhanced</defName>
+    <defName>Flower_Blade_Technique_LevelTwo</defName>
     <label>Flower Blade Technique</label>
     <description>A technique that allows a Flower Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Flower_Heart_Enhanced</enchantHediff>
+    <enchantHediff>Flower_Heart_LevelTwo</enchantHediff>
     <resourceGene>Gene_FlowerBreath</resourceGene>
-    <ticksBetweenCost>400</ticksBetweenCost>
-    <resourceCostPerTick>5</resourceCostPerTick>
-  </AnimeArsenal.EnchantDef>
-
-
-  <AnimeArsenal.EnchantDef>
-    <defName>Flower_Blade_Technique_Superior</defName>
-    <label>Flower Blade Technique</label>
-    <description>A technique that allows a Flower Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Flower_Heart_Superior</enchantHediff>
-    <resourceGene>Gene_FlowerBreath</resourceGene>
-    <ticksBetweenCost>350</ticksBetweenCost>
+    <ticksBetweenCost>480</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 
 
   <AnimeArsenal.EnchantDef>
-    <defName>Flower_Blade_Technique_Erelong</defName>
+    <defName>Flower_Blade_Technique_LevelThree</defName>
     <label>Flower Blade Technique</label>
     <description>A technique that allows a Flower Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Flower_Heart_Master</enchantHediff>
+    <enchantHediff>Flower_Heart_LevelThree</enchantHediff>
     <resourceGene>Gene_FlowerBreath</resourceGene>
-    <ticksBetweenCost>300</ticksBetweenCost>
+    <ticksBetweenCost>440</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flower_Blade_Technique_LevelFour</defName>
+    <label>Flower Blade Technique</label>
+    <description>A technique that allows a Flower Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flower_Heart_LevelFour</enchantHediff>
+    <resourceGene>Gene_FlowerBreath</resourceGene>
+    <ticksBetweenCost>600</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flower_Blade_Technique_LevelFive</defName>
+    <label>Flower Blade Technique</label>
+    <description>A technique that allows a Flower Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flower_Heart_LevelFive</enchantHediff>
+    <resourceGene>Gene_FlowerBreath</resourceGene>
+    <ticksBetweenCost>900</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flower_Blade_Technique_LevelSix</defName>
+    <label>Flower Blade Technique</label>
+    <description>A technique that allows a Flower Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flower_Heart_LevelSix</enchantHediff>
+    <resourceGene>Gene_FlowerBreath</resourceGene>
+    <ticksBetweenCost>1300</ticksBetweenCost>
+    <resourceCostPerTick>2</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 </Defs>

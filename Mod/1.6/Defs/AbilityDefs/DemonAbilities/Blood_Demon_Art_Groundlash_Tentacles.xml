@@ -10,7 +10,6 @@
     <aiCanUse>false</aiCanUse>
     <targetRequired>true</targetRequired>
 
-
     <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
@@ -27,38 +26,18 @@
       </targetParams>
     </verbProperties>
 
-
-    <comps>
-      <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
-        <effectRadius>4.0</effectRadius>
-        <maxTargets>3</maxTargets>
-        <flingDistance>6</flingDistance>
-        <damage>15</damage>
-        <armorPenetration>0.2</armorPenetration>
-        <stunHediff>PsychicShock</stunHediff>
-        <stunSeverity>1.0</stunSeverity>
-        <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
-        <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
-        <hitEffecterCount>5</hitEffecterCount>
-        <hitEffecterRadius>2.0</hitEffecterRadius>
-        <showMessages>true</showMessages>
-      </li>
-    </comps>
-
     <levels>
-
       <li>
-        <labelSuffix> (Novice)</labelSuffix>
+        <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that creates tentacles to throw targets around.</description>
-        <cumulativeEffects>false</cumulativeEffects>
+        <description>Blood demon tentacles erupt from the ground to fling enemies. Range: 10 tiles, radius: 4.0, Max Targets: 3, Damage: 15, Fling: 6 tiles.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
             <effectRadius>4.0</effectRadius>
             <maxTargets>3</maxTargets>
             <flingDistance>6</flingDistance>
             <damage>15</damage>
-            <armorPenetration>0.2</armorPenetration>
+            <armorPenetration>0.20</armorPenetration>
             <stunHediff>PsychicShock</stunHediff>
             <stunSeverity>1.0</stunSeverity>
             <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
@@ -70,47 +49,75 @@
         </levelComps>
       </li>
 
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>LevelTwo tentacle control with greater reach. Range: 11 tiles, radius: 4.5, Max Targets: 3, Damage: 18, Fling: 6.5 tiles.</description>
+        <resourceCostMultiplier>1.05</resourceCostMultiplier>
+        <verbProperties>
+          <range>11</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>5</effectRadius>
+            <maxTargets>3</maxTargets>
+            <flingDistance>6.5</flingDistance>
+            <damage>18</damage>
+            <armorPenetration>0.25</armorPenetration>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>1.1</stunSeverity>
+            <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
+            <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
+            <hitEffecterCount>6</hitEffecterCount>
+            <hitEffecterRadius>2.2</hitEffecterRadius>
+            <showMessages>true</showMessages>
+          </li>
+        </levelComps>
+      </li>
 
       <li>
-        <labelSuffix> (Adept)</labelSuffix>
-        <experienceRequired>150</experienceRequired>
-        <description>A blood demon art that creates tentacles to throw targets around.</description>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
-        <cumulativeEffects>false</cumulativeEffects>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Multiple targets can be caught in the writhing tentacles. Range: 12 tiles, radius: 5.0, Max Targets: 4, Damage: 22, Fling: 7 tiles.</description>
+        <resourceCostMultiplier>1.10</resourceCostMultiplier>
+        <verbProperties>
+          <range>12</range>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
             <effectRadius>5.0</effectRadius>
             <maxTargets>4</maxTargets>
             <flingDistance>7</flingDistance>
-            <damage>20</damage>
-            <armorPenetration>0.3</armorPenetration>
+            <damage>22</damage>
+            <armorPenetration>0.30</armorPenetration>
             <stunHediff>PsychicShock</stunHediff>
-            <stunSeverity>1.2</stunSeverity>
+            <stunSeverity>1.3</stunSeverity>
             <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
             <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
-            <hitEffecterCount>7</hitEffecterCount>
+            <hitEffecterCount>8</hitEffecterCount>
             <hitEffecterRadius>2.5</hitEffecterRadius>
             <showMessages>true</showMessages>
           </li>
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Expert)</labelSuffix>
-        <experienceRequired>350</experienceRequired>
-        <description>A blood demon art that creates tentacles to throw targets around.</description>
-        <resourceCostMultiplier>0.9</resourceCostMultiplier>
-        <cumulativeEffects>false</cumulativeEffects>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>Wider area of devastation as tentacles multiply. Range: 13 tiles, radius: 6.0, Max Targets: 5, Damage: 26, Fling: 8 tiles.</description>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <verbProperties>
+          <range>13</range>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
-            <effectRadius>6.5</effectRadius>
+            <effectRadius>6.0</effectRadius>
             <maxTargets>5</maxTargets>
             <flingDistance>8</flingDistance>
-            <damage>28</damage>
-            <armorPenetration>0.4</armorPenetration>
+            <damage>26</damage>
+            <armorPenetration>0.35</armorPenetration>
             <stunHediff>PsychicShock</stunHediff>
-            <stunSeverity>1.5</stunSeverity>
+            <stunSeverity>2</stunSeverity>
             <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
             <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
             <hitEffecterCount>10</hitEffecterCount>
@@ -120,20 +127,47 @@
         </levelComps>
       </li>
 
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <description>Nearly perfected technique with devastating force. Range: 15 tiles, radius: 7.0, Max Targets: 6, Damage: 31, Fling: 9 tiles.</description>
+        <resourceCostMultiplier>1.20</resourceCostMultiplier>
+        <verbProperties>
+          <range>15</range>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>7.0</effectRadius>
+            <maxTargets>6</maxTargets>
+            <flingDistance>9</flingDistance>
+            <damage>31</damage>
+            <armorPenetration>0.42</armorPenetration>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>1.7</stunSeverity>
+            <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
+            <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
+            <hitEffecterCount>12</hitEffecterCount>
+            <hitEffecterRadius>3.5</hitEffecterRadius>
+            <showMessages>true</showMessages>
+          </li>
+        </levelComps>
+      </li>
 
       <li>
-        <labelSuffix> (Master)</labelSuffix>
-        <experienceRequired>700</experienceRequired>
-        <description>A blood demon art that creates tentacles to throw targets around.</description>
-        <resourceCostMultiplier>0.8</resourceCostMultiplier>
-        <cumulativeEffects>false</cumulativeEffects>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1000</experienceRequired>
+        <description>Ultimate mastery: A storm of blood tentacles engulfs the battlefield. Range: 17 tiles, radius: 8.0, Max Targets: 8, Damage: 38, Fling: 10 tiles.</description>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <verbProperties>
+          <range>17</range>
+        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
             <effectRadius>8.0</effectRadius>
             <maxTargets>8</maxTargets>
             <flingDistance>10</flingDistance>
-            <damage>35</damage>
-            <armorPenetration>0.5</armorPenetration>
+            <damage>38</damage>
+            <armorPenetration>0.50</armorPenetration>
             <stunHediff>PsychicShock</stunHediff>
             <stunSeverity>2.0</stunSeverity>
             <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
@@ -146,7 +180,6 @@
       </li>
     </levels>
   </AnimeArsenal.TalentedLevelingAbilityDef>
-
 
   <EffecterDef>
     <defName>AnimeArsenal_WhipHit</defName>

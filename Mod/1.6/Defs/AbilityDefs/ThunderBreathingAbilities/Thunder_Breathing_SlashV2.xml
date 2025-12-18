@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Thunder_Breathing_Slash</defName>
+    <label>Thunder Breathing: Slash</label>
+    <category>ThunderBreathing_Ability_Catergory</category>
+    <description>A ranged technique that sends a slash toward targets.</description>
+    <iconPath>UI/Abilities/AbilityProjectile</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <requiredGeneDefName>Gene_ThunderBreath</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>25</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Thunder_Breath_Slice_Projectile</projectileDef>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.05</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Thunder_Breath_Slice_Projectile_LevelTwo</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Thunder_Breath_Slice_Projectile_LevelThree</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <rangeMultiplier>1.6</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Thunder_Breath_Slice_Projectile_LevelFour</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.84</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Thunder_Breath_Slice_Projectile_LevelFive</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1050</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <rangeMultiplier>2.16</rangeMultiplier>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>Thunder_Breath_Slice_Projectile_LevelSix</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>
