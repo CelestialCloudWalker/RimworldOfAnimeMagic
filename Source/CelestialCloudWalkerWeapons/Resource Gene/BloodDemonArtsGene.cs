@@ -134,6 +134,36 @@ namespace AnimeArsenal
         public DemonRank CurrentRank => currentRank;
         public int TotalPawnsEaten => totalPawnsEaten;
 
+        public bool CanAddDemonGene(Pawn pawn)
+        {
+            if (pawn?.genes != null)
+            {
+                BloodDemonArtsGeneDef demonDef = def as BloodDemonArtsGeneDef;
+
+                var breathingGene = pawn.genes.GenesListForReading.Find(g =>
+                    g.def is BreathingTechniqueGeneDef);
+
+                if (breathingGene != null)
+                {
+                    if (demonDef?.allowedBreathingGenes != null &&
+                        demonDef.allowedBreathingGenes.Contains(breathingGene.def))
+                    {
+                        return true;
+                    }
+
+                    BreathingTechniqueGeneDef breathingDef = breathingGene.def as BreathingTechniqueGeneDef;
+                    if (breathingDef?.canCoexistWithDemon == true)
+                    {
+                        return true;
+                    }
+
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         public override void PostAdd()
         {
             base.PostAdd();
@@ -150,8 +180,81 @@ namespace AnimeArsenal
                 UpdateModExtensionValues();
             }
 
-            // REMOVED ForceXenotypeExtension handling - it was resetting traits
-            // The xenotype should be applied manually through Character Editor
+            CheckAndRemoveConflictingBreathingGenes();
+        }
+
+        private void CheckAndRemoveConflictingBreathingGenes()
+        {
+            if (pawn?.genes == null) return;
+
+            BloodDemonArtsGeneDef demonDef = def as BloodDemonArtsGeneDef;
+
+            var breathingGenesToRemove = new List<Gene>();
+
+            foreach (var gene in pawn.genes.GenesListForReading)
+            {
+                if (gene.def is BreathingTechniqueGeneDef breathingDef)
+                {
+                    bool isAllowed = false;
+
+                    if (demonDef?.allowedBreathingGenes != null &&
+                        demonDef.allowedBreathingGenes.Contains(gene.def))
+                    {
+                        isAllowed = true;
+                    }
+
+                    if (breathingDef.canCoexistWithDemon == true)
+                    {
+                        isAllowed = true;
+                    }
+
+                    if (!isAllowed)
+                    {
+                        breathingGenesToRemove.Add(gene);
+                    }
+                }
+            }
+
+            if (breathingGenesToRemove.Count > 0)
+            {
+                foreach (var gene in breathingGenesToRemove)
+                {
+
+                    if (gene is BreathingTechniqueGene breathingGene)
+                    {
+                        ResetAllTalentTrees(breathingGene);
+                    }
+
+                    pawn.genes.RemoveGene(gene);
+                }
+
+                Messages.Message(
+                    $"{pawn.Name.ToStringShort} lost all breathing techniques upon becoming a demon!",
+                    pawn,
+                    MessageTypeDefOf.NegativeEvent
+                );
+            }
+        }
+
+        private void ResetAllTalentTrees(Gene_TalentBase talentGene)
+        {
+            try
+            {
+                foreach (var treeData in talentGene.AvailableTrees())
+                {
+                    var handler = treeData.handler;
+                    if (handler != null)
+                    {
+                        ResetTreeTracker.AllowCustomTreeReset = true;
+                        handler.ResetTree();
+                        ResetTreeTracker.AllowCustomTreeReset = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Warning($"[AnimeArsenal] Error resetting talent trees: {ex.Message}");
+            }
         }
 
         public override void PostMake()

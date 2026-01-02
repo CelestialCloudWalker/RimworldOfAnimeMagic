@@ -61,7 +61,7 @@
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
             <effectRadius>5</effectRadius>
             <maxTargets>3</maxTargets>
-            <flingDistance>6.5</flingDistance>
+            <flingDistance>7</flingDistance>
             <damage>18</damage>
             <armorPenetration>0.25</armorPenetration>
             <stunHediff>PsychicShock</stunHediff>

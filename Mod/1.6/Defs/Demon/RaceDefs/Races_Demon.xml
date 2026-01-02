@@ -94,17 +94,9 @@
         <canReproduce>false</canReproduce>
         <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
         <whiteXenotypeList>
-        </whiteXenotypeList>
-
-        <!-- This ensures demons always spawn with the Demon xenotype (which includes BloodDemonArt gene) -->
-        <xenotypeList>
+        </whiteXenotypeList><xenotypeList>
           <li>AA_DemonBloodArts_User</li>
         </xenotypeList>
-
-        <!-- REMOVED whiteGeneList - it was blocking other genes like Sharingan -->
-        <!-- The xenotypeList already ensures they have BloodDemonArt -->
-
-        <!-- Traits demons can NEVER have -->
         <blackTraitList>
           <li>DislikesMen</li>
           <li>DislikesWomen</li>
@@ -117,7 +109,6 @@
         <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
       </raceRestriction>
       <generalSettings>
-        <!-- Traits that ALL demons ALWAYS have -->
         <forcedRaceTraitEntries>
           <li>Cannibal</li>
           <li>Bloodlust</li>

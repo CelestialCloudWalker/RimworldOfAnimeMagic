@@ -21,7 +21,7 @@
       <verbClass>Verb_CastAbility</verbClass>
       <range>12</range>
       <warmupTime>1.5</warmupTime>
-      <soundCast>YourSleepSound</soundCast>
+      <soundCast>FireSpew_Resolve</soundCast>
       <targetParams>
         <canTargetPawns>true</canTargetPawns>
         <canTargetSelf>false</canTargetSelf>

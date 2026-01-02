@@ -14,6 +14,7 @@ namespace AnimeArsenal
     {
         public List<GeneOption> genes;
         public SurvivalSettings survivalSettings;
+        public List<GeneDef> excludedGenes;
 
         protected override bool TestRunInt(Slate slate)
         {
@@ -39,7 +40,8 @@ namespace AnimeArsenal
             {
                 inSignalEnable = QuestGenUtility.HardcodedSignalWithQuestID("ColonistsReturned"),
                 genes = genes,
-                survivalSettings = survivalSettings
+                survivalSettings = survivalSettings,
+                excludedGenes = excludedGenes
             });
         }
     }
@@ -49,6 +51,7 @@ namespace AnimeArsenal
         public string inSignalEnable;
         public List<GeneOption> genes;
         public SurvivalSettings survivalSettings;
+        public List<GeneDef> excludedGenes;
 
         public override void Notify_QuestSignalReceived(Signal signal)
         {
@@ -65,6 +68,13 @@ namespace AnimeArsenal
 
                     foreach (Pawn pawn in originalPawns)
                     {
+                        if (HasExcludedGene(pawn))
+                        {
+                            casualties.Add(pawn);
+                            Log.Warning($"{pawn.LabelShort} has excluded gene but was sent to Final Selection - auto-failing");
+                            continue;
+                        }
+
                         if (SurvivesTrialRoll(pawn))
                         {
                             survivors.Add(pawn);
@@ -106,6 +116,24 @@ namespace AnimeArsenal
                     }
                 }
             }
+        }
+
+        public bool HasExcludedGene(Pawn pawn)
+        {
+            if (excludedGenes == null || !excludedGenes.Any() || pawn.genes == null)
+            {
+                return false;
+            }
+
+            foreach (var excludedGene in excludedGenes)
+            {
+                if (pawn.genes.HasActiveGene(excludedGene))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private void HandleCasualtyDestruction(Pawn casualty)
@@ -228,6 +256,7 @@ namespace AnimeArsenal
             Scribe_Values.Look(ref inSignalEnable, "inSignalEnable");
             Scribe_Collections.Look(ref genes, "genes", LookMode.Deep);
             Scribe_Deep.Look(ref survivalSettings, "survivalSettings");
+            Scribe_Collections.Look(ref excludedGenes, "excludedGenes", LookMode.Def);
         }
     }
 

@@ -13,8 +13,8 @@ namespace AnimeArsenal
         public int NumberOfCuts = 8;
         public float BaseDamage = 8f;
         public int TicksBetweenCuts = 10;
-        public DamageDef DamageDef = DamageDefOf.Cut;
-        public StatDef ScaleStat = StatDefOf.MeleeDamageFactor;
+        public DamageDef DamageDef;  
+        public StatDef ScaleStat;    
         public EffecterDef CleaveDamageEffecter;
 
         public float radius = 8f;
@@ -73,13 +73,12 @@ namespace AnimeArsenal
 
         private bool IsValidTarget(Pawn pawn)
         {
-            if (pawn == parent.pawn) return false; 
+            if (pawn == parent.pawn) return false;
             return !pawn.Dead;
         }
 
         private void AppleCleaveEffects(Pawn targetPawn)
         {
-            
             parent.pawn.Map.GetComponent<CleaveManager>()?.StartCleaveSequence(targetPawn, Props, parent.pawn);
         }
 
@@ -87,7 +86,6 @@ namespace AnimeArsenal
         {
             if (!base.Valid(target, throwMessages)) return false;
 
-            
             if (target.IsValid) return true;
 
             if (throwMessages)
@@ -97,7 +95,6 @@ namespace AnimeArsenal
         }
     }
 
-    
     public class CleaveManager : MapComponent
     {
         private List<CleaveSequence> activeSequences = new List<CleaveSequence>();
@@ -134,7 +131,6 @@ namespace AnimeArsenal
         }
     }
 
-    
     public class CleaveSequence : IExposable
     {
         private Pawn targetPawn;
@@ -146,7 +142,7 @@ namespace AnimeArsenal
 
         public bool IsComplete => cutsApplied >= props.NumberOfCuts || targetPawn?.Dead == true || targetPawn?.Destroyed == true;
 
-        public CleaveSequence() { } 
+        public CleaveSequence() { }
 
         public CleaveSequence(Pawn target, CompProperties_Cleave properties, Pawn casterPawn)
         {
@@ -193,7 +189,7 @@ namespace AnimeArsenal
             DamageInfo damageInfo = new DamageInfo(
                 props.DamageDef ?? DamageDefOf.Cut,
                 actualDamage,
-                0f, 
+                0f,
                 -1f,
                 caster,
                 null,

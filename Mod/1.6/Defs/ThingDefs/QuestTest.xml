@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>AnimeArsenal_FinalSelectionRock</defName>
+    <label>final selection rock</label>
+    <description>A rock.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Rock</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.3</fillPercent>
+    <pathCost>30</pathCost>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Mass>50</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Scarlet_Steel>20</Scarlet_Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="AnimeArsenal.CompProperties_UseEffect_StartQuest">
+        <compClass>AnimeArsenal.CompUseEffect_StartQuest</compClass>
+        <questScriptDef>AnimeArsenal_MountSagiriFinalSelection</questScriptDef>
+        <successMessage>{0} has summoned a Demon Slayer Corps guide. The Final Selection begins!</successMessage>
+        <failMessage>Cannot start the Final Selection at this time. You need at least 3 free colonists.</failMessage>
+      </li>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsable</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Initiate Final Selection</useLabel>
+        <useDuration>120</useDuration>
+      </li>
+    </comps>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>AA_DemonSlayerBasics</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>AnimeArsenal_FinalSelectionRocktwo</defName>
+    <label>final selection rock</label>
+    <description>A rock.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Rock</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.3</fillPercent>
+    <pathCost>30</pathCost>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Mass>50</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Scarlet_Steel>20</Scarlet_Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="AnimeArsenal.CompProperties_UseEffect_StartQuest">
+        <compClass>AnimeArsenal.CompUseEffect_StartQuest</compClass>
+        <questScriptDef>AnimeArsenal_MountSagiriFinalSelection</questScriptDef>
+        <successMessage>{0} has summoned a Demon Slayer Corps guide. The Final Selection begins!</successMessage>
+        <failMessage>Cannot start the Final Selection at this time. You need at least 3 free colonists.</failMessage>
+      </li>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsable</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Initiate Final Selection</useLabel>
+        <useDuration>120</useDuration>
+      </li>
+    </comps>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>AA_DemonSlayerBasics</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

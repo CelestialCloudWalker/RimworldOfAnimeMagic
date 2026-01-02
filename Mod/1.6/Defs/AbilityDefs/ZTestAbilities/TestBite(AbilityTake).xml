@@ -18,7 +18,7 @@
       <verbClass>Verb_CastAbility</verbClass>
       <range>1</range>
       <warmupTime>2</warmupTime>
-      <soundCast>Pawn_Melee_Bite_HitPawn</soundCast>
+      <soundCast>FireSpew_Resolve</soundCast>
       <targetParams>
         <canTargetPawns>true</canTargetPawns>
         <canTargetSelf>false</canTargetSelf>

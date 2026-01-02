@@ -3,6 +3,10 @@
   <AnimeArsenal.BloodDemonArtsGeneDef Name="AA_BloodDemonArtsGene" Abstract="True">
     <geneClass>AnimeArsenal.BloodDemonArtsGene</geneClass>
     <resourceGizmoType>AnimeArsenal.GeneGizmoBlood</resourceGizmoType>
+
+    <exclusionTags>
+      <li>BreathingUser</li>
+    </exclusionTags>
     <biostatCpx>2</biostatCpx>
     <biostatMet>1</biostatMet>
     <resourceGizmoThresholds>
@@ -129,20 +133,20 @@
           <li>0.85</li>
         </sunlightMinCoverage>
         <sunlightTolerancePool>
-          <li>10</li>    <!-- WeakDemon: ~20 seconds -->
-          <li>14</li>    <!-- Demon: ~33 seconds -->
-          <li>20</li>    <!-- LowerRankSix: ~1 minute -->
-          <li>28</li>    <!-- LowerRankFive: ~1.7 minutes -->
-          <li>38</li>    <!-- LowerRankFour: ~3 minutes -->
-          <li>52</li>    <!-- LowerRankThree: ~5 minutes -->
-          <li>70</li>    <!-- LowerRankTwo: ~8.5 minutes -->
-          <li>92</li>    <!-- LowerRankOne: ~15 minutes -->
-          <li>120</li>   <!-- UpperRankSix: ~26 minutes -->
-          <li>155</li>   <!-- UpperRankFive: ~45 minutes -->
-          <li>197</li>   <!-- UpperRankFour: ~1.3 hours -->
-          <li>247</li>   <!-- UpperRankThree: ~2.5 hours -->
-          <li>305</li>   <!-- UpperRankTwo: ~4.3 hours -->
-          <li>372</li>   <!-- UpperRankOne: ~7 hours -->
+          <li>10</li>
+          <li>14</li>
+          <li>20</li>
+          <li>28</li>
+          <li>38</li>
+          <li>52</li>    
+          <li>70</li>
+          <li>92</li>
+          <li>120</li>
+          <li>155</li>
+          <li>197</li>
+          <li>247</li>
+          <li>305</li>
+          <li>372</li>
         </sunlightTolerancePool>
 
         <regenHealingMultiplier>

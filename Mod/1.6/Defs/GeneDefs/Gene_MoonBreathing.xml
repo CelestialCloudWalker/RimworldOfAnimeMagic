@@ -7,6 +7,8 @@
     <resourceName>Moon Breath</resourceName>
     <description>Moon Breathing Gene.</description>
     <iconPath>UI/Icons/Genes/moon</iconPath>
+    <canCoexistWithDemon>true</canCoexistWithDemon>
+
     <resourceLabel>Moon Breath</resourceLabel>
     <resourceDescription>Current stored Breath.</resourceDescription>
     <TalentTrees>

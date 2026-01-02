@@ -9,6 +9,9 @@
     <description>Basic breathing potential - the foundation for all breathing techniques.</description>
     <iconPath>UI/Icons/Genes/breathing_potential</iconPath>
     <resourceLabel>Breath</resourceLabel>
+    <exclusionTags>
+      <li>BloodDemonArt</li>
+    </exclusionTags>
     <resourceDescription>Current stored Breath.</resourceDescription>
     <TalentTrees>
       <li>BreathingPotentialTreee3</li>

@@ -80,7 +80,6 @@ namespace AnimeArsenal
 
                 }
 
-                // ADD SUNLIGHT INFORMATION
                 try
                 {
                     var map = BloodDemonArtsGene.pawn.Map;
@@ -94,7 +93,6 @@ namespace AnimeArsenal
                             float tolerancePercent = sunlightComp.GetSunTolerancePercentage(BloodDemonArtsGene.pawn);
                             float damagePercent = sunlightComp.GetSunlightDamagePercentage(BloodDemonArtsGene.pawn);
 
-                            // Color code tolerance based on how much is left
                             Color toleranceColor = tolerancePercent > 50f ? Color.green :
                                                    tolerancePercent > 20f ? Color.yellow :
                                                    Color.red;
@@ -109,7 +107,6 @@ namespace AnimeArsenal
                                     damagePercent.ToString("F1").Colorize(damageColor) + "%");
                             }
 
-                            // Show armor coverage
                             float coverage = sunlightComp.GetArmorCoverage(BloodDemonArtsGene.pawn);
                             bool hasHeadCover = sunlightComp.GetHeadCoverage(BloodDemonArtsGene.pawn);
 

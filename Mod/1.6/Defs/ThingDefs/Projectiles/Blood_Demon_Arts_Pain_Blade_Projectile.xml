@@ -42,7 +42,6 @@
     </comps>
   </ThingDef>
 
-  <!-- Level 2 Projectile -->
   <ThingDef ParentName="BaseBullet">
     <defName>Blood_Demon_Arts_Pain_Blade_Projectile_LevelTwo</defName>
     <label>Improved Blood Blade</label>
@@ -84,7 +83,6 @@
     </comps>
   </ThingDef>
 
-  <!-- Level 3 Projectile -->
   <ThingDef ParentName="BaseBullet">
     <defName>Blood_Demon_Arts_Pain_Blade_Projectile_LevelThree</defName>
     <label>LevelTwo Blood Blade</label>
@@ -126,7 +124,6 @@
     </comps>
   </ThingDef>
 
-  <!-- Level 4 Projectile -->
   <ThingDef ParentName="BaseBullet">
     <defName>Blood_Demon_Arts_Pain_Blade_Projectile_LevelFour</defName>
     <label>Multi Blood Blade</label>
@@ -168,7 +165,6 @@
     </comps>
   </ThingDef>
 
-  <!-- Level 5 Projectile -->
   <ThingDef ParentName="BaseBullet">
     <defName>Blood_Demon_Arts_Pain_Blade_Projectile_Advanced</defName>
     <label>Advanced Blood Blade</label>
@@ -210,7 +206,6 @@
     </comps>
   </ThingDef>
 
-  <!-- Level 6 Projectile -->
   <ThingDef ParentName="BaseBullet">
     <defName>Blood_Demon_Arts_Pain_Blade_Projectile_Master</defName>
     <label>Master Blood Blade</label>

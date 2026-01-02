@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
   <HistoryEventDef>
     <defName>AnimeArsenal_GeneTrainingCompleted</defName>
     <label>Mount Sagiri Final Selection</label>
@@ -13,7 +14,7 @@
   <QuestScriptDef>
     <defName>AnimeArsenal_MountSagiriFinalSelection</defName>
     <rootSelectionWeight>1.2</rootSelectionWeight>
-    <rootMinPoints>800</rootMinPoints>
+    <rootMinPoints>200</rootMinPoints>
     <canGiveRoyalFavor>false</canGiveRoyalFavor>
     <expireDaysRange>7~14</expireDaysRange>
     <successHistoryEvent>AnimeArsenal_GeneTrainingCompleted</successHistoryEvent>
@@ -23,14 +24,15 @@
       <rulesStrings>
         <li>questName->Final Selection</li>
         <li>questName->Mount Sagiri Trial</li>
-        <li>questName->A chance to fight back</li>
+        <li>questName->A Chance to Fight Back</li>
         <li>questName->Seven Days of Survival</li>
+        <li>questName->The Demon Slayer Trial</li>
       </rulesStrings>
     </questNameRules>
 
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->A former Demon Slayer Corp member has appeared at your settlement. They offer to escort three of your colonists to Mount Sagiri for the Final Selection - a seven-day survival trial where participants fight captured demons in a wisteria-enclosed mountain.\n\nOnly those who survive all seven nights and claim their ore at dawn will join the Demon Slayer Corps. Your colonist may develop LevelTwo breathing techniques and supernatural reflexes... if they can endure.\n\nThe retired slayer's scarred face speaks volumes: "Many climb Mount Sagiri. Most feed the demons. The worthy few descend forever changed."\n\nSurvival depends on combat skills, physical resilience, and sheer determination. Skilled fighters and tough individuals have better odds, while the frail face greater peril.</li>
+        <li>questDescription->A former Demon Slayer Corps member has appeared at your settlement. They offer to escort up to three of your colonists to Mount Sagiri for the Final Selection - a seven-day survival trial where participants fight captured demons in a wisteria-enclosed mountain.\n\nOnly those who survive all seven nights and claim their ore at dawn will join the Demon Slayer Corps. Your colonists may develop breathing techniques and supernatural abilities... if they can endure.\n\nThe retired slayer's scarred face speaks volumes: "Many climb Mount Sagiri. Most feed the demons. The worthy few descend forever changed."\n\nSurvival depends on combat skills, physical resilience, and sheer determination. Skilled fighters and tough individuals have better odds, while the frail face greater peril.\n\nWARNING: Colonists with demon blood cannot participate - the wisteria barriers would kill them instantly.</li>
       </rulesStrings>
     </questDescriptionRules>
 
@@ -64,6 +66,11 @@
               <weight>10</weight>
             </li>
           </genes>
+
+          <excludedGenes>
+            <li>BloodDemonArt</li>
+          </excludedGenes>
+
           <survivalSettings>
             <baseSurvivalChance>0.6</baseSurvivalChance>
             <minimumSurvivalChance>0.1</minimumSurvivalChance>
@@ -140,12 +147,13 @@
                   <onlyAcceptColonists>true</onlyAcceptColonists>
                   <onlyAcceptHealthy>true</onlyAcceptHealthy>
                   <requireColonistCount>3</requireColonistCount>
+                  <maxColonistCount>3</maxColonistCount>
                 </parms>
               </li>
 
               <li Class="QuestNode_Letter">
                 <label>Demon Slayer Corps Guide Arrived</label>
-                <text>A veteran of the Demon Slayer Corps has arrived to escort three of your colonists to Mount Sagiri. Their haori bears the Corps' symbol, and their eyes hold the weight of countless battles.\n\n"Seven nights among demons. Send exactly three candidates. Those who survive join our ranks. Those who fall become demon feast."\n\nChoose wisely - combat skills and physical toughness improve survival odds, while frailty makes the trial far more perilous. The Final Selection requires exactly three participants.</text>
+                <text>A veteran of the Demon Slayer Corps has arrived to escort your colonists to Mount Sagiri. Their haori bears the Corps' symbol, and their eyes hold the weight of countless battles.\n\n"Seven nights among demons. Send one to three candidates. Those who survive join our ranks. Those who fall become demon feast."\n\nChoose wisely - combat skills and physical toughness improve survival odds, while frailty makes the trial far more perilous.\n\nIMPORTANT: Colonists with demon blood CANNOT participate. The wisteria barriers surrounding Mount Sagiri are lethal to demons.</text>
                 <lookTargets>$pickupShipThing</lookTargets>
               </li>
             </nodes>
@@ -184,7 +192,7 @@
               <li Class="QuestNode_DropPods">
                 <contents>$finalSelectionRewards</contents>
                 <customLetterLabel>Final Selection Rewards</customLetterLabel>
-                <customLetterText>Rewards from your successful Final Selection have arrived via transport pod.</customLetterText>
+                <customLetterText>Rewards from the Final Selection have arrived via transport pod.</customLetterText>
               </li>
 
               <li Class="QuestNode_End">
@@ -196,12 +204,21 @@
 
         <li Class="QuestNode_Signal">
           <inSignal>ColonistsDied</inSignal>
-          <node Class="QuestNode_Letter">
-            <label>Final Selection - Total Failure</label>
-            <text>No one has returned from Mount Sagiri. The demons have claimed another group of hopefuls. Their sacrifice will not be forgotten, but the Corps gains no new members this day.</text>
-            <letterDef>Death</letterDef>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label>Final Selection - Total Failure</label>
+                <text>No one has returned from Mount Sagiri. The demons have claimed all who entered. Their sacrifice will not be forgotten, but the Corps gains no new members this day.</text>
+                <letterDef>Death</letterDef>
+              </li>
+
+              <li Class="QuestNode_End">
+                <outcome>Fail</outcome>
+              </li>
+            </nodes>
           </node>
         </li>
+
       </nodes>
     </root>
   </QuestScriptDef>

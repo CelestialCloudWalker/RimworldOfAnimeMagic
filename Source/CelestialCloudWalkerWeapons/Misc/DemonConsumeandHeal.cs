@@ -165,7 +165,6 @@ namespace AnimeArsenal
         {
             var caster = parent.pawn;
 
-            // FIX: Add XP tracking for humanlike pawns
             if (target.RaceProps.Humanlike && BloodGene != null)
             {
                 BloodGene.AddPawnEaten();
@@ -228,7 +227,6 @@ namespace AnimeArsenal
             Messages.Message($"{caster.LabelShort} devours {target.LabelShort} completely!",
                 caster, MessageTypeDefOf.NeutralEvent, false);
 
-            // FIX: Add XP tracking for instant kill devour
             if (target.RaceProps.Humanlike && BloodGene != null)
             {
                 BloodGene.AddPawnEaten();
@@ -260,7 +258,6 @@ namespace AnimeArsenal
             FeedCaster(caster, nutrition);
             MakeEffects(target.Position, target.Map);
 
-            // FIX: Ensure corpse is properly removed
             if (target.Dead)
             {
                 var newCorpse = target.Corpse;
@@ -368,7 +365,6 @@ namespace AnimeArsenal
 
         private void ProcessTarget(Pawn target, Corpse corpse = null)
         {
-            // FIX: Improved corpse destruction with explicit DestroyMode
             if (corpse != null)
             {
                 if (!corpse.Destroyed)
@@ -400,7 +396,6 @@ namespace AnimeArsenal
                 }
                 else
                 {
-                    // FIX: Also destroy corpse if target died from drain damage
                     var newCorpse = target.Corpse;
                     if (newCorpse != null && !newCorpse.Destroyed)
                     {

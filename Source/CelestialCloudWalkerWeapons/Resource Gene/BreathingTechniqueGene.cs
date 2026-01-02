@@ -1,8 +1,9 @@
-﻿using Talented;
+﻿using RimWorld;
+using System;
+using System.Collections.Generic;
+using Talented;
 using UnityEngine;
 using Verse;
-using RimWorld;
-using System.Collections.Generic;
 
 namespace AnimeArsenal
 {
@@ -68,6 +69,41 @@ namespace AnimeArsenal
             }
         }
 
+        public bool CanAddBreathingGene(Pawn pawn)
+        {
+            if (pawn?.genes != null)
+            {
+                BreathingTechniqueGeneDef breathingDef = def as BreathingTechniqueGeneDef;
+
+                if (breathingDef?.canCoexistWithDemon == true)
+                {
+                    return true;
+                }
+
+                var demonGene = pawn.genes.GenesListForReading.Find(g =>
+                    g.def is BloodDemonArtsGeneDef);
+
+                if (demonGene != null)
+                {
+                    BloodDemonArtsGeneDef demonDef = demonGene.def as BloodDemonArtsGeneDef;
+
+                    if (demonDef?.allowedBreathingGenes == null || demonDef.allowedBreathingGenes.Count == 0)
+                    {
+                        return false;
+                    }
+
+                    if (demonDef.allowedBreathingGenes.Contains(def))
+                    {
+                        return true;
+                    }
+
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         public override void PostAdd()
         {
             base.PostAdd();
@@ -77,8 +113,82 @@ namespace AnimeArsenal
                 Value = Max * 0.5f;
             }
 
-            
             ForceResourceSync();
+
+            CheckAndRemoveConflictingDemonGenes();
+        }
+
+        private void CheckAndRemoveConflictingDemonGenes()
+        {
+            if (pawn?.genes == null) return;
+
+            BreathingTechniqueGeneDef breathingDef = def as BreathingTechniqueGeneDef;
+
+            if (breathingDef?.canCoexistWithDemon == true)
+            {
+                return;
+            }
+
+            var demonGenesToRemove = new List<Gene>();
+
+            foreach (var gene in pawn.genes.GenesListForReading)
+            {
+                if (gene.def is BloodDemonArtsGeneDef demonDef)
+                {
+                    bool isAllowed = false;
+
+                    if (demonDef.allowedBreathingGenes != null &&
+                        demonDef.allowedBreathingGenes.Contains(def))
+                    {
+                        isAllowed = true;
+                    }
+
+                    if (!isAllowed)
+                    {
+                        demonGenesToRemove.Add(gene);
+                    }
+                }
+            }
+
+            if (demonGenesToRemove.Count > 0)
+            {
+                foreach (var gene in demonGenesToRemove)
+                {
+                    if (gene is BloodDemonArtsGene demonGene)
+                    {
+                        ResetAllTalentTrees(demonGene);
+                    }
+
+                    pawn.genes.RemoveGene(gene);
+                }
+
+                Messages.Message(
+                    $"{pawn.Name.ToStringShort} lost their demon powers upon learning breathing techniques!",
+                    pawn,
+                    MessageTypeDefOf.NegativeEvent
+                );
+            }
+        }
+
+        private void ResetAllTalentTrees(Gene_TalentBase talentGene)
+        {
+            try
+            {
+                foreach (var treeData in talentGene.AvailableTrees())
+                {
+                    var handler = treeData.handler;
+                    if (handler != null)
+                    {
+                        ResetTreeTracker.AllowCustomTreeReset = true;
+                        handler.ResetTree();
+                        ResetTreeTracker.AllowCustomTreeReset = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Warning($"[AnimeArsenal] Error resetting talent trees: {ex.Message}");
+            }
         }
 
         public override void PostMake()

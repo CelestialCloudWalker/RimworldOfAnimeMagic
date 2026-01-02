@@ -13,6 +13,8 @@ namespace AnimeArsenal
         public int ticksPerExhaustionIncrease = 1250;
         public int exhausationCooldownTicks = 2500;
         public List<Color> skinTintChoices;
+
+        public List<GeneDef> allowedBreathingGenes;
         public BloodDemonArtsGeneDef()
         {
             geneClass = typeof(BloodDemonArtsGene);

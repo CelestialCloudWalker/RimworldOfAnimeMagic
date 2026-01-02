@@ -187,8 +187,8 @@
       <graphicClass>Graphic_Single</graphicClass>
       <color>(150,30,30)</color>
     </graphicData>
-    <soundInteract>Cloth_Drop</soundInteract>
-    <soundDrop>Cloth_Drop</soundDrop>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
     <useHitPoints>false</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
     <statBases>

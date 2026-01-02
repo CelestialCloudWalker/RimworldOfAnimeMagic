@@ -15,6 +15,8 @@ namespace AnimeArsenal
 
         public bool scaleWithBreathing = true;
 
+        public bool canCoexistWithDemon = false;
+
         public BreathingTechniqueGeneDef()
         {
             this.geneClass = typeof(BreathingTechniqueGene);

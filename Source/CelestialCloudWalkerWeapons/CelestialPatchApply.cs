@@ -3,7 +3,6 @@ using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using Talented;
@@ -23,21 +22,20 @@ namespace AnimeArsenal
         }
     }
 
-    [HarmonyPatch(typeof(Verb_MeleeAttackDamage))]
-    [HarmonyPatch("ApplyMeleeDamageToTarget")]
+    [HarmonyPatch(typeof(Verb_MeleeAttackDamage), "ApplyMeleeDamageToTarget")]
     public static class Patch_Verb_MeleeAttack_ApplyMeleeDamageToTarget
     {
         public static void Postfix(Verb_MeleeAttack __instance, LocalTargetInfo target, ref DamageWorker.DamageResult __result)
         {
-            if (__instance.EquipmentSource != null && target.Thing is Pawn targetPawn && __instance.CasterPawn != null)
-            {
-                IEnumerable<EnchantComp> enchantments = __instance.CasterPawn.health.hediffSet.hediffs
-                    .Select(x => x.TryGetComp<EnchantComp>())
-                    .Where(x => x != null);
+            if (__instance.EquipmentSource == null || !(target.Thing is Pawn targetPawn) || __instance.CasterPawn == null)
+                return;
 
-                foreach (var item in enchantments)
-                    item.ApplyEnchant(targetPawn);
-            }
+            var enchantments = __instance.CasterPawn.health.hediffSet.hediffs
+                .Select(x => x.TryGetComp<EnchantComp>())
+                .Where(x => x != null);
+
+            foreach (var enchant in enchantments)
+                enchant.ApplyEnchant(targetPawn);
         }
     }
 
@@ -48,9 +46,7 @@ namespace AnimeArsenal
         public static void Prefix(Thing eq, ref Vector3 drawLoc, ref float aimAngle)
         {
             if (eq?.def?.HasModExtension<DrawOffsetExt>() == true)
-            {
                 drawLoc += eq.def.GetModExtension<DrawOffsetExt>().GetOffsetForRot(eq.Rotation);
-            }
         }
     }
 
@@ -63,12 +59,15 @@ namespace AnimeArsenal
         static bool Prefix(Pawn_HealthTracker __instance)
         {
             Pawn pawn = pawnField(__instance);
-            if (pawn == null || pawn.Dead || pawn.health?.hediffSet == null) return true;
+            if (pawn == null || pawn.Dead || pawn.health?.hediffSet == null)
+                return true;
+
             if (!(pawn.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) ?? false))
                 return true;
 
             var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
                 p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
+
             if (neck != null && pawn.health.hediffSet.PartIsMissing(neck))
                 return true;
 
@@ -93,15 +92,14 @@ namespace AnimeArsenal
         static void Postfix(Pawn_HealthTracker __instance, ref bool __result)
         {
             Pawn pawn = pawnField(__instance);
-            if (pawn?.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) == true)
-            {
-                var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
-                    p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
-                if (neck != null && !pawn.health.hediffSet.PartIsMissing(neck))
-                {
-                    __result = false;
-                }
-            }
+            if (pawn?.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) != true)
+                return;
+
+            var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
+                p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
+
+            if (neck != null && !pawn.health.hediffSet.PartIsMissing(neck))
+                __result = false;
         }
     }
 
@@ -110,53 +108,41 @@ namespace AnimeArsenal
     {
         static void Postfix(PawnCapacitiesHandler __instance, PawnCapacityDef capacity, ref float __result)
         {
-            try
-            {
-                var pawnField = typeof(PawnCapacitiesHandler).GetField("pawn",
-                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                if (pawnField == null) return;
+            var pawnField = typeof(PawnCapacitiesHandler).GetField("pawn",
+                BindingFlags.NonPublic | BindingFlags.Instance);
 
-                var pawn = (Pawn)pawnField.GetValue(__instance);
-                if (pawn?.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) != true)
-                    return;
+            if (pawnField == null) return;
 
-                if (capacity == PawnCapacityDefOf.BloodPumping ||
-                    capacity == PawnCapacityDefOf.Consciousness ||
-                    capacity == PawnCapacityDefOf.Moving)
-                {
-                    var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
-                        p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
+            var pawn = (Pawn)pawnField.GetValue(__instance);
+            if (pawn?.genes?.HasActiveGene(DefDatabase<GeneDef>.GetNamed("BloodDemonArt")) != true)
+                return;
 
-                    if (neck == null || !pawn.health.hediffSet.PartIsMissing(neck))
-                    {
-                        bool hasHeart = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
-                            part.Part.def.defName == "Heart" || part.Part.def.defName == "AA_DemonHeart");
-                        bool hasBrain = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
-                            part.Part.def.defName == "Brain" || part.Part.def.defName == "AA_DemonBrain");
-                        bool hasSkull = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
-                            part.Part.def.defName == "Skull" || part.Part.def.defName == "AA_DemonSkull");
-                        bool hasHead = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
-                            part.Part.def.defName == "Head");
+            if (capacity != PawnCapacityDefOf.BloodPumping &&
+                capacity != PawnCapacityDefOf.Consciousness &&
+                capacity != PawnCapacityDefOf.Moving)
+                return;
 
-                        if (capacity == PawnCapacityDefOf.BloodPumping && hasHeart)
-                        {
-                            __result = Mathf.Max(__result, 0.5f);
-                        }
-                        else if (capacity == PawnCapacityDefOf.Consciousness && hasBrain && hasHead && hasSkull)
-                        {
-                            __result = Mathf.Max(__result, 0.5f);
-                        }
-                        else if (capacity == PawnCapacityDefOf.Moving && hasHeart && hasBrain && hasHead)
-                        {
-                            __result = Mathf.Max(__result, 0.3f);
-                        }
-                    }
-                }
-            }
-            catch (System.Exception ex)
-            {
-                Log.Error($"Error in Patch_CapacitiesAfterRegeneration: {ex}");
-            }
+            var neck = pawn.RaceProps?.body?.AllParts?.FirstOrDefault(p =>
+                p.def.defName == "Neck" || p.def.defName == "AA_DemonNeck");
+
+            if (neck != null && pawn.health.hediffSet.PartIsMissing(neck))
+                return;
+
+            bool hasHeart = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
+                part.Part.def.defName == "Heart" || part.Part.def.defName == "AA_DemonHeart");
+            bool hasBrain = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
+                part.Part.def.defName == "Brain" || part.Part.def.defName == "AA_DemonBrain");
+            bool hasSkull = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
+                part.Part.def.defName == "Skull" || part.Part.def.defName == "AA_DemonSkull");
+            bool hasHead = !pawn.health.hediffSet.GetMissingPartsCommonAncestors().Any(part =>
+                part.Part.def.defName == "Head");
+
+            if (capacity == PawnCapacityDefOf.BloodPumping && hasHeart)
+                __result = Mathf.Max(__result, 0.5f);
+            else if (capacity == PawnCapacityDefOf.Consciousness && hasBrain && hasHead && hasSkull)
+                __result = Mathf.Max(__result, 0.5f);
+            else if (capacity == PawnCapacityDefOf.Moving && hasHeart && hasBrain && hasHead)
+                __result = Mathf.Max(__result, 0.3f);
         }
     }
 
@@ -167,13 +153,10 @@ namespace AnimeArsenal
 
         public static void Postfix(Thing __instance, DamageInfo dinfo, DamageWorker.DamageResult __result)
         {
-            if (isProcessingGeneDamage)
+            if (isProcessingGeneDamage || __result.totalDamageDealt <= 0)
                 return;
 
             if (!(__instance is Pawn victim) || victim.genes == null)
-                return;
-
-            if (__result.totalDamageDealt <= 0)
                 return;
 
             try
@@ -224,11 +207,8 @@ namespace AnimeArsenal
 
             foreach (var modExt in modExtensions)
             {
-                bool hasTargetGene = victim.genes.GenesListForReading.Any(gene => gene.def.defName == modExt.targetGene);
-                if (hasTargetGene)
-                {
+                if (victim.genes.GenesListForReading.Any(gene => gene.def.defName == modExt.targetGene))
                     ApplyGeneDamage(victim, modExt, dinfo, totalDamageDealt);
-                }
             }
         }
 
@@ -254,7 +234,6 @@ namespace AnimeArsenal
                             bodyPart,
                             originalDinfo.Weapon
                         );
-
                         modExt.damageType.Worker.Apply(extraDamageInfo, victim);
                     }
                 }
@@ -270,11 +249,11 @@ namespace AnimeArsenal
                     originalDinfo.HitPart,
                     originalDinfo.Weapon
                 );
-
                 modExt.damageType.Worker.Apply(extraDamageInfo, victim);
             }
         }
     }
+
     [StaticConstructorOnStartup]
     public static class HarmonyPatches
     {
@@ -290,126 +269,45 @@ namespace AnimeArsenal
     {
         public static void Postfix(ref IEnumerable<DamageInfo> __result, Verb_MeleeAttackDamage __instance, LocalTargetInfo target)
         {
-            try
+            var weapon = __instance.EquipmentSource;
+            if (weapon?.Stuff == null)
+                return;
+
+            string materialDefName = weapon.Stuff.defName;
+            if (materialDefName != "Scarlet_Crimson_Iron_Sand" && materialDefName != "Scarlet_Ore")
+                return;
+
+            var targetPawn = target.Pawn;
+            if (targetPawn?.genes == null)
+                return;
+
+            List<string> targetGenes = new List<string>
             {
-                var weapon = __instance.EquipmentSource;
-                if (weapon?.Stuff == null)
-                    return;
+                "BloodDemonArt_LowerMoon",
+                "BloodDemonArt_UpperMoon",
+                "BloodDemonArt",
+            };
 
-                string materialDefName = weapon.Stuff.defName;
-                if (materialDefName != "Scarlet_Crimson_Iron_Sand" && materialDefName != "Scarlet_Ore")
-                    return;
-
-                var targetPawn = target.Pawn;
-                if (targetPawn?.genes == null)
-                    return;
-
-                List<string> targetGenes = new List<string>
+            bool hasDemonGene = false;
+            foreach (string geneDefName in targetGenes)
+            {
+                GeneDef gene = DefDatabase<GeneDef>.GetNamedSilentFail(geneDefName);
+                if (gene != null && targetPawn.genes.HasActiveGene(gene))
                 {
-                    "BloodDemonArt_LowerMoon",
-                    "BloodDemonArt_UpperMoon",
-                    "BloodDemonArt",
-                };
-
-                bool hasDemonGene = false;
-                foreach (string geneDefName in targetGenes)
-                {
-                    GeneDef gene = DefDatabase<GeneDef>.GetNamedSilentFail(geneDefName);
-                    if (gene != null && targetPawn.genes.HasActiveGene(gene))
-                    {
-                        hasDemonGene = true;
-                        break;
-                    }
-                }
-
-                if (!hasDemonGene)
-                    return;
-
-                var damageInfos = __result.ToList();
-                var bonusDamageInfos = new List<DamageInfo>();
-
-                foreach (var bodyPart in targetPawn.health.hediffSet.GetNotMissingParts())
-                {
-                    if (bodyPart.def.defName == "Neck" || bodyPart.def.defName == "AA_DemonNeck")
-                    {
-                        float damageAmount = materialDefName == "Scarlet_Ore" ? 50f : 40f;
-
-                        var bonusDamage = new DamageInfo(
-                            DamageDefOf.Cut,
-                            damageAmount,
-                            0.8f,
-                            -1f,
-                            __instance.caster,
-                            bodyPart,
-                            weapon.def,
-                            DamageInfo.SourceCategory.ThingOrUnknown,
-                            weapon
-                        );
-                        bonusDamageInfos.Add(bonusDamage);
-                        break;
-                    }
-                }
-
-                if (bonusDamageInfos.Any())
-                {
-                    __result = damageInfos.Concat(bonusDamageInfos);
+                    hasDemonGene = true;
+                    break;
                 }
             }
-            catch (Exception ex)
+
+            if (!hasDemonGene)
+                return;
+
+            var damageInfos = __result.ToList();
+            var bonusDamageInfos = new List<DamageInfo>();
+
+            foreach (var bodyPart in targetPawn.health.hediffSet.GetNotMissingParts())
             {
-                Log.Error($"[ScarletMaterials] Error in demon damage patch: {ex}");
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(Projectile), "Impact")]
-    public static class Projectile_Impact_Patch
-    {
-        public static void Prefix(Projectile __instance, Thing hitThing)
-        {
-            try
-            {
-                var launcher = __instance.Launcher;
-                if (launcher == null)
-                    return;
-
-                if (!(launcher is Pawn pawn) || pawn.equipment?.Primary?.Stuff == null)
-                    return;
-
-                var weapon = pawn.equipment.Primary;
-                string materialDefName = weapon.Stuff.defName;
-
-                if (materialDefName != "Scarlet_Crimson_Iron_Sand" && materialDefName != "Scarlet_Ore")
-                    return;
-
-                if (!(hitThing is Pawn targetPawn) || targetPawn.genes == null)
-                    return;
-
-                List<string> targetGenes = new List<string>
-                {
-                    "BloodDemonArt_LowerMoon",
-                    "BloodDemonArt_UpperMoon",
-                    "BloodDemonArt",
-                };
-
-                bool hasDemonGene = false;
-                foreach (string geneDefName in targetGenes)
-                {
-                    GeneDef gene = DefDatabase<GeneDef>.GetNamedSilentFail(geneDefName);
-                    if (gene != null && targetPawn.genes.HasActiveGene(gene))
-                    {
-                        hasDemonGene = true;
-                        break;
-                    }
-                }
-
-                if (!hasDemonGene)
-                    return;
-
-                var neckPart = targetPawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(
-                    bp => bp.def.defName == "Neck" || bp.def.defName == "AA_DemonNeck");
-
-                if (neckPart != null)
+                if (bodyPart.def.defName == "Neck" || bodyPart.def.defName == "AA_DemonNeck")
                 {
                     float damageAmount = materialDefName == "Scarlet_Ore" ? 50f : 40f;
 
@@ -418,22 +316,84 @@ namespace AnimeArsenal
                         damageAmount,
                         0.8f,
                         -1f,
-                        pawn,
-                        neckPart,
+                        __instance.caster,
+                        bodyPart,
                         weapon.def,
                         DamageInfo.SourceCategory.ThingOrUnknown,
                         weapon
                     );
-
-                    targetPawn.TakeDamage(bonusDamage);
+                    bonusDamageInfos.Add(bonusDamage);
+                    break;
                 }
             }
-            catch (Exception ex)
+
+            if (bonusDamageInfos.Any())
+                __result = damageInfos.Concat(bonusDamageInfos);
+        }
+    }
+
+    [HarmonyPatch(typeof(Projectile), "Impact")]
+    public static class Projectile_Impact_Patch
+    {
+        public static void Prefix(Projectile __instance, Thing hitThing)
+        {
+            var launcher = __instance.Launcher;
+            if (launcher == null || !(launcher is Pawn pawn) || pawn.equipment?.Primary?.Stuff == null)
+                return;
+
+            var weapon = pawn.equipment.Primary;
+            string materialDefName = weapon.Stuff.defName;
+
+            if (materialDefName != "Scarlet_Crimson_Iron_Sand" && materialDefName != "Scarlet_Ore")
+                return;
+
+            if (!(hitThing is Pawn targetPawn) || targetPawn.genes == null)
+                return;
+
+            List<string> targetGenes = new List<string>
             {
-                Log.Error($"[ScarletMaterials] Error in ranged demon damage patch: {ex}");
+                "BloodDemonArt_LowerMoon",
+                "BloodDemonArt_UpperMoon",
+                "BloodDemonArt",
+            };
+
+            bool hasDemonGene = false;
+            foreach (string geneDefName in targetGenes)
+            {
+                GeneDef gene = DefDatabase<GeneDef>.GetNamedSilentFail(geneDefName);
+                if (gene != null && targetPawn.genes.HasActiveGene(gene))
+                {
+                    hasDemonGene = true;
+                    break;
+                }
+            }
+
+            if (!hasDemonGene)
+                return;
+
+            var neckPart = targetPawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(
+                bp => bp.def.defName == "Neck" || bp.def.defName == "AA_DemonNeck");
+
+            if (neckPart != null)
+            {
+                float damageAmount = materialDefName == "Scarlet_Ore" ? 50f : 40f;
+
+                var bonusDamage = new DamageInfo(
+                    DamageDefOf.Cut,
+                    damageAmount,
+                    0.8f,
+                    -1f,
+                    pawn,
+                    neckPart,
+                    weapon.def,
+                    DamageInfo.SourceCategory.ThingOrUnknown,
+                    weapon
+                );
+                targetPawn.TakeDamage(bonusDamage);
             }
         }
     }
+
     [HarmonyPatch(typeof(Gene_TalentBase), "GetGizmos")]
     public static class Gene_TalentBase_GetGizmos_Patch
     {
@@ -447,9 +407,8 @@ namespace AnimeArsenal
             {
                 if (isCustomGene && gizmo is Command_Action cmd && Prefs.DevMode &&
                     cmd.defaultLabel.Contains("Refund all trees"))
-                {
                     continue;
-                }
+
                 yield return gizmo;
             }
 
@@ -458,50 +417,40 @@ namespace AnimeArsenal
                 Prefs.DevMode &&
                 DebugSettings.godMode)
             {
-                string resourceLabel = !string.IsNullOrEmpty(talentedDef.resourceLabel) ? talentedDef.resourceLabel : "Resource";
+                string resourceLabel = !string.IsNullOrEmpty(talentedDef.resourceLabel) ?
+                    talentedDef.resourceLabel : "Resource";
 
                 yield return new Command_Action
                 {
                     defaultLabel = "DEV: +10 " + resourceLabel,
-                    defaultDesc = "Add 10 " + resourceLabel.ToLower() + " (Debug)",
-                    action = () =>
-                    {
-                        __instance.Value += 10f;
-                    }
+                    defaultDesc = "Add 10 " + resourceLabel.ToLower(),
+                    action = () => __instance.Value += 10f
                 };
 
                 yield return new Command_Action
                 {
                     defaultLabel = "DEV: -10 " + resourceLabel,
-                    defaultDesc = "Remove 10 " + resourceLabel.ToLower() + " (Debug)",
-                    action = () =>
-                    {
-                        __instance.Value -= 10f;
-                    }
+                    defaultDesc = "Remove 10 " + resourceLabel.ToLower(),
+                    action = () => __instance.Value -= 10f
                 };
 
                 yield return new Command_Action
                 {
                     defaultLabel = "DEV: Fill " + resourceLabel,
-                    defaultDesc = "Fill " + resourceLabel.ToLower() + " to max (Debug)",
-                    action = () =>
-                    {
-                        __instance.Value = __instance.Max;
-                    }
+                    defaultDesc = "Fill " + resourceLabel.ToLower() + " to max",
+                    action = () => __instance.Value = __instance.Max
                 };
 
                 yield return new Command_Action
                 {
                     defaultLabel = "DEV: Empty " + resourceLabel,
-                    defaultDesc = "Empty " + resourceLabel.ToLower() + " to 0 (Debug)",
-                    action = () =>
-                    {
-                        __instance.Value = 0f;
-                    }
+                    defaultDesc = "Empty " + resourceLabel.ToLower() + " to 0",
+                    action = () => __instance.Value = 0f
                 };
             }
         }
     }
+
     public static class ResetTreeTracker
     {
         public static bool AllowCustomTreeReset = false;
@@ -512,35 +461,27 @@ namespace AnimeArsenal
     {
         static bool Prefix(BaseTreeHandler __instance)
         {
-            try
-            {
-                var geneField = typeof(BaseTreeHandler).GetField("gene", BindingFlags.NonPublic | BindingFlags.Instance);
+            var geneField = typeof(BaseTreeHandler).GetField("gene", BindingFlags.NonPublic | BindingFlags.Instance);
+            if (geneField == null)
+                return true;
 
-                if (geneField != null)
+            var ownerGene = geneField.GetValue(__instance);
+
+            if (ownerGene is BreathingTechniqueGene || ownerGene is BloodDemonArtsGene || ownerGene is BreathingPotentialGene)
+            {
+                string treeName = __instance.TreeDef?.defName ?? "";
+                if (treeName.Contains("Breathing") || treeName.Contains("Demon") ||
+                    treeName.Contains("Blood") || treeName.Contains("Art") ||
+                    treeName.Contains("Potential"))
                 {
-                    var ownerGene = geneField.GetValue(__instance);
-
-                    if (ownerGene is BreathingTechniqueGene || ownerGene is BloodDemonArtsGene || ownerGene is BreathingPotentialGene)
-                    {
-                        string treeName = __instance.TreeDef?.defName ?? "";
-
-                        if (treeName.Contains("Breathing") || treeName.Contains("Demon") ||
-                            treeName.Contains("Blood") || treeName.Contains("Art") ||
-                            treeName.Contains("Potential"))
-                        {
-                            return ResetTreeTracker.AllowCustomTreeReset;
-                        }
-                    }
+                    return ResetTreeTracker.AllowCustomTreeReset;
                 }
-            }
-            catch (System.Exception ex)
-            {
-                Log.Error($"BaseTreeHandler_ResetTree_Patch failed: {ex.Message}");
             }
 
             return true;
         }
     }
+
     [StaticConstructorOnStartup]
     public static class HarmonyPatcher
     {
@@ -548,215 +489,46 @@ namespace AnimeArsenal
         {
             var harmony = new Harmony("rimworld.animearsenal.demonslayer");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-            Log.Message("[AnimeArsenal] Harmony patches applied successfully!");
         }
     }
-}
-[HarmonyPatch]
-public static class CorpseEatingPatches
-{
-    private static readonly HashSet<int> processedCorpses = new HashSet<int>();
-    private static readonly Dictionary<int, Corpse> activeEatingCorpses = new Dictionary<int, Corpse>();
 
-    [HarmonyPatch(typeof(Pawn_JobTracker), "StartJob")]
-    [HarmonyPostfix]
-    public static void Postfix_StartJob(Pawn_JobTracker __instance, Job newJob)
+    [HarmonyPatch]
+    public static class CorpseEatingPatches
     {
-        try
+        private static readonly HashSet<int> processedCorpses = new HashSet<int>();
+
+        [HarmonyPatch(typeof(Thing), "Ingested")]
+        [HarmonyPostfix]
+        public static void Postfix_Ingested(Thing __instance, Pawn ingester)
         {
-            if (newJob?.def != JobDefOf.Ingest) return;
+            if (ingester?.genes == null)
+                return;
 
-            var pawnField = AccessTools.Field(typeof(Pawn_JobTracker), "pawn");
-            var pawn = (Pawn)pawnField?.GetValue(__instance);
+            if (!(__instance is Corpse corpse) || corpse.InnerPawn?.RaceProps?.Humanlike != true)
+                return;
 
-            if (pawn?.genes == null) return;
+            int corpseId = corpse.thingIDNumber;
+            if (processedCorpses.Contains(corpseId))
+                return;
 
-            var demonGene = pawn.genes.GenesListForReading
+            var demonGene = ingester.genes.GenesListForReading
                 .FirstOrDefault(g => g.def.defName == "BloodDemonArt") as BloodDemonArtsGene;
 
-            if (demonGene == null) return;
-
-            var target = newJob.GetTarget(TargetIndex.A).Thing;
-            if (target is Corpse corpse && corpse.InnerPawn?.RaceProps?.Humanlike == true)
+            if (demonGene != null)
             {
-                int corpseId = corpse.thingIDNumber;
-                if (!activeEatingCorpses.ContainsKey(corpseId))
-                {
-                    activeEatingCorpses[corpseId] = corpse;
-                    Log.Message($"[AnimeArsenal] Demon {pawn.LabelShort} started eating corpse {corpse.InnerPawn.LabelShort} (ID: {corpseId})");
-                }
+                processedCorpses.Add(corpseId);
+                demonGene.AddPawnEaten();
+                Messages.Message($"{ingester.Name.ToStringShort} consumed {corpse.InnerPawn.Name.ToStringShort}!",
+                               ingester, MessageTypeDefOf.PositiveEvent);
+
+                if (!corpse.Destroyed)
+                    corpse.Destroy(DestroyMode.Vanish);
+
+                if (processedCorpses.Count > 100)
+                    processedCorpses.Clear();
             }
         }
-        catch (System.Exception ex)
-        {
-            Log.Error($"[AnimeArsenal] Error in StartJob tracking: {ex}");
-        }
     }
-
-    [HarmonyPatch(typeof(Thing), "Ingested")]
-    [HarmonyPostfix]
-    public static void Postfix_Ingested(Thing __instance, Pawn ingester, float nutritionWanted)
-    {
-        try
-        {
-            if (ingester?.genes == null) return;
-
-            if (__instance is Corpse corpse &&
-                corpse.InnerPawn?.RaceProps?.Humanlike == true)
-            {
-                int corpseId = corpse.thingIDNumber;
-                if (!processedCorpses.Contains(corpseId))
-                {
-                    var demonGene = ingester.genes.GenesListForReading
-                        .FirstOrDefault(g => g.def.defName == "BloodDemonArt") as BloodDemonArtsGene;
-
-                    if (demonGene != null)
-                    {
-                        processedCorpses.Add(corpseId);
-                        demonGene.AddPawnEaten();
-                        Messages.Message($"{ingester.Name.ToStringShort} consumed {corpse.InnerPawn.Name.ToStringShort}!",
-                                       ingester, MessageTypeDefOf.PositiveEvent);
-                        Log.Message($"[AnimeArsenal] Demon {ingester.Name.ToStringShort} ate corpse via Ingested patch (ID: {corpseId})");
-
-                        // FIX: Destroy the corpse immediately after ingestion
-                        if (!corpse.Destroyed)
-                        {
-                            corpse.Destroy(DestroyMode.Vanish);
-                            Log.Message($"[AnimeArsenal] Destroyed corpse {corpseId} after ingestion");
-                        }
-
-                        if (processedCorpses.Count > 100)
-                        {
-                            processedCorpses.Clear();
-                        }
-                    }
-                }
-            }
-        }
-        catch (System.Exception ex)
-        {
-            Log.Error($"[AnimeArsenal] Error in ingestion tracking: {ex}");
-        }
-    }
-
-    [HarmonyPatch(typeof(Pawn_JobTracker), "EndCurrentJob")]
-    [HarmonyPostfix]
-    public static void Postfix_JobEnded(Pawn_JobTracker __instance, JobCondition condition)
-    {
-        try
-        {
-            var pawnField = AccessTools.Field(typeof(Pawn_JobTracker), "pawn");
-            var pawn = (Pawn)pawnField?.GetValue(__instance);
-
-            if (pawn?.genes == null) return;
-            if (__instance.curJob?.def != JobDefOf.Ingest) return;
-
-            var target = __instance.curJob.GetTarget(TargetIndex.A).Thing;
-            if (target is Corpse corpse &&
-                corpse.InnerPawn?.RaceProps?.Humanlike == true)
-            {
-                int corpseId = corpse.thingIDNumber;
-
-                // Remove from active eating tracking
-                activeEatingCorpses.Remove(corpseId);
-
-                if (condition == JobCondition.Succeeded)
-                {
-                    if (!processedCorpses.Contains(corpseId))
-                    {
-                        var demonGene = pawn.genes.GenesListForReading
-                            .FirstOrDefault(g => g.def.defName == "BloodDemonArt") as BloodDemonArtsGene;
-
-                        if (demonGene != null)
-                        {
-                            processedCorpses.Add(corpseId);
-                            demonGene.AddPawnEaten();
-                            Messages.Message($"{pawn.Name.ToStringShort} consumed {corpse.InnerPawn.Name.ToStringShort}!",
-                                           pawn, MessageTypeDefOf.PositiveEvent);
-                            Log.Message($"[AnimeArsenal] Demon {pawn.Name.ToStringShort} ate corpse via Job End patch (ID: {corpseId})");
-
-                            // FIX: Ensure corpse is destroyed at job completion
-                            if (!corpse.Destroyed)
-                            {
-                                corpse.Destroy(DestroyMode.Vanish);
-                                Log.Message($"[AnimeArsenal] Destroyed corpse {corpseId} after job completion");
-                            }
-
-                            if (processedCorpses.Count > 100)
-                            {
-                                processedCorpses.Clear();
-                            }
-                        }
-                    }
-                    else
-                    {
-                        // FIX: Even if already processed, ensure destruction
-                        if (!corpse.Destroyed)
-                        {
-                            corpse.Destroy(DestroyMode.Vanish);
-                            Log.Message($"[AnimeArsenal] Destroyed already-processed corpse {corpseId}");
-                        }
-                    }
-                }
-            }
-        }
-        catch (System.Exception ex)
-        {
-            Log.Error($"[AnimeArsenal] Error in job completion tracking: {ex}");
-        }
-    }
-
-    [HarmonyPatch(typeof(Corpse), "Destroy")]
-    [HarmonyPrefix]
-    public static void Prefix_CorpseDestroyed(Corpse __instance, DestroyMode mode)
-    {
-        try
-        {
-            if (__instance.InnerPawn?.RaceProps?.Humanlike != true) return;
-
-            int corpseId = __instance.thingIDNumber;
-
-            // Check if a demon is actively eating this corpse
-            if (activeEatingCorpses.ContainsKey(corpseId))
-            {
-                var map = __instance.Map;
-                if (map?.mapPawns?.AllPawns != null)
-                {
-                    foreach (var pawn in map.mapPawns.AllPawns)
-                    {
-                        if (pawn?.CurJob?.def == JobDefOf.Ingest &&
-                            pawn.CurJob.GetTarget(TargetIndex.A).Thing == __instance &&
-                            pawn.genes != null)
-                        {
-                            var demonGene = pawn.genes.GenesListForReading
-                                .FirstOrDefault(g => g.def.defName == "BloodDemonArt") as BloodDemonArtsGene;
-
-                            if (demonGene != null && !processedCorpses.Contains(corpseId))
-                            {
-                                processedCorpses.Add(corpseId);
-                                demonGene.AddPawnEaten();
-                                Messages.Message($"{pawn.Name.ToStringShort} consumed {__instance.InnerPawn.Name.ToStringShort}!",
-                                               pawn, MessageTypeDefOf.PositiveEvent);
-                                Log.Message($"[AnimeArsenal] Demon {pawn.Name.ToStringShort} ate corpse via Destroy patch (ID: {corpseId})");
-
-                                if (processedCorpses.Count > 100)
-                                {
-                                    processedCorpses.Clear();
-                                }
-                                break;
-                            }
-                        }
-                    }
-                }
-                activeEatingCorpses.Remove(corpseId);
-            }
-        }
-        catch (System.Exception ex)
-        {
-            Log.Error($"[AnimeArsenal] Error in corpse destruction tracking: {ex}");
-        }
-    }
-}
 
     [HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
     public static class StatWorker_BloodPoolBonus
@@ -765,147 +537,277 @@ public static class CorpseEatingPatches
 
         public static void Postfix(StatWorker __instance, StatRequest req, ref float __result)
         {
-            if (req.Thing is Pawn pawn && pawn.genes != null)
-            {
-                var demonGene = pawn.genes.GenesListForReading
-                    .OfType<BloodDemonArtsGene>()
-                    .FirstOrDefault();
+            if (!(req.Thing is Pawn pawn) || pawn.genes == null)
+                return;
 
-                if (demonGene != null)
-                {
-                    StatDef currentStat = (StatDef)statField.GetValue(__instance);
-                    float offset = demonGene.GetStatOffset(currentStat);
-                    if (offset != 0f)
-                    {
-                        __result += offset;
-                    }
-                }
+            var demonGene = pawn.genes.GenesListForReading
+                .OfType<BloodDemonArtsGene>()
+                .FirstOrDefault();
+
+            if (demonGene != null)
+            {
+                StatDef currentStat = (StatDef)statField.GetValue(__instance);
+                float offset = demonGene.GetStatOffset(currentStat);
+                if (offset != 0f)
+                    __result += offset;
             }
         }
     }
-
 
     [HarmonyPatch(typeof(DamageWorker_AddInjury), "ChooseHitPart")]
     public static class Patch_ChooseHitPart
     {
         public static void Postfix(ref BodyPartRecord __result, DamageInfo dinfo, Pawn pawn)
         {
-            Log.Message($"[TransparentWorld DEBUG] ChooseHitPart called - Instigator: {dinfo.Instigator?.GetType()?.Name ?? "null"}");
+            if (!(dinfo.Instigator is Pawn attacker) || attacker.health?.hediffSet == null)
+                return;
 
-            if (dinfo.Instigator is Pawn attacker && attacker.health?.hediffSet != null)
-            {
-                Log.Message($"[TransparentWorld DEBUG] Attacker is pawn: {attacker.Name}");
+            var transparentWorldHediff = attacker.health.hediffSet.hediffs
+                .FirstOrDefault(h => h.def.defName.StartsWith("TransparentWorld_"));
 
-                var transparentWorldHediff = attacker.health.hediffSet.hediffs
-                    .FirstOrDefault(h => h.def.defName.StartsWith("TransparentWorld_"));
+            if (transparentWorldHediff == null)
+                return;
 
-                if (transparentWorldHediff != null)
-                {
-                    Log.Message($"[TransparentWorld DEBUG] Found hediff: {transparentWorldHediff.def.defName}");
+            var props = transparentWorldHediff.def.GetModExtension<TransparentWorldProperties>();
+            if (props == null || props.organHitChanceBonus <= 0f)
+                return;
 
-                    var props = transparentWorldHediff.def.GetModExtension<TransparentWorldProperties>();
-                    if (props != null)
-                    {
-                        Log.Message($"[TransparentWorld DEBUG] Props found - organHitChanceBonus: {props.organHitChanceBonus}");
+            var organs = pawn.health.hediffSet.GetNotMissingParts()
+                .Where(part => part.def.tags?.Contains(BodyPartTagDefOf.BloodPumpingSource) == true ||
+                              part.def.tags?.Contains(BodyPartTagDefOf.BreathingSource) == true ||
+                              part.def.tags?.Contains(BodyPartTagDefOf.ConsciousnessSource) == true ||
+                              part.def.tags?.Contains(BodyPartTagDefOf.BloodFiltrationSource) == true ||
+                              part.def.tags?.Contains(BodyPartTagDefOf.MetabolismSource) == true)
+                .ToList();
 
-                        string originalPart = __result?.def?.defName ?? "null";
-
-                        if (props.organHitChanceBonus > 0f)
-                        {
-                            var organs = pawn.health.hediffSet.GetNotMissingParts()
-                                .Where(part => part.def.tags?.Contains(BodyPartTagDefOf.BloodPumpingSource) == true ||
-                                              part.def.tags?.Contains(BodyPartTagDefOf.BreathingSource) == true ||
-                                              part.def.tags?.Contains(BodyPartTagDefOf.ConsciousnessSource) == true ||
-                                              part.def.tags?.Contains(BodyPartTagDefOf.BloodFiltrationSource) == true ||
-                                              part.def.tags?.Contains(BodyPartTagDefOf.MetabolismSource) == true)
-                                .ToList();
-
-                            Log.Message($"[TransparentWorld DEBUG] Found {organs.Count} organs on {pawn.Name}");
-                            foreach (var organ in organs)
-                            {
-                                Log.Message($"[TransparentWorld DEBUG] - {organ.def.defName}");
-                            }
-
-                            if (organs.Any() && Rand.Chance(Mathf.Clamp01(props.organHitChanceBonus)))
-                            {
-                                var oldResult = __result;
-                                __result = organs.RandomElement();
-
-                                Log.Message($"[TransparentWorld SUCCESS] {attacker.Name} targeted organ: {originalPart} -> {__result.def.defName}");
-                            }
-                            else
-                            {
-                                Log.Message($"[TransparentWorld DEBUG] No organ hit - chance: {props.organHitChanceBonus}, organs available: {organs.Count}");
-                            }
-                        }
-                    }
-                    else
-                    {
-                        Log.Message($"[TransparentWorld DEBUG] No props found for hediff");
-                    }
-                }
-                else
-                {
-                    Log.Message($"[TransparentWorld DEBUG] No transparent world hediff found on {attacker.Name}");
-                }
-            }
-            else
-            {
-                Log.Message($"[TransparentWorld DEBUG] Instigator is not a pawn or has no health");
-            }
-        }
-}
-[StaticConstructorOnStartup]
-public static class StatPatches
-{
-    static StatPatches()
-    {
-        var harmony = new Harmony("com.animearsenal.trainingitems");
-        harmony.PatchAll();
-    }
-}
-
-[HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
-public static class StatWorker_GetValueUnfinalized_Patch
-{
-    [HarmonyPostfix]
-    public static void Postfix(StatRequest req, ref float __result, StatDef ___stat)
-    {
-        if (!req.HasThing || !(req.Thing is Pawn pawn))
-            return;
-        TrainingComp comp = pawn.TryGetComp<TrainingComp>();
-        if (comp == null)
-            return;
-        float boost = comp.GetStatBoost(___stat.defName);
-        if (boost != 0f)
-        {
-            __result += boost;
+            if (organs.Any() && Rand.Chance(Mathf.Clamp01(props.organHitChanceBonus)))
+                __result = organs.RandomElement();
         }
     }
-}
 
-[HarmonyPatch(typeof(PawnCapacityUtility), "CalculateCapacityLevel")]
-public static class PawnCapacityUtility_CalculateCapacityLevel_Patch
-{
-    [HarmonyPostfix]
-    public static void Postfix(HediffSet diffSet, PawnCapacityDef capacity, ref float __result)
+    [StaticConstructorOnStartup]
+    public static class StatPatches
     {
-        Pawn pawn = diffSet?.pawn;
-        if (pawn == null)
-            return;
-        TrainingComp comp = pawn.TryGetComp<TrainingComp>();
-        if (comp == null)
-            return;
-        float boost = comp.GetCapacityBoost(capacity.defName);
-        if (boost != 0f)
+        static StatPatches()
         {
-            __result += boost;
-            __result = UnityEngine.Mathf.Clamp(__result, 0f, 999f);
+            var harmony = new Harmony("com.animearsenal.trainingitems");
+            harmony.PatchAll();
+        }
+    }
 
-            if (capacity.defName == "Breathing" && boost > 0f)
+    [HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
+    public static class StatWorker_GetValueUnfinalized_Patch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(StatRequest req, ref float __result, StatDef ___stat)
+        {
+            if (!req.HasThing || !(req.Thing is Pawn pawn))
+                return;
+
+            TrainingComp comp = pawn.TryGetComp<TrainingComp>();
+            if (comp == null)
+                return;
+
+            float boost = comp.GetStatBoost(___stat.defName);
+            if (boost != 0f)
+                __result += boost;
+        }
+    }
+
+    [HarmonyPatch(typeof(PawnCapacityUtility), "CalculateCapacityLevel")]
+    public static class PawnCapacityUtility_CalculateCapacityLevel_Patch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(HediffSet diffSet, PawnCapacityDef capacity, ref float __result)
+        {
+            Pawn pawn = diffSet?.pawn;
+            if (pawn == null)
+                return;
+
+            TrainingComp comp = pawn.TryGetComp<TrainingComp>();
+            if (comp == null)
+                return;
+
+            float boost = comp.GetCapacityBoost(capacity.defName);
+            if (boost != 0f)
+                __result = Mathf.Clamp(__result + boost, 0f, 999f);
+        }
+    }
+
+    [StaticConstructorOnStartup]
+    public static class QuestGeneFilterPatches
+    {
+        static QuestGeneFilterPatches()
+        {
+            var harmony = new Harmony("AnimeArsenal.QuestGeneFilter");
+            harmony.PatchAll();
+        }
+    }
+
+    [HarmonyPatch(typeof(Dialog_FormCaravan), "DoBottomButtons")]
+    public static class Dialog_FormCaravan_DoBottomButtons_Patch
+    {
+        public static bool Prefix(Dialog_FormCaravan __instance, Rect rect)
+        {
+            var transferablesField = typeof(Dialog_FormCaravan).GetField("transferables",
+                BindingFlags.NonPublic | BindingFlags.Instance);
+
+            if (transferablesField == null)
+                return true;
+
+            var transferables = transferablesField.GetValue(__instance) as List<TransferableOneWay>;
+            if (transferables == null)
+                return true;
+
+            var quest = GetActiveQuestWithGeneRestrictions();
+            if (quest == null)
+                return true;
+
+            var questPart = quest.PartsListForReading?.OfType<QuestPart_GetGene>().FirstOrDefault();
+            if (questPart?.excludedGenes == null || !questPart.excludedGenes.Any())
+                return true;
+
+            var pawnsToSend = new List<Pawn>();
+            foreach (var transferable in transferables)
             {
-                Log.Message($"[TrainingBoost] {pawn.LabelShort} - Breathing capacity boosted by {boost} = {__result}");
+                if (transferable.CountToTransfer > 0 && transferable.AnyThing is Pawn pawn)
+                    pawnsToSend.Add(pawn);
             }
+
+            foreach (var pawn in pawnsToSend)
+            {
+                if (pawn.genes == null)
+                    continue;
+
+                foreach (var excludedGene in questPart.excludedGenes)
+                {
+                    if (pawn.genes.HasActiveGene(excludedGene))
+                    {
+                        Messages.Message($"{pawn.LabelShort} cannot participate due to having the {excludedGene.label} gene. They would die instantly in the wisteria barrier.",
+                                       MessageTypeDefOf.RejectInput, false);
+                        return true;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        private static Quest GetActiveQuestWithGeneRestrictions()
+        {
+            foreach (var quest in Find.QuestManager.QuestsListForReading)
+            {
+                if (quest.State != QuestState.Ongoing)
+                    continue;
+
+                var genePart = quest.PartsListForReading?.OfType<QuestPart_GetGene>().FirstOrDefault();
+                if (genePart?.excludedGenes != null && genePart.excludedGenes.Any())
+                {
+                    var lendPart = quest.PartsListForReading?.OfType<QuestPart_LendColonistsToFaction>().FirstOrDefault();
+                    if (lendPart != null)
+                        return quest;
+                }
+            }
+            return null;
+        }
+    }
+
+    public static class QuestGeneFilterUtility
+    {
+        public static bool ShouldDisablePawn(Pawn pawn)
+        {
+            if (pawn?.genes == null)
+                return false;
+
+            var activeQuest = Find.QuestManager.QuestsListForReading
+                .FirstOrDefault(q => q.State == QuestState.Ongoing &&
+                               q.PartsListForReading?.OfType<QuestPart_GetGene>().Any() == true);
+
+            if (activeQuest == null)
+                return false;
+
+            var questPart = activeQuest.PartsListForReading.OfType<QuestPart_GetGene>().FirstOrDefault();
+            if (questPart?.excludedGenes == null)
+                return false;
+
+            foreach (var excludedGene in questPart.excludedGenes)
+            {
+                if (pawn.genes.HasActiveGene(excludedGene))
+                    return true;
+            }
+
+            return false;
+        }
+
+        public static string GetExclusionReason(Pawn pawn)
+        {
+            if (pawn?.genes == null)
+                return null;
+
+            var activeQuest = Find.QuestManager.QuestsListForReading
+                .FirstOrDefault(q => q.State == QuestState.Ongoing &&
+                     q.PartsListForReading?.OfType<QuestPart_GetGene>().Any() == true);
+            if (activeQuest == null)
+                return null;
+
+            var questPart = activeQuest.PartsListForReading.OfType<QuestPart_GetGene>().FirstOrDefault();
+            if (questPart?.excludedGenes == null)
+                return null;
+
+            foreach (var excludedGene in questPart.excludedGenes)
+            {
+                if (pawn.genes.HasActiveGene(excludedGene))
+                    return $"Cannot participate: Has {excludedGene.label} gene - would die in wisteria barrier";
+            }
+
+            return null;
+        }
+    }
+
+    [HarmonyPatch(typeof(TransferableOneWayWidget), "DoRow")]
+    public static class TransferableOneWayWidget_DoRow_Patch
+    {
+        public static void Postfix(TransferableOneWay trad, Rect rect)
+        {
+            if (!(trad?.AnyThing is Pawn pawn))
+                return;
+
+            if (QuestGeneFilterUtility.ShouldDisablePawn(pawn))
+            {
+                Color oldColor = GUI.color;
+                GUI.color = new Color(1f, 0f, 0f, 0.15f);
+                Widgets.DrawHighlight(rect);
+                GUI.color = oldColor;
+
+                if (Mouse.IsOver(rect))
+                {
+                    string reason = QuestGeneFilterUtility.GetExclusionReason(pawn);
+                    if (reason != null)
+                        TooltipHandler.TipRegion(rect, reason);
+                }
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(TransferableOneWay), "CountToTransfer", MethodType.Setter)]
+    public static class TransferableOneWay_CountToTransfer_Patch
+    {
+        public static bool Prefix(TransferableOneWay __instance, int value)
+        {
+            if (value <= 0)
+                return true;
+
+            if (!(__instance.AnyThing is Pawn pawn))
+                return true;
+
+            if (QuestGeneFilterUtility.ShouldDisablePawn(pawn))
+            {
+                Messages.Message($"{pawn.LabelShort} cannot be selected - has excluded gene",
+                               MessageTypeDefOf.RejectInput, false);
+                return false;
+            }
+
+            return true;
         }
     }
 }

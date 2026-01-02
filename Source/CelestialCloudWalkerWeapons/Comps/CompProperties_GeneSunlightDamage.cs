@@ -40,7 +40,6 @@ namespace AnimeArsenal
             Scribe_Collections.Look(ref lastWarningTick, "lastWarningTick", LookMode.Value, LookMode.Value);
             Scribe_Collections.Look(ref sunTolerance, "sunTolerance", LookMode.Value, LookMode.Value);
 
-            // Initialize dictionaries if they're null after loading
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 if (accumulatedDamage == null) accumulatedDamage = new Dictionary<int, float>();
@@ -54,7 +53,6 @@ namespace AnimeArsenal
         {
             base.MapComponentTick();
 
-            // Safety check - ensure dictionaries are initialized
             if (sunTolerance == null) sunTolerance = new Dictionary<int, float>();
             if (accumulatedDamage == null) accumulatedDamage = new Dictionary<int, float>();
             if (ticksOutOfSun == null) ticksOutOfSun = new Dictionary<int, int>();
@@ -91,17 +89,14 @@ namespace AnimeArsenal
                 ticksOutOfSun.Remove(id);
                 if (Find.TickManager.TicksGame % ext.ticksBetweenDamage == 0)
                 {
-                    // Check if tolerance is depleted before applying damage
                     float currentTolerance = GetSunTolerance(pawn, ext);
 
                     if (currentTolerance <= 0)
                     {
-                        // Tolerance depleted - now apply actual damage
                         DoDamage(pawn);
                     }
                     else
                     {
-                        // Still have tolerance - just deplete it
                         DepleteTolerance(pawn, ext);
                     }
                 }
@@ -136,7 +131,6 @@ namespace AnimeArsenal
             int id = pawn.thingIDNumber;
             if (!sunTolerance.ContainsKey(id))
             {
-                // Initialize tolerance - use sunTolerancePool if available, otherwise fall back to threshold
                 float initialTolerance = ext.sunTolerancePool > 0 ? ext.sunTolerancePool : ext.damageThresholdBeforeDeath;
                 sunTolerance[id] = initialTolerance;
 
@@ -166,7 +160,6 @@ namespace AnimeArsenal
                 MoteMaker.ThrowText(pawn.DrawPos, map, $"Sun tolerance: {tolerancePercent:F1}%", 2f);
             }
 
-            // Warning when tolerance is getting low
             if (sunTolerance[id] <= maxTolerance * 0.2f && sunTolerance[id] > 0)
             {
                 if (!lastWarningTick.ContainsKey(id) || Find.TickManager.TicksGame - lastWarningTick[id] >= 1000)
@@ -373,7 +366,7 @@ namespace AnimeArsenal
         {
             base.FinalizeInit();
 
-            // Ensure all dictionaries are initialized
+            
             if (accumulatedDamage == null) accumulatedDamage = new Dictionary<int, float>();
             if (ticksOutOfSun == null) ticksOutOfSun = new Dictionary<int, int>();
             if (lastWarningTick == null) lastWarningTick = new Dictionary<int, int>();

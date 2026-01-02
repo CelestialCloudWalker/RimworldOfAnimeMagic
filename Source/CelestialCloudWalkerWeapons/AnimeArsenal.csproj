@@ -88,7 +88,6 @@
     <Compile Include="GeneEffectDef.cs" />
     <Compile Include="HediffCompProperties_SelflessState.cs" />
     <Compile Include="HediffComp_TransparentWorld.cs" />
-    <Compile Include="IncidentWorker_MountSagiriFinalSelection.cs" />
     <Compile Include="IncidentWorker_RaidNightOnly.cs" />
     <Compile Include="JobDriver_UseTrainingItem.cs" />
     <Compile Include="Misc\AMConstants.cs" />
