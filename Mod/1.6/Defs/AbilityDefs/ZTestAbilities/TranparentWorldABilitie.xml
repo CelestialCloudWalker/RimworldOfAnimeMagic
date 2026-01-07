@@ -3,7 +3,6 @@
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>TransparentWorldAbility</defName>
     <label>Transparent World</label>
-    <category>BeastBreathing_Ability_Catergory</category>
     <description>Activate heightened perception to see through obstacles and enhance combat abilities.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1200</cooldownTicksRange>

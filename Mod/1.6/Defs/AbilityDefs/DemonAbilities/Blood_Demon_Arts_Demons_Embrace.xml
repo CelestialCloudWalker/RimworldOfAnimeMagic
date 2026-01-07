@@ -39,12 +39,12 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that turns a target into a demon. Range: 4.9 tiles. The transformation is unstable.</description>
+        <description>A blood demon art that turns a target into a demon.</description>
       </li>
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>60</experienceRequired>
-        <description>A blood demon art that turns a target into a demon. Range: 6 tiles. Greater control over the transformation.</description>
+        <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.96</resourceCostMultiplier>
         <verbProperties>
           <range>6</range>
@@ -57,7 +57,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>140</experienceRequired>
-        <description>A blood demon art that turns a target into a demon. Range: 6.5 tiles. The demonic essence flows more readily.</description>
+        <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.92</resourceCostMultiplier>
         <verbProperties>
           <range>7</range>
@@ -70,7 +70,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>260</experienceRequired>
-        <description>A blood demon art that turns a target into a demon. Range: 7.5 tiles. Proficiency in demonic conversion.</description>
+        <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.88</resourceCostMultiplier>
         <verbProperties>
           <range>8</range>
@@ -83,7 +83,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>420</experienceRequired>
-        <description>A blood demon art that turns a target into a demon. Range: 9 tiles. Near-mastery of the cursed art.</description>
+        <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.84</resourceCostMultiplier>
         <verbProperties>
           <range>9</range>
@@ -96,7 +96,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>650</experienceRequired>
-        <description>A blood demon art that turns a target into a demon. Range: 11 tiles. Perfect mastery - transformation is swift and inevitable.</description>
+        <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <verbProperties>
           <range>11</range>

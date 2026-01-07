@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_DreamNeedle</defName>
     <label>Blood Demon Arts: Dream Needle</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Causes targets to fall asleep instantly. Becomes more powerful and affects more targets as mastery increases.</description>
+    <description>Causes targets to fall asleep instantly.</description>
     <iconPath>UI/Abilities/DemonSleepAbilitySleep</iconPath>
     <cooldownTicksRange>100</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -46,13 +46,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic sleep induction technique. Puts a single target to sleep for a short duration. Range: 12 tiles.</description>
+        <description>Causes targets to fall asleep instantly.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>50</experienceRequired>
-        <description>Improved sleep technique with slightly longer duration and extended range. Range: 14 tiles.</description>
+        <description>Causes targets to fall asleep instantly.</description>
         <resourceCostMultiplier>0.96</resourceCostMultiplier>
         <verbProperties>
           <range>14</range>
@@ -74,7 +74,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>120</experienceRequired>
-        <description>LevelTwo sleep technique with longer duration and extended range. Range: 16 tiles.</description>
+        <description>Causes targets to fall asleep instantly.</description>
         <resourceCostMultiplier>0.94</resourceCostMultiplier>
         <verbProperties>
           <range>16</range>
@@ -98,7 +98,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>230</experienceRequired>
-        <description>Advanced technique that can affect multiple targets in an area with deep sleep. Range: 19 tiles.</description>
+        <description>Causes targets to fall asleep instantly.</description>
         <resourceCostMultiplier>0.92</resourceCostMultiplier>
         <verbProperties>
           <range>19</range>
@@ -123,7 +123,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>380</experienceRequired>
-        <description>Powerful sleep mastery that affects many targets over a wide area with extended deep sleep. Range: 22 tiles.</description>
+        <description>Causes targets to fall asleep instantly.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <verbProperties>
           <range>22</range>
@@ -149,7 +149,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>600</experienceRequired>
-        <description>Ultimate sleep mastery - affects many targets over a vast area with extended deep sleep that's nearly impossible to wake from. Range: 26 tiles.</description>
+        <description>Causes targets to fall asleep instantly.</description>
         <resourceCostMultiplier>0.88</resourceCostMultiplier>
         <verbProperties>
           <range>26</range>

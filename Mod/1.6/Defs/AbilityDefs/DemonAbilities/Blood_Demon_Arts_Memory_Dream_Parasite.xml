@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Memory_Dream_Parasite</defName>
     <label>Blood Demon Arts: Dream Parasite</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Enter a sleeping target's dreams and steal their knowledge and skills for yourself. Transfer efficiency and predictability increase with mastery.</description>
+    <description>Enter a sleeping target's dreams and steal their knowledge and skills for Themselves.</description>
     <iconPath>UI/Abilities/DemonAbilitySkillSteal</iconPath>
     <displayOrder>214</displayOrder>
     <aiCanUse>false</aiCanUse>
@@ -40,13 +40,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic skill absorption with limited transfer efficiency. Results are highly unpredictable. Range: 2 tiles.</description>
+        <description>Enter a sleeping target's dreams and steal their knowledge and skills for Themselves.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>Improved skill absorption with slightly better transfer rates. Range: 2.5 tiles.</description>
+        <description>Enter a sleeping target's dreams and steal their knowledge and skills for Themselves.</description>
         <resourceCostMultiplier>0.94</resourceCostMultiplier>
         <verbProperties>
           <range>2.5</range>
@@ -65,7 +65,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>220</experienceRequired>
-        <description>LevelTwo skill absorption with better transfer rates and slightly more predictable results. Range: 3 tiles.</description>
+        <description>Enter a sleeping target's dreams and steal their knowledge and skills for Themselves.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <verbProperties>
           <range>3</range>
@@ -84,7 +84,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>380</experienceRequired>
-        <description>Advanced skill parasitism that can drain significant knowledge with more consistent results. Range: 3.5 tiles.</description>
+        <description>Enter a sleeping target's dreams and steal their knowledge and skills for Themselves.</description>
         <resourceCostMultiplier>0.86</resourceCostMultiplier>
         <verbProperties>
           <range>3.5</range>
@@ -103,7 +103,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>580</experienceRequired>
-        <description>Masterful skill parasitism that efficiently drains target abilities with high consistency. Range: 4.5 tiles.</description>
+        <description>Enter a sleeping target's dreams and steal their knowledge and skills for Themselves.</description>
         <resourceCostMultiplier>0.82</resourceCostMultiplier>
         <verbProperties>
           <range>5</range>
@@ -122,7 +122,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>850</experienceRequired>
-        <description>Perfect skill parasitism that can completely drain target abilities with predictable, devastating efficiency. Range: 6 tiles.</description>
+        <description>Enter a sleeping target's dreams and steal their knowledge and skills for Themselves.</description>
         <resourceCostMultiplier>0.78</resourceCostMultiplier>
         <verbProperties>
           <range>6</range>

@@ -17,6 +17,7 @@
     <iconPath>UI/Icons/Genes/beast</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_BeastBreath</li>
     </genes>
   </XenotypeDef>
@@ -27,6 +28,7 @@
     <iconPath>UI/Icons/Genes/flame</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_FlameBreath</li>
     </genes>
   </XenotypeDef>
@@ -37,6 +39,7 @@
     <iconPath>UI/Icons/Genes/flower</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_FlowerBreath</li>
     </genes>
   </XenotypeDef>
@@ -47,6 +50,7 @@
     <iconPath>UI/Icons/Genes/frost</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_FrostBreath</li>
     </genes>
   </XenotypeDef>
@@ -57,6 +61,7 @@
     <iconPath>UI/Icons/Genes/insect</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_InsectBreath</li>
     </genes>
   </XenotypeDef>
@@ -67,6 +72,7 @@
     <iconPath>UI/Icons/Genes/love</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_LoveBreath</li>
     </genes>
   </XenotypeDef>
@@ -77,6 +83,7 @@
     <iconPath>UI/Icons/Genes/mist</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_MistBreath</li>
     </genes>
   </XenotypeDef>
@@ -87,6 +94,7 @@
     <iconPath>UI/Icons/Genes/forest</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_ForestBreath</li>
     </genes>
   </XenotypeDef>
@@ -97,6 +105,7 @@
     <iconPath>UI/Icons/Genes/serpent</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_SerpentBreath</li>
     </genes>
   </XenotypeDef>
@@ -107,6 +116,7 @@
     <iconPath>UI/Icons/Genes/sound</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_SoundBreath</li>
     </genes>
   </XenotypeDef>
@@ -117,6 +127,7 @@
     <iconPath>UI/Icons/Genes/stone</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_StoneBreath</li>
     </genes>
   </XenotypeDef>
@@ -127,6 +138,7 @@
     <iconPath>UI/Icons/Genes/thunder</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_ThunderBreath</li>
     </genes>
   </XenotypeDef>
@@ -137,6 +149,7 @@
     <iconPath>UI/Icons/Genes/water</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_WaterBreath</li>
     </genes>
   </XenotypeDef>
@@ -147,6 +160,7 @@
     <iconPath>UI/Icons/Genes/wind</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>Gene_BreathingPotential</li>
       <li>Gene_WindBreath</li>
     </genes>
   </XenotypeDef>

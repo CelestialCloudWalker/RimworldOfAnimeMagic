@@ -55,7 +55,7 @@
           <SkillDef>Meditate</SkillDef>
           <baseXP>14</baseXP>
         </li>
-        <li Class="Talented.JobExperienceTypeDef">
+        <li Class="Talented.JobExperienceTypeDef" MayRequire="Ludeon.RimWorld.Odyssey">
           <SkillDef>GoSwimming</SkillDef>
           <baseXP>16</baseXP>
         </li>
@@ -63,11 +63,11 @@
           <SkillDef>Hunt</SkillDef>
           <baseXP>12</baseXP>
         </li>
-        <li Class="Talented.JobExperienceTypeDef">
+        <li Class="Talented.JobExperienceTypeDef" MayRequire="Ludeon.RimWorld.Odyssey">
           <SkillDef>Fish</SkillDef>
           <baseXP>14</baseXP>
         </li>
-        <li Class="Talented.JobExperienceTypeDef">
+        <li Class="Talented.JobExperienceTypeDef" MayRequire="Ludeon.RimWorld.Odyssey">
           <SkillDef>FishAnimal</SkillDef>
           <baseXP>14</baseXP>
         </li>

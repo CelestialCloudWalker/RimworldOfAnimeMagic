@@ -38,12 +38,12 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that twists the targets's body. Range: 15 tiles. Basic body contortion.</description>
+        <description>A blood demon art that twists the targets's body.</description>
       </li>
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>65</experienceRequired>
-        <description>A blood demon art that twists the targets's body. Range: 16 tiles. More forceful twisting.</description>
+        <description>A blood demon art that twists the targets's body.</description>
         <resourceCostMultiplier>1.03</resourceCostMultiplier>
         <verbProperties>
           <range>16</range>
@@ -60,7 +60,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>150</experienceRequired>
-        <description>A blood demon art that twists the targets's body. Range: 17 tiles. Affects more targets.</description>
+        <description>A blood demon art that twists the targets's body.</description>
         <resourceCostMultiplier>1.06</resourceCostMultiplier>
         <verbProperties>
           <range>17</range>
@@ -77,7 +77,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>270</experienceRequired>
-        <description>A blood demon art that twists the targets's body. Range: 18 tiles. Gruesome contortions.</description>
+        <description>A blood demon art that twists the targets's body.</description>
         <resourceCostMultiplier>1.09</resourceCostMultiplier>
         <verbProperties>
           <range>18</range>
@@ -94,7 +94,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>430</experienceRequired>
-        <description>A blood demon art that twists the targets's body. Range: 19 tiles. Bone-shattering spiral.</description>
+        <description>A blood demon art that twists the targets's body.</description>
         <resourceCostMultiplier>1.12</resourceCostMultiplier>
         <verbProperties>
           <range>19</range>
@@ -111,7 +111,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>670</experienceRequired>
-        <description>A blood demon art that twists the targets's body. Range: 20 tiles. Perfect spiral mastery - bodies torn asunder by overwhelming force.</description>
+        <description>A blood demon art that twists the targets's body.</description>
         <resourceCostMultiplier>1.15</resourceCostMultiplier>
         <verbProperties>
           <range>20</range>

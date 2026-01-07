@@ -20,7 +20,7 @@
         </categories>
       </li>
     </backstoryFilters>
-    <hidden>false</hidden>
+    <hidden>true</hidden>
     <autoFlee>false</autoFlee>
     <allowedCultures><li>AA_DemonCulture</li></allowedCultures>
     <disallowedMemes>
@@ -126,7 +126,7 @@
       <li>EdgeWalkIn</li>
     </arrivalModeWhitelist>
 
-    
+
     <raidCommonalityFromPointsCurve>
       <points>
         <li>(0, 1)</li>

@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ResearchProjectDef>
-    <defName>AA_BreathingGourdCrafting</defName>
-    <label>Breathing Gourd Crafting</label>
-    <tab>RimKetsu</tab>
-    <description>Learn to craft specialized breathing training gourds. These tools are essential for enhancing a demon slayer's breathing capacity and lung function.</description>
-    <baseCost>1000</baseCost>
-    <techLevel>Medieval</techLevel>
-    <prerequisites>
-      <li>AA_ScarletIronWorking</li>
-    </prerequisites>
-    <researchViewX>6.00</researchViewX>
-    <researchViewY>0.50</researchViewY>
-  </ResearchProjectDef>
-
   <RecipeDef>
     <defName>Craft_BreathingGourd_Small</defName>
     <label>craft small breathing gourd</label>
@@ -234,7 +220,7 @@
   <RecipeDef>
     <defName>Forge_ScarletSteel</defName>
     <label>forge scarlet steel</label>
-    <description>Combine refined scarlet ore and refined scarlet crimson iron to forge legendary scarlet steel. This mystical alloy is essential for creating Nichirin blades.</description>
+    <description>Combine refined scarlet ore and refined scarlet crimson iron to forge scarlet steel. This is essential for creating Nichirin blades.</description>
     <jobString>Forging scarlet steel.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Smelt</effectWorking>

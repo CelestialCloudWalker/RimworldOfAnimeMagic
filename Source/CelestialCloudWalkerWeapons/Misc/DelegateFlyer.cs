@@ -11,8 +11,14 @@ namespace AnimeArsenal
         protected override void RespawnPawn()
         {
             Pawn pawn = this.FlyingPawn;
+            Map map = this.Map;
+
             base.RespawnPawn();
-            OnRespawnPawn?.Invoke(pawn, this, pawn.Map);
+
+            if (pawn != null && map != null)
+            {
+                OnRespawnPawn?.Invoke(pawn, this, map);
+            }
         }
     }
 }

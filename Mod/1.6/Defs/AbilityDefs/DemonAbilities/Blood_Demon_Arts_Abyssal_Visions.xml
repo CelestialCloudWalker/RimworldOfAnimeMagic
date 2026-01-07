@@ -42,13 +42,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 5 tiles. A basic but unsettling ability.</description>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>50</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 6 tiles. Nightmares grow more vivid.</description>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.95</resourceCostMultiplier>
         <verbProperties>
           <range>6</range>
@@ -69,7 +69,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>120</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 7 tiles. The visions become deeply disturbing.</description>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <verbProperties>
           <range>7</range>
@@ -90,7 +90,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>220</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 9 tiles. Abyssal terrors invade the mind.</description>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.85</resourceCostMultiplier>
         <verbProperties>
           <range>9</range>
@@ -111,7 +111,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>350</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 11 tiles. Victims may never sleep peacefully again.</description>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <verbProperties>
           <range>11</range>
@@ -132,7 +132,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>550</experienceRequired>
-        <description>A blood demon art that plants nightmares in sleeping targets' minds. Range: 14 tiles. Mastery of the abyss - nightmares so horrific they shatter the psyche.</description>
+        <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.75</resourceCostMultiplier>
         <verbProperties>
           <range>14</range>

@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <ThingDef ParentName="RockBase">
+    <defName>MineableScarletCrimsonIronSand</defName>
+    <label>scarlet crimson iron sand deposit</label>
+    <description>Rock containing rare crimson iron sand.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(89,68,68)</color>
+      <colorTwo>(220,60,60)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1800</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>Scarlet_Crimson_Iron_Sand</mineableThing>
+      <mineableYield>35</mineableYield>
+      <mineableScatterCommonality>0.04</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+      <veinMineable>true</veinMineable>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>MineableScarletOre</defName>
+    <label>scarlet ore deposit</label>
+    <description>Rock containing rare scarlet mineral ore.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(83,68,68)</color>
+      <colorTwo>(180,40,40)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>Scarlet_Ore</mineableThing>
+      <mineableYield>30</mineableYield>
+      <mineableScatterCommonality>0.03</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+      <veinMineable>true</veinMineable>
+    </building>
+  </ThingDef>
+
   <ThingDef ParentName="ResourceBase">
     <defName>Scarlet_Crimson_Iron_Sand</defName>
     <label>scarlet crimson iron sand</label>

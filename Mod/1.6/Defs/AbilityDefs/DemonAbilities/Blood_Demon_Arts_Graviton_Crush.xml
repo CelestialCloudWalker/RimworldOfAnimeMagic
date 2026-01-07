@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Graviton_Crush</defName>
     <label>Blood Demon Arts: Graviton Crush</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>A blood demon art that alters gravity to crush targets</description>
+    <description>A blood demon art that alters gravity to crush targets.</description>
     <iconPath>UI/Abilities/CrushAbilityIcon</iconPath>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <displayOrder>10</displayOrder>
@@ -54,13 +54,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that alters gravity to crush targets. Range: 20 tiles. Basic gravitational manipulation.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>65</experienceRequired>
-        <description>A blood demon art that alters gravity to crush targets. Range: 22 tiles. Increased gravitational force.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
         <resourceCostMultiplier>1.05</resourceCostMultiplier>
         <verbProperties>
           <range>22</range>
@@ -88,7 +88,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>150</experienceRequired>
-        <description>A blood demon art that alters gravity to crush targets. Range: 25 tiles. Improved control and power.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
         <resourceCostMultiplier>1.1</resourceCostMultiplier>
         <verbProperties>
           <range>25</range>
@@ -116,7 +116,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>270</experienceRequired>
-        <description>A blood demon art that alters gravity to crush targets. Range: 28 tiles. Can now damage structures.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
         <resourceCostMultiplier>1.15</resourceCostMultiplier>
         <verbProperties>
           <range>28</range>
@@ -144,7 +144,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>430</experienceRequired>
-        <description>A blood demon art that alters gravity to crush targets. Range: 32 tiles. Devastating gravitational force.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <verbProperties>
           <range>32</range>
@@ -172,7 +172,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>680</experienceRequired>
-        <description>A blood demon art that alters gravity to crush targets. Range: 37 tiles. Singularity - reality-warping gravitational mastery.</description>
+        <description>A blood demon art that alters gravity to crush targets.</description>
         <resourceCostMultiplier>1.25</resourceCostMultiplier>
         <verbProperties>
           <range>37</range>

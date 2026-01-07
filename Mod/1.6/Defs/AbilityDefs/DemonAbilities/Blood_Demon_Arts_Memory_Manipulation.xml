@@ -43,13 +43,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 3 tiles. Basic memory implantation.</description>
+        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>80</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 3.5 tiles. More convincing false memories.</description>
+        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.94</resourceCostMultiplier>
         <verbProperties>
           <range>3.5</range>
@@ -71,7 +71,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>180</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 4 tiles. Can implant more complex memories.</description>
+        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <verbProperties>
           <range>4</range>
@@ -95,7 +95,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>320</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 4.5 tiles. Deeply rooted false memories.</description>
+        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.86</resourceCostMultiplier>
         <verbProperties>
           <range>5</range>
@@ -119,7 +119,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>500</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 6 tiles. Masterful memory fabrication.</description>
+        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.82</resourceCostMultiplier>
         <verbProperties>
           <range>6</range>
@@ -143,7 +143,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>750</experienceRequired>
-        <description>A blood demon art that plants false memories in sleeping targets' minds. Range: 6.5 tiles. Perfect memory rewriting - the past becomes what you decide.</description>
+        <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
         <resourceCostMultiplier>0.78</resourceCostMultiplier>
         <verbProperties>
           <range>7</range>

@@ -3,7 +3,6 @@
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>AA_Selfess_State_Ability</defName>
     <label>Selfess State</label>
-    <category>BeastBreathing_Ability_Catergory</category>
     <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1200</cooldownTicksRange>

@@ -2,8 +2,8 @@
 <Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>AnimeArsenal_FinalSelectionRock</defName>
-    <label>final selection rock</label>
-    <description>A rock.</description>
+    <label>Training rock</label>
+    <description>A training rock that trigger the quest to become a slayer.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Item/Rock</texPath>
@@ -22,9 +22,12 @@
       <Flammability>0</Flammability>
     </statBases>
     <costList>
-      <Scarlet_Steel>20</Scarlet_Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Cloth>25</Cloth>
     </costList>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="AnimeArsenal.CompProperties_UseEffect_StartQuest">
@@ -42,10 +45,8 @@
     </comps>
     <designationCategory>Misc</designationCategory>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-    <researchPrerequisites>
-      <li>AA_DemonSlayerBasics</li>
-    </researchPrerequisites>
   </ThingDef>
+
   <ThingDef ParentName="BuildingBase">
     <defName>AnimeArsenal_FinalSelectionRocktwo</defName>
     <label>final selection rock</label>
@@ -68,9 +69,12 @@
       <Flammability>0</Flammability>
     </statBases>
     <costList>
-      <Scarlet_Steel>20</Scarlet_Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Cloth>25</Cloth>
     </costList>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="AnimeArsenal.CompProperties_UseEffect_StartQuest">
@@ -88,8 +92,5 @@
     </comps>
     <designationCategory>Misc</designationCategory>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-    <researchPrerequisites>
-      <li>AA_DemonSlayerBasics</li>
-    </researchPrerequisites>
   </ThingDef>
 </Defs>

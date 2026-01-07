@@ -49,13 +49,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area. Range: 20 tiles. Basic web formation.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>50</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area. Range: 21 tiles. More cuts, sharper threads.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
         <resourceCostMultiplier>1.03</resourceCostMultiplier>
         <verbProperties>
           <range>21</range>
@@ -79,7 +79,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>120</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area. Range: 22 tiles. Denser web pattern.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
         <resourceCostMultiplier>1.06</resourceCostMultiplier>
         <verbProperties>
           <range>22</range>
@@ -103,7 +103,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>230</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area. Range: 24 tiles. Rapid-fire web slashes.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
         <resourceCostMultiplier>1.09</resourceCostMultiplier>
         <verbProperties>
           <range>24</range>
@@ -127,7 +127,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>380</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area. Range: 26 tiles. Devastating web cascade.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
         <resourceCostMultiplier>1.12</resourceCostMultiplier>
         <verbProperties>
           <range>26</range>
@@ -151,7 +151,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>600</experienceRequired>
-        <description>A blood demon art that creates web slashes in an area. Range: 29 tiles. Perfect web mastery - a storm of razor threads.</description>
+        <description>A blood demon art that creates web slashes in an area.</description>
         <resourceCostMultiplier>1.15</resourceCostMultiplier>
         <verbProperties>
           <range>29</range>

@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Hearts_Manipulation</defName>
     <label>Blood Demon Arts: Heart's Manipulation</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. Emotional impact increases with mastery.</description>
+    <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
     <iconPath>UI/Abilities/DemonSleepAbility1</iconPath>
     <displayOrder>215</displayOrder>
     <aiCanUse>true</aiCanUse>
@@ -42,13 +42,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic emotional manipulation with mild mood effects. Range: 4 tiles.</description>
+        <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>55</experienceRequired>
-        <description>Improved emotional influence with more noticeable mood changes. Range: 5 tiles.</description>
+        <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
         <resourceCostMultiplier>0.95</resourceCostMultiplier>
         <verbProperties>
           <range>5</range>
@@ -69,7 +69,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>130</experienceRequired>
-        <description>LevelTwo emotional control with stronger mood swings and longer-lasting effects. Range: 6 tiles.</description>
+        <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
         <resourceCostMultiplier>0.92</resourceCostMultiplier>
         <verbProperties>
           <range>6</range>
@@ -90,7 +90,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>240</experienceRequired>
-        <description>Advanced emotional manipulation that can create intense emotional responses and behavioral changes. Range: 7.5 tiles.</description>
+        <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
         <resourceCostMultiplier>0.88</resourceCostMultiplier>
         <verbProperties>
           <range>7.5</range>
@@ -111,7 +111,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>390</experienceRequired>
-        <description>Profound emotional manipulation that can reshape personality and loyalties. Range: 9 tiles.</description>
+        <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
         <resourceCostMultiplier>0.84</resourceCostMultiplier>
         <verbProperties>
           <range>9</range>
@@ -132,7 +132,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>600</experienceRequired>
-        <description>Perfect emotional control that can completely rewrite a target's emotional state and core personality. Range: 11 tiles.</description>
+        <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <verbProperties>
           <range>11</range>

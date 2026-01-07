@@ -42,13 +42,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A technique that dashes to a target and strikes them. Range: 20 tiles. Basic dash strike.</description>
+        <description>A technique that dashes to a target and strikes them.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>A technique that dashes to a target and strikes them. Range: 21 tiles. Improved impact force.</description>
+        <description>A technique that dashes to a target and strikes them.</description>
         <resourceCostMultiplier>1.04</resourceCostMultiplier>
         <verbProperties>
           <range>21</range>
@@ -69,7 +69,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>230</experienceRequired>
-        <description>An improved rush with increased damage, better armor penetration, and longer stun duration. Range: 23 tiles.</description>
+        <description>A technique that dashes to a target and strikes them.</description>
         <resourceCostMultiplier>1.08</resourceCostMultiplier>
         <verbProperties>
           <range>23</range>
@@ -90,7 +90,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>400</experienceRequired>
-        <description>A technique that dashes to a target and strikes them. Range: 25 tiles. Now strikes nearby enemies on impact.</description>
+        <description>A technique that dashes to a target and strikes them.</description>
         <resourceCostMultiplier>1.12</resourceCostMultiplier>
         <verbProperties>
           <range>25</range>
@@ -111,7 +111,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>620</experienceRequired>
-        <description>A technique that dashes to a target and strikes them. Range: 28 tiles. Devastating close-range impact.</description>
+        <description>A technique that dashes to a target and strikes them.</description>
         <resourceCostMultiplier>1.16</resourceCostMultiplier>
         <verbProperties>
           <range>28</range>
@@ -132,7 +132,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>920</experienceRequired>
-        <description>A technique that dashes to a target and strikes them. Range: 32 tiles. Perfect execution - an unstoppable killing blow.</description>
+        <description>A technique that dashes to a target and strikes them.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <verbProperties>
           <range>32</range>

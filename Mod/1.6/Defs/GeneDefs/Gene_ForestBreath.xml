@@ -95,7 +95,7 @@
           <SkillDef>ReturnToGauranlenTree</SkillDef>
           <baseXP>8</baseXP>
         </li>
-        <li Class="Talented.JobExperienceTypeDef">
+         <li Class="Talented.JobExperienceTypeDef" MayRequire="Ludeon.RimWorld.Odyssey">
           <SkillDef>Forage</SkillDef>
           <baseXP>14</baseXP>
         </li>

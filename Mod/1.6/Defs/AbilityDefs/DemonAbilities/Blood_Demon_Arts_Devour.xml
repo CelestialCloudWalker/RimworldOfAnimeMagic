@@ -48,13 +48,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that feeds on a target to regen. Range: 1.5 tiles. Can only consume corpses.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>70</experienceRequired>
-        <description>A blood demon art that feeds on a target to regen. Range: 1.8 tiles. Can now drain the living.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
         <resourceCostMultiplier>0.95</resourceCostMultiplier>
         <verbProperties>
           <range>1.8</range>
@@ -80,7 +80,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>160</experienceRequired>
-        <description>A blood demon art that feeds on a target to regen. Range: 2.2 tiles. Greater restorative power.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
         <resourceCostMultiplier>0.92</resourceCostMultiplier>
         <verbProperties>
           <range>2.2</range>
@@ -106,7 +106,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>280</experienceRequired>
-        <description>A blood demon art that feeds on a target to regen. Range: 2.6 tiles. Can now affect multiple targets.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <verbProperties>
           <range>2.6</range>
@@ -132,7 +132,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>440</experienceRequired>
-        <description>A blood demon art that feeds on a target to regen. Range: 3.0 tiles. Ravenous consumption.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
         <resourceCostMultiplier>0.88</resourceCostMultiplier>
         <verbProperties>
           <range>3.0</range>
@@ -158,7 +158,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>700</experienceRequired>
-        <description>A blood demon art that feeds on a target to regen. Range: 3.5 tiles. Absolute gluttony - consume everything in your path.</description>
+        <description>A blood demon art that feeds on a target to regen.</description>
         <resourceCostMultiplier>0.85</resourceCostMultiplier>
         <verbProperties>
           <range>3.5</range>

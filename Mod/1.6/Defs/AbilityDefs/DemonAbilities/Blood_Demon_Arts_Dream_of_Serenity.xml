@@ -4,7 +4,7 @@
     <defName>Blood_Demon_Arts_Dream_of_Serenity</defName>
     <label>Blood Demon Arts: Serene Dreams</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
-    <description>Grant peaceful, restorative dreams to a sleeping target, improving their mood and rest quality. Effects become more potent with mastery.</description>
+    <description>Grant peaceful to a sleeping target, improving their mood and rest quality.</description>
     <iconPath>UI/Abilities/DemonSleepAbility6</iconPath>
     <displayOrder>211</displayOrder>
     <aiCanUse>false</aiCanUse>
@@ -42,13 +42,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Basic restorative dreams that provide mild comfort and rest. Range: 5 tiles.</description>
+        <description>Grant peaceful to a sleeping target, improving their mood and rest quality.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>40</experienceRequired>
-        <description>Gentle dreams that soothe the mind and improve rest quality. Range: 6 tiles.</description>
+        <description>Grant peaceful to a sleeping target, improving their mood and rest quality.</description>
         <resourceCostMultiplier>0.95</resourceCostMultiplier>
         <verbProperties>
           <range>6</range>
@@ -69,7 +69,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>LevelTwo peaceful dreams that provide significant mood and rest benefits. Range: 7 tiles.</description>
+        <description>Grant peaceful to a sleeping target, improving their mood and rest quality.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
         <verbProperties>
           <range>7</range>
@@ -90,7 +90,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>190</experienceRequired>
-        <description>Deeply restorative dreams that heal both body and mind. Range: 9 tiles.</description>
+        <description>Grant peaceful to a sleeping target, improving their mood and rest quality.</description>
         <resourceCostMultiplier>0.85</resourceCostMultiplier>
         <verbProperties>
           <range>9</range>
@@ -111,7 +111,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>310</experienceRequired>
-        <description>Blissful dreams that provide profound restoration and lasting happiness. Range: 11 tiles.</description>
+        <description>Grant peaceful to a sleeping target, improving their mood and rest quality.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
         <verbProperties>
           <range>11</range>
@@ -132,7 +132,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>480</experienceRequired>
-        <description>Perfect dream serenity that provides complete restoration and transcendent peace. Range: 14 tiles.</description>
+        <description>Grant peaceful to a sleeping target, improving their mood and rest quality.</description>
         <resourceCostMultiplier>0.75</resourceCostMultiplier>
         <verbProperties>
           <range>14</range>

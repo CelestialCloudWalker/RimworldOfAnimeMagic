@@ -37,12 +37,12 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets. Range: 20 tiles. Basic blood slash.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
       </li>
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>65</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets. Range: 22 tiles. Sharper blade.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.04</resourceCostMultiplier>
         <verbProperties>
           <range>22</range>
@@ -57,7 +57,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>150</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets. Range: 24 tiles. LevelTwo cutting power.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.08</resourceCostMultiplier>
         <verbProperties>
           <range>24</range>
@@ -72,7 +72,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>270</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets. Range: 27 tiles. Devastating impact.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.12</resourceCostMultiplier>
         <verbProperties>
           <range>27</range>
@@ -87,7 +87,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>440</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets. Range: 30 tiles. Overwhelming force.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.16</resourceCostMultiplier>
         <verbProperties>
           <range>30</range>
@@ -102,7 +102,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>680</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets. Range: 34 tiles. Perfect blood mastery - a blade that cleaves through all.</description>
+        <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <verbProperties>
           <range>34</range>

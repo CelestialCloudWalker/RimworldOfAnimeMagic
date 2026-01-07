@@ -26,6 +26,8 @@ namespace AnimeArsenal
     public class CompAbilityEffect_TeleportMeleeAttack : CompAbilityEffect
     {
         private Thing target;
+        private IntVec3 targetPosition;
+        private Map targetMap;
         private bool impactPlayed = false;
 
         private new CompProperties_TeleportMeleeAttack Props => (CompProperties_TeleportMeleeAttack)props;
@@ -37,6 +39,8 @@ namespace AnimeArsenal
             if (!target.HasThing || parent?.pawn == null) return;
 
             this.target = target.Thing;
+            this.targetPosition = target.Thing.Position;
+            this.targetMap = target.Thing.Map;
             impactPlayed = false;
 
             SpawnCasterEffect();
@@ -45,7 +49,7 @@ namespace AnimeArsenal
 
         private void SpawnCasterEffect()
         {
-            if (Props.casterEffecter == null) return;
+            if (Props.casterEffecter == null || parent?.pawn == null) return;
 
             var effecter = Props.casterEffecter.Spawn();
             var casterInfo = new TargetInfo(parent.pawn.Position, parent.pawn.Map);
@@ -55,8 +59,14 @@ namespace AnimeArsenal
 
         private void StartTeleport()
         {
-            var flyer = PawnFlyer.MakeFlyer(CelestialDefof.AnimeArsenal_TPStrikeFlyer, parent.pawn, target.Position, null, null);
-            var spawnedFlyer = GenSpawn.Spawn(flyer, target.Position, target.Map) as DelegateFlyer;
+            if (target?.Map == null)
+            {
+                Log.Warning("[Anime Arsenal] Cannot start teleport: invalid target or position");
+                return;
+            }
+
+            var flyer = PawnFlyer.MakeFlyer(CelestialDefof.AnimeArsenal_TPStrikeFlyer, parent.pawn, targetPosition, null, null);
+            var spawnedFlyer = GenSpawn.Spawn(flyer, targetPosition, targetMap) as DelegateFlyer;
 
             if (spawnedFlyer != null)
                 spawnedFlyer.OnRespawnPawn += OnTeleportComplete;
@@ -69,16 +79,41 @@ namespace AnimeArsenal
 
         private void OnTeleportComplete(Pawn pawn, PawnFlyer flyer, Map map)
         {
-            if (flyer is DelegateFlyer df) df.OnRespawnPawn -= OnTeleportComplete;
-            if (target?.Map == null) return;
+            try
+            {
+                if (pawn == null || pawn.Destroyed || map == null || parent?.pawn == null)
+                {
+                    Log.Warning("[Anime Arsenal] OnTeleportComplete: Invalid pawn or map state");
+                    return;
+                }
 
-            PositionPawn(map);
-            ApplyDamage();
+                if (!pawn.Spawned || pawn.Map != map)
+                {
+                    Log.Warning("[Anime Arsenal] OnTeleportComplete: Pawn not properly spawned on map");
+                    return;
+                }
+
+                if (target != null && !target.Destroyed && target.Spawned && target.Map == map)
+                {
+                    targetPosition = target.Position;
+                    targetMap = target.Map;
+                }
+
+                PositionPawn(map);
+                ApplyDamage();
+            }
+            finally
+            {
+                if (flyer is DelegateFlyer df)
+                    df.OnRespawnPawn -= OnTeleportComplete;
+            }
         }
 
         private void PositionPawn(Map map)
         {
-            var adjacentCell = target.RandomAdjacentCell8Way();
+            if (parent?.pawn == null || !parent.pawn.Spawned) return;
+
+            var adjacentCell = targetPosition.RandomAdjacentCell8Way();
             if (adjacentCell.InBounds(map) && adjacentCell.Standable(map))
             {
                 parent.pawn.Position = adjacentCell;
@@ -88,14 +123,30 @@ namespace AnimeArsenal
 
         private void ApplyDamage()
         {
-            if (Props.effectRadius <= 0f)
-                DamageTarget(target);
+            if (target != null && !target.Destroyed && target.Spawned)
+            {
+                targetPosition = target.Position;
+                targetMap = target.Map;
+
+                if (Props.effectRadius <= 0f)
+                {
+                    DamageTarget(target);
+                }
+                else
+                {
+                    DamageArea();
+                }
+            }
             else
-                DamageArea();
+            {
+                PlayImpactEffect(targetPosition);
+            }
         }
 
         private void DamageTarget(Thing target)
         {
+            if (target == null || target.Destroyed || parent?.pawn == null) return;
+
             var damage = CalculateDamage();
             var damageType = Props.damageType ?? DamageDefOf.Cut;
 
@@ -109,13 +160,17 @@ namespace AnimeArsenal
 
         private void DamageArea()
         {
-            var center = target.Position;
-            var map = target.Map;
+            if (targetMap == null)
+            {
+                Log.Warning("[Anime Arsenal] DamageArea: Invalid map or position");
+                return;
+            }
+
             var targets = new List<Thing>();
 
-            foreach (var thing in GenRadial.RadialDistinctThingsAround(center, map, Props.effectRadius, true))
+            foreach (var thing in GenRadial.RadialDistinctThingsAround(targetPosition, targetMap, Props.effectRadius, true))
             {
-                if (thing != parent.pawn && (thing is Pawn || thing.def.useHitPoints))
+                if (thing != null && !thing.Destroyed && thing != parent.pawn && (thing is Pawn || thing.def.useHitPoints))
                     targets.Add(thing);
             }
 
@@ -123,7 +178,7 @@ namespace AnimeArsenal
                 DamageTarget(thing);
 
             if (targets.Count == 0)
-                PlayImpactEffect(center);
+                PlayImpactEffect(targetPosition);
         }
 
         private int CalculateDamage()
@@ -139,10 +194,10 @@ namespace AnimeArsenal
 
         private void PlayImpactEffect(IntVec3 position)
         {
-            if (Props.impactEffecter == null || impactPlayed) return;
+            if (Props.impactEffecter == null || impactPlayed || targetMap == null) return;
 
             var effecter = Props.impactEffecter.Spawn();
-            var targetInfo = new TargetInfo(position, target.Map);
+            var targetInfo = new TargetInfo(position, targetMap);
             effecter.Trigger(targetInfo, targetInfo);
             effecter.Cleanup();
             impactPlayed = true;
@@ -150,7 +205,7 @@ namespace AnimeArsenal
 
         private void ApplyStun(Thing target)
         {
-            if (Props.stunDuration > 0 && target is Pawn pawn)
+            if (Props.stunDuration > 0 && target is Pawn pawn && parent?.pawn != null)
                 pawn.stances?.stunner?.StunFor(Props.stunDuration, parent.pawn);
         }
     }

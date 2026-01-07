@@ -46,13 +46,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target. Range: 40 tiles. Single lightning bolt.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>55</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target. Range: 42 tiles. Larger blast radius.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
         <resourceCostMultiplier>1.03</resourceCostMultiplier>
         <verbProperties>
           <range>42</range>
@@ -73,7 +73,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>130</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target. Range: 44 tiles. Multiple strikes.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
         <resourceCostMultiplier>1.06</resourceCostMultiplier>
         <verbProperties>
           <range>44</range>
@@ -94,7 +94,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>240</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target. Range: 46 tiles. Chain lightning unlocked.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
         <resourceCostMultiplier>1.09</resourceCostMultiplier>
         <verbProperties>
           <range>46</range>
@@ -116,7 +116,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>400</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target. Range: 48 tiles. Devastating storm strikes.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
         <resourceCostMultiplier>1.12</resourceCostMultiplier>
         <verbProperties>
           <range>48</range>
@@ -139,7 +139,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>630</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target. Range: 50 tiles. Divine judgment - a catastrophic lightning storm.</description>
+        <description>A blood demon art that calls down lightning on the target.</description>
         <resourceCostMultiplier>1.15</resourceCostMultiplier>
         <verbProperties>
           <range>50</range>

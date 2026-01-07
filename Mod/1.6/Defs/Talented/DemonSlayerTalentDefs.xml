@@ -1679,7 +1679,7 @@
   <Talented.TalentDef>
     <defName>Swift_Attacks_Talent</defName>
     <label>Swift Attacks</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1694,7 +1694,7 @@
   <Talented.TalentDef>
     <defName>Swift_Attacks_Talent2</defName>
     <label>Swift Attacks</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1709,7 +1709,7 @@
   <Talented.TalentDef>
     <defName>Swift_Attacks_Talent3</defName>
     <label>Swift Attacks</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1724,7 +1724,7 @@
   <Talented.TalentDef>
     <defName>Swift_Attacks_Talent4</defName>
     <label>Swift Attacks</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1739,7 +1739,7 @@
   <Talented.TalentDef>
     <defName>Swift_Attacks_Talent5</defName>
     <label>Swift Attacks</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1754,7 +1754,7 @@
   <Talented.TalentDef>
     <defName>LevelTwo_Strikes_Talent</defName>
     <label>LevelTwo_Strikes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1769,7 +1769,7 @@
   <Talented.TalentDef>
     <defName>LevelTwo_Strikes_Talent2</defName>
     <label>LevelTwo_Strikes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1784,7 +1784,7 @@
   <Talented.TalentDef>
     <defName>LevelTwo_Strikes_Talent3</defName>
     <label>LevelTwo_Strikes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1799,7 +1799,7 @@
   <Talented.TalentDef>
     <defName>LevelTwo_Strikes_Talent4</defName>
     <label>LevelTwo_Strikes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1814,7 +1814,7 @@
   <Talented.TalentDef>
     <defName>LevelTwo_Strikes_Talent5</defName>
     <label>LevelTwo_Strikes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1829,7 +1829,7 @@
   <Talented.TalentDef>
     <defName>Precise_Form_Talent</defName>
     <label>Precise_Form</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1844,7 +1844,7 @@
   <Talented.TalentDef>
     <defName>Precise_Form_Talent2</defName>
     <label>Precise_Form</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1859,7 +1859,7 @@
   <Talented.TalentDef>
     <defName>Precise_Form_Talent3</defName>
     <label>Precise_Form</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1874,7 +1874,7 @@
   <Talented.TalentDef>
     <defName>Precise_Form_Talent4</defName>
     <label>Precise_Form</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1889,7 +1889,7 @@
   <Talented.TalentDef>
     <defName>Precise_Form_Talent5</defName>
     <label>Precise_Form</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1904,7 +1904,7 @@
   <Talented.TalentDef>
     <defName>Heavy_Impact_Talent</defName>
     <label>Heavy_Impact</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1919,7 +1919,7 @@
   <Talented.TalentDef>
     <defName>Heavy_Impact_Talent2</defName>
     <label>Heavy_Impact</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1934,7 +1934,7 @@
   <Talented.TalentDef>
     <defName>Heavy_Impact_Talent3</defName>
     <label>Heavy_Impact</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1949,7 +1949,7 @@
   <Talented.TalentDef>
     <defName>Heavy_Impact_Talent4</defName>
     <label>Heavy_Impact</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1964,7 +1964,7 @@
   <Talented.TalentDef>
     <defName>Heavy_Impact_Talent5</defName>
     <label>Heavy_Impact</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1979,7 +1979,7 @@
   <Talented.TalentDef>
     <defName>Steady_Hand_Talent</defName>
     <label>Steady_Hand</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -1994,7 +1994,7 @@
   <Talented.TalentDef>
     <defName>Steady_Hand_Talent2</defName>
     <label>Steady_Hand</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2009,7 +2009,7 @@
   <Talented.TalentDef>
     <defName>Steady_Hand_Talent3</defName>
     <label>Steady_Hand</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2024,7 +2024,7 @@
   <Talented.TalentDef>
     <defName>Steady_Hand_Talent4</defName>
     <label>Steady_Hand</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2039,7 +2039,7 @@
   <Talented.TalentDef>
     <defName>Steady_Hand_Talent5</defName>
     <label>Steady_Hand</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2054,7 +2054,7 @@
   <Talented.TalentDef>
     <defName>Quick_Reflexes_Talent</defName>
     <label>Quick_Reflexes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2069,7 +2069,7 @@
   <Talented.TalentDef>
     <defName>Quick_Reflexes_Talent2</defName>
     <label>Quick_Reflexes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2084,7 +2084,7 @@
   <Talented.TalentDef>
     <defName>Quick_Reflexes_Talent3</defName>
     <label>Quick_Reflexes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2099,7 +2099,7 @@
   <Talented.TalentDef>
     <defName>Quick_Reflexes_Talent4</defName>
     <label>Quick_Reflexes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2114,7 +2114,7 @@
   <Talented.TalentDef>
     <defName>Quick_Reflexes_Talent5</defName>
     <label>Quick_Reflexes</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2129,7 +2129,7 @@
   <Talented.TalentDef>
     <defName>Swift_Aim_Talent</defName>
     <label>Swift_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2144,7 +2144,7 @@
   <Talented.TalentDef>
     <defName>Swift_Aim_Talent2</defName>
     <label>Swift_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2159,7 +2159,7 @@
   <Talented.TalentDef>
     <defName>Swift_Aim_Talent3</defName>
     <label>Swift_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2174,7 +2174,7 @@
   <Talented.TalentDef>
     <defName>Swift_Aim_Talent4</defName>
     <label>Swift_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2189,7 +2189,7 @@
   <Talented.TalentDef>
     <defName>Swift_Aim_Talent5</defName>
     <label>Swift_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2204,7 +2204,7 @@
   <Talented.TalentDef>
     <defName>Steady_Aim_Talent</defName>
     <label>Steady_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2219,7 +2219,7 @@
   <Talented.TalentDef>
     <defName>Steady_Aim_Talent2</defName>
     <label>Steady_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2234,7 +2234,7 @@
   <Talented.TalentDef>
     <defName>Steady_Aim_Talent3</defName>
     <label>Steady_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2249,7 +2249,7 @@
   <Talented.TalentDef>
     <defName>Steady_Aim_Talent4</defName>
     <label>Steady_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2264,7 +2264,7 @@
   <Talented.TalentDef>
     <defName>Steady_Aim_Talent5</defName>
     <label>Steady_Aim</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2279,7 +2279,7 @@
   <Talented.TalentDef>
     <defName>Tough_Body_Talent</defName>
     <label>Tough_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2294,7 +2294,7 @@
   <Talented.TalentDef>
     <defName>Tough_Body_Talent2</defName>
     <label>Tough_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2309,7 +2309,7 @@
   <Talented.TalentDef>
     <defName>Tough_Body_Talent3</defName>
     <label>Tough_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2324,7 +2324,7 @@
   <Talented.TalentDef>
     <defName>Tough_Body_Talent4</defName>
     <label>Tough_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2339,7 +2339,7 @@
   <Talented.TalentDef>
     <defName>Tough_Body_Talent5</defName>
     <label>Tough_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2354,7 +2354,7 @@
   <Talented.TalentDef>
     <defName>Calm_Mind_Talent</defName>
     <label>Calm_Mind</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2369,7 +2369,7 @@
   <Talented.TalentDef>
     <defName>Calm_Mind_Talent2</defName>
     <label>Calm_Mind</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2384,7 +2384,7 @@
   <Talented.TalentDef>
     <defName>Calm_Mind_Talent3</defName>
     <label>Calm_Mind</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2399,7 +2399,7 @@
   <Talented.TalentDef>
     <defName>Calm_Mind_Talent4</defName>
     <label>Calm_Mind</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2414,7 +2414,7 @@
   <Talented.TalentDef>
     <defName>Calm_Mind_Talent5</defName>
     <label>Calm_Mind</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2429,7 +2429,7 @@
   <Talented.TalentDef>
     <defName>Mental_Fortress_Talent</defName>
     <label>Mental_Fortress</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2444,7 +2444,7 @@
   <Talented.TalentDef>
     <defName>Mental_Fortress_Talent2</defName>
     <label>Mental_Fortress</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2459,7 +2459,7 @@
   <Talented.TalentDef>
     <defName>Mental_Fortress_Talent3</defName>
     <label>Mental_Fortress</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2474,7 +2474,7 @@
   <Talented.TalentDef>
     <defName>Mental_Fortress_Talent4</defName>
     <label>Mental_Fortress</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2489,7 +2489,7 @@
   <Talented.TalentDef>
     <defName>Mental_Fortress_Talent5</defName>
     <label>Mental_Fortress</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2504,7 +2504,7 @@
   <Talented.TalentDef>
     <defName>Pure_Body_Talent</defName>
     <label>Pure_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2519,7 +2519,7 @@
   <Talented.TalentDef>
     <defName>Pure_Body_Talent2</defName>
     <label>Pure_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2534,7 +2534,7 @@
   <Talented.TalentDef>
     <defName>Pure_Body_Talent3</defName>
     <label>Pure_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2549,7 +2549,7 @@
   <Talented.TalentDef>
     <defName>Pure_Body_Talent4</defName>
     <label>Pure_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2564,7 +2564,7 @@
   <Talented.TalentDef>
     <defName>Pure_Body_Talent5</defName>
     <label>Pure_Body</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2579,7 +2579,7 @@
   <Talented.TalentDef>
     <defName>Recovery_Boost_Talent</defName>
     <label>Recovery_Boost</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2594,7 +2594,7 @@
   <Talented.TalentDef>
     <defName>Recovery_Boost_Talent2</defName>
     <label>Recovery_Boost</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2609,7 +2609,7 @@
   <Talented.TalentDef>
     <defName>Recovery_Boost_Talent3</defName>
     <label>Recovery_Boost</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2624,7 +2624,7 @@
   <Talented.TalentDef>
     <defName>Recovery_Boost_Talent4</defName>
     <label>Recovery_Boost</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2639,7 +2639,7 @@
   <Talented.TalentDef>
     <defName>Recovery_Boost_Talent5</defName>
     <label>Recovery_Boost</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2654,8 +2654,7 @@
   <Talented.TalentDef>
     <defName>Weight_Training_Talent</defName>
     <label>Weight_Training</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2670,8 +2669,8 @@
   <Talented.TalentDef>
     <defName>Weight_Training_Talent2</defName>
     <label>Weight_Training</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2686,8 +2685,8 @@
   <Talented.TalentDef>
     <defName>Weight_Training_Talent3</defName>
     <label>Weight_Training</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2702,8 +2701,8 @@
   <Talented.TalentDef>
     <defName>Weight_Training_Talent4</defName>
     <label>Weight_Training</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2718,8 +2717,8 @@
   <Talented.TalentDef>
     <defName>Weight_Training_Talent5</defName>
     <label>Weight_Training</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2734,7 +2733,7 @@
   <Talented.TalentDef>
     <defName>Vitality_Surge_Talent</defName>
     <label>Vitality_Surge</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2749,7 +2748,7 @@
   <Talented.TalentDef>
     <defName>Vitality_Surge_Talent2</defName>
     <label>Vitality_Surge</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2764,7 +2763,7 @@
   <Talented.TalentDef>
     <defName>Vitality_Surge_Talent3</defName>
     <label>Vitality_Surge</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2779,7 +2778,7 @@
   <Talented.TalentDef>
     <defName>Vitality_Surge_Talent4</defName>
     <label>Vitality_Surge</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2794,7 +2793,7 @@
   <Talented.TalentDef>
     <defName>Vitality_Surge_Talent5</defName>
     <label>Vitality_Surge</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2809,7 +2808,7 @@
   <Talented.TalentDef>
     <defName>Medical_Haste_Talent</defName>
     <label>Medical_Haste</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2824,7 +2823,7 @@
   <Talented.TalentDef>
     <defName>Medical_Haste_Talent2</defName>
     <label>Medical_Haste</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2839,7 +2838,7 @@
   <Talented.TalentDef>
     <defName>Medical_Haste_Talent3</defName>
     <label>Medical_Haste</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2854,7 +2853,7 @@
   <Talented.TalentDef>
     <defName>Medical_Haste_Talent4</defName>
     <label>Medical_Haste</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2869,7 +2868,7 @@
   <Talented.TalentDef>
     <defName>Medical_Haste_Talent5</defName>
     <label>Medical_Haste</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2884,7 +2883,7 @@
   <Talented.TalentDef>
     <defName>Healing_Expertise_Talent</defName>
     <label>Healing_Expertise</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2899,7 +2898,7 @@
   <Talented.TalentDef>
     <defName>Healing_Expertise_Talent2</defName>
     <label>Healing_Expertise</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2914,7 +2913,7 @@
   <Talented.TalentDef>
     <defName>Healing_Expertise_Talent3</defName>
     <label>Healing_Expertise</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2929,7 +2928,7 @@
   <Talented.TalentDef>
     <defName>Healing_Expertise_Talent4</defName>
     <label>Healing_Expertise</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2944,7 +2943,7 @@
   <Talented.TalentDef>
     <defName>Healing_Expertise_Talent5</defName>
     <label>Healing_Expertise</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2959,7 +2958,7 @@
   <Talented.TalentDef>
     <defName>Quick_Surgery_Talent</defName>
     <label>Quick_Surgery</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2974,7 +2973,7 @@
   <Talented.TalentDef>
     <defName>Quick_Surgery_Talent2</defName>
     <label>Quick_Surgery</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -2989,7 +2988,7 @@
   <Talented.TalentDef>
     <defName>Quick_Surgery_Talent3</defName>
     <label>Quick_Surgery</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3004,7 +3003,7 @@
   <Talented.TalentDef>
     <defName>Quick_Surgery_Talent4</defName>
     <label>Quick_Surgery</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3019,7 +3018,7 @@
   <Talented.TalentDef>
     <defName>Quick_Surgery_Talent5</defName>
     <label>Quick_Surgery</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3034,7 +3033,7 @@
   <Talented.TalentDef>
     <defName>Surgical_Talent_Talent</defName>
     <label>Surgical_Talent</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3049,7 +3048,7 @@
   <Talented.TalentDef>
     <defName>Surgical_Talent_Talent2</defName>
     <label>Surgical_Talent</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3064,7 +3063,7 @@
   <Talented.TalentDef>
     <defName>Surgical_Talent_Talent3</defName>
     <label>Surgical_Talent</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3079,7 +3078,7 @@
   <Talented.TalentDef>
     <defName>Surgical_Talent_Talent4</defName>
     <label>Surgical_Talent</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3094,7 +3093,7 @@
   <Talented.TalentDef>
     <defName>Surgical_Talent_Talent5</defName>
     <label>Surgical_Talent</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3109,7 +3108,7 @@
   <Talented.TalentDef>
     <defName>Quick_Step_Talent</defName>
     <label>Quick_Step</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3124,7 +3123,7 @@
   <Talented.TalentDef>
     <defName>Quick_Step_Talent2</defName>
     <label>Quick_Step</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3139,7 +3138,7 @@
   <Talented.TalentDef>
     <defName>Quick_Step_Talent3</defName>
     <label>Quick_Step</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3154,7 +3153,7 @@
   <Talented.TalentDef>
     <defName>Quick_Step_Talent4</defName>
     <label>Quick_Step</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3169,7 +3168,7 @@
   <Talented.TalentDef>
     <defName>Quick_Step_Talent5</defName>
     <label>Quick_Step</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3184,7 +3183,7 @@
   <Talented.TalentDef>
     <defName>Prone_Mobility_Talent</defName>
     <label>Prone_Mobility </label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3199,7 +3198,7 @@
   <Talented.TalentDef>
     <defName>Prone_Mobility_Talent2</defName>
     <label>Prone_Mobility </label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3214,7 +3213,7 @@
   <Talented.TalentDef>
     <defName>Prone_Mobility_Talent3</defName>
     <label>Prone_Mobility </label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3229,7 +3228,7 @@
   <Talented.TalentDef>
     <defName>Prone_Mobility_Talent4</defName>
     <label>Prone_Mobility </label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -3244,7 +3243,7 @@
   <Talented.TalentDef>
     <defName>Prone_Mobility_Talent5</defName>
     <label>Prone_Mobility </label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
     <statEffects>
@@ -7944,7 +7943,7 @@
 
   <Talented.TalentDef>
     <defName>Frost_Breathing_Strike</defName>
-    <label>Beast Breathing: Strike</label>
+    <label>Frost Breathing: Strike</label>
     <uiIconPath>Things/FrostIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>
@@ -9084,7 +9083,7 @@
   <Talented.TalentDef>
     <defName>BreathingMark_Talent</defName>
     <label>Breathing Mark</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>10</pointCost>
     <abilityEffects>
@@ -9101,7 +9100,7 @@
   <Talented.TalentDef>
     <defName>BreathingMark_Talent_Giyu</defName>
     <label>Breathing Mark</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>10</pointCost>
     <abilityEffects>
@@ -9118,7 +9117,7 @@
   <Talented.TalentDef>
     <defName>BreathingMark_Talent_Muichiro</defName>
     <label>Breathing Mark</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>10</pointCost>
     <abilityEffects>
@@ -9135,7 +9134,7 @@
   <Talented.TalentDef>
     <defName>BreathingMark_Talent_Sanemi</defName>
     <label>Breathing Mark</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>10</pointCost>
     <abilityEffects>
@@ -9152,7 +9151,7 @@
   <Talented.TalentDef>
     <defName>BreathingMark_Talent_Tanjiro</defName>
     <label>Breathing Mark</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>10</pointCost>
     <abilityEffects>
@@ -9169,7 +9168,7 @@
   <Talented.TalentDef>
     <defName>TransparentWorld_Talent</defName>
     <label>Transparent World</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>5</pointCost>
     <abilityEffects>
@@ -9186,7 +9185,7 @@
   <Talented.TalentDef>
     <defName>Sefless_State_Talent</defName>
     <label>Selfess State</label>
-    <uiIconPath>Things/DemonSlayerIcon</uiIconPath>
+    <uiIconPath>Things/DemonSlayerTalentIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>5</pointCost>
     <abilityEffects>

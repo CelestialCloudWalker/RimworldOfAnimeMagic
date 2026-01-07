@@ -80,7 +80,7 @@
     </tools>
     <race>
       <lifeExpectancy>999</lifeExpectancy>
-      <body>AA_DemonBody</body>
+      <body>Human</body>
       <baseBodySize>1</baseBodySize>
       <baseHealthScale>3</baseHealthScale>
       <baseHungerRate>1</baseHungerRate>

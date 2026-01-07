@@ -2,7 +2,7 @@
 <Defs>
   <DamageDef>
     <defName>Inscet_Breathing_Damage</defName>
-    <label>Insect Breathing</label>
+    <label>insect sting</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0}'s body shut down from venom.</deathMessage>
@@ -11,20 +11,27 @@
     <hediffSolid>Crack</hediffSolid>
     <impactSoundType>Slice</impactSoundType>
     <armorCategory>Sharp</armorCategory>
+    <harmsHealth>true</harmsHealth>
     <overkillPctToDestroyPart>0.1</overkillPctToDestroyPart>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>DeludednessOfInsects</defName>
-    <label>Deludedness of Insect</label>
-    <labelNoun>venom</labelNoun>
-    <description>Poison Coursing through the bloodstream. Numbess and paralysis spreading.</description>
+    <label>insect sting</label>
+    <labelNoun>an insect sting</labelNoun>
+    <description>A venomous puncture wound. Poison spreading through tissue.</description>
     <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.6</severityPerDay>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>treated</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+        <severityPerDayTended>-0.6</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
         <infectionChance>0.50</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>insect sting scar</permanentLabel>
       </li>
     </comps>
     <injuryProps>
@@ -32,15 +39,15 @@
       <averagePainPerSeverityPermanent>0.008</averagePainPerSeverityPermanent>
       <bleedRate>0.03</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Necrotic</destroyedLabel>
+      <destroyedLabel>Dissolved off</destroyedLabel>
       <destroyedOutLabel>Dissolved</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
 
   <HediffDef>
     <defName>Wisteria_Poisoning</defName>
-    <label>Wisteria Poisoning</label>
-    <description>A potent neurotoxin that causes severe weakness, nausea, and mental impairment. The victim struggles to move and think clearly as the poison courses through their system.</description>
+    <label>wisteria poisoning</label>
+    <description>A potent neurotoxin causing severe weakness, nausea, and mental impairment. The victim struggles to move and think clearly as poison courses through their system.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.4, 0.2, 0.8)</defaultLabelColor>
