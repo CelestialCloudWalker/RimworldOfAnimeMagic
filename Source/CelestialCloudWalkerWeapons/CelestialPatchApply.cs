@@ -810,4 +810,47 @@ namespace AnimeArsenal
             return true;
         }
     }
+    [HarmonyPatch(typeof(Pawn), "ThreatDisabled")]
+    public static class Patch_SelflessState_ThreatDisabled
+    {
+        public static void Postfix(Pawn __instance, ref bool __result)
+        {
+            if (__result || __instance?.health?.hediffSet == null) return;
+
+            var selflessHediff = __instance.health.hediffSet.hediffs
+                .OfType<Hediff_SelflessState>()
+                .FirstOrDefault(h => h.IsInvisible);
+
+            if (selflessHediff != null)
+                __result = true;
+        }
+    }
+
+    [HarmonyPatch(typeof(Pawn), "Tick")]
+    public static class Patch_SelflessState_ClearTarget
+    {
+        public static void Postfix(Pawn __instance)
+        {
+            if (!__instance.IsHashIntervalTick(5)) return;
+
+            if (__instance?.mindState?.enemyTarget is Pawn targetPawn && targetPawn.health?.hediffSet != null)
+            {
+                var selflessHediff = targetPawn.health.hediffSet.hediffs
+                    .OfType<Hediff_SelflessState>()
+                    .FirstOrDefault(h => h.IsInvisible);
+
+                if (selflessHediff != null)
+                {
+                    __instance.mindState.enemyTarget = null;
+
+                    if (__instance.CurJobDef?.defName?.Contains("AttackMelee") == true ||
+                        __instance.CurJobDef?.defName?.Contains("AttackStatic") == true ||
+                        __instance.CurJobDef?.defName?.Contains("Wait_Combat") == true)
+                    {
+                        __instance.jobs?.EndCurrentJob(JobCondition.InterruptForced);
+                    }
+                }
+            }
+        }
+    }
 }

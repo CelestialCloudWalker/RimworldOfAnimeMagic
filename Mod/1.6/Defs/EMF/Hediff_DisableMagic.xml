@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+      <defName>EMF_MagicDisabled</defName>
+      <label>magic disabled</label>
+      <description>This creature's magical abilities have been suppressed and cannot be used.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+      <isBad>true</isBad>
+      <comps>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>6000</disappearsAfterTicks>
+          <showRemainingTime>true</showRemainingTime>
+        </li>
+        <li Class="EMF.HediffCompProperties_DisableMagic">
+        </li>
+      </comps>
+      <stages>
+        <li>
+          <label>suppressed</label>
+        </li>
+      </stages>
+    </HediffDef>
+
+</Defs>

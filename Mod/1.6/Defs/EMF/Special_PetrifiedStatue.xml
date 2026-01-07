@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>EMF_PetrifiedStatue</defName>
+    <label>petrified statue</label>
+    <description>A once-living being turned to stone by magic. The victim remains conscious, trapped in a petrified state.</description>
+    <thingClass>EMF.PetrifiedStatue</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Misc/PetrifiedStatue</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.3, 0.3)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>0</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>4</Beauty>
+    </statBases>
+    <selectable>true</selectable>
+    <rotatable>false</rotatable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <uiIconScale>0.85</uiIconScale>
+    <building>
+      <isEdifice>true</isEdifice>
+      <destroySound>BuildingDestroyed_Stone_Small</destroySound>
+    </building>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <designationCategory>Misc</designationCategory>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <drawerType>RealtimeOnly</drawerType>
+    <clearBuildingArea>true</clearBuildingArea>
+    <repairEffect>ConstructMetal</repairEffect>
+    <designationHotKey>Misc11</designationHotKey>
+    <constructEffect>ConstructMetal</constructEffect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+</Defs>

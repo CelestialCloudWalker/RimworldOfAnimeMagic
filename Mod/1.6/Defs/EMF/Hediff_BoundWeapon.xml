@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>EMF_BoundWeapon</defName>
+    <label>Bound Weapon Master</label>
+    <description>This pawn is bound on a meta physical level with a weapon.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <duplicationAllowed>false</duplicationAllowed>
+    <comps>
+      <li Class="EMF.HediffCompProperties_BoundWeapon">
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

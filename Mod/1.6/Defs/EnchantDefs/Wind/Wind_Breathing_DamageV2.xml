@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Wind_Breathing_Damage</defName>
+    <label>wind slash</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was torn apart by slicing winds.</deathMessage>
+    <hediff>SharpnessOfWind</hediff>
+    <hediffSkin>SharpnessOfWind</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <harmsHealth>true</harmsHealth>
+    <overkillPctToDestroyPart>0.7</overkillPctToDestroyPart>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>SharpnessOfWind</defName>
+    <label>wind slash</label>
+    <labelNoun>a wind slash</labelNoun>
+    <description>Deep lacerations. Blood loss is rapid and dangerous.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+        <severityPerDayTended>-0.78</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>wind slash scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.08</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.015</averagePainPerSeverityPermanent>
+      <bleedRate>0.12</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Sliced off</destroyedLabel>
+      <destroyedOutLabel>Sliced apart</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

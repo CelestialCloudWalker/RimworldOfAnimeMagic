@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef>
+    <defName>Love_Breathing_Damage</defName>
+    <label>love lash</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0}'s heart gave out.</deathMessage>
+    <hediff>HeartbeatsOfLove</hediff>
+    <hediffSkin>HeartbeatsOfLove</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>HeartbeatsOfLove</defName>
+    <label>love lash</label>
+    <labelNoun>a love lash</labelNoun>
+    <description>A whipping slash that cuts deep. Heavy bleeding from torn tissue.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+        <severityPerDayTended>-0.72</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>love lash scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.04</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Severed off</destroyedLabel>
+      <destroyedOutLabel>Severed</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

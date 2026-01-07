@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="PawnFlyerBase">
+      <defName>EMF_DelegateFlyer</defName>
+      <label>flying</label>
+      <thingClass>EMF.DelegateFlyer</thingClass>
+      <useHitPoints>false</useHitPoints>
+      <drawOffscreen>true</drawOffscreen>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Skyfaller</altitudeLayer>
+      <drawerType>RealtimeOnly</drawerType>
+      <pawnFlyer>
+        <flightDurationMin>0</flightDurationMin>
+        <flightSpeed>12</flightSpeed>
+        <workerClass>PawnFlyerWorker</workerClass>
+        <heightFactor>1</heightFactor>
+        <progressCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(1, 1)</li>
+          </points>
+        </progressCurve>
+      </pawnFlyer>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+      <defName>EMF_FancyTeleport</defName>
+      <label>fancy teleport thing</label>
+      <description>teleporting</description>
+      <category>Item</category>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Skyfaller</altitudeLayer>
+      <useHitPoints>false</useHitPoints>
+      <thingClass>EMF.FancyTeleporter</thingClass>
+      <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+</Defs>

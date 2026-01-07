@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DesignationDef>
+    <defName>AreaCapture</defName>
+    <texturePath>Designations/Plan</texturePath>
+    <targetType>Cell</targetType>
+  </DesignationDef>
+
+  <DesignationCategoryDef>
+    <defName>AreaCapture</defName>
+    <label>area capture</label>
+    <description>Tools for capturing building layouts.</description>
+    <order>950</order>
+    <specialDesignatorClasses>
+      <li>EMF.Designator_ZoneAdd_AreaCapture</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+</Defs>

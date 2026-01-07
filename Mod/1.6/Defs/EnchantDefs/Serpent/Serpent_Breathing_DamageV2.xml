@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Serpent_Breathing_Damage</defName>
+    <label>serpent twist</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0}'s body was twisted apart.</deathMessage>
+    <hediff>TwistOfSerpent</hediff>
+    <hediffSkin>TwistOfSerpent</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+    <causeStun>true</causeStun>
+    <constantStunDurationTicks>480</constantStunDurationTicks>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>TwistOfSerpent</defName>
+    <label>serpent twist</label>
+    <labelNoun>a serpent twist</labelNoun>
+    <description>A twisting injury that tears and contorts tissue.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+        <severityPerDayTended>-0.78</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.35</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>serpent twist scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.045</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Twisted off</destroyedLabel>
+      <destroyedOutLabel>Twisted apart</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+      <defName>EMF_StagedVisualEffect</defName>
+      <thingClass>EMF.StageVisualEffect</thingClass>
+      <label>stage visual effect</label>
+      <tickerType>Normal</tickerType>
+      <drawerType>None</drawerType>
+      <selectable>false</selectable>
+  </ThingDef>
+</Defs>

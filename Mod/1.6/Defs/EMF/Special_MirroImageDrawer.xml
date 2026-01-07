@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+      <defName>EMF_MirrorImageDrawer</defName>
+      <label>mirror image</label>
+      <description>image</description>
+      <category>Item</category>
+      <tickerType>Normal</tickerType>
+      <drawerType>MapMeshAndRealTime</drawerType>
+      <altitudeLayer>Skyfaller</altitudeLayer>
+      <useHitPoints>false</useHitPoints>
+      <thingClass>EMF.Thing_MirrorImage</thingClass>
+      <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+</Defs>

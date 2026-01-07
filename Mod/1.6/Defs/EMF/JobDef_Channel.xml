@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  	<JobDef>
+  		<defName>EMF_CastAbilityChannel</defName>
+  		<driverClass>EMF.JobDriver_CastAbilityChannel</driverClass>
+  		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  	</JobDef>
+</Defs>

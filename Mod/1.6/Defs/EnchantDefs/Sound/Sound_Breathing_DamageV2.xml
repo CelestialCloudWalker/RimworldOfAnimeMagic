@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Sound_Breathing_Damage</defName>
+    <label>sonic blast</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was shattered by sound waves.</deathMessage>
+    <hediff>RipplesOfSound</hediff>
+    <hediffSkin>RipplesOfSound</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Blunt</armorCategory>
+    <impactSoundType>Blunt</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+    <isExplosive>true</isExplosive>
+    <explosionColorCenter>(0.9, 0.9, 1.0)</explosionColorCenter>
+    <explosionColorEdge>(0.7, 0.8, 1.0)</explosionColorEdge>
+    <soundExplosion>Thunder_OnMap</soundExplosion>
+    <causeStun>true</causeStun>
+    <constantStunDurationTicks>600</constantStunDurationTicks>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>RipplesOfSound</defName>
+    <label>sonic blast</label>
+    <labelNoun>a sonic blast</labelNoun>
+    <description>Tissue battered by sound waves. Severe concussive trauma.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>treated</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+        <severityPerDayTended>-0.75</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.25</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>sonic blast scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.045</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.05</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Shattered</destroyedLabel>
+      <destroyedOutLabel>Blown apart</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

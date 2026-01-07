@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Beast_Breathing_Damage</defName>
+    <label>beast maul</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0}'s flesh was torn apart.</deathMessage>
+    <hediff>RampageofBeast</hediff>
+    <hediffSkin>RampageofBeast</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>RampageofBeast</defName>
+    <label>beast maul</label>
+    <labelNoun>a beast maul</labelNoun>
+    <description>Flesh torn apart. Heavy bleeding and tissue damage.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+        <severityPerDayTended>-0.68</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.45</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>beast maul scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.06</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00825</averagePainPerSeverityPermanent>
+      <bleedRate>0.09</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Mauled off</destroyedLabel>
+      <destroyedOutLabel>Mauled apart</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

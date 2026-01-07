@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Forest_Breathing_Damage</defName>
+    <label>forest strike</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was struck down by overwhelming force.</deathMessage>
+    <hediff>MajestyOfForest</hediff>
+    <hediffSkin>MajestyOfForest</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+    <causeStun>true</causeStun>
+    <constantStunDurationTicks>420</constantStunDurationTicks>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>MajestyOfForest</defName>
+    <label>forest strike</label>
+    <labelNoun>a forest strike</labelNoun>
+    <description>A crushing blow. Heavy bleeding and tissue damage.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+        <severityPerDayTended>-0.68</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.45</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>forest strike scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.06</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00825</averagePainPerSeverityPermanent>
+      <bleedRate>0.09</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Crushed off</destroyedLabel>
+      <destroyedOutLabel>Crushed apart</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

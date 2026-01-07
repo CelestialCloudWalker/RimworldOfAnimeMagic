@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+      <defName>EMF_BeamThing</defName>
+      <thingClass>EMF.Beam_Thing</thingClass>
+      <label>beam</label>
+      <tickerType>Normal</tickerType>
+      <drawerType>MapMeshAndRealTime</drawerType>
+      <selectable>false</selectable>
+      <drawOffscreen>true</drawOffscreen>
+      <graphicData>
+        <texPath>Things/Mote/PowerBeam</texPath>
+        <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+        <shaderType>MoteBeam</shaderType>
+      </graphicData>
+  </ThingDef>
+
+</Defs>

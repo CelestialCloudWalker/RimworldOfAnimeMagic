@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef>
+      <defName>EMF_ResurrectionBlocked</defName>
+      <label>resurrection blocked</label>
+      <description>This creature cannot be resurrected by any means while affected by this condition.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.8, 0.35, 0.35)</defaultLabelColor>
+      <isBad>true</isBad>
+      <comps>
+        <li Class="EMF.HediffCompProperties_DisableRessurection">
+        </li>
+      </comps>
+      <stages>
+        <li>
+          <label>blocked</label>
+        </li>
+      </stages>
+    </HediffDef>
+</Defs>
