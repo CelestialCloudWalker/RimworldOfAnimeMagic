@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Beast Breath Regen Rate -->
+  <BeastBreath_RegenRate.label>獸之呼吸恢復率</BeastBreath_RegenRate.label>
+  <!-- EN: Rate of Beast Breath regeneration per tick. -->
+  <BeastBreath_RegenRate.description>每刻獸之呼吸恢復率。</BeastBreath_RegenRate.description>
+  
+</LanguageData>

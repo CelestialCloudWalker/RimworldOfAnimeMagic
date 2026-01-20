@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Wind Breathing Fatigue -->
+  <WindBreathing_Fatigue.label>風之呼吸疲勞</WindBreathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unsteady. -->
+  <WindBreathing_Fatigue.description>重複使用呼吸法使身體疲憊，無法站穩。</WindBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <WindBreathing_Fatigue.stages.Mild_fatigue.label>輕微疲勞</WindBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <WindBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲勞</WindBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <WindBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲勞</WindBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <WindBreathing_Fatigue.stages.Severe_fatigue.label>嚴重疲勞</WindBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <WindBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</WindBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <WindBreathing_Fatigue.stages.Collapsed.label>累垮</WindBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

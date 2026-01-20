@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef>
+    <defName>AA_Twelve_Demon_Moons</defName>
+    <label>Twelve Demon Moons</label>
+    <description>A terrifying organization of demons led by the Demon King Muzan. The hierarchy consists of twelve powerful demons divided into Upper and Lower Moons, each ranked by their deadly power. They seek to spread darkness and devour humans across the world.</description>
+    <pawnSingular>Demon</pawnSingular>
+    <pawnsPlural>Demons</pawnsPlural>
+    <categoryTag>Demon</categoryTag>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <fixedName>Twelve Demon Moons</fixedName>
+    <factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <techLevel>Medieval</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <allowedCultures><li>AA_DemonCulture</li></allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+    </disallowedMemes>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+
+    <raidLootMaker>AA_DemonRaidLootMaker</raidLootMaker>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35, 15)</li>
+        <li>(100, 120)</li>
+        <li>(1000, 500)</li>
+        <li>(5000, 2000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_DemonBloodArts_User>999</AA_DemonBloodArts_User>
+      </xenotypeChances>
+    </xenotypeSet>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(700, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <colorSpectrum>
+      <li>(0.8, 0.1, 0.1)</li>
+      <li>(0.9, 0.0, 0.0)</li>
+      <li>(0.7, 0.0, 0.2)</li>
+    </colorSpectrum>
+
+    <pawnGroupMakers>
+
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <AA_FletclingDemonRaider>10</AA_FletclingDemonRaider>
+          <AA_FletclingDemonWarrior>8</AA_FletclingDemonWarrior>
+          <AA_FletclingDemonInvader>7</AA_FletclingDemonInvader>
+          <AA_FletclingDemonBoss>3</AA_FletclingDemonBoss>
+        </options>
+      </li>
+
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>50</commonality>
+        <options>
+          <AA_LowerMoon6Demon>5</AA_LowerMoon6Demon>
+          <AA_LowerMoon5Demon>4</AA_LowerMoon5Demon>
+          <AA_LowerMoon4Demon>3</AA_LowerMoon4Demon>
+          <AA_LowerMoon3Demon>2</AA_LowerMoon3Demon>
+          <AA_LowerMoon2Demon>2</AA_LowerMoon2Demon>
+          <AA_LowerMoon1Demon>1</AA_LowerMoon1Demon>
+        </options>
+      </li>
+
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>25</commonality>
+        <options>
+          <AA_UpperMoon6Demon>3</AA_UpperMoon6Demon>
+          <AA_UpperMoon5Demon>2</AA_UpperMoon5Demon>
+          <AA_UpperMoon4Demon>2</AA_UpperMoon4Demon>
+          <AA_UpperMoon3Demon>1</AA_UpperMoon3Demon>
+          <AA_UpperMoon2Demon>1</AA_UpperMoon2Demon>
+          <AA_UpperMoon1Demon>1</AA_UpperMoon1Demon>
+        </options>
+      </li>
+
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>5</commonality>
+        <options>
+          <AA_DemonKing>1</AA_DemonKing>
+        </options>
+      </li>
+    </pawnGroupMakers>
+
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>2000</configurationListOrderPriority>
+    <permanentEnemyToEveryoneExcept>
+      <li>AA_Twelve_Demon_Moons</li>
+    </permanentEnemyToEveryoneExcept>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+    <canUseAvoidGrid>true</canUseAvoidGrid>
+
+
+    <disallowedRaidStrategies>
+      <li>Siege</li>
+      <li>ImmediateAttackSmart</li>
+      <li>ImmediateAttackSappers</li>
+      <li>StageThenAttack</li>
+    </disallowedRaidStrategies>
+
+
+    <arrivalModeWhitelist>
+      <li>EdgeWalkIn</li>
+    </arrivalModeWhitelist>
+
+
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li>
+        <li>(500, 1)</li>
+        <li>(1400, 2)</li>
+        <li>(2800, 3)</li>
+        <li>(4500, 4)</li>
+        <li>(6000, 4.5)</li>
+        <li>(8000, 5)</li>
+        <li>(10000, 5.5)</li>
+        <li>(100000, 6)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0, 35)</li>
+        <li>(700, 150)</li>
+        <li>(2000, 300)</li>
+        <li>(5000, 500)</li>
+        <li>(10000, 800)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+  </FactionDef>
+
+  <CultureDef>
+    <defName>AA_DemonCulture</defName>
+    <label>Demon</label>
+    <description>A brutal culture where humanity is abandoned in pursuit of demonic power and immortality. Strength is everything, the weak exist only to be consumed. Their hierarchies are enforced through raw dominance.</description>
+    <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoCorunan</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityCorunan</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerCorunan</deityTypeMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalCorunan</festivalNameMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Corunan</leaderTitleMaker>
+    <allowedPlaceTags>
+      <li>OriginTribal</li>
+    </allowedPlaceTags>
+    <iconPath>World/WorldObjects/Expanding/Village</iconPath>
+    <preferredWeaponClasses>
+      <noble>Neolithic</noble>
+      <despised>Ultratech</despised>
+    </preferredWeaponClasses>
+    <thingStyleCategories>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <category>Totemic</category>
+        <priority>2</priority>
+      </li>
+    </thingStyleCategories>
+    <styleItemTags>
+      <li>
+        <tag>Urban</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardRural</tag>
+        <baseWeight>0.1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardUrban</tag>
+        <baseWeight>0.2</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+  </CultureDef>
+
+</Defs>

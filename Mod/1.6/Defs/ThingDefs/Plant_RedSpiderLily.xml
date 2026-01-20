@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>Plant_RedSpiderLily</defName>
+    <label>red spider lily tree</label>
+    <description>An extremely rare tree of legend, said to bloom only under moonlight. This mystical blue-flowered tree is rumored to grant extraordinary abilities to those who know how to use its blossoms. Many have searched for it, but few have ever found it.\n\nThe blue spider lily tree is delicate and difficult to cultivate, requiring very specific conditions to grow. Its beauty is matched only by its rarity.</description>
+    <graphicData>
+      <texPath>RedSpiderLily/RedSpiderLilyC</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.4, 0.35, 0.4)</volume>
+        <offset>(0,0,0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>12</Beauty>
+      <BeautyOutdoors>15</BeautyOutdoors>
+      <Flammability>0.8</Flammability>
+      <MaxHitPoints>250</MaxHitPoints>
+    </statBases>
+    <ingestible />
+    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+    <canScatterOver>false</canScatterOver>
+    <plant>
+      <growDays>15</growDays>
+      <visualSizeRange>0.8~1.2</visualSizeRange>
+      <sowMinSkill>8</sowMinSkill>
+      <sowTags Inherit="False"/>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.9</fertilityMin>
+      <fertilitySensitivity>1.0</fertilitySensitivity>
+      <wildClusterWeight>1</wildClusterWeight>
+      <sowWork>600</sowWork>
+      <harvestYield>1</harvestYield>
+      <harvestedThingDef>RedSpiderLilyFlower</harvestedThingDef>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0.0</growMinGlow>
+      <sowResearchPrerequisites Inherit="False" />
+      <dieFromToxicFallout>false</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+      <harvestWork>150</harvestWork>
+      <choppedThingDef>ChoppedStump_RedSpiderLily</choppedThingDef>
+      <smashedThingDef>SmashedStump_RedSpiderLily</smashedThingDef>
+      <immatureGraphicPath>RedSpiderLily/RedSpiderLilyA</immatureGraphicPath>
+      <leaflessGraphicPath>RedSpiderLily/RedSpiderLilyB</leaflessGraphicPath>
+    </plant>
+    <comps>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(120,160,220,0)</glowColor>
+      </li>
+      <li Class="CompProperties_PlantPreventCutting"/>
+    </comps>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+
+  <ThingDef ParentName="StumpChoppedBase">
+    <defName>ChoppedStump_RedSpiderLily</defName>
+    <label>chopped Red spider lily stump</label>
+    <description>A stump left behind after a legendary blue spider lily tree has been felled. This is considered a great loss. The stump can be extracted but yields very little usable wood. Left outdoors, the stump will deteriorate in time.</description>
+    <graphicData>
+      <texPath>RedSpiderLily/RedSpiderLilyB</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="StumpSmashedBase">
+    <defName>SmashedStump_RedSpiderLily</defName>
+    <label>smashed Red spider lily stump</label>
+    <description>The remnants of a blue spider lily tree destroyed by damage. A tragic sight indeed. The stump can be extracted but yields very little usable wood. Left outdoors, the stump will deteriorate in time.</description>
+    <graphicData>
+      <texPath>RedSpiderLily/RedSpiderLilyB</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RedSpiderLilyFlower</defName>
+    <label>harvested Red spider lily</label>
+    <description>A rare and mystical blue flower of legend. This flower has different effects depending on who consumes it:\n\n- For humans: Transforms them into a demon with incredible regeneration (but vulnerable to sunlight)\n- For demons: Cures their weakness to sunlight forever\n\nThe flower retains a faint glow even after being picked.</description>
+    <graphicData>
+      <texPath>RedSpiderLily/RedSpiderLilyC</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.8, 0.8)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <Mass>0.05</Mass>
+      <Beauty>5</Beauty>
+      <MarketValue>12000</MarketValue>
+      <DeteriorationRate>1.5</DeteriorationRate>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.1</Nutrition>
+    </statBases>
+    <stackLimit>5</stackLimit>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(120,160,220,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>Ingest</useJob>
+        <useLabel>Consume blue spider lily</useLabel>
+        <useDuration>600</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>AnimeArsenal.CompUseEffect_BlueSpiderLily</compClass>
+      </li>
+    </comps>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <joy>0.05</joy>
+      <joyKind>Chemical</joyKind>
+      <ingestSound>Ingest_Plant</ingestSound>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <outcomeDoers>
+        <li Class="AnimeArsenal.IngestionOutcomeDoer_BlueSpiderLily"/>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RedSpiderLilySeed</defName>
+    <label>Red spider lily seeds</label>
+    <description>Seeds from the legendary blue spider lily tree. These are incredibly rare and valuable. With proper care and ideal conditions, they can be grown into new blue spider lily trees, though the process is difficult and time-consuming.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Plant_BlueSpiderLily</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>RedSpiderLily/RedSpiderLilyA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6, 0.6)</drawSize>
+      <color>(120,160,220)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>0.02</Mass>
+      <Beauty>1</Beauty>
+      <MarketValue>5000</MarketValue>
+    </statBases>
+    <stackLimit>10</stackLimit>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>Plant_RedSpiderLily</plantDefToSpawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+</Defs>

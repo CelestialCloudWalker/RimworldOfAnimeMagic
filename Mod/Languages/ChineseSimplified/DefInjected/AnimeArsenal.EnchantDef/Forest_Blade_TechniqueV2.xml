@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Forest Blade Technique -->
+  <Forest_Blade_Technique.label>森刃技法</Forest_Blade_Technique.label>
+  <!-- EN: A technique that allows a Forest Breathing user to imbue their attacks with their breathing style. -->
+  <Forest_Blade_Technique.description>让森之呼吸用户用将其呼吸法融入攻击的技巧。</Forest_Blade_Technique.description>
+  
+  <!-- EN: Forest Blade Technique -->
+  <Forest_Blade_Technique_LevelFive.label>森刃技法</Forest_Blade_Technique_LevelFive.label>
+  <!-- EN: A technique that allows a Forest Breathing user to imbue their attacks with their breathing style. -->
+  <Forest_Blade_Technique_LevelFive.description>让森之呼吸用户用将其呼吸法融入攻击的技巧。</Forest_Blade_Technique_LevelFive.description>
+  
+  <!-- EN: Forest Blade Technique -->
+  <Forest_Blade_Technique_LevelFour.label>森刃技法</Forest_Blade_Technique_LevelFour.label>
+  <!-- EN: A technique that allows a Forest Breathing user to imbue their attacks with their breathing style. -->
+  <Forest_Blade_Technique_LevelFour.description>让森之呼吸用户用将其呼吸法融入攻击的技巧。</Forest_Blade_Technique_LevelFour.description>
+  
+  <!-- EN: Forest Blade Technique -->
+  <Forest_Blade_Technique_LevelSix.label>森刃技法</Forest_Blade_Technique_LevelSix.label>
+  <!-- EN: A technique that allows a Forest Breathing user to imbue their attacks with their breathing style. -->
+  <Forest_Blade_Technique_LevelSix.description>让森之呼吸用户用将其呼吸法融入攻击的技巧。</Forest_Blade_Technique_LevelSix.description>
+  
+  <!-- EN: Forest Blade Technique -->
+  <Forest_Blade_Technique_LevelThree.label>森刃技法</Forest_Blade_Technique_LevelThree.label>
+  <!-- EN: A technique that allows a Forest Breathing user to imbue their attacks with their breathing style. -->
+  <Forest_Blade_Technique_LevelThree.description>让森之呼吸用户用将其呼吸法融入攻击的技巧。</Forest_Blade_Technique_LevelThree.description>
+  
+  <!-- EN: Forest Blade Technique -->
+  <Forest_Blade_Technique_LevelTwo.label>森刃技法</Forest_Blade_Technique_LevelTwo.label>
+  <!-- EN: A technique that allows a Forest Breathing user to imbue their attacks with their breathing style. -->
+  <Forest_Blade_Technique_LevelTwo.description>让森之呼吸用户用将其呼吸法融入攻击的技巧。</Forest_Blade_Technique_LevelTwo.description>
+  
+</LanguageData>

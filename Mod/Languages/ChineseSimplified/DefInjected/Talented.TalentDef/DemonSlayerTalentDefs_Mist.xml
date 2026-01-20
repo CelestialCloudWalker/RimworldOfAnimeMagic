@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Mist Breathing: Disperse -->
+  <Mist_Breathing_Disperse.label>霞之呼吸・散</Mist_Breathing_Disperse.label>
+  
+  <!-- EN: MistBreathing -->
+  <Mist_Breathing_GeneGive_Talent.label>霞之呼吸</Mist_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Mist Breathing: Multi Strike -->
+  <Mist_Breathing_Multi_Strike.label>霞之呼吸・连袭</Mist_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Mist Breathing: Reflect -->
+  <Mist_Breathing_Reflect.label>霞之呼吸・返</Mist_Breathing_Reflect.label>
+  
+  <!-- EN: Mist Breathing: Slash -->
+  <Mist_Breathing_Slash.label>霞之呼吸・斩</Mist_Breathing_Slash.label>
+  
+  <!-- EN: Mist Breathing: Strike -->
+  <Mist_Breathing_Strike.label>霞之呼吸・袭</Mist_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <MistBreath_Breath_Increase.label>增加呼吸法容量</MistBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <MistBreath_Breath_Increase2.label>增加呼吸法容量</MistBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <MistBreath_Breath_Increase3.label>增加呼吸法容量</MistBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <MistBreath_Breath_Increase4.label>增加呼吸法容量</MistBreath_Breath_Increase4.label>
+  
+  <!-- EN: MistBreath_Cost -->
+  <MistBreath_Cost_Talent.label>霞之呼吸花费</MistBreath_Cost_Talent.label>
+  
+  <!-- EN: MistBreath_Cost -->
+  <MistBreath_Cost_Talent2.label>霞之呼吸花费</MistBreath_Cost_Talent2.label>
+  
+  <!-- EN: MistBreath_Cost -->
+  <MistBreath_Cost_Talent3.label>霞之呼吸花费</MistBreath_Cost_Talent3.label>
+  
+  <!-- EN: MistBreath_Cost -->
+  <MistBreath_Cost_Talent4.label>霞之呼吸花费</MistBreath_Cost_Talent4.label>
+  
+  <!-- EN: MistBreath_RegenAmount -->
+  <MistBreath_RegenAmount_Talent.label>每刻霞之呼吸恢复量</MistBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: MistBreath_RegenAmount -->
+  <MistBreath_RegenAmount_Talent2.label>每刻霞之呼吸恢复量</MistBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: MistBreath_RegenAmount -->
+  <MistBreath_RegenAmount_Talent3.label>每刻霞之呼吸恢复量</MistBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: MistBreath_RegenAmount -->
+  <MistBreath_RegenAmount_Talent4.label>每刻霞之呼吸恢复量</MistBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: MistBreath_RegenRate -->
+  <MistBreath_RegenRate_Talent.label>霞之呼吸恢复率</MistBreath_RegenRate_Talent.label>
+  
+  <!-- EN: MistBreath_RegenRate -->
+  <MistBreath_RegenRate_Talent2.label>霞之呼吸恢复率</MistBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: MistBreath_RegenRate -->
+  <MistBreath_RegenRate_Talent3.label>霞之呼吸恢复率</MistBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: MistBreath_RegenRate -->
+  <MistBreath_RegenRate_Talent4.label>霞之呼吸恢复率</MistBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: MistBreath_RegenTicks -->
+  <MistBreath_RegenTicks_Talent.label>霞之呼吸恢复间隔</MistBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: MistBreath_RegenTicks -->
+  <MistBreath_RegenTicks_Talent2.label>霞之呼吸恢复间隔</MistBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: MistBreath_RegenTicks -->
+  <MistBreath_RegenTicks_Talent3.label>霞之呼吸恢复间隔</MistBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: MistBreath_RegenTicks -->
+  <MistBreath_RegenTicks_Talent4.label>霞之呼吸恢复间隔</MistBreath_RegenTicks_Talent4.label>
+</LanguageData>

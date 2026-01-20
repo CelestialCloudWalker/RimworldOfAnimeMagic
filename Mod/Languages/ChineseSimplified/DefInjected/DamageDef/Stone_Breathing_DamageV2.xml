@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: stone crush -->
+  <Stone_Breathing_Damage.label>岩之压溃</Stone_Breathing_Damage.label>
+  <!-- EN: {0} was crushed to death. -->
+  <Stone_Breathing_Damage.deathMessage>{0}被压死了。</Stone_Breathing_Damage.deathMessage>
+  
+</LanguageData>

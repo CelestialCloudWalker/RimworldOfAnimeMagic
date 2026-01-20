@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Kanae's Nichirin Blade -->
+  <NichirinSword_KochoKanae.label>香奈惠的日轮刀</NichirinSword_KochoKanae.label>
+  <!-- EN: A nichirin blade capable of killing demons. -->
+  <NichirinSword_KochoKanae.description>用来杀鬼的日轮刀。</NichirinSword_KochoKanae.description>
+  <!-- EN: blade back -->
+  <NichirinSword_KochoKanae.tools.blade_back.label>刀背</NichirinSword_KochoKanae.tools.blade_back.label>
+  <!-- EN: blade -->
+  <NichirinSword_KochoKanae.tools.blade.label>刀刃</NichirinSword_KochoKanae.tools.blade.label>
+  
+</LanguageData>

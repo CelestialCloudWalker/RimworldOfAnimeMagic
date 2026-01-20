@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sanemi's Nichirin Blade -->
+  <NichirinSword_ShinazugawaSanemi.label>實彌的日輪刀</NichirinSword_ShinazugawaSanemi.label>
+  <!-- EN: A nichirin blade capable of killing demons. -->
+  <NichirinSword_ShinazugawaSanemi.description>用來殺鬼的日輪刀。</NichirinSword_ShinazugawaSanemi.description>
+  <!-- EN: blade back -->
+  <NichirinSword_ShinazugawaSanemi.tools.blade_back.label>刀背</NichirinSword_ShinazugawaSanemi.tools.blade_back.label>
+  <!-- EN: blade -->
+  <NichirinSword_ShinazugawaSanemi.tools.blade.label>刀刃</NichirinSword_ShinazugawaSanemi.tools.blade.label>
+  
+</LanguageData>

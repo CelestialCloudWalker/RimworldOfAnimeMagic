@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: demon regeneration -->
+  <BloodDemonRegeneration.label>鬼軀再生</BloodDemonRegeneration.label>
+  <!-- EN: LevelTwo healing capabilities from consuming flesh. Wounds heal faster and scars fade over time. -->
+  <BloodDemonRegeneration.description>攝食血肉得來的貳級治療能力。傷口更快癒合，疤痕會隨時間淡化。</BloodDemonRegeneration.description>
+  <!-- EN: regenerating -->
+  <BloodDemonRegeneration.stages.regenerating.label>再生中</BloodDemonRegeneration.stages.regenerating.label>
+  
+</LanguageData>

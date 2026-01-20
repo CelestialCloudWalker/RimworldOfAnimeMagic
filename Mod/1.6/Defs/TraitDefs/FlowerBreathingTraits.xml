@@ -57,7 +57,7 @@
 
   <TraitDef>
     <defName>ElegantFighter</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -111,7 +111,7 @@
 
   <TraitDef>
     <defName>SeasonalWisdom</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Plants</li>
     </forcedPassions>
@@ -136,7 +136,7 @@
 
   <TraitDef>
     <defName>PetalDance</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
       <li>Artistic</li>

@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>ExplosiveResonance</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -30,7 +30,7 @@
 
   <TraitDef>
     <defName>EcholocationMaster</defName>
-    <commonality>0.4</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Shooting</li>
     </forcedPassions>
@@ -57,7 +57,7 @@
 
   <TraitDef>
     <defName>SonicBoom</defName>
-    <commonality>0.3</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Mining</li>
     </forcedPassions>
@@ -86,7 +86,7 @@
 
   <TraitDef>
     <defName>FlamboyantWarrior</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
     </forcedPassions>
@@ -117,7 +117,7 @@
 
   <TraitDef>
     <defName>RhythmicCombat</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Artistic</li>
     </forcedPassions>
@@ -144,7 +144,7 @@
 
   <TraitDef>
     <defName>DeafeningRoar</defName>
-    <commonality>0.4</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>deafening roar</label>
@@ -169,7 +169,7 @@
 
   <TraitDef>
     <defName>ExplosiveArtistry</defName>
-    <commonality>0.3</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Artistic</li>
     </forcedPassions>

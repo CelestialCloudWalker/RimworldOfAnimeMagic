@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Thunder Breathing: Disperse -->
+  <Thunder_Breathing_Disperse.label>雷之呼吸・散</Thunder_Breathing_Disperse.label>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Thunder_Breathing_Disperse.description>在敌方周围创造斩击的技法。</Thunder_Breathing_Disperse.description>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Thunder_Breathing_Disperse.levels.0.description>在敌方周围创造斩击的技法。</Thunder_Breathing_Disperse.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Thunder_Breathing_Disperse.levels.0.labelSuffix>壹级</Thunder_Breathing_Disperse.levels.0.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Thunder_Breathing_Disperse.levels.1.description>在敌方周围创造斩击的技法。</Thunder_Breathing_Disperse.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Thunder_Breathing_Disperse.levels.1.labelSuffix>贰级</Thunder_Breathing_Disperse.levels.1.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Thunder_Breathing_Disperse.levels.2.description>在敌方周围创造斩击的技法。</Thunder_Breathing_Disperse.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Thunder_Breathing_Disperse.levels.2.labelSuffix>参级</Thunder_Breathing_Disperse.levels.2.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Thunder_Breathing_Disperse.levels.3.description>在敌方周围创造斩击的技法。</Thunder_Breathing_Disperse.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Thunder_Breathing_Disperse.levels.3.labelSuffix>肆级</Thunder_Breathing_Disperse.levels.3.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Thunder_Breathing_Disperse.levels.4.description>在敌方周围创造斩击的技法。</Thunder_Breathing_Disperse.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Thunder_Breathing_Disperse.levels.4.labelSuffix>伍级</Thunder_Breathing_Disperse.levels.4.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Thunder_Breathing_Disperse.levels.5.description>在敌方周围创造斩击的技法。</Thunder_Breathing_Disperse.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Thunder_Breathing_Disperse.levels.5.labelSuffix>陆级</Thunder_Breathing_Disperse.levels.5.labelSuffix>
+  
+</LanguageData>

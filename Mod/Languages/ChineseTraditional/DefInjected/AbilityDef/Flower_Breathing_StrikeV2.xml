@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flower Breathing: Strike -->
+  <Flower_Breathing_Strike.label>花之呼吸・襲</Flower_Breathing_Strike.label>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Flower_Breathing_Strike.description>衝向對方襲擊的技法。</Flower_Breathing_Strike.description>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Flower_Breathing_Strike.levels.0.description>衝向對方襲擊的技法。</Flower_Breathing_Strike.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Flower_Breathing_Strike.levels.0.labelSuffix>壹級</Flower_Breathing_Strike.levels.0.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Flower_Breathing_Strike.levels.1.description>衝向對方襲擊的技法。</Flower_Breathing_Strike.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Flower_Breathing_Strike.levels.1.labelSuffix>貳級</Flower_Breathing_Strike.levels.1.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Flower_Breathing_Strike.levels.2.description>衝向對方襲擊的技法。</Flower_Breathing_Strike.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Flower_Breathing_Strike.levels.2.labelSuffix>參級</Flower_Breathing_Strike.levels.2.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Flower_Breathing_Strike.levels.3.description>衝向對方襲擊的技法。</Flower_Breathing_Strike.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Flower_Breathing_Strike.levels.3.labelSuffix>肆級</Flower_Breathing_Strike.levels.3.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Flower_Breathing_Strike.levels.4.description>衝向對方襲擊的技法。</Flower_Breathing_Strike.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Flower_Breathing_Strike.levels.4.labelSuffix>伍級</Flower_Breathing_Strike.levels.4.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Flower_Breathing_Strike.levels.5.description>衝向對方襲擊的技法。</Flower_Breathing_Strike.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Flower_Breathing_Strike.levels.5.labelSuffix>陸級</Flower_Breathing_Strike.levels.5.labelSuffix>
+  
+</LanguageData>

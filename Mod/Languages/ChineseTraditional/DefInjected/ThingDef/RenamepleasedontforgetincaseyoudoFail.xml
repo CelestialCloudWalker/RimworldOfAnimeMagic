@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: The Nichirin Chained Spiked Flail and Axe -->
+  <Nichirin_Chained_Spiked_Flail_and_Axe.label>日輪流星錘與斧頭</Nichirin_Chained_Spiked_Flail_and_Axe.label>
+  <!-- EN: A nichirin blade capable of killing demons. -->
+  <Nichirin_Chained_Spiked_Flail_and_Axe.description>用來殺鬼的日輪流星錘與斧頭。</Nichirin_Chained_Spiked_Flail_and_Axe.description>
+  <!-- EN: blade back -->
+  <Nichirin_Chained_Spiked_Flail_and_Axe.tools.blade_back.label>刀背</Nichirin_Chained_Spiked_Flail_and_Axe.tools.blade_back.label>
+  <!-- EN: blade -->
+  <Nichirin_Chained_Spiked_Flail_and_Axe.tools.blade.label>刀刃</Nichirin_Chained_Spiked_Flail_and_Axe.tools.blade.label>
+  
+</LanguageData>

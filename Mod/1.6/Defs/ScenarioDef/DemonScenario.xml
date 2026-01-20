@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>AA_NewlyTurnedDemons</defName>
+    <label>Newly Turned Demons</label>
+    <description>Three fresh turned demons given a task: establish a foothold in this area. You don't know much about what you've become yet, but you'll learn fast or die trying.\n\nNote: Build shelter to avoid the sun. Eat pawns to evolve. Sun exposure will kill you over time. Very difficult.</description>
+    <scenario>
+      <summary>Three newly turned demons sent to establish territory.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>AA_PlayerDemonColony</factionDef>
+      </playerFaction>
+      <parts>
+
+        <li Class="ScenPart_GameCondition">
+          <def>EclipseStart</def>
+          <durationDays>2</durationDays>
+        </li>
+
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+          <def>ConfigurePawnsXenotypes</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <xenotypeCounts>
+            <li>
+              <xenotype>AA_DemonBloodArts_User</xenotype>
+              <count>3</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+          </xenotypeCounts>
+        </li>
+
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>The transformation was agonizing. You remember your human life, but the hunger... the hunger is all-consuming.\n\nThe three of you fled together, seeking shelter from the burning sun. Now you must survive in a world that hunts your kind.\n\nRemember: sunlight means death. Eating pawns means power.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>800</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>50</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>30</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>30</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Apparel_FlakPants</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Apparel_FlakVest</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Apparel_AdvancedHelmet</thingDef>
+          <stuff>Plasteel</stuff>
+        </li>
+
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Steel</thingDef>
+          <count>450</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>WoodLog</thingDef>
+          <count>300</count>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>AA_Condemned_Family</defName>
+    <label>Condemned Family</label>
+    <description>Two of you are demons who only feed on those who deserve it, raiders, murderers those who wrong you. One of you is not turned, protecting them both. Everyone wants you dead anyways.\n\nNote: Eat to grow powerful enough to survive. Slayers and Demons both want you dead. Very difficult.</description>
+    <scenario>
+      <summary>Two demons with morals and their human protector.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>AA_PlayerDemonColony</factionDef>
+      </playerFaction>
+      <parts>
+
+        <li Class="ScenPart_GameCondition">
+          <def>EclipseStart</def>
+          <durationDays>2</durationDays>
+        </li>
+
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+          <def>ConfigurePawnsXenotypes</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <xenotypeCounts>
+            <li>
+              <xenotype>AA_DemonBloodArts_User</xenotype>
+              <count>2</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+            <li>
+              <xenotype>Baseliner</xenotype>
+              <count>1</count>
+            </li>
+          </xenotypeCounts>
+        </li>
+
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Two of you are demons now, but haven't lost yourselves yet. One human protects you both, and refuses to give up on you.\n\nYou only feed on those who deserve it: murderers, raiders, those who wronged you.\n\nRemember: Find a cure or die trying.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>800</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>50</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>30</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Apparel_FlakPants</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Apparel_FlakVest</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Apparel_AdvancedHelmet</thingDef>
+          <stuff>Plasteel</stuff>
+        </li>
+
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Steel</thingDef>
+          <count>450</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>WoodLog</thingDef>
+          <count>300</count>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>AA_Demon_Family</defName>
+    <label>Demon Family</label>
+    <description>Five demons playing family, held together by fear and power. A family bound together by force, not choice.\n\nNote: Loyalty is artificial. Internal conflict is possible. Eat pawns to survive. Avoid prolonged sunlight exposure. Difficult.</description>
+    <scenario>
+      <summary>A demon family forced together against their will.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>AA_PlayerDemonColony</factionDef>
+      </playerFaction>
+      <parts>
+
+        <li Class="ScenPart_GameCondition">
+          <def>EclipseStart</def>
+          <durationDays>2</durationDays>
+        </li>
+
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+          <def>ConfigurePawnsXenotypes</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <xenotypeCounts>
+            <li>
+              <xenotype>AA_DemonBloodArts_User</xenotype>
+              <count>5</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+          </xenotypeCounts>
+        </li>
+
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Five demons playing house.\n\nYou've claimed this territory now defend it and your new family.\n\nRemember: sunlight means death. Eating pawns means power.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>800</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>50</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>30</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>30</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Apparel_FlakPants</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Apparel_FlakVest</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Apparel_AdvancedHelmet</thingDef>
+          <stuff>Plasteel</stuff>
+        </li>
+
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Steel</thingDef>
+          <count>450</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>WoodLog</thingDef>
+          <count>300</count>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+</Defs>

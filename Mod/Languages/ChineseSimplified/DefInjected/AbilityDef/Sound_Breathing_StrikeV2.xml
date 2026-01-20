@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sound Breathing: Strike -->
+  <Sound_Breathing_Strike.label>岩之呼吸・袭</Sound_Breathing_Strike.label>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Sound_Breathing_Strike.description>冲向对方袭击的技法。</Sound_Breathing_Strike.description>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Sound_Breathing_Strike.levels.0.description>冲向对方袭击的技法。</Sound_Breathing_Strike.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Sound_Breathing_Strike.levels.0.labelSuffix>壹级</Sound_Breathing_Strike.levels.0.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Sound_Breathing_Strike.levels.1.description>冲向对方袭击的技法。</Sound_Breathing_Strike.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Sound_Breathing_Strike.levels.1.labelSuffix>贰级</Sound_Breathing_Strike.levels.1.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Sound_Breathing_Strike.levels.2.description>冲向对方袭击的技法。</Sound_Breathing_Strike.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Sound_Breathing_Strike.levels.2.labelSuffix>参级</Sound_Breathing_Strike.levels.2.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Sound_Breathing_Strike.levels.3.description>冲向对方袭击的技法。</Sound_Breathing_Strike.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Sound_Breathing_Strike.levels.3.labelSuffix>肆级</Sound_Breathing_Strike.levels.3.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Sound_Breathing_Strike.levels.4.description>冲向对方袭击的技法。</Sound_Breathing_Strike.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Sound_Breathing_Strike.levels.4.labelSuffix>伍级</Sound_Breathing_Strike.levels.4.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Sound_Breathing_Strike.levels.5.description>冲向对方袭击的技法。</Sound_Breathing_Strike.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Sound_Breathing_Strike.levels.5.labelSuffix>陆级</Sound_Breathing_Strike.levels.5.labelSuffix>
+  
+</LanguageData>

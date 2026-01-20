@@ -63,7 +63,7 @@
 
   <TraitDef>
     <defName>EmotionalResonance</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
     </forcedPassions>
@@ -89,7 +89,7 @@
 
   <TraitDef>
     <defName>InspiringPresence</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
     </forcedPassions>
@@ -115,7 +115,7 @@
 
   <TraitDef>
     <defName>UnconditionalCare</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Medicine</li>
     </forcedPassions>
@@ -144,7 +144,7 @@
 
   <TraitDef>
     <defName>HeartShield</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>

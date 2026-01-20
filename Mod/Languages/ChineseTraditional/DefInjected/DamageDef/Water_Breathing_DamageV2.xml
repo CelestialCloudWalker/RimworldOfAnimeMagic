@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: water slash -->
+  <Water_Breathing_Damage.label>水之強擊</Water_Breathing_Damage.label>
+  <!-- EN: {0} was drowned by crushing waves. -->
+  <Water_Breathing_Damage.deathMessage>{0}溺死在強浪中。</Water_Breathing_Damage.deathMessage>
+  
+</LanguageData>

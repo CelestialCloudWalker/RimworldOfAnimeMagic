@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: extra large breathing gourd -->
+  <AnimeArsenal_BreathingGourd_ExtraLarge.label>巨型呼吸法葫蘆</AnimeArsenal_BreathingGourd_ExtraLarge.label>
+  <!-- EN: An enormous training gourd for masters only. Extreme rewards with severe risk. Reward: +30% breathing, Risk: Severe damage and potential death on failure. -->
+  <AnimeArsenal_BreathingGourd_ExtraLarge.description>只供專家使用的巨型訓練葫蘆。獎勵極高但非常危險。獎勵:+30%呼吸，風險:失敗時造成嚴重傷害，可能導致死亡。</AnimeArsenal_BreathingGourd_ExtraLarge.description>
+  
+  <!-- EN: large breathing gourd -->
+  <AnimeArsenal_BreathingGourd_Large.label>大型呼吸法葫蘆</AnimeArsenal_BreathingGourd_Large.label>
+  <!-- EN: A large training gourd for advanced practitioners. High rewards but dangerous. Reward: +20% breathing, Risk: High damage on failure. -->
+  <AnimeArsenal_BreathingGourd_Large.description>給進階隊士使用的大型訓練葫蘆。獎勵豐富但有危險。獎勵:+20%呼吸，風險:失敗時造成大量傷害。</AnimeArsenal_BreathingGourd_Large.description>
+  
+  <!-- EN: medium breathing gourd -->
+  <AnimeArsenal_BreathingGourd_Medium.label>中型呼吸法葫蘆</AnimeArsenal_BreathingGourd_Medium.label>
+  <!-- EN: A medium training gourd for intermediate practitioners. Greater rewards with increased risk. Reward: +15% breathing, Risk: Moderate damage on failure. -->
+  <AnimeArsenal_BreathingGourd_Medium.description>給中級隊士使用的中型訓練葫蘆。獎勵更高而風險也提高。獎勵:+15%呼吸，風險:失敗時造成中等傷害。</AnimeArsenal_BreathingGourd_Medium.description>
+  
+  <!-- EN: small breathing gourd -->
+  <AnimeArsenal_BreathingGourd_Small.label>小型呼吸法葫蘆</AnimeArsenal_BreathingGourd_Small.label>
+  <!-- EN: A small training gourd for beginners. Increases breathing capacity with moderate risk. Reward: +10% breathing, Risk: Low damage on failure. -->
+  <AnimeArsenal_BreathingGourd_Small.description>給新人使用的小型訓練葫蘆。在適度風險下增強呼吸能力。獎勵:+10%呼吸，風險:失敗時造成少量傷害。</AnimeArsenal_BreathingGourd_Small.description>
+  
+</LanguageData>

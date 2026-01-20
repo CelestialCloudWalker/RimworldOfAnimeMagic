@@ -17,6 +17,11 @@ namespace AnimeArsenal
         public EffecterDef casterEffecter;
         public EffecterDef impactEffecter;
 
+        public StatDef scaleStat;
+        public SkillDef scaleSkill;  
+        public float skillMultiplier = 0.1f;
+        public bool debugScaling = false;
+
         public CompProperties_TeleportMeleeAttack()
         {
             compClass = typeof(CompAbilityEffect_TeleportMeleeAttack);
@@ -183,13 +188,24 @@ namespace AnimeArsenal
 
         private int CalculateDamage()
         {
-            var baseDamage = Props.damageAmount;
-            if (Props.additionalDamageFactorFromMeleeSkill > 0)
+            float baseDamage = Props.damageAmount;
+
+            float scaledDamage = DamageScalingUtility.GetScaledDamage(
+                baseDamage,
+                parent.pawn,
+                Props.scaleStat,
+                Props.scaleSkill,
+                Props.skillMultiplier,
+                Props.debugScaling
+            );
+
+            if (Props.additionalDamageFactorFromMeleeSkill > 0 && parent.pawn != null)
             {
-                var meleeLevel = parent.pawn?.skills?.GetSkill(SkillDefOf.Melee)?.Level ?? 0;
-                baseDamage += (int)(meleeLevel * Props.additionalDamageFactorFromMeleeSkill * Props.damageAmount);
+                var meleeLevel = parent.pawn.skills?.GetSkill(SkillDefOf.Melee)?.Level ?? 0;
+                scaledDamage += meleeLevel * Props.additionalDamageFactorFromMeleeSkill * Props.damageAmount;
             }
-            return baseDamage;
+
+            return (int)scaledDamage;
         }
 
         private void PlayImpactEffect(IntVec3 position)

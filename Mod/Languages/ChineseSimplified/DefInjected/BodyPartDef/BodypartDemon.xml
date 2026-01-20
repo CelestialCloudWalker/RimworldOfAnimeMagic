@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Demon arm -->
+  <AA_DemonArm.label>鬼臂</AA_DemonArm.label>
+  
+  <!-- EN: Demon brain -->
+  <AA_DemonBrain.label>鬼脑</AA_DemonBrain.label>
+  
+  <!-- EN: Demon clavicle -->
+  <AA_DemonClavicle.label>鬼锁骨</AA_DemonClavicle.label>
+  
+  <!-- EN: Demon ear -->
+  <AA_DemonEar.label>鬼耳</AA_DemonEar.label>
+  
+  <!-- EN: Demon eye -->
+  <AA_DemonEye.label>鬼眼</AA_DemonEye.label>
+  
+  <!-- EN: Demon femur -->
+  <AA_DemonFemur.label>鬼股骨</AA_DemonFemur.label>
+  
+  <!-- EN: Demon finger -->
+  <AA_DemonFinger.label>鬼手指</AA_DemonFinger.label>
+  
+  <!-- EN: Demon foot -->
+  <AA_DemonFoot.label>鬼脚</AA_DemonFoot.label>
+  
+  <!-- EN: Demon hand -->
+  <AA_DemonHand.label>鬼手</AA_DemonHand.label>
+  
+  <!-- EN: Demon head -->
+  <AA_DemonHead.label>鬼头</AA_DemonHead.label>
+  
+  <!-- EN: Demon humerus -->
+  <AA_DemonHumerus.label>鬼肱骨</AA_DemonHumerus.label>
+  
+  <!-- EN: Demon jaw -->
+  <AA_DemonJaw.label>鬼下巴</AA_DemonJaw.label>
+  
+  <!-- EN: Demon leg -->
+  <AA_DemonLeg.label>鬼腿</AA_DemonLeg.label>
+  
+  <!-- EN: Demon neck -->
+  <AA_DemonNeck.label>鬼颈</AA_DemonNeck.label>
+  
+  <!-- EN: Demon nose -->
+  <AA_DemonNose.label>鬼鼻</AA_DemonNose.label>
+  
+  <!-- EN: Demon pelvis -->
+  <AA_DemonPelvis.label>鬼骨盆</AA_DemonPelvis.label>
+  
+  <!-- EN: Demon radius -->
+  <AA_DemonRadius.label>鬼桡骨</AA_DemonRadius.label>
+  
+  <!-- EN: Demon ribcage -->
+  <AA_DemonRibcage.label>鬼肋骨</AA_DemonRibcage.label>
+  
+  <!-- EN: Demon shoulder -->
+  <AA_DemonShoulder.label>鬼肩</AA_DemonShoulder.label>
+  
+  <!-- EN: Demon skull -->
+  <AA_DemonSkull.label>鬼头骨</AA_DemonSkull.label>
+  
+  <!-- EN: Demon spine -->
+  <AA_DemonSpine.label>鬼脊椎</AA_DemonSpine.label>
+  
+  <!-- EN: Demon sternum -->
+  <AA_DemonSternum.label>鬼胸骨</AA_DemonSternum.label>
+  
+  <!-- EN: Demon tibia -->
+  <AA_DemonTibia.label>鬼胫骨</AA_DemonTibia.label>
+  
+  <!-- EN: Demon toe -->
+  <AA_DemonToe.label>鬼脚趾</AA_DemonToe.label>
+  
+  <!-- EN: Demon tongue -->
+  <AA_DemonTongue.label>鬼舌</AA_DemonTongue.label>
+  <!-- EN: remove -->
+  <AA_DemonTongue.removeRecipeLabelOverride>移除</AA_DemonTongue.removeRecipeLabelOverride>
+  
+  <!-- EN: Demon torso -->
+  <AA_DemonTorso.label>鬼躯干</AA_DemonTorso.label>
+  
+  <!-- EN: utility slot -->
+  <AA_DemonWaist.label>腰</AA_DemonWaist.label>
+  
+</LanguageData>

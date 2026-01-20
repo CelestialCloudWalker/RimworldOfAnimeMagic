@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Increase Breath Capacity -->
+  <Frost_Breath_Increase.label>增加呼吸法容量</Frost_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Frost_Breath_Increase2.label>增加呼吸法容量</Frost_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Frost_Breath_Increase3.label>增加呼吸法容量</Frost_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Frost_Breath_Increase4.label>增加呼吸法容量</Frost_Breath_Increase4.label>
+  
+  <!-- EN: Frost Breathing: Disperse -->
+  <Frost_Breathing_Disperse.label>霜之呼吸・散</Frost_Breathing_Disperse.label>
+  
+  <!-- EN: FrostBreathing -->
+  <Frost_Breathing_GeneGive_Talent.label>霜之呼吸</Frost_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Frost Breathing: Multi Strike -->
+  <Frost_Breathing_Multi_Strike.label>霜之呼吸・连袭</Frost_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Frost Breathing: Reflect -->
+  <Frost_Breathing_Reflect.label>霜之呼吸・返</Frost_Breathing_Reflect.label>
+  
+  <!-- EN: Beast Breathing: Slash -->
+  <Frost_Breathing_Slash.label>霜之呼吸・斩</Frost_Breathing_Slash.label>
+  
+  <!-- EN: Frost Breathing: Strike -->
+  <Frost_Breathing_Strike.label>霜之呼吸・袭</Frost_Breathing_Strike.label>
+  
+  <!-- EN: FrostBreath_Cost -->
+  <FrostBreath_Cost_Talent.label>霜之呼吸花费</FrostBreath_Cost_Talent.label>
+  
+  <!-- EN: FrostBreath_Cost -->
+  <FrostBreath_Cost_Talent2.label>霜之呼吸花费</FrostBreath_Cost_Talent2.label>
+  
+  <!-- EN: FrostBreath_Cost -->
+  <FrostBreath_Cost_Talent3.label>霜之呼吸花费</FrostBreath_Cost_Talent3.label>
+  
+  <!-- EN: FrostBreath_Cost -->
+  <FrostBreath_Cost_Talent4.label>霜之呼吸花费</FrostBreath_Cost_Talent4.label>
+  
+  <!-- EN: FrostBreath_RegenAmount -->
+  <FrostBreath_RegenAmount_Talent.label>每刻霜之呼吸恢复量</FrostBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: FrostBreath_RegenAmount -->
+  <FrostBreath_RegenAmount_Talent2.label>每刻霜之呼吸恢复量</FrostBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: FrostBreath_RegenAmount -->
+  <FrostBreath_RegenAmount_Talent3.label>每刻霜之呼吸恢复量</FrostBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: FrostBreath_RegenAmount -->
+  <FrostBreath_RegenAmount_Talent4.label>每刻霜之呼吸恢复量</FrostBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: FrostBreath_RegenRate -->
+  <FrostBreath_RegenRate_Talent.label>霜之呼吸恢复率</FrostBreath_RegenRate_Talent.label>
+  
+  <!-- EN: FrostBreath_RegenRate -->
+  <FrostBreath_RegenRate_Talent2.label>霜之呼吸恢复率</FrostBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: FrostBreath_RegenRate -->
+  <FrostBreath_RegenRate_Talent3.label>霜之呼吸恢复率</FrostBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: FrostBreath_RegenRate -->
+  <FrostBreath_RegenRate_Talent4.label>霜之呼吸恢复率</FrostBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: FrostBreath_RegenTicks -->
+  <FrostBreath_RegenTicks_Talent.label>霜之呼吸恢复间隔</FrostBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: FrostBreath_RegenTicks -->
+  <FrostBreath_RegenTicks_Talent2.label>霜之呼吸恢复间隔</FrostBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: FrostBreath_RegenTicks -->
+  <FrostBreath_RegenTicks_Talent3.label>霜之呼吸恢复间隔</FrostBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: FrostBreath_RegenTicks -->
+  <FrostBreath_RegenTicks_Talent4.label>霜之呼吸恢复间隔</FrostBreath_RegenTicks_Talent4.label>
+</LanguageData>

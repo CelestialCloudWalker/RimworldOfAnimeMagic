@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: stone crush -->
+  <SmashOfStone.label>岩之壓潰</SmashOfStone.label>
+  <!-- EN: Severe blunt trauma. -->
+  <SmashOfStone.description>嚴重鈍傷。</SmashOfStone.description>
+  <!-- EN: stone crush scar -->
+  <SmashOfStone.comps.HediffComp_GetsPermanent.permanentLabel>岩之壓潰疤痕</SmashOfStone.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: a stone crush -->
+  <SmashOfStone.labelNoun>岩之壓潰</SmashOfStone.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <SmashOfStone.labelNounPretty>{1}內的{0}</SmashOfStone.labelNounPretty>
+  
+</LanguageData>

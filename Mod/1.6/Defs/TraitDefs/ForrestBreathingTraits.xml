@@ -31,7 +31,7 @@
 
   <TraitDef>
     <defName>CamouflageExpert</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Shooting</li>
     </forcedPassions>
@@ -87,7 +87,7 @@
 
   <TraitDef>
     <defName>RootNetwork</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Intellectual</li>
     </forcedPassions>
@@ -115,7 +115,7 @@
 
   <TraitDef>
     <defName>SeasonalAdaptation</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Plants</li>
     </forcedPassions>
@@ -142,7 +142,7 @@
 
   <TraitDef>
     <defName>Photosynthesis</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Plants</li>
     </forcedPassions>

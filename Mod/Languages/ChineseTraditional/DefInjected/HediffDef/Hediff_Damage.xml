@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Total Concentration Breathing -->
+  <TotalConcentrationBreathingEffect.label>全集中之呼吸</TotalConcentrationBreathingEffect.label>
+  <!-- EN: The user is in a state of heightened physical resilience through focused breathing techniques. -->
+  <TotalConcentrationBreathingEffect.description>透過專注的呼吸法，提高身體韌性的狀態。</TotalConcentrationBreathingEffect.description>
+  <!-- EN: Minimal -->
+  <TotalConcentrationBreathingEffect.stages.Minimal.label>微弱</TotalConcentrationBreathingEffect.stages.Minimal.label>
+  <!-- EN: Minor -->
+  <TotalConcentrationBreathingEffect.stages.Minor.label>輕度</TotalConcentrationBreathingEffect.stages.Minor.label>
+  <!-- EN: Moderate -->
+  <TotalConcentrationBreathingEffect.stages.Moderate.label>中度</TotalConcentrationBreathingEffect.stages.Moderate.label>
+  <!-- EN: Severe -->
+  <TotalConcentrationBreathingEffect.stages.Severe.label>重度</TotalConcentrationBreathingEffect.stages.Severe.label>
+  <!-- EN: Critical -->
+  <TotalConcentrationBreathingEffect.stages.Critical.label>嚴重</TotalConcentrationBreathingEffect.stages.Critical.label>
+  
+</LanguageData>

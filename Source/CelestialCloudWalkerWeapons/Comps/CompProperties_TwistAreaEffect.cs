@@ -25,34 +25,69 @@ namespace AnimeArsenal
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            if (target.IsValid && target.Cell.IsValid)
+            if (parent?.pawn == null || parent.pawn.Map == null)
             {
-                DoTwistAttack(target.Cell);
+                Log.Warning("[AnimeArsenal] TwistAreaEffect: Invalid parent or pawn");
+                return;
             }
+
+            if (!target.IsValid)
+            {
+                Log.Warning("[AnimeArsenal] TwistAreaEffect: Invalid target");
+                return;
+            }
+
+            IntVec3 targetPos;
+            if (target.HasThing && target.Thing is Pawn)
+            {
+                targetPos = target.Thing.Position;
+            }
+            else if (target.Cell.IsValid)
+            {
+                targetPos = target.Cell;
+            }
+            else
+            {
+                Log.Warning("[AnimeArsenal] TwistAreaEffect: Could not determine target position");
+                return;
+            }
+
+            DoTwistAttack(targetPos);
         }
 
         private void DoTwistAttack(IntVec3 targetPos)
         {
+            if (parent?.pawn == null)
+                return;
+
             Map map = parent.pawn.Map;
+            if (map == null)
+                return;
+
             var enemies = FindTargetsInRadius(targetPos, map);
+
+            if (enemies.Count == 0)
+            {
+                Messages.Message(
+                    "No valid targets in range.",
+                    MessageTypeDefOf.RejectInput
+                );
+                return;
+            }
 
             int numToHit = Mathf.Min(enemies.Count, Props.maxTargets);
 
             for (int i = 0; i < numToHit; i++)
             {
                 Pawn target = enemies[i];
+
                 if (target?.Dead == false && !target.Destroyed)
                 {
                     float scaleFactor = 1f;
-                    try
-                    {
-                        scaleFactor = AnimeArsenalUtility.CalcAstralPulseScalingFactor(parent.pawn, target);
-                    }
-                    catch
-                    {
-                    }
 
-                    TwistLimb(target, parent.pawn, Props.baseDamage * scaleFactor);
+                    float finalDamage = Props.baseDamage * scaleFactor;
+
+                    TwistLimb(target, parent.pawn, finalDamage);
                 }
             }
         }
@@ -63,9 +98,14 @@ namespace AnimeArsenal
 
             foreach (IntVec3 cell in GenRadial.RadialCellsAround(center, Props.radius, true))
             {
-                if (!cell.InBounds(map)) continue;
+                if (!cell.InBounds(map))
+                    continue;
 
-                foreach (Thing thing in cell.GetThingList(map))
+                List<Thing> things = cell.GetThingList(map);
+                if (things == null)
+                    continue;
+
+                foreach (Thing thing in things)
                 {
                     if (thing is Pawn p && CanTarget(p))
                     {
@@ -82,23 +122,70 @@ namespace AnimeArsenal
             if (pawn?.Dead != false || pawn.Destroyed)
                 return false;
 
-            if (pawn == parent.pawn)
+            if (pawn == parent?.pawn)
                 return false;
 
-            if (pawn.Faction == parent.pawn?.Faction)
+            if (pawn.Faction != null && pawn.Faction == parent.pawn?.Faction)
                 return false;
 
             return true;
         }
 
-        public static void TwistLimb(Pawn target, Pawn caster, float totalDamage)
+        private void TwistLimb(Pawn target, Pawn caster, float totalDamage)
         {
+            if (target == null || target.Dead || target.Destroyed)
+                return;
+
+            if (caster == null)
+                return;
+
             BodyPartRecord limb = AnimeArsenalUtility.GetRandomLimb(target);
+
             if (limb != null)
             {
-                DamageInfo dmg = new DamageInfo(CelestialDefof.TwistDamage, totalDamage, 1f, -1f, caster, limb);
+                DamageInfo dmg = new DamageInfo(
+                    CelestialDefof.TwistDamage,
+                    totalDamage,
+                    1f,    
+                    -1f,   
+                    caster,
+                    limb
+                );
+
                 target.TakeDamage(dmg);
+
+                FleckMaker.ThrowMicroSparks(target.DrawPos, target.Map);
             }
+            else
+            {
+                DamageInfo dmg = new DamageInfo(
+                    CelestialDefof.TwistDamage,
+                    totalDamage,
+                    1f,
+                    -1f,
+                    caster
+                );
+
+                target.TakeDamage(dmg);
+
+                FleckMaker.ThrowMicroSparks(target.DrawPos, target.Map);
+            }
+        }
+
+        public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
+        {
+            if (target.Cell.IsValid)
+                return true;
+
+            if (target.HasThing && target.Thing is Pawn)
+                return true;
+
+            if (throwMessages)
+            {
+                Messages.Message("Must target a location or pawn", MessageTypeDefOf.RejectInput);
+            }
+
+            return false;
         }
     }
 }

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: lightning strike -->
+  <BoltsOfThunder.label>雷之電劈</BoltsOfThunder.label>
+  <!-- EN: Tissue seared by electric current. Severe burns and nerve damage. -->
+  <BoltsOfThunder.description>組織被電流燒焦，造成嚴重灼傷和神經損傷。</BoltsOfThunder.description>
+  <!-- EN: lightning strike scar -->
+  <BoltsOfThunder.comps.HediffComp_GetsPermanent.permanentLabel>雷之電劈疤痕</BoltsOfThunder.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Electrocuted off -->
+  <BoltsOfThunder.injuryProps.destroyedLabel>喪失功能</BoltsOfThunder.injuryProps.destroyedLabel>
+  <!-- EN: a lightning strike -->
+  <BoltsOfThunder.labelNoun>雷之電劈</BoltsOfThunder.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <BoltsOfThunder.labelNounPretty>{1}內的{0}</BoltsOfThunder.labelNounPretty>
+  
+</LanguageData>

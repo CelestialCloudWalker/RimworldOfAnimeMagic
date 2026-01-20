@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Mitsuri's Nichirin Blade -->
+  <NichirinSword_KanrojiMitsuri.label>蜜璃的日輪刀</NichirinSword_KanrojiMitsuri.label>
+  <!-- EN: A nichirin blade capable of killing demons. -->
+  <NichirinSword_KanrojiMitsuri.description>用來殺鬼的日輪刀。</NichirinSword_KanrojiMitsuri.description>
+  <!-- EN: blade back -->
+  <NichirinSword_KanrojiMitsuri.tools.blade_back.label>刀背</NichirinSword_KanrojiMitsuri.tools.blade_back.label>
+  <!-- EN: blade -->
+  <NichirinSword_KanrojiMitsuri.tools.blade.label>刀刃</NichirinSword_KanrojiMitsuri.tools.blade.label>
+  
+</LanguageData>

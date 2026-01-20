@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Serpent Breath Cost Multiplier -->
+  <SerpentBreath_Cost.label>蛇之呼吸資源花費乘數</SerpentBreath_Cost.label>
+  <!-- EN: Serpnet Breath Cost Multiplier. -->
+  <SerpentBreath_Cost.description>蛇之呼吸資源花費乘數。</SerpentBreath_Cost.description>
+  
+</LanguageData>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: sonic blast -->
+  <RipplesOfSound.label>音之爆发</RipplesOfSound.label>
+  <!-- EN: Tissue battered by sound waves. Severe concussive trauma. -->
+  <RipplesOfSound.description>组织被音波震伤，造成严重脑震荡。</RipplesOfSound.description>
+  <!-- EN: sonic blast scar -->
+  <RipplesOfSound.comps.HediffComp_GetsPermanent.permanentLabel>音之爆发疤痕</RipplesOfSound.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Blown apart -->
+  <RipplesOfSound.injuryProps.destroyedOutLabel>被震断</RipplesOfSound.injuryProps.destroyedOutLabel>
+  <!-- EN: a sonic blast -->
+  <RipplesOfSound.labelNoun>音之爆发</RipplesOfSound.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <RipplesOfSound.labelNounPretty>{1}内的{0}</RipplesOfSound.labelNounPretty>
+  
+</LanguageData>

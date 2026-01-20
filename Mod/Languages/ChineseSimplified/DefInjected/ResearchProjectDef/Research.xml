@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Breathing Gourd Crafting -->
+  <AA_BreathingGourdCrafting.label>制作呼吸法葫芦</AA_BreathingGourdCrafting.label>
+  <!-- EN: Learn to craft specialized breathing training gourds. -->
+  <AA_BreathingGourdCrafting.description>制作用于呼吸法训练的特殊葫芦。</AA_BreathingGourdCrafting.description>
+  
+  <!-- EN: Flesh Blade -->
+  <AA_FleshBladeResearch.label>血刃</AA_FleshBladeResearch.label>
+  <!-- EN: Unlock the ability to forge Flesh Blades from scarlet iron infused with human meat. -->
+  <AA_FleshBladeResearch.description>解锁用人肉融入猩猩绯铁锻造血刃的能力。</AA_FleshBladeResearch.description>
+  
+  <!-- EN: Haoris -->
+  <AA_HaoriResearch.label>羽织</AA_HaoriResearch.label>
+  <!-- EN: Unlock the ability to craft traditional haoris. -->
+  <AA_HaoriResearch.description>解锁制造传统羽织的能力。</AA_HaoriResearch.description>
+  
+  <!-- EN: Nichirin Blade -->
+  <AA_NichinrinBladeResearch.label>日轮刀</AA_NichinrinBladeResearch.label>
+  <!-- EN: Unlock the ability to forge Nichirin Blades from scarlet iron. -->
+  <AA_NichinrinBladeResearch.description>解锁从猩猩绯铁锻造日轮刀的能力。</AA_NichinrinBladeResearch.description>
+  
+  <!-- EN: Scarlet Iron Working -->
+  <AA_ScarletIronWorking.label>猩猩绯钢加工</AA_ScarletIronWorking.label>
+  <!-- EN: Learn to identify, process, and work with Scarlet Iron Ore and Scarlet Crimson Iron Sand. -->
+  <AA_ScarletIronWorking.description>学习如何辨认、处理并加工猩猩绯矿石和猩猩绯砂铁。</AA_ScarletIronWorking.description>
+  
+  <!-- EN: Scarlet Thread Weaving -->
+  <AA_ScarletThreadWeaving.label>猩猩绯纤维编织</AA_ScarletThreadWeaving.label>
+  <!-- EN: Learn to weave fine scarlet iron threads into fabric. This specialized textile incorporates microscopic iron particles, providing protection while remaining flexible enough for clothing. -->
+  <AA_ScarletThreadWeaving.description>学习如何将猩猩绯铁编织为布料。这种特殊织物含有微小矿粒，提供保护的同时又能维持延展性，适合制成服装。</AA_ScarletThreadWeaving.description>
+  
+  <!-- EN: Slayer Corps Uniform -->
+  <AA_SlayerCorpsUniformResearch.label>鬼杀队服</AA_SlayerCorpsUniformResearch.label>
+  <!-- EN: Unlock the uniform of the Demon Slayer Corps. This specialized attire provides protection while allowing freedom of movement. Requires scarlet thread fabric. -->
+  <AA_SlayerCorpsUniformResearch.description>解锁鬼杀队制服，这种特制服装提供防护且行动方便。需要猩猩绯纤维。</AA_SlayerCorpsUniformResearch.description>
+  
+</LanguageData>

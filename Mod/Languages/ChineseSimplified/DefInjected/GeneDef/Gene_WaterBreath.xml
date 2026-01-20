@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Water Breath -->
+  <Gene_WaterBreath.label>水之呼吸</Gene_WaterBreath.label>
+  <!-- EN: Water Breathing Gene. -->
+  <Gene_WaterBreath.description>水之呼吸基因。</Gene_WaterBreath.description>
+  <!-- EN: "{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out. -->
+  <Gene_WaterBreath.modExtensions.1.activationMessage>{0}觉醒了斑纹，体内充满力量……但惨痛的代价是，自身时日无多。</Gene_WaterBreath.modExtensions.1.activationMessage>
+  <!-- EN: Grants immense power in exchange for a shortened lifespan. Their body burns with strength, but their time is now limited—death before the age of 25 is inevitable. -->
+  <Gene_WaterBreath.modExtensions.1.curseHediffDescription>以缩短寿命获取强大能力。他们身上流淌着强大的能量，然而时间有限——25岁前注定会死亡。</Gene_WaterBreath.modExtensions.1.curseHediffDescription>
+  <!-- EN: Breathing Mark Curse -->
+  <Gene_WaterBreath.modExtensions.1.curseHediffLabel>斑纹诅咒</Gene_WaterBreath.modExtensions.1.curseHediffLabel>
+  <!-- EN: Breathing Mark Curse -->
+  <Gene_WaterBreath.modExtensions.1.curseStageLabel>斑纹诅咒</Gene_WaterBreath.modExtensions.1.curseStageLabel>
+  <!-- EN: {0} paid their lifespan in advance, trading years for strength—and the cost has come due.. -->
+  <Gene_WaterBreath.modExtensions.1.deathMessage>{0}提前付出了生命的代价，以寿命换取力量——而代价已经降临……</Gene_WaterBreath.modExtensions.1.deathMessage>
+  <!-- EN: Current stored Breath. -->
+  <Gene_WaterBreath.resourceDescription>现存呼吸</Gene_WaterBreath.resourceDescription>
+  <!-- EN: Water Breath -->
+  <Gene_WaterBreath.resourceLabel>水之呼吸</Gene_WaterBreath.resourceLabel>
+  <!-- EN: Water Breath -->
+  <Gene_WaterBreath.resourceName>水之呼吸</Gene_WaterBreath.resourceName>
+  
+</LanguageData>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN:
+    <li>questDescription->A former Demon Slayer Corps member has appeared at your settlement. They offer to escort up to three of your colonists to Mount Sagiri for the Final Selection - a seven-day survival trial where participants fight captured demons in a wisteria-enclosed mountain.\n\nOnly those who survive all seven nights and claim their ore at dawn will join the Demon Slayer Corps. Your colonists may develop the ability to learn breathing techniques... if they can endure.\n\nThe retired slayer's scarred face speaks volumes: "Many climb Mount Sagiri. Most feed the demons. The worthy few descend forever changed."\n\nSurvival depends on combat skills, physical resilience, and sheer determination. Skilled fighters and tough individuals have better odds, while the frail face greater peril.\n\nWARNING: Colonists with demon blood cannot participate - the wisteria barriers would kill them instantly.</li>
+  -->
+  <AnimeArsenal_MountSagiriFinalSelection.questDescriptionRules.rulesStrings>
+  <li>questDescription->一名前鬼殺隊士出現在你的定居點。他提出可以將你的三名殖民者，護送到狹霧山參加最終選拔。那是一場為期七天的生存試煉，參加者需在紫藤花環繞的山中，與被監禁的鬼交戰。\n\n只有成功活過七夜，並在明晨挑選自己玉鋼的人，才能加入鬼殺隊。你的殖民者可能從中得到學習呼吸法的能力……前提是他們能忍受下來。\n\n退休隊士佈滿傷痕的臉說明了一切:「登上狹霧山，多數成鬼餐。少有貴刀人，轉命步返程。」\n\n生存取決於格鬥技能、身體韌性和堅強的意志。敏捷的戰士與意志堅定者更有勝算，而體弱者會面臨更大的危險。\n\n警告: 擁有鬼之血的殖民者不得參加，因為紫藤花園林會立即將其殺害。</li>
+  </AnimeArsenal_MountSagiriFinalSelection.questDescriptionRules.rulesStrings>
+  <!-- EN:
+    <li>questName->Final Selection</li>
+    <li>questName->Mount Sagiri Trial</li>
+    <li>questName->A Chance to Fight Back</li>
+    <li>questName->Seven Days of Survival</li>
+    <li>questName->The Demon Slayer Trial</li>
+  -->
+  <AnimeArsenal_MountSagiriFinalSelection.questNameRules.rulesStrings>
+    <li>questName->最終選拔</li>
+    <li>questName->狹霧山試煉</li>
+    <li>questName->反擊之刻</li>
+    <li>questName->七日生存</li>
+    <li>questName->鬼殺試煉</li>
+    </AnimeArsenal_MountSagiriFinalSelection.questNameRules.rulesStrings>
+  <!-- EN: Demon Slayer Corps Guide Arrived -->
+  <AnimeArsenal_MountSagiriFinalSelection.root.nodes.ShuttleDelay.node.nodes.Letter.label.slateRef>鬼殺隊引路人已抵達</AnimeArsenal_MountSagiriFinalSelection.root.nodes.ShuttleDelay.node.nodes.Letter.label.slateRef>
+  <!-- EN: A veteran of the Demon Slayer Corps has arrived to escort your colonists to Mount Sagiri. Their haori bears the Corps' symbol, and their eyes hold the weight of countless battles.\n\n"Seven nights among demons. Send one to three candidates. Those who survive join our ranks. Those who fall become demon feast."\n\nChoose wisely - combat skills and physical toughness improve survival odds, while frailty makes the trial far more perilous.\n\nIMPORTANT: Colonists with demon blood CANNOT participate. The wisteria barriers surrounding Mount Sagiri are lethal to demons. -->
+  <AnimeArsenal_MountSagiriFinalSelection.root.nodes.ShuttleDelay.node.nodes.Letter.text.slateRef>一位資深鬼殺隊士前來接送你的殖民者前往狹霧山。他的羽織印有鬼殺隊的標誌，眼神背負了無數戰鬥帶來的沉重。\n\n「七晚與鬼為伍，選出一到三名應試者吧。生者為隊士，敗者為鬼飧。」\n\n謹慎選擇⸺格鬥技能和體質能提高生存率，而體弱者會在試煉面臨更大的危機。\n\n重要提醒: 擁有鬼之血的殖民者不得參加，因為狹霧山周圍的紫藤花林對鬼是致命的。</AnimeArsenal_MountSagiriFinalSelection.root.nodes.ShuttleDelay.node.nodes.Letter.text.slateRef>
+  <!-- EN: Final Selection Results -->
+  <AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsReturned.node.nodes.Letter.label.slateRef>最終選拔結果</AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsReturned.node.nodes.Letter.label.slateRef>
+  <!-- EN: The transport has returned from Mount Sagiri. The survival rolls have been made, and fates have been decided... -->
+  <AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsReturned.node.nodes.Letter.text.slateRef>運輸艙已從狹霧山返回。已完成生存判定，而他們的命運也塵埃落定……</AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsReturned.node.nodes.Letter.text.slateRef>
+  <!-- EN: Final Selection Rewards -->
+  <AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsReturned.node.nodes.DropPods.customLetterLabel.slateRef>最終選拔獎勵</AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsReturned.node.nodes.DropPods.customLetterLabel.slateRef>
+  <!-- EN: Rewards from the Final Selection have arrived via transport pod. -->
+  <AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsReturned.node.nodes.DropPods.customLetterText.slateRef>最終選拔的獎勵已經由運輸艙送達。</AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsReturned.node.nodes.DropPods.customLetterText.slateRef>
+  <!-- EN: Final Selection - Total Failure -->
+  <AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsDied.node.nodes.Letter.label.slateRef>最終選拔 ⸺ 全軍覆沒</AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsDied.node.nodes.Letter.label.slateRef>
+  <!-- EN: No one has returned from Mount Sagiri. The demons have claimed all who entered. Their sacrifice will not be forgotten, but the Corps gains no new members this day. -->
+  <AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsDied.node.nodes.Letter.text.slateRef>沒有人從狹霧山回來。鬼抓走了所有進入山中的參加者。雖然他們的犧牲永遠不會被忘記，但鬼殺隊一個新成員都沒有增加。</AnimeArsenal_MountSagiriFinalSelection.root.nodes.ColonistsDied.node.nodes.Letter.text.slateRef>
+  
+</LanguageData>

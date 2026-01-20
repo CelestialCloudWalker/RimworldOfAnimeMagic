@@ -27,6 +27,7 @@
       <CanHitFriendly>false</CanHitFriendly>
       <CanHitCaster>false</CanHitCaster>
       <aoeDamage>2</aoeDamage>
+      <scaleStat>ShootingAccuracyPawn</scaleStat>
     </projectile>
     <comps>
       <li Class="CompProperties_Glower">

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: absolute zero -->
+  <AbsoluteZero.degreeDatas.absolute_zero.label>絕對零度</AbsoluteZero.degreeDatas.absolute_zero.label>
+  <!-- EN: [PAWN_nameDef] embodies the ultimate cold. [PAWN_possessive] body exists at temperatures that would kill others, preserving everything around [PAWN_objective] but making [PAWN_objective] emotionally distant. -->
+  <AbsoluteZero.degreeDatas.absolute_zero.description>[PAWN_nameDef]是酷寒的化身。[PAWN_pronoun]的體溫能殺死他人，保護了[PAWN_pronoun]周遭的一切，卻也使自己情感疏離。</AbsoluteZero.degreeDatas.absolute_zero.description>
+  
+  <!-- EN: cryogenic healing -->
+  <CryogenicHealing.degreeDatas.cryogenic_healing.label>低溫治療</CryogenicHealing.degreeDatas.cryogenic_healing.label>
+  <!-- EN: [PAWN_nameDef] heals with the slow certainty of frozen time. [PAWN_possessive] recovery is gradual but complete, and infections cannot take hold in [PAWN_possessive] chilled body. -->
+  <CryogenicHealing.degreeDatas.cryogenic_healing.description>[PAWN_nameDef]的復原緩慢而明確，彷彿時間被凍結。[PAWN_pronoun]的恢復緩慢而完全，病菌無法感染[PAWN_pronoun]的冰冷身軀。</CryogenicHealing.degreeDatas.cryogenic_healing.description>
+  
+  <!-- EN: frozen focus -->
+  <FrozenFocus.degreeDatas.frozen_focus.label>冰雪專注</FrozenFocus.degreeDatas.frozen_focus.label>
+  <!-- EN: [PAWN_nameDef] possesses crystalline mental clarity. [PAWN_possessive] mind remains calm and focused even under extreme stress, though [PAWN_pronoun] seems distant from others. -->
+  <FrozenFocus.degreeDatas.frozen_focus.description>[PAWN_nameDef]思維如水晶般透亮。[PAWN_pronoun]在極端壓力下也能維持冷靜專注，卻似乎疏離他人。</FrozenFocus.degreeDatas.frozen_focus.description>
+  
+  <!-- EN: glacial endurance -->
+  <GlacialEndurance.degreeDatas.glacial_endurance.label>冰河耐性</GlacialEndurance.degreeDatas.glacial_endurance.label>
+  <!-- EN: [PAWN_nameDef] has the endurance of an ancient glacier. [PAWN_pronoun] moves slowly but with inexorable precision, rarely needing food or rest. -->
+  <GlacialEndurance.degreeDatas.glacial_endurance.description>[PAWN_nameDef]的耐性如同古代冰河。[PAWN_pronoun]行動緩慢卻無比精準，很少進食或休息。</GlacialEndurance.degreeDatas.glacial_endurance.description>
+  
+  <!-- EN: ice in veins -->
+  <IceInVeins.degreeDatas.ice_in_veins.label>冰流於血</IceInVeins.degreeDatas.ice_in_veins.label>
+  <!-- EN: [PAWN_nameDef] has ice flowing through [PAWN_possessive] veins. [PAWN_pronoun] moves with deliberate precision, immune to heat and pain, but slower than others in all endeavors. -->
+  <IceInVeins.degreeDatas.ice_in_veins.description>[PAWN_nameDef]的血管中流淌著冰。[PAWN_pronoun]的行動精準沉穩，不受高溫和疼痛影響，各種方面卻速度比他人更慢。</IceInVeins.degreeDatas.ice_in_veins.description>
+  
+  <!-- EN: winter's heart -->
+  <WintersHeart.degreeDatas.winters_Heart.label>寒冬之心</WintersHeart.degreeDatas.winters_heart.label>
+  <!-- EN: [PAWN_nameDef] thrives in the bitter cold of winter. [PAWN_possessive] combat prowess increases with dropping temperatures, but [PAWN_pronoun] suffers greatly in heat. -->
+  <WintersHeart.degreeDatas.winters_heart.description>[PAWN_nameDef]在寒冬中充滿生機。[PAWN_pronoun]的格鬥能力隨著氣溫驟降而提升，然而[PAWN_pronoun]在熱的地方會十分痛苦。</WintersHeart.degreeDatas.winters_heart.description>
+  
+</LanguageData>

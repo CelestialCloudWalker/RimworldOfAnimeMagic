@@ -313,14 +313,14 @@
 	<RoyalTitleDef ParentName="BaseSlayerTitle">
 		<defName>AA_UbuyashikiKagaya</defName>
 		<label>Ubuyashiki Kagaya</label>
-		<description>The wise and compassionate leader of the Demon Slayer Corps, guiding its warriors with strategy and foresight.</description>
+		<description>The wise and compassionate leader of the Demon Slayer Corps, guiding his warriors with strategy and foresight.</description>
 		<seniority>650</seniority>
 		<favorCost>20</favorCost>
 		<changeHeirQuestPoints>3500</changeHeirQuestPoints>
 		<recruitmentResistanceOffset>75</recruitmentResistanceOffset>
 		<commonality>1</commonality>
 		<canBeInherited>True</canBeInherited>
-		<decreeMtbDays>-1</decreeMtbDays>	
+		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>12</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>

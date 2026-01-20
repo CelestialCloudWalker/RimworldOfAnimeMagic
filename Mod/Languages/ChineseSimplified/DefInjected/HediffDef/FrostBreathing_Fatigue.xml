@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Frost Breathing Fatigue -->
+  <FrostBreathing_Fatigue.label>霜之呼吸疲劳</FrostBreathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unsteady. -->
+  <FrostBreathing_Fatigue.description>重复使用呼吸法使身体疲惫，无法站稳。</FrostBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <FrostBreathing_Fatigue.stages.Mild_fatigue.label>轻微疲劳</FrostBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <FrostBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲劳</FrostBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <FrostBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲劳</FrostBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <FrostBreathing_Fatigue.stages.Severe_fatigue.label>严重疲劳</FrostBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <FrostBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</FrostBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <FrostBreathing_Fatigue.stages.Collapsed.label>累垮</FrostBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: blood demon arts resource rate -->
+  <AnimeArsenal_BloodDemonArtsRegenSpeed.label>血鬼术资源速率</AnimeArsenal_BloodDemonArtsRegenSpeed.label>
+  <!-- EN: Rate at which blood demon arts resource regenerates. -->
+  <AnimeArsenal_BloodDemonArtsRegenSpeed.description>某个血鬼术资源再生时的速率。</AnimeArsenal_BloodDemonArtsRegenSpeed.description>
+  
+</LanguageData>

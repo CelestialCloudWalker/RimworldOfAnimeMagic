@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Demon -->
+  <AA_DemonRace.label>鬼</AA_DemonRace.label>
+  <!-- EN: demon race. -->
+  <AA_DemonRace.description>鬼族。</AA_DemonRace.description>
+  <!-- EN: left fist -->
+  <AA_DemonRace.tools.left_fist.label>左拳</AA_DemonRace.tools.left_fist.label>
+  <!-- EN: right fist -->
+  <AA_DemonRace.tools.right_fist.label>右拳</AA_DemonRace.tools.right_fist.label>
+  <!-- EN: teeth -->
+  <AA_DemonRace.tools.teeth.label>牙齒</AA_DemonRace.tools.teeth.label>
+  <!-- EN: head -->
+  <AA_DemonRace.tools.head.label>頭</AA_DemonRace.tools.head.label>
+  
+</LanguageData>

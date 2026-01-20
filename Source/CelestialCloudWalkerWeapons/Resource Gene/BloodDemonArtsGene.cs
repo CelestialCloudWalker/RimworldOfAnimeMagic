@@ -173,14 +173,25 @@ namespace AnimeArsenal
                 Value = Max * 0.5f;
             }
 
-            progressionExt = def?.GetModExtension<DemonProgressionExtension>();
-            if (progressionExt != null)
-            {
-                currentRank = progressionExt.startingRank;
-                UpdateModExtensionValues();
-            }
+            InitializeProgressionExtension();
 
             CheckAndRemoveConflictingBreathingGenes();
+        }
+
+        private void InitializeProgressionExtension()
+        {
+            if (progressionExt == null)
+            {
+                progressionExt = def?.GetModExtension<DemonProgressionExtension>();
+                if (progressionExt != null)
+                {
+                    if (currentRank == DemonRank.WeakDemon && totalPawnsEaten == 0)
+                    {
+                        currentRank = progressionExt.startingRank;
+                    }
+                    UpdateModExtensionValues();
+                }
+            }
         }
 
         private void CheckAndRemoveConflictingBreathingGenes()
@@ -283,13 +294,24 @@ namespace AnimeArsenal
         {
             if (progressionExt == null) return;
 
-            int rankIndex = (int)currentRank;
-            if (rankIndex >= progressionExt.pawnsRequiredPerRank.Count) return;
+            if ((int)currentRank >= 13) return;
 
-            int pawnsNeeded = progressionExt.pawnsRequiredPerRank[rankIndex];
-            if (totalPawnsEaten >= pawnsNeeded)
+            while ((int)currentRank < 13)
             {
-                RankUp();
+                int rankIndex = (int)currentRank;
+
+                if (rankIndex >= progressionExt.pawnsRequiredPerRank.Count) break;
+
+                int pawnsNeeded = progressionExt.pawnsRequiredPerRank[rankIndex];
+
+                if (totalPawnsEaten >= pawnsNeeded)
+                {
+                    RankUp();
+                }
+                else
+                {
+                    break;
+                }
             }
         }
 
@@ -309,21 +331,18 @@ namespace AnimeArsenal
 
         public void AddPawnEaten()
         {
-            Log.Message($"[DEBUG] AddPawnEaten called - BEFORE: totalPawnsEaten={totalPawnsEaten}, Value={Value}, Max={Max}");
-
             totalPawnsEaten++;
 
-            pawn.health.capacities.Notify_CapacityLevelsDirty();
             ForceResourceSync();
+
+            pawn.health.capacities.Notify_CapacityLevelsDirty();
 
             if (progressionExt?.bloodRestoredPerPawnEaten > 0)
             {
-                float oldValue = Value;
                 Value += progressionExt.bloodRestoredPerPawnEaten;
-                Log.Message($"[DEBUG] Added {progressionExt.bloodRestoredPerPawnEaten} blood. Value: {oldValue} -> {Value}");
             }
 
-            Log.Message($"[DEBUG] AddPawnEaten completed - AFTER: totalPawnsEaten={totalPawnsEaten}, Value={Value}, Max={Max}");
+            CheckForRankUp();
         }
 
         private void ForceResourceSync()
@@ -331,8 +350,6 @@ namespace AnimeArsenal
             float currentMax = pawn.GetStatValue(Def.maxStat, true);
             lastKnownMax = currentMax;
             this.SetMax(currentMax);
-
-            Log.Message($"[DEBUG] ForceResourceSync - Set max to {currentMax}, Current Value: {Value}");
         }
 
         public void ForceRankUp()
@@ -621,6 +638,12 @@ namespace AnimeArsenal
             Scribe_Values.Look(ref currentRank, "currentRank", DemonRank.WeakDemon);
             Scribe_Values.Look(ref totalPawnsEaten, "totalPawnsEaten", 0);
             Scribe_Values.Look(ref lastKnownMax, "lastKnownMax", -1f);
+
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                InitializeProgressionExtension();
+                ForceResourceSync();
+            }
         }
     }
 }

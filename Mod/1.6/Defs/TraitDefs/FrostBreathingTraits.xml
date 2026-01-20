@@ -58,7 +58,7 @@
 
   <TraitDef>
     <defName>GlacialEndurance</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>glacial endurance</label>
@@ -83,7 +83,7 @@
 
   <TraitDef>
     <defName>WintersHeart</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -110,7 +110,7 @@
 
   <TraitDef>
     <defName>CryogenicHealing</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Medicine</li>
     </forcedPassions>
@@ -137,7 +137,7 @@
 
   <TraitDef>
     <defName>AbsoluteZero</defName>
-    <commonality>0.3</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>absolute zero</label>

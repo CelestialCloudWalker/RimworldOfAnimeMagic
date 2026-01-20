@@ -37,6 +37,8 @@
         <targetSearchRadius>13</targetSearchRadius>
         <jumpDamageDef>Stone_Breathing_Damage</jumpDamageDef>
         <jumpDamage>7~10</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
         <casterEffecter>AnimeArsenal_StoneJump</casterEffecter>
         <impactEffecter>AnimeArsenal_StoneHit</impactEffecter>
       </li>
@@ -65,6 +67,8 @@
             <targetSearchRadius>15</targetSearchRadius>
             <jumpDamageDef>Stone_Breathing_Damage</jumpDamageDef>
             <jumpDamage>9~13</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_StoneJump</casterEffecter>
             <impactEffecter>AnimeArsenal_StoneHit</impactEffecter>
           </li>
@@ -87,6 +91,8 @@
             <targetSearchRadius>18</targetSearchRadius>
             <jumpDamageDef>Stone_Breathing_Damage</jumpDamageDef>
             <jumpDamage>12~17</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_StoneJump</casterEffecter>
             <impactEffecter>AnimeArsenal_StoneHit</impactEffecter>
           </li>
@@ -109,6 +115,8 @@
             <targetSearchRadius>21</targetSearchRadius>
             <jumpDamageDef>Stone_Breathing_Damage</jumpDamageDef>
             <jumpDamage>15~22</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_StoneJump</casterEffecter>
             <impactEffecter>AnimeArsenal_StoneHit</impactEffecter>
           </li>
@@ -131,6 +139,8 @@
             <targetSearchRadius>24</targetSearchRadius>
             <jumpDamageDef>Stone_Breathing_Damage</jumpDamageDef>
             <jumpDamage>19~28</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_StoneJump</casterEffecter>
             <impactEffecter>AnimeArsenal_StoneHit</impactEffecter>
           </li>
@@ -153,6 +163,7 @@
             <targetSearchRadius>28</targetSearchRadius>
             <jumpDamageDef>Stone_Breathing_Damage</jumpDamageDef>
             <jumpDamage>24~35</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <casterEffecter>AnimeArsenal_StoneJump</casterEffecter>
             <impactEffecter>AnimeArsenal_StoneHit</impactEffecter>
           </li>

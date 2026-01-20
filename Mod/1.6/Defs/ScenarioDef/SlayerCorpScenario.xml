@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>AA_Corps_Initiation</defName>
+    <label>Corps Initiation</label>
+    <description>Your mission went sideways and now the three of you are stranded out here. You've got your swords and whatever supplies you salvaged. Time to prove your training wasn't wasted.\n\nNote: Start with minimal supplies, and your nichirin blades. Difficult.</description>
+    <scenario>
+      <summary>Three demon slayers stranded after a failed mission.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>AA_PlayerSlayerCorps</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+          <def>ConfigurePawnsXenotypes</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <xenotypeCounts>
+            <li>
+              <xenotype>AA_BreathingPotential_Xeno</xenotype>
+              <count>3</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+          </xenotypeCounts>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineHerbal</thingDef>
+          <count>5</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>NichirinSword_Basic</thingDef>
+          <stuff>Steel</stuff>
+          <count>3</count>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Three newly trained demon slayers, stranded and alone.\n\nYou've got your nichirin blades, and whatever you salvaged.\n\nNo backup. No rescue. Just survival.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+</Defs>

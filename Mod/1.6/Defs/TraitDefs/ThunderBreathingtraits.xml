@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>LightningReflexes</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>lightning reflexes</label>
@@ -27,7 +27,7 @@
 
   <TraitDef>
     <defName>StormCaller</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>storm caller</label>
@@ -49,7 +49,7 @@
 
   <TraitDef>
     <defName>ElectricTouch</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Crafting</li>
     </forcedPassions>
@@ -74,7 +74,7 @@
 
   <TraitDef>
     <defName>FlashStep</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>flash step</label>
@@ -97,7 +97,7 @@
 
   <TraitDef>
     <defName>ChainLightning</defName>
-    <commonality>0.3</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Shooting</li>
       <li>Melee</li>
@@ -124,7 +124,7 @@
 
   <TraitDef>
     <defName>ThunderousPresence</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
       <li>Melee</li>

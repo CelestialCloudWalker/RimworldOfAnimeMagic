@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: serpent twist -->
+  <Serpent_Breathing_Damage.label>蛇之曲折</Serpent_Breathing_Damage.label>
+  <!-- EN: {0}'s body was twisted apart. -->
+  <Serpent_Breathing_Damage.deathMessage>{0}的身体被扭曲了。</Serpent_Breathing_Damage.deathMessage>
+  
+</LanguageData>

@@ -79,10 +79,36 @@ namespace AnimeArsenal
             }
         }
 
+        private bool HasSunlightCure(Pawn pawn)
+        {
+            if (pawn?.genes == null) return false;
+
+            return pawn.genes.GenesListForReading.Any(g =>
+                g.Active && g.def.defName == "BlueSpiderLilyCureGene");
+        }
+
         private void ProcessPawn(Pawn pawn, SunlightDamageExtension ext)
         {
+            int id = pawn.thingIDNumber; 
+
+            if (HasSunlightCure(pawn))
+            {
+                if (accumulatedDamage.ContainsKey(id))
+                {
+                    accumulatedDamage.Remove(id);
+                    ticksOutOfSun.Remove(id);
+                    lastWarningTick.Remove(id);
+                    sunTolerance.Remove(id);
+
+                    if (Find.TickManager.TicksGame % 1000 == 0)
+                    {
+                        MoteMaker.ThrowText(pawn.DrawPos, map, "Sun immunity active", 2f);
+                    }
+                }
+                return; 
+            }
+
             bool exposed = IsExposed(pawn, ext);
-            int id = pawn.thingIDNumber;
 
             if (exposed)
             {
@@ -366,7 +392,6 @@ namespace AnimeArsenal
         {
             base.FinalizeInit();
 
-            
             if (accumulatedDamage == null) accumulatedDamage = new Dictionary<int, float>();
             if (ticksOutOfSun == null) ticksOutOfSun = new Dictionary<int, int>();
             if (lastWarningTick == null) lastWarningTick = new Dictionary<int, int>();

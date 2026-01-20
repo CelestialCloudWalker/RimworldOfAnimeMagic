@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Insect Breath Regen Amount Per Regen Tick -->
+  <InsectBreath_RegenAmount.label>每刻蟲之呼吸恢復量</InsectBreath_RegenAmount.label>
+  <!-- EN: Rate of Insect Breath regeneration per tick. -->
+  <InsectBreath_RegenAmount.description>每刻蟲之呼吸恢復量。</InsectBreath_RegenAmount.description>
+  
+</LanguageData>

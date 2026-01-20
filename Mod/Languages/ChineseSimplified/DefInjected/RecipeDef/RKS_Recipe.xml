@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: craft extra large breathing gourd -->
+  <Craft_BreathingGourd_ExtraLarge.label>制作巨型呼吸法葫芦</Craft_BreathingGourd_ExtraLarge.label>
+  <!-- EN: Craft an extra large training gourd for masters. -->
+  <Craft_BreathingGourd_ExtraLarge.description>制作给专家使用的巨型训练葫芦。</Craft_BreathingGourd_ExtraLarge.description>
+  <!-- EN: Crafting extra large breathing gourd. -->
+  <Craft_BreathingGourd_ExtraLarge.jobString>正在制作巨型呼吸法葫芦。</Craft_BreathingGourd_ExtraLarge.jobString>
+  
+  <!-- EN: craft large breathing gourd -->
+  <Craft_BreathingGourd_Large.label>制作大型呼吸法葫芦</Craft_BreathingGourd_Large.label>
+  <!-- EN: Craft a large training gourd for advanced practitioners. -->
+  <Craft_BreathingGourd_Large.description>制作给进阶队士使用的大型训练葫芦。</Craft_BreathingGourd_Large.description>
+  <!-- EN: Crafting large breathing gourd. -->
+  <Craft_BreathingGourd_Large.jobString>正在制作大型呼吸法葫芦。</Craft_BreathingGourd_Large.jobString>
+  
+  <!-- EN: craft medium breathing gourd -->
+  <Craft_BreathingGourd_Medium.label>制作中型呼吸法葫芦</Craft_BreathingGourd_Medium.label>
+  <!-- EN: Craft a medium training gourd for intermediate practitioners. -->
+  <Craft_BreathingGourd_Medium.description>制作给中等队士使用的中型训练葫芦。</Craft_BreathingGourd_Medium.description>
+  <!-- EN: Crafting medium breathing gourd. -->
+  <Craft_BreathingGourd_Medium.jobString>正在制作中型呼吸法葫芦。</Craft_BreathingGourd_Medium.jobString>
+  
+  <!-- EN: craft small breathing gourd -->
+  <Craft_BreathingGourd_Small.label>制作小型呼吸法葫芦</Craft_BreathingGourd_Small.label>
+  <!-- EN: Craft a small training gourd for beginners. -->
+  <Craft_BreathingGourd_Small.description>制作给新手使用的小型训练葫芦。</Craft_BreathingGourd_Small.description>
+  <!-- EN: Crafting small breathing gourd. -->
+  <Craft_BreathingGourd_Small.jobString>正在制作小型呼吸法葫芦。</Craft_BreathingGourd_Small.jobString>
+  
+  <!-- EN: forge scarlet steel -->
+  <Forge_ScarletSteel.label>锻造猩猩绯钢</Forge_ScarletSteel.label>
+  <!-- EN: Combine refined scarlet ore and refined scarlet crimson iron to forge scarlet steel. This is essential for creating Nichirin blades. -->
+  <Forge_ScarletSteel.description>融合精炼後的猩猩绯矿石和猩猩绯铁，造出猩猩绯钢。这是打造日轮刀的必要原料。</Forge_ScarletSteel.description>
+  <!-- EN: Forging scarlet steel. -->
+  <Forge_ScarletSteel.jobString>正在锻造猩猩绯钢。</Forge_ScarletSteel.jobString>
+  
+  <!-- EN: refine scarlet crimson iron sand -->
+  <Refine_ScarletIronSand.label>精炼猩猩绯砂铁</Refine_ScarletIronSand.label>
+  <!-- EN: Smelt and purify scarlet crimson iron sand to extract refined scarlet crimson iron. -->
+  <Refine_ScarletIronSand.description>溶解并纯化猩猩绯砂铁，以萃取精炼後的猩猩绯铁。</Refine_ScarletIronSand.description>
+  <!-- EN: Refining scarlet iron sand. -->
+  <Refine_ScarletIronSand.jobString>正在精炼猩猩绯砂铁。</Refine_ScarletIronSand.jobString>
+  
+  <!-- EN: refine scarlet ore -->
+  <Refine_ScarletOre.label>精炼猩猩绯矿石</Refine_ScarletOre.label>
+  <!-- EN: Smelt and purify scarlet ore to extract refined scarlet ore. -->
+  <Refine_ScarletOre.description>溶解并纯化猩猩绯矿石，以萃取精炼後的产物。</Refine_ScarletOre.description>
+  <!-- EN: Refining scarlet ore. -->
+  <Refine_ScarletOre.jobString>正在精炼猩猩绯矿石。</Refine_ScarletOre.jobString>
+  
+  <!-- EN: weave scarlet thread fabric -->
+  <Weave_ScarletThreadFabric.label>编织猩猩绯布料</Weave_ScarletThreadFabric.label>
+  <!-- EN: Weave refined scarlet crimson iron and cloth into protective scarlet thread fabric. -->
+  <Weave_ScarletThreadFabric.description>把已精炼的猩猩绯铁和布料织成具有保护性的猩猩绯布料。</Weave_ScarletThreadFabric.description>
+  <!-- EN: Weaving scarlet thread fabric. -->
+  <Weave_ScarletThreadFabric.jobString>正在编织猩猩绯布料。</Weave_ScarletThreadFabric.jobString>
+  
+</LanguageData>

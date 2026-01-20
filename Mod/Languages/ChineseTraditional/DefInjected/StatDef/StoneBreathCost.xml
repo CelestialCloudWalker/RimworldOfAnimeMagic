@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Stone Breath Cost Multiplier -->
+  <StoneBreath_Cost.label>岩之呼吸資源花費乘數</StoneBreath_Cost.label>
+  <!-- EN: Stone Breath Cost Multiplier. -->
+  <StoneBreath_Cost.description>岩之呼吸資源花費乘數。</StoneBreath_Cost.description>
+  
+</LanguageData>

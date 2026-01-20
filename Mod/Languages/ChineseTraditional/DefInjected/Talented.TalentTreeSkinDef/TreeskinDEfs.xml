@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Beast Breathing Tree skin -->
+  <BeastBreathingTreeSkin.label>獸之呼吸技能樹外觀</BeastBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <BeastBreathingTreeSkin.description>技能樹的預設視覺風格</BeastBreathingTreeSkin.description>
+  
+  <!-- EN: Breathing Potential Tree Skin -->
+  <BreathingPotentialTreeSkin.label>呼吸法潛能技能樹外觀</BreathingPotentialTreeSkin.label>
+  <!-- EN: Optimized spacing for Breathing Potential talent tree -->
+  <BreathingPotentialTreeSkin.description>為呼吸法潛能技能樹優化過間隔距離</BreathingPotentialTreeSkin.description>
+  
+  <!-- EN: Demon Breathing Tree skin -->
+  <DemonBreathingTreeSkin.label>血鬼術技能樹外觀</DemonBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <DemonBreathingTreeSkin.description>技能樹的預設視覺風格</DemonBreathingTreeSkin.description>
+  
+  <!-- EN: Flame Breathing Tree skin -->
+  <FlameBreathingTreeSkin.label>炎之呼吸技能樹外觀</FlameBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <FlameBreathingTreeSkin.description>技能樹的預設視覺風格</FlameBreathingTreeSkin.description>
+  
+  <!-- EN: Flower Breathing Tree skin -->
+  <FlowerBreathingTreeSkin.label>花之呼吸技能樹外觀</FlowerBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <FlowerBreathingTreeSkin.description>技能樹的預設視覺風格</FlowerBreathingTreeSkin.description>
+  
+  <!-- EN: Forest Breathing Tree skin -->
+  <ForestBreathingTreeSkin.label>森之呼吸技能樹外觀</ForestBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <ForestBreathingTreeSkin.description>技能樹的預設視覺風格</ForestBreathingTreeSkin.description>
+  
+  <!-- EN: Frost Breathing Tree skin -->
+  <FrostBreathingTreeSkin.label>霜之呼吸技能樹外觀</FrostBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <FrostBreathingTreeSkin.description>技能樹的預設視覺風格</FrostBreathingTreeSkin.description>
+  
+  <!-- EN: Insect Breathing Tree skin -->
+  <InsectBreathingTreeSkin.label>蟲之呼吸技能樹外觀</InsectBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <InsectBreathingTreeSkin.description>技能樹的預設視覺風格</InsectBreathingTreeSkin.description>
+  
+  <!-- EN: Love Breathing Tree skin -->
+  <LoveBreathingTreeSkin.label>戀之呼吸技能樹外觀</LoveBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <LoveBreathingTreeSkin.description>技能樹的預設視覺風格</LoveBreathingTreeSkin.description>
+  
+  <!-- EN: Mist Breathing Tree skin -->
+  <MistBreathingTreeSkin.label>霞之呼吸技能樹外觀</MistBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <MistBreathingTreeSkin.description>技能樹的預設視覺風格</MistBreathingTreeSkin.description>
+  
+  <!-- EN: Moon Breathing Tree skin -->
+  <MoonBreathingTreeSkin.label>月之呼吸技能樹外觀</MoonBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <MoonBreathingTreeSkin.description>技能樹的預設視覺風格</MoonBreathingTreeSkin.description>
+  
+  <!-- EN: Serpent Breathing Tree skin -->
+  <SerpentBreathingTreeSkin.label>蛇之呼吸技能樹外觀</SerpentBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <SerpentBreathingTreeSkin.description>技能樹的預設視覺風格</SerpentBreathingTreeSkin.description>
+  
+  <!-- EN: Sound Breathing Tree skin -->
+  <SoundBreathingTreeSkin.label>音之呼吸技能樹外觀</SoundBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <SoundBreathingTreeSkin.description>技能樹的預設視覺風格</SoundBreathingTreeSkin.description>
+  
+  <!-- EN: Stone Breathing Tree skin -->
+  <StoneBreathingTreeSkin.label>岩之呼吸技能樹外觀</StoneBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <StoneBreathingTreeSkin.description>技能樹的預設視覺風格</StoneBreathingTreeSkin.description>
+  
+  <!-- EN: Sun Breathing Tree skin -->
+  <SunBreathingTreeSkin.label>日之呼吸技能樹外觀</SunBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <SunBreathingTreeSkin.description>技能樹的預設視覺風格</SunBreathingTreeSkin.description>
+  
+  <!-- EN: Thunder Breathing Tree skin -->
+  <ThunderBreathingTreeSkin.label>雷之呼吸技能樹外觀</ThunderBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <ThunderBreathingTreeSkin.description>技能樹的預設視覺風格</ThunderBreathingTreeSkin.description>
+  
+  <!-- EN: Water Breathing Tree skin -->
+  <WaterBreathingTreeSkin.label>水之呼吸技能樹外觀</WaterBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <WaterBreathingTreeSkin.description>技能樹的預設視覺風格</WaterBreathingTreeSkin.description>
+  
+  <!-- EN: Wind Breathing Tree skin -->
+  <WindBreathingTreeSkin.label>風之呼吸技能樹外觀</WindBreathingTreeSkin.label>
+  <!-- EN: Default visual style for upgrade trees -->
+  <WindBreathingTreeSkin.description>技能樹的預設視覺風格</WindBreathingTreeSkin.description>
+  
+</LanguageData>

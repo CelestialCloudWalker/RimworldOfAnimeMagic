@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Beast Breathing -->
+  <Beast_BreathingStyleBlankTree.treeName>之呼吸</Beast_BreathingStyleBlankTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <Beast_BreathingStyleBlankTree.treeToolbarName>{0} 等級({1}) 點數({2})</Beast_BreathingStyleBlankTree.treeToolbarName>
+  
+</LanguageData>

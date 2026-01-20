@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Nichirin Shotgun -->
+  <NichirinGun_ShinazugawaGenya.label>日轮霰弹枪</NichirinGun_ShinazugawaGenya.label>
+  <!-- EN: A double-barreled shotgun that fires specialized ammunition. -->
+  <NichirinGun_ShinazugawaGenya.description>发射特殊弹药的双管霰弹枪。</NichirinGun_ShinazugawaGenya.description>
+  <!-- EN: grip -->
+  <NichirinGun_ShinazugawaGenya.tools.grip.label>握把</NichirinGun_ShinazugawaGenya.tools.grip.label>
+  <!-- EN: barrel -->
+  <NichirinGun_ShinazugawaGenya.tools.barrel.label>枪管</NichirinGun_ShinazugawaGenya.tools.barrel.label>
+  <!-- EN: Nichirin Shotgun -->
+  <NichirinGun_ShinazugawaGenya.verbs.Verb_Shoot.label>日轮霰弹枪</NichirinGun_ShinazugawaGenya.verbs.Verb_Shoot.label>
+  
+</LanguageData>

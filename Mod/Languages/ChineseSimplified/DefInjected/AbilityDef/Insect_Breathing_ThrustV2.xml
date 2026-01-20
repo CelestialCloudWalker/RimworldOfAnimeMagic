@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Insect Breathing: Thrust -->
+  <Insect_Breathing_Thrust.label>虫之呼吸・突</Insect_Breathing_Thrust.label>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Insect_Breathing_Thrust.description>对目标放出射弹的范围技。</Insect_Breathing_Thrust.description>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Insect_Breathing_Thrust.levels.0.description>对目标放出射弹的范围技。</Insect_Breathing_Thrust.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Insect_Breathing_Thrust.levels.0.labelSuffix>壹级</Insect_Breathing_Thrust.levels.0.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Insect_Breathing_Thrust.levels.1.description>对目标放出射弹的范围技。</Insect_Breathing_Thrust.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Insect_Breathing_Thrust.levels.1.labelSuffix>贰级</Insect_Breathing_Thrust.levels.1.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Insect_Breathing_Thrust.levels.2.description>对目标放出射弹的范围技。</Insect_Breathing_Thrust.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Insect_Breathing_Thrust.levels.2.labelSuffix>参级</Insect_Breathing_Thrust.levels.2.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Insect_Breathing_Thrust.levels.3.description>对目标放出射弹的范围技。</Insect_Breathing_Thrust.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Insect_Breathing_Thrust.levels.3.labelSuffix>肆级</Insect_Breathing_Thrust.levels.3.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Insect_Breathing_Thrust.levels.4.description>对目标放出射弹的范围技。</Insect_Breathing_Thrust.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Insect_Breathing_Thrust.levels.4.labelSuffix>伍级</Insect_Breathing_Thrust.levels.4.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Insect_Breathing_Thrust.levels.5.description>对目标放出射弹的范围技。</Insect_Breathing_Thrust.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Insect_Breathing_Thrust.levels.5.labelSuffix>陆级</Insect_Breathing_Thrust.levels.5.labelSuffix>
+  
+</LanguageData>

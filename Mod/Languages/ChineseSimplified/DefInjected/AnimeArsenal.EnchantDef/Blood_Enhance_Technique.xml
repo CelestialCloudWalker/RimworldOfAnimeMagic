@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Enhance Technique -->
+  <Blood_Enhance_Technique.label>增血技法</Blood_Enhance_Technique.label>
+  <!-- EN: A powerful blood Enhancement that amplifies the user's damage output in combat. -->
+  <Blood_Enhance_Technique.description>提高自身战斗输出的强大增血技法。</Blood_Enhance_Technique.description>
+  
+  <!-- EN: LevelThree Blood Technique -->
+  <Blood_Enhance_Technique_LevelThree.label>增血技法 参级</Blood_Enhance_Technique_LevelThree.label>
+  <!-- EN: A LevelThree blood enhancement with powerful demonic energy and high efficiency. -->
+  <Blood_Enhance_Technique_LevelThree.description>拥有强大鬼之能量和高效率的参级增血技法。</Blood_Enhance_Technique_LevelThree.description>
+  
+  <!-- EN: LevelTwo Blood Technique -->
+  <Blood_Enhance_Technique_LevelTwo.label>增血技法 贰级</Blood_Enhance_Technique_LevelTwo.label>
+  <!-- EN: An improved blood enhancement with stronger demonic energy and better efficiency. -->
+  <Blood_Enhance_Technique_LevelTwo.description>拥有更强鬼之能量和更高效率的改进增血技法。</Blood_Enhance_Technique_LevelTwo.description>
+  
+  <!-- EN: Master Blood Technique -->
+  <Blood_Enhance_Technique_Master.label>增血技法 精通</Blood_Enhance_Technique_Master.label>
+  <!-- EN: The ultimate blood enhancement with devastating demonic power and maximum efficiency. -->
+  <Blood_Enhance_Technique_Master.description>拥有毁灭性鬼之力和最高效率的终极增血技法。</Blood_Enhance_Technique_Master.description>
+  
+</LanguageData>

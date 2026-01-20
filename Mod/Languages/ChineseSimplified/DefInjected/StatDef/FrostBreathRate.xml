@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Frost Breath Regen Rate -->
+  <FrostBreath_RegenRate.label>森之呼吸恢复率</FrostBreath_RegenRate.label>
+  <!-- EN: Rate of Frost Breath regeneration per tick. -->
+  <FrostBreath_RegenRate.description>每刻森之呼吸恢复率。</FrostBreath_RegenRate.description>
+  
+</LanguageData>

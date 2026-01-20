@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Love Breathing: Slash -->
+  <Love_Breathing_Slash.label>恋之呼吸・斩</Love_Breathing_Slash.label>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Love_Breathing_Slash.description>对目标释出斩击的范围技。</Love_Breathing_Slash.description>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Love_Breathing_Slash.levels.0.description>对目标释出斩击的范围技。</Love_Breathing_Slash.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Love_Breathing_Slash.levels.0.labelSuffix>壹级</Love_Breathing_Slash.levels.0.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Love_Breathing_Slash.levels.1.description>对目标释出斩击的范围技。</Love_Breathing_Slash.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Love_Breathing_Slash.levels.1.labelSuffix>贰级</Love_Breathing_Slash.levels.1.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Love_Breathing_Slash.levels.2.description>对目标释出斩击的范围技。</Love_Breathing_Slash.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Love_Breathing_Slash.levels.2.labelSuffix>参级</Love_Breathing_Slash.levels.2.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Love_Breathing_Slash.levels.3.description>对目标释出斩击的范围技。</Love_Breathing_Slash.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Love_Breathing_Slash.levels.3.labelSuffix>肆级</Love_Breathing_Slash.levels.3.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Love_Breathing_Slash.levels.4.description>对目标释出斩击的范围技。</Love_Breathing_Slash.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Love_Breathing_Slash.levels.4.labelSuffix>伍级</Love_Breathing_Slash.levels.4.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Love_Breathing_Slash.levels.5.description>对目标释出斩击的范围技。</Love_Breathing_Slash.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Love_Breathing_Slash.levels.5.labelSuffix>陆级</Love_Breathing_Slash.levels.5.labelSuffix>
+  
+</LanguageData>

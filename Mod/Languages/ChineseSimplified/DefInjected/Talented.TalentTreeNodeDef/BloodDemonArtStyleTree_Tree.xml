@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Moon Breathing -->
+  <Node_DemonArts_Center_Top.label>月之呼吸</Node_DemonArts_Center_Top.label>
+  
+  <!-- EN: Demons Embrace -->
+  <Node_DemonArts_Left_1.label>鬼之抱拥</Node_DemonArts_Left_1.label>
+  
+  <!-- EN: Graviton Crush -->
+  <Node_DemonArts_Left_2.label>重力压溃</Node_DemonArts_Left_2.label>
+  
+  <!-- EN: Spiral of Torment -->
+  <Node_DemonArts_Left_3.label>刑罚螺旋</Node_DemonArts_Left_3.label>
+  
+  <!-- EN: Thunderous Wrath -->
+  <Node_DemonArts_Left_4.label>雷鸣之怒</Node_DemonArts_Left_4.label>
+  
+  <!-- EN: Silk Web Slash -->
+  <Node_DemonArts_Left_5.label>网丝斩</Node_DemonArts_Left_5.label>
+  
+  <!-- EN: Devour -->
+  <Node_DemonArts_Right_1.label>吞噬</Node_DemonArts_Right_1.label>
+  
+  <!-- EN: Dream Needle -->
+  <Node_DemonArts_Right_2.label>梦织针</Node_DemonArts_Right_2.label>
+  
+  <!-- EN: Sleep Abilities -->
+  <Node_DemonArts_Right_3.label>睡眠能力</Node_DemonArts_Right_3.label>
+  
+  <!-- EN: Vicious Rush -->
+  <Node_DemonArts_Right_4.label>恶毒冲刺</Node_DemonArts_Right_4.label>
+  
+  <!-- EN: Ground Lash -->
+  <Node_DemonArts_Right_5.label>地鞭触手</Node_DemonArts_Right_5.label>
+  
+  <!-- EN: Pain Blade -->
+  <Node_DemonArts_Root.label>苦刃</Node_DemonArts_Root.label>
+  
+</LanguageData>

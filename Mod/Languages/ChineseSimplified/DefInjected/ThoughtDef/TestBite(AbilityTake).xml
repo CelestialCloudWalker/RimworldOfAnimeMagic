@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: ability copied -->
+  <AbilityCopied.stages.ability_copied.label>能力被复制</AbilityCopied.stages.ability_copied.label>
+  <!-- EN: Someone copied my abilities... I feel strangely exposed. -->
+  <AbilityCopied.stages.ability_copied.description>有人复制了我的能力……感觉自己被莫名曝光了。</AbilityCopied.stages.ability_copied.description>
+  
+  <!-- EN: copied ability -->
+  <CopiedAbility.stages.copied_ability.label>复制了能力</CopiedAbility.stages.copied_ability.label>
+  <!-- EN: I absorbed the essence of another's power. It flows through me now. -->
+  <CopiedAbility.stages.copied_ability.description>我吸收了他者的能力精华，力量流淌在我的体内。</CopiedAbility.stages.copied_ability.description>
+  
+</LanguageData>

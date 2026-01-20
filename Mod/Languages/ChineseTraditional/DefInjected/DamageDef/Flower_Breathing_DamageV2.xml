@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: flower slash -->
+  <Flower_Breathing_Damage.label>花之斬擊</Flower_Breathing_Damage.label>
+  <!-- EN: {0} was cut down by blossoming strikes. -->
+  <Flower_Breathing_Damage.deathMessage>{0}被繁花般的斬擊削弱。</Flower_Breathing_Damage.deathMessage>
+  
+</LanguageData>

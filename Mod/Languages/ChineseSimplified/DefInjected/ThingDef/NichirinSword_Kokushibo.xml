@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flesh Nichirin -->
+  <NichirinSword_Kokushibo.label>血肉日轮刀</NichirinSword_Kokushibo.label>
+  <!-- EN: A warped version of a Nichirin. -->
+  <NichirinSword_Kokushibo.description>日轮刀的变体。</NichirinSword_Kokushibo.description>
+  <!-- EN: blade back -->
+  <NichirinSword_Kokushibo.tools.blade_back.label>刀背</NichirinSword_Kokushibo.tools.blade_back.label>
+  <!-- EN: blade -->
+  <NichirinSword_Kokushibo.tools.blade.label>刀刃</NichirinSword_Kokushibo.tools.blade.label>
+  
+</LanguageData>

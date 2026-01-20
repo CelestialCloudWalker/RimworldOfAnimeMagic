@@ -107,7 +107,7 @@
 
   <TraitDef>
     <defName>PhoenixHeart</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>phoenix heart</label>
@@ -129,7 +129,7 @@
 
   <TraitDef>
     <defName>CombustiveTemper</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: chain lightning -->
+  <ChainLightning.degreeDatas.chain_lightning.label>连锁闪电</ChainLightning.degreeDatas.chain_lightning.label>
+  <!-- EN: [PAWN_nameDef] strikes with electrical energy that arcs between multiple targets. [PAWN_possessive] attacks become more effective against groups, and [PAWN_pronoun] excels with conductive weapons. -->
+  <ChainLightning.degreeDatas.chain_lightning.description>[PAWN_nameDef]可用电力攻击多个目标。[PAWN_pronoun]的攻击对群体目标更有用，而[PAWN_pronoun]也擅长使用导电武器。</ChainLightning.degreeDatas.chain_lightning.description>
+  
+  <!-- EN: electric touch -->
+  <ElectricTouch.degreeDatas.electric_touch.label>雷电之触</ElectricTouch.degreeDatas.electric_touch.label>
+  <!-- EN: [PAWN_nameDef] channels electrical energy through [PAWN_possessive] hands. [PAWN_possessive] natural affinity with electronics makes [PAWN_objective] exceptionally skilled at crafting and repairing electrical devices. -->
+  <ElectricTouch.degreeDatas.electric_touch.description>[PAWN_nameDef]靠双手操控电力。对电子的天然亲和让[PAWN_pronoun]擅长制造和修复电子设备。</ElectricTouch.degreeDatas.electric_touch.description>
+  
+  <!-- EN: flash step -->
+  <FlashStep.degreeDatas.flash_step.label>风驰电掣</FlashStep.degreeDatas.flash_step.label>
+  <!-- EN: [PAWN_nameDef] can move in sudden bursts of incredible speed. [PAWN_possessive] lightning-fast movement allows for quick escapes and rapid rescue operations, though sustained speed taxes [PAWN_possessive] body. -->
+  <FlashStep.degreeDatas.flash_step.description>[PAWN_nameDef]可以瞬间爆速移动。闪电般的速度使[PAWN_pronoun]能快速逃跑或实施救援，但维持高速移动会透支[PAWN_pronoun]的体能。</FlashStep.degreeDatas.flash_step.description>
+  
+  <!-- EN: lightning reflexes -->
+  <LightningReflexes.degreeDatas.lightning_reflexes.label>快如闪电</LightningReflexes.degreeDatas.lightning_reflexes.label>
+  <!-- EN: [PAWN_nameDef] moves with the speed of a lightning strike. [PAWN_possessive] incredible reflexes give [PAWN_objective] the first strike in any encounter, though such speed comes with its own challenges. -->
+  <LightningReflexes.degreeDatas.lightning_reflexes.description>[PAWN_nameDef]快如闪电。[PAWN_pronoun]反应力惊人，在任何遭遇都能先发制人，但这种速度也为[PAWN_pronoun]自己带来挑战。</LightningReflexes.degreeDatas.lightning_reflexes.description>
+  
+  <!-- EN: storm caller -->
+  <StormCaller.degreeDatas.storm_caller.label>呼风唤雨</StormCaller.degreeDatas.storm_caller.label>
+  <!-- EN: [PAWN_nameDef] draws power from thunderstorms and electrical energy. [PAWN_possessive] abilities surge during storms, and [PAWN_pronoun] seems immune to electrical hazards. -->
+  <StormCaller.degreeDatas.storm_caller.description>[PAWN_nameDef]从雷暴和电力吸收能量。[PAWN_pronoun]的能力在暴风雨时会大幅提升，而且似乎免受电击伤害。</StormCaller.degreeDatas.storm_caller.description>
+  
+  <!-- EN: thunderous presence -->
+  <ThunderousPresence.degreeDatas.thunderous_presence.label>雷电气质</ThunderousPresence.degreeDatas.thunderous_presence.label>
+  <!-- EN: [PAWN_nameDef] commands attention like a clap of thunder. [PAWN_possessive] booming voice and imposing presence make [PAWN_objective] a natural leader, though subtlety is not [PAWN_possessive] strength. -->
+  <ThunderousPresence.degreeDatas.thunderous_presence.description>[PAWN_nameDef]像雷鸣一样引人注目。响彻的嗓音和震慑的气场使[PAWN_pronoun]成为天生的领导者，但[PAWN_pronoun]不擅长含蓄的表达。</ThunderousPresence.degreeDatas.thunderous_presence.description>
+  
+</LanguageData>

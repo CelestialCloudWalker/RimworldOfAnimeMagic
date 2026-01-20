@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Stone Breath Regen Rate -->
+  <StoneBreath_RegenRate.label>岩之呼吸恢復率</StoneBreath_RegenRate.label>
+  <!-- EN: Rate of Stone Breath regeneration per tick. -->
+  <StoneBreath_RegenRate.description>每刻岩之呼吸恢復率。</StoneBreath_RegenRate.description>
+  
+</LanguageData>

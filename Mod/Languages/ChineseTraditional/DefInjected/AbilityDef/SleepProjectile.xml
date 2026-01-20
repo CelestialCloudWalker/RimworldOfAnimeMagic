@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sleep Projectile -->
+  <Ninth_Form_Sleep_Arrow.label>睡眠射彈</Ninth_Form_Sleep_Arrow.label>
+  <!-- EN: The user fires a sleep arrow that puts targets to sleep on impact. -->
+  <Ninth_Form_Sleep_Arrow.description>發射睡眠射彈使擊中對象睡著。</Ninth_Form_Sleep_Arrow.description>
+  
+</LanguageData>

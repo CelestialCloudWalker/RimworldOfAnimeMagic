@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sun Breath Cost Multiplier -->
+  <SunBreath_Cost.label>日之呼吸資源花費乘數</SunBreath_Cost.label>
+  <!-- EN: Sun Breath Cost Multiplier. -->
+  <SunBreath_Cost.description>日之呼吸資源花費乘數。</SunBreath_Cost.description>
+  
+</LanguageData>

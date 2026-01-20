@@ -39,6 +39,8 @@
         <soundOnImpact>Thunder_OnMap</soundOnImpact>
         <strikeCount>1</strikeCount>
         <strikeDelay>0.5</strikeDelay>
+        <scaleStat>PsychicSensitivity</scaleStat>
+        <debugScaling>false</debugScaling>
       </li>
     </comps>
 
@@ -46,13 +48,13 @@
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target.</description>
+        <description>A blood demon art that calls down a single lightning strike on the target. Basic but effective.</description>
       </li>
 
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>55</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target.</description>
+        <description>A blood demon art that calls down more powerful lightning with increased range and a wider blast radius.</description>
         <resourceCostMultiplier>1.03</resourceCostMultiplier>
         <verbProperties>
           <range>42</range>
@@ -66,6 +68,8 @@
             <soundOnImpact>Thunder_OnMap</soundOnImpact>
             <strikeCount>1</strikeCount>
             <strikeDelay>0.5</strikeDelay>
+            <scaleStat>PsychicSensitivity</scaleStat>
+            <debugScaling>false</debugScaling>
           </li>
         </levelComps>
       </li>
@@ -73,7 +77,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>130</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target.</description>
+        <description>A blood demon art that calls down two consecutive lightning strikes with increased damage. The strikes hit rapidly one after another.</description>
         <resourceCostMultiplier>1.06</resourceCostMultiplier>
         <verbProperties>
           <range>44</range>
@@ -87,6 +91,8 @@
             <soundOnImpact>Thunder_OnMap</soundOnImpact>
             <strikeCount>2</strikeCount>
             <strikeDelay>0.7</strikeDelay>
+            <scaleStat>PsychicSensitivity</scaleStat>
+            <debugScaling>false</debugScaling>
           </li>
         </levelComps>
       </li>
@@ -94,7 +100,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>240</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target.</description>
+        <description>A blood demon art that calls down three lightning strikes that can chain to nearby enemies. The lightning seeks out new targets within range.</description>
         <resourceCostMultiplier>1.09</resourceCostMultiplier>
         <verbProperties>
           <range>46</range>
@@ -109,6 +115,8 @@
             <strikeCount>3</strikeCount>
             <strikeDelay>0.6</strikeDelay>
             <chainRange>5</chainRange>
+            <scaleStat>PsychicSensitivity</scaleStat>
+            <debugScaling>false</debugScaling>
           </li>
         </levelComps>
       </li>
@@ -116,7 +124,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>400</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target.</description>
+        <description>A blood demon art that calls down four devastating lightning strikes. Each successive strike is more powerful than the last, and they chain across a wider area.</description>
         <resourceCostMultiplier>1.12</resourceCostMultiplier>
         <verbProperties>
           <range>48</range>
@@ -132,6 +140,8 @@
             <strikeDelay>0.5</strikeDelay>
             <chainRange>7</chainRange>
             <damageEscalation>1.1</damageEscalation>
+            <scaleStat>PsychicSensitivity</scaleStat>
+            <debugScaling>false</debugScaling>
           </li>
         </levelComps>
       </li>
@@ -139,7 +149,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>630</experienceRequired>
-        <description>A blood demon art that calls down lightning on the target.</description>
+        <description>A blood demon art that calls down six catastrophic lightning strikes. Each strike escalates in power dramatically and chains across a massive area, obliterating multiple targets.</description>
         <resourceCostMultiplier>1.15</resourceCostMultiplier>
         <verbProperties>
           <range>50</range>
@@ -155,6 +165,8 @@
             <strikeDelay>0.4</strikeDelay>
             <chainRange>9</chainRange>
             <damageEscalation>1.25</damageEscalation>
+            <scaleStat>PsychicSensitivity</scaleStat>
+            <debugScaling>false</debugScaling>
           </li>
         </levelComps>
       </li>

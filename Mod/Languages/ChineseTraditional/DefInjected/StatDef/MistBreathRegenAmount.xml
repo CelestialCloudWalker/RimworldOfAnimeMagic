@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Mist Breath Regen Amount Per Regen Tick -->
+  <MistBreath_RegenAmount.label>每刻霞之呼吸恢復量</MistBreath_RegenAmount.label>
+  <!-- EN: Rate of Mist Breath regeneration per tick. -->
+  <MistBreath_RegenAmount.description>每刻霞之呼吸恢復量。</MistBreath_RegenAmount.description>
+  
+  <!-- EN: Moon Breath Regen Amount Per Regen Tick -->
+  <MoonBreath_RegenAmount.label>每刻月之呼吸恢復量</MoonBreath_RegenAmount.label>
+  <!-- EN: Rate of Moon Breath regeneration per tick. -->
+  <MoonBreath_RegenAmount.description>每刻月之呼吸恢復量。</MoonBreath_RegenAmount.description>
+  
+</LanguageData>

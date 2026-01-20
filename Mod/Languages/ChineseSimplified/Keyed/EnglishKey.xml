@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Target is dead and cannot have abilities copied. -->
+  <AbilityStealBite_TargetDead>目标已死亡，能力无法复制。</AbilityStealBite_TargetDead>
+  <!-- EN: Target has no abilities to copy. -->
+  <AbilityStealBite_NoAbilities>目标没有能力可以复制。</AbilityStealBite_NoAbilities>
+  <!-- EN: {0} failed to copy the ability. -->
+  <AbilityStealBite_Failed>{0}复制能力失败。</AbilityStealBite_Failed>
+  <!-- EN: {0} successfully copied {1}! -->
+  <AbilityStealBite_Success>{0}成功复制{1}！</AbilityStealBite_Success>
+  <!-- EN: Must target a pawn to copy abilities. -->
+  <AbilityStealBite_MustTargetPawn>必须选中生物以复制能力。</AbilityStealBite_MustTargetPawn>
+
+  <!-- EN: copied ability -->
+  <CopiedAbility_label>复制了能力</CopiedAbility_label>
+  <!-- EN: I successfully copied someone's ability. It feels empowering. -->
+  <CopiedAbility_description>我成功复制了某人的能力，感觉变强了。</CopiedAbility_description>
+
+  <!-- EN: ability copied -->
+  <AbilityCopied_label>能力被复制</AbilityCopied_label>
+  <!-- EN: Someone copied one of my abilities. I feel violated. -->
+  <AbilityCopied_description>有人复制了我的能力，被冒犯了。</AbilityCopied_description>
+
+  <!-- EN: copied ability -->
+  <CopiedAbilityHediff_label>已复制能力</CopiedAbilityHediff_label>
+  <!-- EN: This pawn has a copied ability that will fade over time. -->
+  <CopiedAbilityHediff_description>此人身上有已复制的能力，但这种能力会随时间消失。</CopiedAbilityHediff_description>
+
+  <!-- EN: ability steal chance -->
+  <AbilityStealChance_label>能力偷取机会</AbilityStealChance_label>
+  <!-- EN: The chance to successfully copy an ability when using steal bite. -->
+  <AbilityStealChance_description>复制能力时的成功机会。</AbilityStealChance_description>
+
+</LanguageData>

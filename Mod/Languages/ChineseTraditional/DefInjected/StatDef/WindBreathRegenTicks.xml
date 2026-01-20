@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Wind Breath Regen Ticks -->
+  <WindBreath_RegenTicks.label>風之呼吸恢復間隔</WindBreath_RegenTicks.label>
+  <!-- EN: Number of ticks between Wind Breath regeneration cycles. -->
+  <WindBreath_RegenTicks.description>風之呼吸每次恢復的時間週期，單位為刻。</WindBreath_RegenTicks.description>
+  
+</LanguageData>

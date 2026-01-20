@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>Plant_TreeWisteria</defName>
+    <label>wisteria tree</label>
+    <description>A sacred and ancient wisteria tree with cascading purple blossoms. These rare trees are said to possess protective properties against demons. The tree emits a faint, calming glow at night and is considered deeply spiritual by those who know of it.\n\nThe wisteria's presence seems to ward off evil and bring peace to those nearby. It takes many years to grow, but once mature, it becomes a breathtaking sight.</description>
+    <graphicData>
+      <texPath>Wisteria/WisteriaC</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.4, 0.35, 0.4)</volume>
+        <offset>(0,0,0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>15</Beauty>
+      <BeautyOutdoors>18</BeautyOutdoors>
+      <Flammability>0.8</Flammability>
+      <MaxHitPoints>350</MaxHitPoints>
+    </statBases>
+    <ingestible />
+    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+    <canScatterOver>false</canScatterOver>
+    <plant>
+      <growDays>20</growDays>
+      <visualSizeRange>3~4</visualSizeRange>
+      <sowMinSkill>6</sowMinSkill>
+      <sowTags Inherit="False"/>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.5</fertilityMin>
+      <fertilitySensitivity>0.3</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <sowWork>800</sowWork>
+      <harvestYield>35</harvestYield>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0.2</growMinGlow>
+      <sowResearchPrerequisites Inherit="False" />
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>5.9</minSpacingBetweenSamePlant>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+      <harvestWork>1200</harvestWork>
+      <choppedThingDef>ChoppedStump_Wisteria</choppedThingDef>
+      <smashedThingDef>SmashedStump_Wisteria</smashedThingDef>
+      <immatureGraphicPath>Wisteria/WisteriaA</immatureGraphicPath>
+      <leaflessGraphicPath>Wisteria/WisteriaB</leaflessGraphicPath>
+    </plant>
+    <comps>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(180,140,220,0)</glowColor>
+      </li>
+      <li Class="CompProperties_PlantPreventCutting"/>
+    </comps>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+
+  <ThingDef ParentName="StumpChoppedBase">
+    <defName>ChoppedStump_Wisteria</defName>
+    <label>chopped wisteria stump</label>
+    <description>A stump left behind after a sacred wisteria tree has been felled. Some consider this a desecration. The stump can be extracted but yields very little usable wood. Left outdoors, the stump will deteriorate in time.</description>
+    <graphicData>
+      <texPath>Wisteria/WisteriaB_Stump</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="StumpSmashedBase">
+    <defName>SmashedStump_Wisteria</defName>
+    <label>smashed wisteria stump</label>
+    <description>The remnants of a wisteria tree destroyed by damage. It's a tragic sight. The stump can be extracted but yields very little usable wood. Left outdoors, the stump will deteriorate in time.</description>
+    <graphicData>
+      <texPath>Wisteria/WisteriaB_Stump</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WisteriaSeed</defName>
+    <label>wisteria seed</label>
+    <description>A rare seed from the sacred wisteria tree. It can be planted to grow a new wisteria tree, though the process takes many years. These seeds are precious and hard to come by.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Plant_TreeWisteria</ThingDef>
+    </descriptionHyperlinks>
+    <stackLimit>3</stackLimit>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>0.4</Mass>
+      <Beauty>2</Beauty>
+      <MarketValue>2500</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Wisteria/WisteriaTrellis</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.7, 0.7)</drawSize>
+      <color>(180,140,220)</color>
+    </graphicData>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>Plant_TreeWisteria</plantDefToSpawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

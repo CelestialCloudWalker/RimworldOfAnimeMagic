@@ -4,7 +4,7 @@
   <HediffDef>
     <defName>Flower_Heart</defName>
     <label>Floral Heart</label>
-    <description>Strikes weaken enimies with subtle posion.</description>
+    <description>Strikes weaken enemies with subtle posion.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
@@ -31,7 +31,7 @@
   <HediffDef>
     <defName>Flower_Heart_LevelTwo</defName>
     <label>Floral Heart</label>
-    <description>Strikes weaken enimies with subtle posion.</description>
+    <description>Strikes weaken enemies with subtle posion.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.9, 0.9, 0.4)</defaultLabelColor>
@@ -58,7 +58,7 @@
   <HediffDef>
     <defName>Flower_Heart_LevelThree</defName>
     <label>Floral Heart</label>
-    <description>Strikes weaken enimies with subtle posion.</description>
+    <description>Strikes weaken enemies with subtle posion.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1.0, 1.0, 0.5)</defaultLabelColor>
@@ -85,7 +85,7 @@
   <HediffDef>
     <defName>Flower_Heart_LevelFour</defName>
     <label>Floral Heart</label>
-    <description>Strikes weaken enimies with subtle posion.</description>
+    <description>Strikes weaken enemies with subtle posion.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1.0, 0.8, 1.0)</defaultLabelColor>
@@ -112,7 +112,7 @@
   <HediffDef>
     <defName>Flower_Heart_LevelFive</defName>
     <label>Floral Heart</label>
-    <description>Strikes weaken enimies with subtle posion.</description>
+    <description>Strikes weaken enemies with subtle posion.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1.0, 0.8, 1.0)</defaultLabelColor>
@@ -139,7 +139,7 @@
   <HediffDef>
     <defName>Flower_Heart_LevelSix</defName>
     <label>Floral Heart</label>
-    <description>Strikes weaken enimies with subtle posion.</description>
+    <description>Strikes weaken enemies with subtle posion.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1.0, 0.8, 1.0)</defaultLabelColor>

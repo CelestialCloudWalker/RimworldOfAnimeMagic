@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sun Breath Regen Rate -->
+  <SunBreath_RegenRate.label>日之呼吸恢復率</SunBreath_RegenRate.label>
+  <!-- EN: Rate of Sun Breath regeneration per tick. -->
+  <SunBreath_RegenRate.description>每刻日之呼吸恢復率。</SunBreath_RegenRate.description>
+  
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Frost Breath Cost Multiplier -->
+  <FrostBreath_Cost.label>森之呼吸资源花费乘数</FrostBreath_Cost.label>
+  <!-- EN: Frost Breath Cost Multiplier. -->
+  <FrostBreath_Cost.description>森之呼吸资源花费乘数。</FrostBreath_Cost.description>
+  
+</LanguageData>

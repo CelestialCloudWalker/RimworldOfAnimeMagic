@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Slash -->
+  <Blood_Slash.label>血斩</Blood_Slash.label>
+  <!-- EN: {0} was torn apart by Blood Slashes. -->
+  <Blood_Slash.deathMessage>{0}被血斩砍得四分五裂。</Blood_Slash.deathMessage>
+  
+</LanguageData>

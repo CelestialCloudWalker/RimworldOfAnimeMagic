@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApply.label>斑紋</BreathingMarkApply.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApply.description>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApply.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApply.stages.minimal.label>微弱</BreathingMarkApply.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApply.stages.fading.label>消退</BreathingMarkApply.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApply.stages.moderate.label>中等</BreathingMarkApply.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApply.stages.strong.label>強烈</BreathingMarkApply.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApply.stages.peak_power.label>巔峰</BreathingMarkApply.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyGiyu.label>斑紋</BreathingMarkApplyGiyu.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyGiyu.description>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyGiyu.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyGiyu.stages.minimal.label>微弱</BreathingMarkApplyGiyu.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyGiyu.stages.fading.label>消退</BreathingMarkApplyGiyu.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyGiyu.stages.moderate.label>中等</BreathingMarkApplyGiyu.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyGiyu.stages.strong.label>強烈</BreathingMarkApplyGiyu.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyGiyu.stages.peak_power.label>巔峰</BreathingMarkApplyGiyu.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyGiyuMastery.label>斑紋</BreathingMarkApplyGiyuMastery.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyGiyuMastery.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyGiyuMastery.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyGiyuMastery.stages.minimal.label>微弱</BreathingMarkApplyGiyuMastery.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyGiyuMastery.stages.fading.label>消退</BreathingMarkApplyGiyuMastery.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyGiyuMastery.stages.moderate.label>中等</BreathingMarkApplyGiyuMastery.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyGiyuMastery.stages.strong.label>強烈</BreathingMarkApplyGiyuMastery.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyGiyuMastery.stages.peak_power.label>巔峰</BreathingMarkApplyGiyuMastery.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyGiyuTranscendence.label>斑紋</BreathingMarkApplyGiyuTranscendence.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyGiyuTranscendence.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyGiyuTranscendence.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyGiyuTranscendence.stages.minimal.label>微弱</BreathingMarkApplyGiyuTranscendence.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyGiyuTranscendence.stages.fading.label>消退</BreathingMarkApplyGiyuTranscendence.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyGiyuTranscendence.stages.moderate.label>中等</BreathingMarkApplyGiyuTranscendence.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyGiyuTranscendence.stages.strong.label>強烈</BreathingMarkApplyGiyuTranscendence.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyGiyuTranscendence.stages.peak_power.label>巔峰</BreathingMarkApplyGiyuTranscendence.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyMastery.label>斑紋</BreathingMarkApplyMastery.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyMastery.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyMastery.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyMastery.stages.minimal.label>微弱</BreathingMarkApplyMastery.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyMastery.stages.fading.label>消退</BreathingMarkApplyMastery.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyMastery.stages.moderate.label>中等</BreathingMarkApplyMastery.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyMastery.stages.strong.label>強烈</BreathingMarkApplyMastery.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyMastery.stages.peak_power.label>巔峰</BreathingMarkApplyMastery.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyMuichiro.label>斑紋</BreathingMarkApplyMuichiro.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyMuichiro.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyMuichiro.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyMuichiro.stages.minimal.label>微弱</BreathingMarkApplyMuichiro.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyMuichiro.stages.fading.label>消退</BreathingMarkApplyMuichiro.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyMuichiro.stages.moderate.label>中等</BreathingMarkApplyMuichiro.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyMuichiro.stages.strong.label>強烈</BreathingMarkApplyMuichiro.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyMuichiro.stages.peak_power.label>巔峰</BreathingMarkApplyMuichiro.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyMuichiroMastery.label>斑紋</BreathingMarkApplyMuichiroMastery.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyMuichiroMastery.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyMuichiroMastery.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyMuichiroMastery.stages.minimal.label>微弱</BreathingMarkApplyMuichiroMastery.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyMuichiroMastery.stages.fading.label>消退</BreathingMarkApplyMuichiroMastery.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyMuichiroMastery.stages.moderate.label>中等</BreathingMarkApplyMuichiroMastery.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyMuichiroMastery.stages.strong.label>強烈</BreathingMarkApplyMuichiroMastery.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyMuichiroMastery.stages.peak_power.label>巔峰</BreathingMarkApplyMuichiroMastery.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyMuichiroTranscendence.label>斑紋</BreathingMarkApplyMuichiroTranscendence.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyMuichiroTranscendence.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyMuichiroTranscendence.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyMuichiroTranscendence.stages.minimal.label>微弱</BreathingMarkApplyMuichiroTranscendence.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyMuichiroTranscendence.stages.fading.label>消退</BreathingMarkApplyMuichiroTranscendence.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyMuichiroTranscendence.stages.moderate.label>中等</BreathingMarkApplyMuichiroTranscendence.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyMuichiroTranscendence.stages.strong.label>強烈</BreathingMarkApplyMuichiroTranscendence.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyMuichiroTranscendence.stages.peak_power.label>巔峰</BreathingMarkApplyMuichiroTranscendence.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplySanemi.label>斑紋</BreathingMarkApplySanemi.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplySanemi.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplySanemi.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplySanemi.stages.minimal.label>微弱</BreathingMarkApplySanemi.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplySanemi.stages.fading.label>消退</BreathingMarkApplySanemi.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplySanemi.stages.moderate.label>中等</BreathingMarkApplySanemi.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplySanemi.stages.strong.label>強烈</BreathingMarkApplySanemi.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplySanemi.stages.peak_power.label>巔峰</BreathingMarkApplySanemi.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplySanemiMastery.label>斑紋</BreathingMarkApplySanemiMastery.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplySanemiMastery.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplySanemiMastery.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplySanemiMastery.stages.minimal.label>微弱</BreathingMarkApplySanemiMastery.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplySanemiMastery.stages.fading.label>消退</BreathingMarkApplySanemiMastery.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplySanemiMastery.stages.moderate.label>中等</BreathingMarkApplySanemiMastery.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplySanemiMastery.stages.strong.label>強烈</BreathingMarkApplySanemiMastery.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplySanemiMastery.stages.peak_power.label>巔峰</BreathingMarkApplySanemiMastery.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplySanemiTranscendence.label>斑紋</BreathingMarkApplySanemiTranscendence.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplySanemiTranscendence.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplySanemiTranscendence.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplySanemiTranscendence.stages.minimal.label>微弱</BreathingMarkApplySanemiTranscendence.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplySanemiTranscendence.stages.fading.label>消退</BreathingMarkApplySanemiTranscendence.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplySanemiTranscendence.stages.moderate.label>中等</BreathingMarkApplySanemiTranscendence.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplySanemiTranscendence.stages.strong.label>強烈</BreathingMarkApplySanemiTranscendence.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplySanemiTranscendence.stages.peak_power.label>巔峰</BreathingMarkApplySanemiTranscendence.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyTanjiro.label>斑紋</BreathingMarkApplyTanjiro.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyTanjiro.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyTanjiro.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyTanjiro.stages.minimal.label>微弱</BreathingMarkApplyTanjiro.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyTanjiro.stages.fading.label>消退</BreathingMarkApplyTanjiro.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyTanjiro.stages.moderate.label>中等</BreathingMarkApplyTanjiro.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyTanjiro.stages.strong.label>強烈</BreathingMarkApplyTanjiro.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyTanjiro.stages.peak_power.label>巔峰</BreathingMarkApplyTanjiro.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyTanjiroMastery.label>斑紋</BreathingMarkApplyTanjiroMastery.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyTanjiroMastery.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyTanjiroMastery.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyTanjiroMastery.stages.minimal.label>微弱</BreathingMarkApplyTanjiroMastery.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyTanjiroMastery.stages.fading.label>消退</BreathingMarkApplyTanjiroMastery.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyTanjiroMastery.stages.moderate.label>中等</BreathingMarkApplyTanjiroMastery.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyTanjiroMastery.stages.strong.label>強烈</BreathingMarkApplyTanjiroMastery.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyTanjiroMastery.stages.peak_power.label>巔峰</BreathingMarkApplyTanjiroMastery.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyTanjiroTranscendence.label>斑紋</BreathingMarkApplyTanjiroTranscendence.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyTanjiroTranscendence.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyTanjiroTranscendence.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyTanjiroTranscendence.stages.minimal.label>微弱</BreathingMarkApplyTanjiroTranscendence.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyTanjiroTranscendence.stages.fading.label>消退</BreathingMarkApplyTanjiroTranscendence.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyTanjiroTranscendence.stages.moderate.label>中等</BreathingMarkApplyTanjiroTranscendence.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyTanjiroTranscendence.stages.strong.label>強烈</BreathingMarkApplyTanjiroTranscendence.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyTanjiroTranscendence.stages.peak_power.label>巔峰</BreathingMarkApplyTanjiroTranscendence.stages.peak_power.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkApplyTranscendence.label>斑紋</BreathingMarkApplyTranscendence.label>
+  <!-- EN: A heightened state of awareness and physical enhancement. The mark's power gradually fades as exhaustion sets in. -->
+  <BreathingMarkApplyTranscendence.label>一種意識和身體機能提升的狀態。斑紋會隨著疲勞累積而消退。</BreathingMarkApplyTranscendence.description>
+  <!-- EN: minimal -->
+  <BreathingMarkApplyTranscendence.stages.minimal.label>微弱</BreathingMarkApplyTranscendence.stages.minimal.label>
+  <!-- EN: fading -->
+  <BreathingMarkApplyTranscendence.stages.fading.label>消退</BreathingMarkApplyTranscendence.stages.fading.label>
+  <!-- EN: moderate -->
+  <BreathingMarkApplyTranscendence.stages.moderate.label>中等</BreathingMarkApplyTranscendence.stages.moderate.label>
+  <!-- EN: strong -->
+  <BreathingMarkApplyTranscendence.stages.strong.label>強烈</BreathingMarkApplyTranscendence.stages.strong.label>
+  <!-- EN: peak power -->
+  <BreathingMarkApplyTranscendence.stages.peak_power.label>巔峰</BreathingMarkApplyTranscendence.stages.peak_power.label>
+  
+</LanguageData>

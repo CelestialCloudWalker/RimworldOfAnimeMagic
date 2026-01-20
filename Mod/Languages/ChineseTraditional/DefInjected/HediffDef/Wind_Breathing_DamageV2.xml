@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: wind slash -->
+  <SharpnessOfWind.label>風之削斬</SharpnessOfWind.label>
+  <!-- EN: Deep lacerations. Blood loss is rapid and dangerous. -->
+  <SharpnessOfWind.description>傷口很深，失血嚴重情況危急。</SharpnessOfWind.description>
+  <!-- EN: wind slash scar -->
+  <SharpnessOfWind.comps.HediffComp_GetsPermanent.permanentLabel>風之削斬疤痕</SharpnessOfWind.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Sliced off -->
+  <SharpnessOfWind.injuryProps.destroyedLabel>喪失功能</SharpnessOfWind.injuryProps.destroyedLabel>
+  <!-- EN: Sliced apart -->
+  <SharpnessOfWind.injuryProps.destroyedOutLabel>被削斷</SharpnessOfWind.injuryProps.destroyedOutLabel>
+  <!-- EN: a wind slash -->
+  <SharpnessOfWind.labelNoun>風之削斬</SharpnessOfWind.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <SharpnessOfWind.labelNounPretty>{1}內的{0}</SharpnessOfWind.labelNounPretty>
+  
+</LanguageData>

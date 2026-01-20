@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Sound Breathing: Disperse -->
+  <Sound_Breathing_Disperse.label>音之呼吸・散</Sound_Breathing_Disperse.label>
+  
+  <!-- EN: SoundBreathing -->
+  <Sound_Breathing_GeneGive_Talent.label>音之呼吸</Sound_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Sound Breathing: Multi Strike -->
+  <Sound_Breathing_Multi_Strike.label>音之呼吸・連襲</Sound_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Sound Breathing: Reflect -->
+  <Sound_Breathing_Reflect.label>音之呼吸・返</Sound_Breathing_Reflect.label>
+  
+  <!-- EN: Sound Breathing: Slash -->
+  <Sound_Breathing_Slash.label>音之呼吸・斬</Sound_Breathing_Slash.label>
+  
+  <!-- EN: Sound Breathing: Strike -->
+  <Sound_Breathing_Strike.label>音之呼吸・襲</Sound_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <SoundBreath_Breath_Increase.label>增加呼吸法容量</SoundBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <SoundBreath_Breath_Increase2.label>增加呼吸法容量</SoundBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <SoundBreath_Breath_Increase3.label>增加呼吸法容量</SoundBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <SoundBreath_Breath_Increase4.label>增加呼吸法容量</SoundBreath_Breath_Increase4.label>
+  
+  <!-- EN: SoundBreath_Cost -->
+  <SoundBreath_Cost_Talent.label>音之呼吸花費</SoundBreath_Cost_Talent.label>
+  
+  <!-- EN: SoundBreath_Cost -->
+  <SoundBreath_Cost_Talent2.label>音之呼吸花費</SoundBreath_Cost_Talent2.label>
+  
+  <!-- EN: SoundBreath_Cost -->
+  <SoundBreath_Cost_Talent3.label>音之呼吸花費</SoundBreath_Cost_Talent3.label>
+  
+  <!-- EN: SoundBreath_Cost -->
+  <SoundBreath_Cost_Talent4.label>音之呼吸花費</SoundBreath_Cost_Talent4.label>
+  
+  <!-- EN: SoundBreath_RegenAmount -->
+  <SoundBreath_RegenAmount_Talent.label>每刻音之呼吸恢復量</SoundBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: SoundBreath_RegenAmount -->
+  <SoundBreath_RegenAmount_Talent2.label>每刻音之呼吸恢復量</SoundBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: SoundBreath_RegenAmount -->
+  <SoundBreath_RegenAmount_Talent3.label>每刻音之呼吸恢復量</SoundBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: SoundBreath_RegenAmount -->
+  <SoundBreath_RegenAmount_Talent4.label>每刻音之呼吸恢復量</SoundBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: SoundBreath_RegenRate -->
+  <SoundBreath_RegenRate_Talent.label>音之呼吸恢復率</SoundBreath_RegenRate_Talent.label>
+  
+  <!-- EN: SoundBreath_RegenRate -->
+  <SoundBreath_RegenRate_Talent2.label>音之呼吸恢復率</SoundBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: SoundBreath_RegenRate -->
+  <SoundBreath_RegenRate_Talent3.label>音之呼吸恢復率</SoundBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: SoundBreath_RegenRate -->
+  <SoundBreath_RegenRate_Talent4.label>音之呼吸恢復率</SoundBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: SoundBreath_RegenTicks -->
+  <SoundBreath_RegenTicks_Talent.label>音之呼吸恢復間隔</SoundBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: SoundBreath_RegenTicks -->
+  <SoundBreath_RegenTicks_Talent2.label>音之呼吸恢復間隔</SoundBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: SoundBreath_RegenTicks -->
+  <SoundBreath_RegenTicks_Talent3.label>音之呼吸恢復間隔</SoundBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: SoundBreath_RegenTicks -->
+  <SoundBreath_RegenTicks_Talent4.label>音之呼吸恢復間隔</SoundBreath_RegenTicks_Talent4.label>
+</LanguageData>

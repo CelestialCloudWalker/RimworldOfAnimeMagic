@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Beast Breathing. -->
+  <RK_Beast_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通兽之呼吸的技艺。</RK_Beast_Breathing_Hashira.description>
+  <!-- EN: Beast Breathing Hashira -->
+  <RK_Beast_Breathing_Hashira.title>兽柱</RK_Beast_Breathing_Hashira.title>
+  <!-- EN: Beast Breathing Hashira -->
+  <RK_Beast_Breathing_Hashira.titleShort>兽柱</RK_Beast_Breathing_Hashira.titleShort>
+  
+  <!-- EN: Veteran of the Corps, [PAWN_nameDef] now dedicates themselves to cultivating new talent. -->
+  <RK_Cultivator.description>鬼杀队的资深者，[PAWN_nameDef]现在致力于培训新人才。</RK_Cultivator.description>
+  <!-- EN: Cultivator -->
+  <RK_Cultivator.title>育手</RK_Cultivator.title>
+  <!-- EN: Cultivator -->
+  <RK_Cultivator.titleShort>育手</RK_Cultivator.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] is a member of the Demon Slayer Corps, dedicated to hunting demons and protecting humanity. -->
+  <RK_Demon_Slayer_Corps_Member.description>[PAWN_nameDef]是鬼杀队的一员，致力杀鬼保护人类。</RK_Demon_Slayer_Corps_Member.description>
+  <!-- EN: Demon Slayer Corps Member -->
+  <RK_Demon_Slayer_Corps_Member.title>鬼杀队士</RK_Demon_Slayer_Corps_Member.title>
+  <!-- EN: Demon Slayer Corps Member -->
+  <RK_Demon_Slayer_Corps_Member.titleShort>鬼杀队士</RK_Demon_Slayer_Corps_Member.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has been trained by a formar Hashira as a child, learning basic sword techniques. -->
+  <RK_DemonSlayerTrainee.description>[PAWN_nameDef]儿时被前任柱训练，学习了基础剑术。</RK_DemonSlayerTrainee.description>
+  <!-- EN: Demon Slayer Trainee -->
+  <RK_DemonSlayerTrainee.title>鬼杀学徒</RK_DemonSlayerTrainee.title>
+  <!-- EN: Demon Slayer Trainee -->
+  <RK_DemonSlayerTrainee.titleShort>鬼杀学徒</RK_DemonSlayerTrainee.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Flame Breathing. -->
+  <RK_Flame_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通炎之呼吸的技艺。</RK_Flame_Breathing_Hashira.description>
+  <!-- EN: Flame Breathing Hashira -->
+  <RK_Flame_Breathing_Hashira.title>炎柱</RK_Flame_Breathing_Hashira.title>
+  <!-- EN: Flame Breathing Hashira -->
+  <RK_Flame_Breathing_Hashira.titleShort>炎柱</RK_Flame_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Flower Breathing. -->
+  <RK_Flower_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通花之呼吸的技艺。</RK_Flower_Breathing_Hashira.description>
+  <!-- EN: Flower Breathing Hashira -->
+  <RK_Flower_Breathing_Hashira.title>花柱</RK_Flower_Breathing_Hashira.title>
+  <!-- EN: Flower Breathing Hashira -->
+  <RK_Flower_Breathing_Hashira.titleShort>花柱</RK_Flower_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Forest Breathing. -->
+  <RK_Forest_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通森之呼吸的技艺。</RK_Forest_Breathing_Hashira.description>
+  <!-- EN: Forest Breathing Hashira -->
+  <RK_Forest_Breathing_Hashira.title>森柱</RK_Forest_Breathing_Hashira.title>
+  <!-- EN: Forest Breathing Hashira -->
+  <RK_Forest_Breathing_Hashira.titleShort>森柱</RK_Forest_Breathing_Hashira.titleShort>
+  
+  <!-- EN: No longer a Hashira, [PAWN_nameDef] lives in quiet retirement. -->
+  <RK_Former_Hashira.description>[PAWN_nameDef]不再当柱了，现在过着平静的退休生活。</RK_Former_Hashira.description>
+  <!-- EN: Former Breathing Hashira -->
+  <RK_Former_Hashira.title>前任柱</RK_Former_Hashira.title>
+  <!-- EN: Former Breathing Hashira -->
+  <RK_Former_Hashira.titleShort>前任柱</RK_Former_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Frost Breathing. -->
+  <RK_Frost_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通霜之呼吸的技艺。</RK_Frost_Breathing_Hashira.description>
+  <!-- EN: Frost Breathing Hashira -->
+  <RK_Frost_Breathing_Hashira.title>霜柱</RK_Frost_Breathing_Hashira.title>
+  <!-- EN: Frost Breathing Hashira -->
+  <RK_Frost_Breathing_Hashira.titleShort>霜柱</RK_Frost_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Insect Breathing. -->
+  <RK_Insect_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通虫之呼吸的技艺。</RK_Insect_Breathing_Hashira.description>
+  <!-- EN: Insect Breathing Hashira -->
+  <RK_Insect_Breathing_Hashira.title>虫柱</RK_Insect_Breathing_Hashira.title>
+  <!-- EN: Insect Breathing Hashira -->
+  <RK_Insect_Breathing_Hashira.titleShort>虫柱</RK_Insect_Breathing_Hashira.titleShort>
+  
+  <!-- EN: A member of the Kakushi, [PAWN_nameDef] supports the Demon Slayers in both battlefield care and daily duties. -->
+  <RK_Kakushi.description>[PAWN_nameDef]是隐的一员，从队士的战后护理到日常杂务都会支持。</RK_Kakushi.description>
+  <!-- EN: Kakushi -->
+  <RK_Kakushi.title>隐</RK_Kakushi.title>
+  <!-- EN: Kakushi -->
+  <RK_Kakushi.titleShort>隐</RK_Kakushi.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Love Breathing. -->
+  <RK_Love_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通恋之呼吸的技艺。</RK_Love_Breathing_Hashira.description>
+  <!-- EN: Love Breathing Hashira -->
+  <RK_Love_Breathing_Hashira.title>恋柱</RK_Love_Breathing_Hashira.title>
+  <!-- EN: Love Breathing Hashira -->
+  <RK_Love_Breathing_Hashira.titleShort>恋柱</RK_Love_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Mist Breathing. -->
+  <RK_Mist_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通霞之呼吸的技艺。</RK_Mist_Breathing_Hashira.description>
+  <!-- EN: Mist Breathing Hashira -->
+  <RK_Mist_Breathing_Hashira.title>霞柱</RK_Mist_Breathing_Hashira.title>
+  <!-- EN: Mist Breathing Hashira -->
+  <RK_Mist_Breathing_Hashira.titleShort>霞柱</RK_Mist_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] grew up isolated in the mountains, learning to live off the land and fight wild animals. -->
+  <RK_Mountain_Hermit_Child.description>[PAWN_nameDef]在山中独自成长，学会靠山吃山和与野生动物搏斗。</RK_Mountain_Hermit_Child.description>
+  <!-- EN: Mountain Hermit Child -->
+  <RK_Mountain_Hermit_Child.title>山中野孩</RK_Mountain_Hermit_Child.title>
+  <!-- EN: Mountain Hermit Child -->
+  <RK_Mountain_Hermit_Child.titleShort>山中野孩</RK_Mountain_Hermit_Child.titleShort>
+  
+  <!-- EN: [PAWN_nameDef]'s parents where killed by demons, taken in by the Corps who taught them basic skills. -->
+  <RK_Orphaned_by_Demons.description>[PAWN_nameDef]的父母被鬼杀死，后来被带入鬼杀队学习基础技能。</RK_Orphaned_by_Demons.description>
+  <!-- EN: Orphaned by Demons -->
+  <RK_Orphaned_by_Demons.title>因鬼丧亲</RK_Orphaned_by_Demons.title>
+  <!-- EN: Orphaned by Demons -->
+  <RK_Orphaned_by_Demons.titleShort>因鬼丧亲</RK_Orphaned_by_Demons.titleShort>
+  
+  <!-- EN: One of the few to survive long enough to retire, [PAWN_nameDef] stands as proof of the Corps’ harsh trials. -->
+  <RK_Retired_Slayer.description>少数活得够久而退休的队士，[PAWN_nameDef]的存在证明了鬼杀队的严酷考验。</RK_Retired_Slayer.description>
+  <!-- EN: Retired Slayer -->
+  <RK_Retired_Slayer.title>退休队士</RK_Retired_Slayer.title>
+  <!-- EN: Retired Slayer -->
+  <RK_Retired_Slayer.titleShort>退休队士</RK_Retired_Slayer.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Serpent Breathing. -->
+  <RK_Serpent_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通蛇之呼吸的技艺。</RK_Serpent_Breathing_Hashira.description>
+  <!-- EN: Serpent Breathing Hashira -->
+  <RK_Serpent_Breathing_Hashira.title>蛇柱</RK_Serpent_Breathing_Hashira.title>
+  <!-- EN: Serpent Breathing Hashira -->
+  <RK_Serpent_Breathing_Hashira.titleShort>蛇柱</RK_Serpent_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Sound Breathing. -->
+  <RK_Sound_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通音之呼吸的技艺。</RK_Sound_Breathing_Hashira.description>
+  <!-- EN: Sound Breathing Hashira -->
+  <RK_Sound_Breathing_Hashira.title>音柱</RK_Sound_Breathing_Hashira.title>
+  <!-- EN: Sound Breathing Hashira -->
+  <RK_Sound_Breathing_Hashira.titleShort>音柱</RK_Sound_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Stone Breathing. -->
+  <RK_Stone_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通岩之呼吸的技艺。</RK_Stone_Breathing_Hashira.description>
+  <!-- EN: Stone Breathing Hashira -->
+  <RK_Stone_Breathing_Hashira.title>岩柱</RK_Stone_Breathing_Hashira.title>
+  <!-- EN: Stone Breathing Hashira -->
+  <RK_Stone_Breathing_Hashira.titleShort>岩柱</RK_Stone_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Sun Breathing. -->
+  <RK_Sun_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通日之呼吸的技艺。</RK_Sun_Breathing_Hashira.description>
+  <!-- EN: Sun Breathing Hashira -->
+  <RK_Sun_Breathing_Hashira.title>日柱</RK_Sun_Breathing_Hashira.title>
+  <!-- EN: Sun Breathing Hashira -->
+  <RK_Sun_Breathing_Hashira.titleShort>日柱</RK_Sun_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef]'s family was killed by demons at a young age, learning to survive on their own. -->
+  <RK_SurvivorChild.description>[PAWN_nameDef]幼时被鬼杀死了家人，因此学会自力更生。</RK_SurvivorChild.description>
+  <!-- EN: Survivor Child -->
+  <RK_SurvivorChild.title>幸存之子</RK_SurvivorChild.title>
+  <!-- EN: Survivor Child -->
+  <RK_SurvivorChild.titleShort>幸存之子</RK_SurvivorChild.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] is devoted to the sacred art of swordmaking. -->
+  <RK_Swordsmith.description>[PAWN_nameDef]全心全意投入锻刀的神圣技艺当中。</RK_Swordsmith.description>
+  <!-- EN: Swordsmith -->
+  <RK_Swordsmith.title>刀匠</RK_Swordsmith.title>
+  <!-- EN: Swordsmith -->
+  <RK_Swordsmith.titleShort>刀匠</RK_Swordsmith.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Thunder Breathing. -->
+  <RK_Thunder_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通雷之呼吸的技艺。</RK_Thunder_Breathing_Hashira.description>
+  <!-- EN: Thunder Breathing Hashira -->
+  <RK_Thunder_Breathing_Hashira.title>鸣柱</RK_Thunder_Breathing_Hashira.title>
+  <!-- EN: Thunder Breathing Hashira -->
+  <RK_Thunder_Breathing_Hashira.titleShort>鸣柱</RK_Thunder_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Water Breathing. -->
+  <RK_Water_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通水之呼吸的技艺。</RK_Water_Breathing_Hashira.description>
+  <!-- EN: Water Breathing Hashira -->
+  <RK_Water_Breathing_Hashira.title>水柱</RK_Water_Breathing_Hashira.title>
+  <!-- EN: Water Breathing Hashira -->
+  <RK_Water_Breathing_Hashira.titleShort>水柱</RK_Water_Breathing_Hashira.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Wind Breathing. -->
+  <RK_Wind_Breathing_Hashira.description>[PAWN_nameDef]登上了鬼杀队的最高端级，精通风之呼吸的技艺。</RK_Wind_Breathing_Hashira.description>
+  <!-- EN: Wind Breathing Hashira -->
+  <RK_Wind_Breathing_Hashira.title>风柱</RK_Wind_Breathing_Hashira.title>
+  <!-- EN: Wind Breathing Hashira -->
+  <RK_Wind_Breathing_Hashira.titleShort>风柱</RK_Wind_Breathing_Hashira.titleShort>
+  
+</LanguageData>

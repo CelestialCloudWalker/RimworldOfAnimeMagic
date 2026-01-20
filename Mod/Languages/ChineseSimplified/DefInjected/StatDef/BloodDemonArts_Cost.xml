@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: blood demon arts cost -->
+  <BloodDemonArts_Cost.label>血鬼术花费</BloodDemonArts_Cost.label>
+  <!-- EN: Resource cost for blood demon arts abilities. -->
+  <BloodDemonArts_Cost.description>血鬼术能力的资源花费。</BloodDemonArts_Cost.description>
+  
+</LanguageData>

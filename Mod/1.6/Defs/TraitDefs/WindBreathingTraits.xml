@@ -26,7 +26,7 @@
 
   <TraitDef>
     <defName>GaleForce</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Shooting</li>
     </forcedPassions>
@@ -51,7 +51,7 @@
 
   <TraitDef>
     <defName>WhirlwindStrike</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -77,7 +77,7 @@
 
   <TraitDef>
     <defName>AtmosphericPressure</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>atmospheric pressure</label>
@@ -100,7 +100,7 @@
 
   <TraitDef>
     <defName>CuttingBreeze</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
       <li>Artistic</li>
@@ -127,7 +127,7 @@
 
   <TraitDef>
     <defName>TailwindSupport</defName>
-    <commonality>0.9</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
     </forcedPassions>
@@ -152,7 +152,7 @@
 
   <TraitDef>
     <defName>StormFront</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Intellectual</li>
     </forcedPassions>

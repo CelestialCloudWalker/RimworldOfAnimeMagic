@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Mist Breathing -->
+  <Mist_BreathingStyleBlankTree.treeName>霞之呼吸</Mist_BreathingStyleBlankTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <Mist_BreathingStyleBlankTree.treeToolbarName>{0} 等級({1}) 點數({2})</Mist_BreathingStyleBlankTree.treeToolbarName>
+  
+</LanguageData>

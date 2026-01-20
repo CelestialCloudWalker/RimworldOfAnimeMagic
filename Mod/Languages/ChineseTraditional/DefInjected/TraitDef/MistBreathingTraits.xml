@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: confusion aura -->
+  <ConfusionAura.degreeDatas.confusion_aura.label>困惑氣場</ConfusionAura.degreeDatas.confusion_aura.label>
+  <!-- EN: [PAWN_nameDef] surrounds [PAWN_objective] in an aura of bewilderment. Enemies struggle to focus when fighting [PAWN_objective], and [PAWN_possessive] words can cloud the minds of others. -->
+  <ConfusionAura.degreeDatas.confusion_aura.description>[PAWN_nameDef]周圍環繞著困惑的氣場。敵人要打[PAWN_pronoun]時很難瞄準，而[PAWN_pronoun]的話語也讓人雲裡霧裡的。</ConfusionAura.degreeDatas.confusion_aura.description>
+ 
+  <!-- EN: ethereal form -->
+  <EtherealForm.degreeDatas.ethereal_form.label>飄渺型態</EtherealForm.degreeDatas.ethereal_form.label>
+  <!-- EN: [PAWN_nameDef] seems to exist partially in the realm of mist and shadow. [PAWN_possessive] ghostly nature makes [PAWN_objective] difficult to pin down but reduces [PAWN_possessive] physical presence. -->
+  <EtherealForm.degreeDatas.ethereal_form.description>[PAWN_nameDef]似乎部分存在於霞霧與影子的界域當中。幽靈般的性質使[PAWN_pronoun]難以捉摸，也減弱了[PAWN_pronoun]的物理存在度。</EtherealForm.degreeDatas.ethereal_form.description>
+ 
+  <!-- EN: morning dew -->
+  <MorningDew.degreeDatas.morning_dew.label>早晨之露</MorningDew.degreeDatas.morning_dew.label>
+  <!-- EN: [PAWN_nameDef] draws power from the transitional moments of dawn and dusk. [PAWN_possessive] abilities fluctuate with the mists that rise and fall with the changing light. -->
+  <MorningDew.degreeDatas.morning_dew.description>[PAWN_nameDef]從黎明和黃昏之刻吸收能量。[PAWN_pronoun]的能力像霞霧一樣，會隨著光線上下波動。</MorningDew.degreeDatas.morning_dew.description>
+ 
+  <!-- EN: obscuring presence -->
+  <ObscuringPresence.degreeDatas.obscuring_presence.label>遮蔽氣質</ObscuringPresence.degreeDatas.obscuring_presence.label>
+  <!-- EN: [PAWN_nameDef] cloaks [PAWN_possessive] allies in concealing mists. [PAWN_possessive] tactical awareness helps coordinate ambushes and reduces visibility for enemies. -->
+  <ObscuringPresence.degreeDatas.obscuring_presence.description>[PAWN_nameDef]用霞霧遮蔽自己的同伴。[PAWN_pronoun]的戰術感知掩護了盟友的埋伏，也降低敵方的能見度。</ObscuringPresence.degreeDatas.obscuring_presence.description>
+ 
+  <!-- EN: phase walking -->
+  <PhaseWalking.degreeDatas.phase_walking.label>相位行走</PhaseWalking.degreeDatas.phase_walking.label>
+  <!-- EN: [PAWN_nameDef] can briefly shift between the physical and ethereal planes. [PAWN_possessive] movements seem to ignore certain barriers, though [PAWN_pronoun] struggles with solid, physical tasks. -->
+  <PhaseWalking.degreeDatas.phase_walking.description>[PAWN_nameDef]能輕鬆在物質與乙太位面切換。[PAWN_pronoun]的行動似乎無視某些邊界，卻也讓[PAWN_pronoun]難以進行體力勞動。</PhaseWalking.degreeDatas.phase_walking.description>
+ 
+  <!-- EN: vaporous healing -->
+  <VaporousHealing.degreeDatas.vaporous_healing.label>蒸汽治療</VaporousHealing.degreeDatas.vaporous_healing.label>
+  <!-- EN: [PAWN_nameDef] regenerates like morning mist reforming after dawn. [PAWN_possessive] body slowly repairs itself, especially in humid conditions, but extreme temperatures disrupt this process. -->
+  <VaporousHealing.degreeDatas.vaporous_healing.description>[PAWN_nameDef]像朝霞在日落後重新形成一樣進行再生。[PAWN_pronoun]的身體會自行緩慢修復，濕潤的環境下更是如此，但極端溫度會干擾這個過程。</VaporousHealing.degreeDatas.vaporous_healing.description>
+  
+</LanguageData>

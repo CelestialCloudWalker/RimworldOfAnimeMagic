@@ -37,6 +37,8 @@
         <targetSearchRadius>14</targetSearchRadius>
         <jumpDamageDef>Moon_Breathing_Damage</jumpDamageDef>
         <jumpDamage>5~7</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
         <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
         <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
       </li>
@@ -65,6 +67,8 @@
             <targetSearchRadius>19</targetSearchRadius>
             <jumpDamageDef>Moon_Breathing_Damage</jumpDamageDef>
             <jumpDamage>6~9</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
           </li>
@@ -87,6 +91,8 @@
             <targetSearchRadius>19</targetSearchRadius>
             <jumpDamageDef>Moon_Breathing_Damage</jumpDamageDef>
             <jumpDamage>8~11</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
           </li>
@@ -109,6 +115,8 @@
             <targetSearchRadius>22</targetSearchRadius>
             <jumpDamageDef>Moon_Breathing_Damage</jumpDamageDef>
             <jumpDamage>9~13</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
           </li>
@@ -131,6 +139,8 @@
             <targetSearchRadius>25</targetSearchRadius>
             <jumpDamageDef>Moon_Breathing_Damage</jumpDamageDef>
             <jumpDamage>11~16</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
           </li>
@@ -153,6 +163,7 @@
             <targetSearchRadius>29</targetSearchRadius>
             <jumpDamageDef>Moon_Breathing_Damage</jumpDamageDef>
             <jumpDamage>13~19</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <casterEffecter>AnimeArsenal_SerpentJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SerpentHit</impactEffecter>
           </li>

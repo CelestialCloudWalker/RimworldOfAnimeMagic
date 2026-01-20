@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Love Breath Regen Ticks -->
+  <LoveBreath_RegenTicks.label>恋之呼吸恢复间隔</LoveBreath_RegenTicks.label>
+  <!-- EN: Number of ticks between Love Breath regeneration cycles. -->
+  <LoveBreath_RegenTicks.description>恋之呼吸每次恢复的时间周期，单位为刻。</LoveBreath_RegenTicks.description>
+  
+</LanguageData>

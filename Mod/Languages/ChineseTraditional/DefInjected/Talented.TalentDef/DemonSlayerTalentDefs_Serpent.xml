@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Serpent Breathing: Disperse -->
+  <Serpent_Breathing_Disperse.label>蛇之呼吸・散</Serpent_Breathing_Disperse.label>
+  
+  <!-- EN: SerpentBreathing -->
+  <Serpent_Breathing_GeneGive_Talent.label>蛇之呼吸</Serpent_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Serpent Breathing: Multi Strike -->
+  <Serpent_Breathing_Multi_Strike.label>蛇之呼吸・連襲</Serpent_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Serpent Breathing: Reflect -->
+  <Serpent_Breathing_Reflect.label>蛇之呼吸・返</Serpent_Breathing_Reflect.label>
+  
+  <!-- EN: Serpent Breathing: Slash -->
+  <Serpent_Breathing_Slash.label>蛇之呼吸・斬</Serpent_Breathing_Slash.label>
+  
+  <!-- EN: Serpent Breathing: Strike -->
+  <Serpent_Breathing_Strike.label>蛇之呼吸・襲</Serpent_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <SerpentBreath_Breath_Increase.label>增加呼吸法容量</SerpentBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <SerpentBreath_Breath_Increase2.label>增加呼吸法容量</SerpentBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <SerpentBreath_Breath_Increase3.label>增加呼吸法容量</SerpentBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <SerpentBreath_Breath_Increase4.label>增加呼吸法容量</SerpentBreath_Breath_Increase4.label>
+  
+  <!-- EN: SerpentBreath_Cost -->
+  <SerpentBreath_Cost_Talent.label>蛇之呼吸花費</SerpentBreath_Cost_Talent.label>
+  
+  <!-- EN: SerpentBreath_Cost -->
+  <SerpentBreath_Cost_Talent2.label>蛇之呼吸花費</SerpentBreath_Cost_Talent2.label>
+  
+  <!-- EN: SerpentBreath_Cost -->
+  <SerpentBreath_Cost_Talent3.label>蛇之呼吸花費</SerpentBreath_Cost_Talent3.label>
+  
+  <!-- EN: SerpentBreath_Cost -->
+  <SerpentBreath_Cost_Talent4.label>蛇之呼吸花費</SerpentBreath_Cost_Talent4.label>
+  
+  <!-- EN: SerpentBreath_RegenAmount -->
+  <SerpentBreath_RegenAmount_Talent.label>每刻蛇之呼吸恢復量</SerpentBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: SerpentBreath_RegenAmount -->
+  <SerpentBreath_RegenAmount_Talent2.label>每刻蛇之呼吸恢復量</SerpentBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: SerpentBreath_RegenAmount -->
+  <SerpentBreath_RegenAmount_Talent3.label>每刻蛇之呼吸恢復量</SerpentBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: SerpentBreath_RegenAmount -->
+  <SerpentBreath_RegenAmount_Talent4.label>每刻蛇之呼吸恢復量</SerpentBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: SerpentBreath_RegenRate -->
+  <SerpentBreath_RegenRate_Talent.label>蛇之呼吸恢復率</SerpentBreath_RegenRate_Talent.label>
+  
+  <!-- EN: SerpentBreath_RegenRate -->
+  <SerpentBreath_RegenRate_Talent2.label>蛇之呼吸恢復率</SerpentBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: SerpentBreath_RegenRate -->
+  <SerpentBreath_RegenRate_Talent3.label>蛇之呼吸恢復率</SerpentBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: SerpentBreath_RegenRate -->
+  <SerpentBreath_RegenRate_Talent4.label>蛇之呼吸恢復率</SerpentBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: SerpentBreath_RegenTicks -->
+  <SerpentBreath_RegenTicks_Talent.label>蛇之呼吸恢復間隔</SerpentBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: SerpentBreath_RegenTicks -->
+  <SerpentBreath_RegenTicks_Talent2.label>蛇之呼吸恢復間隔</SerpentBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: SerpentBreath_RegenTicks -->
+  <SerpentBreath_RegenTicks_Talent3.label>蛇之呼吸恢復間隔</SerpentBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: SerpentBreath_RegenTicks -->
+  <SerpentBreath_RegenTicks_Talent4.label>蛇之呼吸恢復間隔</SerpentBreath_RegenTicks_Talent4.label>
+</LanguageData>

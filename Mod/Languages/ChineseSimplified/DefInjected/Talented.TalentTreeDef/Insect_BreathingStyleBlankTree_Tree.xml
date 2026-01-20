@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Insect Breathing -->
+  <Insect_BreathingStyleBlankTree.treeName>虫之呼吸</Insect_BreathingStyleBlankTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <Insect_BreathingStyleBlankTree.treeToolbarName>{0} 等级({1}) 点数({2})</Insect_BreathingStyleBlankTree.treeToolbarName>
+  
+</LanguageData>

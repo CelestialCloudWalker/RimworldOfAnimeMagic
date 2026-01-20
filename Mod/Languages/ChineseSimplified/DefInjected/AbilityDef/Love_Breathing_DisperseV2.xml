@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Love Breathing: Disperse -->
+  <Love_Breathing_Disperse.label>恋之呼吸・散</Love_Breathing_Disperse.label>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Love_Breathing_Disperse.description>在敌方周围创造斩击的技法。</Love_Breathing_Disperse.description>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Love_Breathing_Disperse.levels.0.description>在敌方周围创造斩击的技法。</Love_Breathing_Disperse.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Love_Breathing_Disperse.levels.0.labelSuffix>壹级</Love_Breathing_Disperse.levels.0.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Love_Breathing_Disperse.levels.1.description>在敌方周围创造斩击的技法。</Love_Breathing_Disperse.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Love_Breathing_Disperse.levels.1.labelSuffix>贰级</Love_Breathing_Disperse.levels.1.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Love_Breathing_Disperse.levels.2.description>在敌方周围创造斩击的技法。</Love_Breathing_Disperse.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Love_Breathing_Disperse.levels.2.labelSuffix>参级</Love_Breathing_Disperse.levels.2.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Love_Breathing_Disperse.levels.3.description>在敌方周围创造斩击的技法。</Love_Breathing_Disperse.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Love_Breathing_Disperse.levels.3.labelSuffix>肆级</Love_Breathing_Disperse.levels.3.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Love_Breathing_Disperse.levels.4.description>在敌方周围创造斩击的技法。</Love_Breathing_Disperse.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Love_Breathing_Disperse.levels.4.labelSuffix>伍级</Love_Breathing_Disperse.levels.4.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Love_Breathing_Disperse.levels.5.description>在敌方周围创造斩击的技法。</Love_Breathing_Disperse.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Love_Breathing_Disperse.levels.5.labelSuffix>陆级</Love_Breathing_Disperse.levels.5.labelSuffix>
+  
+</LanguageData>

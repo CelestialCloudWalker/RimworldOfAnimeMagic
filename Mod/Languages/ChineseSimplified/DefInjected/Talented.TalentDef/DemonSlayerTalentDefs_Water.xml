@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Water Breathing: Disperse -->
+  <Water_Breathing_Disperse.label>水之呼吸・散</Water_Breathing_Disperse.label>
+  
+  <!-- EN: WaterBreathing -->
+  <Water_Breathing_GeneGive_Talent.label>水之呼吸</Water_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Water Breathing: Multi Strike -->
+  <Water_Breathing_Multi_Strike.label>水之呼吸・连袭</Water_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Water Breathing: Reflect -->
+  <Water_Breathing_Reflect.label>水之呼吸・返</Water_Breathing_Reflect.label>
+  
+  <!-- EN: Water Breathing: Slash -->
+  <Water_Breathing_Slash.label>水之呼吸・斩</Water_Breathing_Slash.label>
+  
+  <!-- EN: Water Breathing: Strike -->
+  <Water_Breathing_Strike.label>水之呼吸・袭</Water_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <WaterBreath_Breath_Increase.label>增加呼吸法容量</WaterBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <WaterBreath_Breath_Increase2.label>增加呼吸法容量</WaterBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <WaterBreath_Breath_Increase3.label>增加呼吸法容量</WaterBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <WaterBreath_Breath_Increase4.label>增加呼吸法容量</WaterBreath_Breath_Increase4.label>
+  
+  <!-- EN: WaterBreath_Cost -->
+  <WaterBreath_Cost_Talent.label>水之呼吸花费</WaterBreath_Cost_Talent.label>
+  
+  <!-- EN: WaterBreath_Cost -->
+  <WaterBreath_Cost_Talent2.label>水之呼吸花费</WaterBreath_Cost_Talent2.label>
+  
+  <!-- EN: WaterBreath_Cost -->
+  <WaterBreath_Cost_Talent3.label>水之呼吸花费</WaterBreath_Cost_Talent3.label>
+  
+  <!-- EN: WaterBreath_Cost -->
+  <WaterBreath_Cost_Talent4.label>水之呼吸花费</WaterBreath_Cost_Talent4.label>
+  
+  <!-- EN: WaterBreath_RegenAmount -->
+  <WaterBreath_RegenAmount_Talent.label>每刻水之呼吸恢复量</WaterBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: WaterBreath_RegenAmount -->
+  <WaterBreath_RegenAmount_Talent2.label>每刻水之呼吸恢复量</WaterBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: WaterBreath_RegenAmount -->
+  <WaterBreath_RegenAmount_Talent3.label>每刻水之呼吸恢复量</WaterBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: WaterBreath_RegenAmount -->
+  <WaterBreath_RegenAmount_Talent4.label>每刻水之呼吸恢复量</WaterBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: WaterBreath_RegenRate -->
+  <WaterBreath_RegenRate_Talent.label>水之呼吸恢复率</WaterBreath_RegenRate_Talent.label>
+  
+  <!-- EN: WaterBreath_RegenRate -->
+  <WaterBreath_RegenRate_Talent2.label>水之呼吸恢复率</WaterBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: WaterBreath_RegenRate -->
+  <WaterBreath_RegenRate_Talent3.label>水之呼吸恢复率</WaterBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: WaterBreath_RegenRate -->
+  <WaterBreath_RegenRate_Talent4.label>水之呼吸恢复率</WaterBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: WaterBreath_RegenTicks -->
+  <WaterBreath_RegenTicks_Talent.label>水之呼吸恢复间隔</WaterBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: WaterBreath_RegenTicks -->
+  <WaterBreath_RegenTicks_Talent2.label>水之呼吸恢复间隔</WaterBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: WaterBreath_RegenTicks -->
+  <WaterBreath_RegenTicks_Talent3.label>水之呼吸恢复间隔</WaterBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: WaterBreath_RegenTicks -->
+  <WaterBreath_RegenTicks_Talent4.label>水之呼吸恢复间隔</WaterBreath_RegenTicks_Talent4.label>
+</LanguageData>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Demon Arts: Dream Parasite -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.label>血鬼术 梦寄生</Blood_Demon_Arts_Memory_Dream_Parasite.label>
+  <!-- EN: Enter a sleeping target's dreams and steal their knowledge and skills for Themselves. -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.description>进入睡眠者的梦境，窃取其知识和技能。</Blood_Demon_Arts_Memory_Dream_Parasite.description>
+  <!-- EN: Enter a sleeping target's dreams and steal their knowledge and skills for Themselves. -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.0.description>进入睡眠者的梦境，窃取其知识和技能。</Blood_Demon_Arts_Memory_Dream_Parasite.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.0.labelSuffix>壹级</Blood_Demon_Arts_Memory_Dream_Parasite.levels.0.labelSuffix>
+  <!-- EN: Enter a sleeping target's dreams and steal their knowledge and skills for Themselves. -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.1.description>进入睡眠者的梦境，窃取其知识和技能。</Blood_Demon_Arts_Memory_Dream_Parasite.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.1.labelSuffix>贰级</Blood_Demon_Arts_Memory_Dream_Parasite.levels.1.labelSuffix>
+  <!-- EN: Enter a sleeping target's dreams and steal their knowledge and skills for Themselves. -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.2.description>进入睡眠者的梦境，窃取其知识和技能。</Blood_Demon_Arts_Memory_Dream_Parasite.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.2.labelSuffix>参级</Blood_Demon_Arts_Memory_Dream_Parasite.levels.2.labelSuffix>
+  <!-- EN: Enter a sleeping target's dreams and steal their knowledge and skills for Themselves. -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.3.description>进入睡眠者的梦境，窃取其知识和技能。</Blood_Demon_Arts_Memory_Dream_Parasite.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.3.labelSuffix>肆级</Blood_Demon_Arts_Memory_Dream_Parasite.levels.3.labelSuffix>
+  <!-- EN: Enter a sleeping target's dreams and steal their knowledge and skills for Themselves. -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.4.description>进入睡眠者的梦境，窃取其知识和技能。</Blood_Demon_Arts_Memory_Dream_Parasite.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.4.labelSuffix>伍级</Blood_Demon_Arts_Memory_Dream_Parasite.levels.4.labelSuffix>
+  <!-- EN: Enter a sleeping target's dreams and steal their knowledge and skills for Themselves. -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.5.description>进入睡眠者的梦境，窃取其知识和技能。</Blood_Demon_Arts_Memory_Dream_Parasite.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Blood_Demon_Arts_Memory_Dream_Parasite.levels.5.labelSuffix>陆级</Blood_Demon_Arts_Memory_Dream_Parasite.levels.5.labelSuffix>
+  
+</LanguageData>

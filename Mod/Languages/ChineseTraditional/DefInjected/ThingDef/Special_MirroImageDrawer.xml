@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: mirror image -->
+  <EMF_MirrorImageDrawer.label>鏡像圖片</EMF_MirrorImageDrawer.label>
+  <!-- EN: image -->
+  <EMF_MirrorImageDrawer.description>圖片</EMF_MirrorImageDrawer.description>
+  
+</LanguageData>

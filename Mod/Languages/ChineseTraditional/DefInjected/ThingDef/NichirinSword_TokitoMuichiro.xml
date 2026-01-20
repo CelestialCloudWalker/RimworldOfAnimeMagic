@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Muochiro's Nichirin Blade -->
+  <NichirinSword_TokitoMuichiro.label>無一郎的日輪刀</NichirinSword_TokitoMuichiro.label>
+  <!-- EN: A nichirin blade capable of killing demons. -->
+  <NichirinSword_TokitoMuichiro.description>用來殺鬼的日輪刀。</NichirinSword_TokitoMuichiro.description>
+  <!-- EN: blade back -->
+  <NichirinSword_TokitoMuichiro.tools.blade_back.label>刀背</NichirinSword_TokitoMuichiro.tools.blade_back.label>
+  <!-- EN: blade -->
+  <NichirinSword_TokitoMuichiro.tools.blade.label>刀刃</NichirinSword_TokitoMuichiro.tools.blade.label>
+  
+</LanguageData>

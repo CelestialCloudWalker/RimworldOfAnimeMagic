@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: lightning strike -->
+  <Thunder_Breathing_Damage.label>雷之强击</Thunder_Breathing_Damage.label>
+  <!-- EN: {0} was killed by a surge of lightning. -->
+  <Thunder_Breathing_Damage.deathMessage>{0}被一道闪电劈死。</Thunder_Breathing_Damage.deathMessage>
+  
+</LanguageData>

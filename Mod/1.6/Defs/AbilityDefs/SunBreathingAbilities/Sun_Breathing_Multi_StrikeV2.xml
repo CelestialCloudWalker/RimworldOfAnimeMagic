@@ -37,6 +37,8 @@
         <targetSearchRadius>16</targetSearchRadius>
         <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
         <jumpDamage>4~5</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
         <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
         <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
       </li>
@@ -65,6 +67,8 @@
             <targetSearchRadius>19</targetSearchRadius>
             <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
             <jumpDamage>5~7</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
             <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
           </li>
@@ -87,6 +91,8 @@
             <targetSearchRadius>22</targetSearchRadius>
             <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
             <jumpDamage>6~9</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
             <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
           </li>
@@ -109,6 +115,8 @@
             <targetSearchRadius>26</targetSearchRadius>
             <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
             <jumpDamage>8~11</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
             <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
           </li>
@@ -131,6 +139,8 @@
             <targetSearchRadius>30</targetSearchRadius>
             <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
             <jumpDamage>10~14</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
             <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
           </li>
@@ -153,6 +163,7 @@
             <targetSearchRadius>35</targetSearchRadius>
             <jumpDamageDef>Sun_Breathing_Damage</jumpDamageDef>
             <jumpDamage>12~17</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <casterEffecter>AnimeArsenal_Flamehit</casterEffecter>
             <impactEffecter>AnimeArsenal_Flamehit</impactEffecter>
           </li>

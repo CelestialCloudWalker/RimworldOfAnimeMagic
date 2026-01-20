@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Demon Art: Devour -->
+  <Blood_Demon_Arts_Devour.label>血鬼術 吞噬</Blood_Demon_Arts_Devour.label>
+  <!-- EN: A blood demon art that feeds on a target to regen. -->
+  <Blood_Demon_Arts_Devour.description>食用對方以進行再生的血鬼術。</Blood_Demon_Arts_Devour.description>
+  <!-- EN: A blood demon art that feeds on a target to regen. -->
+  <Blood_Demon_Arts_Devour.levels.0.description>食用對方以進行再生的血鬼術。</Blood_Demon_Arts_Devour.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Blood_Demon_Arts_Devour.levels.0.labelSuffix>壹級</Blood_Demon_Arts_Devour.levels.0.labelSuffix>
+  <!-- EN: A blood demon art that feeds on a target to regen. -->
+  <Blood_Demon_Arts_Devour.levels.1.description>食用對方以進行再生的血鬼術。</Blood_Demon_Arts_Devour.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Blood_Demon_Arts_Devour.levels.1.labelSuffix>貳級</Blood_Demon_Arts_Devour.levels.1.labelSuffix>
+  <!-- EN: A blood demon art that feeds on a target to regen. -->
+  <Blood_Demon_Arts_Devour.levels.2.description>食用對方以進行再生的血鬼術。</Blood_Demon_Arts_Devour.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Blood_Demon_Arts_Devour.levels.2.labelSuffix>參級</Blood_Demon_Arts_Devour.levels.2.labelSuffix>
+  <!-- EN: A blood demon art that feeds on a target to regen. -->
+  <Blood_Demon_Arts_Devour.levels.3.description>食用對方以進行再生的血鬼術。</Blood_Demon_Arts_Devour.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Blood_Demon_Arts_Devour.levels.3.labelSuffix>肆級</Blood_Demon_Arts_Devour.levels.3.labelSuffix>
+  <!-- EN: A blood demon art that feeds on a target to regen. -->
+  <Blood_Demon_Arts_Devour.levels.4.description>食用對方以進行再生的血鬼術。</Blood_Demon_Arts_Devour.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Blood_Demon_Arts_Devour.levels.4.labelSuffix>伍級</Blood_Demon_Arts_Devour.levels.4.labelSuffix>
+  <!-- EN: A blood demon art that feeds on a target to regen. -->
+  <Blood_Demon_Arts_Devour.levels.5.description>食用對方以進行再生的血鬼術。</Blood_Demon_Arts_Devour.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Blood_Demon_Arts_Devour.levels.5.labelSuffix>陸級</Blood_Demon_Arts_Devour.levels.5.labelSuffix>
+  
+</LanguageData>

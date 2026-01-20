@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Twelve Demon Moons -->
+  <AA_Twelve_Demon_Moons.label>十二鬼月</AA_Twelve_Demon_Moons.label>
+  <!-- EN: A terrifying organization of demons led by the Demon King Muzan. The hierarchy consists of twelve powerful demons divided into Upper and Lower Moons, each ranked by their deadly power. They seek to spread darkness and devour humans across the world. -->
+  <AA_Twelve_Demon_Moons.description>鬼王无惨所领导的骇人鬼组织。十二鬼月由十二位强大的鬼所组成，其中又分成上弦和下弦，成员阶级由他们本身的致命力量决定。他们想要散播黑暗并吞掉世上的人类。</AA_Twelve_Demon_Moons.description>
+  <!-- EN: Twelve Demon Moons -->
+  <AA_Twelve_Demon_Moons.fixedName>十二鬼月</AA_Twelve_Demon_Moons.fixedName>
+  <!-- EN: leader -->
+  <AA_Twelve_Demon_Moons.leaderTitle>领导</AA_Twelve_Demon_Moons.leaderTitle>
+  <!-- EN: Demon -->
+  <AA_Twelve_Demon_Moons.pawnSingular>鬼</AA_Twelve_Demon_Moons.pawnSingular>
+  <!-- EN: Demons -->
+  <AA_Twelve_Demon_Moons.pawnsPlural>鬼</AA_Twelve_Demon_Moons.pawnsPlural>
+  
+</LanguageData>

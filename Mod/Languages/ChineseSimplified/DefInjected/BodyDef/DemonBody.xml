@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Demon -->
+  <AA_DemonBody.label>鬼</AA_DemonBody.label>
+  <!-- EN: left lung -->
+  <AA_DemonBody.corePart.parts.left_lung.customLabel>左肺</AA_DemonBody.corePart.parts.left_lung.customLabel>
+  <!-- EN: right lung -->
+  <AA_DemonBody.corePart.parts.right_lung.customLabel>右肺</AA_DemonBody.corePart.parts.right_lung.customLabel>
+  <!-- EN: left kidney -->
+  <AA_DemonBody.corePart.parts.left_kidney.customLabel>左肾</AA_DemonBody.corePart.parts.left_kidney.customLabel>
+  <!-- EN: right kidney -->
+  <AA_DemonBody.corePart.parts.right_kidney.customLabel>右肾</AA_DemonBody.corePart.parts.right_kidney.customLabel>
+  <!-- EN: left eye -->
+  <AA_DemonBody.corePart.parts.AA_DemonNeck.parts.Head.parts.left_eye.customLabel>左眼</AA_DemonBody.corePart.parts.AA_DemonNeck.parts.Head.parts.left_eye.customLabel>
+  <!-- EN: right eye -->
+  <AA_DemonBody.corePart.parts.AA_DemonNeck.parts.Head.parts.right_eye.customLabel>右眼</AA_DemonBody.corePart.parts.AA_DemonNeck.parts.Head.parts.right_eye.customLabel>
+  <!-- EN: left ear -->
+  <AA_DemonBody.corePart.parts.AA_DemonNeck.parts.Head.parts.left_ear.customLabel>左耳</AA_DemonBody.corePart.parts.AA_DemonNeck.parts.Head.parts.left_ear.customLabel>
+  <!-- EN: right ear -->
+  <AA_DemonBody.corePart.parts.AA_DemonNeck.parts.Head.parts.right_ear.customLabel>右耳</AA_DemonBody.corePart.parts.AA_DemonNeck.parts.Head.parts.right_ear.customLabel>
+  <!-- EN: left shoulder -->
+  <AA_DemonBody.corePart.parts.left_shoulder.customLabel>左肩</AA_DemonBody.corePart.parts.left_shoulder.customLabel>
+  <!-- EN: left clavicle -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_clavicle.customLabel>左锁骨</AA_DemonBody.corePart.parts.left_shoulder.parts.left_clavicle.customLabel>
+  <!-- EN: left arm -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.customLabel>左臂</AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.customLabel>
+  <!-- EN: left humerus -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_humerus.customLabel>左肱骨</AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_humerus.customLabel>
+  <!-- EN: left radius -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_radius.customLabel>左桡骨</AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_radius.customLabel>
+  <!-- EN: left hand -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.customLabel>左手</AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.customLabel>
+  <!-- EN: left pinky -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_pinky.customLabel>左小指</AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_pinky.customLabel>
+  <!-- EN: left ring finger -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_ring_finger.customLabel>左无名指</AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_ring_finger.customLabel>
+  <!-- EN: left middle finger -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>左中指</AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>
+  <!-- EN: left index finger -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>左食指</AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>
+  <!-- EN: left thumb -->
+  <AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>左拇指</AA_DemonBody.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>
+  <!-- EN: right shoulder -->
+  <AA_DemonBody.corePart.parts.right_shoulder.customLabel>右肩</AA_DemonBody.corePart.parts.right_shoulder.customLabel>
+  <!-- EN: right clavicle -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_clavicle.customLabel>右锁骨</AA_DemonBody.corePart.parts.right_shoulder.parts.right_clavicle.customLabel>
+  <!-- EN: right arm -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.customLabel>右臂</AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.customLabel>
+  <!-- EN: right humerus -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_humerus.customLabel>右肱骨</AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_humerus.customLabel>
+  <!-- EN: right radius -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_radius.customLabel>右桡骨</AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_radius.customLabel>
+  <!-- EN: right hand -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.customLabel>右手</AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.customLabel>
+  <!-- EN: right pinky -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_pinky.customLabel>右小指</AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_pinky.customLabel>
+  <!-- EN: right ring finger -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_ring_finger.customLabel>右无名指</AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_ring_finger.customLabel>
+  <!-- EN: right middle finger -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>右中指</AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>
+  <!-- EN: right index finger -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>右食指</AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>
+  <!-- EN: right thumb -->
+  <AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>右拇指</AA_DemonBody.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>
+  <!-- EN: left leg -->
+  <AA_DemonBody.corePart.parts.left_leg.customLabel>左腿</AA_DemonBody.corePart.parts.left_leg.customLabel>
+  <!-- EN: left femur -->
+  <AA_DemonBody.corePart.parts.left_leg.parts.left_femur.customLabel>左股骨</AA_DemonBody.corePart.parts.left_leg.parts.left_femur.customLabel>
+  <!-- EN: left tibia -->
+  <AA_DemonBody.corePart.parts.left_leg.parts.left_tibia.customLabel>左胫骨</AA_DemonBody.corePart.parts.left_leg.parts.left_tibia.customLabel>
+  <!-- EN: left foot -->
+  <AA_DemonBody.corePart.parts.left_leg.parts.left_foot.customLabel>左脚</AA_DemonBody.corePart.parts.left_leg.parts.left_foot.customLabel>
+  <!-- EN: left little toe -->
+  <AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_little_toe.customLabel>左小趾</AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_little_toe.customLabel>
+  <!-- EN: left fourth toe -->
+  <AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_fourth_toe.customLabel>左四趾</AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_fourth_toe.customLabel>
+  <!-- EN: left middle toe -->
+  <AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_middle_toe.customLabel>左中趾</AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_middle_toe.customLabel>
+  <!-- EN: left second toe -->
+  <AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_second_toe.customLabel>左二趾</AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_second_toe.customLabel>
+  <!-- EN: left big toe -->
+  <AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_big_toe.customLabel>左拇趾</AA_DemonBody.corePart.parts.left_leg.parts.left_foot.parts.left_big_toe.customLabel>
+  <!-- EN: right leg -->
+  <AA_DemonBody.corePart.parts.right_leg.customLabel>右腿</AA_DemonBody.corePart.parts.right_leg.customLabel>
+  <!-- EN: right femur -->
+  <AA_DemonBody.corePart.parts.right_leg.parts.right_femur.customLabel>右股骨</AA_DemonBody.corePart.parts.right_leg.parts.right_femur.customLabel>
+  <!-- EN: right tibia -->
+  <AA_DemonBody.corePart.parts.right_leg.parts.right_tibia.customLabel>右胫骨</AA_DemonBody.corePart.parts.right_leg.parts.right_tibia.customLabel>
+  <!-- EN: right foot -->
+  <AA_DemonBody.corePart.parts.right_leg.parts.right_foot.customLabel>右脚</AA_DemonBody.corePart.parts.right_leg.parts.right_foot.customLabel>
+  <!-- EN: right little toe -->
+  <AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_little_toe.customLabel>右小趾</AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_little_toe.customLabel>
+  <!-- EN: right fourth toe -->
+  <AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_fourth_toe.customLabel>右四趾</AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_fourth_toe.customLabel>
+  <!-- EN: right middle toe -->
+  <AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_middle_toe.customLabel>右中趾</AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_middle_toe.customLabel>
+  <!-- EN: right second toe -->
+  <AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>右二趾</AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>
+  <!-- EN: right big toe -->
+  <AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>右拇趾</AA_DemonBody.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>
+  
+</LanguageData>

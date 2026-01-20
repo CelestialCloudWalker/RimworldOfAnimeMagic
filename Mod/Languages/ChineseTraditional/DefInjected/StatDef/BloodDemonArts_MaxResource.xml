@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: blood demon arts max resource -->
+  <BloodDemonArts.label>血鬼術最大資源</BloodDemonArts.label>
+  <!-- EN: Maximum blood demon arts resource amount. -->
+  <BloodDemonArts.description>血鬼術最大資源量。</BloodDemonArts.description>
+  
+</LanguageData>

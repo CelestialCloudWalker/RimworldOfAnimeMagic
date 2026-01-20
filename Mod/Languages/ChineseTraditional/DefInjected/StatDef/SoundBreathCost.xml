@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sound Breath Cost Multiplier -->
+  <SoundBreath_Cost.label>音之呼吸資源花費乘數</SoundBreath_Cost.label>
+  <!-- EN: Sound Breath Cost Multiplier. -->
+  <SoundBreath_Cost.description>音之呼吸資源花費乘數。</SoundBreath_Cost.description>
+  
+</LanguageData>

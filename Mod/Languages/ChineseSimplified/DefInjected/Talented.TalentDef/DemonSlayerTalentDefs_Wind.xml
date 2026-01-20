@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Wind Breathing: Disperse -->
+  <Wind_Breathing_Disperse.label>风之呼吸・散</Wind_Breathing_Disperse.label>
+  
+  <!-- EN: WindBreathing -->
+  <Wind_Breathing_GeneGive_Talent.label>风之呼吸</Wind_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Wind Breathing: Multi Strike -->
+  <Wind_Breathing_Multi_Strike.label>风之呼吸・连袭</Wind_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Wind Breathing: Reflect -->
+  <Wind_Breathing_Reflect.label>风之呼吸・返</Wind_Breathing_Reflect.label>
+  
+  <!-- EN: Wind Breathing: Slash -->
+  <Wind_Breathing_Slash.label>风之呼吸・斩</Wind_Breathing_Slash.label>
+  
+  <!-- EN: Wind Breathing: Slash -->
+  <Wind_Breathing_Strike.label>风之呼吸・袭</Wind_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <WindBreath_Breath_Increase.label>增加呼吸法容量</WindBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <WindBreath_Breath_Increase2.label>增加呼吸法容量</WindBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <WindBreath_Breath_Increase3.label>增加呼吸法容量</WindBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <WindBreath_Breath_Increase4.label>增加呼吸法容量</WindBreath_Breath_Increase4.label>
+  
+  <!-- EN: WindBreath_Cost -->
+  <WindBreath_Cost_Talent.label>风之呼吸花费</WindBreath_Cost_Talent.label>
+  
+  <!-- EN: WindBreath_Cost -->
+  <WindBreath_Cost_Talent2.label>风之呼吸花费</WindBreath_Cost_Talent2.label>
+  
+  <!-- EN: WindBreath_Cost -->
+  <WindBreath_Cost_Talent3.label>风之呼吸花费</WindBreath_Cost_Talent3.label>
+  
+  <!-- EN: WindBreath_Cost -->
+  <WindBreath_Cost_Talent4.label>风之呼吸花费</WindBreath_Cost_Talent4.label>
+  
+  <!-- EN: WindBreath_RegenAmount -->
+  <WindBreath_RegenAmount_Talent.label>每刻风之呼吸恢复量</WindBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: WindBreath_RegenAmount -->
+  <WindBreath_RegenAmount_Talent2.label>每刻风之呼吸恢复量</WindBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: WindBreath_RegenAmount -->
+  <WindBreath_RegenAmount_Talent3.label>每刻风之呼吸恢复量</WindBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: WindBreath_RegenAmount -->
+  <WindBreath_RegenAmount_Talent4.label>每刻风之呼吸恢复量</WindBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: WindBreath_RegenRate -->
+  <WindBreath_RegenRate_Talent.label>风之呼吸恢复率</WindBreath_RegenRate_Talent.label>
+  
+  <!-- EN: WindBreath_RegenRate -->
+  <WindBreath_RegenRate_Talent2.label>风之呼吸恢复率</WindBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: WindBreath_RegenRate -->
+  <WindBreath_RegenRate_Talent3.label>风之呼吸恢复率</WindBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: WindBreath_RegenRate -->
+  <WindBreath_RegenRate_Talent4.label>风之呼吸恢复率</WindBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: WindBreath_RegenTicks -->
+  <WindBreath_RegenTicks_Talent.label>风之呼吸恢复间隔</WindBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: WindBreath_RegenTicks -->
+  <WindBreath_RegenTicks_Talent2.label>风之呼吸恢复间隔</WindBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: WindBreath_RegenTicks -->
+  <WindBreath_RegenTicks_Talent3.label>风之呼吸恢复间隔</WindBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: WindBreath_RegenTicks -->
+  <WindBreath_RegenTicks_Talent4.label>风之呼吸恢复间隔</WindBreath_RegenTicks_Talent4.label>
+</LanguageData>

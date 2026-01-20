@@ -30,7 +30,7 @@
 
   <TraitDef>
     <defName>VenomousStrike</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Medicine</li>
       <li>Melee</li>
@@ -58,7 +58,7 @@
 
   <TraitDef>
     <defName>HypnoticGaze</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
     </forcedPassions>
@@ -84,7 +84,7 @@
 
   <TraitDef>
     <defName>SerpentineMovement</defName>
-    <commonality>0.9</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>serpentine movement</label>
@@ -108,7 +108,7 @@
 
   <TraitDef>
     <defName>ColdBlooded</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Intellectual</li>
     </forcedPassions>
@@ -135,7 +135,7 @@
 
   <TraitDef>
     <defName>ShedSkin</defName>
-    <commonality>0.4</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>shed skin</label>
@@ -156,7 +156,7 @@
 
   <TraitDef>
     <defName>CoilingStrike</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Breathing Fatigue -->
+  <Breathing_Fatigue.label>呼吸疲劳</Breathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unsteady. -->
+  <Breathing_Fatigue.description>重复使用呼吸法使身体疲惫，无法站稳。</Breathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <Breathing_Fatigue.stages.Mild_fatigue.label>轻微疲劳</Breathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <Breathing_Fatigue.stages.Moderate_fatigue.label>中度疲劳</Breathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <Breathing_Fatigue.stages.Heavy_fatigue.label>重度疲劳</Breathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <Breathing_Fatigue.stages.Severe_fatigue.label>严重疲劳</Breathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <Breathing_Fatigue.stages.Exhausted.label>筋疲力竭</Breathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <Breathing_Fatigue.stages.Collapsed.label>累垮</Breathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

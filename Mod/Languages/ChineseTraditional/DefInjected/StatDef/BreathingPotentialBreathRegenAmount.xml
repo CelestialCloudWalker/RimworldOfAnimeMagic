@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Breathing Potential Breath Regen Amount Per Regen Tick -->
+  <BreathingPotential_RegenAmount.label>每刻呼吸法潛能恢復量</BreathingPotential_RegenAmount.label>
+  <!-- EN: Rate of Breathing Potential Breath regeneration per tick. -->
+  <BreathingPotential_RegenAmount.description>每刻呼吸法潛能恢復量。</BreathingPotential_RegenAmount.description>
+  
+</LanguageData>

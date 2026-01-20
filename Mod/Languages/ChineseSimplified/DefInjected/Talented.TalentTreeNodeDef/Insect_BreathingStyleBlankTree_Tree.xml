@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Strike -->
+  <Node_1756690930130_1929.label>袭</Node_1756690930130_1929.label>
+  
+  <!-- EN: Disperse -->
+  <Node_1756690930130_2667.label>散</Node_1756690930130_2667.label>
+  
+  <!-- EN: Slash -->
+  <Node_1756690930130_2835.label>突</Node_1756690930130_2835.label>
+  
+  <!-- EN: Regen Ticks -->
+  <Node_1756690930130_3391.label>恢复间隔</Node_1756690930130_3391.label>
+  
+  <!-- EN: Selfless State -->
+  <Node_1756690930130_3729.label>无我的境界</Node_1756690930130_3729.label>
+  
+  <!-- EN: Breathing Mark -->
+  <Node_1756690930130_5501.label>斑纹</Node_1756690930130_5501.label>
+  
+  <!-- EN: Regen Rate -->
+  <Node_1756690930130_6238.label>恢复速率</Node_1756690930130_6238.label>
+  
+  <!-- EN: Regen Amount -->
+  <Node_1756690930130_6447.label>恢复量</Node_1756690930130_6447.label>
+  
+  <!-- EN: Reflect -->
+  <Node_1756690930130_650.label>返</Node_1756690930130_650.label>
+  
+  <!-- EN: Cost Control -->
+  <Node_1756690930130_8477.label>花费控制</Node_1756690930130_8477.label>
+  
+  <!-- EN: Dye Weapon -->
+  <Node_1756690930130_8809.label>武器染色</Node_1756690930130_8809.label>
+  
+  <!-- EN: Multi Strike -->
+  <Node_1756690930130_8839.label>连袭</Node_1756690930130_8839.label>
+  
+  <!-- EN: Transparent World -->
+  <Node_1756690930130_8842.label>通透世界</Node_1756690930130_8842.label>
+  
+</LanguageData>

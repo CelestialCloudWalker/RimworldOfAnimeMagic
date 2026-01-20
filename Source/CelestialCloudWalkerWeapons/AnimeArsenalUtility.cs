@@ -92,12 +92,12 @@ namespace AnimeArsenal
             return limbs.RandomElementWithFallback();
         }
 
-        public static float CalcAstralPulseScalingFactor(Pawn caster, Pawn target, float min = 0.5f, float max = 1.5f)
+        public static float CalcMeleeScalingFactor(Pawn caster, float baseMultiplier = 0.05f)
         {
-            float casterPulse = caster.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
-            float targetPulse = target.GetStatValue(AnimeArsenal.CelestialDefof.AstralPulse);
+            if (caster?.skills == null) return 1f;
 
-            return Mathf.Lerp(min, max, casterPulse / targetPulse);
+            int meleeSkillLevel = caster.skills.GetSkill(SkillDefOf.Melee)?.Level ?? 0;
+            return 1f + (meleeSkillLevel * baseMultiplier);
         }
 
         public static BodyPartRecord GetRandomPartByTagDef(Pawn pawn, List<BodyPartTagDef> tags)

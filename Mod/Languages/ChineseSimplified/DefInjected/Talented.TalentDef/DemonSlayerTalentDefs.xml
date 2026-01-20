@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: forward dash -->
+  <AA_ForwardDash_Talent.label>向前冲刺</AA_ForwardDash_Talent.label>
+  
+  <!-- EN: Retreat Dash -->
+  <AA_RetreatDash_Talent.label>闪躲冲刺</AA_RetreatDash_Talent.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMark_Talent.label>斑纹</BreathingMark_Talent.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMark_Talent_Giyu.label>义勇的斑纹</BreathingMark_Talent_Giyu.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMark_Talent_Muichiro.label>无一郎的斑纹</BreathingMark_Talent_Muichiro.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMark_Talent_Sanemi.label>实弥的斑纹</BreathingMark_Talent_Sanemi.label>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMark_Talent_Tanjiro.label>炭治郎的斑纹</BreathingMark_Talent_Tanjiro.label>
+  
+  <!-- EN: Calm_Mind -->
+  <Calm_Mind_Talent.label>心灵平和</Calm_Mind_Talent.label>
+  
+  <!-- EN: Calm_Mind -->
+  <Calm_Mind_Talent2.label>心灵平和</Calm_Mind_Talent2.label>
+  
+  <!-- EN: Calm_Mind -->
+  <Calm_Mind_Talent3.label>心灵平和</Calm_Mind_Talent3.label>
+  
+  <!-- EN: Calm_Mind -->
+  <Calm_Mind_Talent4.label>心灵平和</Calm_Mind_Talent4.label>
+  
+  <!-- EN: Calm_Mind -->
+  <Calm_Mind_Talent5.label>心灵平和</Calm_Mind_Talent5.label>
+  
+  <!-- EN: Healing_Expertise -->
+  <Healing_Expertise_Talent.label>治疔专业</Healing_Expertise_Talent.label>
+  
+  <!-- EN: Healing_Expertise -->
+  <Healing_Expertise_Talent2.label>治疔专业</Healing_Expertise_Talent2.label>
+  
+  <!-- EN: Healing_Expertise -->
+  <Healing_Expertise_Talent3.label>治疔专业</Healing_Expertise_Talent3.label>
+  
+  <!-- EN: Healing_Expertise -->
+  <Healing_Expertise_Talent4.label>治疔专业</Healing_Expertise_Talent4.label>
+  
+  <!-- EN: Healing_Expertise -->
+  <Healing_Expertise_Talent5.label>治疔专业</Healing_Expertise_Talent5.label>
+  
+  <!-- EN: Heavy_Impact -->
+  <Heavy_Impact_Talent.label>强烈冲击</Heavy_Impact_Talent.label>
+  
+  <!-- EN: Heavy_Impact -->
+  <Heavy_Impact_Talent2.label>强烈冲击</Heavy_Impact_Talent2.label>
+  
+  <!-- EN: Heavy_Impact -->
+  <Heavy_Impact_Talent3.label>强烈冲击</Heavy_Impact_Talent3.label>
+  
+  <!-- EN: Heavy_Impact -->
+  <Heavy_Impact_Talent4.label>强烈冲击</Heavy_Impact_Talent4.label>
+  
+  <!-- EN: Heavy_Impact -->
+  <Heavy_Impact_Talent5.label>强烈冲击</Heavy_Impact_Talent5.label>
+  
+  <!-- EN: Heavy_Impact -->
+  <Heavy_Impact_Talent6.label>强烈冲击</Heavy_Impact_Talent6.label>
+
+  <!-- EN: LevelTwo_Strikes -->
+  <LevelTwo_Strikes_Talent.label>贰级突袭</LevelTwo_Strikes_Talent.label>
+  
+  <!-- EN: LevelTwo_Strikes -->
+  <LevelTwo_Strikes_Talent2.label>贰级突袭</LevelTwo_Strikes_Talent2.label>
+  
+  <!-- EN: LevelTwo_Strikes -->
+  <LevelTwo_Strikes_Talent3.label>贰级突袭</LevelTwo_Strikes_Talent3.label>
+  
+  <!-- EN: LevelTwo_Strikes -->
+  <LevelTwo_Strikes_Talent4.label>贰级突袭</LevelTwo_Strikes_Talent4.label>
+  
+  <!-- EN: LevelTwo_Strikes -->
+  <LevelTwo_Strikes_Talent5.label>贰级突袭</LevelTwo_Strikes_Talent5.label>
+  
+  <!-- EN: LevelTwo_Strikes -->
+  <LevelTwo_Strikes_Talent6.label>贰级突袭</LevelTwo_Strikes_Talent6.label>
+  
+  <!-- EN: Medical_Haste -->
+  <Medical_Haste_Talent.label>医疔急诊</Medical_Haste_Talent.label>
+  
+  <!-- EN: Medical_Haste -->
+  <Medical_Haste_Talent2.label>医疔急诊</Medical_Haste_Talent2.label>
+  
+  <!-- EN: Medical_Haste -->
+  <Medical_Haste_Talent3.label>医疔急诊</Medical_Haste_Talent3.label>
+  
+  <!-- EN: Medical_Haste -->
+  <Medical_Haste_Talent4.label>医疔急诊</Medical_Haste_Talent4.label>
+  
+  <!-- EN: Medical_Haste -->
+  <Medical_Haste_Talent5.label>医疔急诊</Medical_Haste_Talent5.label>
+  
+  <!-- EN: Mental_Fortress -->
+  <Mental_Fortress_Talent.label>精神堡垒</Mental_Fortress_Talent.label>
+  
+  <!-- EN: Mental_Fortress -->
+  <Mental_Fortress_Talent2.label>精神堡垒</Mental_Fortress_Talent2.label>
+  
+  <!-- EN: Mental_Fortress -->
+  <Mental_Fortress_Talent3.label>精神堡垒</Mental_Fortress_Talent3.label>
+  
+  <!-- EN: Mental_Fortress -->
+  <Mental_Fortress_Talent4.label>精神堡垒</Mental_Fortress_Talent4.label>
+  
+  <!-- EN: Mental_Fortress -->
+  <Mental_Fortress_Talent5.label>精神堡垒</Mental_Fortress_Talent5.label>
+  
+  <!-- EN: Precise_Form -->
+  <Precise_Form_Talent.label>确切形式</Precise_Form_Talent.label>
+  
+  <!-- EN: Precise_Form -->
+  <Precise_Form_Talent2.label>确切形式</Precise_Form_Talent2.label>
+  
+  <!-- EN: Precise_Form -->
+  <Precise_Form_Talent3.label>确切形式</Precise_Form_Talent3.label>
+  
+  <!-- EN: Precise_Form -->
+  <Precise_Form_Talent4.label>确切形式</Precise_Form_Talent4.label>
+  
+  <!-- EN: Precise_Form -->
+  <Precise_Form_Talent5.label>确切形式</Precise_Form_Talent5.label>
+  
+  <!-- EN: Prone_Mobility  -->
+  <Prone_Mobility_Talent.label>匍匐快进</Prone_Mobility_Talent.label>
+  
+  <!-- EN: Prone_Mobility  -->
+  <Prone_Mobility_Talent2.label>匍匐快进</Prone_Mobility_Talent2.label>
+  
+  <!-- EN: Prone_Mobility  -->
+  <Prone_Mobility_Talent3.label>匍匐快进</Prone_Mobility_Talent3.label>
+  
+  <!-- EN: Prone_Mobility  -->
+  <Prone_Mobility_Talent4.label>匍匐快进</Prone_Mobility_Talent4.label>
+  
+  <!-- EN: Prone_Mobility  -->
+  <Prone_Mobility_Talent5.label>匍匐快进</Prone_Mobility_Talent5.label>
+  
+  <!-- EN: Prone_Mobility  -->
+  <Prone_Mobility_Talent6.label>匍匐快进</Prone_Mobility_Talent6.label>
+  
+  <!-- EN: Pure_Body -->
+  <Pure_Body_Talent.label>纯洁躯体</Pure_Body_Talent.label>
+  
+  <!-- EN: Pure_Body -->
+  <Pure_Body_Talent2.label>纯洁躯体</Pure_Body_Talent2.label>
+  
+  <!-- EN: Pure_Body -->
+  <Pure_Body_Talent3.label>纯洁躯体</Pure_Body_Talent3.label>
+  
+  <!-- EN: Pure_Body -->
+  <Pure_Body_Talent4.label>纯洁躯体</Pure_Body_Talent4.label>
+  
+  <!-- EN: Pure_Body -->
+  <Pure_Body_Talent5.label>纯洁躯体</Pure_Body_Talent5.label>
+  
+  <!-- EN: Quick_Reflexes -->
+  <Quick_Reflexes_Talent.label>快速反应</Quick_Reflexes_Talent.label>
+  
+  <!-- EN: Quick_Reflexes -->
+  <Quick_Reflexes_Talent2.label>快速反应</Quick_Reflexes_Talent2.label>
+  
+  <!-- EN: Quick_Reflexes -->
+  <Quick_Reflexes_Talent3.label>快速反应</Quick_Reflexes_Talent3.label>
+  
+  <!-- EN: Quick_Reflexes -->
+  <Quick_Reflexes_Talent4.label>快速反应</Quick_Reflexes_Talent4.label>
+  
+  <!-- EN: Quick_Reflexes -->
+  <Quick_Reflexes_Talent5.label>快速反应</Quick_Reflexes_Talent5.label>
+  
+  <!-- EN: Quick_Reflexes -->
+  <Quick_Reflexes_Talent6.label>快速反应</Quick_Reflexes_Talent6.label>
+  
+  <!-- EN: Quick_Step -->
+  <Quick_Step_Talent.label>快捷步伐</Quick_Step_Talent.label>
+  
+  <!-- EN: Quick_Step -->
+  <Quick_Step_Talent2.label>快捷步伐</Quick_Step_Talent2.label>
+  
+  <!-- EN: Quick_Step -->
+  <Quick_Step_Talent3.label>快捷步伐</Quick_Step_Talent3.label>
+  
+  <!-- EN: Quick_Step -->
+  <Quick_Step_Talent4.label>快捷步伐</Quick_Step_Talent4.label>
+  
+  <!-- EN: Quick_Step -->
+  <Quick_Step_Talent5.label>快捷步伐</Quick_Step_Talent5.label>
+  
+  <!-- EN: Quick_Step -->
+  <Quick_Step_Talent6.label>快捷步伐</Quick_Step_Talent6.label>
+  
+  <!-- EN: Quick_Surgery -->
+  <Quick_Surgery_Talent.label>快捷手术</Quick_Surgery_Talent.label>
+  
+  <!-- EN: Quick_Surgery -->
+  <Quick_Surgery_Talent2.label>快捷手术</Quick_Surgery_Talent2.label>
+  
+  <!-- EN: Quick_Surgery -->
+  <Quick_Surgery_Talent3.label>快捷手术</Quick_Surgery_Talent3.label>
+  
+  <!-- EN: Quick_Surgery -->
+  <Quick_Surgery_Talent4.label>快捷手术</Quick_Surgery_Talent4.label>
+  
+  <!-- EN: Quick_Surgery -->
+  <Quick_Surgery_Talent5.label>快捷手术</Quick_Surgery_Talent5.label>
+  
+  <!-- EN: Recovery_Boost -->
+  <Recovery_Boost_Talent.label>加速复原</Recovery_Boost_Talent.label>
+  
+  <!-- EN: Recovery_Boost -->
+  <Recovery_Boost_Talent2.label>加速复原</Recovery_Boost_Talent2.label>
+  
+  <!-- EN: Recovery_Boost -->
+  <Recovery_Boost_Talent3.label>加速复原</Recovery_Boost_Talent3.label>
+  
+  <!-- EN: Recovery_Boost -->
+  <Recovery_Boost_Talent4.label>加速复原</Recovery_Boost_Talent4.label>
+  
+  <!-- EN: Recovery_Boost -->
+  <Recovery_Boost_Talent5.label>加速复原</Recovery_Boost_Talent5.label>
+  
+  <!-- EN: Selfess State -->
+  <Sefless_State_Talent.label>无我的境界</Sefless_State_Talent.label>
+  
+  <!-- EN: Steady_Aim -->
+  <Steady_Aim_Talent.label>稳住目标</Steady_Aim_Talent.label>
+  
+  <!-- EN: Steady_Aim -->
+  <Steady_Aim_Talent2.label>稳住目标</Steady_Aim_Talent2.label>
+  
+  <!-- EN: Steady_Aim -->
+  <Steady_Aim_Talent3.label>稳住目标</Steady_Aim_Talent3.label>
+  
+  <!-- EN: Steady_Aim -->
+  <Steady_Aim_Talent4.label>稳住目标</Steady_Aim_Talent4.label>
+  
+  <!-- EN: Steady_Aim -->
+  <Steady_Aim_Talent5.label>稳住目标</Steady_Aim_Talent5.label>
+  
+  <!-- EN: Steady_Aim -->
+  <Steady_Aim_Talent7.label>稳住目标</Steady_Aim_Talent7.label>
+  
+  <!-- EN: Steady_Hand -->
+  <Steady_Hand_Talent.label>稳健之手</Steady_Hand_Talent.label>
+  
+  <!-- EN: Steady_Hand -->
+  <Steady_Hand_Talent2.label>稳健之手</Steady_Hand_Talent2.label>
+  
+  <!-- EN: Steady_Hand -->
+  <Steady_Hand_Talent3.label>稳健之手</Steady_Hand_Talent3.label>
+  
+  <!-- EN: Steady_Hand -->
+  <Steady_Hand_Talent4.label>稳健之手</Steady_Hand_Talent4.label>
+  
+  <!-- EN: Steady_Hand -->
+  <Steady_Hand_Talent5.label>稳健之手</Steady_Hand_Talent5.label>
+  
+  <!-- EN: Surgical_Talent -->
+  <Surgical_Talent_Talent.label>外科才华</Surgical_Talent_Talent.label>
+  
+  <!-- EN: Surgical_Talent -->
+  <Surgical_Talent_Talent2.label>外科才华</Surgical_Talent_Talent2.label>
+  
+  <!-- EN: Surgical_Talent -->
+  <Surgical_Talent_Talent3.label>外科才华</Surgical_Talent_Talent3.label>
+  
+  <!-- EN: Surgical_Talent -->
+  <Surgical_Talent_Talent4.label>外科才华</Surgical_Talent_Talent4.label>
+  
+  <!-- EN: Surgical_Talent -->
+  <Surgical_Talent_Talent5.label>外科才华</Surgical_Talent_Talent5.label>
+  
+  <!-- EN: Swift_Aim -->
+  <Swift_Aim_Talent.label>迅速锁定</Swift_Aim_Talent.label>
+  
+  <!-- EN: Swift_Aim -->
+  <Swift_Aim_Talent2.label>迅速锁定</Swift_Aim_Talent2.label>
+  
+  <!-- EN: Swift_Aim -->
+  <Swift_Aim_Talent3.label>迅速锁定</Swift_Aim_Talent3.label>
+  
+  <!-- EN: Swift_Aim -->
+  <Swift_Aim_Talent4.label>迅速锁定</Swift_Aim_Talent4.label>
+  
+  <!-- EN: Swift_Aim -->
+  <Swift_Aim_Talent5.label>迅速锁定</Swift_Aim_Talent5.label>
+  
+  <!-- EN: Swift Attacks -->
+  <Swift_Attacks_Talent.label>迅速攻击</Swift_Attacks_Talent.label>
+  
+  <!-- EN: Swift Attacks -->
+  <Swift_Attacks_Talent2.label>迅速攻击</Swift_Attacks_Talent2.label>
+  
+  <!-- EN: Swift Attacks -->
+  <Swift_Attacks_Talent3.label>迅速攻击</Swift_Attacks_Talent3.label>
+  
+  <!-- EN: Swift Attacks -->
+  <Swift_Attacks_Talent4.label>迅速攻击</Swift_Attacks_Talent4.label>
+  
+  <!-- EN: Swift Attacks -->
+  <Swift_Attacks_Talent5.label>迅速攻击</Swift_Attacks_Talent5.label>
+  
+  <!-- EN: Swift Attacks -->
+  <Swift_Attacks_Talent6.label>迅速攻击</Swift_Attacks_Talent6.label>
+  
+  <!-- EN: Tough_Body -->
+  <Tough_Body_Talent.label>坚韧肉体</Tough_Body_Talent.label>
+  
+  <!-- EN: Tough_Body -->
+  <Tough_Body_Talent2.label>坚韧肉体</Tough_Body_Talent2.label>
+  
+  <!-- EN: Tough_Body -->
+  <Tough_Body_Talent3.label>坚韧肉体</Tough_Body_Talent3.label>
+  
+  <!-- EN: Tough_Body -->
+  <Tough_Body_Talent4.label>坚韧肉体</Tough_Body_Talent4.label>
+  
+  <!-- EN: Tough_Body -->
+  <Tough_Body_Talent5.label>坚韧肉体</Tough_Body_Talent5.label>
+  
+  <!-- EN: Tough_Body -->
+  <Tough_Body_Talent6.label>坚韧肉体</Tough_Body_Talent6.label>
+  
+  <!-- EN: Transparent World -->
+  <TransparentWorld_Talent.label>通透世界</TransparentWorld_Talent.label>
+  
+  <!-- EN: Vitality_Surge -->
+  <Vitality_Surge_Talent.label>生命涌现</Vitality_Surge_Talent.label>
+  
+  <!-- EN: Vitality_Surge -->
+  <Vitality_Surge_Talent2.label>生命涌现</Vitality_Surge_Talent2.label>
+  
+  <!-- EN: Vitality_Surge -->
+  <Vitality_Surge_Talent3.label>生命涌现</Vitality_Surge_Talent3.label>
+  
+  <!-- EN: Vitality_Surge -->
+  <Vitality_Surge_Talent4.label>生命涌现</Vitality_Surge_Talent4.label>
+  
+  <!-- EN: Vitality_Surge -->
+  <Vitality_Surge_Talent5.label>生命涌现</Vitality_Surge_Talent5.label>
+  
+  <!-- EN: Weight_Training -->
+  <Weight_Training_Talent.label>重量训练</Weight_Training_Talent.label>
+  
+  <!-- EN: Weight_Training -->
+  <Weight_Training_Talent2.label>重量训练</Weight_Training_Talent2.label>
+  
+  <!-- EN: Weight_Training -->
+  <Weight_Training_Talent3.label>重量训练</Weight_Training_Talent3.label>
+  
+  <!-- EN: Weight_Training -->
+  <Weight_Training_Talent4.label>重量训练</Weight_Training_Talent4.label>
+  
+  <!-- EN: Weight_Training -->
+  <Weight_Training_Talent5.label>重量训练</Weight_Training_Talent5.label>
+  
+  <!-- EN: Weight_Training -->
+  <Weight_Training_Talent6.label>重量训练</Weight_Training_Talent6.label>
+</LanguageData>

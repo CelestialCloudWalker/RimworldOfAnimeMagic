@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flame Breath Regen Amount Per Regen Tick -->
+  <FlameBreath_RegenAmount.label>每刻炎之呼吸恢复量</FlameBreath_RegenAmount.label>
+  <!-- EN: Rate of Flame Breath regeneration per tick. -->
+  <FlameBreath_RegenAmount.description>每刻炎之呼吸恢复量。</FlameBreath_RegenAmount.description>
+  
+</LanguageData>

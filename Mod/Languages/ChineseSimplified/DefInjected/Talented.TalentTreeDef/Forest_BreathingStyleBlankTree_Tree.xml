@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Forest Breathing -->
+  <Forest_BreathingStyleBlankTree.treeName>森之呼吸</Forest_BreathingStyleBlankTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <Forest_BreathingStyleBlankTree.treeToolbarName>{0} 等级({1}) 点数({2})</Forest_BreathingStyleBlankTree.treeToolbarName>
+  
+</LanguageData>

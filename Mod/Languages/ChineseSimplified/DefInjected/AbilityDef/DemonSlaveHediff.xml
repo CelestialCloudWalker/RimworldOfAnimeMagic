@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Demon work slave -->
+  <DemonWorkSlaveHediff.label>劳动鬼奴</DemonWorkSlaveHediff.label>
+  <!-- EN: This pawn has been turned into a Demon work slave. They have no needs, no thoughts, and are focused solely on commands. -->
+  <DemonWorkSlaveHediff.description>此人已被转化为劳动鬼奴。他们没有须求，没有想法，只按命令行事。</DemonWorkSlaveHediff.description>
+  
+</LanguageData>

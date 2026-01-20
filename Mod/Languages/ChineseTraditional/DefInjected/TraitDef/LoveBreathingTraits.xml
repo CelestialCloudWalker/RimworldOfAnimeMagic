@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: emotional resonance -->
+  <EmotionalResonance.degreeDatas.emotional_resonance.label>情感共鳴</EmotionalResonance.degreeDatas.emotional_resonance.label>
+  <!-- EN: [PAWN_nameDef] feels the emotions of others as if they were [PAWN_possessive] own. [PAWN_possessive] empathic abilities allow profound connections but leave [PAWN_objective] vulnerable to others' pain. -->
+  <EmotionalResonance.degreeDatas.emotional_resonance.description>[PAWN_nameDef]對他人的情緒感同身受。共感力強的[PAWN_pronoun]能和別人建立深度連結，卻也對他人的痛苦難以承受。</EmotionalResonance.degreeDatas.emotional_resonance.description>
+ 
+  <!-- EN: heart shield -->
+  <HeartShield.degreeDatas.Heart_shield.label>心之護盾</HeartShield.degreeDatas.heart_shield.label>
+  <!-- EN: [PAWN_nameDef] becomes an unbreakable shield when defending those [PAWN_pronoun] loves. [PAWN_possessive] protective instincts grant supernatural defensive abilities but make [PAWN_objective] reckless in [PAWN_possessive] devotion. -->
+  <HeartShield.degreeDatas.heart_shield.description>[PAWN_nameDef]保衛心愛之人時，會成為堅不可摧的護盾。保護本能賦予[PAWN_pronoun]超凡的防禦能力，卻也讓[PAWN_pronoun]不顧一切進行奉獻。</HeartShield.degreeDatas.heart_shield.description>
+ 
+  <!-- EN: inspiring presence -->
+  <InspiringPresence.degreeDatas.inspiring_presence.label>鼓舞氣質</InspiringPresence.degreeDatas.inspiring_presence.label>
+  <!-- EN: [PAWN_nameDef] radiates hope and determination that lifts the spirits of all nearby. [PAWN_possessive] very presence motivates others to work harder and feel happier. -->
+  <InspiringPresence.degreeDatas.inspiring_presence.description>[PAWN_nameDef]散發希望與決心，照亮附近所有生靈。[PAWN_pronoun]的強烈存在感激勵他人努力工作，也讓他們更快樂。</InspiringPresence.degreeDatas.inspiring_presence.description>
+ 
+  <!-- EN: overwhelming affection -->
+  <OverwhelmingAffection.degreeDatas.overwhelming_affection.label>心花怒放</OverwhelmingAffection.degreeDatas.overwhelming_affection.label>
+  <!-- EN: [PAWN_nameDef] loves all living beings with an intensity that radiates from [PAWN_possessive] very soul. [PAWN_possessive] social abilities are unmatched, but [PAWN_pronoun] cannot bear to harm others. -->
+  <OverwhelmingAffection.degreeDatas.overwhelming_affection.description>[PAWN_nameDef]打從心底熱愛所有生靈。[PAWN_pronoun]的社交能力無與倫比，卻不能忍受傷害他人。</OverwhelmingAffection.degreeDatas.overwhelming_affection.description>
+ 
+  <!-- EN: protective instinct -->
+  <ProtectiveInstinct.degreeDatas.protective_instinct.label>守護本能</ProtectiveInstinct.degreeDatas.protective_instinct.label>
+  <!-- EN: [PAWN_nameDef] feels compelled to shield others from harm. [PAWN_possessive] protective nature makes [PAWN_objective] an exceptional healer and rescuer, though [PAWN_pronoun] suffers when unable to help. -->
+  <ProtectiveInstinct.degreeDatas.protective_instinct.description>[PAWN_nameDef]認為自己有義務保護他人免受傷害。保護本能使[PAWN_pronoun]成為優異的治療者和救難者，無法幫助他人時卻會感到痛苦。</ProtectiveInstinct.degreeDatas.protective_instinct.description>
+ 
+  <!-- EN: unconditional care -->
+  <UnconditionalCare.degreeDatas.unconditional_care.label>絕對照護</UnconditionalCare.degreeDatas.unconditional_care.label>
+  <!-- EN: [PAWN_nameDef] provides healing without judgment or hesitation. [PAWN_possessive] medical work never fails because it comes from a place of pure love and dedication to preserving life. -->
+  <UnconditionalCare.degreeDatas.unconditional_care.description>[PAWN_nameDef]不靠判斷就直接治療，完全沒有猶豫。[PAWN_pronoun]進行醫療從來不會失敗，因為這些行為源於對生命的純粹熱愛與奉獻。</UnconditionalCare.degreeDatas.unconditional_care.description>
+
+</LanguageData>

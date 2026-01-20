@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flame Breathing: Disperse -->
+  <Flame_Breathing_Disperse.label>炎之呼吸・散</Flame_Breathing_Disperse.label>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy -->
+  <Flame_Breathing_Disperse.description>在敵方周圍創造斬擊的技法。</Flame_Breathing_Disperse.description>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Flame_Breathing_Disperse.levels.0.description>在敵方周圍創造斬擊的技法。</Flame_Breathing_Disperse.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Flame_Breathing_Disperse.levels.0.labelSuffix>壹級</Flame_Breathing_Disperse.levels.0.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Flame_Breathing_Disperse.levels.1.description>在敵方周圍創造斬擊的技法。</Flame_Breathing_Disperse.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Flame_Breathing_Disperse.levels.1.labelSuffix>貳級</Flame_Breathing_Disperse.levels.1.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Flame_Breathing_Disperse.levels.2.description>在敵方周圍創造斬擊的技法。</Flame_Breathing_Disperse.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Flame_Breathing_Disperse.levels.2.labelSuffix>參級</Flame_Breathing_Disperse.levels.2.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Flame_Breathing_Disperse.levels.3.description>在敵方周圍創造斬擊的技法。</Flame_Breathing_Disperse.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Flame_Breathing_Disperse.levels.3.labelSuffix>肆級</Flame_Breathing_Disperse.levels.3.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Flame_Breathing_Disperse.levels.4.description>在敵方周圍創造斬擊的技法。</Flame_Breathing_Disperse.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Flame_Breathing_Disperse.levels.4.labelSuffix>伍級</Flame_Breathing_Disperse.levels.4.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Flame_Breathing_Disperse.levels.5.description>在敵方周圍創造斬擊的技法。</Flame_Breathing_Disperse.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Flame_Breathing_Disperse.levels.5.labelSuffix>陸級</Flame_Breathing_Disperse.levels.5.labelSuffix>
+  
+</LanguageData>

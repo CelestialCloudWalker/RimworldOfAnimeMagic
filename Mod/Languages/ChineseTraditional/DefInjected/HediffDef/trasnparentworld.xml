@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: transparent world (Level 1) -->
+  <TransparentWorld_LevelOne.label>通透世界 壹級</TransparentWorld_LevelOne.label>
+  <!-- EN: Basic heightened perception allows brief glimpses through obstacles and slight combat improvements. Occasionally reveals enemy weak points. -->
+  <TransparentWorld_LevelOne.description>基礎的知覺提升能短暫看穿障礙物後的目標，並稍微提升格鬥能力。偶爾能看到敵方弱點。</TransparentWorld_LevelOne.description>
+  
+  <!-- EN: transparent world (Level 2) -->
+  <TransparentWorld_LevelTwo.label>通透世界 貳級</TransparentWorld_LevelTwo.label>
+  <!-- EN: LevelTwo perception provides clearer sight through obstacles and improved reflexes. Can more reliably target enemy vital points. -->
+  <TransparentWorld_LevelTwo.description>貳級的知覺能更清晰地看穿障礙物，反應能力也有所提升。更能定位敵方要害。</TransparentWorld_LevelTwo.description>
+
+  <!-- EN: transparent world (Level 3) -->
+  <TransparentWorld_LevelThree.label>通透世界 參級</TransparentWorld_LevelThree.label>
+  <!-- EN: Advanced perception reveals enemy weak points and dramatically improves combat prowess. Can consistently target vital organs. -->
+  <TransparentWorld_LevelThree.description>進階知覺能看穿敵方弱點，格鬥能力也大幅增強。能持續定位重要臟器。</TransparentWorld_LevelThree.description>
+  
+  <!-- EN: transparent world (LevelFour) -->
+  <TransparentWorld_LevelFour.label>通透世界 肆級</TransparentWorld_LevelFour.label>
+  <!-- EN: Mastered perception grants near-omniscient battlefield awareness and supernatural combat abilities. Can precisely target any vital organ at will. -->
+  <TransparentWorld_LevelFour.description>精通知覺可以得到接近全知的戰情感知，還能獲得超自然的格鬥能力。能隨意定位任何重要器官。</TransparentWorld_LevelFour.description>
+</LanguageData>

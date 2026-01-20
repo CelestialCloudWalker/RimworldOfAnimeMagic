@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Insect Breathing: Disperse -->
+  <Insect_Breathing_Disperse.label>蟲之呼吸・散</Insect_Breathing_Disperse.label>
+  
+  <!-- EN: InsectBreathing -->
+  <Insect_Breathing_GeneGive_Talent.label>蟲之呼吸</Insect_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Insect Breathing: Multi Strike -->
+  <Insect_Breathing_Multi_Strike.label>蟲之呼吸・連襲</Insect_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Insect Breathing: Reflect -->
+  <Insect_Breathing_Reflect.label>蟲之呼吸・返</Insect_Breathing_Reflect.label>
+  
+  <!-- EN: Insect Breathing: Strike -->
+  <Insect_Breathing_Strike.label>蟲之呼吸・襲</Insect_Breathing_Strike.label>
+  
+  <!-- EN: Insect Breathing: Thrust -->
+  <Insect_Breathing_Thrust.label>蟲之呼吸・突</Insect_Breathing_Thrust.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <InsectBreath_Breath_Increase.label>增加呼吸法容量</InsectBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <InsectBreath_Breath_Increase2.label>增加呼吸法容量</InsectBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <InsectBreath_Breath_Increase3.label>增加呼吸法容量</InsectBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <InsectBreath_Breath_Increase4.label>增加呼吸法容量</InsectBreath_Breath_Increase4.label>
+  
+  <!-- EN: InsectBreath_Cost -->
+  <InsectBreath_Cost_Talent.label>蟲之呼吸花費</InsectBreath_Cost_Talent.label>
+  
+  <!-- EN: InsectBreath_Cost -->
+  <InsectBreath_Cost_Talent2.label>蟲之呼吸花費</InsectBreath_Cost_Talent2.label>
+  
+  <!-- EN: InsectBreath_Cost -->
+  <InsectBreath_Cost_Talent3.label>蟲之呼吸花費</InsectBreath_Cost_Talent3.label>
+  
+  <!-- EN: InsectBreath_Cost -->
+  <InsectBreath_Cost_Talent4.label>蟲之呼吸花費</InsectBreath_Cost_Talent4.label>
+  
+  <!-- EN: InsectBreath_RegenAmount -->
+  <InsectBreath_RegenAmount_Talent.label>每刻蟲之呼吸恢復量</InsectBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: InsectBreath_RegenAmount -->
+  <InsectBreath_RegenAmount_Talent2.label>每刻蟲之呼吸恢復量</InsectBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: InsectBreath_RegenAmount -->
+  <InsectBreath_RegenAmount_Talent3.label>每刻蟲之呼吸恢復量</InsectBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: InsectBreath_RegenAmount -->
+  <InsectBreath_RegenAmount_Talent4.label>每刻蟲之呼吸恢復量</InsectBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: InsectBreath_RegenRate -->
+  <InsectBreath_RegenRate_Talent.label>蟲之呼吸恢復率</InsectBreath_RegenRate_Talent.label>
+  
+  <!-- EN: InsectBreath_RegenRate -->
+  <InsectBreath_RegenRate_Talent2.label>蟲之呼吸恢復率</InsectBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: InsectBreath_RegenRate -->
+  <InsectBreath_RegenRate_Talent3.label>蟲之呼吸恢復率</InsectBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: InsectBreath_RegenRate -->
+  <InsectBreath_RegenRate_Talent4.label>蟲之呼吸恢復率</InsectBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: InsectBreath_RegenTicks -->
+  <InsectBreath_RegenTicks_Talent.label>蟲之呼吸恢復間隔</InsectBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: InsectBreath_RegenTicks -->
+  <InsectBreath_RegenTicks_Talent2.label>蟲之呼吸恢復間隔</InsectBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: InsectBreath_RegenTicks -->
+  <InsectBreath_RegenTicks_Talent3.label>蟲之呼吸恢復間隔</InsectBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: InsectBreath_RegenTicks -->
+  <InsectBreath_RegenTicks_Talent4.label>蟲之呼吸恢復間隔</InsectBreath_RegenTicks_Talent4.label>
+</LanguageData>

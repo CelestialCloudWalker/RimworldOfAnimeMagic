@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: flower slash -->
+  <FragranceOfFlower.label>花之利斬</FragranceOfFlower.label>
+  <!-- EN: A precise cut that bleeds profusely. -->
+  <FragranceOfFlower.description>一道精準的切傷，血流不止。</FragranceOfFlower.description>
+  <!-- EN: flower slash scar -->
+  <FragranceOfFlower.comps.HediffComp_GetsPermanent.permanentLabel>花之利斬疤痕</FragranceOfFlower.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Cut off -->
+  <FragranceOfFlower.injuryProps.destroyedLabel>喪失功能</FragranceOfFlower.injuryProps.destroyedLabel>
+  <!-- EN: Cut out -->
+  <FragranceOfFlower.injuryProps.destroyedOutLabel>被斬斷</FragranceOfFlower.injuryProps.destroyedOutLabel>
+  <!-- EN: a flower slash -->
+  <FragranceOfFlower.labelNoun>花之利斬</FragranceOfFlower.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <FragranceOfFlower.labelNounPretty>{1}內的{0}</FragranceOfFlower.labelNounPretty>
+  
+</LanguageData>

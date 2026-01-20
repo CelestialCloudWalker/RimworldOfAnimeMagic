@@ -4,7 +4,7 @@
     <defName>Insect_Breathing_Thrust</defName>
     <label>Insect Breathing: Thrust</label>
     <category>InsectBreathing_Ability_Catergory</category>
-    <description>A ranged technique that sends a slash toward targets.</description>
+    <description>A ranged technique that sends a projectile toward targets.</description>
     <iconPath>UI/Abilities/AbilityProjectile</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <targetRequired>true</targetRequired>

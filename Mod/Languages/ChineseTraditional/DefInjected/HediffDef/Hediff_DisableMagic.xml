@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: magic disabled -->
+  <EMF_MagicDisabled.label>取消魔法</EMF_MagicDisabled.label>
+  <!-- EN: This creature's magical abilities have been suppressed and cannot be used. -->
+  <EMF_MagicDisabled.description>這個生物的魔法能力被壓制，無法施法。</EMF_MagicDisabled.description>
+  <!-- EN: suppressed -->
+  <EMF_MagicDisabled.stages.suppressed.label>被壓制</EMF_MagicDisabled.stages.suppressed.label>
+  
+</LanguageData>

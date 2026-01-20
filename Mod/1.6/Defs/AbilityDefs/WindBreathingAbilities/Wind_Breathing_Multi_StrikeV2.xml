@@ -37,6 +37,7 @@
         <targetSearchRadius>18</targetSearchRadius>
         <jumpDamageDef>Wind_Breathing_Damage</jumpDamageDef>
         <jumpDamage>2~4</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
         <casterEffecter>AnimeArsenal_WindJump</casterEffecter>
         <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
       </li>
@@ -67,6 +68,8 @@
             <targetSearchRadius>21</targetSearchRadius>
             <jumpDamageDef>Wind_Breathing_Damage</jumpDamageDef>
             <jumpDamage>3~5</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WindJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
           </li>
@@ -90,6 +93,8 @@
             <targetSearchRadius>25</targetSearchRadius>
             <jumpDamageDef>Wind_Breathing_Damage</jumpDamageDef>
             <jumpDamage>4~6</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WindJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
           </li>
@@ -113,6 +118,8 @@
             <targetSearchRadius>29</targetSearchRadius>
             <jumpDamageDef>Wind_Breathing_Damage</jumpDamageDef>
             <jumpDamage>5~7</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WindJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
           </li>
@@ -136,6 +143,8 @@
             <targetSearchRadius>34</targetSearchRadius>
             <jumpDamageDef>Wind_Breathing_Damage</jumpDamageDef>
             <jumpDamage>6~9</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WindJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
           </li>
@@ -159,6 +168,8 @@
             <targetSearchRadius>40</targetSearchRadius>
             <jumpDamageDef>Wind_Breathing_Damage</jumpDamageDef>
             <jumpDamage>7~11</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WindJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
           </li>

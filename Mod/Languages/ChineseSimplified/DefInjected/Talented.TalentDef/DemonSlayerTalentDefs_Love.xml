@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Love Breathing: Disperse -->
+  <Love_Breathing_Disperse.label>恋之呼吸・散</Love_Breathing_Disperse.label>
+  
+  <!-- EN: LoveBreathing -->
+  <Love_Breathing_GeneGive_Talent.label>恋之呼吸</Love_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Love Breathing: Multi Strike -->
+  <Love_Breathing_Multi_Strike.label>恋之呼吸・连袭</Love_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Love Breathing: Reflect -->
+  <Love_Breathing_Reflect.label>恋之呼吸・返</Love_Breathing_Reflect.label>
+  
+  <!-- EN: Love Breathing: Slash -->
+  <Love_Breathing_Slash.label>恋之呼吸・斩</Love_Breathing_Slash.label>
+  
+  <!-- EN: Love Breathing: Strike -->
+  <Love_Breathing_Strike.label>恋之呼吸・袭</Love_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <LoveBreath_Breath_Increase.label>增加呼吸法容量</LoveBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <LoveBreath_Breath_Increase2.label>增加呼吸法容量</LoveBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <LoveBreath_Breath_Increase3.label>增加呼吸法容量</LoveBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <LoveBreath_Breath_Increase4.label>增加呼吸法容量</LoveBreath_Breath_Increase4.label>
+  
+  <!-- EN: LoveBreath_Cost -->
+  <LoveBreath_Cost_Talent.label>恋之呼吸花费</LoveBreath_Cost_Talent.label>
+  
+  <!-- EN: LoveBreath_Cost -->
+  <LoveBreath_Cost_Talent2.label>恋之呼吸花费</LoveBreath_Cost_Talent2.label>
+  
+  <!-- EN: LoveBreath_Cost -->
+  <LoveBreath_Cost_Talent3.label>恋之呼吸花费</LoveBreath_Cost_Talent3.label>
+  
+  <!-- EN: LoveBreath_Cost -->
+  <LoveBreath_Cost_Talent4.label>恋之呼吸花费</LoveBreath_Cost_Talent4.label>
+  
+  <!-- EN: LoveBreath_RegenAmount -->
+  <LoveBreath_RegenAmount_Talent.label>每刻恋之呼吸恢复量</LoveBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: LoveBreath_RegenAmount -->
+  <LoveBreath_RegenAmount_Talent2.label>每刻恋之呼吸恢复量</LoveBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: LoveBreath_RegenAmount -->
+  <LoveBreath_RegenAmount_Talent3.label>每刻恋之呼吸恢复量</LoveBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: LoveBreath_RegenAmount -->
+  <LoveBreath_RegenAmount_Talent4.label>每刻恋之呼吸恢复量</LoveBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: LoveBreath_RegenRate -->
+  <LoveBreath_RegenRate_Talent.label>恋之呼吸恢复率</LoveBreath_RegenRate_Talent.label>
+  
+  <!-- EN: LoveBreath_RegenRate -->
+  <LoveBreath_RegenRate_Talent2.label>恋之呼吸恢复率</LoveBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: LoveBreath_RegenRate -->
+  <LoveBreath_RegenRate_Talent3.label>恋之呼吸恢复率</LoveBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: LoveBreath_RegenRate -->
+  <LoveBreath_RegenRate_Talent4.label>恋之呼吸恢复率</LoveBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: LoveBreath_RegenTicks -->
+  <LoveBreath_RegenTicks_Talent.label>恋之呼吸恢复间隔</LoveBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: LoveBreath_RegenTicks -->
+  <LoveBreath_RegenTicks_Talent2.label>恋之呼吸恢复间隔</LoveBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: LoveBreath_RegenTicks -->
+  <LoveBreath_RegenTicks_Talent3.label>恋之呼吸恢复间隔</LoveBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: LoveBreath_RegenTicks -->
+  <LoveBreath_RegenTicks_Talent4.label>恋之呼吸恢复间隔</LoveBreath_RegenTicks_Talent4.label>
+</LanguageData>

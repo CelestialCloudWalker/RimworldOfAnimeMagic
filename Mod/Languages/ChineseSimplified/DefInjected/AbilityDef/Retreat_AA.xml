@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Retreat Dash -->
+  <AA_RetreatDash.label>闪躲冲刺</AA_RetreatDash.label>
+  <!-- EN: Dash to the targeted location while avoiding enemies. -->
+  <AA_RetreatDash.description>躲避敌方冲刺到目的地。</AA_RetreatDash.description>
+  <!-- EN: Dash to the targeted location while avoiding enemies. -->
+  <AA_RetreatDash.levels.0.description>躲避敌方冲刺到目的地。</AA_RetreatDash.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <AA_RetreatDash.levels.0.labelSuffix>壹级</AA_RetreatDash.levels.0.labelSuffix>
+  <!-- EN: Dash to the targeted location while avoiding enemies. -->
+  <AA_RetreatDash.levels.1.description>躲避敌方冲刺到目的地。</AA_RetreatDash.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <AA_RetreatDash.levels.1.labelSuffix>贰级</AA_RetreatDash.levels.1.labelSuffix>
+  <!-- EN: Dash to the targeted location while avoiding enemies. -->
+  <AA_RetreatDash.levels.2.description>躲避敌方冲刺到目的地。</AA_RetreatDash.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <AA_RetreatDash.levels.2.labelSuffix>参级</AA_RetreatDash.levels.2.labelSuffix>
+  <!-- EN: Dash to the targeted location while avoiding enemies. -->
+  <AA_RetreatDash.levels.3.description>躲避敌方冲刺到目的地。</AA_RetreatDash.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <AA_RetreatDash.levels.3.labelSuffix>肆级</AA_RetreatDash.levels.3.labelSuffix>
+  
+</LanguageData>

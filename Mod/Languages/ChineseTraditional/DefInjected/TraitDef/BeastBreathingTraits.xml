@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: feral instincts -->
+  <FeralInstincts.degreeDatas.feral_instincts.label>野性本能</FeralInstincts.degreeDatas.feral_instincts.label>
+  <!-- EN: [PAWN_nameDef] possesses animalistic instincts that enhance [PAWN_possessive] combat prowess and connection with beasts, but make [PAWN_objective] unsuited for civilized discourse. -->
+  <FeralInstincts.degreeDatas.feral_instincts.description>[PAWN_nameDef]有動物本能，因此格鬥能力和與動物間的連結都提升了，但也造成[PAWN_pronoun]在文明場合衣衫不整。</FeralInstincts.degreeDatas.feral_instincts.description>
+  
+  <!-- EN: pack hunter -->
+  <PackHunter.degreeDatas.pack_hunter.label>群體獵人</PackHunter.degreeDatas.pack_hunter.label>
+  <!-- EN: [PAWN_nameDef] fights with the coordination of a pack predator. [PAWN_pronoun] excels in group combat and prefers fresh meat over cooked meals. -->
+  <PackHunter.degreeDatas.pack_hunter.description>[PAWN_nameDef]與群體掠食者共同協作進行戰鬥。[PAWN_pronoun]打群架時表現優異，比起熟食更愛吃生肉，</PackHunter.degreeDatas.pack_hunter.description>
+  
+  <!-- EN: primal rage -->
+  <PrimalRage.degreeDatas.primal_rage.label>原始狂怒</PrimalRage.degreeDatas.primal_rage.label>
+  <!-- EN: [PAWN_nameDef] channels primal fury when wounded. Pain only makes [PAWN_objective] more dangerous in combat, though [PAWN_possessive] wild nature makes delicate work nearly impossible. -->
+  <PrimalRage.degreeDatas.primal_rage.description>[PAWN_nameDef]受傷時會釋放原始狂怒，疼痛只會讓[PAWN_pronoun]戰鬥時更加危險。然而[PAWN_nameDef]的野性使[PAWN_pronoun]幾乎不可能進行精密作業。</PrimalRage.degreeDatas.primal_rage.description>
+  
+  <!-- EN: territorial -->
+  <Territorial.degreeDatas.territorial.label>領地意識</Territorial.degreeDatas.territorial.label>
+  <!-- EN: [PAWN_nameDef] has a strong territorial instinct. [PAWN_pronoun] fights fiercely when defending [PAWN_possessive] home and builds formidable fortifications, but doesn't play well with strangers. -->
+  <Territorial.degreeDatas.territorial.description>[PAWN_nameDef]有強烈的領地本能，[PAWN_pronoun]保衛家園時抗爭激烈，也會建造堅固的防禦工事。但[PAWN_pronoun]和陌生人和不來。</Territorial.degreeDatas.territorial.description>
+  
+  <!-- EN: wild senses -->
+  <WildSenses.degreeDatas.wild_senses.label>野生知覺</WildSenses.degreeDatas.wild_senses.label>
+  <!-- EN: [PAWN_nameDef] has heightened senses like those of a wild animal. [PAWN_pronoun] can detect danger before others but requires more food to sustain [PAWN_possessive] LevelTwo metabolism. -->
+  <WildSenses.degreeDatas.wild_senses.description>[PAWN_nameDef]有如同野生動物的強化知覺。[PAWN_pronoun]能提前感受到威脅，卻需要更多食物維持貳級代謝。</WildSenses.degreeDatas.wild_senses.description>
+  
+</LanguageData>

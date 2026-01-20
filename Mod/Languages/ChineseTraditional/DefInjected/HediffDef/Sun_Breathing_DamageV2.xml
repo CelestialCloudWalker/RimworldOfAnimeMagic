@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: sun burn -->
+  <RadianceOfSun.label>日之熱燒</RadianceOfSun.label>
+  <!-- EN: Flesh scorched by heat. Severe pain and tissue death. -->
+  <RadianceOfSun.description>肌膚被高熱灼傷，造成嚴重疼痛和組織壞死。</RadianceOfSun.description>
+  <!-- EN: sun burn scar -->
+  <RadianceOfSun.comps.HediffComp_GetsPermanent.permanentLabel>日之熱燒疤痕</RadianceOfSun.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Burned off -->
+  <RadianceOfSun.injuryProps.destroyedLabel>喪失功能</RadianceOfSun.injuryProps.destroyedLabel>
+  <!-- EN: Burned out -->
+  <RadianceOfSun.injuryProps.destroyedOutLabel>被燒掉</RadianceOfSun.injuryProps.destroyedOutLabel>
+  <!-- EN: a sun burn -->
+  <RadianceOfSun.labelNoun>日之熱燒</RadianceOfSun.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <RadianceOfSun.labelNounPretty>{1}內的{0}</RadianceOfSun.labelNounPretty>
+  
+</LanguageData>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Condemned Family -->
+  <AA_Condemned_Family.label>非難家族</AA_Condemned_Family.label>
+  <!-- EN: Two of you are demons who only feed on those who deserve it, raiders, murderers those who wrong you. One of you is not turned, protecting them both. Everyone wants you dead anyways.\n\nNote: Eat to grow powerful enough to survive. Slayers and Demons both want you dead. Very difficult. -->
+  <AA_Condemned_Family.description>其中兩位是鬼，只吃那些罪有應得者、襲擊者、殺人犯，那些傷害你們的人維生。還有一位沒有成為真正的鬼，保護好他們吧。總之誰都想讓你們死。\n\n註: 靠吃人變強活下去吧。獵鬼人和鬼都想讓你們去死。此劇本非常困難。</AA_Condemned_Family.description>
+  <!-- EN: Two of you are demons who only feed on those who deserve it, raiders, murderers those who wrong you. One of you is not turned, protecting them both. Everyone wants you dead anyways.\n\nNote: Eat to grow powerful enough to survive. Slayers and Demons both want you dead. Very difficult. -->
+  <AA_Condemned_Family.scenario.description>其中兩位是鬼，只吃那些罪有應得者、襲擊者、殺人犯，那些傷害你們的人維生。還有一位沒有成為真正的鬼，保護好他們吧。總之誰都想讓你們死。\n\n註: 靠吃人變強活下去吧。獵鬼人和鬼都想讓你們去死。此劇本非常困難。</AA_Condemned_Family.scenario.description>
+  <!-- EN: Condemned Family -->
+  <AA_Condemned_Family.scenario.name>非難家族</AA_Condemned_Family.scenario.name>
+  <!-- EN: Two of you are demons now, but haven't lost yourselves yet. One human protects you both, and refuses to give up on you.\n\nYou only feed on those who deserve it: murderers, raiders, those who wronged you.\n\nRemember: Find a cure or die trying. -->
+  <AA_Condemned_Family.scenario.parts.GameStartDialog.text>現在有兩名鬼，他們還沒有失去自我。一位人類會保護你們，而且拒絕放棄。\n\n你只能吞噬殺人犯、襲擊者和傷害你們的人。記住: 找到解藥，或至死方休。</AA_Condemned_Family.scenario.parts.GameStartDialog.text>
+  <!-- EN: Two demons with morals and their human protector. -->
+  <AA_Condemned_Family.scenario.summary>兩名鬼、道德和他們的人類保護者。</AA_Condemned_Family.scenario.summary>
+  
+  <!-- EN: Demon Family -->
+  <AA_Demon_Family.label>五鬼之家</AA_Demon_Family.label>
+  <!-- EN: Five demons playing family, held together by fear and power. A family bound together by force, not choice.\n\nNote: Loyalty is artificial. Internal conflict is possible. Eat pawns to survive. Avoid prolonged sunlight exposure. Difficult. -->
+  <AA_Demon_Family.description>五名鬼扮家家酒，用恐懼和權力維繫彼此。一個靠強迫而非自願所聯繫的家庭。\n\n註: 忠誠是虛造的，內部衝突可能會發生。吃人活下去，避免長期太陽曝曬。困難劇本。</AA_Demon_Family.description>
+  <!-- EN: Five demons playing family, held together by fear and power. A family bound together by force, not choice.\n\nNote: Loyalty is artificial. Internal conflict is possible. Eat pawns to survive. Avoid prolonged sunlight exposure. Difficult. -->
+  <AA_Demon_Family.scenario.description>五名鬼扮家家酒，用恐懼和權力維繫彼此。一個靠強迫而非自願所聯繫的家庭。\n\n註: 忠誠是虛造的，內部衝突可能會發生。吃人活下去，避免長期太陽曝曬。困難劇本。</AA_Demon_Family.scenario.description>
+  <!-- EN: Demon Family -->
+  <AA_Demon_Family.scenario.name>五鬼之家</AA_Demon_Family.scenario.name>
+  <!-- EN: Five demons playing house.\n\nYou've claimed this territory now defend it and your new family.\n\nRemember: sunlight means death. Eating pawns means power. -->
+  <AA_Demon_Family.scenario.parts.GameStartDialog.text>五個鬼扮演家庭\n\n你已經佔領了這片土地，現在要捍衛領土與新家庭。\n\n記住: 陽光意味死亡，吃人意味強大。</AA_Demon_Family.scenario.parts.GameStartDialog.text>
+  <!-- EN: A demon family forced together against their will. -->
+  <AA_Demon_Family.scenario.summary>違背個人意願而被迫組建的鬼家族。</AA_Demon_Family.scenario.summary>
+  
+  <!-- EN: Newly Turned Demons -->
+  <AA_NewlyTurnedDemons.label>新成鬼</AA_NewlyTurnedDemons.label>
+  <!-- EN: Three fresh turned demons given a task: establish a foothold in this area. You don't know much about what you've become yet, but you'll learn fast or die trying.\n\nNote: Build shelter to avoid the sun. Eat pawns to evolve. Sun exposure will kill you over time. Very difficult. -->
+  <AA_NewlyTurnedDemons.description>三位新鮮鬼被交代任務：在此地帶站穩腳跟。你還不太了解自己被變成了什麼，但你會拼命學起來的。\n\n註: 建造庇護所躲避陽光，吃人強化自己。陽光曝曬會慢慢殺死你。此劇本非常困難。</AA_NewlyTurnedDemons.description>
+  <!-- EN: Three fresh turned demons given a task: establish a foothold in this area. You don't know much about what you've become yet, but you'll learn fast or die trying.\n\nNote: Build shelter to avoid the sun. Eat pawns to evolve. Sun exposure will kill you over time. Very difficult. -->
+  <AA_NewlyTurnedDemons.scenario.description>三位新鮮鬼被交代任務：在此地帶站穩腳跟。你還不太了解自己被變成了什麼，但你會拼命學起來的。\n\n註: 建造庇護所躲避陽光，吃人強化自己。陽光曝曬會慢慢殺死你。此劇本非常困難。</AA_NewlyTurnedDemons.scenario.description>
+  <!-- EN: Newly Turned Demons -->
+  <AA_NewlyTurnedDemons.scenario.name>新成鬼</AA_NewlyTurnedDemons.scenario.name>
+  <!-- EN: The transformation was agonizing. You remember your human life, but the hunger... the hunger is all-consuming.\n\nThe three of you fled together, seeking shelter from the burning sun. Now you must survive in a world that hunts your kind.\n\nRemember: sunlight means death. Eating pawns means power. -->
+  <AA_NewlyTurnedDemons.scenario.parts.GameStartDialog.text>這種轉化很痛苦。你記得自己的人生，但飢餓……飢餓吞噬了一切。\n\n你們三鬼一同逃亡，尋找庇護所躲避烈日。現在你必須在獵殺你們族類的世界上生存下來。\n\n記住: 陽光意味死亡，吃人意味強大。</AA_NewlyTurnedDemons.scenario.parts.GameStartDialog.text>
+  <!-- EN: Three newly turned demons sent to establish territory. -->
+  <AA_NewlyTurnedDemons.scenario.summary>三位剛轉化的鬼被派去建立領地。</AA_NewlyTurnedDemons.scenario.summary>
+  
+</LanguageData>

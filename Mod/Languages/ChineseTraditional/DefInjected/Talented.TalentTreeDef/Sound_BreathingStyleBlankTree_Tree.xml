@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sound Breathing -->
+  <Sound_BreathingStyleBlankTree.treeName>音之呼吸</Sound_BreathingStyleBlankTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <Sound_BreathingStyleBlankTree.treeToolbarName>{0} 等級({1}) 點數({2})</Sound_BreathingStyleBlankTree.treeToolbarName>
+  
+</LanguageData>

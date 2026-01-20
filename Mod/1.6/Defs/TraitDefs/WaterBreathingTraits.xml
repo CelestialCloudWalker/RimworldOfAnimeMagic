@@ -28,7 +28,7 @@
 
   <TraitDef>
     <defName>TidalForce</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>tidal force</label>
@@ -50,7 +50,7 @@
 
   <TraitDef>
     <defName>HealingSprings</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Medicine</li>
     </forcedPassions>
@@ -76,7 +76,7 @@
 
   <TraitDef>
     <defName>OceansDepth</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Intellectual</li>
     </forcedPassions>
@@ -102,7 +102,7 @@
 
   <TraitDef>
     <defName>AquaticAdaptation</defName>
-    <commonality>0.9</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>aquatic adaptation</label>
@@ -125,7 +125,7 @@
 
   <TraitDef>
     <defName>WhirlpoolTechnique</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -151,7 +151,7 @@
 
   <TraitDef>
     <defName>Purification</defName>
-    <commonality>0.5</commonality>
+    <commonality>0.</commonality>
     <forcedPassions>
       <li>Medicine</li>
     </forcedPassions>

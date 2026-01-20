@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>EtherealForm</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>ethereal form</label>
@@ -27,7 +27,7 @@
 
   <TraitDef>
     <defName>ConfusionAura</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
     </forcedPassions>
@@ -54,7 +54,7 @@
 
   <TraitDef>
     <defName>PhaseWalking</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>phase walking</label>
@@ -79,7 +79,7 @@
 
   <TraitDef>
     <defName>VaporousHealing</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>vaporous healing</label>
@@ -102,7 +102,7 @@
 
   <TraitDef>
     <defName>ObscuringPresence</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Shooting</li>
     </forcedPassions>
@@ -128,7 +128,7 @@
 
   <TraitDef>
     <defName>MorningDew</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>morning dew</label>

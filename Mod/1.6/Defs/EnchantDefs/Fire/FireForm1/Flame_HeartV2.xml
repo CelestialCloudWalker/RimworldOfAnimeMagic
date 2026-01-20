@@ -4,7 +4,7 @@
   <HediffDef>
     <defName>Flame_Heart</defName>
     <label>Burning Heart</label>
-    <description>Blows ignite with burning intesnity.</description>
+    <description>Blows ignite with burning intensity.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
@@ -22,7 +22,7 @@
   <HediffDef>
     <defName>Flame_Heart_LevelTwo</defName>
     <label>Burning Heart</label>
-    <description>Blows ignite with burning intesnity.</description>
+    <description>Blows ignite with burning intensity.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.9, 0.7, 0.2)</defaultLabelColor>
@@ -40,7 +40,7 @@
   <HediffDef>
     <defName>Flame_Heart_LevelThree</defName>
     <label>Burning Heart</label>
-    <description>Blows ignite with burning intesnity.</description>
+    <description>Blows ignite with burning intensity.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1.0, 0.6, 0.1)</defaultLabelColor>
@@ -58,7 +58,7 @@
   <HediffDef>
     <defName>Flame_Heart_LevelFour</defName>
     <label>Burning Heart</label>
-    <description>Blows ignite with burning intesnity.</description>
+    <description>Blows ignite with burning intensity.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1.0, 0.4, 0.0)</defaultLabelColor>
@@ -76,7 +76,7 @@
   <HediffDef>
     <defName>Flame_Heart_LevelFive</defName>
     <label>Burning Heart</label>
-    <description>Blows ignite with burning intesnity.</description>
+    <description>Blows ignite with burning intensity.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1.0, 0.4, 0.0)</defaultLabelColor>
@@ -94,7 +94,7 @@
   <HediffDef>
     <defName>Flame_Heart_LevelSix</defName>
     <label>Burning Heart</label>
-    <description>Blows ignite with burning intesnity.</description>
+    <description>Blows ignite with burning intensity.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1.0, 0.4, 0.0)</defaultLabelColor>

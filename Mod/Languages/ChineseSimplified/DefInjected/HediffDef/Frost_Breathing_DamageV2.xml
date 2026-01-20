@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: frost freeze -->
+  <FreezingOfFrost.label>霜之刺骨</FreezingOfFrost.label>
+  <!-- EN: Tissue frozen solid. Circulation halted and necrosis setting in. -->
+  <FreezingOfFrost.description>组织被冻僵，血液循环停止，开始发生坏死。</FreezingOfFrost.description>
+  <!-- EN: frost freeze scar -->
+  <FreezingOfFrost.comps.HediffComp_GetsPermanent.permanentLabel>霜之刺骨疤痕</FreezingOfFrost.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Frozen off -->
+  <FreezingOfFrost.injuryProps.destroyedLabel>丧失功能</FreezingOfFrost.injuryProps.destroyedLabel>
+  <!-- EN: Frozen solid -->
+  <FreezingOfFrost.injuryProps.destroyedOutLabel>被冻僵</FreezingOfFrost.injuryProps.destroyedOutLabel>
+  <!-- EN: a frost freeze -->
+  <FreezingOfFrost.labelNoun>霜之刺骨</FreezingOfFrost.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <FreezingOfFrost.labelNounPretty>{1}内的{0}</FreezingOfFrost.labelNounPretty>
+  
+</LanguageData>

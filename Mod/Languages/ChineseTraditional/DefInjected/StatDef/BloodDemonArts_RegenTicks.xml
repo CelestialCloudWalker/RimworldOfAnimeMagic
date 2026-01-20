@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: blood demon regeneration interval -->
+  <BloodDemonArts_RegenTicks.label>血鬼術回復間隔</BloodDemonArts_RegenTicks.label>
+  <!-- EN: Ticks between regeneration pulses. -->
+  <BloodDemonArts_RegenTicks.description>每次再生脈動的時間週期，單位為刻。</BloodDemonArts_RegenTicks.description>
+  
+</LanguageData>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Enhance -->
+  <Blood_Enhance.label>血液强化</Blood_Enhance.label>
+  <!-- EN: Blood begins to feel empowered with demonic energy. -->
+  <Blood_Enhance.description>血液感受到鬼之力带来的强化。</Blood_Enhance.description>
+  
+  <!-- EN: LevelThree Blood Mastery -->
+  <Blood_Enhance_LevelThree.label>参级 血液之主</Blood_Enhance_LevelThree.label>
+  <!-- EN: Blood flows with LevelThree demonic power, greatly enhancing all attacks. -->
+  <Blood_Enhance_LevelThree.description>血中流淌参级鬼之力，大幅强化所有攻击。</Blood_Enhance_LevelThree.description>
+  
+  <!-- EN: LevelTwo Blood Power -->
+  <Blood_Enhance_LevelTwo.label>贰级 血液之力</Blood_Enhance_LevelTwo.label>
+  <!-- EN: Blood surges with LevelTwo demonic energy, increasing combat effectiveness. -->
+  <Blood_Enhance_LevelTwo.description>血中涌现贰级鬼之力，提高格斗效力。</Blood_Enhance_LevelTwo.description>
+  
+  <!-- EN: Master Blood Ascension -->
+  <Blood_Enhance_Master.label>主宰 血液升华</Blood_Enhance_Master.label>
+  <!-- EN: Blood reaches the pinnacle of demonic ascension, becoming a weapon of devastating power. -->
+  <Blood_Enhance_Master.description>血液达到鬼之升华的巅峰，成为毁灭性武器。</Blood_Enhance_Master.description>
+  
+</LanguageData>

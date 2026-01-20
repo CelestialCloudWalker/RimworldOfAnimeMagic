@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Frost Breathing -->
+  <Frost_BreathingStyleBlankTree.treeName>霜之呼吸</Frost_BreathingStyleBlankTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <Frost_BreathingStyleBlankTree.treeToolbarName>{0} 等級({1}) 點數({2})</Frost_BreathingStyleBlankTree.treeToolbarName>
+  
+</LanguageData>

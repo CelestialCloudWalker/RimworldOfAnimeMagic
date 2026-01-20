@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Increase Breath Capacity -->
+  <Forest_Breath_Increase.label>增加呼吸法容量</Forest_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Forest_Breath_Increase2.label>增加呼吸法容量</Forest_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Forest_Breath_Increase3.label>增加呼吸法容量</Forest_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Forest_Breath_Increase4.label>增加呼吸法容量</Forest_Breath_Increase4.label>
+  
+  <!-- EN: Forest Breathing: Disperse -->
+  <Forest_Breathing_Disperse.label>森之呼吸・散</Forest_Breathing_Disperse.label>
+  
+  <!-- EN: ForestBreathing -->
+  <Forest_Breathing_GeneGive_Talent.label>森之呼吸</Forest_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Forest Breathing: Multi Strike -->
+  <Forest_Breathing_Multi_Strike.label>森之呼吸・连袭</Forest_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Forest Breathing: Reflect -->
+  <Forest_Breathing_Reflect.label>森之呼吸・返</Forest_Breathing_Reflect.label>
+  
+  <!-- EN: Forest Breathing: Slash -->
+  <Forest_Breathing_Slash.label>森之呼吸・斩</Forest_Breathing_Slash.label>
+  
+  <!-- EN: Forest Breathing: Strike -->
+  <Forest_Breathing_Strike.label>森之呼吸・袭</Forest_Breathing_Strike.label>
+  
+  <!-- EN: ForestBreath_Cost -->
+  <ForestBreath_Cost_Talent.label>森之呼吸花费</ForestBreath_Cost_Talent.label>
+  
+  <!-- EN: ForestBreath_Cost -->
+  <ForestBreath_Cost_Talent2.label>森之呼吸花费</ForestBreath_Cost_Talent2.label>
+  
+  <!-- EN: ForestBreath_Cost -->
+  <ForestBreath_Cost_Talent3.label>森之呼吸花费</ForestBreath_Cost_Talent3.label>
+  
+  <!-- EN: ForestBreath_Cost -->
+  <ForestBreath_Cost_Talent4.label>森之呼吸花费</ForestBreath_Cost_Talent4.label>
+  
+  <!-- EN: ForestBreath_RegenAmount -->
+  <ForestBreath_RegenAmount_Talent.label>每刻森之呼吸恢复量</ForestBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: ForestBreath_RegenAmount -->
+  <ForestBreath_RegenAmount_Talent2.label>每刻森之呼吸恢复量</ForestBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: ForestBreath_RegenAmount -->
+  <ForestBreath_RegenAmount_Talent3.label>每刻森之呼吸恢复量</ForestBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: ForestBreath_RegenAmount -->
+  <ForestBreath_RegenAmount_Talent4.label>每刻森之呼吸恢复量</ForestBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: ForestBreath_RegenRate -->
+  <ForestBreath_RegenRate_Talent.label>森之呼吸恢复率</ForestBreath_RegenRate_Talent.label>
+  
+  <!-- EN: ForestBreath_RegenRate -->
+  <ForestBreath_RegenRate_Talent2.label>森之呼吸恢复率</ForestBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: ForestBreath_RegenRate -->
+  <ForestBreath_RegenRate_Talent3.label>森之呼吸恢复率</ForestBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: ForestBreath_RegenRate -->
+  <ForestBreath_RegenRate_Talent4.label>森之呼吸恢复率</ForestBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: ForestBreath_RegenTicks -->
+  <ForestBreath_RegenTicks_Talent.label>森之呼吸恢复间隔</ForestBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: ForestBreath_RegenTicks -->
+  <ForestBreath_RegenTicks_Talent2.label>森之呼吸恢复间隔</ForestBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: ForestBreath_RegenTicks -->
+  <ForestBreath_RegenTicks_Talent3.label>森之呼吸恢复间隔</ForestBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: ForestBreath_RegenTicks -->
+  <ForestBreath_RegenTicks_Talent4.label>森之呼吸恢复间隔</ForestBreath_RegenTicks_Talent4.label>
+</LanguageData>

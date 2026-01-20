@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: botanical knowledge -->
+  <BotanicalKnowledge.degreeDatas.botanical_knowledge.label>花草知识</BotanicalKnowledge.degreeDatas.botanical_knowledge.label>
+  <!-- EN: [PAWN_nameDef] has deep understanding of plant life and natural remedies. [PAWN_pronoun] can coax growth from the most stubborn soil and craft healing medicines from simple herbs. -->
+  <BotanicalKnowledge.degreeDatas.botanical_knowledge.description>[PAWN_nameDef]对植物和天然疗法理解深刻。[PAWN_pronoun]能诱使最贫瘠的土壤长出植物，还能用简单药草制成疗癒药方。</BotanicalKnowledge.degreeDatas.botanical_knowledge.description>
+  
+  <!-- EN: elegant fighter -->
+  <ElegantFighter.degreeDatas.elegant_fighter.label>优雅战士</ElegantFighter.degreeDatas.elegant_fighter.label>
+  <!-- EN: [PAWN_nameDef] fights with the grace of a dancer. [PAWN_possessive] flowing combat style emphasizes finesse over brute force, finding beauty even in battle. -->
+  <ElegantFighter.degreeDatas.elegant_fighter.description>[PAWN_nameDef]战斗身姿如舞者优雅。[PAWN_pronoun]流畅的战斗风格强调灵巧而非蛮力，就算在战斗中也能发现美。</ElegantFighter.degreeDatas.elegant_fighter.description>
+  
+  <!-- EN: grace under pressure -->
+  <GraceUnderPressure.degreeDatas.grace_under_pressure.label>出淤不染</GraceUnderPressure.degreeDatas.grace_under_pressure.label>
+  <!-- EN: [PAWN_nameDef] maintains elegant composure even in dire circumstances. [PAWN_possessive] artistic nature and social grace help [PAWN_objective] inspire others while creating beauty from chaos. -->
+  <GraceUnderPressure.degreeDatas.grace_under_pressure.description>[PAWN_nameDef]情况危急下也能保持优雅沉着。[PAWN_pronoun]从混乱中创造美的同时，身上的艺术气质和社交风度也启发了他人。</GraceUnderPressure.degreeDatas.grace_under_pressure.description>
+  
+  <!-- EN: natural harmony -->
+  <NaturalHarmony.degreeDatas.natural_harmony.label>自然和谐</NaturalHarmony.degreeDatas.natural_harmony.label>
+  <!-- EN: [PAWN_nameDef] lives in perfect harmony with nature. [PAWN_pronoun] draws strength from the outdoors and connects effortlessly with wild creatures, needing little artificial beauty. -->
+  <NaturalHarmony.degreeDatas.natural_harmony.description>[PAWN_nameDef]与自然和谐共处。[PAWN_pronoun]从自然汲取力量，不费心就能与野外生物创建链接，几乎不需要人造美景。</NaturalHarmony.degreeDatas.natural_harmony.description>
+  
+  <!-- EN: petal dance -->
+  <PetalDance.degreeDatas.petal_dance.label>花瓣飞舞</PetalDance.degreeDatas.petal_dance.label>
+  <!-- EN: [PAWN_nameDef] moves through combat like a deadly flower in the wind. [PAWN_possessive] flowing movements become more beautiful and effective when facing multiple foes, turning battle into art. -->
+  <PetalDance.degreeDatas.petal_dance.description>[PAWN_nameDef]战斗时，姿态尤如死亡之花在风中飞舞。[PAWN_pronoun]流畅的动作在对付多个敌人时更加优美有效率，让战斗成为艺术。</PetalDance.degreeDatas.petal_dance.description>
+  
+  <!-- EN: seasonal wisdom -->
+  <SeasonalWisdom.degreeDatas.seasonal_wisdom.label>四季智能</SeasonalWisdom.degreeDatas.seasonal_wisdom.label>
+  <!-- EN: [PAWN_nameDef] understands the natural rhythms of the seasons. [PAWN_possessive] work adapts to nature's cycles, and harsh weather cannot dampen [PAWN_possessive] spirits. -->
+  <SeasonalWisdom.degreeDatas.seasonal_wisdom.description>[PAWN_nameDef]理解四季的循环。[PAWN_pronoun]随着自然循环工作，就算天气恶劣也无法熄灭[PAWN_pronoun]的意志。</SeasonalWisdom.degreeDatas.seasonal_wisdom.description>
+  
+</LanguageData>

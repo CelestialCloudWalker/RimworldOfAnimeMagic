@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: resurrection blocked -->
+  <EMF_ResurrectionBlocked.label>阻止復活</EMF_ResurrectionBlocked.label>
+  <!-- EN: This creature cannot be resurrected by any means while affected by this condition. -->
+  <EMF_ResurrectionBlocked.description>被此狀態影響的生物無法透過任何方式復活。</EMF_ResurrectionBlocked.description>
+  <!-- EN: blocked -->
+  <EMF_ResurrectionBlocked.stages.blocked.label>被阻止</EMF_ResurrectionBlocked.stages.blocked.label>
+  
+</LanguageData>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: [PAWN_nameDef] surived being turned into demon as a child. -->
+  <AA_DemonChild.description>[PAWN_nameDef]小时候被变成鬼，并存活下来。</AA_DemonChild.description>
+  <!-- EN: demon child -->
+  <AA_DemonChild.title>鬼之子</AA_DemonChild.title>
+  <!-- EN: demon child -->
+  <AA_DemonChild.titleShort>鬼之子</AA_DemonChild.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] surived being turned into demon as a child. -->
+  <DemonChildhoodStory.description>[PAWN_nameDef]小时候被变成鬼，并存活下来。</DemonChildhoodStory.description>
+  <!-- EN: demon child -->
+  <DemonChildhoodStory.title>鬼之子</DemonChildhoodStory.title>
+  <!-- EN: demon child -->
+  <DemonChildhoodStory.titleShort>鬼之子</DemonChildhoodStory.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] is a demon, a predator that hunts humans for sustenance. -->
+  <RK_Demon.description>[PAWN_nameDef]是鬼，以掠食人类为生。</RK_Demon.description>
+  <!-- EN: Demon -->
+  <RK_Demon.title>鬼</RK_Demon.title>
+  <!-- EN: Demon -->
+  <RK_Demon.titleShort>鬼</RK_Demon.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] holds a position among the Lower Moons, dangerous but replaceable within the Demon's hierarchy. -->
+  <RK_Lower_Moon_Demon.description>[PAWN_nameDef]是下弦的一员，虽然散发危险，但在鬼的制度终能被替换。</RK_Lower_Moon_Demon.description>
+  <!-- EN: Lower Moon -->
+  <RK_Lower_Moon_Demon.title>下弦之鬼</RK_Lower_Moon_Demon.title>
+  <!-- EN: Lower Moon -->
+  <RK_Lower_Moon_Demon.titleShort>下弦之鬼</RK_Lower_Moon_Demon.titleShort>
+  
+  <!-- EN: [PAWN_nameDef] holds a seat among the Upper Moons, commanding strength and authority unmatched by most demons. -->
+  <RK_Upper_Moon_Demon.description>[PAWN_nameDef]在上弦占有一席之地，拥有多数鬼无法匹敌的力量与权威。</RK_Upper_Moon_Demon.description>
+  <!-- EN: Upper Moon -->
+  <RK_Upper_Moon_Demon.title>上弦之鬼</RK_Upper_Moon_Demon.title>
+  <!-- EN: Upper Moon -->
+  <RK_Upper_Moon_Demon.titleShort>上弦之鬼</RK_Upper_Moon_Demon.titleShort>
+  
+</LanguageData>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: moon burn -->
+  <ReflectionOfMoon.label>月之烈烧</ReflectionOfMoon.label>
+  <!-- EN: Flesh scorched by fire. Severe pain and risk of tissue death. -->
+  <ReflectionOfMoon.description>肌肤被烈火灼伤，造成严重疼痛，可能有组织坏死风险。</ReflectionOfMoon.description>
+  <!-- EN: moon burn scar -->
+  <ReflectionOfMoon.comps.HediffComp_GetsPermanent.permanentLabel>月之烈烧疤痕</ReflectionOfMoon.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Burned off -->
+  <ReflectionOfMoon.injuryProps.destroyedLabel>丧失功能</ReflectionOfMoon.injuryProps.destroyedLabel>
+  <!-- EN: Burned out -->
+  <ReflectionOfMoon.injuryProps.destroyedOutLabel>被烧掉</ReflectionOfMoon.injuryProps.destroyedOutLabel>
+  <!-- EN: a moon burn -->
+  <ReflectionOfMoon.labelNoun>月之烈烧</ReflectionOfMoon.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <ReflectionOfMoon.labelNounPretty>{1}内的{0}</ReflectionOfMoon.labelNounPretty>
+  
+</LanguageData>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: love lash -->
+  <HeartbeatsOfLove.label>恋之鞭笞</HeartbeatsOfLove.label>
+  <!-- EN: A whipping slash that cuts deep. Heavy bleeding from torn tissue. -->
+  <HeartbeatsOfLove.description>一道很深的鞭痕，组织撕裂血流不止。</HeartbeatsOfLove.description>
+  <!-- EN: love lash scar -->
+  <HeartbeatsOfLove.comps.HediffComp_GetsPermanent.permanentLabel>恋之鞭笞疤痕</HeartbeatsOfLove.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Severed off -->
+  <HeartbeatsOfLove.injuryProps.destroyedLabel>丧失功能</HeartbeatsOfLove.injuryProps.destroyedLabel>
+  <!-- EN: a love lash -->
+  <HeartbeatsOfLove.labelNoun>恋之鞭笞</HeartbeatsOfLove.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <HeartbeatsOfLove.labelNounPretty>{1}内的{0}</HeartbeatsOfLove.labelNounPretty>
+  
+</LanguageData>

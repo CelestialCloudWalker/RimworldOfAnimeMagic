@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: disturbing dreams -->
+  <DreamMoodNegative.stages.disturbing_dreams.label>不安之梦</DreamMoodNegative.stages.disturbing_dreams.label>
+  <!-- EN: My dreams were filled with anxiety and dread. I can't shake the feeling. -->
+  <DreamMoodNegative.stages.disturbing_dreams.description>我的梦充满焦虑与恐惧，根本无法摆脱。</DreamMoodNegative.stages.disturbing_dreams.description>
+  
+  <!-- EN: manipulated dreams -->
+  <DreamMoodPositive.stages.manipulated_dreams.label>受操纵之梦</DreamMoodPositive.stages.manipulated_dreams.label>
+  <!-- EN: My dreams were unusually positive and uplifting. I feel strangely optimistic. -->
+  <DreamMoodPositive.stages.manipulated_dreams.description>我的梦异常积极向上，感觉自己莫名乐观。</DreamMoodPositive.stages.manipulated_dreams.description>
+  
+  <!-- EN: betrayed by friend -->
+  <ImplantedMemory_Betrayal.stages.betrayed_by_friend.label>被朋友背叛</ImplantedMemory_Betrayal.stages.betrayed_by_friend.label>
+  <!-- EN: I remember being betrayed by someone I loved. The memory feels so real. -->
+  <ImplantedMemory_Betrayal.stages.betrayed_by_friend.description>我想到自己被所爱之人背叛，这种记忆太真实了。</ImplantedMemory_Betrayal.stages.betrayed_by_friend.description>
+  
+  <!-- EN: terrible loss -->
+  <ImplantedMemory_Loss.stages.terrible_loss.label>大有所失</ImplantedMemory_Loss.stages.terrible_loss.label>
+  <!-- EN: I remember losing something precious. The grief feels overwhelming. -->
+  <ImplantedMemory_Loss.stages.terrible_loss.description>我想到自己有重要物品不见了，悲伤难以平息。</ImplantedMemory_Loss.stages.terrible_loss.description>
+  
+  <!-- EN: great victory -->
+  <ImplantedMemory_Victory.stages.great_victory.label>大获全胜</ImplantedMemory_Victory.stages.great_victory.label>
+  <!-- EN: I remember achieving a great victory. It fills me with confidence. -->
+  <ImplantedMemory_Victory.stages.great_victory.description>我想到自己获得了大成功，心中充满自信。</ImplantedMemory_Victory.stages.great_victory.description>
+  
+  <!-- EN: nightmare -->
+  <NightmareDream.stages.nightmare.label>恶梦</NightmareDream.stages.nightmare.label>
+  <!-- EN: I had nightmares that felt so real. I watched demons eat the ones I love. -->
+  <NightmareDream.stages.nightmare.description>我做了逼真的恶梦，梦中我眼睁睁看着鬼吃掉爱人。</NightmareDream.stages.nightmare.description>
+  
+  <!-- EN: pleasant dreams -->
+  <PleasantDream.stages.pleasant_dreams.label>美梦</PleasantDream.stages.pleasant_dreams.label>
+  <!-- EN: I had the most wonderful dream. I got to spent time with the ones I love. -->
+  <PleasantDream.stages.pleasant_dreams.description>我做了有史以来最美妙的梦，梦中我与爱人度过了美好时光。</PleasantDream.stages.pleasant_dreams.description>
+  
+</LanguageData>

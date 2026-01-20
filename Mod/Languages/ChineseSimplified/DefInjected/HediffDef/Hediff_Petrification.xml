@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: petrification -->
+  <EMF_Petrification.label>石化</EMF_Petrification.label>
+  <!-- EN: A magical curse that gradually turns the victim to stone. At maximum severity, the victim becomes a statue. -->
+  <EMF_Petrification.description>一种魔法诅咒，受害者会逐渐变成石头。严重时，还会变成一尊石雕。</EMF_Petrification.description>
+  <!-- EN: initial -->
+  <EMF_Petrification.stages.initial.label>最初期</EMF_Petrification.stages.initial.label>
+  <!-- EN: minor -->
+  <EMF_Petrification.stages.minor.label>初期</EMF_Petrification.stages.minor.label>
+  <!-- EN: moderate -->
+  <EMF_Petrification.stages.moderate.label>中期</EMF_Petrification.stages.moderate.label>
+  <!-- EN: major -->
+  <EMF_Petrification.stages.major.label>后期</EMF_Petrification.stages.major.label>
+  <!-- EN: extreme -->
+  <EMF_Petrification.stages.extreme.label>最后期</EMF_Petrification.stages.extreme.label>
+  
+</LanguageData>

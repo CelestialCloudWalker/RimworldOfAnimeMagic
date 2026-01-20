@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: petrified statue -->
+  <EMF_PetrifiedStatue.label>石像</EMF_PetrifiedStatue.label>
+  <!-- EN: A once-living being turned to stone by magic. The victim remains conscious, trapped in a petrified state. -->
+  <EMF_PetrifiedStatue.description>曾經的活物被魔法變成了石頭。受害者保持意識困在石像裡。</EMF_PetrifiedStatue.description>
+  
+</LanguageData>

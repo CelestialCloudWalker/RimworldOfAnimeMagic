@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: MistBreath -->
+  <MistBreath.label>霞之呼吸</MistBreath.label>
+  <!-- EN: Breath channels elemental energy through precise control, unlocking powerful techniques. -->
+  <MistBreath.description>透过精准呼吸引导能量，解锁强大呼吸法。</MistBreath.description>
+  
+  <!-- EN: MoonBreath -->
+  <MoonBreath.label>月之呼吸</MoonBreath.label>
+  <!-- EN: Breath channels elemental energy through precise control, unlocking powerful techniques. -->
+  <MoonBreath.description>透过精准呼吸引导能量，解锁强大呼吸法。</MoonBreath.description>
+  
+</LanguageData>

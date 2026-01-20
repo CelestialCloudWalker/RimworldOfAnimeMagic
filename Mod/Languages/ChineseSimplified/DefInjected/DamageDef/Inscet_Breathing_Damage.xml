@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: insect sting -->
+  <Inscet_Breathing_Damage.label>虫之螫咬</Inscet_Breathing_Damage.label>
+  <!-- EN: {0}'s body shut down from venom. -->
+  <Inscet_Breathing_Damage.deathMessage>{0}的身体被毒素麻痹。</Inscet_Breathing_Damage.deathMessage>
+  
+</LanguageData>

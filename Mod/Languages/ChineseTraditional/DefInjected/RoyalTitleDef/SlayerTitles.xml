@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flame Hashira -->
+  <AA_FlameHashira.label>炎柱</AA_FlameHashira.label>
+  <!-- EN: A master of fire-based swordplay, using fierce and explosive attacks. -->
+  <AA_FlameHashira.description>精通如烈焰般的劍術，使用兇猛極具爆發力的攻擊。</AA_FlameHashira.description>
+  
+  <!-- EN: Forest Hashira -->
+  <AA_ForestHashira.label>森柱</AA_ForestHashira.label>
+  <!-- EN: A guardian fighter whose soul is rooted in forest wisdom, striking with the quiet force of nature itself. -->
+  <AA_ForestHashira.description>靈魂築根於森林智慧的守護戰士，以自然本身的寧靜之力發出攻擊。</AA_ForestHashira.description>
+
+  <!-- EN: Insect Hashira -->
+  <AA_InsectHashira.label>蟲柱</AA_InsectHashira.label>
+  <!-- EN: A swift and precise warrior who uses poison to eliminate demons. -->
+  <AA_InsectHashira.description>敏捷精準的戰士，以毒滅鬼。</AA_InsectHashira.description>
+  
+  <!-- EN: Love Hashira -->
+  <AA_LoveHashira.label>戀柱</AA_LoveHashira.label>
+  <!-- EN: A flexible and agile fighter who wields an unconventional, whip-like sword. -->
+  <AA_LoveHashira.description>身手柔韌靈活的戰士，使用非傳統的鞭狀劍作戰。</AA_LoveHashira.description>
+  
+  <!-- EN: Mist Hashira -->
+  <AA_MistHashira.label>霞柱</AA_MistHashira.label>
+  <!-- EN: A deceptive and unpredictable swordsman who strikes with blinding speed. -->
+  <AA_MistHashira.description>神祕莫測的劍士，行動難以預料。以極高的速度發出奇襲。</AA_MistHashira.description>
+  
+  <!-- EN: Serpent Hashira -->
+  <AA_SerpentHashira.label>蛇柱</AA_SerpentHashira.label>
+  <!-- EN: A cunning fighter whose slithering attacks mirror a snake’s movements. -->
+  <AA_SerpentHashira.description>模仿蛇行進行攻擊的狡猾戰士。</AA_SerpentHashira.description>
+  
+  <!-- EN: Sound Hashira -->
+  <AA_SoundHashira.label>音柱</AA_SoundHashira.label>
+  <!-- EN: A combatant who blends swordplay with explosive force and rhythmic strikes. -->
+  <AA_SoundHashira.description>將劍術、爆炸性和節奏完美結合的戰士。</AA_SoundHashira.description>
+  
+  <!-- EN: Stone Hashira -->
+  <AA_StoneHashira.label>岩柱</AA_StoneHashira.label>
+  <!-- EN: A powerhouse who utilizes immense strength and crushing weaponry. -->
+  <AA_StoneHashira.description>使用怪力和粉碎性武器的強者。</AA_StoneHashira.description>
+  
+  <!-- EN: Water Hashira -->
+  <AA_WaterHashira.label>水柱</AA_WaterHashira.label>
+  <!-- EN: A fluid and adaptable fighter who overwhelms enemies with seamless movements. -->
+  <AA_WaterHashira.description>以行雲流水的動作壓制敵方的戰士，身手流暢且適應力強。</AA_WaterHashira.description>
+  
+  <!-- EN: Wind Hashira -->
+  <AA_WindHashira.label>風柱</AA_WindHashira.label>
+  <!-- EN: A relentless warrior with wild and aggressive slashes. -->
+  <AA_WindHashira.description>揮舞狂野利刃的無情戰士。</AA_WindHashira.description>
+
+  <!-- EN: Former Hashira -->
+  <AA_FormerHashira.label>前任柱</AA_FormerHashira.label>
+  <!-- EN: etired elite slayers who once stood among the strongest but now serve as mentors or advisors. -->
+  <AA_FormerHashira.description>退休的菁英隊士，曾站在鬼殺隊的最高點。但現在只做為一名師傅或顧問。</AA_FormerHashira.description>
+
+  <!-- EN: Tsuguko -->
+  <AA_Tsuguko.label>繼子</AA_Tsuguko.label>
+  <!-- EN: A highly talented swordsman personally trained by a Hashira to become their successor. -->
+  <AA_Tsuguko.description>才華洋溢的劍士，受到柱專屬培訓以成為繼承人。</AA_Tsuguko.description>
+  
+  <!-- EN: Ubuyashiki Kagaya -->
+  <AA_UbuyashikiKagaya.label>產屋敷耀哉</AA_UbuyashikiKagaya.label>
+  <!-- EN: The wise and compassionate leader of the Demon Slayer Corps, guiding his warriors with strategy and foresight. -->
+  <AA_UbuyashikiKagaya.description>鬼殺隊睿智而慈悲的主公，以戰略和遠見領導眾隊士。</AA_UbuyashikiKagaya.description>
+  
+  <!-- EN: Kinoe -->
+  <AA_Kinoe.label>甲</AA_Kinoe.label>
+  <!-- EN: The highest rank before Hashira, proving mastery over combat and leadership. -->
+  <AA_Kinoe.description>僅次於柱的最高階級，證明了對戰鬥和領導力的掌握。</AA_Kinoe.description>
+  
+  <!-- EN: Kinoto -->
+  <AA_Kinoto.label>乙</AA_Kinoto.label>
+  <!-- EN: Nearing Hashira-level skill, capable of facing powerful demons. -->
+  <AA_Kinoto.description>能力接近柱級，能與強大之鬼交戰。</AA_Kinoto.description>
+
+  <!-- EN: Hinoe -->
+  <AA_Hinoe.label>丙</AA_Hinoe.label>
+  <!-- EN: Seasoned warriors who are considered elite among standard slayers. -->
+  <AA_Hinoe.description>經驗豐富的戰士，被認為是標準隊士中的菁英。</AA_Hinoe.description>
+  
+  <!-- EN: Hinoto -->
+  <AA_Hinoto.label>丁</AA_Hinoto.label>
+  <!-- EN: Advanced demon slayers who can handle multiple demons alone. -->
+  <AA_Hinoto.description>能獨自應對多個鬼的進階隊士。</AA_Hinoto.description>
+  
+  <!-- EN: Tsuchinoe -->
+  <AA_Tsuchinoe.label>戊</AA_Tsuchinoe.label>
+  <!-- EN: Stronger slayers with refined combat instincts and mission leadership potential. -->
+  <AA_Tsuchinoe.description>更為強大的隊士，具有精練的戰鬥本能與任務領導潛力。</AA_Tsuchinoe.description>
+  
+  <!-- EN: Tsuchinoto -->
+  <AA_Tsuchinoto.label>己</AA_Tsuchinoto.label>
+  <!-- EN: Mid-level slayers proficient in their breathing techniques. -->
+  <AA_Tsuchinoto.description>熟練呼吸法的中等隊士。</AA_Tsuchinoto.description>
+
+  <!-- EN: Kanoe -->
+  <AA_Kanoe.label>庚</AA_Kanoe.label>
+  <!-- EN: More skilled fighters trusted with tougher demon threats. -->
+  <AA_Kanoe.description>更為熟練的戰士，相信能對更強的鬼造成威脅。</AA_Kanoe.description>
+  
+  <!-- EN: Kanoto -->
+  <AA_Kanoto.label>辛</AA_Kanoto.label>
+  <!-- EN: Slayers who have completed several missions and gained combat experience. -->
+  <AA_Kanoto.description>完成數項任務，並從中增加戰鬥經驗的隊士。</AA_Kanoto.description>
+
+  <!-- EN: Mizunoe -->
+  <AA_Mizunoe.label>壬</AA_Mizunoe.label>
+  <!-- EN: Slightly more experienced slayers with better survival skills. -->
+  <AA_Mizunoe.description>稍有經驗的隊士，生存技能更好。</AA_Mizunoe.description>
+  
+  <!-- EN: Mizunoto -->
+  <AA_Mizunoto.label>癸</AA_Mizunoto.label>
+  <!-- EN: New recruits who take on the weakest demons and basic missions. -->
+  <AA_Mizunoto.description>鬼殺隊新成員，能應付最弱的鬼和基礎任務。</AA_Mizunoto.description>
+
+</LanguageData>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Moon Breathing -->
+  <Moon_BreathingStyleBlankTree.treeName>月之呼吸</Moon_BreathingStyleBlankTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <Moon_BreathingStyleBlankTree.treeToolbarName>{0} 等級({1}) 點數({2})</Moon_BreathingStyleBlankTree.treeToolbarName>
+  
+</LanguageData>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Corps Initiation -->
+  <AA_Corps_Initiation.label>鬼杀队入门</AA_Corps_Initiation.label>
+  <!-- EN: Your mission went sideways and now the three of you are stranded out here. You've got your swords and whatever supplies you salvaged. Time to prove your training wasn't wasted.\n\nNote: Start with minimal supplies, and your nichirin blades. Difficult. -->
+  <AA_Corps_Initiation.description>任务出了差错，现在你们三位被困在这里了。你带着刀和抢救回来的各种补给品。是时候证明训练没有白费了。\n\n注: 以最少量补给品和日轮刀开局。困难剧本。</AA_Corps_Initiation.description>
+  <!-- EN: Your mission went sideways and now the three of you are stranded out here. You've got your swords and whatever supplies you salvaged. Time to prove your training wasn't wasted.\n\nNote: Start with minimal supplies, and your nichirin blades. Difficult. -->
+  <AA_Corps_Initiation.scenario.description>任务出了差错，现在你们三位被困在这里了。你带着刀和抢救回来的各种补给品。是时候证明训练没有白费了。\n\n注: 以最少量补给品和日轮刀开局。困难剧本。</AA_Corps_Initiation.scenario.description>
+  <!-- EN: Corps Initiation -->
+  <AA_Corps_Initiation.scenario.name>鬼杀队入门</AA_Corps_Initiation.scenario.name>
+  <!-- EN: Three newly trained demon slayers, stranded and alone.\n\nYou've got your nichirin blades, and whatever you salvaged.\n\nNo backup. No rescue. Just survival. -->
+  <AA_Corps_Initiation.scenario.parts.GameStartDialog.text>三位近期受训的鬼杀队士，被困住而孤立无援。\n\n你手上有日轮刀和各种抢救回来的物资。\n\n没有后援。没有救援。只有生存。</AA_Corps_Initiation.scenario.parts.GameStartDialog.text>
+  <!-- EN: Three demon slayers stranded after a failed mission. -->
+  <AA_Corps_Initiation.scenario.summary>三名鬼杀队士任务失败後受困。</AA_Corps_Initiation.scenario.summary>
+  
+</LanguageData>

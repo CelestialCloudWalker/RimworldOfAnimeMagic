@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Inosuke's Nichirin Blade (dont use WIP) -->
+  <NichirinSword_HashibiraInosukeDual.label>伊之助的雙日輪刀</NichirinSword_HashibiraInosukeDual.label>
+  <!-- EN: A nichirin blade capable of killing demons. -->
+  <NichirinSword_HashibiraInosukeDual.description>用來殺鬼的日輪刀。</NichirinSword_HashibiraInosukeDual.description>
+  <!-- EN: blade back -->
+  <NichirinSword_HashibiraInosukeDual.tools.blade_back.label>刀背</NichirinSword_HashibiraInosukeDual.tools.blade_back.label>
+  <!-- EN: blade -->
+  <NichirinSword_HashibiraInosukeDual.tools.blade.label>刀刃</NichirinSword_HashibiraInosukeDual.tools.blade.label>
+  
+</LanguageData>

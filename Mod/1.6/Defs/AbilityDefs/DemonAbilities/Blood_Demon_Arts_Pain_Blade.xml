@@ -22,7 +22,7 @@
       <warmupTime>0.5</warmupTime>
       <soundCast>FireSpew_Resolve</soundCast>
       <targetParams>
-        <canTargetLocations>true</canTargetLocations>
+        <canTargetLocations>false</canTargetLocations>
         <canTargetPawns>true</canTargetPawns>
         <canTargetBuildings>true</canTargetBuildings>
         <canTargetMechs>true</canTargetMechs>

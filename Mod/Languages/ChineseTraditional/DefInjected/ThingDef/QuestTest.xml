@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Training rock -->
+  <AnimeArsenal_FinalSelectionRock.label>訓練用岩石</AnimeArsenal_FinalSelectionRock.label>
+  <!-- EN: A training rock that trigger the quest to become a slayer. -->
+  <AnimeArsenal_FinalSelectionRock.description>用於觸發成為鬼殺隊士任務的訓練用岩石。</AnimeArsenal_FinalSelectionRock.description>
+  <!-- EN: Cannot start the Final Selection at this time. You need at least 3 free colonists. -->
+  <AnimeArsenal_FinalSelectionRock.comps.CompUseEffect_StartQuest.failMessage>現在無法開始最終選拔。至少需要三名可行動的殖民者。</AnimeArsenal_FinalSelectionRock.comps.CompUseEffect_StartQuest.failMessage>
+  <!-- EN: {0} has summoned a Demon Slayer Corps guide. The Final Selection begins! -->
+  <AnimeArsenal_FinalSelectionRock.comps.CompUseEffect_StartQuest.successMessage>{0}召喚了鬼殺隊引路人，最終選拔開始了！</AnimeArsenal_FinalSelectionRock.comps.CompUseEffect_StartQuest.successMessage>
+  <!-- EN: Initiate Final Selection -->
+  <AnimeArsenal_FinalSelectionRock.comps.CompUsable.useLabel>初始化最終選拔</AnimeArsenal_FinalSelectionRock.comps.CompUsable.useLabel>
+  
+  <!-- EN: final selection rock -->
+  <AnimeArsenal_FinalSelectionRocktwo.label>最終選拔岩石</AnimeArsenal_FinalSelectionRocktwo.label>
+  <!-- EN: A rock. -->
+  <AnimeArsenal_FinalSelectionRocktwo.description>岩石。</AnimeArsenal_FinalSelectionRocktwo.description>
+  <!-- EN: Cannot start the Final Selection at this time. You need at least 3 free colonists. -->
+  <AnimeArsenal_FinalSelectionRocktwo.comps.CompUseEffect_StartQuest.failMessage>現在無法開始最終選拔。至少需要三名可行動的殖民者。</AnimeArsenal_FinalSelectionRocktwo.comps.CompUseEffect_StartQuest.failMessage>
+  <!-- EN: {0} has summoned a Demon Slayer Corps guide. The Final Selection begins! -->
+  <AnimeArsenal_FinalSelectionRocktwo.comps.CompUseEffect_StartQuest.successMessage>{0}召喚了鬼殺隊引路人，最終選拔開始了！</AnimeArsenal_FinalSelectionRocktwo.comps.CompUseEffect_StartQuest.successMessage>
+  <!-- EN: Initiate Final Selection -->
+  <AnimeArsenal_FinalSelectionRocktwo.comps.CompUsable.useLabel>初始化最終選拔</AnimeArsenal_FinalSelectionRocktwo.comps.CompUsable.useLabel>
+  
+</LanguageData>

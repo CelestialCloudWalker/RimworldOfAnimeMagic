@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Increase Breath Capacity -->
+  <Beast_Breath_Increase.label>增加呼吸法容量</Beast_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Beast_Breath_Increase2.label>增加呼吸法容量</Beast_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Beast_Breath_Increase3.label>增加呼吸法容量</Beast_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Beast_Breath_Increase4.label>增加呼吸法容量</Beast_Breath_Increase4.label>
+  
+  <!-- EN: Beast Breathing: Disperse -->
+  <Beast_Breathing_Disperse.label>獸之呼吸・散</Beast_Breathing_Disperse.label>
+  
+  <!-- EN: BeastBreathing -->
+  <Beast_Breathing_GeneGive_Talent.label>獸之呼吸</Beast_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Beast Breathing: Multi Strike -->
+  <Beast_Breathing_Multi_Strike.label>獸之呼吸・連襲</Beast_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Beast Breathing: Reflect -->
+  <Beast_Breathing_Reflect.label>獸之呼吸・返</Beast_Breathing_Reflect.label>
+  
+  <!-- EN: Beast Breathing: Slash -->
+  <Beast_Breathing_Slash.label>獸之呼吸・斬</Beast_Breathing_Slash.label>
+  
+  <!-- EN: Beast Breathing: Strike -->
+  <Beast_Breathing_Strike.label>獸之呼吸・襲</Beast_Breathing_Strike.label>
+  
+  <!-- EN: BeastBreath_Cost -->
+  <BeastBreath_Cost_Talent.label>獸之呼吸花費</BeastBreath_Cost_Talent.label>
+  
+  <!-- EN: BeastBreath_Cost -->
+  <BeastBreath_Cost_Talent2.label>獸之呼吸花費</BeastBreath_Cost_Talent2.label>
+  
+  <!-- EN: BeastBreath_Cost -->
+  <BeastBreath_Cost_Talent3.label>獸之呼吸花費</BeastBreath_Cost_Talent3.label>
+  
+  <!-- EN: BeastBreath_Cost -->
+  <BeastBreath_Cost_Talent4.label>獸之呼吸花費</BeastBreath_Cost_Talent4.label>
+  
+  <!-- EN: BeastBreath_RegenAmount -->
+  <BeastBreath_RegenAmount_Talent.label>每刻獸之呼吸恢復量</BeastBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: BeastBreath_RegenAmount -->
+  <BeastBreath_RegenAmount_Talent2.label>每刻獸之呼吸恢復量</BeastBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: BeastBreath_RegenAmount -->
+  <BeastBreath_RegenAmount_Talent3.label>每刻獸之呼吸恢復量</BeastBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: BeastBreath_RegenAmount -->
+  <BeastBreath_RegenAmount_Talent4.label>每刻獸之呼吸恢復量</BeastBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: BeastBreath_RegenRate -->
+  <BeastBreath_RegenRate_Talent.label>獸之呼吸恢復率</BeastBreath_RegenRate_Talent.label>
+  
+  <!-- EN: BeastBreath_RegenRate -->
+  <BeastBreath_RegenRate_Talent2.label>獸之呼吸恢復率</BeastBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: BeastBreath_RegenRate -->
+  <BeastBreath_RegenRate_Talent3.label>獸之呼吸恢復率</BeastBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: BeastBreath_RegenRate -->
+  <BeastBreath_RegenRate_Talent4.label>獸之呼吸恢復率</BeastBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: BeastBreath_RegenTicks -->
+  <BeastBreath_RegenTicks_Talent.label>獸之呼吸恢復間隔</BeastBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: BeastBreath_RegenTicks -->
+  <BeastBreath_RegenTicks_Talent2.label>獸之呼吸恢復間隔</BeastBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: BeastBreath_RegenTicks -->
+  <BeastBreath_RegenTicks_Talent3.label>獸之呼吸恢復間隔</BeastBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: BeastBreath_RegenTicks -->
+  <BeastBreath_RegenTicks_Talent4.label>獸之呼吸恢復間隔</BeastBreath_RegenTicks_Talent4.label>
+</LanguageData>

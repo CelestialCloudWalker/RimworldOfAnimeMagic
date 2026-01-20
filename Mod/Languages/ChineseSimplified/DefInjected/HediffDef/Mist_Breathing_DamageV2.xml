@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: mist slash -->
+  <PhantomsOfMist.label>霞之幻斩</PhantomsOfMist.label>
+  <!-- EN: A disorienting cut that confuses and disorients. -->
+  <PhantomsOfMist.description>一道会迷惑且失去方向感的斩击。</PhantomsOfMist.description>
+  <!-- EN: mist slash scar -->
+  <PhantomsOfMist.comps.HediffComp_GetsPermanent.permanentLabel>霞之幻斩疤痕</PhantomsOfMist.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Cut off -->
+  <PhantomsOfMist.injuryProps.destroyedLabel>丧失功能</PhantomsOfMist.injuryProps.destroyedLabel>
+  <!-- EN: Cut out -->
+  <PhantomsOfMist.injuryProps.destroyedOutLabel>被斩断</PhantomsOfMist.injuryProps.destroyedOutLabel>
+  <!-- EN: a mist slash -->
+  <PhantomsOfMist.labelNoun>霞之幻斩</PhantomsOfMist.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <PhantomsOfMist.labelNounPretty>{1}内的{0}</PhantomsOfMist.labelNounPretty>
+  
+</LanguageData>

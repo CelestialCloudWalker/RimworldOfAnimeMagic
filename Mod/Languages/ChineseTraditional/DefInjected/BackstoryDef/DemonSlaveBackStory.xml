@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Stripped of everything that made them an individual, this pawn now lives only to serve it's master until it degrades into nothing. -->
+  <DemonAdulthoodStory.description>[PAWN_nameDef]被奪走了身為人的一切，[PAWN_pronoun]現在只為服侍自己的主君而活，直到消失殆盡。</DemonAdulthoodStory.description>
+  <!-- EN: Demonified -->
+  <DemonAdulthoodStory.title>被鬼化</DemonAdulthoodStory.title>
+  <!-- EN: Demon -->
+  <DemonAdulthoodStory.titleShort>鬼</DemonAdulthoodStory.titleShort>
+  
+</LanguageData>

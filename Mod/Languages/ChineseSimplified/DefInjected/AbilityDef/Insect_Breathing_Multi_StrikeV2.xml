@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Insect Breathing: Multi Strike -->
+  <Insect_Breathing_Multi_Strike.label>虫之呼吸・连袭</Insect_Breathing_Multi_Strike.label>
+  <!-- EN: An offensive technique using quick dashes to strike multiple enemies. -->
+  <Insect_Breathing_Multi_Strike.description>多次冲向敌方连续袭击的技法。</Insect_Breathing_Multi_Strike.description>
+  <!-- EN: An offensive technique using quick dashes to strike multiple enemies. -->
+  <Insect_Breathing_Multi_Strike.levels.0.description>多次冲向敌方连续袭击的技法。</Insect_Breathing_Multi_Strike.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Insect_Breathing_Multi_Strike.levels.0.labelSuffix>壹级</Insect_Breathing_Multi_Strike.levels.0.labelSuffix>
+  <!-- EN: An improved grasshopper dance with more jumps and increased damage per strike. -->
+  <Insect_Breathing_Multi_Strike.levels.1.description>多次冲向敌方连续袭击的技法。</Insect_Breathing_Multi_Strike.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Insect_Breathing_Multi_Strike.levels.1.labelSuffix>贰级</Insect_Breathing_Multi_Strike.levels.1.labelSuffix>
+  <!-- EN: An offensive technique using quick dashes to strike multiple enemies. -->
+  <Insect_Breathing_Multi_Strike.levels.2.description>多次冲向敌方连续袭击的技法。</Insect_Breathing_Multi_Strike.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Insect_Breathing_Multi_Strike.levels.2.labelSuffix>参级</Insect_Breathing_Multi_Strike.levels.2.labelSuffix>
+  <!-- EN: An offensive technique using quick dashes to strike multiple enemies. -->
+  <Insect_Breathing_Multi_Strike.levels.3.description>多次冲向敌方连续袭击的技法。</Insect_Breathing_Multi_Strike.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Insect_Breathing_Multi_Strike.levels.3.labelSuffix>肆级</Insect_Breathing_Multi_Strike.levels.3.labelSuffix>
+  <!-- EN: An offensive technique using quick dashes to strike multiple enemies. -->
+  <Insect_Breathing_Multi_Strike.levels.4.description>多次冲向敌方连续袭击的技法。</Insect_Breathing_Multi_Strike.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Insect_Breathing_Multi_Strike.levels.4.labelSuffix>伍级</Insect_Breathing_Multi_Strike.levels.4.labelSuffix>
+  <!-- EN: An offensive technique using quick dashes to strike multiple enemies. -->
+  <Insect_Breathing_Multi_Strike.levels.5.description>多次冲向敌方连续袭击的技法。</Insect_Breathing_Multi_Strike.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Insect_Breathing_Multi_Strike.levels.5.labelSuffix>陆级</Insect_Breathing_Multi_Strike.levels.5.labelSuffix>
+  
+</LanguageData>

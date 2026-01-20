@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Forest Breathing Fatigue -->
+  <ForestBreathing_Fatigue.label>森之呼吸疲勞</ForestBreathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unsteady. -->
+  <ForestBreathing_Fatigue.description>重複使用呼吸法使身體疲憊，無法站穩。</ForestBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <ForestBreathing_Fatigue.stages.Mild_fatigue.label>輕微疲勞</ForestBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <ForestBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲勞</ForestBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <ForestBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲勞</ForestBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <ForestBreathing_Fatigue.stages.Severe_fatigue.label>嚴重疲勞</ForestBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <ForestBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</ForestBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <ForestBreathing_Fatigue.stages.Collapsed.label>累垮</ForestBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

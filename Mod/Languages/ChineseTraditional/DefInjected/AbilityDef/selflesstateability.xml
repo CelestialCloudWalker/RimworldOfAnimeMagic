@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Selfess State -->
+  <AA_Selfess_State_Ability.label>無我的境界</AA_Selfess_State_Ability.label>
+  <!-- EN: Erases fighting intent, masking the user from enemies' senses and aggression. -->
+  <AA_Selfess_State_Ability.description>消除戰意，使自己免受敵人感知與攻擊。</AA_Selfess_State_Ability.description>
+  <!-- EN: Erases fighting intent, masking the user from enemies' senses and aggression. -->
+  <AA_Selfess_State_Ability.levels.0.description>消除戰意，使自己免受敵人感知與攻擊。</AA_Selfess_State_Ability.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <AA_Selfess_State_Ability.levels.0.labelSuffix>壹級</AA_Selfess_State_Ability.levels.0.labelSuffix>
+  <!-- EN: Erases fighting intent, masking the user from enemies' senses and aggression. -->
+  <AA_Selfess_State_Ability.levels.1.description>消除戰意，使自己免受敵人感知與攻擊。</AA_Selfess_State_Ability.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <AA_Selfess_State_Ability.levels.1.labelSuffix>貳級</AA_Selfess_State_Ability.levels.1.labelSuffix>
+  <!-- EN: Erases fighting intent, masking the user from enemies' senses and aggression. -->
+  <AA_Selfess_State_Ability.levels.2.description>消除戰意，使自己免受敵人感知與攻擊。</AA_Selfess_State_Ability.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <AA_Selfess_State_Ability.levels.2.labelSuffix>參級</AA_Selfess_State_Ability.levels.2.labelSuffix>
+  <!-- EN: Erases fighting intent, masking the user from enemies' senses and aggression. -->
+  <AA_Selfess_State_Ability.levels.3.description>消除戰意，使自己免受敵人感知與攻擊。</AA_Selfess_State_Ability.levels.3.description>
+  <!-- EN:  (LevelFour) -->
+  <AA_Selfess_State_Ability.levels.3.labelSuffix>肆級</AA_Selfess_State_Ability.levels.3.labelSuffix>
+  
+</LanguageData>

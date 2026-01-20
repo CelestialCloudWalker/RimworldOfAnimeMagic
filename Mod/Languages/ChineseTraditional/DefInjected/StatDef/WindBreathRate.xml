@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Wind Breath Regen Rate -->
+  <WindBreath_RegenRate.label>風之呼吸恢復率</WindBreath_RegenRate.label>
+  <!-- EN: Rate of Wind Breath regeneration per tick. -->
+  <WindBreath_RegenRate.description>每刻風之呼吸恢復率。</WindBreath_RegenRate.description>
+  
+</LanguageData>

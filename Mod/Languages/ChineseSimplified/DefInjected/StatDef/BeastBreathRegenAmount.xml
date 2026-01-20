@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Beast Breath Regen Amount Per Regen Tick -->
+  <BeastBreath_RegenAmount.label>每刻兽之呼吸恢复量</BeastBreath_RegenAmount.label>
+  <!-- EN: Rate of Beast Breath regeneration per tick. -->
+  <BeastBreath_RegenAmount.description>每刻兽之呼吸恢复量。</BeastBreath_RegenAmount.description>
+  
+</LanguageData>

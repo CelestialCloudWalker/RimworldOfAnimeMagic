@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: ground launch -->
+  <GroundLaunch.label>地面彈射</GroundLaunch.label>
+  <!-- EN: Erupts the ground in a targeted area, launching all nearby pawns into the air and dealing damage. -->
+  <GroundLaunch.description>讓特定範圍的地面發生爆炸，附近的生物會彈到空中受到傷害。</GroundLaunch.description>
+  
+  <!-- EN: ground launch test -->
+  <GroundLaunchTest.label>地面彈射測試</GroundLaunchTest.label>
+  <!-- EN: Test version of ground launch ability. -->
+  <GroundLaunchTest.description>地面彈射測試版。</GroundLaunchTest.description>
+  
+</LanguageData>

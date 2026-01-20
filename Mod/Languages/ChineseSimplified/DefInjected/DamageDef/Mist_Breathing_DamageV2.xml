@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: mist slash -->
+  <Mist_Breathing_Damage.label>霞之斩击</Mist_Breathing_Damage.label>
+  <!-- EN: {0} vanished into the mist. -->
+  <Mist_Breathing_Damage.deathMessage>{0}消失在霞雾中。</Mist_Breathing_Damage.deathMessage>
+  
+</LanguageData>

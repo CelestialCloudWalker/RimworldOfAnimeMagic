@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flame Hashira -->
+  <AA_FlameHashira_PK.label>炎柱</AA_FlameHashira_PK.label>
+  
+  <!-- EN: Forest Hashira -->
+  <AA_ForestHashira_PK.label>森柱</AA_ForestHashira_PK.label>
+  
+  <!-- EN: Hinoe -->
+  <AA_Hinoe_PK.label>丙</AA_Hinoe_PK.label>
+  
+  <!-- EN: Hinoto -->
+  <AA_Hinoto_PK.label>丁</AA_Hinoto_PK.label>
+  
+  <!-- EN: Insect Hashira -->
+  <AA_InsectHashira_PK.label>蟲柱</AA_InsectHashira_PK.label>
+  
+  <!-- EN: Kanoe -->
+  <AA_Kanoe_PK.label>庚</AA_Kanoe_PK.label>
+  
+  <!-- EN: Kanoto -->
+  <AA_Kanoto_PK.label>辛</AA_Kanoto_PK.label>
+  
+  <!-- EN: Kinoe -->
+  <AA_Kinoe_PK.label>甲</AA_Kinoe_PK.label>
+  
+  <!-- EN: Kinoto -->
+  <AA_Kinoto_PK.label>乙</AA_Kinoto_PK.label>
+  
+  <!-- EN: Love Hashira -->
+  <AA_LoveHashira_PK.label>戀柱</AA_LoveHashira_PK.label>
+  
+  <!-- EN: Mist Hashira -->
+  <AA_MistHashira_PK.label>霞柱</AA_MistHashira_PK.label>
+  
+  <!-- EN: Mizunoe -->
+  <AA_Mizunoe_PK.label>壬</AA_Mizunoe_PK.label>
+  
+  <!-- EN: Mizunoto -->
+  <AA_Mizunoto_PK.label>癸</AA_Mizunoto_PK.label>
+  
+  <!-- EN: Serpent Hashira -->
+  <AA_SerpentHashira_PK.label>蛇柱</AA_SerpentHashira_PK.label>
+  
+  <!-- EN: Sound Hashira -->
+  <AA_SoundHashira_PK.label>音柱</AA_SoundHashira_PK.label>
+  
+  <!-- EN: Stone Hashira -->
+  <AA_StoneHashira_PK.label>岩柱</AA_StoneHashira_PK.label>
+  
+  <!-- EN: Tsuchinoe -->
+  <AA_Tsuchinoe_PK.label>戊</AA_Tsuchinoe_PK.label>
+  
+  <!-- EN: Tsuchinoto -->
+  <AA_Tsuchinoto_PK.label>己</AA_Tsuchinoto_PK.label>
+  
+  <!-- EN: Tsuguko -->
+  <AA_Tsuguko_PK.label>繼子</AA_Tsuguko_PK.label>
+  
+  <!-- EN: Water Hashira -->
+  <AA_WaterHashira_PK.label>水柱</AA_WaterHashira_PK.label>
+  
+  <!-- EN: Wind Hashira -->
+  <AA_WindHashira_PK.label>風柱</AA_WindHashira_PK.label>
+  
+</LanguageData>

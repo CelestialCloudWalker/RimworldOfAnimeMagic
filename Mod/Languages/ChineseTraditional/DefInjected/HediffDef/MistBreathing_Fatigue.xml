@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Mist Breathing Fatigue -->
+  <MistBreathing_Fatigue.label>霞之呼吸疲勞</MistBreathing_Fatigue.label>
+  <!-- EN: The disorienting technique clouds the user's own mind, leaving them confused and mentally drained. -->
+  <MistBreathing_Fatigue.description>重複使用呼吸法使身體疲憊，無法站穩。</MistBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <MistBreathing_Fatigue.stages.Mild_fatigue.label>輕微疲勞</MistBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <MistBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲勞</MistBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <MistBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲勞</MistBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <MistBreathing_Fatigue.stages.Severe_fatigue.label>嚴重疲勞</MistBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <MistBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</MistBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <MistBreathing_Fatigue.stages.Collapsed.label>累垮</MistBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

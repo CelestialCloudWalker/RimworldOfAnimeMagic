@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sun Breath Regen Amount Per Regen Tick -->
+  <SunBreath_RegenAmount.label>每刻日之呼吸恢复量</SunBreath_RegenAmount.label>
+  <!-- EN: Rate of Sun Breath regeneration per tick. -->
+  <SunBreath_RegenAmount.description>每刻日之呼吸恢复量。</SunBreath_RegenAmount.description>
+  
+</LanguageData>

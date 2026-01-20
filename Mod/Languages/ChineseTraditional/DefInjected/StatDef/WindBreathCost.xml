@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Wind Breath Cost Multiplier -->
+  <WindBreath_Cost.label>風之呼吸資源花費乘數</WindBreath_Cost.label>
+  <!-- EN: Wind Breath Cost Multiplier. -->
+  <WindBreath_Cost.description>風之呼吸資源花費乘數。</WindBreath_Cost.description>
+  
+</LanguageData>

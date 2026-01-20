@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Increase Breath Capacity -->
+  <Moon_Breath_Increase.label>增加呼吸法容量</Moon_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Moon_Breath_Increase2.label>增加呼吸法容量</Moon_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Moon_Breath_Increase3.label>增加呼吸法容量</Moon_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <Moon_Breath_Increase4.label>增加呼吸法容量</Moon_Breath_Increase4.label>
+  
+  <!-- EN: Moon Breathing: Disperse -->
+  <Moon_Breathing_Disperse.label>月之呼吸・散</Moon_Breathing_Disperse.label>
+  
+  <!-- EN: MoonBreathing -->
+  <Moon_Breathing_GeneGive_Talent.label>月之呼吸</Moon_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Moon Breathing: Multi Strike -->
+  <Moon_Breathing_Multi_Strike.label>月之呼吸・连袭</Moon_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Moon Breathing: Reflect -->
+  <Moon_Breathing_Reflect.label>月之呼吸・返</Moon_Breathing_Reflect.label>
+  
+  <!-- EN: Moon Breathing: Slash -->
+  <Moon_Breathing_Slash.label>月之呼吸・斩</Moon_Breathing_Slash.label>
+  
+  <!-- EN: Moon Breathing: Slash -->
+  <Moon_Breathing_Strike.label>月之呼吸・袭</Moon_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <MoonBreath_Breath_Increase.label>增加呼吸法容量</MoonBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <MoonBreath_Breath_Increase2.label>增加呼吸法容量</MoonBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <MoonBreath_Breath_Increase3.label>增加呼吸法容量</MoonBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <MoonBreath_Breath_Increase4.label>增加呼吸法容量</MoonBreath_Breath_Increase4.label>
+  
+  <!-- EN: MoonBreath_Cost -->
+  <MoonBreath_Cost_Talent.label>月之呼吸花费</MoonBreath_Cost_Talent.label>
+  
+  <!-- EN: MoonBreath_Cost -->
+  <MoonBreath_Cost_Talent2.label>月之呼吸花费</MoonBreath_Cost_Talent2.label>
+  
+  <!-- EN: MoonBreath_Cost -->
+  <MoonBreath_Cost_Talent3.label>月之呼吸花费</MoonBreath_Cost_Talent3.label>
+  
+  <!-- EN: MoonBreath_Cost -->
+  <MoonBreath_Cost_Talent4.label>月之呼吸花费</MoonBreath_Cost_Talent4.label>
+  
+  <!-- EN: MoonBreath_RegenAmount -->
+  <MoonBreath_RegenAmount_Talent.label>每刻月之呼吸恢复量</MoonBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: MoonBreath_RegenAmount -->
+  <MoonBreath_RegenAmount_Talent2.label>每刻月之呼吸恢复量</MoonBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: MoonBreath_RegenAmount -->
+  <MoonBreath_RegenAmount_Talent3.label>每刻月之呼吸恢复量</MoonBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: MoonBreath_RegenAmount -->
+  <MoonBreath_RegenAmount_Talent4.label>每刻月之呼吸恢复量</MoonBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: MoonBreath_RegenRate -->
+  <MoonBreath_RegenRate_Talent.label>月之呼吸恢复率</MoonBreath_RegenRate_Talent.label>
+  
+  <!-- EN: MoonBreath_RegenRate -->
+  <MoonBreath_RegenRate_Talent2.label>月之呼吸恢复率</MoonBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: MoonBreath_RegenRate -->
+  <MoonBreath_RegenRate_Talent3.label>月之呼吸恢复率</MoonBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: MoonBreath_RegenRate -->
+  <MoonBreath_RegenRate_Talent4.label>月之呼吸恢复率</MoonBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: MoonBreath_RegenTicks -->
+  <MoonBreath_RegenTicks_Talent.label>月之呼吸恢复间隔</MoonBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: MoonBreath_RegenTicks -->
+  <MoonBreath_RegenTicks_Talent2.label>月之呼吸恢复间隔</MoonBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: MoonBreath_RegenTicks -->
+  <MoonBreath_RegenTicks_Talent3.label>月之呼吸恢复间隔</MoonBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: MoonBreath_RegenTicks -->
+  <MoonBreath_RegenTicks_Talent4.label>月之呼吸恢复间隔</MoonBreath_RegenTicks_Talent4.label>
+</LanguageData>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Transparent World -->
+  <TransparentWorldAbility.label>通透世界</TransparentWorldAbility.label>
+  <!-- EN: Activate heightened perception to see through obstacles and enhance combat abilities. -->
+  <TransparentWorldAbility.description>喚起更高的知覺，看穿障礙物並提升格鬥技能。</TransparentWorldAbility.description>
+  <!-- EN: Basic heightened perception allows brief glimpses through obstacles and slight combat improvements. -->
+  <TransparentWorldAbility.levels.0.description>基礎的知覺提升能短暫看穿障礙物後的目標，並稍微提升格鬥能力。</TransparentWorldAbility.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <TransparentWorldAbility.levels.0.labelSuffix>壹級</TransparentWorldAbility.levels.0.labelSuffix>
+  <!-- EN: LevelTwo perception provides clearer sight through obstacles and improved reflexes. -->
+  <TransparentWorldAbility.levels.1.description>貳級的知覺能更清晰地看穿障礙物，反應能力也有所提升。</TransparentWorldAbility.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <TransparentWorldAbility.levels.1.labelSuffix>貳級</TransparentWorldAbility.levels.1.labelSuffix>
+  <!-- EN: Advanced perception reveals enemy weak points and dramatically improves combat prowess. -->
+  <TransparentWorldAbility.levels.2.description>進階知覺能看穿敵方弱點，格鬥能力也大幅增強。</TransparentWorldAbility.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <TransparentWorldAbility.levels.2.labelSuffix>參級</TransparentWorldAbility.levels.2.labelSuffix>
+  <!-- EN: Mastered perception grants near-omniscient battlefield awareness and supernatural combat abilities. -->
+  <TransparentWorldAbility.levels.3.description>精通知覺可以得到接近全知的戰情感知，還能獲得超自然的格鬥能力。</TransparentWorldAbility.levels.3.description>
+  <!-- EN:  (LevelFour) -->
+  <TransparentWorldAbility.levels.3.labelSuffix>肆級</TransparentWorldAbility.levels.3.labelSuffix>
+  
+</LanguageData>

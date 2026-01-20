@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: demon slayer corps -->
+  <AA_PlayerSlayerCorps.label>鬼杀队</AA_PlayerSlayerCorps.label>
+  <!-- EN: A branch of the legendary Demon Slayer Corps dedicated to protecting humanity from demonic threats. -->
+  <AA_PlayerSlayerCorps.description>传奇鬼杀队的分支之一，保护人类免受鬼害。</AA_PlayerSlayerCorps.description>
+  <!-- EN: leader -->
+  <AA_PlayerSlayerCorps.leaderTitle>领导</AA_PlayerSlayerCorps.leaderTitle>
+  <!-- EN: slayer -->
+  <AA_PlayerSlayerCorps.pawnSingular>队士</AA_PlayerSlayerCorps.pawnSingular>
+  <!-- EN: slayers -->
+  <AA_PlayerSlayerCorps.pawnsPlural>队士</AA_PlayerSlayerCorps.pawnsPlural>
+  
+  <!-- EN: Demon Slayer Corps -->
+  <AA_Slayer_Corps.label>鬼杀队</AA_Slayer_Corps.label>
+  <!-- EN: An elite organization of demon slayers dedicated to protecting humanity from the threat of demons. The Corps operates with a strict hierarchy based on skill and breathing techniques, from the lowest Mizunoto rank to the legendary Hashira pillars who master specific breathing forms. -->
+  <AA_Slayer_Corps.description>致力于保护人类免受鬼害的菁英鬼杀组织。队中运行一套森严的等级制度，以技能和呼吸法程度为准，最低从癸级分到精通特定呼吸法的传奇柱级。</AA_Slayer_Corps.description>
+  <!-- EN: Demon Slayer Corps -->
+  <AA_Slayer_Corps.fixedName>鬼杀队</AA_Slayer_Corps.fixedName>
+  <!-- EN: leader -->
+  <AA_Slayer_Corps.leaderTitle>领导</AA_Slayer_Corps.leaderTitle>
+  <!-- EN: Slayer -->
+  <AA_Slayer_Corps.pawnSingular>队士</AA_Slayer_Corps.pawnSingular>
+  <!-- EN: Slayers -->
+  <AA_Slayer_Corps.pawnsPlural>队士</AA_Slayer_Corps.pawnsPlural>
+  
+</LanguageData>

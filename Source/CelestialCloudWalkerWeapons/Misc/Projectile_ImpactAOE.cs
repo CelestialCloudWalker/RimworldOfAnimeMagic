@@ -13,10 +13,20 @@ namespace AnimeArsenal
         {
             var targets = AnimeArsenalUtility.GetThingsInRange(Position, MapHeld, Props.ExplosionRadius, IsValidTarget).ToList();
 
+            Pawn launcherPawn = launcher as Pawn;
+            float scaledAoeDamage = DamageScalingUtility.GetScaledDamage(
+                Props.aoeDamage,
+                launcherPawn,
+                Props.scaleStat,
+                Props.scaleSkill,
+                Props.skillMultiplier,
+                Props.debugScaling
+            );
+
             AnimeArsenalUtility.DealDamageToThingsInRange(
                 targets,
                 Props.damageDef,
-                Props.aoeDamage,
+                scaledAoeDamage,
                 Props.GetArmorPenetration(launcher)
             );
 
@@ -26,7 +36,6 @@ namespace AnimeArsenal
             }
 
             Props.ExplosionEffect?.Spawn(Position, MapHeld);
-
             base.Impact(hitThing, blockedByShield);
         }
 
@@ -65,6 +74,11 @@ namespace AnimeArsenal
         public EffecterDef ExplosionEffect;
         public bool CanHitFriendly = true;
         public bool CanHitCaster = false;
-        public float aoeDamage = 7f; 
+        public float aoeDamage = 7f;
+
+        public StatDef scaleStat;
+        public SkillDef scaleSkill;
+        public float skillMultiplier = 0.1f;
+        public bool debugScaling = false;
     }
 }

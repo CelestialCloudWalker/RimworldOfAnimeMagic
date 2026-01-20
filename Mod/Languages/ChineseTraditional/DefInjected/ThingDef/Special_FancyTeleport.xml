@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: fancy teleport thing -->
+  <EMF_FancyTeleport.label>花俏傳送</EMF_FancyTeleport.label>
+  <!-- EN: teleporting -->
+  <EMF_FancyTeleport.description>傳送中</EMF_FancyTeleport.description>
+  
+</LanguageData>

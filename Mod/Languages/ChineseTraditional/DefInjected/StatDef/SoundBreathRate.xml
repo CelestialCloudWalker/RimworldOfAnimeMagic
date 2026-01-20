@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sound Breath Regen Rate -->
+  <SoundBreath_RegenRate.label>音之呼吸恢復率</SoundBreath_RegenRate.label>
+  <!-- EN: Rate of Sound Breath regeneration per tick. -->
+  <SoundBreath_RegenRate.description>每刻音之呼吸恢復率。</SoundBreath_RegenRate.description>
+  
+</LanguageData>

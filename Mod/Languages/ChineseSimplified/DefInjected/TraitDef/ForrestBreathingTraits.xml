@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: camouflage expert -->
+  <CamouflageExpert.degreeDatas.camouflage_expert.label>伪装专家</CamouflageExpert.degreeDatas.camouflage_expert.label>
+  <!-- EN: [PAWN_nameDef] moves like a shadow through natural terrain. [PAWN_possessive] mastery of concealment makes [PAWN_objective] nearly invisible to enemies and deadly from ambush. -->
+  <CamouflageExpert.degreeDatas.camouflage_expert.description>[PAWN_nameDef]如同暗影穿梭在自然地带。卓越的藏匿技巧使[PAWN_pronoun]在敌人眼中几乎隐形，也让[PAWN_pronoun]成为埋伏点的致命威胁。</CamouflageExpert.degreeDatas.camouflage_expert.description>
+  
+  <!-- EN: nature's guardian -->
+  <NaturesGuardian.degreeDatas.natures_guardian.label>自然守卫</NaturesGuardian.degreeDatas.natures_guardian.label>
+  <!-- EN: [PAWN_nameDef] is a devoted protector of the natural world. [PAWN_pronoun] works expertly with wood and plants but struggles with industrial manufacturing that harms the environment. -->
+  <NaturesGuardian.degreeDatas.natures_guardian.description>[PAWN_nameDef]致力于保护自然世界。[PAWN_pronoun]善于加工木材和植物，却对破坏环境的工业进行抗争。</NaturesGuardian.degreeDatas.natures_guardian.description>
+  
+  <!-- EN: photosynthesis -->
+  <Photosynthesis.degreeDatas.photosynthesis.label>光合作用</Photosynthesis.degreeDatas.photosynthesis.label>
+  <!-- EN: [PAWN_nameDef] draws sustenance from sunlight like a plant. [PAWN_pronoun] needs less food during bright days but becomes sluggish and hungry in darkness or underground. -->
+  <Photosynthesis.degreeDatas.photosynthesis.description>[PAWN_nameDef]像植物一样从阳光吸收养分。[PAWN_pronoun]白天只需要少量食物，但在晚上或地下会变得迟钝又饥饿。</Photosynthesis.degreeDatas.photosynthesis.description>
+  
+  <!-- EN: root network -->
+  <RootNetwork.degreeDatas.root_network.label>草根网络</RootNetwork.degreeDatas.root_network.label>
+  <!-- EN: [PAWN_nameDef] feels connected to the living network of nature itself. [PAWN_possessive] heightened awareness allows [PAWN_objective] to sense danger and understand natural phenomena with uncanny insight. -->
+  <RootNetwork.degreeDatas.root_network.description>[PAWN_nameDef]觉得自己和自然生态网络相连。[PAWN_pronoun]的敏锐感知能力可以察觉危险，还能以奇异的洞察力理解自然现象。</RootNetwork.degreeDatas.root_network.description>
+  
+  <!-- EN: seasonal adaptation -->
+  <SeasonalAdaptation.degreeDatas.seasonal_adaptation.label>季节适应</SeasonalAdaptation.degreeDatas.seasonal_adaptation.label>
+  <!-- EN: [PAWN_nameDef] changes with the seasons like the forest itself. [PAWN_possessive] body adapts to temperature extremes, and [PAWN_pronoun] finds strength in nature's eternal cycles. -->
+  <SeasonalAdaptation.degreeDatas.seasonal_adaptation.description>[PAWN_nameDef]像森林一样随着四季更迭。[PAWN_pronoun]的身体适应极端气温，还发现自己可从自然的永续循环中汲取能量。</SeasonalAdaptation.degreeDatas.seasonal_adaptation.description>
+  
+  <!-- EN: woodland survivor -->
+  <WoodlandSurvivor.degreeDatas.woodland_survivor.label>林地生存</WoodlandSurvivor.degreeDatas.woodland_survivor.label>
+  <!-- EN: [PAWN_nameDef] thrives in the wilderness. [PAWN_pronoun] can hunt with deadly precision, find sustenance where others starve, and needs little comfort when surrounded by nature. -->
+  <WoodlandSurvivor.degreeDatas.woodland_survivor.description>[PAWN_nameDef]在荒野中蓬勃发展。[PAWN_pronoun]用高超的精准度打猎，在他人挨饿的地方找到食物，[PAWN_nameDef]在大自然围绕之下几乎不需要慰借。</WoodlandSurvivor.degreeDatas.woodland_survivor.description>
+  
+</LanguageData>

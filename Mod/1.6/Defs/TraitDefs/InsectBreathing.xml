@@ -29,7 +29,7 @@
 
   <TraitDef>
     <defName>ChitinousSkin</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>chitinous skin</label>
@@ -81,7 +81,7 @@
 
   <TraitDef>
     <defName>Metamorphosis</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>metamorphosis</label>
@@ -103,7 +103,7 @@
 
   <TraitDef>
     <defName>SwarmTactics</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -152,7 +152,7 @@
 
   <TraitDef>
     <defName>WebWeaving</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Crafting</li>
     </forcedPassions>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Lower Moon Demon Hunt -->
+  <AnimeArsenal_LowerMoonDemonHunt.questAvailableLetterLabel>下弦鬼狩猎</AnimeArsenal_LowerMoonDemonHunt.questAvailableLetterLabel>
+  <!-- EN:
+    <li>questDescription->A Lower Moon demon has been spotted terrorizing a nearby settlement. The Demon Slayer Corps has identified its location and is requesting assistance from anyone with breathing techniques to eliminate this threat.\n\n"This demon is powerful, but not invincible. Those who have mastered even basic breathing forms should be able to face it with proper preparation. The hunt will be dangerous, but you'll emerge stronger - we've seen hunters develop new abilities after confronting demons of this caliber."\n\nThe mission will take several days. Success will be measured by survival and growth - those who return will have proven their worth.</li>
+  -->
+  <AnimeArsenal_LowerMoonDemonHunt.questDescriptionRules.rulesStrings>
+  <li>questDescription->一名下弦鬼被目击到在附近定居点作恶。鬼杀队已经确认其位址，并征求呼吸法用户的协助，以消灭威胁。\n\n“鬼虽强大，但非无敌。那些精通呼吸法基本型的队士，应能在做好充足准备後与之交战。这场猎鬼虽然危险，但讨伐者也会变得更强⸺不少人与这种等级的鬼交战后获得了新能力。”\n\n这项任务会耗费几天。成功与否会依生存和成长衡量⸺归还者会证明自身的价值。</li>
+  </AnimeArsenal_LowerMoonDemonHunt.questDescriptionRules.rulesStrings>
+  <!-- EN:
+    <li>questName->Lower Moon Elimination</li>
+    <li>questName->Hunt for Lower Rank Demons</li>
+    <li>questName->Lesser Demon Extermination</li>
+    <li>questName->Lower Moon Threat</li>
+  -->
+  <AnimeArsenal_LowerMoonDemonHunt.questNameRules.rulesStrings>
+    <li>questName->讨伐下弦</li>
+    <li>questName->狩猎下弦鬼</li>
+    <li>questName->弱鬼灭杀</li>
+    <li>questName->下弦威胁</li>
+  </AnimeArsenal_LowerMoonDemonHunt.questNameRules.rulesStrings>
+  <!-- EN: {PAWN} fell in battle against the Lower Moon demon, unable to withstand its demonic power. -->
+  <AnimeArsenal_LowerMoonDemonHunt.root.nodes.GetFlexibleRewards.customDeathMessage>{PAWN}在下弦鬼的交战中殒落了，无法见识到其身上的鬼之力量。</AnimeArsenal_LowerMoonDemonHunt.root.nodes.GetFlexibleRewards.customDeathMessage>
+  <!-- EN: {PAWN} has awakened {REWARD} through their harrowing battle with the demon! -->
+  <AnimeArsenal_LowerMoonDemonHunt.root.nodes.GetFlexibleRewards.customRewardMessage>{PAWN}在与鬼的苦战中觉醒了{REWARD}！</AnimeArsenal_LowerMoonDemonHunt.root.nodes.GetFlexibleRewards.customRewardMessage>
+  <!-- EN: {PAWNS} returned victorious from the Lower Moon hunt, their breathing techniques refined through combat! -->
+  <AnimeArsenal_LowerMoonDemonHunt.root.nodes.GetFlexibleRewards.customSurvivalMessage>{PAWNS}在下弦鬼狩猎中凯旋归来，呼吸法在交斗中变得精湛！</AnimeArsenal_LowerMoonDemonHunt.root.nodes.GetFlexibleRewards.customSurvivalMessage>
+  <!-- EN: Lower Moon Demon Sighting -->
+  <AnimeArsenal_LowerMoonDemonHunt.root.nodes.ShuttleDelay.node.nodes.Letter.label.slateRef>下弦鬼目击事件</AnimeArsenal_LowerMoonDemonHunt.root.nodes.ShuttleDelay.node.nodes.Letter.label.slateRef>
+  <!-- EN: A messenger from the Demon Slayer Corps has arrived with urgent news. A Lower Moon demon has been spotted in a nearby region, and they're requesting assistance from anyone who has mastered breathing techniques.\n\n"We've tracked this demon to its lair. It's a Lower Moon - dangerous, but not as formidable as the upper ranks. Anyone with breathing techniques should be capable of handling it. This is an excellent opportunity to test your abilities in real combat. Two volunteers should be sufficient."\n\nThis hunt will be perilous, but those who survive will emerge stronger, with their techniques refined through battle. -->
+  <AnimeArsenal_LowerMoonDemonHunt.root.nodes.ShuttleDelay.node.nodes.Letter.text.slateRef>鬼杀队的鎹鸦传来紧急通报。一名下弦鬼在附近地区被目击，鬼杀队征求呼吸法熟练者的协助\n\n“我们已经追踪到鬼的居所。这是一名下弦鬼，虽然危险，但不及上弦。掌握呼吸法的人都应有能力应付。这是测验实战能力的绝佳机会。两名志愿者应当足够。”\n\n这场猎鬼特别危险，但幸存者会更加强大，能力也会在交斗中逐渐精湛。</AnimeArsenal_LowerMoonDemonHunt.root.nodes.ShuttleDelay.node.nodes.Letter.text.slateRef>
+  <!-- EN: Demon Hunt Complete -->
+  <AnimeArsenal_LowerMoonDemonHunt.root.nodes.ColonistsReturned.node.nodes.Letter.label.slateRef>猎鬼成功</AnimeArsenal_LowerMoonDemonHunt.root.nodes.ColonistsReturned.node.nodes.Letter.label.slateRef>
+  <!-- EN: Your demon slayers have returned from the hunt. Their breathing techniques have been tested in true combat against a Lower Moon demon, and they've grown stronger from the experience. -->
+  <AnimeArsenal_LowerMoonDemonHunt.root.nodes.ColonistsReturned.node.nodes.Letter.text.slateRef>你的鬼杀队士从狩猎中归还，他们的呼吸法能力在与下弦鬼的实战经过测试，并从这些经验中成长拙壮。</AnimeArsenal_LowerMoonDemonHunt.root.nodes.ColonistsReturned.node.nodes.Letter.text.slateRef>
+  <!-- EN: Hunt Failed -->
+  <AnimeArsenal_LowerMoonDemonHunt.root.nodes.ColonistsDied.node.label.slateRef>狩猎失败</AnimeArsenal_LowerMoonDemonHunt.root.nodes.ColonistsDied.node.label.slateRef>
+  <!-- EN: The Lower Moon demon proved too powerful. Your colonist did not survive the encounter. -->
+  <AnimeArsenal_LowerMoonDemonHunt.root.nodes.ColonistsDied.node.text.slateRef>下弦鬼力量太强，你的殖民者没能在遭遇中幸存。</AnimeArsenal_LowerMoonDemonHunt.root.nodes.ColonistsDied.node.text.slateRef>
+  
+</LanguageData>

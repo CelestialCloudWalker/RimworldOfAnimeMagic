@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Breathing Potential -->
+  <Gene_BreathingPotential.label>呼吸潛能</Gene_BreathingPotential.label>
+  <!-- EN: Basic breathing potential - the foundation for all breathing techniques. -->
+  <Gene_BreathingPotential.description>基礎呼吸潛能——所有呼吸法的根本。</Gene_BreathingPotential.description>
+  <!-- EN: Current stored Breath. -->
+  <Gene_BreathingPotential.resourceDescription>現存呼吸</Gene_BreathingPotential.resourceDescription>
+  <!-- EN: Breath -->
+  <Gene_BreathingPotential.resourceLabel>呼吸</Gene_BreathingPotential.resourceLabel>
+  
+</LanguageData>

@@ -2,20 +2,19 @@
 <Defs>
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>DemonSlayerCorp_UniformSkirtA</defName>
-    <label>Demon Slayer Corp Skirt B</label>
+    <label>Demon Slayer Corp Skirt Unbuttoned</label>
     <description>A durable Demon Slayer Corps uniform designed for mobility and protection.</description>
-    <recipeMaker>
-      <researchPrerequisite>AA_SlayerCorpsUniformResearch</researchPrerequisite>
-    </recipeMaker>
     <graphicData>
-      <shaderType>CutoutComplex</shaderType>
-      <texPath>DemonSlayerCorp_UniformSkirtBreast/DemonSlayerCorp_UniformSkirtBreast_Female_south</texPath>
+      <texPath>DemonSlayerCorp_UniformSkirt_Unbuttoned/Icon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
-    <costList>
-      <Scarlet_Thread_Fabric>80</Scarlet_Thread_Fabric>
-    </costList>
     <smeltable>false</smeltable>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
     <thingCategories>
       <li>ApparelMisc</li>
     </thingCategories>
@@ -40,8 +39,8 @@
         <li>Arms</li>
         <li>Legs</li>
       </bodyPartGroups>
-      <wornGraphicPath>DemonSlayerCorp_UniformSkirtBreast/DemonSlayerCorp_UniformSkirtBreast</wornGraphicPath>
-      <gender>Female</gender>
+      <wornGraphicPath>DemonSlayerCorp_UniformSkirt_Unbuttoned/DemonSlayerCorp_UniformSkirt_Unbuttoned</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
       <layers>
         <li>Middle</li>
       </layers>
@@ -57,5 +56,12 @@
     <tradeTags>
       <li>BasicClothing</li>
     </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>AA_SlayerCorpsUniformResearch</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>235</displayPriority>
+    </recipeMaker>
   </ThingDef>
 </Defs>

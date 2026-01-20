@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Selfless State 2 -->
+  <Test1_Invisibility.label>无我的境界 2</Test1_Invisibility.label>
+  <!-- EN: This pawn is invisible to almost all other creatures. -->
+  <Test1_Invisibility.description>这个人对几乎所有生物都是隐形的。</Test1_Invisibility.description>
+  
+  <!-- EN: Selfless State -->
+  <Test2_Invisibility.label>无我的境界</Test2_Invisibility.label>
+  <!-- EN: This pawn is invisible to almost all other creatures. -->
+  <Test2_Invisibility.description>这个人对几乎所有生物都是隐形的。</Test2_Invisibility.description>
+  
+</LanguageData>

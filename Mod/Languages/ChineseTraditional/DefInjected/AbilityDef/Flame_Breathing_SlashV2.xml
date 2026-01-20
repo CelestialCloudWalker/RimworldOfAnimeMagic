@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flame Breathing: Slash -->
+  <Flame_Breathing_Slash.label>炎之呼吸・斬</Flame_Breathing_Slash.label>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Flame_Breathing_Slash.description>對目標釋出斬擊的範圍技。</Flame_Breathing_Slash.description>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Flame_Breathing_Slash.levels.0.description>對目標釋出斬擊的範圍技。</Flame_Breathing_Slash.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Flame_Breathing_Slash.levels.0.labelSuffix>壹級</Flame_Breathing_Slash.levels.0.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Flame_Breathing_Slash.levels.1.description>對目標釋出斬擊的範圍技。</Flame_Breathing_Slash.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Flame_Breathing_Slash.levels.1.labelSuffix>貳級</Flame_Breathing_Slash.levels.1.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Flame_Breathing_Slash.levels.2.description>對目標釋出斬擊的範圍技。</Flame_Breathing_Slash.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Flame_Breathing_Slash.levels.2.labelSuffix>參級</Flame_Breathing_Slash.levels.2.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Flame_Breathing_Slash.levels.3.description>對目標釋出斬擊的範圍技。</Flame_Breathing_Slash.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Flame_Breathing_Slash.levels.3.labelSuffix>肆級</Flame_Breathing_Slash.levels.3.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Flame_Breathing_Slash.levels.4.description>對目標釋出斬擊的範圍技。</Flame_Breathing_Slash.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Flame_Breathing_Slash.levels.4.labelSuffix>伍級</Flame_Breathing_Slash.levels.4.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Flame_Breathing_Slash.levels.5.description>對目標釋出斬擊的範圍技。</Flame_Breathing_Slash.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Flame_Breathing_Slash.levels.5.labelSuffix>陸級</Flame_Breathing_Slash.levels.5.labelSuffix>
+  
+</LanguageData>

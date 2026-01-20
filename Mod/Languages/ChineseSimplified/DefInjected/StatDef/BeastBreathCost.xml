@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Beast Breath Cost Multiplier -->
+  <BeastBreath_Cost.label>兽之呼吸资源花费乘数</BeastBreath_Cost.label>
+  <!-- EN: Beast Breath Cost Multiplier. -->
+  <BeastBreath_Cost.description>兽之呼吸资源花费乘数。</BeastBreath_Cost.description>
+  
+</LanguageData>

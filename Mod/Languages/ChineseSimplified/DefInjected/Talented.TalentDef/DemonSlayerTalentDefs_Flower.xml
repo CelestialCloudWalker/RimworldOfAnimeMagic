@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Flower Breathing: Disperse -->
+  <Flower_Breathing_Disperse.label>花之呼吸・散</Flower_Breathing_Disperse.label>
+  
+  <!-- EN: FlowerBreathing -->
+  <Flower_Breathing_GeneGive_Talent.label>花之呼吸</Flower_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Flower Breathing: Multi Strike -->
+  <Flower_Breathing_Multi_Strike.label>花之呼吸・连袭</Flower_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Flower Breathing: Reflect -->
+  <Flower_Breathing_Reflect.label>花之呼吸・返</Flower_Breathing_Reflect.label>
+  
+  <!-- EN: Flower Breathing: Slash -->
+  <Flower_Breathing_Slash.label>花之呼吸・斩</Flower_Breathing_Slash.label>
+  
+  <!-- EN: Flower Breathing: Strike -->
+  <Flower_Breathing_Strike.label>花之呼吸・袭</Flower_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <FlowerBreath_Breath_Increase.label>增加呼吸法容量</FlowerBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <FlowerBreath_Breath_Increase2.label>增加呼吸法容量</FlowerBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <FlowerBreath_Breath_Increase3.label>增加呼吸法容量</FlowerBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <FlowerBreath_Breath_Increase4.label>增加呼吸法容量</FlowerBreath_Breath_Increase4.label>
+  
+  <!-- EN: FlowerBreath_Cost -->
+  <FlowerBreath_Cost_Talent.label>花之呼吸花费</FlowerBreath_Cost_Talent.label>
+  
+  <!-- EN: FlowerBreath_Cost -->
+  <FlowerBreath_Cost_Talent2.label>花之呼吸花费</FlowerBreath_Cost_Talent2.label>
+  
+  <!-- EN: FlowerBreath_Cost -->
+  <FlowerBreath_Cost_Talent3.label>花之呼吸花费</FlowerBreath_Cost_Talent3.label>
+  
+  <!-- EN: FlowerBreath_Cost -->
+  <FlowerBreath_Cost_Talent4.label>花之呼吸花费</FlowerBreath_Cost_Talent4.label>
+  
+  <!-- EN: FlowerBreath_RegenAmount -->
+  <FlowerBreath_RegenAmount_Talent.label>每刻花之呼吸恢复量</FlowerBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: FlowerBreath_RegenAmount -->
+  <FlowerBreath_RegenAmount_Talent2.label>每刻花之呼吸恢复量</FlowerBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: FlowerBreath_RegenAmount -->
+  <FlowerBreath_RegenAmount_Talent3.label>每刻花之呼吸恢复量</FlowerBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: FlowerBreath_RegenAmount -->
+  <FlowerBreath_RegenAmount_Talent4.label>每刻花之呼吸恢复量</FlowerBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: FlowerBreath_RegenRate -->
+  <FlowerBreath_RegenRate_Talent.label>花之呼吸恢复率</FlowerBreath_RegenRate_Talent.label>
+  
+  <!-- EN: FlowerBreath_RegenRate -->
+  <FlowerBreath_RegenRate_Talent2.label>花之呼吸恢复率</FlowerBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: FlowerBreath_RegenRate -->
+  <FlowerBreath_RegenRate_Talent3.label>花之呼吸恢复率</FlowerBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: FlowerBreath_RegenRate -->
+  <FlowerBreath_RegenRate_Talent4.label>花之呼吸恢复率</FlowerBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: FlowerBreath_RegenTicks -->
+  <FlowerBreath_RegenTicks_Talent.label>花之呼吸恢复间隔</FlowerBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: FlowerBreath_RegenTicks -->
+  <FlowerBreath_RegenTicks_Talent2.label>花之呼吸恢复间隔</FlowerBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: FlowerBreath_RegenTicks -->
+  <FlowerBreath_RegenTicks_Talent3.label>花之呼吸恢复间隔</FlowerBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: FlowerBreath_RegenTicks -->
+  <FlowerBreath_RegenTicks_Talent4.label>花之呼吸恢复间隔</FlowerBreath_RegenTicks_Talent4.label>
+</LanguageData>

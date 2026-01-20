@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Water Blade Technique -->
+  <Water_Blade_Technique.label>水刃技法</Water_Blade_Technique.label>
+  <!-- EN: A technique that allows a Water Breathing user to imbue their attacks with their breathing style. -->
+  <Water_Blade_Technique.description>让水之呼吸用户用将其呼吸法融入攻击的技巧。</Water_Blade_Technique.description>
+  
+  <!-- EN: Water Blade Technique -->
+  <Water_Blade_Technique_LevelFive.label>水刃技法</Water_Blade_Technique_LevelFive.label>
+  <!-- EN: A technique that allows a Water Breathing user to imbue their attacks with their breathing style. -->
+  <Water_Blade_Technique_LevelFive.description>让水之呼吸用户用将其呼吸法融入攻击的技巧。</Water_Blade_Technique_LevelFive.description>
+  
+  <!-- EN: Water Blade Technique -->
+  <Water_Blade_Technique_LevelFour.label>水刃技法</Water_Blade_Technique_LevelFour.label>
+  <!-- EN: A technique that allows a Water Breathing user to imbue their attacks with their breathing style. -->
+  <Water_Blade_Technique_LevelFour.description>让水之呼吸用户用将其呼吸法融入攻击的技巧。</Water_Blade_Technique_LevelFour.description>
+  
+  <!-- EN: Water Blade Technique -->
+  <Water_Blade_Technique_LevelSix.label>水刃技法</Water_Blade_Technique_LevelSix.label>
+  <!-- EN: A technique that allows a Water Breathing user to imbue their attacks with their breathing style. -->
+  <Water_Blade_Technique_LevelSix.description>让水之呼吸用户用将其呼吸法融入攻击的技巧。</Water_Blade_Technique_LevelSix.description>
+  
+  <!-- EN: Water Blade Technique -->
+  <Water_Blade_Technique_LevelThree.label>水刃技法</Water_Blade_Technique_LevelThree.label>
+  <!-- EN: A technique that allows a Water Breathing user to imbue their attacks with their breathing style. -->
+  <Water_Blade_Technique_LevelThree.description>让水之呼吸用户用将其呼吸法融入攻击的技巧。</Water_Blade_Technique_LevelThree.description>
+  
+  <!-- EN: Water Blade Technique -->
+  <Water_Blade_Technique_LevelTwo.label>水刃技法</Water_Blade_Technique_LevelTwo.label>
+  <!-- EN: A technique that allows a Water Breathing user to imbue their attacks with their breathing style. -->
+  <Water_Blade_Technique_LevelTwo.description>让水之呼吸用户用将其呼吸法融入攻击的技巧。</Water_Blade_Technique_LevelTwo.description>
+  
+</LanguageData>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Demon Arts: Pain Blade -->
+  <Blood_Demon_Arts_Pain_Blade.label>血鬼术 苦刃</Blood_Demon_Arts_Pain_Blade.label>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Blood_Demon_Arts_Pain_Blade.description>对目标释出斩击的范围技。</Blood_Demon_Arts_Pain_Blade.description>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Blood_Demon_Arts_Pain_Blade.levels.0.description>对目标释出斩击的范围技。</Blood_Demon_Arts_Pain_Blade.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Blood_Demon_Arts_Pain_Blade.levels.0.labelSuffix>壹级</Blood_Demon_Arts_Pain_Blade.levels.0.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Blood_Demon_Arts_Pain_Blade.levels.1.description>对目标释出斩击的范围技。</Blood_Demon_Arts_Pain_Blade.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Blood_Demon_Arts_Pain_Blade.levels.1.labelSuffix>贰级</Blood_Demon_Arts_Pain_Blade.levels.1.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Blood_Demon_Arts_Pain_Blade.levels.2.description>对目标释出斩击的范围技。</Blood_Demon_Arts_Pain_Blade.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Blood_Demon_Arts_Pain_Blade.levels.2.labelSuffix>参级</Blood_Demon_Arts_Pain_Blade.levels.2.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Blood_Demon_Arts_Pain_Blade.levels.3.description>对目标释出斩击的范围技。</Blood_Demon_Arts_Pain_Blade.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Blood_Demon_Arts_Pain_Blade.levels.3.labelSuffix>肆级</Blood_Demon_Arts_Pain_Blade.levels.3.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Blood_Demon_Arts_Pain_Blade.levels.4.description>对目标释出斩击的范围技。</Blood_Demon_Arts_Pain_Blade.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Blood_Demon_Arts_Pain_Blade.levels.4.labelSuffix>伍级</Blood_Demon_Arts_Pain_Blade.levels.4.labelSuffix>
+  <!-- EN: A ranged technique that sends a slash toward targets. -->
+  <Blood_Demon_Arts_Pain_Blade.levels.5.description>对目标释出斩击的范围技。</Blood_Demon_Arts_Pain_Blade.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Blood_Demon_Arts_Pain_Blade.levels.5.labelSuffix>陆级</Blood_Demon_Arts_Pain_Blade.levels.5.labelSuffix>
+  
+</LanguageData>

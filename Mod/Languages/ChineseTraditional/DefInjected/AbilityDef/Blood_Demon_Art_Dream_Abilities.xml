@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: dream bliss -->
+  <DreamBliss.label>美夢祝福</DreamBliss.label>
+  <!-- EN: A state of well-being from pleasant dreams. -->
+  <DreamBliss.description>做美夢帶來的幸福狀態。</DreamBliss.description>
+  
+  <!-- EN: memory confusion -->
+  <MemoryConfusion.label>記憶錯亂</MemoryConfusion.label>
+  <!-- EN: Confusion and disorientation from having memories extracted. -->
+  <MemoryConfusion.description>被提取記憶，造成錯亂和定向障礙。</MemoryConfusion.description>
+  
+  <!-- EN: memory disorientation -->
+  <MemoryDisorientation.label>記憶定向障礙</MemoryDisorientation.label>
+  <!-- EN: Disorientation from having false memories implanted. -->
+  <MemoryDisorientation.description>被植入假記憶，造成定向障礙。</MemoryDisorientation.description>
+  
+  <!-- EN: nightmare trauma -->
+  <NightmareTrauma.label>惡夢創傷</NightmareTrauma.label>
+  <!-- EN: Psychological trauma from experiencing nightmares. -->
+  <NightmareTrauma.description>做惡夢造成的心靈創傷。</NightmareTrauma.description>
+  <!-- EN: mild -->
+  <NightmareTrauma.stages.mild.label>輕微</NightmareTrauma.stages.mild.label>
+  <!-- EN: severe -->
+  <NightmareTrauma.stages.severe.label>嚴重</NightmareTrauma.stages.severe.label>
+  
+</LanguageData>

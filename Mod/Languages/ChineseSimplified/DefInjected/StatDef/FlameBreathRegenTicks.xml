@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flame Breath Regen Ticks -->
+  <FlameBreath_RegenTicks.label>炎之呼吸恢复间隔</FlameBreath_RegenTicks.label>
+  <!-- EN: Number of ticks between Flame Breath regeneration cycles. -->
+  <FlameBreath_RegenTicks.description>炎之呼吸每次恢复的时间周期，单位为刻。</FlameBreath_RegenTicks.description>
+  
+</LanguageData>

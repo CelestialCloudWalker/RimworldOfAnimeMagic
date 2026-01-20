@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Wind Breathing -->
+  <Wind_BreathingStyleBlankTree.treeName>風之呼吸</Wind_BreathingStyleBlankTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <Wind_BreathingStyleBlankTree.treeToolbarName>{0} 等級({1}) 點數({2})</Wind_BreathingStyleBlankTree.treeToolbarName>
+  
+</LanguageData>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: coiling strike -->
+  <CoilingStrike.degreeDatas.coiling_Strike.label>缠绕突袭</CoilingStrike.degreeDatas.coiling_strike.label>
+  <!-- EN: [PAWN_nameDef] fights like a constrictor, wrapping around enemies to subdue them. [PAWN_possessive] combat style focuses on restraint and capture rather than killing. -->
+  <CoilingStrike.degreeDatas.coiling_strike.description>[PAWN_nameDef]战斗时就象蟒蛇，以缠绕制服敌人。[PAWN_pronoun]的战斗方式专注於压制与捕捉，而非杀害。</CoilingStrike.degreeDatas.coiling_strike.description>
+ 
+  <!-- EN: cold-blooded -->
+  <ColdBlooded.degreeDatas.coldblooded.label>冷血动物</ColdBlooded.degreeDatas.coldblooded.label>
+  <!-- EN: [PAWN_nameDef] thinks with reptilian logic, calculating and precise. [PAWN_possessive] performance varies with temperature, but [PAWN_possessive] cold reasoning makes [PAWN_objective] an exceptional strategist. -->
+  <ColdBlooded.degreeDatas.coldblooded.description>[PAWN_nameDef]用爬虫类的逻辑思考，善于计算且准确无误。[PAWN_pronoun]的表现随温度变化，冷静的思维使[PAWN_pronoun]成为卓越的策略家。</ColdBlooded.degreeDatas.coldblooded.description>
+ 
+  <!-- EN: flexible form -->
+  <FlexibleForm.degreeDatas.flexible_form.label>灵活型态</FlexibleForm.degreeDatas.flexible_form.label>
+  <!-- EN: [PAWN_nameDef] moves with serpentine grace and flexibility. [PAWN_possessive] body can contort in impossible ways, making [PAWN_objective] deadly in close combat but awkward with ranged weapons. -->
+  <FlexibleForm.degreeDatas.flexible_form.description>[PAWN_nameDef]移动时就象蛇优雅而灵活。[PAWN_pronoun]的身体能任意扭曲，让[PAWN_pronoun]在近战时致命，却不擅长操作远程武器。</FlexibleForm.degreeDatas.flexible_form.description>
+ 
+  <!-- EN: hypnotic gaze -->
+  <HypnoticGaze.degreeDatas.hypnotic_gaze.label>催眠凝视</HypnoticGaze.degreeDatas.hypnotic_gaze.label>
+  <!-- EN: [PAWN_nameDef] possesses the mesmerizing stare of a serpent. [PAWN_possessive] eyes can entrance others, making [PAWN_objective] exceptionally persuasive and manipulative in social situations. -->
+  <HypnoticGaze.degreeDatas.hypnotic_gaze.description>[PAWN_nameDef]的眼神如同蛇类一样迷人。[PAWN_pronoun]的眼睛能看穿他人，在社交场合非常有说服力和操控性。</HypnoticGaze.degreeDatas.hypnotic_gaze.description>
+ 
+  <!-- EN: serpentine movement -->
+  <SerpentineMovement.degreeDatas.serpentine_movement.label>蛇行移动</SerpentineMovement.degreeDatas.serpentine_movement.label>
+  <!-- EN: [PAWN_nameDef] slithers through spaces others cannot navigate. [PAWN_possessive] fluid movement allows [PAWN_objective] to excel in tight quarters and move with deadly stealth. -->
+  <SerpentineMovement.degreeDatas.serpentine_movement.description>[PAWN_nameDef]能蛇行到他人无法达到的地方。流畅的动作让[PAWN_pronoun]在狭小空间内行动自如，更是成为了潜行的致命威胁。</SerpentineMovement.degreeDatas.serpentine_movement.description>
+ 
+  <!-- EN: shed skin -->
+  <ShedSkin.degreeDatas.shed_skin.label>蜕落皮肤</ShedSkin.degreeDatas.shed_skin.label>
+  <!-- EN: [PAWN_nameDef] periodically sheds [PAWN_possessive] outer layer like a serpent, emerging renewed and healed. [PAWN_possessive] regenerative abilities are remarkable, leaving no permanent scars. -->
+  <ShedSkin.degreeDatas.shed_skin.description>[PAWN_nameDef]像蛇一样定期脱皮，底下的皮肤新长出来後痊愈了。[PAWN_pronoun]再生能力非凡，不会留下永久性伤疤。</ShedSkin.degreeDatas.shed_skin.description>
+ 
+  <!-- EN: venomous strike -->
+  <VenomousStrike.degreeDatas.venomous_Strike.label>剧毒侵袭</VenomousStrike.degreeDatas.venomous_strike.label>
+  <!-- EN: [PAWN_nameDef] carries deadly toxins in [PAWN_possessive] body like a venomous serpent. [PAWN_pronoun] understands both poison and antidote, making [PAWN_objective] dangerous in combat and invaluable in medicine. -->
+  <VenomousStrike.degreeDatas.venomous_strike.description>[PAWN_nameDef]像毒蛇一样，体内含有致命毒素。[PAWN_pronoun]很了解毒药和解毒剂的知识，战斗时极具危险性，而在医药方面价值连城。</VenomousStrike.degreeDatas.venomous_strike.description>
+
+</LanguageData>

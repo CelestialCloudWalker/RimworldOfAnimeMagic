@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Serpent Breath Regen Amount Per Regen Tick -->
+  <SerpentBreath_RegenAmount.label>每刻蛇之呼吸恢复量</SerpentBreath_RegenAmount.label>
+  <!-- EN: Rate of Serpent Breath regeneration per tick. -->
+  <SerpentBreath_RegenAmount.description>每刻蛇之呼吸恢复量。</SerpentBreath_RegenAmount.description>
+  
+</LanguageData>

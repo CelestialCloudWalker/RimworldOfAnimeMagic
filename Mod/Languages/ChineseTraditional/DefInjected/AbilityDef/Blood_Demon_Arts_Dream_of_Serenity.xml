@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Demon Arts: Serene Dreams -->
+  <Blood_Demon_Arts_Dream_of_Serenity.label>血鬼術 靜夢</Blood_Demon_Arts_Dream_of_Serenity.label>
+  <!-- EN: Grant peaceful to a sleeping target, improving their mood and rest quality. -->
+  <Blood_Demon_Arts_Dream_of_Serenity.description>給予睡眠者平和，提升心情和休息品質。</Blood_Demon_Arts_Dream_of_Serenity.description>
+  <!-- EN: Grant peaceful to a sleeping target, improving their mood and rest quality. -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.0.description>給予睡眠者平和，提升心情和休息品質。</Blood_Demon_Arts_Dream_of_Serenity.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.0.labelSuffix>壹級</Blood_Demon_Arts_Dream_of_Serenity.levels.0.labelSuffix>
+  <!-- EN: Grant peaceful to a sleeping target, improving their mood and rest quality. -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.1.description>給予睡眠者平和，提升心情和休息品質。</Blood_Demon_Arts_Dream_of_Serenity.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.1.labelSuffix>貳級</Blood_Demon_Arts_Dream_of_Serenity.levels.1.labelSuffix>
+  <!-- EN: Grant peaceful to a sleeping target, improving their mood and rest quality. -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.2.description>給予睡眠者平和，提升心情和休息品質。</Blood_Demon_Arts_Dream_of_Serenity.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.2.labelSuffix>參級</Blood_Demon_Arts_Dream_of_Serenity.levels.2.labelSuffix>
+  <!-- EN: Grant peaceful to a sleeping target, improving their mood and rest quality. -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.3.description>給予睡眠者平和，提升心情和休息品質。</Blood_Demon_Arts_Dream_of_Serenity.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.3.labelSuffix>肆級</Blood_Demon_Arts_Dream_of_Serenity.levels.3.labelSuffix>
+  <!-- EN: Grant peaceful to a sleeping target, improving their mood and rest quality. -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.4.description>給予睡眠者平和，提升心情和休息品質。</Blood_Demon_Arts_Dream_of_Serenity.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.4.labelSuffix>伍級</Blood_Demon_Arts_Dream_of_Serenity.levels.4.labelSuffix>
+  <!-- EN: Grant peaceful to a sleeping target, improving their mood and rest quality. -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.5.description>給予睡眠者平和，提升心情和休息品質。</Blood_Demon_Arts_Dream_of_Serenity.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Blood_Demon_Arts_Dream_of_Serenity.levels.5.labelSuffix>陸級</Blood_Demon_Arts_Dream_of_Serenity.levels.5.labelSuffix>
+  
+</LanguageData>

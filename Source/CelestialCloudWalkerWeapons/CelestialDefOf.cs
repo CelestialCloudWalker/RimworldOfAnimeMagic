@@ -12,10 +12,6 @@ namespace AnimeArsenal
     [DefOf]
     public class CelestialDefof
     {
-        public static StatDef AstralPulse;
-        public static StatDef AstralPulse_RegenRate;
-        public static StatDef AstralPulse_RegenTicks;
-        public static StatDef AstralPulse_Cost;
         public static StatDef AnimeArsenal_BloodDemonArtsRegenSpeed;
 
         public static EffecterDef AnimeArsenal_Deflect;

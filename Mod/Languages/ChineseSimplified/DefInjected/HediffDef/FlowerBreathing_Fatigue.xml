@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flower Breathing Fatigue -->
+  <FlowerBreathing_Fatigue.label>花之呼吸疲劳</FlowerBreathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unsteady. -->
+  <FlowerBreathing_Fatigue.description>重复使用呼吸法使身体疲惫，无法站稳。</FlowerBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <FlowerBreathing_Fatigue.stages.Mild_fatigue.label>轻微疲劳</FlowerBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <FlowerBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲劳</FlowerBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <FlowerBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲劳</FlowerBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <FlowerBreathing_Fatigue.stages.Severe_fatigue.label>严重疲劳</FlowerBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <FlowerBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</FlowerBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <FlowerBreathing_Fatigue.stages.Collapsed.label>累垮</FlowerBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

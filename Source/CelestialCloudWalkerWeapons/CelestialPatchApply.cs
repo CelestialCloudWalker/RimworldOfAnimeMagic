@@ -853,4 +853,101 @@ namespace AnimeArsenal
             }
         }
     }
+    [StaticConstructorOnStartup]
+    public static class TalentedCompatibilityPatch
+    {
+        static TalentedCompatibilityPatch()
+        {
+            var harmony = new Harmony("AnimeArsenal.TalentedPatch");
+            harmony.Patch(
+                AccessTools.Method(typeof(ExperienceHandler), "HandleJobEnded"),
+                prefix: new HarmonyMethod(typeof(TalentedCompatibilityPatch), nameof(HandleJobEnded_Prefix))
+            );
+        }
+
+        private static bool HandleJobEnded_Prefix(Pawn pawn, Job job, JobCondition condition)
+        {
+            try
+            {
+                if (pawn == null || pawn.Dead || pawn.Destroyed)
+                {
+                    return false;
+                }
+
+                if (job == null)
+                {
+                    return false;
+                }
+
+                if (pawn.genes == null)
+                {
+                    return false;
+                }
+
+                if (job.def == null)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+            catch (System.Exception e)
+            {
+                Log.Warning($"[AnimeArsenal] Caught exception in Talented HandleJobEnded for {pawn?.Name?.ToStringShort ?? "null"}: {e.Message}");
+                return false;
+            }
+        }
+    }
+    [HarmonyPatch(typeof(DamageWorker_AddInjury), "ApplyToPawn")]
+    [HarmonyPriority(Priority.Low)]
+    public static class Patch_FixTalentedDamageDealt
+    {
+        public static void Postfix(DamageWorker.DamageResult __result, DamageInfo dinfo, Pawn pawn)
+        {
+            try
+            {
+                if (Current.ProgramState != ProgramState.Playing) return;
+
+                if (!(dinfo.Instigator is Pawn attackerPawn)) return;
+                if (!attackerPawn.Spawned) return;
+
+                var genes = attackerPawn.genes?.GenesListForReading;
+                if (genes == null) return;
+
+                foreach (var gene in genes)
+                {
+                    var geneType = gene.GetType();
+                    if (geneType.Name != "Gene_TalentBase" && !geneType.IsSubclassOf(typeof(Talented.Gene_TalentBase)))
+                        continue;
+
+                    var geneDef = gene.def as TalentedGeneDef;
+                    if (geneDef?.experienceGainSettings?.experienceTypes == null) continue;
+
+                    foreach (var expType in geneDef.experienceGainSettings.experienceTypes)
+                    {
+                        if (expType is DamageDealtExperienceTypeDef damageExpType)
+                        {
+                            float xp = damageExpType.GetExperience(attackerPawn, __result);
+
+                            var gainXpMethod = geneType.GetMethod("GainExperience");
+                            if (gainXpMethod != null)
+                            {
+                                gainXpMethod.Invoke(gene, new object[] { xp });
+
+                                var onExpMethod = geneType.GetMethod("OnExperienceGained");
+                                if (onExpMethod != null)
+                                {
+                                    onExpMethod.Invoke(gene, new object[] { xp, "combat_damage_dealt" });
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"[AnimeArsenal] Error in Talented damage fix: {ex}");
+            }
+        }
+    }
 }

@@ -19,6 +19,7 @@ namespace AnimeArsenal
         new CompProperties_ToggleEnchant Props => (CompProperties_ToggleEnchant)props;
 
         private int resourceCostTimer = 0;
+        private bool ranOutOfResources = false;
 
         private Gene_BasicResource _ResourceGene;
         private Gene_BasicResource ResourceGene
@@ -49,27 +50,36 @@ namespace AnimeArsenal
 
         public override void OnToggleOn()
         {
+            ranOutOfResources = false;
             ApplyHediff(this.parent.pawn);
         }
 
         public override void CompTick()
         {
             base.CompTick();
+
+            if (ranOutOfResources)
+            {
+                return;
+            }
+
             if (IsActive)
             {
                 resourceCostTimer += 1;
 
                 if (resourceCostTimer >= Props.enchantDef.ticksBetweenCost)
                 {
-                    if (ResourceGene != null)
+                    if (ResourceGene != null && Props.enchantDef.resourceCostPerTick > 0)
                     {
+                        if (!ResourceGene.Has(Props.enchantDef.resourceCostPerTick))
+                        {
+                            ranOutOfResources = true;
+                            OnToggleOff();
+                            resourceCostTimer = 0;
+                            return;
+                        }
+
                         ResourceGene.Consume(Props.enchantDef.resourceCostPerTick);
-                    }
-
-
-                    if (ShouldCancel())
-                    {
-                        this.OnToggleOff();
                     }
 
                     resourceCostTimer = 0;
@@ -87,15 +97,17 @@ namespace AnimeArsenal
                     BreathingTechniqueGene.TickExhausted();
                     BreathingTechniqueGene.ReduceExhaustionBuildup();
                 }
-
             }
         }
-
-
 
         public override bool CanStart()
         {
             if (Props.enchantDef == null)
+            {
+                return false;
+            }
+
+            if (ranOutOfResources)
             {
                 return false;
             }
@@ -109,17 +121,15 @@ namespace AnimeArsenal
 
         private float GetChannelCost()
         {
-            return Props.enchantDef != null ? Props.enchantDef.resourceCostPerTick * (BreathingTechniqueGene.isExhausted ? 2f : 1f) : 5f;
-        }
+            if (Props.enchantDef == null)
+                return 5f;
 
-        private bool ShouldCancel()
-        {
-            if (ResourceGene != null)
-            {
-                return Props.enchantDef.resourceCostPerTick > 0 && !ResourceGene.Has(GetChannelCost());
-            }
+            float baseCost = Props.enchantDef.resourceCostPerTick;
 
-            return false;
+            if (BreathingTechniqueGene != null && BreathingTechniqueGene.isExhausted)
+                return baseCost * 2f;
+
+            return baseCost;
         }
 
         private void ApplyHediff(Pawn Pawn)
@@ -145,6 +155,7 @@ namespace AnimeArsenal
         {
             base.PostExposeData();
             Scribe_Values.Look(ref resourceCostTimer, "resourceCostTimer", 0);
+            Scribe_Values.Look(ref ranOutOfResources, "ranOutOfResources", false);
         }
     }
 }

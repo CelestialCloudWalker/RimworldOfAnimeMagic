@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Nichirin bullet -->
+  <NichirinBullet.label>日輪彈</NichirinBullet.label>
+  <!-- EN: {0} has been shot to death. -->
+  <NichirinBullet.deathMessage>{0}被射殺了。</NichirinBullet.deathMessage>
+  
+</LanguageData>

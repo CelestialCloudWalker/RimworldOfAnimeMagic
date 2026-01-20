@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: moon burn -->
+  <Moon_Breathing_Damage.label>月之光灼</Moon_Breathing_Damage.label>
+  <!-- EN: {0} was scorched by flames. -->
+  <Moon_Breathing_Damage.deathMessage>{0}被月焰灼烧。</Moon_Breathing_Damage.deathMessage>
+  
+</LanguageData>

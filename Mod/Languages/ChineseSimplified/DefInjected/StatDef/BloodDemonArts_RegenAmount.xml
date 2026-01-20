@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: blood demon regeneration amount -->
+  <BloodDemonArts_RegenAmount.label>血鬼术再生量</BloodDemonArts_RegenAmount.label>
+  <!-- EN: Amount regeneration pulse. -->
+  <BloodDemonArts_RegenAmount.description>再生脉动量。</BloodDemonArts_RegenAmount.description>
+  
+</LanguageData>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN:  Beast Breath User -->
+  <AA_BeastBreath_Xeno.label>獸之呼吸使用者</AA_BeastBreath_Xeno.label>
+  <!-- EN: Beast Breathing Bloodline. -->
+  <AA_BeastBreath_Xeno.description>獸之呼吸血脈。</AA_BeastBreath_Xeno.description>
+  
+  <!-- EN: Breathing Potential User -->
+  <AA_BreathingPotential_Xeno.label>呼吸法潛能使用者</AA_BreathingPotential_Xeno.label>
+  <!-- EN: Breathing Potential Bloodline. -->
+  <AA_BreathingPotential_Xeno.description>呼吸法潛能血脈。</AA_BreathingPotential_Xeno.description>
+  
+  <!-- EN: Flame Breath User -->
+  <AA_FlameBreath_Xeno.label>炎之呼吸使用者</AA_FlameBreath_Xeno.label>
+  <!-- EN: Flame Breathing Bloodline. -->
+  <AA_FlameBreath_Xeno.description>炎之呼吸血脈。</AA_FlameBreath_Xeno.description>
+  
+  <!-- EN: Flower Breath User -->
+  <AA_FlowerBreath_Xeno.label>花之呼吸使用者</AA_FlowerBreath_Xeno.label>
+  <!-- EN: Flower Breathing Bloodline. -->
+  <AA_FlowerBreath_Xeno.description>花之呼吸血脈。</AA_FlowerBreath_Xeno.description>
+  
+  <!-- EN: Forest Breath User -->
+  <AA_ForestBreath_Xeno.label>森之呼吸使用者</AA_ForestBreath_Xeno.label>
+  <!-- EN: Forest Breathing Bloodline. -->
+  <AA_ForestBreath_Xeno.description>森之呼吸血脈。</AA_ForestBreath_Xeno.description>
+  
+  <!-- EN: Frost Breath User -->
+  <AA_FrostBreath_Xeno.label>霜之呼吸使用者</AA_FrostBreath_Xeno.label>
+  <!-- EN: Frost Breathing Bloodline. -->
+  <AA_FrostBreath_Xeno.description>霜之呼吸血脈。</AA_FrostBreath_Xeno.description>
+  
+  <!-- EN: Insect Breath User -->
+  <AA_InsectBreath_Xeno.label>蟲之呼吸使用者</AA_InsectBreath_Xeno.label>
+  <!-- EN: Insect Breathing Bloodline. -->
+  <AA_InsectBreath_Xeno.description>蟲之呼吸血脈。</AA_InsectBreath_Xeno.description>
+  
+  <!-- EN: Love Breath User -->
+  <AA_LoveBreath_Xeno.label>戀之呼吸使用者</AA_LoveBreath_Xeno.label>
+  <!-- EN: Love Breathing Bloodline. -->
+  <AA_LoveBreath_Xeno.description>戀之呼吸血脈。</AA_LoveBreath_Xeno.description>
+  
+  <!-- EN: Mist Breath User -->
+  <AA_MistBreath_Xeno.label>霞之呼吸使用者</AA_MistBreath_Xeno.label>
+  <!-- EN: Mist Breathing Bloodline. -->
+  <AA_MistBreath_Xeno.description>霞之呼吸血脈。</AA_MistBreath_Xeno.description>
+  
+  <!-- EN: Serpent Breath User -->
+  <AA_SerpentBreath_Xeno.label>蛇之呼吸使用者</AA_SerpentBreath_Xeno.label>
+  <!-- EN: Serpent Breathing Bloodline. -->
+  <AA_SerpentBreath_Xeno.description>蛇之呼吸血脈。</AA_SerpentBreath_Xeno.description>
+  
+  <!-- EN: Sound Breath User -->
+  <AA_SoundBreath_Xeno.label>音之呼吸使用者</AA_SoundBreath_Xeno.label>
+  <!-- EN: Sound Breathing Bloodline. -->
+  <AA_SoundBreath_Xeno.description>音之呼吸血脈。</AA_SoundBreath_Xeno.description>
+  
+  <!-- EN: Stone Breath User -->
+  <AA_StoneBreath_Xeno.label>岩之呼吸使用者</AA_StoneBreath_Xeno.label>
+  <!-- EN: Stone Breathing Bloodline. -->
+  <AA_StoneBreath_Xeno.description>岩之呼吸血脈。</AA_StoneBreath_Xeno.description>
+  
+  <!-- EN: Thunder Breath User -->
+  <AA_ThunderBreath_Xeno.label>雷之呼吸使用者</AA_ThunderBreath_Xeno.label>
+  <!-- EN: Thunder Breathing Bloodline. -->
+  <AA_ThunderBreath_Xeno.description>雷之呼吸血脈。</AA_ThunderBreath_Xeno.description>
+  
+  <!-- EN: Water Breath User -->
+  <AA_WaterBreath_Xeno.label>水之呼吸使用者</AA_WaterBreath_Xeno.label>
+  <!-- EN: Water Breathing Bloodline. -->
+  <AA_WaterBreath_Xeno.description>水之呼吸血脈。</AA_WaterBreath_Xeno.description>
+  
+  <!-- EN: Wind Breath User -->
+  <AA_WindBreath_Xeno.label>風之呼吸使用者</AA_WindBreath_Xeno.label>
+  <!-- EN: Wind Breathing Bloodline. -->
+  <AA_WindBreath_Xeno.description>風之呼吸血脈。</AA_WindBreath_Xeno.description>
+  
+</LanguageData>

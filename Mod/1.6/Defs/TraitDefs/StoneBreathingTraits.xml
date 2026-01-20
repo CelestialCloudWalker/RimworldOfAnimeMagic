@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>UnwaveringResolve</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Social</li>
     </forcedPassions>
@@ -86,7 +86,7 @@
 
   <TraitDef>
     <defName>AvalancheForce</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -112,7 +112,7 @@
 
   <TraitDef>
     <defName>TectonicSense</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Intellectual</li>
       <li>Mining</li>
@@ -139,7 +139,7 @@
 
   <TraitDef>
     <defName>BedrockFoundation</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Construction</li>
     </forcedPassions>
@@ -166,7 +166,7 @@
 
   <TraitDef>
     <defName>CrystalFormation</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Artistic</li>
       <li>Crafting</li>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: deafening roar -->
+  <DeafeningRoar.degreeDatas.deafening_roar.label>致聾咆哮</DeafeningRoar.degreeDatas.deafening_roar.label>
+  <!-- EN: [PAWN_nameDef] can unleash devastating sonic attacks that disorient and terrify enemies. [PAWN_possessive] intimidating presence and thunderous voice grant social dominance but make subtle interactions impossible. -->
+  <DeafeningRoar.degreeDatas.deafening_roar.description>[PAWN_nameDef]能放出毀滅性音波攻擊，迷惑並震懾敵人。駭人的存在感和雷鳴般的嗓音讓[PAWN_pronoun]佔據社交地位，卻使私底下的互動變成為不可能。</DeafeningRoar.degreeDatas.deafening_roar.description>
+ 
+  <!-- EN: echolocation mastery -->
+  <EcholocationMaster.degreeDatas.echolocation_mastery.label>回音定位</EcholocationMaster.degreeDatas.echolocation_mastery.label>
+  <!-- EN: [PAWN_nameDef] has developed supernatural hearing that allows [PAWN_objective] to detect enemies and navigate in complete darkness. [PAWN_possessive] sound-based perception grants incredible accuracy but makes [PAWN_objective] vulnerable to loud noises. -->
+  <EcholocationMaster.degreeDatas.echolocation_mastery.description>[PAWN_nameDef]的超聽力讓[PAWN_pronoun]能在全黑環境下偵測敵人和確定方向。聲音感知能力讓[PAWN_pronoun]更加精準，卻也讓[PAWN_pronoun]對巨大噪音敏感脆弱。</EcholocationMaster.degreeDatas.echolocation_mastery.description>
+ 
+  <!-- EN: explosive artistry -->
+  <ExplosiveArtistry.degreeDatas.explosive_artistry.label>爆炸藝術</ExplosiveArtistry.degreeDatas.explosive_artistry.label>
+  <!-- EN: [PAWN_nameDef] creates art through controlled explosions and sonic manipulation. [PAWN_possessive] unique artistic vision produces spectacular results but requires dangerous materials and techniques that others find unsettling. -->
+  <ExplosiveArtistry.degreeDatas.explosive_artistry.description>[PAWN_nameDef]用控制爆炸和操縱音波的方式創造藝術。[PAWN_pronoun]獨到的藝術眼光創造出壯麗的成果，但所使用的材料和技法卻讓他人感到不安。</ExplosiveArtistry.degreeDatas.explosive_artistry.description>
+ 
+  <!-- EN: explosive resonance -->
+  <ExplosiveResonance.degreeDatas.explosive_resonance.label>爆炸共鳴</ExplosiveResonance.degreeDatas.explosive_resonance.label>
+  <!-- EN: [PAWN_nameDef] fights with thunderous explosive techniques that create devastating shockwaves. [PAWN_possessive] attacks generate tremendous noise and force, though the constant explosions gradually damage [PAWN_possessive] hearing. -->
+  <ExplosiveResonance.degreeDatas.explosive_resonance.description>[PAWN_nameDef]用強力爆炸性招式戰鬥，創造出毀滅性衝擊波。[PAWN_pronoun]的攻擊產生出巨大噪音和衝擊波，持續的爆炸使[PAWN_pronoun]聽力逐漸受損。</ExplosiveResonance.degreeDatas.explosive_resonance.description>
+ 
+  <!-- EN: flamboyant warrior -->
+  <FlamboyantWarrior.degreeDatas.flamboyant_warrior.label>華麗戰士</FlamboyantWarrior.degreeDatas.flamboyant_warrior.label>
+  <!-- EN: [PAWN_nameDef] fights with explosive flair and theatrical presence. [PAWN_possessive] Level 1y combat style and confident personality inspire others, but [PAWN_pronoun] demands the finest things in life and struggles with simple living. -->
+  <FlamboyantWarrior.degreeDatas.flamboyant_warrior.description>[PAWN_nameDef]以爆炸性天賦和戲劇性進行戰鬥。[PAWN_pronoun]的壹級戰鬥風格和自信心鼓舞了他人，但[PAWN_pronoun]想要得到最好的東西，難以適應簡單的生活。</FlamboyantWarrior.degreeDatas.flamboyant_warrior.description>
+ 
+  <!-- EN: rhythmic combat -->
+  <RhythmicCombat.degreeDatas.rhythmic_combat.label>節奏之戰</RhythmicCombat.degreeDatas.rhythmic_combat.label>
+  <!-- EN: [PAWN_nameDef] fights to an internal rhythm, synchronizing [PAWN_possessive] explosive attacks with perfect timing. [PAWN_possessive] musical approach to combat grants coordination bonuses but requires constant focus on maintaining the beat. -->
+  <RhythmicCombat.degreeDatas.rhythmic_combat.description>[PAWN_nameDef]按照心中的節奏戰鬥，同步進行完美合拍的爆炸攻擊。[PAWN_pronoun]音樂般的戰鬥方式帶來了協調性加成，但[PAWN_pronoun]需要長時間專注在維持節拍。</RhythmicCombat.degreeDatas.rhythmic_combat.description>
+ 
+  <!-- EN: sonic boom -->
+  <SonicBoom.degreeDatas.sonic_boom.label>震耳音爆</SonicBoom.degreeDatas.sonic_boom.label>
+  <!-- EN: [PAWN_nameDef] can generate devastating sound waves that shatter stone and disorient enemies. [PAWN_possessive] explosive techniques excel at demolition and area control but are too destructive for delicate work. -->
+  <SonicBoom.degreeDatas.sonic_boom.description>[PAWN_nameDef]能產生震耳欲聾的音波，震碎岩石和迷惑敵人。[PAWN_pronoun]的爆炸技術在拆除作業和區域管制達到巔峰，卻會破壞精密作業。</SonicBoom.degreeDatas.sonic_boom.description>
+  
+</LanguageData>

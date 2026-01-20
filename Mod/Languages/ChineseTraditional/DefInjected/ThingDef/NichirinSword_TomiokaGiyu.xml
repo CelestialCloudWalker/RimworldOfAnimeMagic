@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Giyu's Nichirin Blade -->
+  <NichirinSword_TomiokaGiyu.label>義勇的日輪刀</NichirinSword_TomiokaGiyu.label>
+  <!-- EN: A nichirin blade capable of killing demons. -->
+  <NichirinSword_TomiokaGiyu.description>用來殺鬼的日輪刀。</NichirinSword_TomiokaGiyu.description>
+  <!-- EN: blade back -->
+  <NichirinSword_TomiokaGiyu.tools.blade_back.label>刀背</NichirinSword_TomiokaGiyu.tools.blade_back.label>
+  <!-- EN: blade -->
+  <NichirinSword_TomiokaGiyu.tools.blade.label>刀刃</NichirinSword_TomiokaGiyu.tools.blade.label>
+  
+</LanguageData>

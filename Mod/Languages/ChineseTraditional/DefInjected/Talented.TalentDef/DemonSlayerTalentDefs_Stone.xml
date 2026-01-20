@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Stone Breathing: Disperse -->
+  <Stone_Breathing_Disperse.label>岩之呼吸・散</Stone_Breathing_Disperse.label>
+  
+  <!-- EN: StoneBreathing -->
+  <Stone_Breathing_GeneGive_Talent.label>岩之呼吸</Stone_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Stone Breathing: Multi Strike -->
+  <Stone_Breathing_Multi_Strike.label>岩之呼吸・連襲</Stone_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Stone Breathing: Reflect -->
+  <Stone_Breathing_Reflect.label>岩之呼吸・返</Stone_Breathing_Reflect.label>
+  
+  <!-- EN: Stone Breathing: Smash -->
+  <Stone_Breathing_Smash.label>岩之呼吸・擊</Stone_Breathing_Smash.label>
+  
+  <!-- EN: Stone Breathing: Strike -->
+  <Stone_Breathing_Strike.label>岩之呼吸・襲</Stone_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <StoneBreath_Breath_Increase.label>增加呼吸法容量</StoneBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <StoneBreath_Breath_Increase2.label>增加呼吸法容量</StoneBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <StoneBreath_Breath_Increase3.label>增加呼吸法容量</StoneBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <StoneBreath_Breath_Increase4.label>增加呼吸法容量</StoneBreath_Breath_Increase4.label>
+  
+  <!-- EN: StoneBreath_Cost -->
+  <StoneBreath_Cost_Talent.label>岩之呼吸花費</StoneBreath_Cost_Talent.label>
+  
+  <!-- EN: StoneBreath_Cost -->
+  <StoneBreath_Cost_Talent2.label>岩之呼吸花費</StoneBreath_Cost_Talent2.label>
+  
+  <!-- EN: StoneBreath_Cost -->
+  <StoneBreath_Cost_Talent3.label>岩之呼吸花費</StoneBreath_Cost_Talent3.label>
+  
+  <!-- EN: StoneBreath_Cost -->
+  <StoneBreath_Cost_Talent4.label>岩之呼吸花費</StoneBreath_Cost_Talent4.label>
+  
+  <!-- EN: StoneBreath_RegenAmount -->
+  <StoneBreath_RegenAmount_Talent.label>每刻岩之呼吸恢復量</StoneBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: StoneBreath_RegenAmount -->
+  <StoneBreath_RegenAmount_Talent2.label>每刻岩之呼吸恢復量</StoneBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: StoneBreath_RegenAmount -->
+  <StoneBreath_RegenAmount_Talent3.label>每刻岩之呼吸恢復量</StoneBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: StoneBreath_RegenAmount -->
+  <StoneBreath_RegenAmount_Talent4.label>每刻岩之呼吸恢復量</StoneBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: StoneBreath_RegenRate -->
+  <StoneBreath_RegenRate_Talent.label>岩之呼吸恢復率</StoneBreath_RegenRate_Talent.label>
+  
+  <!-- EN: StoneBreath_RegenRate -->
+  <StoneBreath_RegenRate_Talent2.label>岩之呼吸恢復率</StoneBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: StoneBreath_RegenRate -->
+  <StoneBreath_RegenRate_Talent3.label>岩之呼吸恢復率</StoneBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: StoneBreath_RegenRate -->
+  <StoneBreath_RegenRate_Talent4.label>岩之呼吸恢復率</StoneBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: StoneBreath_RegenTicks -->
+  <StoneBreath_RegenTicks_Talent.label>岩之呼吸恢復間隔</StoneBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: StoneBreath_RegenTicks -->
+  <StoneBreath_RegenTicks_Talent2.label>岩之呼吸恢復間隔</StoneBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: StoneBreath_RegenTicks -->
+  <StoneBreath_RegenTicks_Talent3.label>岩之呼吸恢復間隔</StoneBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: StoneBreath_RegenTicks -->
+  <StoneBreath_RegenTicks_Talent4.label>岩之呼吸恢復間隔</StoneBreath_RegenTicks_Talent4.label>
+</LanguageData>

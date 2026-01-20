@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Moon Breathing Fatigue -->
+  <MoonBreathing_Fatigue.label>月之呼吸疲劳</MoonBreathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unsteady. -->
+  <MoonBreathing_Fatigue.description>重复使用呼吸法使身体疲惫，无法站稳。</MoonBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <MoonBreathing_Fatigue.stages.Mild_fatigue.label>轻微疲劳</MoonBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <MoonBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲劳</MoonBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <MoonBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲劳</MoonBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <MoonBreathing_Fatigue.stages.Severe_fatigue.label>严重疲劳</MoonBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <MoonBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</MoonBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <MoonBreathing_Fatigue.stages.Collapsed.label>累垮</MoonBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

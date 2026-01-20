@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Stone Breathing -->
+  <Stone_BreathingStyleBlankTree.treeName>岩之呼吸</Stone_BreathingStyleBlankTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <Stone_BreathingStyleBlankTree.treeToolbarName>{0} 等級({1}) 點數({2})</Stone_BreathingStyleBlankTree.treeToolbarName>
+  
+</LanguageData>

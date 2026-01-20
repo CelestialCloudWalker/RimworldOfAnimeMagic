@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sound Breath Regen Ticks -->
+  <SoundBreath_RegenTicks.label>音之呼吸恢復間隔</SoundBreath_RegenTicks.label>
+  <!-- EN: Number of ticks between Sound Breath regeneration cycles. -->
+  <SoundBreath_RegenTicks.description>音之呼吸每次恢復的時間週期，單位為刻。</SoundBreath_RegenTicks.description>
+  
+</LanguageData>

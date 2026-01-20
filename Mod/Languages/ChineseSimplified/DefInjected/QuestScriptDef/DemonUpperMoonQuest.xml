@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Upper Moon Demon Hunt -->
+  <AnimeArsenal_UpperMoonDemonHunt.questAvailableLetterLabel>上弦鬼狩猎</AnimeArsenal_UpperMoonDemonHunt.questAvailableLetterLabel>
+  <!-- EN:
+    <li>questDescription->URGENT: An Upper Moon demon - one of the Twelve Kizuki's elite - has been located. This is an extremely dangerous mission that requires the most skilled demon slayers.\n\n"Upper Moon demons are on an entirely different level. They've lived for centuries, consumed countless humans, and perfected their Blood Demon Arts. Even experienced Hashira struggle against them. We need three of your best warriors with mastered breathing techniques. This isn't a training exercise - this is a fight for survival against one of Muzan's strongest servants."\n\nThe mission will take over a week. Many have fallen to Upper Moon demons. Those who return will be forever changed by the experience.</li>
+  -->
+  <AnimeArsenal_UpperMoonDemonHunt.questDescriptionRules.rulesStrings>
+  <li>questDescription->急报: 当前已掌握一名上弦之鬼⸺十二鬼月的精锐之一⸺的所在地点。这是一项危险度极高的任务，只有熟练的鬼杀队士才能胜任。\n\n“上弦鬼的强大完全在不同等级。他们活了数个世纪，吞噬无数人类并精通血鬼术。就算是富含经验的柱也会陷入苦战。我们需要三名精通呼吸法的最强剑士。这不是训练⸺而是与无惨最强手下的生存之战。”\n\n任务会花费一周时间。许多人因上弦鬼殒落，而那些生还者会被这段经历改变一生。</li>
+  </AnimeArsenal_UpperMoonDemonHunt.questDescriptionRules.rulesStrings>
+  <!-- EN:
+    <li>questName->Upper Moon Confrontation</li>
+    <li>questName->Elite Demon Elimination</li>
+    <li>questName->Upper Moon Crisis</li>
+    <li>questName->Kizuki Extermination Mission</li>
+  -->
+  <AnimeArsenal_UpperMoonDemonHunt.questNameRules.rulesStrings>
+    <li>questName->上弦交战</li>
+    <li>questName->讨伐菁英鬼</li>
+    <li>questName->上弦危机</li>
+    <li>questName->鬼月灭杀任务</li>
+  </AnimeArsenal_UpperMoonDemonHunt.questNameRules.rulesStrings>
+  <!-- EN: {PAWN} was slain by the Upper Moon demon. Their sacrifice will not be forgotten. -->
+  <AnimeArsenal_UpperMoonDemonHunt.root.nodes.GetFlexibleRewards.customDeathMessage>{PAWN}被上弦鬼杀害。{PAWN}的牺牲永远会被铭记在心。</AnimeArsenal_UpperMoonDemonHunt.root.nodes.GetFlexibleRewards.customDeathMessage>
+  <!-- EN: {PAWN} has mastered {REWARD} after their life-or-death confrontation with an Upper Moon! -->
+  <AnimeArsenal_UpperMoonDemonHunt.root.nodes.GetFlexibleRewards.customRewardMessage>{PAWN}与上弦鬼生死交战后，精通了{REWARD}！</AnimeArsenal_UpperMoonDemonHunt.root.nodes.GetFlexibleRewards.customRewardMessage>
+  <!-- EN: {PAWNS} have survived the Upper Moon demon hunt! Their breathing techniques have evolved through this crucible of combat. -->
+  <AnimeArsenal_UpperMoonDemonHunt.root.nodes.GetFlexibleRewards.customSurvivalMessage>{PAWNS}在上弦鬼狩猎中幸存下来了！他们的呼吸法能力在残酷的战斗中成长了。</AnimeArsenal_UpperMoonDemonHunt.root.nodes.GetFlexibleRewards.customSurvivalMessage>
+  <!-- EN: URGENT: Upper Moon Demon Threat -->
+  <AnimeArsenal_UpperMoonDemonHunt.root.nodes.ShuttleDelay.node.nodes.Letter.label.slateRef>急报: 上弦鬼威胁</AnimeArsenal_UpperMoonDemonHunt.root.nodes.ShuttleDelay.node.nodes.Letter.label.slateRef>
+  <!-- EN: An emergency transmission from the Demon Slayer Corps has arrived. An Upper Moon demon - one of the Twelve Kizuki's most powerful members - has been located.\n\n"This is not a drill. Upper Moon demons are existential threats. They've lived for centuries and have slaughtered countless demon slayers, including Hashira. We need three of your absolute best warriors - those with fully mastered breathing techniques and exceptional combat skills. This mission has an extremely high mortality rate, but if you succeed, you'll be among the elite few who have faced an Upper Moon and lived to tell the tale."\n\nThe Corps warns that even survival does not guarantee victory. Those who return will be forever changed by the experience.\n\nOnly send your most skilled and capable fighters. -->
+  <AnimeArsenal_UpperMoonDemonHunt.root.nodes.ShuttleDelay.node.nodes.Letter.text.slateRef>鬼杀队传来紧急通报。当前已掌握一名上弦之鬼⸺十二鬼月的精锐之一⸺的所在地点。\n\n“这不是演习。上弦鬼是生存威胁。他们活了数个世纪，杀害无数鬼杀队士，其中也包含柱。我们征求三名最强的剑士，需精通呼吸法和卓越的格斗技巧。此任务死亡率极高，但若成功，就能成为敢于面对上弦的菁英，并活着讲述这段传奇。”\n\n鬼杀队警告就算存活也不能保证胜利。而那些生还者会被这段经历改变一生。\n\n只需派出最为出类拔萃的战士。</AnimeArsenal_UpperMoonDemonHunt.root.nodes.ShuttleDelay.node.nodes.Letter.text.slateRef>
+  <!-- EN: Upper Moon Hunt - Survivors Return -->
+  <AnimeArsenal_UpperMoonDemonHunt.root.nodes.ColonistsReturned.node.nodes.Letter.label.slateRef>上弦鬼狩猎 - 幸存者归来</AnimeArsenal_UpperMoonDemonHunt.root.nodes.ColonistsReturned.node.nodes.Letter.label.slateRef>
+  <!-- EN: Against all odds, your demon slayers have returned from their confrontation with an Upper Moon demon. They bear the scars of battle, but their eyes burn with newfound power. Few can claim to have faced one of Muzan's elite and survived. -->
+  <AnimeArsenal_UpperMoonDemonHunt.root.nodes.ColonistsReturned.node.nodes.Letter.text.slateRef>排除万难，你的鬼杀队士从与上弦鬼的交战中归来。虽然他们身上背负着战斗的伤疤，但眼中却燃烧着新生的力量。能声称与无惨的精锐交手过并幸存下来的人寥寥无几。</AnimeArsenal_UpperMoonDemonHunt.root.nodes.ColonistsReturned.node.nodes.Letter.text.slateRef>
+  <!-- EN: Upper Moon Hunt - Casualty Report -->
+  <AnimeArsenal_UpperMoonDemonHunt.root.nodes.ColonistsDied.node.label.slateRef>上弦鬼狩猎 - 伤亡报告</AnimeArsenal_UpperMoonDemonHunt.root.nodes.ColonistsDied.node.label.slateRef>
+  <!-- EN: The Upper Moon demon's power was overwhelming. Your colonist fought valiantly but fell in combat. The Demon Slayer Corps honors their sacrifice in the eternal war against demonkind. -->
+  <AnimeArsenal_UpperMoonDemonHunt.root.nodes.ColonistsDied.node.text.slateRef>上弦鬼的力量过于强大，你的殖民者英勇作战，最终却战死沙场。鬼杀队缅怀他们与鬼族永恒交战时的壮烈牺牲。</AnimeArsenal_UpperMoonDemonHunt.root.nodes.ColonistsDied.node.text.slateRef>
+  
+</LanguageData>

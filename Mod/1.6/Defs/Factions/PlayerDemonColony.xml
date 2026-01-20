@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef>
+    <defName>AA_PlayerDemonColony</defName>
+    <label>demon colony</label>
+    <description>A colony of demons struggling to survive in a world that hunts them.</description>
+    <pawnSingular>demon</pawnSingular>
+    <pawnsPlural>demons</pawnsPlural>
+    <categoryTag>Demon</categoryTag>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>AA_DemonColonist</basicMemberKind>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <techLevel>Medieval</techLevel>
+    <allowedCultures>
+      <li>AA_DemonCulture</li>
+    </allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_DemonBloodArts_User>1</AA_DemonBloodArts_User>
+      </xenotypeChances>
+    </xenotypeSet>
+    <colorSpectrum>
+      <li>(0.8, 0.1, 0.1)</li>
+      <li>(0.9, 0.0, 0.0)</li>
+      <li>(0.7, 0.0, 0.2)</li>
+    </colorSpectrum>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35, 15)</li>
+        <li>(100, 120)</li>
+        <li>(1000, 500)</li>
+        <li>(5000, 2000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+  </FactionDef>
+</Defs>

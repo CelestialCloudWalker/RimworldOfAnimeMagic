@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: blood art -->
+  <BloodArt.degreeDatas.blood_art.label>血鬼术</BloodArt.degreeDatas.blood_art.label>
+  <!-- EN: [PAWN_nameDef] wields supernatural Blood Demon Art techniques. [PAWN_possessive] unique abilities manifest through artistic expression, creating both beautiful and terrifying works powered by demonic energy. -->
+  <BloodArt.degreeDatas.blood_art.description>[PAWN_nameDef]能使用超自然的血鬼术。[PAWN_pronoun]用艺术表达了自己的独特能力，以鬼之力创造出一幅又一幅美丽而凄惨的作品。</BloodArt.degreeDatas.blood_art.description>
+  
+  <!-- EN: blood thirst -->
+  <BloodThirst.degreeDatas.blood_thirst.label>渴望鲜血</BloodThirst.degreeDatas.blood_thirst.label>
+  <!-- EN: [PAWN_nameDef] craves human blood with an insatiable hunger. [PAWN_possessive] demonic nature grants incredible combat prowess, but [PAWN_pronoun] must feed regularly or suffer severe consequences. -->
+  <BloodThirst.degreeDatas.blood_thirst.description>[PAWN_nameDef]对人血的渴望永无止尽。[PAWN_pronoun]的鬼之天性赋予了[PAWN_pronoun]绝佳的战斗能力，但[PAWN_nameDef]必须定期摄血，否则会遭遇严重后果。</BloodThirst.degreeDatas.blood_thirst.description>
+  
+  <!-- EN: corrupted mind -->
+  <CorruptedMind.degreeDatas.corrupted_mind.label>精神堕落</CorruptedMind.degreeDatas.corrupted_mind.label>
+  <!-- EN: [PAWN_nameDef] has been twisted by demonic influence, losing much of [PAWN_possessive] humanity. [PAWN_possessive] alien thought patterns make [PAWN_objective] resistant to mental manipulation but unable to form meaningful connections. -->
+  <CorruptedMind.degreeDatas.corrupted_mind.description>[PAWN_nameDef]已被鬼的力量扭曲，丧失大部分人性。[PAWN_pronoun]的异常思维使[PAWN_pronoun]能抵御精神操作，却无法与他者创建有意义的联系。</CorruptedMind.degreeDatas.corrupted_mind.description>
+  
+  <!-- EN: demonic hunger -->
+  <DemonicHunger.degreeDatas.demonic_hunger.label>饿鬼之饥</DemonicHunger.degreeDatas.demonic_hunger.label>
+  <!-- EN: [PAWN_nameDef] has an endless appetite that can never be truly satisfied. [PAWN_possessive] supernatural metabolism grants increased energy but demands constant feeding, and normal food provides little sustenance. -->
+  <DemonicHunger.degreeDatas.demonic_hunger.description>[PAWN_nameDef]的食欲无穷无尽，永远无法真正满足。虽然[PAWN_pronoun]超常的代谢赋予[PAWN_pronoun]强大的能量，却需要不断进食，而普通食物的营养完全不够。</DemonicHunger.degreeDatas.demonic_hunger.description>
+  
+  <!-- EN: flesh manipulation -->
+  <FleshManipulation.degreeDatas.flesh_manipulation.label>血肉操作</FleshManipulation.degreeDatas.flesh_manipulation.label>
+  <!-- EN: [PAWN_nameDef] can reshape flesh and bone with supernatural precision. [PAWN_possessive] grotesque abilities make [PAWN_objective] an unparalleled surgeon, though [PAWN_possessive] methods horrify normal people. -->
+  <FleshManipulation.degreeDatas.flesh_manipulation.description>[PAWN_nameDef]能重塑肉骨，精准度奇高。[PAWN_pronoun]的猎奇能力使自己成为无可匹敌的外科医生，虽然方法会吓到普通人就是了。</FleshManipulation.degreeDatas.flesh_manipulation.description>
+  
+  <!-- EN: inhuman strength -->
+  <InhumanStrength.degreeDatas.inhuman_strength.label>非人之力</InhumanStrength.degreeDatas.inhuman_strength.label>
+  <!-- EN: [PAWN_nameDef] possesses strength far beyond mortal limits. [PAWN_possessive] demonic power allows [PAWN_objective] to crush stone with bare hands and wield massive weapons, though such power is difficult to control. -->
+  <InhumanStrength.degreeDatas.inhuman_strength.description>[PAWN_nameDef]的力量远超凡人极限。[PAWN_pronoun]的鬼之力使[PAWN_pronoun]能徒手碎石和挥舞巨型兵器，但是这种力量本身难以控制。</InhumanStrength.degreeDatas.inhuman_strength.description>
+  
+  <!-- EN: night predator -->
+  <NightPredator.degreeDatas.night_predator.label>夜间掠食者</NightPredator.degreeDatas.night_predator.label>
+  <!-- EN: [PAWN_nameDef] thrives in darkness like a true creature of the night. [PAWN_possessive] LevelTwo senses and predatory instincts make [PAWN_objective] deadly in the shadows, but daylight weakens [PAWN_possessive] abilities. -->
+  <NightPredator.degreeDatas.night_predator.description>[PAWN_nameDef]在黑暗中行动自如，如同真正的夜行性生物。[PAWN_pronoun]的贰级感官和掠食本能使[PAWN_pronoun]在阴影下成为致命杀手，但日光会弱化[PAWN_nameDef]的能力。</NightPredator.degreeDatas.night_predator.description>
+  
+  <!-- EN: regenerative flesh -->
+  <RegenerativeFlesh.degreeDatas.regenerative_flesh.label>血肉再生</RegenerativeFlesh.degreeDatas.regenerative_flesh.label>
+  <!-- EN: [PAWN_nameDef] possesses supernatural healing abilities that rapidly mend wounds. [PAWN_possessive] demonic constitution allows [PAWN_objective] to recover from injuries that would cripple mortals, though sunlight weakens this power. -->
+  <RegenerativeFlesh.degreeDatas.regenerative_flesh.description>[PAWN_nameDef]的超自然治疔能力能快速治愈伤口。就算是让普通人致残的伤势，[PAWN_pronoun]的鬼之体质也能使自己恢复。然而这种能力会被日光弱化。</RegenerativeFlesh.degreeDatas.regenerative_flesh.description>
+  
+  <!-- EN: sunlight vulnerability -->
+  <SunlightVulnerability.degreeDatas.sunlight_vulnerability.label>日光弱点</SunlightVulnerability.degreeDatas.sunlight_vulnerability.label>
+  <!-- EN: [PAWN_nameDef] suffers greatly under the sun's rays. [PAWN_possessive] demonic nature makes daylight painful and weakening, forcing [PAWN_objective] to seek shadows and avoid outdoor work during the day. -->
+  <SunlightVulnerability.degreeDatas.sunlight_vulnerability.description>[PAWN_nameDef]在日光下痛不欲生。由于身上的鬼之天性，日光会对[PAWN_pronoun]造成痛苦和虚弱化，使[PAWN_pronoun]不得不寻找阴影处，以及白天避免户外工作。</SunlightVulnerability.degreeDatas.sunlight_vulnerability.description>
+  
+</LanguageData>

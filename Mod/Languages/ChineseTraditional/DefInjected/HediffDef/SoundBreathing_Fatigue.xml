@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sound Breathing Fatigue -->
+  <SoundBreathing_Fatigue.label>音之呼吸疲勞</SoundBreathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unstead. -->
+  <SoundBreathing_Fatigue.description>重複使用呼吸法使身體疲憊，無法站穩。</SoundBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <SoundBreathing_Fatigue.stages.Mild_fatigue.label>輕微疲勞</SoundBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <SoundBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲勞</SoundBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <SoundBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲勞</SoundBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <SoundBreathing_Fatigue.stages.Severe_fatigue.label>嚴重疲勞</SoundBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <SoundBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</SoundBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <SoundBreathing_Fatigue.stages.Collapsed.label>累垮</SoundBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

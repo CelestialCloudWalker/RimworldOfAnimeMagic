@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: twist -->
+  <TwistDamage.label>扭转</TwistDamage.label>
+  <!-- EN: {0} has been twisted to death. -->
+  <TwistDamage.deathMessage>{0}被扭转而死。</TwistDamage.deathMessage>
+  
+</LanguageData>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Demon heart -->
+  <AA_DemonHeart.label>鬼心臟</AA_DemonHeart.label>
+  
+  <!-- EN: Demon kidney -->
+  <AA_DemonKidney.label>鬼腎</AA_DemonKidney.label>
+  
+  <!-- EN: Demon liver -->
+  <AA_DemonLiver.label>鬼肝臟</AA_DemonLiver.label>
+  
+  <!-- EN: Demon lung -->
+  <AA_DemonLung.label>鬼肺</AA_DemonLung.label>
+  
+  <!-- EN: Demon stomach -->
+  <AA_DemonStomach.label>鬼胃</AA_DemonStomach.label>
+  
+</LanguageData>

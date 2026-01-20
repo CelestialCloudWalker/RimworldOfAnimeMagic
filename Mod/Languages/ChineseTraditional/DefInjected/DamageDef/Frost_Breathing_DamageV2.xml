@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: frost freeze -->
+  <Frost_Breathing_Damage.label>霜之冰凍</Frost_Breathing_Damage.label>
+  <!-- EN: {0} froze where they stood. -->
+  <Frost_Breathing_Damage.deathMessage>{0}凍在原地。</Frost_Breathing_Damage.deathMessage>
+  
+</LanguageData>

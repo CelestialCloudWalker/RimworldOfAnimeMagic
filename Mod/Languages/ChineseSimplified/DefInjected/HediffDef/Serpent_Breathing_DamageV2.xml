@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: serpent twist -->
+  <TwistOfSerpent.label>蛇之曲折</TwistOfSerpent.label>
+  <!-- EN: A twisting injury that tears and contorts tissue. -->
+  <TwistOfSerpent.description>导致组织撕裂曲折的扭伤。</TwistOfSerpent.description>
+  <!-- EN: serpent twist scar -->
+  <TwistOfSerpent.comps.HediffComp_GetsPermanent.permanentLabel>蛇之曲折疤痕</TwistOfSerpent.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Twisted off -->
+  <TwistOfSerpent.injuryProps.destroyedLabel>丧失功能</TwistOfSerpent.injuryProps.destroyedLabel>
+  <!-- EN: Twisted apart -->
+  <TwistOfSerpent.injuryProps.destroyedOutLabel>被扭断</TwistOfSerpent.injuryProps.destroyedOutLabel>
+  <!-- EN: a serpent twist -->
+  <TwistOfSerpent.labelNoun>蛇之曲折</TwistOfSerpent.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <TwistOfSerpent.labelNounPretty>{1}内的{0}</TwistOfSerpent.labelNounPretty>
+  
+</LanguageData>

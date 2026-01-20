@@ -36,6 +36,8 @@
         <maxJumps>3</maxJumps>
         <ticksBetweenJumps>6</ticksBetweenJumps>
         <jumpDistance>4</jumpDistance>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
         <targetSearchRadius>14</targetSearchRadius>
         <jumpDamageDef>Sound_Breathing_Damage</jumpDamageDef>
         <jumpDamage>4~6</jumpDamage>
@@ -67,6 +69,8 @@
             <targetSearchRadius>17</targetSearchRadius>
             <jumpDamageDef>Sound_Breathing_Damage</jumpDamageDef>
             <jumpDamage>5~8</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
           </li>
@@ -89,6 +93,8 @@
             <targetSearchRadius>20</targetSearchRadius>
             <jumpDamageDef>Sound_Breathing_Damage</jumpDamageDef>
             <jumpDamage>7~10</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
           </li>
@@ -111,6 +117,8 @@
             <targetSearchRadius>23</targetSearchRadius>
             <jumpDamageDef>Sound_Breathing_Damage</jumpDamageDef>
             <jumpDamage>9~13</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
           </li>
@@ -133,6 +141,8 @@
             <targetSearchRadius>27</targetSearchRadius>
             <jumpDamageDef>Sound_Breathing_Damage</jumpDamageDef>
             <jumpDamage>11~16</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
           </li>
@@ -155,6 +165,7 @@
             <targetSearchRadius>31</targetSearchRadius>
             <jumpDamageDef>Sound_Breathing_Damage</jumpDamageDef>
             <jumpDamage>14~20</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
             <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
           </li>

@@ -35,6 +35,8 @@
         <targetSearchRadius>15</targetSearchRadius>
         <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
         <jumpDamage>3~4</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
         <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
         <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
       </li>
@@ -63,6 +65,8 @@
             <targetSearchRadius>17</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
             <jumpDamage>3~5</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
           </li>
@@ -85,6 +89,8 @@
             <targetSearchRadius>20</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
             <jumpDamage>4~6</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
           </li>
@@ -107,6 +113,8 @@
             <targetSearchRadius>23</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
             <jumpDamage>4~7</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
           </li>
@@ -129,6 +137,8 @@
             <targetSearchRadius>26</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
             <jumpDamage>5~8</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
           </li>
@@ -151,6 +161,7 @@
             <targetSearchRadius>30</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
             <jumpDamage>6~9</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
           </li>

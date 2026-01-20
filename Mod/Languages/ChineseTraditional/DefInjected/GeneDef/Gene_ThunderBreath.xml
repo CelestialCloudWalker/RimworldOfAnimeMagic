@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Thunder Breath -->
+  <Gene_ThunderBreath.label>雷之呼吸</Gene_ThunderBreath.label>
+  <!-- EN: Thunder Breathing Gene. -->
+  <Gene_ThunderBreath.description>雷之呼吸基因。</Gene_ThunderBreath.description>
+  <!-- EN: "{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out. -->
+  <Gene_ThunderBreath.modExtensions.1.activationMessage>{0}覺醒了斑紋，體內充滿力量……但慘痛的代價是，自身時日無多。</Gene_ThunderBreath.modExtensions.1.activationMessage>
+  <!-- EN: Grants immense power in exchange for a shortened lifespan. Their body burns with strength, but their time is now limited—death before the age of 25 is inevitable. -->
+  <Gene_ThunderBreath.modExtensions.1.curseHediffDescription>以縮短壽命獲取強大能力。他們身上流淌著強大的能量，然而時間有限——25歲前註定會死亡。</Gene_ThunderBreath.modExtensions.1.curseHediffDescription>
+  <!-- EN: Breathing Mark Curse -->
+  <Gene_ThunderBreath.modExtensions.1.curseHediffLabel>斑紋詛咒</Gene_ThunderBreath.modExtensions.1.curseHediffLabel>
+  <!-- EN: Breathing Mark Curse -->
+  <Gene_ThunderBreath.modExtensions.1.curseStageLabel>斑紋詛咒</Gene_ThunderBreath.modExtensions.1.curseStageLabel>
+  <!-- EN: {0} paid their lifespan in advance, trading years for strength—and the cost has come due.. -->
+  <Gene_ThunderBreath.modExtensions.1.deathMessage>{0}提前付出了生命的代價，以壽命換取力量——而代價已經降臨……</Gene_ThunderBreath.modExtensions.1.deathMessage>
+  <!-- EN: Current stored Breath. -->
+  <Gene_ThunderBreath.resourceDescription>現存呼吸</Gene_ThunderBreath.resourceDescription>
+  <!-- EN: Thunder Breath -->
+  <Gene_ThunderBreath.resourceLabel>雷之呼吸</Gene_ThunderBreath.resourceLabel>
+  <!-- EN: Thunder Breath -->
+  <Gene_ThunderBreath.resourceName>雷之呼吸</Gene_ThunderBreath.resourceName>
+  
+</LanguageData>

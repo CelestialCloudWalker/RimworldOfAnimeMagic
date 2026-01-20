@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flame Breathing: Reflect -->
+  <Flame_Breathing_Reflect.label>炎之呼吸・返</Flame_Breathing_Reflect.label>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Flame_Breathing_Reflect.description>快速斩出圆弧抵御射弹的技法。</Flame_Breathing_Reflect.description>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Flame_Breathing_Reflect.levels.0.description>快速斩出圆弧抵御射弹的技法。</Flame_Breathing_Reflect.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Flame_Breathing_Reflect.levels.0.labelSuffix>壹级</Flame_Breathing_Reflect.levels.0.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Flame_Breathing_Reflect.levels.1.description>快速斩出圆弧抵御射弹的技法。</Flame_Breathing_Reflect.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Flame_Breathing_Reflect.levels.1.labelSuffix>贰级</Flame_Breathing_Reflect.levels.1.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Flame_Breathing_Reflect.levels.2.description>快速斩出圆弧抵御射弹的技法。</Flame_Breathing_Reflect.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Flame_Breathing_Reflect.levels.2.labelSuffix>参级</Flame_Breathing_Reflect.levels.2.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Flame_Breathing_Reflect.levels.3.description>快速斩出圆弧抵御射弹的技法。</Flame_Breathing_Reflect.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Flame_Breathing_Reflect.levels.3.labelSuffix>肆级</Flame_Breathing_Reflect.levels.3.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Flame_Breathing_Reflect.levels.4.description>快速斩出圆弧抵御射弹的技法。</Flame_Breathing_Reflect.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Flame_Breathing_Reflect.levels.4.labelSuffix>伍级</Flame_Breathing_Reflect.levels.4.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Flame_Breathing_Reflect.levels.5.description>快速斩出圆弧抵御射弹的技法。</Flame_Breathing_Reflect.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Flame_Breathing_Reflect.levels.5.labelSuffix>陆级</Flame_Breathing_Reflect.levels.5.labelSuffix>
+  
+</LanguageData>

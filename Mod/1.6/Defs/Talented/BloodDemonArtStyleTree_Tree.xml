@@ -65,7 +65,7 @@
 
   <Talented.TalentTreeNodeDef>
     <defName>Node_DemonArts_Left_2</defName>
-    <label>Crush</label>
+    <label>Graviton Crush</label>
     <style>DefaultNodeStyle</style>
     <position>(90,330)</position>
     <type>Normal</type>
@@ -93,7 +93,7 @@
 
   <Talented.TalentTreeNodeDef>
     <defName>Node_DemonArts_Left_3</defName>
-    <label>Spiral</label>
+    <label>Spiral of Torment</label>
     <style>DefaultNodeStyle</style>
     <position>(90,270)</position>
     <type>Normal</type>

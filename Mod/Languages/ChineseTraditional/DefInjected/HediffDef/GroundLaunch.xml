@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: ground launch stun -->
+  <GroundLaunchStun.label>地面彈射驚訝</GroundLaunchStun.label>
+  <!-- EN: Stunned from being launched by a ground eruption. -->
+  <GroundLaunchStun.description>因為地面爆炸被彈飛，造成驚訝。</GroundLaunchStun.description>
+  
+</LanguageData>

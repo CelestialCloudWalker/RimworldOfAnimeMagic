@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>DemonSlayerCorp_MaskKakushi</defName>
+    <label>Kakushi mask</label>
+    <description>A distinctive mask worn by members of the Kakushi, the cleanup and logistics division of the Demon Slayer Corps. These masks help maintain anonymity while performing their duties.</description>
+    <graphicData>
+      <texPath>DemonSlayerCorp_MaskKakushi/Icon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <Mass>0.3</Mass>
+      <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>3</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>4000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>AA_SlayerCorpsUniformResearch</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>240</displayPriority>
+    </recipeMaker>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <apparel>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <forceEyesVisibleForRotations>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </forceEyesVisibleForRotations>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <wornGraphicPath>DemonSlayerCorp_MaskKakushi/DemonSlayerCorp_MaskKakushi</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups Inherit="False">
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <tags>
+        <li>IndustrialBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator IsNull="True"/>
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Thunder Breathing: Reflect -->
+  <Thunder_Breathing_Reflect.label>雷之呼吸・返</Thunder_Breathing_Reflect.label>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Thunder_Breathing_Reflect.description>快速斬出圓弧抵禦射彈的技法。</Thunder_Breathing_Reflect.description>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Thunder_Breathing_Reflect.levels.0.description>快速斬出圓弧抵禦射彈的技法。</Thunder_Breathing_Reflect.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Thunder_Breathing_Reflect.levels.0.labelSuffix>壹級</Thunder_Breathing_Reflect.levels.0.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Thunder_Breathing_Reflect.levels.1.description>快速斬出圓弧抵禦射彈的技法。</Thunder_Breathing_Reflect.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Thunder_Breathing_Reflect.levels.1.labelSuffix>貳級</Thunder_Breathing_Reflect.levels.1.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Thunder_Breathing_Reflect.levels.2.description>快速斬出圓弧抵禦射彈的技法。</Thunder_Breathing_Reflect.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Thunder_Breathing_Reflect.levels.2.labelSuffix>參級</Thunder_Breathing_Reflect.levels.2.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Thunder_Breathing_Reflect.levels.3.description>快速斬出圓弧抵禦射彈的技法。</Thunder_Breathing_Reflect.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Thunder_Breathing_Reflect.levels.3.labelSuffix>肆級</Thunder_Breathing_Reflect.levels.3.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Thunder_Breathing_Reflect.levels.4.description>快速斬出圓弧抵禦射彈的技法。</Thunder_Breathing_Reflect.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Thunder_Breathing_Reflect.levels.4.labelSuffix>伍級</Thunder_Breathing_Reflect.levels.4.labelSuffix>
+  <!-- EN: A defensive technique that uses rapid circular movements to deflect incoming projectiles. -->
+  <Thunder_Breathing_Reflect.levels.5.description>快速斬出圓弧抵禦射彈的技法。</Thunder_Breathing_Reflect.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Thunder_Breathing_Reflect.levels.5.labelSuffix>陸級</Thunder_Breathing_Reflect.levels.5.labelSuffix>
+  
+</LanguageData>

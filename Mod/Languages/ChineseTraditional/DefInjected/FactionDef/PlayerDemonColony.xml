@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: demon colony -->
+  <AA_PlayerDemonColony.label>鬼殖民地</AA_PlayerDemonColony.label>
+  <!-- EN: A colony of demons struggling to survive in a world that hunts them. -->
+  <AA_PlayerDemonColony.description>一群鬼建立的殖民地，他們在自身遭受獵殺的世界中掙扎求生。</AA_PlayerDemonColony.description>
+  <!-- EN: leader -->
+  <AA_PlayerDemonColony.leaderTitle>領導</AA_PlayerDemonColony.leaderTitle>
+  <!-- EN: demon -->
+  <AA_PlayerDemonColony.pawnSingular>鬼</AA_PlayerDemonColony.pawnSingular>
+  <!-- EN: demons -->
+  <AA_PlayerDemonColony.pawnsPlural>鬼</AA_PlayerDemonColony.pawnsPlural>
+  
+</LanguageData>

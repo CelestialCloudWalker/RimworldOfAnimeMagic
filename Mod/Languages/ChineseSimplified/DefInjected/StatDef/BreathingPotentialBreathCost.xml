@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Breathing Potential Breath Cost Multiplier -->
+  <BreathingPotential_Cost.label>呼吸法潜能资源花费乘数</BreathingPotential_Cost.label>
+  <!-- EN: Breathing Potential Breath Cost Multiplier. -->
+  <BreathingPotential_Cost.description>呼吸法潜能资源花费乘数。</BreathingPotential_Cost.description>
+  
+</LanguageData>

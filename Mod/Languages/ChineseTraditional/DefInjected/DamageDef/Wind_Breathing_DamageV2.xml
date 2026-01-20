@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: wind slash -->
+  <Wind_Breathing_Damage.label>風斬</Wind_Breathing_Damage.label>
+  <!-- EN: {0} was torn apart by slicing winds. -->
+  <Wind_Breathing_Damage.deathMessage>{0}被風削的四分五裂。</Wind_Breathing_Damage.deathMessage>
+  
+</LanguageData>

@@ -19,6 +19,11 @@ namespace AnimeArsenal
         public float chainRange = 0f;
         public float damageEscalation = 1f;
 
+        public StatDef scaleStat;
+        public SkillDef scaleSkill;
+        public float skillMultiplier = 0.1f;
+        public bool debugScaling = false;
+
         public CompProperties_AbilityLightningStrike()
         {
             compClass = typeof(CompAbilityEffect_LightningStrike);
@@ -114,7 +119,16 @@ namespace AnimeArsenal
             var lightning = new WeatherEvent_LightningStrike(chain.map, location);
             lightning.FireEvent();
 
-            var damage = chain.props.explosionDamage * Mathf.Pow(chain.props.damageEscalation, chain.currentStrike);
+            float baseDamageWithEscalation = chain.props.explosionDamage * Mathf.Pow(chain.props.damageEscalation, chain.currentStrike);
+
+            float finalDamage = DamageScalingUtility.GetScaledDamage(
+                baseDamageWithEscalation,
+                chain.caster,
+                chain.props.scaleStat,
+                chain.props.scaleSkill,
+                chain.props.skillMultiplier,
+                chain.props.debugScaling
+            );
 
             if (chain.props.explosionRadius > 0f)
             {
@@ -124,7 +138,7 @@ namespace AnimeArsenal
                     chain.props.explosionRadius,
                     DamageDefOf.Bomb,
                     chain.caster,
-                    Mathf.RoundToInt(damage),
+                    Mathf.RoundToInt(finalDamage),  
                     -1f
                 );
             }

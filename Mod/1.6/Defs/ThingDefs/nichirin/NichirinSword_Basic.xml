@@ -3,10 +3,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>NichirinSword_Basic</defName>
     <label>Nichirin Blade</label>
-    <description>A nichirin blade capable of killing demonsy.</description>
-    <recipeMaker>
-      <researchPrerequisite>AA_NichinrinBladeResearch</researchPrerequisite>
-    </recipeMaker>
+    <description>A nichirin blade capable of killing demons.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponMelee/NichirinSword_Normal</texPath>
@@ -14,22 +11,21 @@
       <drawSize>1.2</drawSize>
     </graphicData>
     <drawerType>MapMeshAndRealTime</drawerType>
-    <recipeMaker>
-    </recipeMaker>
     <equipmentType>Primary</equipmentType>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
+    <costStuffCount>20</costStuffCount>
     <costList>
-      <Scarlet_Steel>20</Scarlet_Steel>
+      <Scarlet_Steel>5</Scarlet_Steel>
     </costList>
-
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <WorkToMake>25000</WorkToMake>
       <Mass>1.5</Mass>
     </statBases>
     <recipeMaker>
+      <researchPrerequisite>AA_NichinrinBladeResearch</researchPrerequisite>
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>

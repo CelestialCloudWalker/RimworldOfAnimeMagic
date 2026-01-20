@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: aquatic adaptation -->
+  <AquaticAdaptation.degreeDatas.aquatic_adaptation.label>水生适应</AquaticAdaptation.degreeDatas.aquatic_adaptation.label>
+  <!-- EN: [PAWN_nameDef] thrives in wet environments and struggles in arid conditions. [PAWN_possessive] body has adapted to water, making [PAWN_objective] exceptionally capable in rain and near water sources. -->
+  <AquaticAdaptation.degreeDatas.aquatic_adaptation.description>[PAWN_nameDef]在湿润环境有活力，却难以适应干燥环境。[PAWN_pronoun]的身体很适应水，因此在雨中和水源附近特别活跃。</AquaticAdaptation.degreeDatas.aquatic_adaptation.description>
+  
+  <!-- EN: flowing combat -->
+  <FlowingCombat.degreeDatas.flowing_combat.label>战如流水</FlowingCombat.degreeDatas.flowing_combat.label>
+  <!-- EN: [PAWN_nameDef] fights with the fluid grace of water. [PAWN_possessive] adaptive style becomes more effective against multiple enemies, but [PAWN_pronoun] struggles when movement is restricted. -->
+  <FlowingCombat.degreeDatas.flowing_combat.description>[PAWN_nameDef]战斗时优雅如水。[PAWN_pronoun]的适应性风格在对付多个敌人时更有效率，但在行动受限时难以发挥。</FlowingCombat.degreeDatas.flowing_combat.description>
+  
+  <!-- EN: healing springs -->
+  <HealingSprings.degreeDatas.healing_springs.label>治愈泉水</HealingSprings.degreeDatas.healing_springs.label>
+  <!-- EN: [PAWN_nameDef] channels the purifying power of fresh water. [PAWN_possessive] medical work cleanses wounds and disease, and [PAWN_pronoun] never suffers from dehydration or water-borne illness. -->
+  <HealingSprings.degreeDatas.healing_springs.description>[PAWN_nameDef]操纵着清水的净化之力。[PAWN_pronoun]的医疔行为能净化伤口和疾病，而且从来不会脱水或染上水媒传染病。</HealingSprings.degreeDatas.healing_springs.description>
+  
+  <!-- EN: ocean's depth -->
+  <OceansDepth.degreeDatas.oceans_depth.label>海洋深心</OceansDepth.degreeDatas.oceans_depth.label>
+  <!-- EN: [PAWN_nameDef] possesses the calm depths of the deepest ocean. [PAWN_possessive] unshakeable composure allows [PAWN_objective] to think clearly in any crisis and meditate with profound focus. -->
+  <OceansDepth.degreeDatas.oceans_depth.description>[PAWN_nameDef]有深海般的沉着冷静。不可动摇的沉着使[PAWN_pronoun]能在危机下冷静思考，也能非常专心地冥想。</OceansDepth.degreeDatas.oceans_depth.description>
+  
+  <!-- EN: purification -->
+  <Purification.degreeDatas.purification.label>水之净化</Purification.degreeDatas.purification.label>
+  <!-- EN: [PAWN_nameDef] embodies water's cleansing properties. [PAWN_possessive] presence purifies disease and toxins, and [PAWN_pronoun] excels at cleaning and maintaining a healthy environment. -->
+  <Purification.degreeDatas.purification.description>[PAWN_nameDef]是水的净化力的化身。[PAWN_pronoun]的存在能净化疾病和毒素，而[PAWN_pronoun]自己也擅长清洁和维持环境健康。</Purification.degreeDatas.purification.description>
+  
+  <!-- EN: tidal force -->
+  <TidalForce.degreeDatas.tidal_force.label>潮汐之力</TidalForce.degreeDatas.tidal_force.label>
+  <!-- EN: [PAWN_nameDef] experiences alternating periods of high and low energy like ocean tides. [PAWN_possessive] performance fluctuates dramatically, with periods of exceptional ability followed by times of rest. -->
+  <TidalForce.degreeDatas.tidal_force.description>[PAWN_nameDef]感受到能量随潮汐上下波动。[PAWN_pronoun]的表现也浮动剧烈，时而优异时而低迷。</TidalForce.degreeDatas.tidal_force.description>
+  
+  <!-- EN: whirlpool technique -->
+  <WhirlpoolTechnique.degreeDatas.whirlpool_technique.label>旋涡技法</WhirlpoolTechnique.degreeDatas.whirlpool_technique.label>
+  <!-- EN: [PAWN_nameDef] redirects enemy attacks like water flowing around stones. [PAWN_possessive] defensive combat style turns opponent's strength against them, excelling in martial arts. -->
+  <WhirlpoolTechnique.degreeDatas.whirlpool_technique.description>[PAWN_nameDef]能导引敌人的攻击方向，就象绕石头的水流一样。防御性的战斗风格让敌人把刀口转向自己，另外[PAWN_pronoun]也擅长武术。</WhirlpoolTechnique.degreeDatas.whirlpool_technique.description>
+  
+</LanguageData>

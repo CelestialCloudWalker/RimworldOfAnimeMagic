@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: forest strike -->
+  <MajestyOfForest.label>森之重劈</MajestyOfForest.label>
+  <!-- EN: A crushing blow. Heavy bleeding and tissue damage. -->
+  <MajestyOfForest.description>一道重擊造成大量出血和組織損傷。</MajestyOfForest.description>
+  <!-- EN: forest strike scar -->
+  <MajestyOfForest.comps.HediffComp_GetsPermanent.permanentLabel>森之重劈疤痕</MajestyOfForest.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Crushed off -->
+  <MajestyOfForest.injuryProps.destroyedLabel>喪失功能</MajestyOfForest.injuryProps.destroyedLabel>
+  <!-- EN: Crushed apart -->
+  <MajestyOfForest.injuryProps.destroyedOutLabel>被劈斷</MajestyOfForest.injuryProps.destroyedOutLabel>
+  <!-- EN: a forest strike -->
+  <MajestyOfForest.labelNoun>森之重劈</MajestyOfForest.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <MajestyOfForest.labelNounPretty>{1}內的{0}</MajestyOfForest.labelNounPretty>
+  
+</LanguageData>

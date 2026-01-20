@@ -26,8 +26,8 @@
       <range>20</range>
       <warmupTime>0.5</warmupTime>
       <targetParams>
-        <canTargetPawns>false</canTargetPawns>
-        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
       </targetParams>
     </verbProperties>
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Unlock powerful demon abilities -->
+  <BloodDemonArtStyleTree.availablePaths.0.pathDescription>解锁更强大的鬼之能力</BloodDemonArtStyleTree.availablePaths.0.pathDescription>
+  <!-- EN: Blood Demon Arts -->
+  <BloodDemonArtStyleTree.treeName>血鬼术</BloodDemonArtStyleTree.treeName>
+  <!-- EN: {0} Level({1}) Points({2}) -->
+  <BloodDemonArtStyleTree.treeToolbarName>{0} 等级({1}) 点数({2})</BloodDemonArtStyleTree.treeToolbarName>
+  
+</LanguageData>

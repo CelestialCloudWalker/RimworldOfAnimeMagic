@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Breathing Mark -->
+  <BreathingMarkAbility.label>斑纹</BreathingMarkAbility.label>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbility.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbility.description>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbility.levels.0.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbility.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <BreathingMarkAbility.levels.0.labelSuffix>壹级</BreathingMarkAbility.levels.0.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbility.levels.1.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbility.levels.1.description>
+  <!-- EN:  (Mastery) -->
+  <BreathingMarkAbility.levels.1.labelSuffix>贰级</BreathingMarkAbility.levels.1.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbility.levels.2.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbility.levels.2.description>
+  <!-- EN:  (Transcendence) -->
+  <BreathingMarkAbility.levels.2.labelSuffix>参级</BreathingMarkAbility.levels.2.labelSuffix>
+  
+  <!-- EN: Breathing Mark Giyu -->
+  <BreathingMarkAbilityGiyu.label>义勇的斑纹</BreathingMarkAbilityGiyu.label>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityGiyu.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityGiyu.description>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityGiyu.levels.0.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityGiyu.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <BreathingMarkAbilityGiyu.levels.0.labelSuffix>壹级</BreathingMarkAbilityGiyu.levels.0.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityGiyu.levels.1.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityGiyu.levels.1.description>
+  <!-- EN:  (Mastery) -->
+  <BreathingMarkAbilityGiyu.levels.1.labelSuffix>贰级</BreathingMarkAbilityGiyu.levels.1.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityGiyu.levels.2.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityGiyu.levels.2.description>
+  <!-- EN:  (Transcendence) -->
+  <BreathingMarkAbilityGiyu.levels.2.labelSuffix>参级</BreathingMarkAbilityGiyu.levels.2.labelSuffix>
+  
+  <!-- EN: Breathing Mark Muichiro -->
+  <BreathingMarkAbilityMuichiro.label>无一郎的斑纹</BreathingMarkAbilityMuichiro.label>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityMuichiro.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityMuichiro.description>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityMuichiro.levels.0.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityMuichiro.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <BreathingMarkAbilityMuichiro.levels.0.labelSuffix>壹级</BreathingMarkAbilityMuichiro.levels.0.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityMuichiro.levels.1.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityMuichiro.levels.1.description>
+  <!-- EN:  (Mastery) -->
+  <BreathingMarkAbilityMuichiro.levels.1.labelSuffix>贰级</BreathingMarkAbilityMuichiro.levels.1.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityMuichiro.levels.2.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityMuichiro.levels.2.description>
+  <!-- EN:  (Transcendence) -->
+  <BreathingMarkAbilityMuichiro.levels.2.labelSuffix>参级</BreathingMarkAbilityMuichiro.levels.2.labelSuffix>
+  
+  <!-- EN: Breathing Mark Sanemi -->
+  <BreathingMarkAbilitySanemi.label>实弥的斑纹</BreathingMarkAbilitySanemi.label>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilitySanemi.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilitySanemi.description>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilitySanemi.levels.0.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilitySanemi.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <BreathingMarkAbilitySanemi.levels.0.labelSuffix>壹级</BreathingMarkAbilitySanemi.levels.0.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilitySanemi.levels.1.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilitySanemi.levels.1.description>
+  <!-- EN:  (Mastery) -->
+  <BreathingMarkAbilitySanemi.levels.1.labelSuffix>贰级</BreathingMarkAbilitySanemi.levels.1.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilitySanemi.levels.2.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilitySanemi.levels.2.description>
+  <!-- EN:  (Transcendence) -->
+  <BreathingMarkAbilitySanemi.levels.2.labelSuffix>参级</BreathingMarkAbilitySanemi.levels.2.labelSuffix>
+  
+  <!-- EN: Breathing Mark Tanjiro -->
+  <BreathingMarkAbilityTanjiro.label>炭治郎的斑纹</BreathingMarkAbilityTanjiro.label>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityTanjiro.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityTanjiro.description>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityTanjiro.levels.0.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityTanjiro.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <BreathingMarkAbilityTanjiro.levels.0.labelSuffix>壹级</BreathingMarkAbilityTanjiro.levels.0.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityTanjiro.levels.1.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityTanjiro.levels.1.description>
+  <!-- EN:  (Mastery) -->
+  <BreathingMarkAbilityTanjiro.levels.1.labelSuffix>贰级</BreathingMarkAbilityTanjiro.levels.1.labelSuffix>
+  <!-- EN: Activate the Breathing Mark to enhance combat and movement capabilities. -->
+  <BreathingMarkAbilityTanjiro.levels.2.description>觉醒斑纹，增强格斗与移动能力。</BreathingMarkAbilityTanjiro.levels.2.description>
+  <!-- EN:  (Transcendence) -->
+  <BreathingMarkAbilityTanjiro.levels.2.labelSuffix>参级</BreathingMarkAbilityTanjiro.levels.2.labelSuffix>
+  
+</LanguageData>

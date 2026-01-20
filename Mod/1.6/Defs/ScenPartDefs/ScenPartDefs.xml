@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ScenPartDef>
+    <defName>EclipseStart</defName>
+    <label>eclipse start</label>
+    <scenPartClass>RimWorld.ScenPart_GameCondition</scenPartClass>
+    <category>GameCondition</category>
+    <gameCondition>Eclipse</gameCondition>  
+    <gameConditionTargetsWorld>true</gameConditionTargetsWorld>
+    <durationRandomRange>
+      <min>1</min>
+      <max>5</max>
+    </durationRandomRange>
+  </ScenPartDef>
+
+</Defs>

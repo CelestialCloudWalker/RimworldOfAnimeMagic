@@ -20,17 +20,36 @@
       <range>10</range>
       <warmupTime>0.5</warmupTime>
       <targetParams>
-        <canTargetLocations>true</canTargetLocations>
+        <canTargetLocations>false</canTargetLocations>
         <canTargetSelf>false</canTargetSelf>
         <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
 
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+        <effectRadius>4.0</effectRadius>
+        <maxTargets>3</maxTargets>
+        <flingDistance>6</flingDistance>
+        <damage>15</damage>
+        <armorPenetration>0.20</armorPenetration>
+        <stunHediff>PsychicShock</stunHediff>
+        <stunSeverity>1.0</stunSeverity>
+        <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
+        <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
+        <hitEffecterCount>5</hitEffecterCount>
+        <hitEffecterRadius>2.0</hitEffecterRadius>
+        <showMessages>true</showMessages>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
+      </li>
+    </comps>
+
     <levels>
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
-        <description>Blood demon tentacles erupt from the ground to fling enemies. Range: 10 tiles, radius: 4.0, Max Targets: 3, Damage: 15, Fling: 6 tiles.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
             <effectRadius>4.0</effectRadius>
@@ -45,6 +64,8 @@
             <hitEffecterCount>5</hitEffecterCount>
             <hitEffecterRadius>2.0</hitEffecterRadius>
             <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
           </li>
         </levelComps>
       </li>
@@ -52,7 +73,7 @@
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>LevelTwo tentacle control with greater reach. Range: 11 tiles, radius: 4.5, Max Targets: 3, Damage: 18, Fling: 6.5 tiles.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <resourceCostMultiplier>1.05</resourceCostMultiplier>
         <verbProperties>
           <range>11</range>
@@ -71,6 +92,8 @@
             <hitEffecterCount>6</hitEffecterCount>
             <hitEffecterRadius>2.2</hitEffecterRadius>
             <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
           </li>
         </levelComps>
       </li>
@@ -78,7 +101,7 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>Multiple targets can be caught in the writhing tentacles. Range: 12 tiles, radius: 5.0, Max Targets: 4, Damage: 22, Fling: 7 tiles.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <resourceCostMultiplier>1.10</resourceCostMultiplier>
         <verbProperties>
           <range>12</range>
@@ -97,6 +120,8 @@
             <hitEffecterCount>8</hitEffecterCount>
             <hitEffecterRadius>2.5</hitEffecterRadius>
             <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
           </li>
         </levelComps>
       </li>
@@ -104,7 +129,7 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>450</experienceRequired>
-        <description>Wider area of devastation as tentacles multiply. Range: 13 tiles, radius: 6.0, Max Targets: 5, Damage: 26, Fling: 8 tiles.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <resourceCostMultiplier>1.15</resourceCostMultiplier>
         <verbProperties>
           <range>13</range>
@@ -123,6 +148,8 @@
             <hitEffecterCount>10</hitEffecterCount>
             <hitEffecterRadius>3.0</hitEffecterRadius>
             <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
           </li>
         </levelComps>
       </li>
@@ -130,7 +157,7 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>700</experienceRequired>
-        <description>Nearly perfected technique with devastating force. Range: 15 tiles, radius: 7.0, Max Targets: 6, Damage: 31, Fling: 9 tiles.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <resourceCostMultiplier>1.20</resourceCostMultiplier>
         <verbProperties>
           <range>15</range>
@@ -149,6 +176,8 @@
             <hitEffecterCount>12</hitEffecterCount>
             <hitEffecterRadius>3.5</hitEffecterRadius>
             <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
           </li>
         </levelComps>
       </li>
@@ -156,7 +185,7 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>1000</experienceRequired>
-        <description>Ultimate mastery: A storm of blood tentacles engulfs the battlefield. Range: 17 tiles, radius: 8.0, Max Targets: 8, Damage: 38, Fling: 10 tiles.</description>
+        <description>A blood demon art that creates tentacles to throw targets around.</description>
         <resourceCostMultiplier>1.25</resourceCostMultiplier>
         <verbProperties>
           <range>17</range>
@@ -175,6 +204,8 @@
             <hitEffecterCount>15</hitEffecterCount>
             <hitEffecterRadius>4.0</hitEffecterRadius>
             <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
           </li>
         </levelComps>
       </li>

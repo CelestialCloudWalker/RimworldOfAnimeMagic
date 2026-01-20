@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Forest Breath Regen Ticks -->
+  <ForestBreath_RegenTicks.label>森之呼吸恢復間隔</ForestBreath_RegenTicks.label>
+  <!-- EN: Number of ticks between Forest Breath regeneration cycles. -->
+  <ForestBreath_RegenTicks.description>森之呼吸每次恢復的時間週期，單位為刻。</ForestBreath_RegenTicks.description>
+  
+</LanguageData>

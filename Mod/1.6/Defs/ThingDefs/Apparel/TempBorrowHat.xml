@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ApparelHatRoyalTier2Fabric">
+    <defName>Apparel_HatTop_DuoGender</defName>
+    <label>top hat</label>
+    <description>A tall, stiff, shiny hat.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/TopHat/TopHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/TopHat/TopHat</wornGraphicPath>
+      <gender>Male</gender>
+      <gender>Female</gender>
+    </apparel>
+    <equippedStatOffsets>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.05</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+  </ThingDef>
+
+</Defs>

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>DemonSlayerCorp_UniformSkirt</defName>
     <label>Demon Slayer Corp Skirt</label>
     <description>A durable Demon Slayer Corps uniform designed for mobility and protection.</description>
-    <recipeMaker>
-      <researchPrerequisite>AA_SlayerCorpsUniformResearch</researchPrerequisite>
-    </recipeMaker>
     <graphicData>
-      <shaderType>CutoutComplex</shaderType>
-      <texPath>DemonSlayerCorp_UniformSkirt/DemonSlayerCorp_UniformSkirt_Female_north</texPath>
+      <texPath>DemonSlayerCorp_UniformSkirt/Icon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
-    <costList>
-      <Scarlet_Thread_Fabric>80</Scarlet_Thread_Fabric>
-    </costList>
     <smeltable>false</smeltable>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
     <thingCategories>
       <li>ApparelMisc</li>
     </thingCategories>
@@ -42,7 +40,7 @@
         <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>DemonSlayerCorp_UniformSkirt/DemonSlayerCorp_UniformSkirt</wornGraphicPath>
-      <gender>Female</gender>
+      <useWornGraphicMask>true</useWornGraphicMask>
       <layers>
         <li>Middle</li>
       </layers>
@@ -59,11 +57,11 @@
       <li>BasicClothing</li>
     </tradeTags>
     <recipeMaker>
+      <researchPrerequisite>AA_SlayerCorpsUniformResearch</researchPrerequisite>
       <skillRequirements>
         <Crafting>10</Crafting>
       </skillRequirements>
       <displayPriority>235</displayPriority>
     </recipeMaker>
   </ThingDef>
-
 </Defs>

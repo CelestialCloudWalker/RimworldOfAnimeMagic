@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Water Breathing Fatigue -->
+  <WaterBreathing_Fatigue.label>水之呼吸疲勞</WaterBreathing_Fatigue.label>
+  <!-- EN: The disorienting technique clouds the user's own mind, leaving them confused and mentally drained. -->
+  <WaterBreathing_Fatigue.description>重複使用呼吸法使身體疲憊，無法站穩。</WaterBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <WaterBreathing_Fatigue.stages.Mild_fatigue.label>輕微疲勞</WaterBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <WaterBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲勞</WaterBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <WaterBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲勞</WaterBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <WaterBreathing_Fatigue.stages.Severe_fatigue.label>嚴重疲勞</WaterBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <WaterBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</WaterBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <WaterBreathing_Fatigue.stages.Collapsed.label>累垮</WaterBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

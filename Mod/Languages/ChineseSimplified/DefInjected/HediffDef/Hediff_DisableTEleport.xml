@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: teleport disabled -->
+  <EMF_TeleportDisabled.label>取消发送</EMF_TeleportDisabled.label>
+  <!-- EN: This creature's has been anchored to this plane and cannot teleport.. -->
+  <EMF_TeleportDisabled.description>这个生物被束缚在此位面，无法发送……</EMF_TeleportDisabled.description>
+  <!-- EN: suppressed -->
+  <EMF_TeleportDisabled.stages.suppressed.label>被压制</EMF_TeleportDisabled.stages.suppressed.label>
+  
+</LanguageData>

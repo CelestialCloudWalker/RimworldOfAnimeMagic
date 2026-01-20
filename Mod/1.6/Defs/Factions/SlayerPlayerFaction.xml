@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef>
+    <defName>AA_Slayer_Corps</defName>
+    <label>Demon Slayer Corps</label>
+    <description>An elite organization of demon slayers dedicated to protecting humanity from the threat of demons. The Corps operates with a strict hierarchy based on skill and breathing techniques, from the lowest Mizunoto rank to the legendary Hashira pillars who master specific breathing forms.</description>
+    <pawnSingular>Slayer</pawnSingular>
+    <pawnsPlural>Slayers</pawnsPlural>
+    <categoryTag>Slayer</categoryTag>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <fixedName>Demon Slayer Corps</fixedName>
+    <factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <techLevel>Medieval</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+          <li>Medieval</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <hidden>false</hidden>
+    <autoFlee>false</autoFlee>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+        <li>Leather_Plain</li>
+        <li>Steel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <allowedCultures>
+      <li>AA_SlayerCulture</li>
+    </allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+    </disallowedMemes>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+
+    <raidLootMaker>AA_SlayerRaidLootMaker</raidLootMaker>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35, 25)</li>
+        <li>(100, 150)</li>
+        <li>(1000, 600)</li>
+        <li>(5000, 2500)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(700, 200)</li>
+        <li>(100000, 15000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+
+    <colorSpectrum>
+      <li>(0.2, 0.3, 0.8)</li>
+      <li>(0.1, 0.5, 0.9)</li>
+      <li>(0.3, 0.4, 0.7)</li>
+    </colorSpectrum>
+
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <maxTotalPoints>5000</maxTotalPoints>
+        <options>
+          <AA_Mizunoto_PK>15</AA_Mizunoto_PK>
+          <AA_Mizunoe_PK>12</AA_Mizunoe_PK>
+          <AA_Kanoto_PK>10</AA_Kanoto_PK>
+          <AA_Kanoe_PK>8</AA_Kanoe_PK>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>70</commonality>
+        <maxTotalPoints>8000</maxTotalPoints>
+        <options>
+          <AA_Tsuchinoto_PK>8</AA_Tsuchinoto_PK>
+          <AA_Tsuchinoe_PK>6</AA_Tsuchinoe_PK>
+          <AA_Hinoto_PK>5</AA_Hinoto_PK>
+          <AA_Hinoe_PK>4</AA_Hinoe_PK>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>50</commonality>
+        <maxTotalPoints>12000</maxTotalPoints>
+        <options>
+          <AA_Kinoto_PK>4</AA_Kinoto_PK>
+          <AA_Kinoe_PK>3</AA_Kinoe_PK>
+          <AA_Tsuguko_PK>2</AA_Tsuguko_PK>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <maxTotalPoints>25000</maxTotalPoints>
+        <options>
+          <AA_FlameHashira_PK>1</AA_FlameHashira_PK>
+          <AA_WaterHashira_PK>1</AA_WaterHashira_PK>
+          <AA_WindHashira_PK>1</AA_WindHashira_PK>
+          <AA_StoneHashira_PK>1</AA_StoneHashira_PK>
+          <AA_InsectHashira_PK>1</AA_InsectHashira_PK>
+          <AA_LoveHashira_PK>1</AA_LoveHashira_PK>
+          <AA_MistHashira_PK>1</AA_MistHashira_PK>
+          <AA_SerpentHashira_PK>1</AA_SerpentHashira_PK>
+          <AA_SoundHashira_PK>1</AA_SoundHashira_PK>
+          <AA_ForestHashira_PK>1</AA_ForestHashira_PK>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <commonality>100</commonality>
+        <maxTotalPoints>3000</maxTotalPoints>
+        <options>
+          <AA_Mizunoto_PK>20</AA_Mizunoto_PK>
+          <AA_Mizunoe_PK>15</AA_Mizunoe_PK>
+          <AA_Kanoto_PK>10</AA_Kanoto_PK>
+          <AA_Kanoe_PK>5</AA_Kanoe_PK>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <commonality>100</commonality>
+        <maxTotalPoints>2000</maxTotalPoints>
+        <options>
+          <AA_Mizunoto_PK>10</AA_Mizunoto_PK>
+          <AA_Mizunoe_PK>8</AA_Mizunoe_PK>
+          <AA_Kanoto_PK>5</AA_Kanoto_PK>
+        </options>
+      </li>
+    </pawnGroupMakers>
+
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>2000</configurationListOrderPriority>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <canUseAvoidGrid>true</canUseAvoidGrid>
+    <earliestRaidDays>3</earliestRaidDays>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 0)</li>
+        <li>(300, 0.5)</li>
+        <li>(800, 1)</li>
+        <li>(1500, 1.5)</li>
+        <li>(2500, 2)</li>
+        <li>(4000, 2.5)</li>
+        <li>(6000, 3)</li>
+        <li>(8000, 3.5)</li>
+        <li>(100000, 4)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+  </FactionDef>
+
+  <FactionDef>
+    <defName>AA_PlayerSlayerCorps</defName>
+    <label>demon slayer corps</label>
+    <description>A branch of the legendary Demon Slayer Corps dedicated to protecting humanity from demonic threats.</description>
+    <pawnSingular>slayer</pawnSingular>
+    <pawnsPlural>slayers</pawnsPlural>
+    <categoryTag>Slayer</categoryTag>
+
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>AA_Mizunoto_PK</basicMemberKind>
+
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <techLevel>Medieval</techLevel>
+
+    <allowedCultures>
+      <li>AA_SlayerCulture</li>
+    </allowedCultures>
+
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+          <li>Medieval</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+        <li>Leather_Plain</li>
+        <li>Steel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+
+    <colorSpectrum>
+      <li>(0.2, 0.3, 0.8)</li>
+      <li>(0.1, 0.5, 0.9)</li>
+      <li>(0.3, 0.4, 0.7)</li>
+    </colorSpectrum>
+
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35, 25)</li>
+        <li>(100, 150)</li>
+        <li>(1000, 600)</li>
+        <li>(5000, 2500)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+  </FactionDef>
+
+
+
+  <CultureDef>
+    <defName>AA_SlayerCulture</defName>
+    <label>Slayer</label>
+    <description>The disciplined culture of the Demon Slayer Corps, emphasizing honor, duty, and the protection of humanity from demonic threats.</description>
+    <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoCorunan</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityCorunan</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerCorunan</deityTypeMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalCorunan</festivalNameMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Corunan</leaderTitleMaker>
+    <allowedPlaceTags>
+      <li>OriginTribal</li>
+      <li>OriginMedieval</li>
+    </allowedPlaceTags>
+    <iconPath>World/WorldObjects/Expanding/Village</iconPath>
+    <thingStyleCategories>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <category>Rustic</category>
+        <priority>2</priority>
+      </li>
+    </thingStyleCategories>
+    <styleItemTags>
+      <li>
+        <tag>Rural</tag>
+        <baseWeight>2</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>5</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardRural</tag>
+        <baseWeight>2</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardUrban</tag>
+        <baseWeight>0.5</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>3</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+  </CultureDef>
+</Defs>

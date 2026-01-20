@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flower Breath Regen Rate -->
+  <FlowerBreath_RegenRate.label>花之呼吸恢復率</FlowerBreath_RegenRate.label>
+  <!-- EN: Rate of Flower Breath regeneration per tick. -->
+  <FlowerBreath_RegenRate.description>每刻花之呼吸恢復率。</FlowerBreath_RegenRate.description>
+  
+</LanguageData>

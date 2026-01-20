@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Breathing Mark -->
+  <Face_BreathingMark.label>斑紋</Face_BreathingMark.label>
+  
+  <!-- EN: Giyu Breathing Mark -->
+  <Face_Giyu.label>義勇的斑紋</Face_Giyu.label>
+  
+  <!-- EN: Muichiro Breathing Mark -->
+  <Face_Muichiro.label>無一郎的斑紋</Face_Muichiro.label>
+  
+  <!-- EN: Sanemi Breathing Mark -->
+  <Face_Sanemi.label>實彌的斑紋</Face_Sanemi.label>
+  
+  <!-- EN: Tanjiro Breathing Mark -->
+  <Face_Tanjiro.label>炭治郎的斑紋</Face_Tanjiro.label>
+  
+</LanguageData>

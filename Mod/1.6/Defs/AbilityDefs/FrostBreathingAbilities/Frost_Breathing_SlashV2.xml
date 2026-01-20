@@ -2,7 +2,7 @@
 <Defs>
   <AnimeArsenal.TalentedLevelingAbilityDef>
     <defName>Frost_Breathing_Slash</defName>
-    <label>Beast Breathing: Slash</label>
+    <label>Frost Breathing: Slash</label>
     <category>FrostBreathing_Ability_Catergory</category>
     <description>A ranged technique that sends a slash toward targets.</description>
     <iconPath>UI/Abilities/AbilityProjectile</iconPath>

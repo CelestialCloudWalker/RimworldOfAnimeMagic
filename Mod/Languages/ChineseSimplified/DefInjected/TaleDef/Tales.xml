@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: final selection -->
+  <AnimeArsenal_FinalSelection.label>最终选拔</AnimeArsenal_FinalSelection.label>
+  <!-- EN:
+    <li>tale_noun->[PAWN_nameDef] survives the Final Selection</li>
+    <li>tale_noun->[PAWN_nameDef]'s seven nights on Mount Sagiri</li>
+    <li>image->[PAWN_nameFull] battling demons through the night on Mount Sagiri [circumstance_group]</li>
+    <li>image->[PAWN_nameFull] standing bloodied but alive at dawn, claiming [PAWN_possessive] ore from the mountain [circumstance_group]</li>
+    <li>image->[PAWN_nameFull] dodging demonic claws beneath the wisteria-scented air [circumstance_group]</li>
+    <li>image->[PAWN_nameFull] fighting desperately as demons circle in the darkness [circumstance_group]</li>
+    <li>image->[PAWN_nameFull] witnessing other candidates fall to the ravenous demons [circumstance_group]</li>
+    <li>circumstance_phrase->while the purple wisteria flowers glow faintly at the barrier's edge</li>
+    <li>circumstance_phrase->with the screams of failed candidates echoing through the forest</li>
+    <li>circumstance_phrase->as [PAWN_possessive] blade finds its mark again and again</li>
+    <li>circumstance_phrase->surrounded by the twisted forms of captured demons</li>
+    <li>circumstance_phrase->knowing that dawn may never come</li>
+    <li>circumstance_phrase->with every muscle screaming in exhaustion</li>
+    <li>desc_sentence->Seven nights felt like seven lifetimes.</li>
+    <li>desc_sentence->The demons showed no mercy, just hunger.</li>
+    <li>desc_sentence->Not everyone who entered would leave alive.</li>
+    <li>desc_sentence->[PAWN_nameDef] discovers strength [PAWN_pronoun] never knew [PAWN_pronoun] possessed.</li>
+    <li>desc_sentence->Each sunrise is a small miracle of survival.</li>
+    <li>desc_sentence->[PAWN_nameDef] becomes something more than human through sheer will.</li>
+  -->
+  <AnimeArsenal_FinalSelection.rulePack.rulesStrings>
+    <li>tale_noun->[PAWN_nameDef]的最终选拔生存</li>
+    <li>tale_noun->[PAWN_nameDef]在狭雾山的七夜</li>
+
+    <li>image->[PAWN_nameFull]整晚都在狭雾山上与鬼战斗[circumstance_group]</li>
+    <li>image->[PAWN_nameFull]浑身是血活到了黎明，并挑选了自己的玉钢[circumstance_group]</li>
+    <li>image->[PAWN_nameFull]在紫藤花香中躲开鬼的爪牙[circumstance_group]</li>
+    <li>image->[PAWN_nameFull]誓死抵抗在黑暗中团团围住自己的鬼[circumstance_group]</li>
+    <li>image->[PAWN_nameFull]亲眼目睹其他应试者沦为饿鬼的食物[circumstance_group]</li>
+
+    <li>circumstance_phrase->同时园林一隅的紫藤花散发淡淡光芒</li>
+    <li>circumstance_phrase->同时落败应试者的惨叫声回荡在林间</li>
+    <li>circumstance_phrase->而[PAWN_pronoun]的刀刃一次又一次砍到目标</li>
+    <li>circumstance_phrase->被受困的异形之鬼包围</li>
+    <li>circumstance_phrase->知道黎明可能永不到来</li>
+    <li>circumstance_phrase->每块肌肉都疲劳到发出哀嚎</li>
+    
+    <li>desc_sentence->这七夜就象七段人生。</li>
+    <li>desc_sentence->鬼毫无慈悲，只有饥饿。</li>
+    <li>desc_sentence->不是所有人都能活着进去活着出来。</li>
+    <li>desc_sentence->[PAWN_nameDef]发现自己身上有前所未有的新力量。</li>
+    <li>desc_sentence->每次日出都是生存时的微小奇迹。</li>
+    <li>desc_sentence->[PAWN_nameDef]以纯粹的意志成为超越人类的存在。</li>
+    </AnimeArsenal_FinalSelection.rulePack.rulesStrings>
+  
+</LanguageData>

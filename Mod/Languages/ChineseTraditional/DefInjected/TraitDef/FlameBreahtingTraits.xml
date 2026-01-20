@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: blazing spirit -->
+  <BlazingSpirit.degreeDatas.blazing_spirit.label>熾熱精神</BlazingSpirit.degreeDatas.blazing_spirit.label>
+  <!-- EN: [PAWN_nameDef] has an unbreakable spirit that inspires others. [PAWN_possessive] fiery determination makes [PAWN_objective] nearly immune to despair, though [PAWN_pronoun] needs constant activity. -->
+  <BlazingSpirit.degreeDatas.blazing_spirit.description>[PAWN_nameDef]擁有鼓舞人心的不屈精神。[PAWN_pronoun]的強烈意志使旁人永不絕望，但這也讓[PAWN_pronoun]需要持續活動。</BlazingSpirit.degreeDatas.blazing_spirit.description>
+  
+  <!-- EN: burning passion -->
+  <BurningPassion.degreeDatas.burning_passion.label>熱情如火</BurningPassion.degreeDatas.burning_passion.label>
+  <!-- EN: [PAWN_nameDef]'s passionate nature drives [PAWN_objective] to excel at creative work, but [PAWN_pronoun] requires more recreation to maintain [PAWN_possessive] intense focus. -->
+  <BurningPassion.degreeDatas.burning_passion.description>[PAWN_nameDef]天性熱情，使[PAWN_pronoun]擅長藝術工作，但也需要更多娛樂保持高度專注力。</BurningPassion.degreeDatas.burning_passion.description>
+  
+  <!-- EN: combustive temper -->
+  <CombustiveTemper.degreeDatas.combustive_temper.label>脾氣易燃</CombustiveTemper.degreeDatas.combustive_temper.label>
+  <!-- EN: [PAWN_nameDef] has a volatile temperament that ignites into fury. When enraged, [PAWN_pronoun] becomes a devastating combatant but struggles with delicate work and has an unhealthy fascination with fire. -->
+  <CombustiveTemper.degreeDatas.combustive_temper.description>[PAWN_nameDef]性情暴躁，容易憤怒。當[PAWN_pronoun]發怒時，就會化身狂戰士。然而[PAWN_nameDef]不擅長精密作業，還對火焰有病態的迷戀。</CombustiveTemper.degreeDatas.combustive_temper.description>
+  
+  <!-- EN: forge master -->
+  <ForgeMaster.degreeDatas.forge_master.label>鍛造大師</ForgeMaster.degreeDatas.forge_master.label>
+  <!-- EN: [PAWN_nameDef] is a master of flame and forge. [PAWN_pronoun] works metal with unmatched skill and builds with the precision of a true craftsman. -->
+  <ForgeMaster.degreeDatas.forge_master.description>[PAWN_nameDef]是火焰與鍛造的大師。[PAWN_pronoun]的金屬加工才能無與倫比，以真正工匠的專業眼光打造作品。</ForgeMaster.degreeDatas.forge_master.description>
+  
+  <!-- EN: inner fire -->
+  <InnerFire.degreeDatas.inner_fire.label>內在之火</InnerFire.degreeDatas.inner_fire.label>
+  <!-- EN: [PAWN_nameDef] burns with an inner flame that protects [PAWN_objective] from cold but increases [PAWN_possessive] appetite. [PAWN_pronoun] excels at cooking and working with heat. -->
+  <InnerFire.degreeDatas.inner_fire.description>[PAWN_nameDef]心中燃燒著火焰，使[PAWN_pronoun]不會受寒，但食慾也增加了。[PAWN_nameDef]很擅長料理和用火。</InnerFire.degreeDatas.inner_fire.description>
+  
+  <!-- EN: phoenix heart -->
+  <PhoenixHeart.degreeDatas.phoenix_Heart.label>火鳥之心</PhoenixHeart.degreeDatas.phoenix_heart.label>
+  <!-- EN: [PAWN_nameDef] possesses remarkable regenerative abilities. Wounds heal faster and infections rarely take hold, as if [PAWN_possessive] body burns away impurities. -->
+  <PhoenixHeart.degreeDatas.phoenix_heart.description>[PAWN_nameDef]再生能力驚人。[PAWN_pronoun]傷口癒合很快，鮮少發生感染，彷彿身軀能將雜質燒盡。</PhoenixHeart.degreeDatas.phoenix_heart.description>
+  
+</LanguageData>

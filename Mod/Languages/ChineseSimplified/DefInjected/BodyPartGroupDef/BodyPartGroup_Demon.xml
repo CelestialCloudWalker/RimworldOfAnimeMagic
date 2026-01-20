@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: arms -->
+  <AA_DemonArms.label>手臂</AA_DemonArms.label>
+  
+  <!-- EN: eyes -->
+  <AA_DemonEyes.label>眼睛</AA_DemonEyes.label>
+  
+  <!-- EN: feet -->
+  <AA_DemonFeet.label>足部</AA_DemonFeet.label>
+  
+  <!-- EN: full head -->
+  <AA_DemonFullHead.label>头</AA_DemonFullHead.label>
+  
+  <!-- EN: legs -->
+  <AA_DemonLegs.label>腿部</AA_DemonLegs.label>
+  
+  <!-- EN: mouth -->
+  <AA_DemonMouth.label>嘴</AA_DemonMouth.label>
+  
+  <!-- EN: neck -->
+  <AA_DemonNeck.label>颈部</AA_DemonNeck.label>
+  
+  <!-- EN: shoulders -->
+  <AA_DemonShoulders.label>肩膀</AA_DemonShoulders.label>
+  
+  <!-- EN: teeth -->
+  <AA_DemonTeeth.label>牙齿</AA_DemonTeeth.label>
+  
+  <!-- EN: torso -->
+  <AA_DemonTorso.label>身体</AA_DemonTorso.label>
+  
+  <!-- EN: upper head -->
+  <AA_DemonUpperHead.label>头顶</AA_DemonUpperHead.label>
+  
+  <!-- EN: utility slot -->
+  <AA_DemonWaist.label>腰部</AA_DemonWaist.label>
+  
+  <!-- EN: beak -->
+  <Beak.label>喙</Beak.label>
+  
+  <!-- EN: front left claws -->
+  <FrontLeftClaws.label>左前爪</FrontLeftClaws.label>
+  <!-- EN: claws -->
+  <FrontLeftClaws.labelShort>爪</FrontLeftClaws.labelShort>
+  
+  <!-- EN: front left leg -->
+  <FrontLeftLeg.label>左前脚</FrontLeftLeg.label>
+  <!-- EN: leg -->
+  <FrontLeftLeg.labelShort>脚</FrontLeftLeg.labelShort>
+  
+  <!-- EN: front left paw -->
+  <FrontLeftPaw.label>左爪</FrontLeftPaw.label>
+  <!-- EN: paw -->
+  <FrontLeftPaw.labelShort>爪</FrontLeftPaw.labelShort>
+  
+  <!-- EN: front right claws -->
+  <FrontRightClaws.label>右前爪</FrontRightClaws.label>
+  <!-- EN: claws -->
+  <FrontRightClaws.labelShort>爪</FrontRightClaws.labelShort>
+  
+  <!-- EN: front right leg -->
+  <FrontRightLeg.label>右前脚</FrontRightLeg.label>
+  <!-- EN: leg -->
+  <FrontRightLeg.labelShort>脚</FrontRightLeg.labelShort>
+  
+  <!-- EN: front right paw -->
+  <FrontRightPaw.label>右爪</FrontRightPaw.label>
+  <!-- EN: paw -->
+  <FrontRightPaw.labelShort>爪</FrontRightPaw.labelShort>
+  
+  <!-- EN: hands -->
+  <Hands.label>手掌</Hands.label>
+  
+  <!-- EN: head -->
+  <HeadAttackTool.label>头顶</HeadAttackTool.label>
+  
+  <!-- EN: claw -->
+  <HeadClaw.label>爪</HeadClaw.label>
+  
+  <!-- EN: horn -->
+  <HornAttackTool.label>角</HornAttackTool.label>
+  
+  <!-- EN: left blade -->
+  <LeftBlade.label>左突刃部</LeftBlade.label>
+  <!-- EN: blade -->
+  <LeftBlade.labelShort>刀刃</LeftBlade.labelShort>
+  
+  <!-- EN: left fist -->
+  <LeftHand.label>左掌</LeftHand.label>
+  <!-- EN: fist -->
+  <LeftHand.labelShort>掌</LeftHand.labelShort>
+  
+  <!-- EN: middle finger -->
+  <MiddleFingers.label>中指</MiddleFingers.label>
+  <!-- EN: finger -->
+  <MiddleFingers.labelShort>中指</MiddleFingers.labelShort>
+  
+  <!-- EN: right blade -->
+  <RightBlade.label>右突刃部</RightBlade.label>
+  <!-- EN: blade -->
+  <RightBlade.labelShort>刀刃</RightBlade.labelShort>
+  
+  <!-- EN: right fist -->
+  <RightHand.label>右掌</RightHand.label>
+  <!-- EN: fist -->
+  <RightHand.labelShort>掌</RightHand.labelShort>
+  
+  <!-- EN: beak -->
+  <TurtleBeakAttackTool.label>尖嘴</TurtleBeakAttackTool.label>
+  
+  <!-- EN: tusks -->
+  <TuskAttackTool.label>獠牙</TuskAttackTool.label>
+  
+</LanguageData>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: forest strike -->
+  <Forest_Breathing_Damage.label>森之強擊</Forest_Breathing_Damage.label>
+  <!-- EN: {0} was struck down by overwhelming force. -->
+  <Forest_Breathing_Damage.deathMessage>{0}被壓倒性之力擊倒。</Forest_Breathing_Damage.deathMessage>
+  
+</LanguageData>

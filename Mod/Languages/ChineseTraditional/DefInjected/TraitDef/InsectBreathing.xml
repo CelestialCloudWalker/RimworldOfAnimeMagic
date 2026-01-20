@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: chitinous skin -->
+  <ChitinousSkin.degreeDatas.chitinous_skin.label>甲殼皮膚</ChitinousSkin.degreeDatas.chitinous_skin.label>
+  <!-- EN: [PAWN_nameDef] has developed a tough, insect-like carapace. [PAWN_possessive] natural armor protects [PAWN_objective] from harm, though [PAWN_possessive] appearance unsettles others. -->
+  <ChitinousSkin.degreeDatas.chitinous_skin.description>[PAWN_nameDef]進化出像昆蟲般的堅硬甲殼。[PAWN_pronoun]的天然盔甲提供傷害防護，外表卻令他人不安。</ChitinousSkin.degreeDatas.chitinous_skin.description>
+  
+  <!-- EN: compound eyes -->
+  <CompoundEyes.degreeDatas.compound_eyes.label>昆蟲複眼</CompoundEyes.degreeDatas.compound_eyes.label>
+  <!-- EN: [PAWN_nameDef] sees the world through multifaceted compound eyes. [PAWN_possessive] LevelTwo vision grants LevelThree accuracy and the ability to work effectively even in complete darkness. -->
+  <CompoundEyes.degreeDatas.compound_eyes.description>[PAWN_nameDef]用多向複眼觀察世界。[PAWN_pronoun]的貳級視力賦予[PAWN_pronoun]參級的準確度，就算在全黑環境也能高效工作。</CompoundEyes.degreeDatas.compound_eyes.description>
+  
+  <!-- EN: hive mind -->
+  <HiveMind.degreeDatas.hive_mind.label>蜂巢思維</HiveMind.degreeDatas.hive_mind.label>
+  <!-- EN: [PAWN_nameDef] functions as part of a collective consciousness. [PAWN_pronoun] excels when working with others but struggles with individual creativity and independent thought. -->
+  <HiveMind.degreeDatas.hive_mind.description>[PAWN_nameDef]是集體意識的一部分。[PAWN_pronoun]擅長與別人共事，卻很難有個人創造力和獨立思考能力。</HiveMind.degreeDatas.hive_mind.description>
+  
+  <!-- EN: insectoid digestion -->
+  <InsectoidDigestion.degreeDatas.insectoid_digestion.label>類蟲消化</InsectoidDigestion.degreeDatas.insectoid_digestion.label>
+  <!-- EN: [PAWN_nameDef] can digest almost any organic matter like an insect. [PAWN_pronoun] never suffers from food poisoning and can sustain [PAWN_objective] on the most basic nutrients. -->
+  <InsectoidDigestion.degreeDatas.insectoid_digestion.description>[PAWN_nameDef]可以像昆蟲一樣消化絕大部分有機物。[PAWN_pronoun]完全不會食物中毒，還能靠最基本的養分維持生命。</InsectoidDigestion.degreeDatas.insectoid_digestion.description>
+  
+  <!-- EN: metamorphosis -->
+  <Metamorphosis.degreeDatas.metamorphosis.label>身心蛻變</Metamorphosis.degreeDatas.metamorphosis.label>
+  <!-- EN: [PAWN_nameDef] undergoes constant internal change like an insect in metamorphosis. [PAWN_possessive] body and mind adapt continuously, learning and growing stronger over time. -->
+  <Metamorphosis.degreeDatas.metamorphosis.description>[PAWN_nameDef]如同昆蟲蛻變一樣，不斷長期經歷內在變化。[PAWN_pronoun]的身心持續適應，隨時間推移學習成長。</Metamorphosis.degreeDatas.metamorphosis.description>
+  
+  <!-- EN: swarm tactics -->
+  <SwarmTactics.degreeDatas.swarm_tactics.label>集群戰術</SwarmTactics.degreeDatas.swarm_tactics.label>
+  <!-- EN: [PAWN_nameDef] fights with the coordinated fury of a swarm. [PAWN_pronoun] becomes increasingly effective with more allies nearby, but falters when isolated. -->
+  <SwarmTactics.degreeDatas.swarm_tactics.description>[PAWN_nameDef]以蜂群集體狂怒的樣子進行戰鬥。[PAWN_pronoun]在附近有盟友時會更有效率，而被孤立時會弱小無助。</SwarmTactics.degreeDatas.swarm_tactics.description>
+  
+  <!-- EN: web weaving -->
+  <WebWeaving.degreeDatas.web_weaving.label>蜘蛛織網</WebWeaving.degreeDatas.web_weaving.label>
+  <!-- EN: [PAWN_nameDef] spins intricate patterns like a spider weaving its web. [PAWN_possessive] delicate touch excels at textile work and trap construction, creating both functional and beautiful designs. -->
+  <WebWeaving.degreeDatas.web_weaving.description>[PAWN_nameDef]擅長編織複雜圖案，就像蜘蛛織網一樣。[PAWN_pronoun]手法細膩，擅長紡織和設置陷阱，創造出兼具實用和美觀的設計。</WebWeaving.degreeDatas.web_weaving.description>
+  
+</LanguageData>

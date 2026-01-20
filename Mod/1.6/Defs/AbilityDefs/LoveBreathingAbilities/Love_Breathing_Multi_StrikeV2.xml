@@ -39,6 +39,8 @@
         <targetSearchRadius>17</targetSearchRadius>
         <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
         <jumpDamage>2~3</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
         <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
         <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
       </li>
@@ -67,6 +69,8 @@
             <targetSearchRadius>20</targetSearchRadius>
             <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
             <jumpDamage>3~4</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
             <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
           </li>
@@ -89,6 +93,8 @@
             <targetSearchRadius>23</targetSearchRadius>
             <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
             <jumpDamage>3~5</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
             <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
           </li>
@@ -111,6 +117,8 @@
             <targetSearchRadius>26</targetSearchRadius>
             <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
             <jumpDamage>4~6</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
             <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
           </li>
@@ -133,6 +141,8 @@
             <targetSearchRadius>30</targetSearchRadius>
             <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
             <jumpDamage>5~7</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
             <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
           </li>
@@ -155,6 +165,7 @@
             <targetSearchRadius>35</targetSearchRadius>
             <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
             <jumpDamage>5~8</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
             <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
           </li>

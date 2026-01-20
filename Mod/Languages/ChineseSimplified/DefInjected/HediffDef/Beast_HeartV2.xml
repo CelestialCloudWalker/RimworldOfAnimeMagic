@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Beastly Heart -->
+  <Beast_Heart.label>兽之心</Beast_Heart.label>
+  <!-- EN: Attacks strike heavier, carrying raw force. -->
+  <Beast_Heart.description>野性相伴，攻势越烈。</Beast_Heart.description>
+  
+  <!-- EN: Beastly Heart Level 5 -->
+  <Beast_Heart_LevelFive.label>兽之心</Beast_Heart_LevelFive.label>
+  <!-- EN: Attacks strike heavier, carrying raw force. -->
+  <Beast_Heart_LevelFive.description>野性相伴，攻势越烈。</Beast_Heart_LevelFive.description>
+  
+  <!-- EN: Beastly Heart Level 4 -->
+  <Beast_Heart_LevelFour.label>兽之心</Beast_Heart_LevelFour.label>
+  <!-- EN: Attacks strike heavier, carrying raw force. -->
+  <Beast_Heart_LevelFour.description>野性相伴，攻势越烈。</Beast_Heart_LevelFour.description>
+  
+  <!-- EN: Beastly Heart Level 6 -->
+  <Beast_Heart_LevelSix.label>兽之心</Beast_Heart_LevelSix.label>
+  <!-- EN: Attacks strike heavier, carrying raw force. -->
+  <Beast_Heart_LevelSix.description>野性相伴，攻势越烈。</Beast_Heart_LevelSix.description>
+  
+  <!-- EN: Beastly Heart Level 3 -->
+  <Beast_Heart_LevelThree.label>兽之心</Beast_Heart_LevelThree.label>
+  <!-- EN: Attacks strike heavier, carrying raw force. -->
+  <Beast_Heart_LevelThree.description>野性相伴，攻势越烈。</Beast_Heart_LevelThree.description>
+  
+  <!-- EN: Beastly Heart Level 2 -->
+  <Beast_Heart_LevelTwo.label>兽之心</Beast_Heart_LevelTwo.label>
+  <!-- EN: Attacks strike heavier, carrying raw force. -->
+  <Beast_Heart_LevelTwo.description>野性相伴，攻势越烈。</Beast_Heart_LevelTwo.description>
+  
+</LanguageData>

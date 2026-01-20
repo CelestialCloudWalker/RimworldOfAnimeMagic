@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Forest Breath Cost Multiplier -->
+  <ForestBreath_Cost.label>森之呼吸资源花费乘数</ForestBreath_Cost.label>
+  <!-- EN: Forest Breath Cost Multiplier. -->
+  <ForestBreath_Cost.description>森之呼吸资源花费乘数。</ForestBreath_Cost.description>
+  
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Stone Breath Regen Ticks -->
+  <StoneBreath_RegenTicks.label>岩之呼吸恢复间隔</StoneBreath_RegenTicks.label>
+  <!-- EN: Number of ticks between Stone Breath regeneration cycles. -->
+  <StoneBreath_RegenTicks.description>岩之呼吸每次恢复的时间周期，单位为刻。</StoneBreath_RegenTicks.description>
+  
+</LanguageData>

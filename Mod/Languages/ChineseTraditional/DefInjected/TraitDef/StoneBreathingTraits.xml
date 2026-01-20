@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: avalanche force -->
+  <AvalancheForce.degreeDatas.avalanche_force.label>山崩之力</AvalancheForce.degreeDatas.avalanche_force.label>
+  <!-- EN: [PAWN_nameDef] strikes with the devastating power of a rockslide. [PAWN_possessive] attacks are slow but overwhelmingly destructive, capable of shattering anything in [PAWN_possessive] path. -->
+  <AvalancheForce.degreeDatas.avalanche_force.description>[PAWN_nameDef]的攻擊力就像山崩一樣毀滅一切。雖然速度慢，破壞力卻極高，能夠摧毀所到之處的一切。</AvalancheForce.degreeDatas.avalanche_force.description>
+  
+  <!-- EN: bedrock foundation -->
+  <BedrockFoundation.degreeDatas.bedrock_foundation.label>基岩地基</BedrockFoundation.degreeDatas.bedrock_foundation.label>
+  <!-- EN: [PAWN_nameDef] builds structures that will stand for millennia. [PAWN_possessive] construction work is methodical and permanent, creating fortifications that can withstand any siege. -->
+  <BedrockFoundation.degreeDatas.bedrock_foundation.description>[PAWN_nameDef]蓋的建築千年不倒。[PAWN_pronoun]的建造工程有條理且持久，建造的防禦工事能擋下任何圍攻。</BedrockFoundation.degreeDatas.bedrock_foundation.description>
+  
+  <!-- EN: crystal formation -->
+  <CrystalFormation.degreeDatas.crystal_formation.label>水晶形成</CrystalFormation.degreeDatas.crystal_formation.label>
+  <!-- EN: [PAWN_nameDef] shapes stone and crystal with artistic precision. [PAWN_possessive] work transforms raw minerals into objects of beauty and value, finding art in the earth's treasures. -->
+  <CrystalFormation.degreeDatas.crystal_formation.description>[PAWN_nameDef]用藝術的精確性雕刻石頭和水晶。[PAWN_pronoun]化原礦為美玉，在地球的饋贈中發掘藝術。</CrystalFormation.degreeDatas.crystal_formation.description>
+  
+  <!-- EN: geological knowledge -->
+  <GeologicalKnowledge.degreeDatas.geological_knowledge.label>地理知識</GeologicalKnowledge.degreeDatas.geological_knowledge.label>
+  <!-- EN: [PAWN_nameDef] understands stone and metal like an old friend. [PAWN_possessive] expertise with earth and ore makes [PAWN_objective] invaluable for construction and resource extraction. -->
+  <GeologicalKnowledge.degreeDatas.geological_knowledge.description>[PAWN_nameDef]對石頭和金屬識如老友。[PAWN_pronoun]對土地和礦石的理解，在建造和原料提煉方面發揮了寶貴的作用。</GeologicalKnowledge.degreeDatas.geological_knowledge.description>
+  
+  <!-- EN: mountain endurance -->
+  <MountainEndurance.degreeDatas.mountain_endurance.label>穩如泰山</MountainEndurance.degreeDatas.mountain_endurance.label>
+  <!-- EN: [PAWN_nameDef] possesses the eternal patience of stone. [PAWN_pronoun] can endure pain and hardship that would break others, though [PAWN_possessive] movements are slow and deliberate. -->
+  <MountainEndurance.degreeDatas.mountain_endurance.description>[PAWN_nameDef]的耐心堅如磐石。[PAWN_pronoun]能承受擊垮別人的苦難，行動時卻緩慢而謹慎。</MountainEndurance.degreeDatas.mountain_endurance.description>
+  
+  <!-- EN: tectonic sense -->
+  <TectonicSense.degreeDatas.tectonic_sense.label>構造感知</TectonicSense.degreeDatas.tectonic_sense.label>
+  <!-- EN: [PAWN_nameDef] feels the pulse of the earth itself. [PAWN_possessive] connection to stone and soil gives [PAWN_objective] uncanny awareness of underground resources and geological formations. -->
+  <TectonicSense.degreeDatas.tectonic_sense.description>[PAWN_nameDef]能感受地球的脈動。[PAWN_pronoun]與土石的連結使[PAWN_pronoun]得到對地底資源和地質構造的奇特感知。</TectonicSense.degreeDatas.tectonic_sense.description>
+  
+  <!-- EN: unwavering resolve -->
+  <UnwaveringResolve.degreeDatas.unwavering_resolve.label>不動如山</UnwaveringResolve.degreeDatas.unwavering_resolve.label>
+  <!-- EN: [PAWN_nameDef] has the unshakeable determination of a mountain. [PAWN_possessive] mental fortitude is absolute, making [PAWN_objective] a pillar of strength that others can rely on in any crisis. -->
+  <UnwaveringResolve.degreeDatas.unwavering_resolve.description>[PAWN_nameDef]有不動如山的決心。[PAWN_pronoun]的意志堅毅無比，成為別人遇到危機時都能依靠的力量支柱。</UnwaveringResolve.degreeDatas.unwavering_resolve.description>
+  
+</LanguageData>

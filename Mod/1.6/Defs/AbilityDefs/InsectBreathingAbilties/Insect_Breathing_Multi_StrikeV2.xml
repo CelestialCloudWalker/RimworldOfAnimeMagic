@@ -38,6 +38,8 @@
         <targetSearchRadius>13</targetSearchRadius>
         <jumpDamageDef>Inscet_Breathing_Damage</jumpDamageDef>
         <jumpDamage>2~3</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
         <casterEffecter>AnimeArsenal_InsectJump</casterEffecter>
         <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
       </li>
@@ -68,6 +70,8 @@
             <targetSearchRadius>15</targetSearchRadius>
             <jumpDamageDef>Inscet_Breathing_Damage</jumpDamageDef>
             <jumpDamage>2~4</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_InsectJump</casterEffecter>
             <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
           </li>
@@ -90,6 +94,8 @@
             <targetSearchRadius>18</targetSearchRadius>
             <jumpDamageDef>Inscet_Breathing_Damage</jumpDamageDef>
             <jumpDamage>3~5</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_InsectJump</casterEffecter>
             <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
           </li>
@@ -112,6 +118,8 @@
             <targetSearchRadius>21</targetSearchRadius>
             <jumpDamageDef>Inscet_Breathing_Damage</jumpDamageDef>
             <jumpDamage>3~6</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_InsectJump</casterEffecter>
             <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
           </li>
@@ -134,6 +142,8 @@
             <targetSearchRadius>24</targetSearchRadius>
             <jumpDamageDef>Inscet_Breathing_Damage</jumpDamageDef>
             <jumpDamage>4~7</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_InsectJump</casterEffecter>
             <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
           </li>
@@ -156,6 +166,7 @@
             <targetSearchRadius>28</targetSearchRadius>
             <jumpDamageDef>Inscet_Breathing_Damage</jumpDamageDef>
             <jumpDamage>5~8</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <casterEffecter>AnimeArsenal_InsectJump</casterEffecter>
             <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
           </li>

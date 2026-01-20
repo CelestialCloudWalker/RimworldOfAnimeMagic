@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: flame burn -->
+  <BurningOfFlame.label>炎之灼燒</BurningOfFlame.label>
+  <!-- EN: Flesh scorched by intense heat. Severe pain and risk of tissue death. -->
+  <BurningOfFlame.description>肌膚被高溫灼傷，造成嚴重疼痛，可能有組織壞死風險。</BurningOfFlame.description>
+  <!-- EN: flame burn scar -->
+  <BurningOfFlame.comps.HediffComp_GetsPermanent.permanentLabel>炎之灼燒疤痕</BurningOfFlame.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Burned off -->
+  <BurningOfFlame.injuryProps.destroyedLabel>喪失功能</BurningOfFlame.injuryProps.destroyedLabel>
+  <!-- EN: Burned out -->
+  <BurningOfFlame.injuryProps.destroyedOutLabel>被燒掉</BurningOfFlame.injuryProps.destroyedOutLabel>
+  <!-- EN: a flame burn -->
+  <BurningOfFlame.labelNoun>炎之灼燒</BurningOfFlame.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <BurningOfFlame.labelNounPretty>{1}內的{0}</BurningOfFlame.labelNounPretty>
+  
+</LanguageData>

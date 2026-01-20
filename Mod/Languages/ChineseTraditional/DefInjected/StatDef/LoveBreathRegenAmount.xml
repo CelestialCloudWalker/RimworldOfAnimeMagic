@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Love Breath Regen Amount Per Regen Tick -->
+  <LoveBreath_RegenAmount.label>每刻戀之呼吸恢復量</LoveBreath_RegenAmount.label>
+  <!-- EN: Rate of Love Breath regeneration per tick. -->
+  <LoveBreath_RegenAmount.description>每刻戀之呼吸恢復量。</LoveBreath_RegenAmount.description>
+  
+</LanguageData>

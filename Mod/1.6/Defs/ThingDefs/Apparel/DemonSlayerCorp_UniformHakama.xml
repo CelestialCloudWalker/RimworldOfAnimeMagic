@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>DemonSlayerCorp_UniformHakama</defName>
+    <label>Hakama Uniform</label>
+    <description>Standard-issue hakama of the Demon Slayer Corps.</description>
+    <graphicData>
+      <texPath>DemonSlayerCorp_UniformHakama/Icon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <smeltable>false</smeltable>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>16000</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.85</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.46</ArmorRating_Heat>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>DemonSlayerCorp_UniformHakama/DemonSlayerCorp_UniformHakama</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>IndustrialBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+    <recipeMaker>
+      <researchPrerequisite>AA_SlayerCorpsUniformResearch</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>235</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

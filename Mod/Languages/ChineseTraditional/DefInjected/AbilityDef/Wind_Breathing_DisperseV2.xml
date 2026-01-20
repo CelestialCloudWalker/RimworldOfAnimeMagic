@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Wind Breathing: Disperse -->
+  <Wind_Breathing_Disperse.label>風之呼吸・散</Wind_Breathing_Disperse.label>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Wind_Breathing_Disperse.description>在敵方周圍創造斬擊的技法。</Wind_Breathing_Disperse.description>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Wind_Breathing_Disperse.levels.0.description>在敵方周圍創造斬擊的技法。</Wind_Breathing_Disperse.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Wind_Breathing_Disperse.levels.0.labelSuffix>壹級</Wind_Breathing_Disperse.levels.0.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Wind_Breathing_Disperse.levels.1.description>在敵方周圍創造斬擊的技法。</Wind_Breathing_Disperse.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Wind_Breathing_Disperse.levels.1.labelSuffix>貳級</Wind_Breathing_Disperse.levels.1.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Wind_Breathing_Disperse.levels.2.description>在敵方周圍創造斬擊的技法。</Wind_Breathing_Disperse.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Wind_Breathing_Disperse.levels.2.labelSuffix>參級</Wind_Breathing_Disperse.levels.2.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Wind_Breathing_Disperse.levels.3.description>在敵方周圍創造斬擊的技法。</Wind_Breathing_Disperse.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Wind_Breathing_Disperse.levels.3.labelSuffix>肆級</Wind_Breathing_Disperse.levels.3.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Wind_Breathing_Disperse.levels.4.description>在敵方周圍創造斬擊的技法。</Wind_Breathing_Disperse.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Wind_Breathing_Disperse.levels.4.labelSuffix>伍級</Wind_Breathing_Disperse.levels.4.labelSuffix>
+  <!-- EN: A technique that creates cutting attacks around a targeted enemy. -->
+  <Wind_Breathing_Disperse.levels.5.description>在敵方周圍創造斬擊的技法。</Wind_Breathing_Disperse.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Wind_Breathing_Disperse.levels.5.labelSuffix>陸級</Wind_Breathing_Disperse.levels.5.labelSuffix>
+  
+</LanguageData>

@@ -1,135 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<AlienRace.AlienBackstoryDef>
-		<defName>AA_DemonChild</defName>
-		<title>demon child</title>
-		<titleShort>demon child</titleShort>
-		<baseDesc>[PAWN_nameDef] surived being turned into demon as a child.</baseDesc>
-		<slot>Childhood</slot>
-		<spawnCategories>
-			<li>AA_DemonRace</li>
-		</spawnCategories>
-		<skillGains>
-			<Melee>4</Melee>
-			<Shooting>1</Shooting>
-		</skillGains>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-	</AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>DemonChildhoodStory</defName>
+    <title>Demon Child</title>
+    <titleShort>Demon Child</titleShort>
+    <baseDesc>[PAWN_nameDef] survived being turned into a demon as a child.</baseDesc>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>AA_DemonRace</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>5</Melee>
+      <Shooting>2</Shooting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <NightOwl>0</NightOwl>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Kind>0</Kind>
+      <Ascetic>0</Ascetic>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
 
-	<AlienRace.AlienBackstoryDef>
-		<defName>DemonChildhoodStory</defName>
-		<title>demon child</title>
-		<titleShort>demon child</titleShort>
-		<baseDesc>[PAWN_nameDef] surived being turned into demon as a child.</baseDesc>
-		<slot>Childhood</slot>
-		<spawnCategories>
-			<li>AA_DemonRace</li>
-		</spawnCategories>
-		<skillGains>
-			<Melee>4</Melee>
-			<Shooting>1</Shooting>
-		</skillGains>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-	</AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Lower_Moon_Demon</defName>
+    <title>Lower Moon</title>
+    <titleShort>Lower Moon</titleShort>
+    <baseDesc>[PAWN_nameDef] holds a position among the Lower Moons, dangerous but replaceable within the Demon's hierarchy.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Demons</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>7</Melee>
+      <Construction>3</Construction>
+      <Shooting>2</Shooting>
+      <Intellectual>1</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+      <li>Caring</li>
+      <li>PlantWork</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Bloodlust>0</Bloodlust>
+      <NightOwl>0</NightOwl>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Kind>0</Kind>
+      <Ascetic>0</Ascetic>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
 
-	<AlienRace.AlienBackstoryDef>
-		<defName>RK_Lower_Moon_Demon</defName>
-		<title>Lower Moon</title>
-		<titleShort>Lower Moon</titleShort>
-		<baseDesc>[PAWN_nameDef] holds a position among the Lower Moons, dangerous but replaceable within the Demon's hierarchy.</baseDesc>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>RimKetsu</li>
-			<li>Demons</li>
-		</spawnCategories>
-		<skillGains>
-			<Construction>3</Construction>
-			<Melee>6</Melee>
-		</skillGains>
-		<workDisables>
-			<li>Social</li>
-			<li>Caring</li>
-			<li>PlantWork</li>
-		</workDisables>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-		<forcedTraits>
-			<Tough>0</Tough>
-			<Bloodlust>0</Bloodlust>
-		</forcedTraits>
-		<disallowedTraits>
-			<Wimp>0</Wimp>
-			<Kind>0</Kind>
-		</disallowedTraits>
-	</AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Upper_Moon_Demon</defName>
+    <title>Upper Moon</title>
+    <titleShort>Upper Moon</titleShort>
+    <baseDesc>[PAWN_nameDef] holds a seat among the Upper Moons, commanding strength and authority unmatched by most demons.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Demons</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>9</Melee>
+      <Construction>3</Construction>
+      <Intellectual>4</Intellectual>
+      <Shooting>2</Shooting>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+      <li>Caring</li>
+      <li>PlantWork</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <Bloodlust>0</Bloodlust>
+      <Psychopath>0</Psychopath>
+      <NightOwl>0</NightOwl>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Kind>0</Kind>
+      <Ascetic>0</Ascetic>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
 
-	<AlienRace.AlienBackstoryDef>
-		<defName>RK_Upper_Moon_Demon</defName>
-		<title>Upper Moon</title>
-		<titleShort>Upper Moon</titleShort>
-		<baseDesc>[PAWN_nameDef] holds a seat among the Upper Moons, commanding strength and authority unmatched by most demons.</baseDesc>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>RimKetsu</li>
-			<li>Demons</li>
-		</spawnCategories>
-		<skillGains>
-			<Construction>3</Construction>
-			<Melee>8</Melee>
-			<Intellectual>3</Intellectual>
-		</skillGains>
-		<workDisables>
-			<li>Social</li>
-			<li>Caring</li>
-			<li>PlantWork</li>
-		</workDisables>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-		<forcedTraits>
-			<Tough>0</Tough>
-			<Bloodlust>0</Bloodlust>
-			<Psychopath>0</Psychopath>
-		</forcedTraits>
-		<disallowedTraits>
-			<Wimp>0</Wimp>
-			<Kind>0</Kind>
-		</disallowedTraits>
-	</AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Demon</defName>
+    <title>Demon</title>
+    <titleShort>Demon</titleShort>
+    <baseDesc>[PAWN_nameDef] is a demon, a predator that hunts humans for sustenance.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Demons</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>7</Melee>
+      <Construction>3</Construction>
+      <Shooting>1</Shooting>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+      <li>Caring</li>
+      <li>PlantWork</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <NightOwl>0</NightOwl>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Kind>0</Kind>
+      <Ascetic>0</Ascetic>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
 
-	<AlienRace.AlienBackstoryDef>
-		<defName>RK_Demon</defName>
-		<title>Demon</title>
-		<titleShort>Demon</titleShort>
-		<baseDesc>[PAWN_nameDef] is a demon, a predator that hunts humans for sustenance.</baseDesc>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>RimKetsu</li>
-			<li>Demons</li>
-		</spawnCategories>
-		<skillGains>
-			<Construction>3</Construction>
-			<Melee>8</Melee>
-		</skillGains>
-		<workDisables>
-			<li>Social</li>
-			<li>Caring</li>
-			<li>PlantWork</li>
-		</workDisables>
-		<requiredWorkTags>
-			<li>Violent</li>
-		</requiredWorkTags>
-		<forcedTraits>
-			<Tough>0</Tough>
-		</forcedTraits>
-		<disallowedTraits>
-			<Wimp>0</Wimp>
-		</disallowedTraits>
-	</AlienRace.AlienBackstoryDef>
 </Defs>

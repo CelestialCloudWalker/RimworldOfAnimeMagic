@@ -330,13 +330,6 @@
   </Talented.TalentDef>
 
   <Talented.TalentDef>
-    <defName>NewTalent_1746401667784</defName>
-    <label>undefined</label>
-    <levelRequired>0</levelRequired>
-    <pointCost>1</pointCost>
-  </Talented.TalentDef>
-
-  <Talented.TalentDef>
     <defName>Beast_Breath_Increase</defName>
     <label>Increase Breath Capacity</label>
     <uiIconPath>Things/BeastIcon</uiIconPath>
@@ -1294,20 +1287,6 @@
         <operation>Add</operation>
       </li>
     </statEffects>
-  </Talented.TalentDef>
-
-  <Talented.TalentDef>
-    <defName>NewTalent_1751855868378</defName>
-    <label>undefined</label>
-    <levelRequired>0</levelRequired>
-    <pointCost>1</pointCost>
-  </Talented.TalentDef>
-
-  <Talented.TalentDef>
-    <defName>Gene_Test_Talent</defName>
-    <label>undefined</label>
-    <levelRequired>0</levelRequired>
-    <pointCost>1</pointCost>
   </Talented.TalentDef>
 
   <Talented.TalentDef>
@@ -7926,7 +7905,7 @@
 
   <Talented.TalentDef>
     <defName>Frost_Breathing_Slash</defName>
-    <label>Beast Breathing: Slash</label>
+    <label>Frost Breathing: Slash</label>
     <uiIconPath>Things/FrostIcon</uiIconPath>
     <levelRequired>0</levelRequired>
     <pointCost>1</pointCost>

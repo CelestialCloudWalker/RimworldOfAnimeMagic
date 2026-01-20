@@ -317,6 +317,15 @@ namespace AnimeArsenal
                 return;
             }
 
+            float damage = DamageScalingUtility.GetScaledDamage(
+            Props.damage,
+            parent.pawn,
+            Props.scaleStat,
+            Props.scaleSkill,
+            Props.skillMultiplier,
+            Props.debugScaling
+        );
+
             DamageDef damageDef = Props.damageDef ?? DamageDefOf.Blunt;
 
             DamageInfo damageInfo = new DamageInfo(
@@ -419,6 +428,10 @@ namespace AnimeArsenal
 
         public int hitEffecterCount = 0;
         public float hitEffecterRadius = 1.5f;
+        public StatDef scaleStat;
+        public SkillDef scaleSkill;
+        public float skillMultiplier = 0.1f;
+        public bool debugScaling = false;
 
         public bool showMessages = true;
 

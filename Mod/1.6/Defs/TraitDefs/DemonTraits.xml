@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>BloodThirst</defName>
-    <commonality>0.8</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -34,7 +34,7 @@
 
   <TraitDef>
     <defName>RegenerativeFlesh</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>regenerative flesh</label>
@@ -57,7 +57,7 @@
 
   <TraitDef>
     <defName>NightPredator</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Animals</li>
     </forcedPassions>
@@ -88,7 +88,7 @@
 
   <TraitDef>
     <defName>InhumanStrength</defName>
-    <commonality>0.5</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Mining</li>
     </forcedPassions>
@@ -115,7 +115,7 @@
 
   <TraitDef>
     <defName>CorruptedMind</defName>
-    <commonality>0.6</commonality>
+    <commonality>0</commonality>
     <conflictingTraits>
       <li>Kind</li>
     </conflictingTraits>
@@ -145,7 +145,7 @@
 
   <TraitDef>
     <defName>FleshManipulation</defName>
-    <commonality>0.4</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Medicine</li>
     </forcedPassions>
@@ -170,58 +170,10 @@
     </degreeDatas>
   </TraitDef>
 
-  <TraitDef>
-    <defName>BloodArt</defName>
-    <commonality>0.3</commonality>
-    <forcedPassions>
-      <li>Artistic</li>
-    </forcedPassions>
-    <degreeDatas>
-      <li>
-        <label>blood art</label>
-        <description>[PAWN_nameDef] wields supernatural Blood Demon Art techniques. [PAWN_possessive] unique abilities manifest through artistic expression, creating both beautiful and terrifying works powered by demonic energy.</description>
-        <degree>1</degree>
-        <statOffsets>
-          <MeleeHitChance>8</MeleeHitChance>
-          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
-          <MentalBreakThreshold>5</MentalBreakThreshold>
-        </statOffsets>
-        <skillGains>
-          <Artistic>7</Artistic>
-          <Melee>4</Melee>
-          <Crafting>2</Crafting>
-        </skillGains>
-        <marketValueFactorOffset>0.22</marketValueFactorOffset>
-      </li>
-    </degreeDatas>
-  </TraitDef>
-
-  <TraitDef>
-    <defName>SunlightVulnerability</defName>
-    <commonality>0.9</commonality>
-    <degreeDatas>
-      <li>
-        <label>sunlight vulnerability</label>
-        <description>[PAWN_nameDef] suffers greatly under the sun's rays. [PAWN_possessive] demonic nature makes daylight painful and weakening, forcing [PAWN_objective] to seek shadows and avoid outdoor work during the day.</description>
-        <degree>1</degree>
-        <statOffsets>
-          <WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
-          <MoveSpeed>-0.2</MoveSpeed>
-          <MentalBreakThreshold>-8</MentalBreakThreshold>
-          <InjuryHealingFactor>-0.3</InjuryHealingFactor>
-          <MentalBreakThreshold>0.2</MentalBreakThreshold>
-        </statOffsets>
-        <skillGains>
-          <Mining>2</Mining>
-        </skillGains>
-        <marketValueFactorOffset>-0.15</marketValueFactorOffset>
-      </li>
-    </degreeDatas>
-  </TraitDef>
 
   <TraitDef>
     <defName>DemonicHunger</defName>
-    <commonality>0.7</commonality>
+    <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>demonic hunger</label>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Insect Breath Cost Multiplier -->
+  <InsectBreath_Cost.label>虫之呼吸资源花费乘数</InsectBreath_Cost.label>
+  <!-- EN: Insect Breath Cost Multiplier. -->
+  <InsectBreath_Cost.description>虫之呼吸资源花费乘数。</InsectBreath_Cost.description>
+  
+</LanguageData>

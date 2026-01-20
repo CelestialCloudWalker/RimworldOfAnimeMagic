@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Demon Arts: Dream Needle -->
+  <Blood_Demon_Arts_DreamNeedle.label>血鬼术 梦织针</Blood_Demon_Arts_DreamNeedle.label>
+  <!-- EN: Causes targets to fall asleep instantly. -->
+  <Blood_Demon_Arts_DreamNeedle.description>让对方立即入睡。</Blood_Demon_Arts_DreamNeedle.description>
+  <!-- EN: Causes targets to fall asleep instantly. -->
+  <Blood_Demon_Arts_DreamNeedle.levels.0.description>让对方立即入睡。</Blood_Demon_Arts_DreamNeedle.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Blood_Demon_Arts_DreamNeedle.levels.0.labelSuffix>壹级</Blood_Demon_Arts_DreamNeedle.levels.0.labelSuffix>
+  <!-- EN: Causes targets to fall asleep instantly. -->
+  <Blood_Demon_Arts_DreamNeedle.levels.1.description>让对方立即入睡。</Blood_Demon_Arts_DreamNeedle.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Blood_Demon_Arts_DreamNeedle.levels.1.labelSuffix>贰级</Blood_Demon_Arts_DreamNeedle.levels.1.labelSuffix>
+  <!-- EN: Causes targets to fall asleep instantly. -->
+  <Blood_Demon_Arts_DreamNeedle.levels.2.description>让对方立即入睡。</Blood_Demon_Arts_DreamNeedle.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Blood_Demon_Arts_DreamNeedle.levels.2.labelSuffix>参级</Blood_Demon_Arts_DreamNeedle.levels.2.labelSuffix>
+  <!-- EN: Causes targets to fall asleep instantly. -->
+  <Blood_Demon_Arts_DreamNeedle.levels.3.description>让对方立即入睡。</Blood_Demon_Arts_DreamNeedle.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Blood_Demon_Arts_DreamNeedle.levels.3.labelSuffix>肆级</Blood_Demon_Arts_DreamNeedle.levels.3.labelSuffix>
+  <!-- EN: Causes targets to fall asleep instantly. -->
+  <Blood_Demon_Arts_DreamNeedle.levels.4.description>让对方立即入睡。</Blood_Demon_Arts_DreamNeedle.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Blood_Demon_Arts_DreamNeedle.levels.4.labelSuffix>伍级</Blood_Demon_Arts_DreamNeedle.levels.4.labelSuffix>
+  <!-- EN: Causes targets to fall asleep instantly. -->
+  <Blood_Demon_Arts_DreamNeedle.levels.5.description>让对方立即入睡。</Blood_Demon_Arts_DreamNeedle.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Blood_Demon_Arts_DreamNeedle.levels.5.labelSuffix>陆级</Blood_Demon_Arts_DreamNeedle.levels.5.labelSuffix>
+  
+</LanguageData>

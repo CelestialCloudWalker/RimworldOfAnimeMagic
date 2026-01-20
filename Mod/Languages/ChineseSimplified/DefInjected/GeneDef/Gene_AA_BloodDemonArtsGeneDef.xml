@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Demon Art -->
+  <BloodDemonArt.label>血鬼术</BloodDemonArt.label>
+  <!-- EN: A demon with blood arts that grow stronger with kills and training. -->
+  <BloodDemonArt.description>拥有血鬼术的鬼，能透过杀人和锻练变得更强。</BloodDemonArt.description>
+  <!-- EN: Weak demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.0>弱鬼的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.0>
+  <!-- EN: Demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.1>鬼的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.1>
+  <!-- EN: Lower Rank Six demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.2>下弦之陆的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.2>
+  <!-- EN: Lower Rank Five demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.3>下弦之伍的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.3>
+  <!-- EN: Lower Rank Four demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.4>下弦之肆的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.4>
+  <!-- EN: Lower Rank Three demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.5>下弦之参的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.5>
+  <!-- EN: Lower Rank Two demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.6>下弦之贰的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.6>
+  <!-- EN: Lower Rank One demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.7>下弦之壹的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.7>
+  <!-- EN: Upper Rank Six demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.8>上弦之陆的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.8>
+  <!-- EN: Upper Rank Five demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.9>上弦之伍的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.9>
+  <!-- EN: Upper Rank Four demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.10>上弦之肆的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.10>
+  <!-- EN: Upper Rank Three demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.11>上弦之参的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.11>
+  <!-- EN: Upper Rank Two demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.12>上弦之贰的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.12>
+  <!-- EN: Upper Rank One demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.0.bodyDisappearMessage.13>上弦之壹的身体化为尘土了！</BloodDemonArt.modExtensions.0.bodyDisappearMessage.13>
+  <!-- EN: Blood Art -->
+  <BloodDemonArt.modExtensions.1.resourceName>血术</BloodDemonArt.modExtensions.1.resourceName>
+  <!-- EN: Weak demon body turned to ash! -->
+  <BloodDemonArt.modExtensions.3.disappearMessage>的身体化为尘土了！</BloodDemonArt.modExtensions.3.disappearMessage>
+  <!-- EN: Demon Blood Art that evolves with power. -->
+  <BloodDemonArt.resourceDescription>血术随着力量增长。</BloodDemonArt.resourceDescription>
+  <!-- EN: Blood Art -->
+  <BloodDemonArt.resourceLabel>血术</BloodDemonArt.resourceLabel>
+  <!-- EN: Blood Art -->
+  <BloodDemonArt.resourceName>血术</BloodDemonArt.resourceName>
+  
+</LanguageData>

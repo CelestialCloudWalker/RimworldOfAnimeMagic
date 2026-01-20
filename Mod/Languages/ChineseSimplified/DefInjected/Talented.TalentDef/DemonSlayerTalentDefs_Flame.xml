@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Flame Breathing: Disperse -->
+  <Flame_Breathing_Disperse.label>炎之呼吸・散</Flame_Breathing_Disperse.label>
+  
+  <!-- EN: FlameBreathing -->
+  <Flame_Breathing_GeneGive_Talent.label>炎之呼吸</Flame_Breathing_GeneGive_Talent.label>
+  
+  <!-- EN: Flame Breathing: Multi Strike -->
+  <Flame_Breathing_Multi_Strike.label>炎之呼吸・连袭</Flame_Breathing_Multi_Strike.label>
+  
+  <!-- EN: Flame Breathing: Reflect -->
+  <Flame_Breathing_Reflect.label>炎之呼吸・返</Flame_Breathing_Reflect.label>
+  
+  <!-- EN: Flame Breathing: Slash -->
+  <Flame_Breathing_Slash.label>炎之呼吸・斩</Flame_Breathing_Slash.label>
+  
+  <!-- EN: Flame Breathing: Strike -->
+  <Flame_Breathing_Strike.label>炎之呼吸・袭</Flame_Breathing_Strike.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <FlameBreath_Breath_Increase.label>增加呼吸法容量</FlameBreath_Breath_Increase.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <FlameBreath_Breath_Increase2.label>增加呼吸法容量</FlameBreath_Breath_Increase2.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <FlameBreath_Breath_Increase3.label>增加呼吸法容量</FlameBreath_Breath_Increase3.label>
+  
+  <!-- EN: Increase Breath Capacity -->
+  <FlameBreath_Breath_Increase4.label>增加呼吸法容量</FlameBreath_Breath_Increase4.label>
+  
+  <!-- EN: FlameBreath_Cost -->
+  <FlameBreath_Cost_Talent.label>炎之呼吸花费</FlameBreath_Cost_Talent.label>
+  
+  <!-- EN: FlameBreath_Cost -->
+  <FlameBreath_Cost_Talent2.label>炎之呼吸花费</FlameBreath_Cost_Talent2.label>
+  
+  <!-- EN: FlameBreath_Cost -->
+  <FlameBreath_Cost_Talent3.label>炎之呼吸花费</FlameBreath_Cost_Talent3.label>
+  
+  <!-- EN: FlameBreath_Cost -->
+  <FlameBreath_Cost_Talent4.label>炎之呼吸花费</FlameBreath_Cost_Talent4.label>
+  
+  <!-- EN: FlameBreath_RegenAmount -->
+  <FlameBreath_RegenAmount_Talent.label>每刻炎之呼吸恢复量</FlameBreath_RegenAmount_Talent.label>
+  
+  <!-- EN: FlameBreath_RegenAmount -->
+  <FlameBreath_RegenAmount_Talent2.label>每刻炎之呼吸恢复量</FlameBreath_RegenAmount_Talent2.label>
+  
+  <!-- EN: FlameBreath_RegenAmount -->
+  <FlameBreath_RegenAmount_Talent3.label>每刻炎之呼吸恢复量</FlameBreath_RegenAmount_Talent3.label>
+  
+  <!-- EN: FlameBreath_RegenAmount -->
+  <FlameBreath_RegenAmount_Talent4.label>每刻炎之呼吸恢复量</FlameBreath_RegenAmount_Talent4.label>
+  
+  <!-- EN: FlameBreath_RegenRate -->
+  <FlameBreath_RegenRate_Talent.label>炎之呼吸恢复率</FlameBreath_RegenRate_Talent.label>
+  
+  <!-- EN: FlameBreath_RegenRate -->
+  <FlameBreath_RegenRate_Talent2.label>炎之呼吸恢复率</FlameBreath_RegenRate_Talent2.label>
+  
+  <!-- EN: FlameBreath_RegenRate -->
+  <FlameBreath_RegenRate_Talent3.label>炎之呼吸恢复率</FlameBreath_RegenRate_Talent3.label>
+  
+  <!-- EN: FlameBreath_RegenRate -->
+  <FlameBreath_RegenRate_Talent4.label>炎之呼吸恢复率</FlameBreath_RegenRate_Talent4.label>
+  
+  <!-- EN: FlameBreath_RegenTicks -->
+  <FlameBreath_RegenTicks_Talent.label>炎之呼吸恢复间隔</FlameBreath_RegenTicks_Talent.label>
+  
+  <!-- EN: FlameBreath_RegenTicks -->
+  <FlameBreath_RegenTicks_Talent2.label>炎之呼吸恢复间隔</FlameBreath_RegenTicks_Talent2.label>
+  
+  <!-- EN: FlameBreath_RegenTicks -->
+  <FlameBreath_RegenTicks_Talent3.label>炎之呼吸恢复间隔</FlameBreath_RegenTicks_Talent3.label>
+  
+  <!-- EN: FlameBreath_RegenTicks -->
+  <FlameBreath_RegenTicks_Talent4.label>炎之呼吸恢复间隔</FlameBreath_RegenTicks_Talent4.label>
+
+</LanguageData>

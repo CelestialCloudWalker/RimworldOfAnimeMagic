@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Blood Demon Arts: Heart's Manipulation -->
+  <Blood_Demon_Arts_Hearts_Manipulation.label>血鬼術 心靈操作</Blood_Demon_Arts_Hearts_Manipulation.label>
+  <!-- EN: Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. -->
+  <Blood_Demon_Arts_Hearts_Manipulation.description>用夢操作入眠者的心情狀態，使其更順從或敵對。</Blood_Demon_Arts_Hearts_Manipulation.description>
+  <!-- EN: Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.0.description>用夢操作入眠者的心情狀態，使其更順從或敵對。</Blood_Demon_Arts_Hearts_Manipulation.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.0.labelSuffix>壹級</Blood_Demon_Arts_Hearts_Manipulation.levels.0.labelSuffix>
+  <!-- EN: Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.1.description>用夢操作入眠者的心情狀態，使其更順從或敵對。</Blood_Demon_Arts_Hearts_Manipulation.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.1.labelSuffix>貳級</Blood_Demon_Arts_Hearts_Manipulation.levels.1.labelSuffix>
+  <!-- EN: Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.2.description>用夢操作入眠者的心情狀態，使其更順從或敵對。</Blood_Demon_Arts_Hearts_Manipulation.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.2.labelSuffix>參級</Blood_Demon_Arts_Hearts_Manipulation.levels.2.labelSuffix>
+  <!-- EN: Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.3.description>用夢操作入眠者的心情狀態，使其更順從或敵對。</Blood_Demon_Arts_Hearts_Manipulation.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.3.labelSuffix>肆級</Blood_Demon_Arts_Hearts_Manipulation.levels.3.labelSuffix>
+  <!-- EN: Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.4.description>用夢操作入眠者的心情狀態，使其更順從或敵對。</Blood_Demon_Arts_Hearts_Manipulation.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.4.labelSuffix>伍級</Blood_Demon_Arts_Hearts_Manipulation.levels.4.labelSuffix>
+  <!-- EN: Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile. -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.5.description>用夢操作入眠者的心情狀態，使其更順從或敵對。</Blood_Demon_Arts_Hearts_Manipulation.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Blood_Demon_Arts_Hearts_Manipulation.levels.5.labelSuffix>陸級</Blood_Demon_Arts_Hearts_Manipulation.levels.5.labelSuffix>
+  
+</LanguageData>

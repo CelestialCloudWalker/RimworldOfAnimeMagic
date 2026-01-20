@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: atmospheric pressure -->
+  <AtmosphericPressure.degreeDatas.atmospheric_pressure.label>大氣壓力</AtmosphericPressure.degreeDatas.atmospheric_pressure.label>
+  <!-- EN: [PAWN_nameDef] has adapted to changes in air pressure and altitude. [PAWN_possessive] efficient breathing and stamina make [PAWN_objective] immune to weather effects and altitude sickness. -->
+  <AtmosphericPressure.degreeDatas.atmospheric_pressure.description>[PAWN_nameDef]適應了氣壓和海拔的變化。高效的呼吸和耐力使[PAWN_pronoun]免受天氣和高山症影響。</AtmosphericPressure.degreeDatas.atmospheric_pressure.description>
+  
+  <!-- EN: cutting breeze -->
+  <CuttingBreeze.degreeDatas.cutting_breeze.label>微風切割</CuttingBreeze.degreeDatas.cutting_breeze.label>
+  <!-- EN: [PAWN_nameDef] wields bladed weapons with the precision of a sharp wind. [PAWN_possessive] cuts are surgical in their accuracy, excelling at both combat and artistic sculpture. -->
+  <CuttingBreeze.degreeDatas.cutting_breeze.description>[PAWN_nameDef]揮刀如疾風般精準。[PAWN_pronoun]的刀法精準，在戰鬥和雕塑上都表現優異。</CuttingBreeze.degreeDatas.cutting_breeze.description>
+  
+  <!-- EN: gale force -->
+  <GaleForce.degreeDatas.gale_force.label>狂風之力</GaleForce.degreeDatas.gale_force.label>
+  <!-- EN: [PAWN_nameDef] harnesses the power of wind to enhance [PAWN_possessive] ranged attacks. [PAWN_possessive] shots ride the air currents with supernatural accuracy and range. -->
+  <GaleForce.degreeDatas.gale_force.description>[PAWN_nameDef]能駕馭風的力量增強遠程攻擊。[PAWN_pronoun]的子彈乘著氣流飛出去，準確性和射程極高。</GaleForce.degreeDatas.gale_force.description>
+  
+  <!-- EN: storm front -->
+  <StormFront.degreeDatas.storm_front.label>風暴前線</StormFront.degreeDatas.storm_front.label>
+  <!-- EN: [PAWN_nameDef] can sense changing weather patterns and atmospheric conditions. [PAWN_possessive] connection to air currents provides LevelTwo environmental awareness and mood stability. -->
+  <StormFront.degreeDatas.storm_front.description>[PAWN_nameDef]能感受到天氣型態和大氣狀態的變化。與大氣的連結賦予[PAWN_pronoun]貳級的環境感知與情緒穩定。</StormFront.degreeDatas.storm_front.description>
+  
+  <!-- EN: tailwind support -->
+  <TailwindSupport.degreeDatas.tailwind_support.label>順風支援</TailwindSupport.degreeDatas.tailwind_support.label>
+  <!-- EN: [PAWN_nameDef] provides speed and coordination bonuses to nearby allies like a favorable wind. [PAWN_possessive] presence helps others move faster and work more efficiently. -->
+  <TailwindSupport.degreeDatas.tailwind_support.description>[PAWN_nameDef]像順風吹來一樣，能為附近的盟友提供速度與合作加成。[PAWN_pronoun]的存在幫助他人移動更快、更有效率。</TailwindSupport.degreeDatas.tailwind_support.description>
+  
+  <!-- EN: whirlwind strike -->
+  <WhirlwindStrike.degreeDatas.whirlwind_Strike.label>旋風襲擊</WhirlwindStrike.degreeDatas.whirlwind_strike.label>
+  <!-- EN: [PAWN_nameDef] spins and strikes like a miniature tornado. [PAWN_possessive] whirling attacks can engage multiple enemies simultaneously, making [PAWN_objective] devastatingly effective against groups. -->
+  <WhirlwindStrike.degreeDatas.whirlwind_strike.description>[PAWN_nameDef]的旋轉攻擊就像小型龍捲風。[PAWN_pronoun]的旋風攻擊能同時攻擊多個對象，對付群體敵人時很有效率。</WhirlwindStrike.degreeDatas.whirlwind_strike.description>
+  
+  <!-- EN: zephyr steps -->
+  <ZephyrSteps.degreeDatas.zephyr_steps.label>微風之步</ZephyrSteps.degreeDatas.zephyr_steps.label>
+  <!-- EN: [PAWN_nameDef] moves with the lightness of a gentle breeze. [PAWN_possessive] footsteps make no sound, and [PAWN_pronoun] glides through the world with ethereal grace. -->
+  <ZephyrSteps.degreeDatas.zephyr_steps.description>[PAWN_nameDef]移動輕盈如微風。[PAWN_pronoun]腳步無聲，飄渺穿梭於世間。</ZephyrSteps.degreeDatas.zephyr_steps.description>
+  
+</LanguageData>

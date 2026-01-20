@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: scarlet crimson iron sand deposit -->
+  <MineableScarletCrimsonIronSand.label>猩猩绯砂铁沉积层</MineableScarletCrimsonIronSand.label>
+  <!-- EN: Rock containing rare crimson iron sand. -->
+  <MineableScarletCrimsonIronSand.description>含有珍贵猩猩绯砂铁的岩层。</MineableScarletCrimsonIronSand.description>
+  
+  <!-- EN: scarlet ore deposit -->
+  <MineableScarletOre.label>猩猩绯矿石沉积层</MineableScarletOre.label>
+  <!-- EN: Rock containing rare scarlet mineral ore. -->
+  <MineableScarletOre.description>含有珍贵猩猩绯矿石的岩层。</MineableScarletOre.description>
+  
+  <!-- EN: refined scarlet crimson iron -->
+  <Refined_Scarlet_Crimson_Iron.label>已精炼的猩猩绯铁</Refined_Scarlet_Crimson_Iron.label>
+  <!-- EN: Purified crimson iron extracted from iron sand. When combined with refined scarlet ore, it creates the mystical scarlet steel used for Nichirin blades. -->
+  <Refined_Scarlet_Crimson_Iron.description>从砂铁精炼後的猩猩绯铁。与猩猩绯矿石结合後，就能做出能打造日轮刀的神秘猩猩绯钢。</Refined_Scarlet_Crimson_Iron.description>
+  
+  <!-- EN: refined scarlet ore -->
+  <Refined_Scarlet_Ore.label>已精炼的猩猩绯矿石</Refined_Scarlet_Ore.label>
+  <!-- EN: Purified scarlet metal extracted from raw ore. When combined with refined crimson iron, it creates the mystical scarlet steel used for Nichirin blades. -->
+  <Refined_Scarlet_Ore.description>从原矿精炼後的猩猩绯矿石。与猩猩绯铁结合後，就能做出能打造日轮刀的神秘猩猩绯钢。</Refined_Scarlet_Ore.description>
+  
+  <!-- EN: scarlet crimson iron sand -->
+  <Scarlet_Crimson_Iron_Sand.label>猩猩绯砂铁</Scarlet_Crimson_Iron_Sand.label>
+  <!-- EN: Rare crimson iron sand found in mountains. A component for forging Nichirin weapons. Must be refined before use. -->
+  <Scarlet_Crimson_Iron_Sand.description>在山中采矿得来的珍贵猩猩绯砂铁，是锻造日轮武器的原料之一。必须在精炼後才能使用。</Scarlet_Crimson_Iron_Sand.description>
+  
+  <!-- EN: scarlet ore -->
+  <Scarlet_Ore.label>猩猩绯矿石</Scarlet_Ore.label>
+  <!-- EN: Rare scarlet mineral ore found in mountains. A component for forging Nichirin weapons. Must be refined before use. -->
+  <Scarlet_Ore.description>在山中采矿得来的珍贵猩猩绯矿石，是锻造日轮武器的原料之一。必须在精炼後才能使用。</Scarlet_Ore.description>
+  
+  <!-- EN: scarlet steel -->
+  <Scarlet_Steel.label>猩猩绯钢</Scarlet_Steel.label>
+  <!-- EN: A mystical alloy forged by combining refined scarlet ore and refined crimson iron. This legendary crimson-hued steel is incredibly strong and is the only material capable of forging true Nichirin blades. -->
+  <Scarlet_Steel.description>融合已精炼的猩猩绯矿石和猩猩绯铁後，所得到的神秘合金。这种传说中的绯色钢材十分坚固，也是唯一能打造日轮刀真品的材料。</Scarlet_Steel.description>
+  
+  <!-- EN: scarlet thread fabric -->
+  <Scarlet_Thread_Fabric.label>猩猩绯布料</Scarlet_Thread_Fabric.label>
+  <!-- EN: A specialized fabric woven with microscopic scarlet iron particles. Flexible yet surprisingly protective, this crimson cloth is used to craft demon slayer uniforms and haoris. -->
+  <Scarlet_Thread_Fabric.description>使用微小猩猩绯铁粒子织成的特殊布料，能维持弹性并提供极高保护力。这种绯红布料被用来制作鬼杀队制服和羽织。</Scarlet_Thread_Fabric.description>
+  
+</LanguageData>

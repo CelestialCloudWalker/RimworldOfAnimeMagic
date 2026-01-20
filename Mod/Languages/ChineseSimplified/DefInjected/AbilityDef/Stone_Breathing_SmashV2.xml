@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Stone Breathing: Smash -->
+  <Stone_Breathing_Smash.label>岩之呼吸・击</Stone_Breathing_Smash.label>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Stone_Breathing_Smash.description>对目标放出射弹的范围技。</Stone_Breathing_Smash.description>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Stone_Breathing_Smash.levels.0.description>对目标放出射弹的范围技。</Stone_Breathing_Smash.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Stone_Breathing_Smash.levels.0.labelSuffix>壹级</Stone_Breathing_Smash.levels.0.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Stone_Breathing_Smash.levels.1.description>对目标放出射弹的范围技。</Stone_Breathing_Smash.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Stone_Breathing_Smash.levels.1.labelSuffix>贰级</Stone_Breathing_Smash.levels.1.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Stone_Breathing_Smash.levels.2.description>对目标放出射弹的范围技。</Stone_Breathing_Smash.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Stone_Breathing_Smash.levels.2.labelSuffix>参级</Stone_Breathing_Smash.levels.2.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Stone_Breathing_Smash.levels.3.description>对目标放出射弹的范围技。</Stone_Breathing_Smash.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Stone_Breathing_Smash.levels.3.labelSuffix>肆级</Stone_Breathing_Smash.levels.3.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Stone_Breathing_Smash.levels.4.description>对目标放出射弹的范围技。</Stone_Breathing_Smash.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Stone_Breathing_Smash.levels.4.labelSuffix>伍级</Stone_Breathing_Smash.levels.4.labelSuffix>
+  <!-- EN: A ranged technique that sends a projectile toward targets. -->
+  <Stone_Breathing_Smash.levels.5.description>对目标放出射弹的范围技。</Stone_Breathing_Smash.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Stone_Breathing_Smash.levels.5.labelSuffix>陆级</Stone_Breathing_Smash.levels.5.labelSuffix>
+  
+</LanguageData>

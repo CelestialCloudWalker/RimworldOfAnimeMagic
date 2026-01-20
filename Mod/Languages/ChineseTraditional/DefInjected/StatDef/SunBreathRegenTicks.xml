@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Sun Breath Regen Ticks -->
+  <SunBreath_RegenTicks.label>日之呼吸恢復間隔</SunBreath_RegenTicks.label>
+  <!-- EN: Number of ticks between Sun Breath regeneration cycles. -->
+  <SunBreath_RegenTicks.description>日之呼吸每次恢復的時間週期，單位為刻。</SunBreath_RegenTicks.description>
+  
+</LanguageData>

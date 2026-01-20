@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: beast maul -->
+  <RampageofBeast.label>兽之撕咬</RampageofBeast.label>
+  <!-- EN: Flesh torn apart. Heavy bleeding and tissue damage. -->
+  <RampageofBeast.description>肌肤被撕裂，造成严重出血和组织损伤。</RampageofBeast.description>
+  <!-- EN: beast maul scar -->
+  <RampageofBeast.comps.HediffComp_GetsPermanent.permanentLabel>兽之撕咬疤痕</RampageofBeast.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Mauled off -->
+  <RampageofBeast.injuryProps.destroyedLabel>丧失功能</RampageofBeast.injuryProps.destroyedLabel>
+  <!-- EN: Mauled apart -->
+  <RampageofBeast.injuryProps.destroyedOutLabel>被咬断</RampageofBeast.injuryProps.destroyedOutLabel>
+  <!-- EN: a beast maul -->
+  <RampageofBeast.labelNoun>兽之撕咬</RampageofBeast.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <RampageofBeast.labelNounPretty>{1}内的{0}</RampageofBeast.labelNounPretty>
+  
+</LanguageData>

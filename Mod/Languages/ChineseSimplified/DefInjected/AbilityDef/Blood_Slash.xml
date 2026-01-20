@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Deep wounds -->
+  <Deep_wounds.label>深度伤痕</Deep_wounds.label>
+  <!-- EN: Deep gashes that cut through flesh and muscle. -->
+  <Deep_wounds.description>切开皮肤和肌肉的深度伤痕。</Deep_wounds.description>
+  <!-- EN: a deep wound -->
+  <Deep_wounds.labelNoun>深度伤痕</Deep_wounds.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <Deep_wounds.labelNounPretty>{1}内的{0}</Deep_wounds.labelNounPretty>
+  
+</LanguageData>

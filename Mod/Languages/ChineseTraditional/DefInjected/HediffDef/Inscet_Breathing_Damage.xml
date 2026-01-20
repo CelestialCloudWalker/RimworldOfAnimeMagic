@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: insect sting -->
+  <DeludednessOfInsects.label>蟲之螫咬</DeludednessOfInsects.label>
+  <!-- EN: A venomous puncture wound. Poison spreading through tissue. -->
+  <DeludednessOfInsects.description>帶毒刺傷，毒素擴散到組織。</DeludednessOfInsects.description>
+  <!-- EN: insect sting scar -->
+  <DeludednessOfInsects.comps.HediffComp_GetsPermanent.permanentLabel>蟲之螫咬疤痕</DeludednessOfInsects.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Dissolved off -->
+  <DeludednessOfInsects.injuryProps.destroyedLabel>喪失功能</DeludednessOfInsects.injuryProps.destroyedLabel>
+  <!-- EN: an insect sting -->
+  <DeludednessOfInsects.labelNoun>蟲之螫咬</DeludednessOfInsects.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <DeludednessOfInsects.labelNounPretty>{1}內的{0}</DeludednessOfInsects.labelNounPretty>
+  
+  <!-- EN: wisteria poisoning -->
+  <Wisteria_Poisoning.label>紫藤花毒素</Wisteria_Poisoning.label>
+  <!-- EN: A potent neurotoxin causing severe weakness, nausea, and mental impairment. The victim struggles to move and think clearly as poison courses through their system. -->
+  <Wisteria_Poisoning.description>一種強效神經毒素，會造成嚴重虛弱、噁心、精神障礙。毒素在體內擴散時，會造成行動困難和思考遲鈍。</Wisteria_Poisoning.description>
+  <!-- EN: mild -->
+  <Wisteria_Poisoning.stages.mild.label>輕度</Wisteria_Poisoning.stages.mild.label>
+  <!-- EN: moderate -->
+  <Wisteria_Poisoning.stages.moderate.label>中度</Wisteria_Poisoning.stages.moderate.label>
+  <!-- EN: severe -->
+  <Wisteria_Poisoning.stages.severe.label>重度</Wisteria_Poisoning.stages.severe.label>
+  <!-- EN: extreme -->
+  <Wisteria_Poisoning.stages.extreme.label>嚴重</Wisteria_Poisoning.stages.extreme.label>
+  
+</LanguageData>

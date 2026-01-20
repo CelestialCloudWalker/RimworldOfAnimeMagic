@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: water slash -->
+  <FreshnessOfWater.label>水之清斬</FreshnessOfWater.label>
+  <!-- EN: A clean cut. Heavy bleeding from severed tissue. -->
+  <FreshnessOfWater.description>切口整齊，血源源不絕從斷裂的組織流出。</FreshnessOfWater.description>
+  <!-- EN: water slash scar -->
+  <FreshnessOfWater.comps.HediffComp_GetsPermanent.permanentLabel>水之清斬疤痕</FreshnessOfWater.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Cut off -->
+  <FreshnessOfWater.injuryProps.destroyedLabel>喪失功能</FreshnessOfWater.injuryProps.destroyedLabel>
+  <!-- EN: Cut out -->
+  <FreshnessOfWater.injuryProps.destroyedOutLabel>被斬斷</FreshnessOfWater.injuryProps.destroyedOutLabel>
+  <!-- EN: a water slash -->
+  <FreshnessOfWater.labelNoun>水之清斬</FreshnessOfWater.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <FreshnessOfWater.labelNounPretty>{1}內的{0}</FreshnessOfWater.labelNounPretty>
+  
+</LanguageData>

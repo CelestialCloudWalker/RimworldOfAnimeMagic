@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Thunder Breathing Fatigue -->
+  <ThunderBreathing_Fatigue.label>雷之呼吸疲劳</ThunderBreathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unsteady. -->
+  <ThunderBreathing_Fatigue.description>重复使用呼吸法使身体疲惫，无法站稳。</ThunderBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <ThunderBreathing_Fatigue.stages.Mild_fatigue.label>轻微疲劳</ThunderBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <ThunderBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲劳</ThunderBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <ThunderBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲劳</ThunderBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <ThunderBreathing_Fatigue.stages.Severe_fatigue.label>严重疲劳</ThunderBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <ThunderBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</ThunderBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <ThunderBreathing_Fatigue.stages.Collapsed.label>累垮</ThunderBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

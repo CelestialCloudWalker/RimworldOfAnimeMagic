@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>DemonSlayerCorp_NormalUniforma</defName>
-    <label>Demon Slayer Corp Uniform B</label>
+    <label>Demon Slayer Corp Uniform</label>
     <description>A durable Demon Slayer Corps uniform designed for mobility and protection.</description>
-    <recipeMaker>
-      <researchPrerequisite>AA_SlayerCorpsUniformResearch</researchPrerequisite>
-    </recipeMaker>
     <graphicData>
-      <shaderType>CutoutComplex</shaderType>
-      <texPath>DemonSlayerCorp_UniformChest/DemonSlayerCorp_UniformChest_Hulk_south</texPath>
+      <texPath>DemonSlayerCorp_UniformNormal/Icon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
-    <costList>
-      <Scarlet_Thread_Fabric>80</Scarlet_Thread_Fabric>
-    </costList>
     <smeltable>false</smeltable>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
     <thingCategories>
       <li>ApparelMisc</li>
     </thingCategories>
@@ -41,7 +39,8 @@
         <li>Arms</li>
         <li>Legs</li>
       </bodyPartGroups>
-      <wornGraphicPath>DemonSlayerCorp_UniformChest/DemonSlayerCorp_UniformChest</wornGraphicPath>
+      <wornGraphicPath>DemonSlayerCorp_UniformNormal/DemonSlayerCorp_UniformNormal</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
       <layers>
         <li>Middle</li>
       </layers>
@@ -58,11 +57,11 @@
       <li>BasicClothing</li>
     </tradeTags>
     <recipeMaker>
+      <researchPrerequisite>AA_SlayerCorpsUniformResearch</researchPrerequisite>
       <skillRequirements>
         <Crafting>10</Crafting>
       </skillRequirements>
       <displayPriority>235</displayPriority>
     </recipeMaker>
   </ThingDef>
-
 </Defs>

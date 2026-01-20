@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Bound Weapon Master -->
+  <EMF_BoundWeapon.label>羈絆武器之主</EMF_BoundWeapon.label>
+  <!-- EN: This pawn is bound on a meta physical level with a weapon. -->
+  <EMF_BoundWeapon.description>這個人在形上層面和武器有所羈絆。</EMF_BoundWeapon.description>
+  
+</LanguageData>

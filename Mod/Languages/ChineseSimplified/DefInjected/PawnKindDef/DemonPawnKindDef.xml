@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Demon -->
+  <AA_DemonColonist.label>鬼</AA_DemonColonist.label>
+  
+  <!-- EN: Demon King -->
+  <AA_DemonKing.label>鬼王</AA_DemonKing.label>
+  <!-- EN: Demon Kings -->
+  <AA_DemonKing.labelPlural>鬼王</AA_DemonKing.labelPlural>
+  
+  <!-- EN: Demon -->
+  <AA_FletclingDemonBoss.label>鬼</AA_FletclingDemonBoss.label>
+  <!-- EN: Demon -->
+  <AA_FletclingDemonBoss.labelPlural>鬼</AA_FletclingDemonBoss.labelPlural>
+  
+  <!-- EN: demon -->
+  <AA_FletclingDemonInvader.label>鬼</AA_FletclingDemonInvader.label>
+  
+  <!-- EN: Demon -->
+  <AA_FletclingDemonRaider.label>鬼</AA_FletclingDemonRaider.label>
+  
+  <!-- EN: demon -->
+  <AA_FletclingDemonWarrior.label>鬼</AA_FletclingDemonWarrior.label>
+  
+  <!-- EN: Lower Moon One -->
+  <AA_LowerMoon1Demon.label>下弦之壹</AA_LowerMoon1Demon.label>
+  
+  <!-- EN: Lower Moon Two -->
+  <AA_LowerMoon2Demon.label>下弦之贰</AA_LowerMoon2Demon.label>
+  
+  <!-- EN: Lower Moon Three -->
+  <AA_LowerMoon3Demon.label>下弦之参</AA_LowerMoon3Demon.label>
+  
+  <!-- EN: Lower Moon Four -->
+  <AA_LowerMoon4Demon.label>下弦之肆</AA_LowerMoon4Demon.label>
+  
+  <!-- EN: Lower Moon Five -->
+  <AA_LowerMoon5Demon.label>下弦之伍</AA_LowerMoon5Demon.label>
+  
+  <!-- EN: Lower Moon Six -->
+  <AA_LowerMoon6Demon.label>下弦之陆</AA_LowerMoon6Demon.label>
+  
+  <!-- EN: Upper Moon One -->
+  <AA_UpperMoon1Demon.label>上弦之壹</AA_UpperMoon1Demon.label>
+  
+  <!-- EN: Upper Moon Two -->
+  <AA_UpperMoon2Demon.label>上弦之贰</AA_UpperMoon2Demon.label>
+  
+  <!-- EN: Upper Moon Three -->
+  <AA_UpperMoon3Demon.label>上弦之参</AA_UpperMoon3Demon.label>
+  
+  <!-- EN: Upper Moon Four -->
+  <AA_UpperMoon4Demon.label>上弦之肆</AA_UpperMoon4Demon.label>
+  
+  <!-- EN: Upper Moon Five -->
+  <AA_UpperMoon5Demon.label>上弦之伍</AA_UpperMoon5Demon.label>
+  
+  <!-- EN: Upper Moon Six -->
+  <AA_UpperMoon6Demon.label>上弦之陆</AA_UpperMoon6Demon.label>
+  
+</LanguageData>

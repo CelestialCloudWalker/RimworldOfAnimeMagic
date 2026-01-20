@@ -13,31 +13,7 @@
     </spawnCategories>
     <skillGains>
       <Melee>3</Melee>
-      <Medicine>1</Medicine>
-    </skillGains>
-    <requiredWorkTags>
-      <li>Violent</li>
-    </requiredWorkTags>
-    <forcedTraits>
-      <Tough>0</Tough>
-    </forcedTraits>
-    <disallowedTraits>
-      <Wimp>0</Wimp>
-    </disallowedTraits>
-  </AlienRace.AlienBackstoryDef>
-
-  <AlienRace.AlienBackstoryDef>
-    <defName>RK_SurvivorChild</defName>
-    <title>Survivor Child</title>
-    <titleShort>Survivor Child</titleShort>
-    <baseDesc>[PAWN_nameDef]'s family was killed by demons at a young age, learning to survive on their own.</baseDesc>
-    <slot>Childhood</slot>
-    <spawnCategories>
-      <li>RimKetsu</li>
-      <li>SlayerCorp</li>
-    </spawnCategories>
-    <skillGains>
-      <Melee>3</Melee>
+      <Medicine>2</Medicine>
       <Construction>2</Construction>
     </skillGains>
     <requiredWorkTags>
@@ -63,8 +39,8 @@
     </spawnCategories>
     <skillGains>
       <Melee>3</Melee>
-      <Social>1</Social>
-      <Medicine>1</Medicine>
+      <Social>2</Social>
+      <Medicine>2</Medicine>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -82,7 +58,7 @@
     <defName>RK_Mountain_Hermit_Child</defName>
     <title>Mountain Hermit Child</title>
     <titleShort>Mountain Hermit Child</titleShort>
-    <baseDesc>[PAWN_nameDef] grew up isolated in the mountains, learning to live off the land and fight wild animals.</baseDesc>
+    <baseDesc>[PAWN_nameDef] grew up isolated in the mountains, learning to live off the land and fighting wild animals.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -90,8 +66,9 @@
     </spawnCategories>
     <skillGains>
       <Melee>3</Melee>
-      <Construction>1</Construction>
-      <Animals>1</Animals>
+      <Construction>2</Construction>
+      <Animals>2</Animals>
+      <Plants>1</Plants>
     </skillGains>
     <workDisables>
       <li>Social</li>
@@ -119,13 +96,14 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Animals>2</Animals>
-      <Melee>6</Melee>
+      <Animals>4</Animals>
+      <Melee>7</Melee>
       <Construction>4</Construction>
+      <Mining>1</Mining>
     </skillGains>
     <workDisables>
       <li>Intellectual</li>
-      <li>Social</li>
+      <li>Social </li>
     </workDisables>
     <requiredWorkTags>
       <li>Violent</li>
@@ -154,9 +132,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Social>2</Social>
+      <Social>4</Social>
       <Melee>8</Melee>
-      <Construction>3</Construction>
+      <Construction>2</Construction>
+      <Cooking>1</Cooking>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -182,9 +161,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Medicine>2</Medicine>
+      <Medicine>4</Medicine>
+      <Social>1</Social>
       <Melee>8</Melee>
-      <Construction>3</Construction>
+      <Construction>2</Construction>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -195,6 +175,8 @@
     </forcedTraits>
     <disallowedTraits>
       <Wimp>0</Wimp>
+      <Psychopath>0</Psychopath>
+      <Abrasive>0</Abrasive>
     </disallowedTraits>
   </AlienRace.AlienBackstoryDef>
 
@@ -210,9 +192,9 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Medicine>1</Medicine>
+      <Medicine>2</Medicine>
       <Melee>8</Melee>
-      <Shooting>4</Shooting>
+      <Shooting>5</Shooting>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -225,6 +207,7 @@
     </forcedTraits>
     <disallowedTraits>
       <Wimp>0</Wimp>
+      <Brawler>0</Brawler>
     </disallowedTraits>
   </AlienRace.AlienBackstoryDef>
 
@@ -240,9 +223,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Medicine>2</Medicine>
+      <Medicine>3</Medicine>
       <Melee>8</Melee>
-      <Artistic>2</Artistic>
+      <Artistic>3</Artistic>
+      <Plants>1</Plants>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -270,10 +254,13 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Mining>2</Mining>
+      <Mining>4</Mining>
       <Melee>9</Melee>
-      <Construction>1</Construction>
+      <Construction>3</Construction>
     </skillGains>
+    <workDisables>
+      <li>Intellectual</li>
+    </workDisables>
     <requiredWorkTags>
       <li>Violent</li>
       <li>ManualSkilled</li>
@@ -299,10 +286,13 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Shooting>1</Shooting>
+      <Shooting>2</Shooting>
       <Melee>8</Melee>
       <Construction>4</Construction>
     </skillGains>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
     <requiredWorkTags>
       <li>Violent</li>
     </requiredWorkTags>
@@ -329,9 +319,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Medicine>4</Medicine>
+      <Medicine>5</Medicine>
       <Melee>7</Melee>
-      <Intellectual>2</Intellectual>
+      <Intellectual>4</Intellectual>
+      <Plants>1</Plants>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -359,9 +350,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Cooking>4</Cooking>
+      <Cooking>5</Cooking>
       <Melee>8</Melee>
-      <Social>3</Social>
+      <Social>4</Social>
+      <Medicine>1</Medicine>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -390,9 +382,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Artistic>2</Artistic>
+      <Artistic>4</Artistic>
       <Melee>8</Melee>
-      <Crafting>2</Crafting>
+      <Crafting>3</Crafting>
+      <Shooting>1</Shooting>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -421,7 +414,8 @@
     <skillGains>
       <Construction>2</Construction>
       <Melee>8</Melee>
-      <Shooting>3</Shooting>
+      <Shooting>4</Shooting>
+      <Intellectual>1</Intellectual>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -433,6 +427,7 @@
     </forcedTraits>
     <disallowedTraits>
       <Wimp>0</Wimp>
+      <Brawler>0</Brawler>
     </disallowedTraits>
   </AlienRace.AlienBackstoryDef>
 
@@ -450,7 +445,8 @@
     <skillGains>
       <Construction>3</Construction>
       <Melee>8</Melee>
-      <Medicine>1</Medicine>
+      <Medicine>2</Medicine>
+      <Crafting>1</Crafting>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -466,34 +462,6 @@
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef>
-    <defName>RK_Sun_Breathing_Hashira</defName>
-    <title>Sun Breathing Hashira</title>
-    <titleShort>Sun Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Sun Breathing.</baseDesc>
-    <slot>Adulthood</slot>
-    <spawnCategories>
-      <li>RimKetsu</li>
-      <li>Hashira</li>
-      <li>SlayerCorp</li>
-    </spawnCategories>
-    <skillGains>
-      <Construction>4</Construction>
-      <Melee>10</Melee>
-      <Medicine>3</Medicine>
-    </skillGains>
-    <requiredWorkTags>
-      <li>Violent</li>
-    </requiredWorkTags>
-    <forcedTraits>
-      <Tough>0</Tough>
-      <SpeedOffset>1</SpeedOffset>
-    </forcedTraits>
-    <disallowedTraits>
-      <Wimp>0</Wimp>
-    </disallowedTraits>
-  </AlienRace.AlienBackstoryDef>
-
-  <AlienRace.AlienBackstoryDef>
     <defName>RK_Forest_Breathing_Hashira</defName>
     <title>Forest Breathing Hashira</title>
     <titleShort>Forest Breathing Hashira</titleShort>
@@ -505,9 +473,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Construction>4</Construction>
+      <Construction>3</Construction>
       <Melee>8</Melee>
-      <Plants>1</Plants>
+      <Plants>3</Plants>
+      <Animals>2</Animals>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -535,7 +504,8 @@
     <skillGains>
       <Construction>3</Construction>
       <Melee>8</Melee>
-      <Medicine>2</Medicine>
+      <Medicine>3</Medicine>
+      <Mining>1</Mining>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -560,9 +530,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Intellectual>3</Intellectual>
+      <Intellectual>5</Intellectual>
       <Melee>7</Melee>
-      <Medicine>2</Medicine>
+      <Medicine>3</Medicine>
+      <Social>2</Social>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -587,36 +558,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Construction>2</Construction>
+      <Construction>3</Construction>
       <Melee>4</Melee>
-      <Medicine>2</Medicine>
-    </skillGains>
-    <requiredWorkTags>
-      <li>Violent</li>
-    </requiredWorkTags>
-    <forcedTraits>
-      <Tough>0</Tough>
-    </forcedTraits>
-    <disallowedTraits>
-      <Wimp>0</Wimp>
-    </disallowedTraits>
-  </AlienRace.AlienBackstoryDef>
-
-  <AlienRace.AlienBackstoryDef>
-    <defName>RK_Cultivator</defName>
-    <title>Cultivator</title>
-    <titleShort>Cultivator</titleShort>
-    <baseDesc>Veteran of the Corps, [PAWN_nameDef] now dedicates themselves to cultivating new talent.</baseDesc>
-    <slot>Adulthood</slot>
-    <spawnCategories>
-      <li>RimKetsu</li>
-      <li>Hashira</li>
-      <li>SlayerCorp</li>
-    </spawnCategories>
-    <skillGains>
-      <Social>2</Social>
-      <Melee>5</Melee>
-      <Medicine>2</Medicine>
+      <Medicine>3</Medicine>
+      <Crafting>2</Crafting>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -641,9 +586,11 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Social>3</Social>
+      <Social>4</Social>
+      <Crafting>1</Crafting>
+      <Construction>1</Construction>
       <Melee>2</Melee>
-      <Medicine>4</Medicine>
+      <Medicine>5</Medicine>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -669,10 +616,14 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Social>3</Social>
-      <Crafting>8</Crafting>
-      <Artistic>4</Artistic>
+      <Social>2</Social>
+      <Crafting>10</Crafting>
+      <Artistic>5</Artistic>
+      <Mining>2</Mining>
     </skillGains>
+    <workDisables>
+      <li>Violent</li>
+    </workDisables>
     <requiredWorkTags>
       <li>Crafting</li>
     </requiredWorkTags>
@@ -698,8 +649,9 @@
     </spawnCategories>
     <skillGains>
       <Melee>6</Melee>
-      <Construction>2</Construction>
-      <Artistic>1</Artistic>
+      <Construction>3</Construction>
+      <Shooting>2</Shooting>
+      <Medicine>1</Medicine>
     </skillGains>
     <requiredWorkTags>
       <li>Crafting</li>

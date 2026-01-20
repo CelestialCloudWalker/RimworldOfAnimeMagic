@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Dark_Blue_Thread_Fabric</defName>
+    <label>Dark Blue thread fabric</label>
+    <description>A special fabric, known for its durability and resistance to damage.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Cloth</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(38,42,71)</color>
+    </graphicData>
+    <statBases>
+      <StuffPower_Armor_Sharp>0.36</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.18</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>18</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>18</StuffPower_Insulation_Heat>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.026</Mass>
+      <Flammability>1.2</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <minRewardCount>30</minRewardCount>
+    <stuffProps>
+      <statFactors>
+        <Flammability>1.2</Flammability>
+        <Beauty>1</Beauty>
+      </statFactors>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <color>(38,42,71)</color>
+      <commonality>1.4</commonality>
+      <allowColorGenerators>false</allowColorGenerators>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Charcoal_Thread_Fabric_Dark</defName>
+    <label> WIP Dark Charcoal thread fabric</label>
+    <description>A darker variant of fabric, offering the same protective qualities with a more subdued appearance.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Cloth</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(40,40,51)</color>
+    </graphicData>
+    <statBases>
+      <StuffPower_Armor_Sharp>0.36</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.18</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>18</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>18</StuffPower_Insulation_Heat>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.026</Mass>
+      <Flammability>1.2</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <minRewardCount>30</minRewardCount>
+    <stuffProps>
+      <statFactors>
+        <Flammability>1.2</Flammability>
+        <Beauty>1</Beauty>
+      </statFactors>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <color>(40,40,51)</color>
+      <commonality>1.4</commonality>
+      <allowColorGenerators>false</allowColorGenerators>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+  </ThingDef>
+</Defs>

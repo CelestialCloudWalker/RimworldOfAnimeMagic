@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Forest Breath Regen Rate -->
+  <ForestBreath_RegenRate.label>森之呼吸恢复率</ForestBreath_RegenRate.label>
+  <!-- EN: Rate of Forest Breath regeneration per tick. -->
+  <ForestBreath_RegenRate.description>每刻森之呼吸恢复率。</ForestBreath_RegenRate.description>
+  
+</LanguageData>

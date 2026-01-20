@@ -30,6 +30,7 @@
     <comps>
       <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
         <damageAmount>6</damageAmount>
+        <scaleStat>MeleeDamageFactor</scaleStat>
         <damageType>Water_Breathing_Damage</damageType>
         <armorPenetration>0.25</armorPenetration>
         <additionalDamageFactorFromMeleeSkill>0.08</additionalDamageFactorFromMeleeSkill>
@@ -58,6 +59,7 @@
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
             <damageAmount>8</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <damageType>Water_Breathing_Damage</damageType>
             <armorPenetration>0.3</armorPenetration>
             <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
@@ -80,6 +82,7 @@
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
             <damageAmount>11</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <damageType>Water_Breathing_Damage</damageType>
             <armorPenetration>0.38</armorPenetration>
             <additionalDamageFactorFromMeleeSkill>0.13</additionalDamageFactorFromMeleeSkill>
@@ -102,6 +105,7 @@
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
             <damageAmount>14</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <damageType>Water_Breathing_Damage</damageType>
             <armorPenetration>0.48</armorPenetration>
             <additionalDamageFactorFromMeleeSkill>0.16</additionalDamageFactorFromMeleeSkill>
@@ -124,6 +128,7 @@
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
             <damageAmount>18</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <damageType>Water_Breathing_Damage</damageType>
             <armorPenetration>0.6</armorPenetration>
             <additionalDamageFactorFromMeleeSkill>0.2</additionalDamageFactorFromMeleeSkill>
@@ -146,6 +151,7 @@
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
             <damageAmount>23</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
             <damageType>Water_Breathing_Damage</damageType>
             <armorPenetration>0.75</armorPenetration>
             <additionalDamageFactorFromMeleeSkill>0.25</additionalDamageFactorFromMeleeSkill>

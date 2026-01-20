@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Beast Breathing Fatigue -->
+  <BeastBreathing_Fatigue.label>獸之呼吸疲勞</BeastBreathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unsteady. -->
+  <BeastBreathing_Fatigue.description>重複使用呼吸法使身體疲憊，無法站穩。</BeastBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <BeastBreathing_Fatigue.stages.Mild_fatigue.label>輕微疲勞</BeastBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <BeastBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲勞</BeastBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <BeastBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲勞</BeastBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <BeastBreathing_Fatigue.stages.Severe_fatigue.label>嚴重疲勞</BeastBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <BeastBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</BeastBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <BeastBreathing_Fatigue.stages.Collapsed.label>累垮</BeastBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Wind Breathing: Strike -->
+  <Wind_Breathing_Strike.label>风之呼吸・袭</Wind_Breathing_Strike.label>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Wind_Breathing_Strike.description>冲向对方袭击的技法。</Wind_Breathing_Strike.description>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Wind_Breathing_Strike.levels.0.description>冲向对方袭击的技法。</Wind_Breathing_Strike.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Wind_Breathing_Strike.levels.0.labelSuffix>壹级</Wind_Breathing_Strike.levels.0.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Wind_Breathing_Strike.levels.1.description>冲向对方袭击的技法。</Wind_Breathing_Strike.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Wind_Breathing_Strike.levels.1.labelSuffix>贰级</Wind_Breathing_Strike.levels.1.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Wind_Breathing_Strike.levels.2.description>冲向对方袭击的技法。</Wind_Breathing_Strike.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Wind_Breathing_Strike.levels.2.labelSuffix>参级</Wind_Breathing_Strike.levels.2.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Wind_Breathing_Strike.levels.3.description>冲向对方袭击的技法。</Wind_Breathing_Strike.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Wind_Breathing_Strike.levels.3.labelSuffix>肆级</Wind_Breathing_Strike.levels.3.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Wind_Breathing_Strike.levels.4.description>冲向对方袭击的技法。</Wind_Breathing_Strike.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Wind_Breathing_Strike.levels.4.labelSuffix>伍级</Wind_Breathing_Strike.levels.4.labelSuffix>
+  <!-- EN: A technique that dashes to a target and strikes them. -->
+  <Wind_Breathing_Strike.levels.5.description>冲向对方袭击的技法。</Wind_Breathing_Strike.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Wind_Breathing_Strike.levels.5.labelSuffix>陆级</Wind_Breathing_Strike.levels.5.labelSuffix>
+  
+</LanguageData>

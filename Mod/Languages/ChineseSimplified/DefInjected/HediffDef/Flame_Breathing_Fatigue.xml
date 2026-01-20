@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flame Breathing Fatigue -->
+  <FlameBreathing_Fatigue.label>炎之呼吸疲劳</FlameBreathing_Fatigue.label>
+  <!-- EN: The strain of repeated technique use leaves the body drained and unsteady. -->
+  <FlameBreathing_Fatigue.description>重复使用呼吸法使身体疲惫，无法站稳。</FlameBreathing_Fatigue.description>
+  <!-- EN: Mild fatigue -->
+  <FlameBreathing_Fatigue.stages.Mild_fatigue.label>轻微疲劳</FlameBreathing_Fatigue.stages.Mild_fatigue.label>
+  <!-- EN: Moderate fatigue -->
+  <FlameBreathing_Fatigue.stages.Moderate_fatigue.label>中度疲劳</FlameBreathing_Fatigue.stages.Moderate_fatigue.label>
+  <!-- EN: Heavy fatigue -->
+  <FlameBreathing_Fatigue.stages.Heavy_fatigue.label>重度疲劳</FlameBreathing_Fatigue.stages.Heavy_fatigue.label>
+  <!-- EN: Severe fatigue -->
+  <FlameBreathing_Fatigue.stages.Severe_fatigue.label>严重疲劳</FlameBreathing_Fatigue.stages.Severe_fatigue.label>
+  <!-- EN: Exhausted -->
+  <FlameBreathing_Fatigue.stages.Exhausted.label>筋疲力竭</FlameBreathing_Fatigue.stages.Exhausted.label>
+  <!-- EN: Collapsed -->
+  <FlameBreathing_Fatigue.stages.Collapsed.label>累垮</FlameBreathing_Fatigue.stages.Collapsed.label>
+  
+</LanguageData>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Dye Weapon: Forest Colored -->
+  <Dye_Weapon_Forest_Colored.label>武器染色：森色</Dye_Weapon_Forest_Colored.label>
+  <!-- EN: A technique that channels focused breathing into attacks. -->
+  <Dye_Weapon_Forest_Colored.description>將集中的呼吸轉化為攻擊的技巧。</Dye_Weapon_Forest_Colored.description>
+  <!-- EN: A technique that channels focused breathing into attacks. -->
+  <Dye_Weapon_Forest_Colored.levels.0.description>將集中的呼吸轉化為攻擊的技巧。</Dye_Weapon_Forest_Colored.levels.0.description>
+  <!-- EN:  (Level 1) -->
+  <Dye_Weapon_Forest_Colored.levels.0.labelSuffix>壹級</Dye_Weapon_Forest_Colored.levels.0.labelSuffix>
+  <!-- EN: A technique that channels focused breathing into attacks. -->
+  <Dye_Weapon_Forest_Colored.levels.1.description>將集中的呼吸轉化為攻擊的技巧。</Dye_Weapon_Forest_Colored.levels.1.description>
+  <!-- EN:  (Level 2) -->
+  <Dye_Weapon_Forest_Colored.levels.1.labelSuffix>貳級</Dye_Weapon_Forest_Colored.levels.1.labelSuffix>
+  <!-- EN: A technique that channels focused breathing into attacks. -->
+  <Dye_Weapon_Forest_Colored.levels.2.description>將集中的呼吸轉化為攻擊的技巧。</Dye_Weapon_Forest_Colored.levels.2.description>
+  <!-- EN:  (Level 3) -->
+  <Dye_Weapon_Forest_Colored.levels.2.labelSuffix>參級</Dye_Weapon_Forest_Colored.levels.2.labelSuffix>
+  <!-- EN: A technique that channels focused breathing into attacks. -->
+  <Dye_Weapon_Forest_Colored.levels.3.description>將集中的呼吸轉化為攻擊的技巧。</Dye_Weapon_Forest_Colored.levels.3.description>
+  <!-- EN:  (Level 4) -->
+  <Dye_Weapon_Forest_Colored.levels.3.labelSuffix>肆級</Dye_Weapon_Forest_Colored.levels.3.labelSuffix>
+  <!-- EN: A technique that channels focused breathing into attacks. -->
+  <Dye_Weapon_Forest_Colored.levels.4.description>將集中的呼吸轉化為攻擊的技巧。</Dye_Weapon_Forest_Colored.levels.4.description>
+  <!-- EN:  (Level 5) -->
+  <Dye_Weapon_Forest_Colored.levels.4.labelSuffix>伍級</Dye_Weapon_Forest_Colored.levels.4.labelSuffix>
+  <!-- EN: A technique that channels focused breathing into attacks. -->
+  <Dye_Weapon_Forest_Colored.levels.5.description>將集中的呼吸轉化為攻擊的技巧。</Dye_Weapon_Forest_Colored.levels.5.description>
+  <!-- EN:  (Level 6) -->
+  <Dye_Weapon_Forest_Colored.levels.5.labelSuffix>陸級</Dye_Weapon_Forest_Colored.levels.5.labelSuffix>
+  
+</LanguageData>

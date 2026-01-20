@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Mist Breath Cost Multiplier -->
+  <MistBreath_Cost.label>霞之呼吸资源花费乘数</MistBreath_Cost.label>
+  <!-- EN: Mist Breath Cost Multiplier. -->
+  <MistBreath_Cost.description>霞之呼吸资源花费乘数。</MistBreath_Cost.description>
+  
+  <!-- EN: Moon Breath Cost Multiplier -->
+  <MoonBreath_Cost.label>月之呼吸资源花费乘数</MoonBreath_Cost.label>
+  <!-- EN: Moon Breath Cost Multiplier. -->
+  <MoonBreath_Cost.description>月之呼吸资源花费乘数。</MoonBreath_Cost.description>
+  
+</LanguageData>

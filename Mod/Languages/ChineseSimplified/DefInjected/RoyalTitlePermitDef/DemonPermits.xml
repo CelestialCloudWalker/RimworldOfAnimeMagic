@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: trade with caravans -->
+  <AA_TradeCaravan.label>与商队贸易</AA_TradeCaravan.label>
+  
+  <!-- EN: trade with orbital traders -->
+  <AA_TradeOrbital.label>与轨道商人贸易</AA_TradeOrbital.label>
+  
+  <!-- EN: trade with settlements -->
+  <AA_TradeSettlement.label>与据点贸易</AA_TradeSettlement.label>
+  
+</LanguageData>

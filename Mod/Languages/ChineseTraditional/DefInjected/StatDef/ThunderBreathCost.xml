@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Thunder Breath Cost Multiplier -->
+  <ThunderBreath_Cost.label>雷之呼吸資源花費乘數</ThunderBreath_Cost.label>
+  <!-- EN: Thunder Breath Cost Multiplier. -->
+  <ThunderBreath_Cost.description>雷之呼吸資源花費乘數。</ThunderBreath_Cost.description>
+  
+</LanguageData>
