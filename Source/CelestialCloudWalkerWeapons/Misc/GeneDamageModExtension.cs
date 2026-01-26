@@ -12,10 +12,13 @@ namespace AnimeArsenal
         public string targetGene;
         public float damageMultiplier = 1f;
         public bool useMultiplier = false;
-        public List<BodyPartDef> targetBodyParts;
+        public List<BodyPartDef> targetBodyParts; 
+        public bool targetVitalOrgans = false; 
+        public List<string> vitalOrganDefNames; 
         public float armorPenetration = 0f;
         public bool continuousDamage = false;
         public int damageInterval = 60;
+        public int damageDelay = 0;
         public bool applyOnGeneAdd = false;
         public bool applyOnGeneRemove = false;
         public bool damageOnHit = true;
@@ -47,7 +50,7 @@ namespace AnimeArsenal
 
         private void HandleDamageFromHediff(DamageInfo original, GeneDamageModExtension ext)
         {
-            if (!HasTargetGene(ext.targetGene)) return;
+            if (!ShouldApplyDamage(ext.targetGene)) return;
 
             float damage = ext.useMultiplier ? original.Amount * ext.damageMultiplier : ext.damageAmount;
 
@@ -59,21 +62,24 @@ namespace AnimeArsenal
 
         private void DoContinuousDamage(GeneDamageModExtension ext)
         {
-            if (!HasTargetGene(ext.targetGene)) return;
+            if (!ShouldApplyDamage(ext.targetGene)) return;
 
             var damage = new DamageInfo(ext.damageType, ext.damageAmount, ext.armorPenetration);
 
-            if (ext.targetBodyParts?.Count > 0)
+            ApplyDamageToBodyParts(ext, damage);
+        }
+
+        private void ApplyDamageToBodyParts(GeneDamageModExtension ext, DamageInfo damage)
+        {
+            List<BodyPartRecord> targetParts = GetTargetBodyParts(ext);
+
+            if (targetParts?.Count > 0)
             {
-                foreach (var partDef in ext.targetBodyParts)
+                foreach (var part in targetParts)
                 {
-                    var part = Pawn.RaceProps.body.AllParts.FirstOrDefault(p => p.def == partDef);
-                    if (part != null)
-                    {
-                        var targeted = damage;
-                        targeted.SetHitPart(part);
-                        Pawn.TakeDamage(targeted);
-                    }
+                    var targeted = damage;
+                    targeted.SetHitPart(part);
+                    Pawn.TakeDamage(targeted);
                 }
             }
             else
@@ -82,8 +88,60 @@ namespace AnimeArsenal
             }
         }
 
-        private bool HasTargetGene(string geneName) =>
-            Pawn.genes?.GenesListForReading?.Any(g => g.def.defName == geneName) ?? false;
+        private List<BodyPartRecord> GetTargetBodyParts(GeneDamageModExtension ext)
+        {
+            if (ext.targetBodyParts?.Count > 0)
+            {
+                var parts = new List<BodyPartRecord>();
+                foreach (var partDef in ext.targetBodyParts)
+                {
+                    var part = Pawn.RaceProps.body.AllParts.FirstOrDefault(p => p.def == partDef);
+                    if (part != null)
+                        parts.Add(part);
+                }
+                return parts;
+            }
+
+            if (ext.targetVitalOrgans)
+            {
+                return GetVitalOrgans(Pawn, ext);
+            }
+
+            return null;
+        }
+
+        private List<BodyPartRecord> GetVitalOrgans(Pawn pawn, GeneDamageModExtension ext)
+        {
+            var vitalParts = new List<BodyPartRecord>();
+
+            var vitalOrganDefNames = ext?.vitalOrganDefNames ?? new List<string>
+            {
+                "Heart",
+                "Brain",
+                "Liver",
+                "Kidney",
+                "Lung",
+                "Stomach"
+            };
+
+            foreach (var part in pawn.RaceProps.body.AllParts)
+            {
+                if (vitalOrganDefNames.Contains(part.def.defName))
+                {
+                    vitalParts.Add(part);
+                }
+            }
+
+            return vitalParts.Count > 0 ? vitalParts : null;
+        }
+
+        private bool ShouldApplyDamage(string geneName)
+        {
+            if (string.IsNullOrEmpty(geneName))
+                return true;
+
+            return Pawn.genes?.GenesListForReading?.Any(g => g.def.defName == geneName) ?? false;
+        }
     }
 
     public class Gene_GeneDamage : Gene
@@ -117,31 +175,84 @@ namespace AnimeArsenal
 
         private void CheckAndApplyDamage()
         {
-            if (pawn.genes?.GenesListForReading?.Any(g => g.def.defName == Ext.targetGene) == true)
+            if (ShouldApplyDamage(Ext.targetGene))
                 DealDamage();
+        }
+
+        private bool ShouldApplyDamage(string geneName)
+        {
+            if (string.IsNullOrEmpty(geneName))
+                return true;
+
+            return pawn.genes?.GenesListForReading?.Any(g => g.def.defName == geneName) ?? false;
         }
 
         private void DealDamage()
         {
             var info = new DamageInfo(Ext.damageType, Ext.damageAmount, Ext.armorPenetration);
 
-            if (Ext.targetBodyParts?.Count > 0)
+            List<BodyPartRecord> targetParts = GetTargetBodyParts(Ext);
+
+            if (targetParts?.Count > 0)
             {
-                foreach (var partDef in Ext.targetBodyParts)
+                foreach (var part in targetParts)
                 {
-                    var bodyPart = pawn.RaceProps.body.AllParts.FirstOrDefault(p => p.def == partDef);
-                    if (bodyPart != null)
-                    {
-                        var targeted = info;
-                        targeted.SetHitPart(bodyPart);
-                        pawn.TakeDamage(targeted);
-                    }
+                    var targeted = info;
+                    targeted.SetHitPart(part);
+                    pawn.TakeDamage(targeted);
                 }
             }
             else
             {
                 pawn.TakeDamage(info);
             }
+        }
+
+        private List<BodyPartRecord> GetTargetBodyParts(GeneDamageModExtension ext)
+        {
+            if (ext.targetBodyParts?.Count > 0)
+            {
+                var parts = new List<BodyPartRecord>();
+                foreach (var partDef in ext.targetBodyParts)
+                {
+                    var bodyPart = pawn.RaceProps.body.AllParts.FirstOrDefault(p => p.def == partDef);
+                    if (bodyPart != null)
+                        parts.Add(bodyPart);
+                }
+                return parts;
+            }
+
+            if (ext.targetVitalOrgans)
+            {
+                return GetVitalOrgans(pawn, ext);
+            }
+
+            return null;
+        }
+
+        private List<BodyPartRecord> GetVitalOrgans(Pawn pawn, GeneDamageModExtension ext)
+        {
+            var vitalParts = new List<BodyPartRecord>();
+
+            var vitalOrganDefNames = ext?.vitalOrganDefNames ?? new List<string>
+            {
+                "Heart",
+                "Brain",
+                "Liver",
+                "Kidney",
+                "Lung",
+                "Stomach"
+            };
+
+            foreach (var part in pawn.RaceProps.body.AllParts)
+            {
+                if (vitalOrganDefNames.Contains(part.def.defName))
+                {
+                    vitalParts.Add(part);
+                }
+            }
+
+            return vitalParts.Count > 0 ? vitalParts : null;
         }
     }
 

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Blood_Demon_Arts_Air_Type</defName>
+    <label>Blood Demon Arts: Air Type</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>A ranged technique that sends a slash toward targets.</description>
+    <iconPath>UI/Abilities/AbilityProjectile</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetMechs>true</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+        <projectileDef>Blood_Demon_Arts_Air_Type_Projectile</projectileDef>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>65</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.04</resourceCostMultiplier>
+        <verbProperties>
+          <range>22</range>
+          <warmupTime>0.48</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_Air_Type_Projectile_LevelTwo</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.08</resourceCostMultiplier>
+        <verbProperties>
+          <range>24</range>
+          <warmupTime>0.46</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_Air_Type_Projectile_LevelTwo</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>270</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.12</resourceCostMultiplier>
+        <verbProperties>
+          <range>27</range>
+          <warmupTime>0.44</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_Air_Type_Projectile_LevelThree</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>440</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.16</resourceCostMultiplier>
+        <verbProperties>
+          <range>30</range>
+          <warmupTime>0.42</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_Air_Type_Projectile_Advanced</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>680</experienceRequired>
+        <description>A ranged technique that sends a slash toward targets.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <verbProperties>
+          <range>34</range>
+          <warmupTime>0.4</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_Air_Type_Projectile_Master</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

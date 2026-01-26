@@ -1,19 +1,13 @@
 ﻿using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace AnimeArsenal
-
 {
     [DefOf]
-    public class CelestialDefof
+    public static class CelestialDefof
     {
+        public static JobDef AA_DemonHuntAndConsume;
         public static StatDef AnimeArsenal_BloodDemonArtsRegenSpeed;
-
         public static EffecterDef AnimeArsenal_Deflect;
         public static ThingDef AnimeArsenal_DelegateFlyer;
         public static ThingDef AnimeArsenal_Flyer;
@@ -27,11 +21,12 @@ namespace AnimeArsenal
         public static DamageDef CrushDamage;
         public static EffecterDef SunlightBurningEffect;
         public static EffecterDef SunlightDeathEffect;
-
-
         public static GeneDef BloodDemonArt;
         public static ThingDef AA_DemonRace;
 
+        static CelestialDefof()
+        {
+            DefOfHelper.EnsureInitializedInCtor(typeof(CelestialDefof));
+        }
     }
 }
-

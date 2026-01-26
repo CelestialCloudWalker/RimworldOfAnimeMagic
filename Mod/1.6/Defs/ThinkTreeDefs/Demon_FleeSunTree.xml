@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
   <ThinkTreeDef>
     <defName>Demon_FleeSunLightTree</defName>
     <thinkRoot Class="ThinkNode_Priority">
       <subNodes>
+        <li Class="ThinkNode_ConditionalMentalState">
+          <state>AA_DemonCannibalism</state>
+          <subNodes>
+            <li Class="AnimeArsenal.JobGiver_DemonHunt" />
+          </subNodes>
+        </li>
         <li Class="AnimeArsenal.ThinkNode_ConditionalIsDaylight">
           <subNodes>
             <li Class="AnimeArsenal.ThinkNode_ConditionalIsUnderRoof">
@@ -34,4 +41,5 @@
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>
+
 </Defs>

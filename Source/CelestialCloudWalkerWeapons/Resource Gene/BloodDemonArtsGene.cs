@@ -1,73 +1,14 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Talented;
 using UnityEngine;
 using Verse;
-using RimWorld;
+using Verse.AI;
 
 namespace AnimeArsenal
 {
-    public enum DemonRank
-    {
-        WeakDemon = 0,
-        Demon = 1,
-        LowerRankSix = 2,
-        LowerRankFive = 3,
-        LowerRankFour = 4,
-        LowerRankThree = 5,
-        LowerRankTwo = 6,
-        LowerRankOne = 7,
-        UpperRankSix = 8,
-        UpperRankFive = 9,
-        UpperRankFour = 10,
-        UpperRankThree = 11,
-        UpperRankTwo = 12,
-        UpperRankOne = 13,
-    }
-
-    public class DemonProgressionExtension : DefModExtension
-    {
-        public DemonRank startingRank = DemonRank.WeakDemon;
-        public List<int> pawnsRequiredPerRank = new List<int> { 3, 7, 15 };
-        public bool canProgressThroughTalents = true;
-
-        public StatDef bloodPoolStat;
-        public float bloodPoolBonusPerPawnEaten = 5f;
-        public float bloodRestoredPerPawnEaten = 15f;
-
-        public List<float> sunlightDamagePerTick = new List<float> { 2.5f, 1.8f, 1.0f, 0.6f };
-        public List<float> sunlightDamageThreshold = new List<float> { 20f, 45f, 65f, 100f };
-        public List<int> sunlightTicksBetweenDamage = new List<int> { 120, 150, 200, 300 };
-        public List<int> sunlightTicksToReset = new List<int> { 2000, 3000, 4000, 6000 };
-        public List<float> sunlightMinCoverage = new List<float> { 0.45f, 0.50f, 0.60f, 0.70f };
-        public List<float> sunlightTolerancePool = new List<float> { 15f, 25f, 45f, 75f };
-
-        public List<float> regenHealingMultiplier = new List<float> { 1.5f, 2.2f, 3.5f, 5.0f };
-        public List<int> regenTicksBetweenHealing = new List<int> { 120, 90, 70, 40 };
-        public List<float> regenHealingPerTick = new List<float> { 0.5f, 0.7f, 1.2f, 2.0f };
-        public List<bool> regenInstantLimb = new List<bool> { false, false, true, true };
-        public List<bool> regenInstantOrgan = new List<bool> { false, false, false, true };
-        public List<bool> regenCanRegenerateOrgans = new List<bool> { false, true, true, true };
-        public List<bool> regenCanRegenerateHeart = new List<bool> { false, false, true, true };
-        public List<float> regenScarHealChance = new List<float> { 0.1f, 0.15f, 0.25f, 0.4f };
-        public List<int> regenScarHealInterval = new List<int> { 3000, 2200, 1800, 1000 };
-        public List<float> regenResourceCostPerHeal = new List<float> { 2f, 1.5f, 1.2f, 0.8f };
-        public List<float> regenResourceCostPerLimb = new List<float> { 100f, 75f, 40f, 25f };
-        public List<float> regenResourceCostPerOrgan = new List<float> { 200f, 150f, 80f, 50f };
-        public List<float> regenMinResourcesRequired = new List<float> { 0.2f, 0.15f, 0.12f, 0.05f };
-
-        public List<bool> bodyDisappearLeaveAsh = new List<bool> { true, true, true, true };
-        public List<int> bodyDisappearFilthAmount = new List<int> { 1, 2, 3, 4 };
-        public List<bool> bodyDisappearPlayEffect = new List<bool> { true, true, true, true };
-        public List<string> bodyDisappearMessage = new List<string>
-        {
-            "Basic demon body turned to ash!",
-            "Strong demon body turned to ash!",
-            "Lower Moon demon body turned to ash!",
-            "Upper Moon demon body turned to ash!"
-        };
-    }
-
     public class BloodDemonArtsGene : Gene_TalentBase
     {
         new BloodDemonArtsGeneDef Def => (BloodDemonArtsGeneDef)def;
@@ -76,13 +17,89 @@ namespace AnimeArsenal
         public bool isExhausted = false;
         private int exhaustionCooldownRemaining = 0;
         private int exhaustionHediffTimer = 0;
-
+        private bool hasSpecialized = false;
+        private float currentSanity = 100f;
+        private int ticksSinceLastMeal = 0;
+        private int lastSanityWarning = 0;
+        private DemonSanityExtension sanityExt;
+        public bool HasSpecialized => hasSpecialized;
         private DemonRank currentRank = DemonRank.WeakDemon;
         private int totalPawnsEaten = 0;
         private DemonProgressionExtension progressionExt;
+        private HashSet<int> unlockedAbilityIndices = new HashSet<int>();
 
-        private float lastKnownMax = -1f;
+        internal float lastKnownMax = -1f;
+        public float CurrentSanity => currentSanity;
+        public float MaxSanity => sanityExt?.maxSanity ?? 100f;
+        public float SanityPercent => currentSanity / MaxSanity;
+        public float RegenMultiplier => sanityExt?.sanityToRegenMultiplier?.Evaluate(currentSanity) ?? 1f;
+        public float DamageMultiplier => sanityExt?.sanityToDamageMultiplier?.Evaluate(currentSanity) ?? 1f;
+        public void SetSpecialized(bool value)
+        {
+            hasSpecialized = value;
+        }
 
+        public HashSet<int> GetUnlockedAbilityIndices()
+        {
+            return new HashSet<int>(unlockedAbilityIndices);
+        }
+        public void SetUnlockedAbilities(HashSet<int> indices)
+        {
+            unlockedAbilityIndices = new HashSet<int>(indices);
+        }
+        private void CheckForAbilityUnlocks()
+        {
+            if (progressionExt?.abilityUnlocks == null || progressionExt.abilityUnlocks.Count == 0)
+                return;
+
+            for (int i = 0; i < progressionExt.abilityUnlocks.Count; i++)
+            {
+                if (unlockedAbilityIndices.Contains(i))
+                    continue;
+
+                AbilityUnlock unlock = progressionExt.abilityUnlocks[i];
+
+                if (totalPawnsEaten >= unlock.pawnsRequired)
+                {
+                    GrantAbilityUnlock(unlock, i);
+                }
+            }
+
+        }
+
+        private void GrantAbilityUnlock(AbilityUnlock unlock, int index)
+        {
+            if (pawn?.abilities == null)
+                return;
+
+            if (unlock.ability != null)
+            {
+                pawn.abilities.GainAbility(unlock.ability);
+
+                string message = string.Format(unlock.unlockMessage,
+                    pawn.Name.ToStringShort,
+                    unlock.ability.label);
+
+                Messages.Message(message, pawn, MessageTypeDefOf.PositiveEvent);
+            }
+
+            if (unlock.hediff != null)
+            {
+                Hediff hediff = pawn.health.GetOrAddHediff(unlock.hediff);
+
+                if (hediff != null && !string.IsNullOrEmpty(unlock.unlockMessage))
+                {
+                    string message = string.Format(unlock.unlockMessage,
+                        pawn.Name.ToStringShort,
+                        unlock.hediff.label);
+
+                    Messages.Message(message, pawn, MessageTypeDefOf.PositiveEvent);
+                }
+            }
+
+            unlockedAbilityIndices.Add(index);
+
+        }
         public override float Max
         {
             get
@@ -101,7 +118,6 @@ namespace AnimeArsenal
                 if (lastKnownMax != currentMax)
                 {
                     lastKnownMax = currentMax;
-
                     this.SetMax(currentMax);
                 }
 
@@ -133,6 +149,53 @@ namespace AnimeArsenal
 
         public DemonRank CurrentRank => currentRank;
         public int TotalPawnsEaten => totalPawnsEaten;
+        public void SetPawnsEaten(int count)
+        {
+            totalPawnsEaten = count;
+        }
+
+        public void SetRank(DemonRank rank)
+        {
+            currentRank = rank;
+            UpdateModExtensionValues();
+        }
+
+        public bool CanSpecialize()
+        {
+            if (hasSpecialized) return false;
+            if (progressionExt == null) return false;
+            if (progressionExt.availableSpecializations == null || progressionExt.availableSpecializations.Count == 0) return false;
+
+            return totalPawnsEaten >= progressionExt.pawnsRequiredForSpecialization && (int)currentRank >= 1;
+        }
+
+        public List<GeneDef> GetUnlockedSpecializations()
+        {
+            if (progressionExt?.availableSpecializations == null)
+                return new List<GeneDef>();
+
+            if (!progressionExt.unlockSpecializationsProgressively)
+                return new List<GeneDef>(progressionExt.availableSpecializations);
+
+            List<GeneDef> unlocked = new List<GeneDef>();
+
+            for (int i = 0; i < progressionExt.availableSpecializations.Count; i++)
+            {
+                int threshold = 0;
+                if (progressionExt.specializationUnlockThresholds != null &&
+                    i < progressionExt.specializationUnlockThresholds.Count)
+                {
+                    threshold = progressionExt.specializationUnlockThresholds[i];
+                }
+
+                if (totalPawnsEaten >= threshold)
+                {
+                    unlocked.Add(progressionExt.availableSpecializations[i]);
+                }
+            }
+
+            return unlocked;
+        }
 
         public bool CanAddDemonGene(Pawn pawn)
         {
@@ -174,9 +237,26 @@ namespace AnimeArsenal
             }
 
             InitializeProgressionExtension();
-
+            InitializeSanityExtension();
             CheckAndRemoveConflictingBreathingGenes();
+
+            if (ModsConfig.RoyaltyActive && progressionExt?.rankTitles != null)
+            {
+                GrantRankTitle(DemonRank.WeakDemon);
+            }
         }
+        private void InitializeSanityExtension()
+        {
+            if (sanityExt == null)
+            {
+                sanityExt = def?.GetModExtension<DemonSanityExtension>();
+                if (sanityExt != null && currentSanity == 0f)
+                {
+                    currentSanity = sanityExt.startingSanity;
+                }
+            }
+        }
+
 
         private void InitializeProgressionExtension()
         {
@@ -185,7 +265,7 @@ namespace AnimeArsenal
                 progressionExt = def?.GetModExtension<DemonProgressionExtension>();
                 if (progressionExt != null)
                 {
-                    if (currentRank == DemonRank.WeakDemon && totalPawnsEaten == 0)
+                    if (currentRank == DemonRank.WeakDemon && totalPawnsEaten == 0 && Scribe.mode != LoadSaveMode.PostLoadInit)
                     {
                         currentRank = progressionExt.startingRank;
                     }
@@ -199,7 +279,6 @@ namespace AnimeArsenal
             if (pawn?.genes == null) return;
 
             BloodDemonArtsGeneDef demonDef = def as BloodDemonArtsGeneDef;
-
             var breathingGenesToRemove = new List<Gene>();
 
             foreach (var gene in pawn.genes.GenesListForReading)
@@ -230,7 +309,6 @@ namespace AnimeArsenal
             {
                 foreach (var gene in breathingGenesToRemove)
                 {
-
                     if (gene is BreathingTechniqueGene breathingGene)
                     {
                         ResetAllTalentTrees(breathingGene);
@@ -285,9 +363,122 @@ namespace AnimeArsenal
             if (pawn.IsHashIntervalTick(250))
             {
                 CheckForRankUp();
-
                 float currentMax = Max;
+                TickSanitySystem();
             }
+        }
+
+        private void TickSanitySystem()
+        {
+            if (sanityExt == null || pawn == null || pawn.Dead) return;
+
+            ticksSinceLastMeal += 250;
+
+            if (pawn.IsHashIntervalTick(sanityExt.ticksBetweenSanityDecay))
+            {
+                ProcessSanityDecay();
+            }
+
+            if (currentSanity <= sanityExt.mentalBreakThreshold)
+            {
+                TryTriggerCannibalismBreak();
+            }
+            else if (currentSanity <= sanityExt.criticalSanityThreshold)
+            {
+                ShowSanityWarning("Critical");
+            }
+            else if (currentSanity <= sanityExt.lowSanityThreshold)
+            {
+                ShowSanityWarning("Low");
+            }
+        }
+
+        private void ProcessSanityDecay()
+        {
+            if (ticksSinceLastMeal >= sanityExt.ticksSinceLastMealBeforeDecay)
+            {
+                float decay = sanityExt.sanityDecayPerTick;
+                int daysWithoutFood = ticksSinceLastMeal / 60000;
+                decay *= (1f + (daysWithoutFood * 0.5f));
+
+                currentSanity -= decay;
+                currentSanity = Mathf.Max(0f, currentSanity);
+
+                if (sanityExt.showSanityMotes && Rand.Chance(0.1f) && pawn.Map != null)
+                {
+                    MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, "Hungry...", Color.red, 2f);
+                }
+
+                if (Prefs.DevMode && pawn.IsHashIntervalTick(2500))
+                {
+                    Log.Message($"[Demon Sanity] {pawn.LabelShort}: Sanity={currentSanity:F1}, DaysWithoutFood={daysWithoutFood}, Decay={decay:F2}");
+                }
+            }
+            else
+            {
+                float restore = sanityExt.sanityDecayPerTick * 0.25f;
+                currentSanity += restore;
+                currentSanity = Mathf.Min(MaxSanity, currentSanity);
+            }
+        }
+
+        private void ShowSanityWarning(string severity)
+        {
+            if (!sanityExt.warnAtLowSanity) return;
+
+            int currentTick = Find.TickManager.TicksGame;
+            if (currentTick - lastSanityWarning < sanityExt.sanityWarningCooldown)
+                return;
+
+            Color color = severity == "Critical" ? Color.red : new Color(1f, 0.5f, 0f);
+
+            if (Rand.Chance(0.05f) && pawn.Map != null)
+            {
+                MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, $"{severity} Hunger!", color, 3f);
+                lastSanityWarning = currentTick;
+            }
+        }
+
+        private void TryTriggerCannibalismBreak()
+        {
+            if (pawn.InMentalState) return;
+            if (sanityExt.cannibalismMentalState == null) return;
+            if (pawn.Downed || pawn.Dead) return;
+            Pawn victim = FindNearestEdibleHuman();
+            if (victim == null) return; 
+            if (Rand.Chance(0.95f))
+            {
+                pawn.mindState.mentalStateHandler.TryStartMentalState(
+                    sanityExt.cannibalismMentalState,
+                    "Demon hunger overwhelming",
+                    forceWake: true
+                );
+
+                Messages.Message(
+                    $"{pawn.LabelShort}'s demonic hunger has become overwhelming! They're hunting for prey!",
+                    pawn,
+                    MessageTypeDefOf.ThreatBig
+                );
+            }
+        }
+
+        private Pawn FindNearestEdibleHuman()
+        {
+            if (pawn.Map == null) return null;
+
+            return GenClosest.ClosestThingReachable(
+                pawn.Position,
+                pawn.Map,
+                ThingRequest.ForGroup(ThingRequestGroup.Pawn),
+                PathEndMode.Touch,
+                TraverseParms.For(pawn),
+                sanityExt.searchRadiusForVictims,
+                p => p is Pawn target &&
+                     target != pawn &&
+                     target.RaceProps.Humanlike &&
+                     !target.Dead &&
+                     pawn.CanReach(target, PathEndMode.Touch, Danger.Deadly)
+            ) as Pawn;
         }
 
         private void CheckForRankUp()
@@ -315,23 +506,138 @@ namespace AnimeArsenal
             }
         }
 
+        public void ApplySpecialization(GeneDef specializationGene)
+        {
+            if (pawn?.genes == null || specializationGene == null)
+                return;
+
+            DemonStateTransfer transferData = new DemonStateTransfer(this);
+
+            pawn.genes.RemoveGene(this);
+
+            Gene newGene = pawn.genes.AddGene(specializationGene, false);
+
+            if (newGene is BloodDemonArtsGene specializedGene)
+            {
+                transferData.ApplyTo(specializedGene);
+                specializedGene.SetSpecialized(true);
+
+                Messages.Message(
+                    $"{pawn.Name.ToStringShort} has specialized into {specializationGene.label}!",
+                    pawn,
+                    MessageTypeDefOf.PositiveEvent
+                );
+            }
+            else
+            {
+                Log.Error($"[AnimeArsenal] Specialization gene {specializationGene.defName} is not a BloodDemonArtsGene!");
+            }
+        }
+
         public void RankUp()
         {
             if ((int)currentRank >= 13) return;
-
+            DemonRank previousRank = currentRank;
             currentRank = (DemonRank)((int)currentRank + 1);
             UpdateModExtensionValues();
 
             pawn.health.capacities.Notify_CapacityLevelsDirty();
             ForceResourceSync();
 
+            GrantRankTitle(previousRank);
+
             Messages.Message($"{pawn.Name.ToStringShort} has evolved to {currentRank}!",
                            pawn, MessageTypeDefOf.PositiveEvent);
         }
+        private void GrantRankTitle(DemonRank previousRank)
+        {
+            if (!ModsConfig.RoyaltyActive)
+                return;
 
+            if (progressionExt?.rankTitles == null || progressionExt.rankTitles.Count == 0)
+                return;
+
+            if (pawn?.royalty == null)
+                return;
+
+            if (Current.Game == null)
+                return;
+
+            if (Find.FactionManager == null)
+                return;
+
+            int rankIndex = (int)currentRank;
+
+            if (rankIndex == 0)
+                return;
+
+            int titleIndex = rankIndex - 1;
+
+            if (titleIndex < 0 || titleIndex >= progressionExt.rankTitles.Count || progressionExt.rankTitles[titleIndex] == null)
+                return;
+
+            Faction demonFaction = null;
+
+            if (progressionExt.titleFaction != null)
+            {
+                demonFaction = Find.FactionManager.FirstFactionOfDef(progressionExt.titleFaction);
+            }
+
+            if (demonFaction == null)
+                return;
+
+            RoyalTitleDef newTitle = progressionExt.rankTitles[titleIndex];
+
+            int previousRankIndex = (int)previousRank;
+            if (previousRankIndex > 0)
+            {
+                int previousTitleIndex = previousRankIndex - 1;
+                if (previousTitleIndex >= 0 && previousTitleIndex < progressionExt.rankTitles.Count)
+                {
+                    RoyalTitleDef oldTitle = progressionExt.rankTitles[previousTitleIndex];
+                    if (oldTitle != null)
+                    {
+                        try
+                        {
+                            var currentTitleInFaction = pawn.royalty.GetCurrentTitle(demonFaction);
+                            if (currentTitleInFaction == oldTitle)
+                            {
+                                pawn.royalty.SetTitle(demonFaction, null, false, false, false);
+                            }
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                }
+            }
+
+            try
+            {
+                pawn.royalty.SetTitle(demonFaction, newTitle, false, false, false);
+            }
+            catch (Exception ex)
+            {
+                Log.Warning($"[AnimeArsenal] Could not grant title {newTitle.defName} to {pawn.Name}: {ex.Message}");
+            }
+        }
         public void AddPawnEaten()
         {
             totalPawnsEaten++;
+
+            ticksSinceLastMeal = 0;
+
+            if (sanityExt != null)
+            {
+                currentSanity += sanityExt.sanityRestoredPerPawnEaten;
+                currentSanity = Mathf.Min(MaxSanity, currentSanity);
+
+                if (sanityExt.showSanityMotes && pawn.Map != null)
+                {
+                    MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, "Satiated", Color.green, 3f);
+                }
+            }
 
             ForceResourceSync();
 
@@ -343,9 +649,10 @@ namespace AnimeArsenal
             }
 
             CheckForRankUp();
+            CheckForAbilityUnlocks();
         }
 
-        private void ForceResourceSync()
+        public void ForceResourceSync()
         {
             float currentMax = pawn.GetStatValue(Def.maxStat, true);
             lastKnownMax = currentMax;
@@ -511,6 +818,25 @@ namespace AnimeArsenal
                 yield return gizmo;
             }
 
+            if (CanSpecialize())
+            {
+                List<GeneDef> availableSpecs = GetUnlockedSpecializations();
+
+                if (availableSpecs.Count > 0)
+                {
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "Choose Blood Demon Arts",
+                        defaultDesc = $"Choose a Blood Demon Art.\n\nPawns Consumed: {totalPawnsEaten}\nBlood Demon Arts Available: {availableSpecs.Count}",
+                        icon = ContentFinder<Texture2D>.Get("UI/Icons/ComingSoon", false) ?? BaseContent.BadTex,
+                        action = () =>
+                        {
+                            Find.WindowStack.Add(new Dialog_DemonSpecialization(this, availableSpecs));
+                        }
+                    };
+                }
+            }
+
             if (Prefs.DevMode && DebugSettings.godMode)
             {
                 string resourceLabel = !string.IsNullOrEmpty(Def?.resourceLabel) ? Def.resourceLabel : "Blood";
@@ -524,6 +850,7 @@ namespace AnimeArsenal
                         Value += 10f;
                     }
                 };
+
 
                 yield return new Command_Action
                 {
@@ -543,6 +870,43 @@ namespace AnimeArsenal
                     {
                         ForceResourceSync();
                         Value = Max;
+                    }
+                }; yield return new Command_Action
+                {
+                    defaultLabel = "DEV: -25 Sanity",
+                    defaultDesc = $"Reduce sanity (Current: {currentSanity:F1})",
+                    action = () =>
+                    {
+                        currentSanity -= 25f;
+                        currentSanity = Mathf.Max(0f, currentSanity);
+                    }
+                };
+
+                yield return new Command_Action
+                {
+                    defaultLabel = "DEV: +25 Sanity",
+                    defaultDesc = $"Restore sanity (Current: {currentSanity:F1})",
+                    action = () =>
+                    {
+                        currentSanity += 25f;
+                        currentSanity = Mathf.Min(MaxSanity, currentSanity);
+                    }
+                };
+
+                yield return new Command_Action
+                {
+                    defaultLabel = "DEV: Trigger Hunger Break",
+                    defaultDesc = "Force cannibalism mental state",
+                    action = () =>
+                    {
+                        if (sanityExt?.cannibalismMentalState != null)
+                        {
+                            pawn.mindState.mentalStateHandler.TryStartMentalState(
+                                sanityExt.cannibalismMentalState,
+                                "Debug forced",
+                                forceWake: true
+                            );
+                        }
                     }
                 };
 
@@ -634,14 +998,45 @@ namespace AnimeArsenal
             Scribe_Values.Look(ref isExhausted, "isExhausted", false);
             Scribe_Values.Look(ref exhaustionCooldownRemaining, "exhaustionCooldownRemaining", 0);
             Scribe_Values.Look(ref exhaustionHediffTimer, "exhaustionHediffTimer", 0);
-
             Scribe_Values.Look(ref currentRank, "currentRank", DemonRank.WeakDemon);
             Scribe_Values.Look(ref totalPawnsEaten, "totalPawnsEaten", 0);
             Scribe_Values.Look(ref lastKnownMax, "lastKnownMax", -1f);
+            Scribe_Values.Look(ref hasSpecialized, "hasSpecialized", false);
+            Scribe_Values.Look(ref currentSanity, "currentSanity", 100f);
+            Scribe_Values.Look(ref ticksSinceLastMeal, "ticksSinceLastMeal", 0);
+            Scribe_Values.Look(ref lastSanityWarning, "lastSanityWarning", 0);
+
+            if (Scribe.mode == LoadSaveMode.Saving)
+            {
+                List<int> unlockedList = new List<int>(unlockedAbilityIndices);
+                Scribe_Collections.Look(ref unlockedList, "unlockedAbilityIndices", LookMode.Value);
+            }
+            else if (Scribe.mode == LoadSaveMode.LoadingVars)
+            {
+                List<int> unlockedList = null;
+                Scribe_Collections.Look(ref unlockedList, "unlockedAbilityIndices", LookMode.Value);
+
+                if (unlockedList != null)
+                {
+                    unlockedAbilityIndices = new HashSet<int>(unlockedList);
+                }
+            }
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                InitializeProgressionExtension();
+                if (unlockedAbilityIndices == null)
+                    unlockedAbilityIndices = new HashSet<int>();
+
+                if (sanityExt == null)
+                {
+                    sanityExt = def?.GetModExtension<DemonSanityExtension>();
+                }
+
+                if (progressionExt == null)
+                {
+                    progressionExt = def?.GetModExtension<DemonProgressionExtension>();
+                }
+
                 ForceResourceSync();
             }
         }

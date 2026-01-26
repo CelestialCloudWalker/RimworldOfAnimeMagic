@@ -75,6 +75,16 @@ namespace AnimeArsenal
             return GetBasePartName(partDefName).Equals(partType, StringComparison.OrdinalIgnoreCase);
         }
 
+        public static float GetSanityMultiplier(Pawn pawn)
+        {
+            var demonGene = pawn.genes?.GenesListForReading
+                .FirstOrDefault(g => g is BloodDemonArtsGene) as BloodDemonArtsGene;
+
+            if (demonGene == null) return 1f;
+
+            return demonGene.RegenMultiplier;
+        }
+
         public static bool IsOrgan(BodyPartRecord part)
         {
             var baseName = GetBasePartName(part.def.defName).ToLower();
@@ -185,9 +195,12 @@ namespace AnimeArsenal
                 .Where(i => !i.IsPermanent() && i.Severity > 0).ToList();
 
             bool blocked = false;
+
+            float sanityMultiplier = RegenerationHelper.GetSanityMultiplier(pawn);
+
             foreach (var injury in injuries)
             {
-                float heal = ext.healingPerTick * ext.healingMultiplier;
+                float heal = ext.healingPerTick * ext.healingMultiplier * sanityMultiplier;
 
                 if (injury.Severity <= heal * 0.1f)
                 {
@@ -202,8 +215,14 @@ namespace AnimeArsenal
                 }
 
                 injury.Heal(heal);
+
                 if (Rand.Chance(0.05f))
-                    MoteMaker.ThrowText(pawn.DrawPos, map, "Regenerating...", Color.green, 2f);
+                {
+                    Color moteColor = sanityMultiplier >= 1f ? Color.green :
+                                     sanityMultiplier >= 0.75f ? Color.yellow : Color.red;
+                    string moteText = sanityMultiplier >= 1f ? "Regenerating..." : "Weak Regen...";
+                    MoteMaker.ThrowText(pawn.DrawPos, map, moteText, moteColor, 2f);
+                }
             }
 
             if (blocked) ShowResourceWarning(pawn, ext);

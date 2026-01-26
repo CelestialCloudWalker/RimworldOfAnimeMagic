@@ -23,14 +23,64 @@
     <maxStat>BloodDemonArts</maxStat>
 
     <modExtensions>
+      <li Class="AnimeArsenal.DemonSanityExtension">
+        <ticksBetweenSanityDecay>2500</ticksBetweenSanityDecay>
+        <sanityDecayPerTick>1.0</sanityDecayPerTick>
+        <ticksSinceLastMealBeforeDecay>60000</ticksSinceLastMealBeforeDecay>
+        <maxSanity>100</maxSanity>
+        <startingSanity>100</startingSanity>
+        <sanityRestoredPerPawnEaten>25</sanityRestoredPerPawnEaten>
+        <lowSanityThreshold>50</lowSanityThreshold>
+        <criticalSanityThreshold>25</criticalSanityThreshold>
+        <mentalBreakThreshold>10</mentalBreakThreshold>
+        <sanityToRegenMultiplier>
+          <points>
+            <li>(0, 0.25)</li>
+            <li>(25, 0.5)</li>
+            <li>(50, 0.75)</li>
+            <li>(75, 1.0)</li>
+            <li>(100, 1.5)</li>
+          </points>
+        </sanityToRegenMultiplier>
+
+        <sanityToDamageMultiplier>
+          <points>
+            <li>(0, 0.5)</li>
+            <li>(25, 0.75)</li>
+            <li>(50, 0.9)</li>
+            <li>(75, 1.0)</li>
+            <li>(100, 1.25)</li>
+          </points>
+        </sanityToDamageMultiplier>
+        <showSanityMotes>true</showSanityMotes>
+        <warnAtLowSanity>true</warnAtLowSanity>
+        <sanityWarningCooldown>15000</sanityWarningCooldown>
+        <cannibalismMentalState>AA_DemonCannibalism</cannibalismMentalState>
+        <mentalBreakMTBDays>0.5</mentalBreakMTBDays>
+        <searchRadiusForVictims>25</searchRadiusForVictims>
+      </li>
 
       <li Class="AnimeArsenal.DemonProgressionExtension">
         <startingRank>WeakDemon</startingRank>
         <canProgressThroughTalents>true</canProgressThroughTalents>
-
+        <titleFaction>AA_Twelve_Demon_Moons</titleFaction>
         <bloodPoolStat>BloodDemonArts</bloodPoolStat>
         <bloodPoolBonusPerPawnEaten>5</bloodPoolBonusPerPawnEaten>
         <bloodRestoredPerPawnEaten>15</bloodRestoredPerPawnEaten>
+        <pawnsRequiredForSpecialization>50</pawnsRequiredForSpecialization>
+        <unlockSpecializationsProgressively>true</unlockSpecializationsProgressively>
+        <availableSpecializations>
+          <li>BloodDemonArt_BloodManipulator</li>
+          <li>BloodDemonArt_RegenerationMaster</li>
+          <li>BloodDemonArt_CombatSpecialist</li>
+        </availableSpecializations>
+        <specializationUnlockThresholds>
+          <li>50</li>
+          <li>70</li>
+          <li>90</li>  
+        </specializationUnlockThresholds>
+
+
 
         <pawnsRequiredPerRank>
           <li>20</li>
@@ -47,6 +97,29 @@
           <li>1050</li>
           <li>1100</li>
         </pawnsRequiredPerRank>
+
+        <rankTitles>
+          <li>AA_Demon</li>
+          <li>AA_LowerMoonSix</li>
+          <li>AA_LowerMoonFive</li>
+          <li>AA_LowerMoonFour</li>
+          <li>AA_LowerMoonThree</li>
+          <li>AA_LowerMoonTwo</li>
+          <li>AA_LowerMoon</li>
+          <li>AA_UpperMoonSix</li>
+          <li>AA_UpperMoonFive</li>
+          <li>AA_UpperMoonFour</li>
+          <li>AA_UpperMoonThree</li>
+          <li>AA_UpperMoonTwo</li>
+          <li>AA_UpperMoon</li>
+        </rankTitles>
+        <abilityUnlocks>
+          <li>
+            <pawnsRequired>10</pawnsRequired>
+            <ability>Blood_Demon_Arts_Devour</ability>
+            <unlockMessage>{0} has awakened {1}!</unlockMessage>
+          </li>
+        </abilityUnlocks>
 
         <sunlightDamagePerTick>
           <li>4.0</li>
@@ -138,7 +211,7 @@
           <li>20</li>
           <li>28</li>
           <li>38</li>
-          <li>52</li>    
+          <li>52</li>
           <li>70</li>
           <li>92</li>
           <li>120</li>

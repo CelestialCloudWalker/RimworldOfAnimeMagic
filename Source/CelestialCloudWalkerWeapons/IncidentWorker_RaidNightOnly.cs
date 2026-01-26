@@ -63,7 +63,7 @@ namespace AnimeArsenal
                 {
                     LordJob_AssaultColonyNightRaid nightJob = new LordJob_AssaultColonyNightRaid(
                         parms.faction, false, true, false, false, true);
-                   
+
                     raidLord.SetJob(nightJob);
                 }
             }
@@ -197,7 +197,7 @@ namespace AnimeArsenal
             {
                 Job eatJob = JobMaker.MakeJob(JobDefOf.Ingest, foodSource);
                 eatJob.count = 1;
-                eatJob.playerForced = true; 
+                eatJob.playerForced = true;
 
                 if (demon.jobs != null)
                 {

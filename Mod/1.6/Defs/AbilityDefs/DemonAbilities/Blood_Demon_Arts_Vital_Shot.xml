@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AnimeArsenal.TalentedLevelingAbilityDef>
+    <defName>Blood_Demon_Arts_Vital_Shot</defName>
+    <label>Blood Demon Arts: Vital Shot</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>A technique that dashes to a target and strikes their vital organs.</description>
+    <iconPath>UI/Abilities/AbilityDash</iconPath>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+
+    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceCost>5</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <dashSpeed>2.0</dashSpeed>
+        <damageType>Cut</damageType>
+        <initialStrikeDamage>9</initialStrikeDamage>
+        <initialStrikeArmorPen>0.25</initialStrikeArmorPen>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <additionalDamageFactorFromMeleeSkill>0.08</additionalDamageFactorFromMeleeSkill>
+        <targetVitalOrgans>true</targetVitalOrgans>
+        <vitalOrganDamage>30</vitalOrganDamage>
+        <vitalOrganArmorPen>0.8</vitalOrganArmorPen>
+        <stunDuration>120</stunDuration>
+        <effectRadius>0</effectRadius>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A technique that dashes to a target and strikes their vital organs.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>A technique that dashes to a target and strikes their vital organs with greater precision.</description>
+        <resourceCostMultiplier>1.04</resourceCostMultiplier>
+        <verbProperties>
+          <range>21</range>
+          <warmupTime>0.48</warmupTime>
+        </verbProperties>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.2</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>11</initialStrikeDamage>
+            <initialStrikeArmorPen>0.3</initialStrikeArmorPen>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <additionalDamageFactorFromMeleeSkill>0.1</additionalDamageFactorFromMeleeSkill>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDamage>35</vitalOrganDamage>
+            <vitalOrganArmorPen>0.85</vitalOrganArmorPen>
+            <stunDuration>120</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </AnimeArsenal.TalentedLevelingAbilityDef>
+</Defs>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EffecterDef>
+    <defName>AA_DashSlashStart</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.3</positionRadius>
+        <moteDef>AA_Mote_DashTestStart</moteDef>
+        <burstCount>3~5</burstCount>
+        <speed>1.2~2.0</speed>
+        <scale>0.8~1.2</scale>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AA_DashSlashTrail</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.2</positionRadius>
+        <moteDef>AA_Mote_DashTestTrail</moteDef>
+        <burstCount>1~2</burstCount>
+        <speed>0.5~1.0</speed>
+        <scale>0.6~0.9</scale>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>AA_DashSlashEnd</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.4</positionRadius>
+        <moteDef>AA_Mote_DashTestHit</moteDef>
+        <burstCount>5~8</burstCount>
+        <speed>1.5~2.5</speed>
+        <scale>1.0~1.5</scale>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>AA_Mote_DashTestStart</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <solidTime>0.15</solidTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <growthRate>0.15</growthRate>
+      <collide>false</collide>
+      <speedPerTime>-0.2</speedPerTime>
+    </mote>
+    <graphicData>
+      <texPath>Animations/DashStart</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(200, 220, 255)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>AA_Mote_DashTestTrail</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <solidTime>0.15</solidTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <growthRate>0.15</growthRate>
+      <collide>false</collide>
+      <speedPerTime>-0.2</speedPerTime>
+    </mote>
+    <graphicData>
+      <texPath>Animations/Trail71</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(200, 220, 255)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>AA_Mote_DashTestHit</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <solidTime>0.15</solidTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <growthRate>0.15</growthRate>
+      <collide>false</collide>
+      <speedPerTime>-0.2</speedPerTime>
+    </mote>
+    <graphicData>
+      <texPath>Animations/effect_03_a</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(200, 220, 255)</color>
+    </graphicData>
+  </ThingDef>
+</Defs>

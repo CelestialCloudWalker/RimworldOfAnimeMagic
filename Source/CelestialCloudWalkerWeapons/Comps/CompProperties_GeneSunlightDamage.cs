@@ -89,7 +89,7 @@ namespace AnimeArsenal
 
         private void ProcessPawn(Pawn pawn, SunlightDamageExtension ext)
         {
-            int id = pawn.thingIDNumber; 
+            int id = pawn.thingIDNumber;
 
             if (HasSunlightCure(pawn))
             {
@@ -105,7 +105,7 @@ namespace AnimeArsenal
                         MoteMaker.ThrowText(pawn.DrawPos, map, "Sun immunity active", 2f);
                     }
                 }
-                return; 
+                return;
             }
 
             bool exposed = IsExposed(pawn, ext);

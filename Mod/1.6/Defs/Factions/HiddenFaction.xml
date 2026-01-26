@@ -27,6 +27,12 @@
       <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
     </disallowedMemes>
     <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <royalTitleTags>
+      <li>DemonTitle</li>
+    </royalTitleTags>
+    <royalFavorLabel>demon favor</royalFavorLabel>
+    <leaderTitle>Wip</leaderTitle>
+    <leaderTitleFemale>Wip</leaderTitleFemale>
 
     <raidLootMaker>AA_DemonRaidLootMaker</raidLootMaker>
     <raidLootValueFromPointsCurve>
@@ -113,7 +119,6 @@
     <canStageAttacks>false</canStageAttacks>
     <canUseAvoidGrid>true</canUseAvoidGrid>
 
-
     <disallowedRaidStrategies>
       <li>Siege</li>
       <li>ImmediateAttackSmart</li>
@@ -121,11 +126,9 @@
       <li>StageThenAttack</li>
     </disallowedRaidStrategies>
 
-
     <arrivalModeWhitelist>
       <li>EdgeWalkIn</li>
     </arrivalModeWhitelist>
-
 
     <raidCommonalityFromPointsCurve>
       <points>

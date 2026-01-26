@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>AA_DemonHuntAndConsume</defName>
+    <driverClass>AnimeArsenal.JobDriver_DemonHuntAndConsume</driverClass>
+    <reportString>hunting prey.</reportString>
+    <collideWithPawns>true</collideWithPawns>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <neverShowWeapon>false</neverShowWeapon>
+  </JobDef>
+
+</Defs>

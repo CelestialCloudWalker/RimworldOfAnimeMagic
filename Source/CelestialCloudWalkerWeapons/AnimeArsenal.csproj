@@ -76,16 +76,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbilityLevelData.cs" />
+    <Compile Include="AbilityUnlock.cs" />
     <Compile Include="BreathingPotentialGene.cs" />
     <Compile Include="BreathingPotentialGeneDef.cs" />
     <Compile Include="Building_TrainingItem.cs" />
+    <Compile Include="CompAbilityEffect_GeneDamage.cs" />
     <Compile Include="CompAbilityEffect_StatScaledDamage.cs" />
     <Compile Include="CompAbilityStealBite.cs" />
     <Compile Include="CompProperties_AbilityGasSpray.cs" />
+    <Compile Include="CompProperties_DashVitalStrike.cs" />
     <Compile Include="CompProperties_UseEffect_StartQuest.cs" />
     <Compile Include="CompUseEffect_BlueSpiderLily.cs" />
     <Compile Include="DamageScalingUtility.cs" />
+    <Compile Include="DemonProgressionExtension.cs" />
+    <Compile Include="DemonRank.cs" />
+    <Compile Include="DemonSanityExtension.cs" />
     <Compile Include="DemonSlayerNames.cs" />
+    <Compile Include="DemonStateTransfer.cs" />
+    <Compile Include="Dialog_DemonSpecialization.cs" />
     <Compile Include="ForceXenotypeExtension.cs" />
     <Compile Include="GeneEffect.cs" />
     <Compile Include="GeneEffectDef.cs" />
@@ -94,6 +102,7 @@
     <Compile Include="IncidentWorker_RaidNightOnly.cs" />
     <Compile Include="IngestionOutcomeDoer_BlueSpiderLily.cs" />
     <Compile Include="JobDriver_UseTrainingItem.cs" />
+    <Compile Include="MentalState_DemonCannibalism.cs" />
     <Compile Include="Misc\AMConstants.cs" />
     <Compile Include="AnimeArsenalUtility.cs" />
     <Compile Include="Misc\AssetBundleShaderManager.cs" />
@@ -183,6 +192,7 @@
     <Compile Include="Misc\Ticker.cs" />
     <Compile Include="Misc\TrackedMotePos.cs" />
     <Compile Include="Misc\Verb_ExtendedMeleeAttack.cs" />
+    <Compile Include="StatPart_DemonSanityDamage.cs" />
     <Compile Include="TalentedLevelingAbilityDef.cs" />
     <Compile Include="TrainingComp.cs" />
     <Compile Include="TrainingItemExtension.cs" />

@@ -6,30 +6,81 @@
 		</tags>
 		<awardThought>GainedTitle</awardThought>
 		<lostThought>LostTitle</lostThought>
+		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
+		<canBeInherited>True</canBeInherited>
+	</RoyalTitleDef>
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_WeakDemon</defName>
+		<label>weak demon</label>
+		<description>A freshly transformed demon, barely holding onto their sanity. They possess only the most basic demonic abilities and are still adjusting to their new existence. Most weak demons are quickly consumed or culled.</description>
+		<seniority></seniority>
+		<favorCost>0</favorCost>
+		<changeHeirQuestPoints>800</changeHeirQuestPoints>
+		<commonality>1</commonality>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="BaseDemonTitle">
 		<defName>AA_Demon</defName>
-		<label>Demon</label>
-		<description>Demon Title Test.</description>
+		<label>demon</label>
+		<labelFemale>demoness</labelFemale>
+		<description>A newly turned demon with minimal power in the demon hierarchy. They must prove themselves to climb the ranks.</description>
 		<seniority>0</seniority>
 		<favorCost>1</favorCost>
 		<changeHeirQuestPoints>1000</changeHeirQuestPoints>
-		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
+		<commonality>1</commonality>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="BaseDemonTitle">
-		<defName>AA_LowerMoon</defName>
-		<label>Lower Moon</label>
-		<description>Lower Moon.</description>
-		<seniority>400</seniority>
-		<favorCost>10</favorCost>
-		<changeHeirQuestPoints>2200</changeHeirQuestPoints>
-		<recruitmentResistanceOffset>40</recruitmentResistanceOffset>
+		<defName>AA_LowerMoonSix</defName>
+		<label>lower moon six</label>
+		<description>The sixth and weakest ranked demon of the Lower Moons. Despite being at the bottom of the Twelve Kizuki, this is still a position of significant power.</description>
+		<seniority>100</seniority>
+		<favorCost>6</favorCost>
+		<changeHeirQuestPoints>1400</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>20</recruitmentResistanceOffset>
 		<commonality>1</commonality>
-		<canBeInherited>True</canBeInherited>
 		<decreeMtbDays>-1</decreeMtbDays>
-		<decreeMentalBreakCommonality>4</decreeMentalBreakCommonality>
+		<decreeMentalBreakCommonality>2</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+		</permits>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_LowerMoonFive</defName>
+		<label>lower moon five</label>
+		<description>The fifth ranked demon of the Lower Moons. Growing in power and influence.</description>
+		<seniority>150</seniority>
+		<favorCost>7</favorCost>
+		<changeHeirQuestPoints>1600</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>25</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>2</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+		</permits>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_LowerMoonFour</defName>
+		<label>lower moon four</label>
+		<description>The fourth ranked demon of the Lower Moons. A formidable opponent for most demon slayers.</description>
+		<seniority>200</seniority>
+		<favorCost>8</favorCost>
+		<changeHeirQuestPoints>1800</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>30</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>3</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
 		<decreeTags>
 			<li>All</li>
@@ -41,15 +92,153 @@
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="BaseDemonTitle">
-		<defName>AA_UpperMoon</defName>
-		<label>Upper Moon</label>
-		<description>Upper Moon.</description>
+		<defName>AA_LowerMoonThree</defName>
+		<label>lower moon three</label>
+		<description>The third ranked demon of the Lower Moons. Their blood art has become truly deadly.</description>
+		<seniority>250</seniority>
+		<favorCost>9</favorCost>
+		<changeHeirQuestPoints>2000</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>35</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>3</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+		</permits>
+		<requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_LowerMoonTwo</defName>
+		<label>lower moon two</label>
+		<description>The second ranked demon of the Lower Moons. Only one Lower Moon stands above them.</description>
+		<seniority>300</seniority>
+		<favorCost>10</favorCost>
+		<changeHeirQuestPoints>2100</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>38</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>3</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+		</permits>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_LowerMoon</defName>
+		<label>lower moon one</label>
+		<description>The highest ranked demon of the Lower Moons. The strongest of the lower ranks, standing at the threshold of true power.</description>
+		<seniority>400</seniority>
+		<favorCost>12</favorCost>
+		<changeHeirQuestPoints>2200</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>40</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>4</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+		</permits>
+		<requiredMinimumApparelQuality>Good</requiredMinimumApparelQuality>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_UpperMoonSix</defName>
+		<label>upper moon six</label>
+		<description>The sixth ranked demon of the Upper Moons. A being of tremendous power, far beyond the Lower Moons. The gap between Lower and Upper Moons is vast.</description>
 		<seniority>500</seniority>
 		<favorCost>14</favorCost>
-		<changeHeirQuestPoints>2800</changeHeirQuestPoints>
+		<changeHeirQuestPoints>2400</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>50</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>5</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+			<li>AA_TradeOrbital</li>
+		</permits>
+		<requiredMinimumApparelQuality>Good</requiredMinimumApparelQuality>
+		<disabledWorkTags>Cleaning</disabledWorkTags>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_UpperMoonFive</defName>
+		<label>upper moon five</label>
+		<description>The fifth ranked demon of the Upper Moons. Their blood art has been perfected through centuries of refinement.</description>
+		<seniority>550</seniority>
+		<favorCost>15</favorCost>
+		<changeHeirQuestPoints>2500</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>55</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>6</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+			<li>AA_TradeOrbital</li>
+		</permits>
+		<disabledWorkTags>Cleaning</disabledWorkTags>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_UpperMoonFour</defName>
+		<label>upper moon four</label>
+		<description>The fourth ranked demon of the Upper Moons. An ancient terror that has survived countless encounters with demon slayers.</description>
+		<seniority>600</seniority>
+		<favorCost>16</favorCost>
+		<changeHeirQuestPoints>2600</changeHeirQuestPoints>
 		<recruitmentResistanceOffset>60</recruitmentResistanceOffset>
 		<commonality>1</commonality>
-		<canBeInherited>True</canBeInherited>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>7</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+			<li>AA_TradeOrbital</li>
+		</permits>
+		<requiredMinimumApparelQuality>Excellent</requiredMinimumApparelQuality>
+		<disabledWorkTags>
+			<li>Cleaning</li>
+			<li>Hauling</li>
+		</disabledWorkTags>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_UpperMoonThree</defName>
+		<label>upper moon three</label>
+		<description>The third ranked demon of the Upper Moons. A warrior of exceptional skill and power, constantly seeking stronger opponents.</description>
+		<seniority>650</seniority>
+		<favorCost>17</favorCost>
+		<changeHeirQuestPoints>2700</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>65</recruitmentResistanceOffset>
+		<commonality>1</commonality>
 		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
@@ -61,18 +250,49 @@
 			<li>AA_TradeCaravan</li>
 			<li>AA_TradeOrbital</li>
 		</permits>
+		<disabledWorkTags>
+			<li>Cleaning</li>
+			<li>Hauling</li>
+		</disabledWorkTags>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="BaseDemonTitle">
-		<defName>AA_DemonKing</defName>
-		<label>Demon King</label>
-		<description>Demon King.</description>
-		<seniority>600</seniority>
+		<defName>AA_UpperMoonTwo</defName>
+		<label>upper moon two</label>
+		<description>The second ranked demon of the Upper Moons. Nearly unstoppable, their power is matched only by Upper Moon One. They command fear and respect from all demons.</description>
+		<seniority>700</seniority>
+		<favorCost>18</favorCost>
+		<changeHeirQuestPoints>2900</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>70</recruitmentResistanceOffset>
+		<commonality>1</commonality>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>10</decreeMentalBreakCommonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+			<li>AA_TradeOrbital</li>
+		</permits>
+		<requiredMinimumApparelQuality>Masterwork</requiredMinimumApparelQuality>
+		<disabledWorkTags>
+			<li>Cleaning</li>
+			<li>Hauling</li>
+			<li>PlantWork</li>
+		</disabledWorkTags>
+	</RoyalTitleDef>
+
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_UpperMoon</defName>
+		<label>upper moon one</label>
+		<description>The most powerful demon in the Twelve Kizuki, second only to the Demon King himself. This title commands absolute fear and respect. Upper Moon One is the pinnacle of demon kind.</description>
+		<seniority>800</seniority>
 		<favorCost>20</favorCost>
-		<changeHeirQuestPoints>3500</changeHeirQuestPoints>
+		<changeHeirQuestPoints>3200</changeHeirQuestPoints>
 		<recruitmentResistanceOffset>75</recruitmentResistanceOffset>
 		<commonality>1</commonality>
-		<canBeInherited>True</canBeInherited>
 		<decreeMtbDays>-1</decreeMtbDays>
 		<decreeMentalBreakCommonality>12</decreeMentalBreakCommonality>
 		<permitPointsAwarded>1</permitPointsAwarded>
@@ -84,7 +304,43 @@
 			<li>AA_TradeCaravan</li>
 			<li>AA_TradeOrbital</li>
 		</permits>
+		<requiredMinimumApparelQuality>Legendary</requiredMinimumApparelQuality>
+		<disabledWorkTags>
+			<li>Cleaning</li>
+			<li>Hauling</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+		</disabledWorkTags>
 	</RoyalTitleDef>
 
-
+	<RoyalTitleDef ParentName="BaseDemonTitle">
+		<defName>AA_DemonKing</defName>
+		<label>demon king</label>
+		<labelFemale>demon queen</labelFemale>
+		<description>The progenitor and absolute ruler of all demons. The source of all demonic power. All demons exist by their grace and can be destroyed by their will alone.</description>
+		<seniority>900</seniority>
+		<favorCost>25</favorCost>
+		<changeHeirQuestPoints>3500</changeHeirQuestPoints>
+		<recruitmentResistanceOffset>90</recruitmentResistanceOffset>
+		<commonality>0.1</commonality>
+		<decreeMtbDays>-1</decreeMtbDays>
+		<decreeMentalBreakCommonality>15</decreeMentalBreakCommonality>
+		<permitPointsAwarded>2</permitPointsAwarded>
+		<decreeTags>
+			<li>All</li>
+		</decreeTags>
+		<permits>
+			<li>AA_TradeSettlement</li>
+			<li>AA_TradeCaravan</li>
+			<li>AA_TradeOrbital</li>
+		</permits>
+		<requiredMinimumApparelQuality>Legendary</requiredMinimumApparelQuality>
+		<disabledWorkTags>
+			<li>Cleaning</li>
+			<li>Hauling</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+			<li>Cooking</li>
+		</disabledWorkTags>
+	</RoyalTitleDef>
 </Defs>

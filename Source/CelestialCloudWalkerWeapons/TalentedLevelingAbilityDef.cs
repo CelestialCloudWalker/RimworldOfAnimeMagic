@@ -66,6 +66,21 @@ namespace AnimeArsenal
             }
         }
 
+        public T GetModExtension<T>() where T : DefModExtension
+        {
+            var levelData = TalentedLevelingDef.GetLevelData(currentLevel);
+            if (levelData?.levelModExtensions != null)
+            {
+                foreach (var ext in levelData.levelModExtensions)
+                {
+                    if (ext is T result)
+                        return result;
+                }
+            }
+
+            return def.GetModExtension<T>();
+        }
+
         private void FindTalentGene()
         {
             if (pawn?.genes?.GenesListForReading == null) return;

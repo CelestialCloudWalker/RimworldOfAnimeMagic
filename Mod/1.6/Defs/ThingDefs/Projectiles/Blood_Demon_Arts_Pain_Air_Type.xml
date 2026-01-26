@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_Air_Type_Projectile</defName>
+    <label>Air Type</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Blast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlowDistorted</shaderType>
+      <drawSize>2</drawSize>
+      <shaderParameters>
+        <_Color>(1, 1, 1, 1)</_Color>
+        <_DistortionTex>/Other/Ripples</_DistortionTex>
+        <_distortionIntensity>0.1</_distortionIntensity>
+        <_DistortionScale>0.4</_DistortionScale>
+        <_distortionScrollSpeed>(0.2, 0.2, 0.0)</_distortionScrollSpeed>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <ExplosionRadius>2</ExplosionRadius>
+      <stoppingPower>1</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>25</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>7</aoeDamage>
+      <scaleStat>ShootingAccuracyPawn</scaleStat>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_Air_Type_Projectile_LevelTwo</defName>
+    <label>Air Type</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Blast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.6</drawSize>
+      <shaderParameters>
+        <_Color>(224, 255, 255, 255)</_Color>
+        <_brightnessMultiplier>1.1</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+      <ExplosionRadius>2.2</ExplosionRadius>
+      <stoppingPower>1.1</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>27</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>8</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(224, 255, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.23</MoteInterval>
+        <MoteDuration>32</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_Air_Type_Projectile_LevelThree</defName>
+    <label>Air Type</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.8</drawSize>
+      <shaderParameters>
+        <_Color>(220, 40, 40, 255)</_Color>
+        <_brightnessMultiplier>1.2</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.4</armorPenetrationBase>
+      <ExplosionRadius>2.5</ExplosionRadius>
+      <stoppingPower>1.2</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>30</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>10</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(220, 40, 40, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.2</MoteInterval>
+        <MoteDuration>35</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_Air_Type_Projectile_LevelFour</defName>
+    <label>Air Type</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.0</drawSize>
+      <shaderParameters>
+        <_Color>(240, 30, 30, 255)</_Color>
+        <_brightnessMultiplier>1.4</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <ExplosionRadius>3</ExplosionRadius>
+      <stoppingPower>2</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>35</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>13</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>22</glowRadius>
+        <glowColor>(240, 30, 30, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.15</MoteInterval>
+        <MoteDuration>40</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_Air_Type_Projectile_Advanced</defName>
+    <label>Air Type</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.3</drawSize>
+      <shaderParameters>
+        <_Color>(250, 25, 25, 255)</_Color>
+        <_brightnessMultiplier>1.5</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.6</armorPenetrationBase>
+      <ExplosionRadius>1</ExplosionRadius>
+      <stoppingPower>1.8</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>38</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>16</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>24</glowRadius>
+        <glowColor>(250, 25, 25, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.12</MoteInterval>
+        <MoteDuration>45</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_Air_Type_Projectile_Master</defName>
+    <label>Air Type</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(255, 20, 20, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.7</armorPenetrationBase>
+      <ExplosionRadius>4</ExplosionRadius>
+      <stoppingPower>2</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>40</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>20</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>25</glowRadius>
+        <glowColor>(255, 20, 20, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.1</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

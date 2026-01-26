@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MentalStateDef>
+    <defName>AA_DemonCannibalism</defName>
+    <label>demon hunger</label>
+    <stateClass>AnimeArsenal.MentalState_DemonCannibalism</stateClass>
+    <workerClass>AnimeArsenal.MentalStateWorker_DemonCannibalism</workerClass>
+    <nameColor>(0.9, 0.1, 0.1)</nameColor>
+    <beginLetter>The demonic hunger has overwhelmed {0}. {1} is now hunting for human prey to consume.</beginLetter>
+    <beginLetterLabel>Demon Hunger</beginLetterLabel>
+    <recoveryMessage>{0} has sated {1} hunger and regained control.</recoveryMessage>
+    <baseInspectLine>Mental state: Demon hunger</baseInspectLine>
+    <category>Aggro</category>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <blockRandomInteraction>true</blockRandomInteraction>
+    <minTicksBeforeRecovery>5000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>30000</maxTicksBeforeRecovery>
+    <allowBeatfire>false</allowBeatfire>
+  </MentalStateDef>
+
+</Defs>
