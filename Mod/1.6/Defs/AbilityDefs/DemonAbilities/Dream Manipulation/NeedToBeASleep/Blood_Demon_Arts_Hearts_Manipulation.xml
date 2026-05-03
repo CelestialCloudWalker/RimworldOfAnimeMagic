@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Hearts_Manipulation</defName>
+    <label>Blood Demon Arts: Heart's Manipulation</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Manipulate a sleeping target's emotional state through their dreams, making them more compliant or hostile.</description>
+    <iconPath>UI/Abilities/DemonSleepAbility1</iconPath>
+    <displayOrder>215</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>4</range>
+      <warmupTime>2.5</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>MoodManipulation</dreamEffectType>
+        <effectSeverity>0.3</effectSeverity>
+        <moodChange>8</moodChange>
+        <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+        <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Manipulates sleeping target's mood by ±8. Applies DreamMoodPositive (+15, 5d) or DreamMoodNegative (-12, 5d). Range 4.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <resourceCostMultiplier>1.10</resourceCostMultiplier>
+        <description>Mood manipulation ±10. Range 5.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>0.4</effectSeverity>
+            <moodChange>10</moodChange>
+            <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>110</experienceRequired>
+        <resourceCostMultiplier>1.20</resourceCostMultiplier>
+        <description>Mood manipulation ±12. Range 6.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>0.48</effectSeverity>
+            <moodChange>12</moodChange>
+            <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <description>Upgraded thoughts unlock. DreamMoodPositive_L4 (+20 mood, 6d) or DreamMoodNegative_L4 (-18, 6d). Range 6.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>0.56</effectSeverity>
+            <moodChange>16</moodChange>
+            <positiveMoodThought>DreamMoodPositive_L4</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative_L4</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <resourceCostMultiplier>1.45</resourceCostMultiplier>
+        <description>Mood manipulation ±18 magnitude. Range 7. Upgraded thoughts.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>0.63</effectSeverity>
+            <moodChange>18</moodChange>
+            <positiveMoodThought>DreamMoodPositive_L4</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative_L4</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>480</experienceRequired>
+        <resourceCostMultiplier>1.60</resourceCostMultiplier>
+        <description>Perfected. Full heart manipulation. ±20 mood magnitude. effectSeverity 0.70. Range 8. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MoodManipulation</dreamEffectType>
+            <effectSeverity>0.70</effectSeverity>
+            <moodChange>20</moodChange>
+            <positiveMoodThought>DreamMoodPositive_L4</positiveMoodThought>
+            <negativeMoodThought>DreamMoodNegative_L4</negativeMoodThought>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

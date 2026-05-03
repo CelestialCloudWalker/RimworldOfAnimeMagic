@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>WindBreathing_Form2_ClawsPurifyingWind</defName>
+    <label>Second Form: Claws-Purifying Wind</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>Four consecutive slashes erupt in an AoE directly in front of the user. Where the blade lands, enemies are cut; where the wind follows, a wide rect of slashes extends far beyond—and hits harder, for this form is built to reach.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>110</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>35</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Cleave">
+        <NumberOfCuts>4</NumberOfCuts>
+        <BaseDamage>14</BaseDamage>
+        <TicksBetweenCuts>8</TicksBetweenCuts>
+        <DamageDef>Cut</DamageDef>
+        <radius>2.5</radius>
+        <maxTargets>6</maxTargets>
+        <CleaveDamageEffecter>AnimeArsenal_WindHit</CleaveDamageEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>5</rectWidth>
+        <rectLength>7</rectLength>
+        <damageAmount>17</damageAmount>
+        <damageType>Cut</damageType>
+        <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Four cuts erupt ahead. Wind extends the reach further and harder.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>Faster consecutive slashes. The wind reach widens slightly.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>4</NumberOfCuts>
+            <BaseDamage>16</BaseDamage>
+            <TicksBetweenCuts>7</TicksBetweenCuts>
+            <DamageDef>Cut</DamageDef>
+            <radius>2.5</radius>
+            <maxTargets>6</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_WindHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>6</rectWidth>
+            <rectLength>7</rectLength>
+            <damageAmount>20</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>Each claw lands with crushing force. Wind reach deepens.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>4</NumberOfCuts>
+            <BaseDamage>19</BaseDamage>
+            <TicksBetweenCuts>7</TicksBetweenCuts>
+            <DamageDef>Cut</DamageDef>
+            <radius>3.0</radius>
+            <maxTargets>6</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_WindHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>6</rectWidth>
+            <rectLength>8</rectLength>
+            <damageAmount>23</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>Four become eight in perception. Cost slightly reduced.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>4</NumberOfCuts>
+            <BaseDamage>22</BaseDamage>
+            <TicksBetweenCuts>6</TicksBetweenCuts>
+            <DamageDef>Cut</DamageDef>
+            <radius>3.0</radius>
+            <maxTargets>8</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_WindHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>7</rectWidth>
+            <rectLength>9</rectLength>
+            <damageAmount>27</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>The claws leave lasting gashes; the wind reaches far past what the eye can follow.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>4</NumberOfCuts>
+            <BaseDamage>26</BaseDamage>
+            <TicksBetweenCuts>6</TicksBetweenCuts>
+            <DamageDef>Cut</DamageDef>
+            <radius>3.5</radius>
+            <maxTargets>8</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_WindHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>7</rectWidth>
+            <rectLength>10</rectLength>
+            <damageAmount>31</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Perfected. Blade and gust are indistinguishable. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>4</NumberOfCuts>
+            <BaseDamage>30</BaseDamage>
+            <TicksBetweenCuts>5</TicksBetweenCuts>
+            <DamageDef>Cut</DamageDef>
+            <radius>3.5</radius>
+            <maxTargets>8</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_WindHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>8</rectWidth>
+            <rectLength>10</rectLength>
+            <damageAmount>36</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

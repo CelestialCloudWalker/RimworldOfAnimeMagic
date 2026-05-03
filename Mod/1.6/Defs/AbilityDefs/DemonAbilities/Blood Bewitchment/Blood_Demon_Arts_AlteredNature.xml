@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Daki_AlteredNature</defName>
+    <label>Altered Nature</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Override the minds of those nearby, stripping their civilized nature and forcing them into a feral predatory state. Skilled labor becomes impossible. Only instinct remains.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>10000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>DS_AlteredNature_L1</hediffDef>
+        <severityAdjustment>1.0</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+        <effectRadius>8</effectRadius>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>AoE r8. ThinkTree override (predatory). Work disabled. 3600t duration.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.920</cooldownMultiplier>
+        <resourceCostMultiplier>1.044</resourceCostMultiplier>
+        <description>AoE r9. Duration 4100t.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_AlteredNature_L2</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <cooldownMultiplier>0.840</cooldownMultiplier>
+        <resourceCostMultiplier>1.111</resourceCostMultiplier>
+        <description>AoE r10. Duration 4600t.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_AlteredNature_L3</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <cooldownMultiplier>0.760</cooldownMultiplier>
+        <resourceCostMultiplier>1.200</resourceCostMultiplier>
+        <description>AoE r10. Duration 4600t. Adds -20% Consciousness.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_AlteredNature_L4</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>620</experienceRequired>
+        <cooldownMultiplier>0.680</cooldownMultiplier>
+        <resourceCostMultiplier>1.289</resourceCostMultiplier>
+        <description>AoE r10. Duration 4600t. -20% Consciousness. Permanent work-disable flavor.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_AlteredNature_L5</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <cooldownMultiplier>0.600</cooldownMultiplier>
+        <resourceCostMultiplier>1.400</resourceCostMultiplier>
+        <description>Perfected. AoE r10. Duration 4600t. MeleeDamage +20%, Consciousness -20%. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_AlteredNature_L6</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+
+</Defs>

@@ -5,7 +5,7 @@ using System;
 
 namespace AnimeArsenal
 {
-    public class CompProperties_AbilityDamage : AbilityCompProperties
+    public class CompProperties_AbilityDamage : CompProperties_AbilityEffect
     {
         public int damageAmount = 15;
         public string damageDef = "Cut";
@@ -14,6 +14,8 @@ namespace AnimeArsenal
         public bool applyToTarget = true;
         public float meleeSkillFactor = 0.0f;
         public float radius = 0f;
+        public EffecterDef casterEffecter;
+        public EffecterDef impactEffecter;
 
         public CompProperties_AbilityDamage()
         {
@@ -23,79 +25,81 @@ namespace AnimeArsenal
 
     public class CompAbilityEffect_Damage : CompAbilityEffect
     {
-        public new CompProperties_AbilityDamage Props => (CompProperties_AbilityDamage)props;
-
-        private DamageDef cachedDamageDef = null;
+        public new CompProperties_AbilityDamage Props => props as CompProperties_AbilityDamage;
 
         private DamageDef GetDamageDef()
         {
-            if (cachedDamageDef == null)
-            {
-                cachedDamageDef = DefDatabase<DamageDef>.GetNamedSilentFail(Props.damageDef) ?? DamageDefOf.Cut;
-            }
-            return cachedDamageDef;
+            return DefDatabase<DamageDef>.GetNamedSilentFail(Props?.damageDef) ?? DamageDefOf.Cut;
         }
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
 
-            if (!target.HasThing) return;
+            if (Props == null || !target.HasThing) return;
 
-            var targetThing = target.Thing;
-            var map = targetThing.Map;
+            Pawn instigator = parent?.pawn;
+            if (instigator == null) return;
 
-            var finalDamage = Props.damageAmount;
-            if (Props.meleeSkillFactor > 0)
+            Thing targetThing = target.Thing;
+            Map map = targetThing.Map;
+            if (map == null) return; 
+
+            if (Props.casterEffecter != null)
             {
-                var meleeSkill = parent.pawn.skills.GetSkill(SkillDefOf.Melee).Level;
+                Effecter e = Props.casterEffecter.Spawn();
+                e.Trigger(new TargetInfo(instigator.Position, map), new TargetInfo(instigator.Position, map));
+                e.Cleanup();
+            }
+
+            int finalDamage = Props.damageAmount;
+            if (Props.meleeSkillFactor > 0f && instigator.skills != null)
+            {
+                int meleeSkill = instigator.skills.GetSkill(SkillDefOf.Melee).Level;
                 finalDamage += (int)(meleeSkill * Props.meleeSkillFactor);
             }
 
             if (Props.radius > 0f)
-            {
-                ApplyAreaDamage(targetThing.Position, map, finalDamage);
-            }
+                ApplyAreaDamage(targetThing.Position, map, finalDamage, instigator);
             else if (Props.applyToTarget)
-            {
-                ApplyDamage(targetThing, finalDamage);
-            }
+                ApplyDamage(targetThing, finalDamage, instigator);
 
-            FleckMaker.Static(targetThing.Position, map, FleckDefOf.ExplosionFlash, 12f);
-            FleckMaker.ThrowMicroSparks(targetThing.DrawPos, map);
+            if (Props.impactEffecter != null)
+            {
+                Effecter e = Props.impactEffecter.Spawn();
+                e.Trigger(new TargetInfo(targetThing.Position, map), new TargetInfo(targetThing.Position, map));
+                e.Cleanup();
+            }
+            else
+            {
+                FleckMaker.Static(targetThing.Position, map, FleckDefOf.ExplosionFlash, 12f);
+                FleckMaker.ThrowMicroSparks(targetThing.DrawPos, map);
+            }
         }
 
-        private void ApplyDamage(Thing target, int amount)
+        private void ApplyDamage(Thing target, int amount, Pawn instigator)
         {
             var dinfo = new DamageInfo(
-                GetDamageDef(),
-                amount,
-                Props.armorPenetration,
-                -1f,
-                parent.pawn,
-                null,
-                null,
-                DamageInfo.SourceCategory.ThingOrUnknown,
-                target
-            );
-
+                GetDamageDef(), amount, Props.armorPenetration, -1f, instigator,
+                null, null, DamageInfo.SourceCategory.ThingOrUnknown, target);
             target.TakeDamage(dinfo);
 
             if (Props.stunTicks > 0 && target is Pawn targetPawn)
-            {
-                targetPawn.stances.stunner.StunFor(Props.stunTicks, parent.pawn);
-            }
+                targetPawn.stances.stunner.StunFor(Props.stunTicks, instigator);
         }
 
-        private void ApplyAreaDamage(IntVec3 center, Map map, int amount)
+        private void ApplyAreaDamage(IntVec3 center, Map map, int amount, Pawn instigator)
         {
             foreach (var thing in GenRadial.RadialDistinctThingsAround(center, map, Props.radius, true))
             {
-                if (thing != parent.pawn)
-                {
-                    ApplyDamage(thing, amount);
-                }
+                if (thing != instigator)
+                    ApplyDamage(thing, amount, instigator);
             }
+        }
+
+        public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
+        {
+            return Props != null && target.HasThing && parent?.pawn != null;
         }
     }
 }

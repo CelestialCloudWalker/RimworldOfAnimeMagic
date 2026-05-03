@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Beast_Breathing_FifthFang_CrazyCutting</defName>
+    <label>Beast Breathing: Fifth Fang — Crazy Cutting</label>
+    <description>The user throws themselves into the air and slices wildly in every direction at once — blades spinning, arcing, carving through anything nearby. There is no target, no angle, no safe distance. Everything within reach gets cut.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>580</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>440</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>35</resourceCost>
+    <baseExperienceGain>22</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <warmupTime>0.4</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <radius>4.5</radius>
+        <damage>14</damage>
+        <damageDef>Beast_Breathing_Damage</damageDef>
+        <armorPen>0.18</armorPen>
+        <repeatCount>4</repeatCount>
+        <damageInterval>8</damageInterval>
+        <maxTargets>12</maxTargets>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>4 pulses of 14 damage in a 4.5-tile radius (56 total per target). Hits all hostiles in range. A chaotic burst of slashing in every direction.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>4 pulses of 18 damage in a 5.0-tile radius (72 total). Cuts land harder and reach farther.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>5.0</radius>
+            <damage>18</damage>
+            <damageDef>Beast_Breathing_Damage</damageDef>
+            <armorPen>0.22</armorPen>
+            <repeatCount>4</repeatCount>
+            <damageInterval>7</damageInterval>
+            <maxTargets>12</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>390</experienceRequired>
+        <resourceCostMultiplier>1.28</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>5 pulses of 22 damage in a 5.5-tile radius (110 total). An extra slash arc unlocks — the spinning intensifies.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>5.5</radius>
+            <damage>22</damage>
+            <damageDef>Beast_Breathing_Damage</damageDef>
+            <armorPen>0.27</armorPen>
+            <repeatCount>5</repeatCount>
+            <damageInterval>7</damageInterval>
+            <maxTargets>14</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>640</experienceRequired>
+        <resourceCostMultiplier>1.38</resourceCostMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>5 pulses of 27 damage in a 6.0-tile radius (135 total). Pulses fire faster. Crowds of enemies are shredded.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>6.0</radius>
+            <damage>27</damage>
+            <damageDef>Beast_Breathing_Damage</damageDef>
+            <armorPen>0.33</armorPen>
+            <repeatCount>5</repeatCount>
+            <damageInterval>6</damageInterval>
+            <maxTargets>16</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>940</experienceRequired>
+        <resourceCostMultiplier>1.48</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>6 pulses of 33 damage in a 6.5-tile radius (198 total). A sixth arc of cuts erupts outward. Anything nearby takes a full storm of blades.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>6.5</radius>
+            <damage>33</damage>
+            <damageDef>Beast_Breathing_Damage</damageDef>
+            <armorPen>0.40</armorPen>
+            <repeatCount>6</repeatCount>
+            <damageInterval>6</damageInterval>
+            <maxTargets>18</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1380</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 6 pulses of 40 damage in a 7.0-tile radius (240 total per target). Blades fill every direction without pause. Nothing in range survives the full sequence unscathed. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>7.0</radius>
+            <damage>40</damage>
+            <damageDef>Beast_Breathing_Damage</damageDef>
+            <armorPen>0.48</armorPen>
+            <repeatCount>6</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>20</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

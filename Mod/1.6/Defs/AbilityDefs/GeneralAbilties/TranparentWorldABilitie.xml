@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>TransparentWorldAbility</defName>
     <label>Transparent World</label>
     <description>Activate heightened perception to see through obstacles and enhance combat abilities.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1200</cooldownTicksRange>
     <targetRequired>false</targetRequired>
-    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>30</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -62,7 +62,7 @@
         </levelComps>
       </li>
       <li>
-        <labelSuffix> (LevelFour)</labelSuffix>
+        <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>750</experienceRequired>
         <description>Mastered perception grants near-omniscient battlefield awareness and supernatural combat abilities.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>
@@ -74,5 +74,5 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

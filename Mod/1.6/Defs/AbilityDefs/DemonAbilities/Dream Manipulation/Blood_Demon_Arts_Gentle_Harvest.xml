@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Gentle_Harvest</defName>
+    <label>Blood Demon Arts: Gentle Harvest</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enmu forces a target into sleep before diving into their memories. Extracting from an unwilling mind is harder and leaves less behind, but requires no preparation.</description>
+    <iconPath>UI/Abilities/DemonSleepAbility4</iconPath>
+    <displayOrder>212</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>26</resourceCost>
+    <baseExperienceGain>12</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3</range>
+      <warmupTime>4.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <useSleepHediff>false</useSleepHediff>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <sleepDurationHours>3</sleepDurationHours>
+        <maxTargets>1</maxTargets>
+        <range>3</range>
+        
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>MemoryExtraction</dreamEffectType>
+        <effectSeverity>0.15</effectSeverity>
+        <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Forces target asleep (3h) then extracts memories. MemoryConfusion applied. effectSeverity 0.15. Range 3.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>55</experienceRequired>
+        <resourceCostMultiplier>1.115</resourceCostMultiplier>
+        <description>effectSeverity 0.22. Range 4.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>4</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>0.22</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <resourceCostMultiplier>1.231</resourceCostMultiplier>
+        <description>effectSeverity 0.28. Range 4. MemoryConfusion.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>4</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>0.28</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <resourceCostMultiplier>1.385</resourceCostMultiplier>
+        <description>Upgraded to MemoryConfusion_L3. effectSeverity 0.35. Range 5.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>5</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>0.35</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion_L3</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.500</resourceCostMultiplier>
+        <description>effectSeverity 0.40. MemoryConfusion_L3. Range 5.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>5</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>0.40</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion_L3</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>520</experienceRequired>
+        <resourceCostMultiplier>1.654</resourceCostMultiplier>
+        <description>Perfected. Upgraded to MemoryConfusion_L5. effectSeverity 0.45. Range 6. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>6</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryExtraction</dreamEffectType>
+            <effectSeverity>0.45</effectSeverity>
+            <memoryExtractionHediff>MemoryConfusion_L5</memoryExtractionHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Flame_Breathing_First_Form_Unknowing_Fire</defName>
+    <label>First Form: Unknowing Fire</label>
+    <description>The user teleports to a chosen target and delivers a swift, decisive slash. At higher mastery, the blade ignites — the strike burns the target and the surrounding area erupts in flame.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <landingRadius>0</landingRadius>
+        <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+        <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+        <strikeDamage>22</strikeDamage>
+        <strikeDamageDef>Cut</strikeDamageDef>
+        <strikeRadius>0</strikeRadius>
+        <strikeEffecter>AnimeArsenal_Flamehit2</strikeEffecter>
+        <burstDamage>0</burstDamage>
+        <burstRadius>0</burstRadius>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Teleport to a target and deliver a swift single slash. Clean, precise, no flourish.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>The strike comes faster. The blade bites deeper.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>0</landingRadius>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <strikeDamage>28</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_Flamehit2</strikeEffecter>
+            <burstDamage>0</burstDamage>
+            <burstRadius>0</burstRadius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>The blade carries heat now. The struck target ignites.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>0</landingRadius>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <strikeDamage>32</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>0</strikeRadius>
+            <landingEffecterDef>AnimeArsenal_Flamehit2</landingEffecterDef>
+            <burstDamage>0</burstDamage>
+            <burstRadius>0</burstRadius>
+          </li>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>The slash erupts on impact — fire fans out from the strike point, scorching nearby enemies.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>0</landingRadius>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <strikeDamage>36</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>0</strikeRadius>
+            <landingEffecterDef>AnimeArsenal_Flamehit2</landingEffecterDef>
+            <burstDamage>16</burstDamage>
+            <burstDamageDef>Flame</burstDamageDef>
+            <burstRadius>4.5</burstRadius>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>8</burstInterval>
+          </li>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Hotter, wider. The fire spreads without mercy.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>0</landingRadius>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <strikeDamage>42</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>0</strikeRadius>
+            <landingEffecterDef>AnimeArsenal_Flamehit2</landingEffecterDef>
+            <burstDamage>22</burstDamage>
+            <burstDamageDef>Flame</burstDamageDef>
+            <burstRadius>5.5</burstRadius>
+            <burstRepeatCount>2</burstRepeatCount>
+            <burstInterval>8</burstInterval>
+          </li>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Perfected. The strike is instant, the flame is absolute. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>0</landingRadius>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <strikeDamage>50</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>0</strikeRadius>
+            <landingEffecterDef>AnimeArsenal_Flamehit2</landingEffecterDef>
+            <burstDamage>28</burstDamage>
+            <burstDamageDef>Flame</burstDamageDef>
+            <burstRadius>6.5</burstRadius>
+            <burstRepeatCount>2</burstRepeatCount>
+            <burstInterval>8</burstInterval>
+          </li>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

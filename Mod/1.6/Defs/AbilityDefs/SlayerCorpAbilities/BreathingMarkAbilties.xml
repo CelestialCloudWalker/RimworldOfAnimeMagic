@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>BreathingMarkAbilityTanjiro</defName>
     <label>Breathing Mark Tanjiro</label>
     <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
     <resourceCost>15</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -73,17 +73,17 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>BreathingMarkAbilitySanemi</defName>
     <label>Breathing Mark Sanemi</label>
     <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
     <resourceCost>15</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -148,17 +148,17 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>BreathingMarkAbilityMuichiro</defName>
     <label>Breathing Mark Muichiro</label>
     <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
     <resourceCost>15</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -223,17 +223,17 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>BreathingMarkAbility</defName>
     <label>Breathing Mark</label>
     <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
     <resourceCost>15</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -298,17 +298,17 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>BreathingMarkAbilityGiyu</defName>
     <label>Breathing Mark Giyu</label>
     <description>Activate the Breathing Mark to enhance combat and movement capabilities.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <targetRequired>false</targetRequired>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
     <resourceCost>15</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -373,5 +373,5 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

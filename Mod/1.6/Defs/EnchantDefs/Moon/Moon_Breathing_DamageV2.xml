@@ -1,75 +1,115 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Moon_Breathing_Damage</defName>
-    <label>moon burn</label>
+    <label>moon slash</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was scorched by flames.</deathMessage>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <makesBlood>true</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <deathMessage>{0} was unmade by crescent blades, cut apart across every plane at once.</deathMessage>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <defaultStoppingPower>0.5</defaultStoppingPower>
+    <stabChanceOfForcedInternal>0.18</stabChanceOfForcedInternal>
     <hediff>ReflectionOfMoon</hediff>
     <hediffSkin>ReflectionOfMoon</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
-    <armorCategory>Heat</armorCategory>
-    <impactSoundType>Blunt</impactSoundType>
-    <harmsHealth>true</harmsHealth>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Slice</impactSoundType>
+    <minDamageToFragment>12</minDamageToFragment>
+    <defaultDamage>14</defaultDamage>
+    <defaultArmorPenetration>0.30</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0.2</overkillPctToDestroyPart>
+    <additionalHediffs>
+      <li>
+        <hediff>BloodLoss</hediff>
+        <severityPerDamageDealt>0.014</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>0.6</buildingDamageFactor>
+    <plantDamageFactor>1.5</plantDamageFactor>
+    <corpseDamageFactor>1.6</corpseDamageFactor>
+    <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>ReflectionOfMoon</defName>
-    <label>moon burn</label>
-    <labelNoun>a moon burn</labelNoun>
-    <description>Flesh scorched by fire. Severe pain and risk of tissue death.</description>
+    <label>moon slash</label>
+    <labelNoun>a moon slash</labelNoun>
+    <description>A wound cut across multiple angles simultaneously by crescent blade arcs. The damage is deep and irregular — tissue torn in directions that resist closure.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
-        <labelTendedWellInner>tended</labelTendedWellInner>
-        <labelSolidTendedWell>tended</labelSolidTendedWell>
-        <severityPerDayTended>-0.75</severityPerDayTended>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+        <severityPerDayTended>-0.45</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
         <infectionChance>0.30</infectionChance>
       </li>
       <li Class="HediffCompProperties_GetsPermanent">
-        <permanentLabel>moon burn scar</permanentLabel>
+        <permanentLabel>moon slash scar</permanentLabel>
       </li>
     </comps>
     <stages>
       <li>
         <minSeverity>0.1</minSeverity>
-        <statOffsets>
-          <ComfyTemperatureMin>5</ComfyTemperatureMin>
-          <ComfyTemperatureMax>-3</ComfyTemperatureMax>
-        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.06</offset>
+          </li>
+        </capMods>
       </li>
       <li>
-        <minSeverity>0.3</minSeverity>
-        <statOffsets>
-          <ComfyTemperatureMin>12</ComfyTemperatureMin>
-          <ComfyTemperatureMax>-8</ComfyTemperatureMax>
-        </statOffsets>
+        <minSeverity>0.35</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.16</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.12</offset>
+          </li>
+        </capMods>
       </li>
       <li>
-        <minSeverity>0.5</minSeverity>
-        <statOffsets>
-          <ComfyTemperatureMin>20</ComfyTemperatureMin>
-          <ComfyTemperatureMax>-15</ComfyTemperatureMax>
-        </statOffsets>
-      </li>
-      <li>
-        <minSeverity>0.8</minSeverity>
-        <statOffsets>
-          <ComfyTemperatureMin>30</ComfyTemperatureMin>
-          <ComfyTemperatureMax>-25</ComfyTemperatureMax>
-        </statOffsets>
+        <minSeverity>0.65</minSeverity>
+        <painOffset>0.14</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.28</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.22</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.12</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <injuryProps>
-      <painPerSeverity>0.05</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.0075</averagePainPerSeverityPermanent>
-      <bleedRate>0</bleedRate>
+      <painPerSeverity>0.065</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.01</averagePainPerSeverityPermanent>
+      <bleedRate>0.10</bleedRate>
       <canMerge>false</canMerge>
-      <destroyedLabel>Burned off</destroyedLabel>
-      <destroyedOutLabel>Burned out</destroyedOutLabel>
+      <destroyedLabel>severed</destroyedLabel>
+      <destroyedOutLabel>cut apart</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

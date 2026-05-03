@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Akaza_ExplosiveFlurry</defName>
+    <label>Leg Type: Explosive Flurry</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>A rapid barrage of leg strikes that send the target careening in random directions with each hit.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2200</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>26</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3</range>
+      <warmupTime>0.4</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+        <baseDamage>7</baseDamage>
+        <damageDef>Blunt</damageDef>
+        <armorPen>0.1</armorPen>
+        <repeatAmount>3</repeatAmount>
+        <damageInterval>8</damageInterval>
+        <knockbackDistance>2</knockbackDistance>
+        <knockbackRandom>true</knockbackRandom>
+        <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+        <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>3 hits of 7 Blunt damage. Each hit knocks the target 2 cells in a random direction.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.914</cooldownMultiplier>
+        <resourceCostMultiplier>1.038</resourceCostMultiplier>
+        <description>3 hits of 9 Blunt damage. Knockback increased to 3 cells per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>9</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>3</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <knockbackDistance>3</knockbackDistance>
+            <knockbackRandom>true</knockbackRandom>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.827</cooldownMultiplier>
+        <resourceCostMultiplier>1.115</resourceCostMultiplier>
+        <description>4 hits of 10 Blunt damage. Knockback 3 cells per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>10</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>4</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <knockbackDistance>3</knockbackDistance>
+            <knockbackRandom>true</knockbackRandom>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.741</cooldownMultiplier>
+        <resourceCostMultiplier>1.192</resourceCostMultiplier>
+        <description>4 hits of 13 Blunt damage. Knockback 3 cells per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>13</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>4</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <knockbackDistance>3</knockbackDistance>
+            <knockbackRandom>true</knockbackRandom>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.655</cooldownMultiplier>
+        <resourceCostMultiplier>1.269</resourceCostMultiplier>
+        <description>5 hits of 15 Blunt damage. Knockback significantly increased to 5 cells per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>15</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <knockbackDistance>5</knockbackDistance>
+            <knockbackRandom>true</knockbackRandom>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.568</cooldownMultiplier>
+        <resourceCostMultiplier>1.385</resourceCostMultiplier>
+        <description>Perfected. 6 hits of 18 Blunt damage. Knockback 5 cells per hit. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>18</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>6</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <knockbackDistance>5</knockbackDistance>
+            <knockbackRandom>true</knockbackRandom>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

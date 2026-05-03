@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>InsectBreathing_DanceOfDragonfly_CompoundEyeHexagon</defName>
+    <label>Dance of the Dragonfly: Compound Eye Hexagon</label>
+    <description>Six rapid, precise thrusts — each one aimed at a vital point the target cannot protect fast enough to matter. The neck. The heart. The torso. The dragonfly sees every angle at once. The target does not survive six doses of wisteria poison delivered to where it counts most.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>720</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>440</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>40</resourceCost>
+    <baseExperienceGain>26</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>3</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <dashSpeed>2.2</dashSpeed>
+        <damageType>Insect_Breathing_Damage</damageType>
+        <initialStrikeDamage>12</initialStrikeDamage>
+        <initialStrikeArmorPen>0.22</initialStrikeArmorPen>
+        <targetVitalOrgans>true</targetVitalOrgans>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>Torso</li>
+        </targetBodyParts>
+        <vitalOrganDamage>18</vitalOrganDamage>
+        <vitalOrganArmorPen>0.28</vitalOrganArmorPen>
+        <vitalOrganDamageType>Insect_Breathing_Damage</vitalOrganDamageType>
+        <vitalStrikeBaseChance>0.82</vitalStrikeBaseChance>
+        <vitalStrikeMinChance>0.55</vitalStrikeMinChance>
+        <vitalStrikeMaxChance>0.94</vitalStrikeMaxChance>
+        <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+        <showMissMessage>true</showMissMessage>
+        <missMessage>{INSTIGATOR}'s thrust glanced off — the weak point was guarded.</missMessage>
+        <castEffecter>AnimeArsenal_InsectHit</castEffecter>
+        <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>WisteriaToxin_Hediff</hediffDef>
+        <severityAdjustment>0.35</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>12 initial damage. 18 to neck/torso with 82% accuracy. Injects WisteriaToxin (0.35 severity). Six thrusts, six chances to poison.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>210</experienceRequired>
+        <resourceCostMultiplier>1.14</resourceCostMultiplier>
+        <cooldownMultiplier>0.95</cooldownMultiplier>
+        <description>15 initial damage. 23 to vital spots. Accuracy tightens. Poison 0.44 severity.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.2</dashSpeed>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <initialStrikeDamage>15</initialStrikeDamage>
+            <initialStrikeArmorPen>0.25</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Torso</li>
+            </targetBodyParts>
+            <vitalOrganDamage>23</vitalOrganDamage>
+            <vitalOrganArmorPen>0.32</vitalOrganArmorPen>
+            <vitalOrganDamageType>Insect_Breathing_Damage</vitalOrganDamageType>
+            <vitalStrikeBaseChance>0.84</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.57</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.95</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <missMessage>{INSTIGATOR}'s thrust glanced off — the weak point was guarded.</missMessage>
+            <castEffecter>AnimeArsenal_InsectHit</castEffecter>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.44</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>460</experienceRequired>
+        <resourceCostMultiplier>1.26</resourceCostMultiplier>
+        <cooldownMultiplier>0.90</cooldownMultiplier>
+        <description>19 initial damage. 28 to vital spots. Armor gives way. Poison 0.54 severity — a single cast may be lethal.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.3</dashSpeed>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <initialStrikeDamage>19</initialStrikeDamage>
+            <initialStrikeArmorPen>0.28</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Torso</li>
+            </targetBodyParts>
+            <vitalOrganDamage>28</vitalOrganDamage>
+            <vitalOrganArmorPen>0.36</vitalOrganArmorPen>
+            <vitalOrganDamageType>Insect_Breathing_Damage</vitalOrganDamageType>
+            <vitalStrikeBaseChance>0.86</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.59</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.95</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <missMessage>{INSTIGATOR}'s thrust glanced off — the weak point was guarded.</missMessage>
+            <castEffecter>AnimeArsenal_InsectHit</castEffecter>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.54</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <resourceCostMultiplier>1.36</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>24 initial damage. 35 to vital spots. Precision is overwhelming. Poison 0.65 severity.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.3</dashSpeed>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <initialStrikeDamage>24</initialStrikeDamage>
+            <initialStrikeArmorPen>0.32</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Torso</li>
+            </targetBodyParts>
+            <vitalOrganDamage>35</vitalOrganDamage>
+            <vitalOrganArmorPen>0.40</vitalOrganArmorPen>
+            <vitalOrganDamageType>Insect_Breathing_Damage</vitalOrganDamageType>
+            <vitalStrikeBaseChance>0.88</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.61</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.96</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <missMessage>{INSTIGATOR}'s thrust glanced off — the weak point was guarded.</missMessage>
+            <castEffecter>AnimeArsenal_InsectHit</castEffecter>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.65</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1080</experienceRequired>
+        <resourceCostMultiplier>1.44</resourceCostMultiplier>
+        <cooldownMultiplier>0.81</cooldownMultiplier>
+        <description>30 initial damage. 43 to vital spots. Near-perfect accuracy. Poison 0.78 severity — near-certain kill on a weakened target.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.4</dashSpeed>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <initialStrikeDamage>30</initialStrikeDamage>
+            <initialStrikeArmorPen>0.36</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Torso</li>
+            </targetBodyParts>
+            <vitalOrganDamage>43</vitalOrganDamage>
+            <vitalOrganArmorPen>0.45</vitalOrganArmorPen>
+            <vitalOrganDamageType>Insect_Breathing_Damage</vitalOrganDamageType>
+            <vitalStrikeBaseChance>0.90</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.64</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.97</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <missMessage>{INSTIGATOR}'s thrust glanced off — the weak point was guarded.</missMessage>
+            <castEffecter>AnimeArsenal_InsectHit</castEffecter>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.78</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1580</experienceRequired>
+        <resourceCostMultiplier>1.50</resourceCostMultiplier>
+        <cooldownMultiplier>0.78</cooldownMultiplier>
+        <description>Perfected. 37 initial damage. 53 driven into the neck and torso. Maximum precision. Poison 0.94 severity — one cast is enough. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.5</dashSpeed>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <initialStrikeDamage>37</initialStrikeDamage>
+            <initialStrikeArmorPen>0.40</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Torso</li>
+            </targetBodyParts>
+            <vitalOrganDamage>53</vitalOrganDamage>
+            <vitalOrganArmorPen>0.50</vitalOrganArmorPen>
+            <vitalOrganDamageType>Insect_Breathing_Damage</vitalOrganDamageType>
+            <vitalStrikeBaseChance>0.92</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.68</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.98</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <missMessage>{INSTIGATOR}'s thrust glanced off — the weak point was guarded.</missMessage>
+            <castEffecter>AnimeArsenal_InsectHit</castEffecter>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.94</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

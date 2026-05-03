@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Stone_Breathing_Smash</defName>
+    <label>Stone Breathing: Second Form: Upper Smash</label>
+    <description>弐ノ型　天面砕き — The user launches both weapons in a pincer arc before rebounding the flail at crushing speed. Damages everything along the charge path and detonates on impact.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>750</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>28</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>1.0</warmupTime>
+      <noiseRadius>8</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+        <damageDef>Stone_Breathing_Damage</damageDef>
+        <damageAmount>10~14</damageAmount>
+        <armourPen>0.25~0.25</armourPen>
+        <width>2</width>
+        <splashRadius>2.0</splashRadius>
+        <splashDamageAmount>6~10</splashDamageAmount>
+        <splashDamageDef>Stone_Breathing_Damage</splashDamageDef>
+        <stunTicksOnHit>40</stunTicksOnHit>
+        <canHitFriendly>false</canHitFriendly>
+        <castEffecter>AnimeArsenal_StoneHit2</castEffecter>
+        <hitEffecter>AnimeArsenal_StoneHit2</hitEffecter>
+        <impactEffecter>AnimeArsenal_StoneHit2</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Charge through targets, rebounding the flail on impact. Deals path and splash damage.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.15</rangeMultiplier>
+        <description>Charge strengthened. Path width and splash radius increased.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Stone_Breathing_Damage</damageDef>
+            <damageAmount>14~19</damageAmount>
+            <armourPen>0.28~0.28</armourPen>
+            <width>3</width>
+            <splashRadius>2.5</splashRadius>
+            <splashDamageAmount>8~13</splashDamageAmount>
+            <splashDamageDef>Stone_Breathing_Damage</splashDamageDef>
+            <stunTicksOnHit>50</stunTicksOnHit>
+            <canHitFriendly>false</canHitFriendly>
+            <castEffecter>AnimeArsenal_StoneHit2</castEffecter>
+            <hitEffecter>AnimeArsenal_StoneHit2</hitEffecter>
+            <impactEffecter>AnimeArsenal_StoneHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>1.3</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Rebound force maximized. Secondary shockwave erupts on landing.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Stone_Breathing_Damage</damageDef>
+            <damageAmount>18~25</damageAmount>
+            <armourPen>0.35~0.35</armourPen>
+            <width>3</width>
+            <splashRadius>3.5</splashRadius>
+            <splashDamageAmount>11~17</splashDamageAmount>
+            <splashDamageDef>Stone_Breathing_Damage</splashDamageDef>
+            <stunTicksOnHit>70</stunTicksOnHit>
+            <secondaryDamageDef>Stone_Breathing_Damage</secondaryDamageDef>
+            <secondaryDamageAmount>8~12</secondaryDamageAmount>
+            <canHitFriendly>false</canHitFriendly>
+            <castEffecter>AnimeArsenal_StoneHit2</castEffecter>
+            <hitEffecter>AnimeArsenal_StoneHit2</hitEffecter>
+            <impactEffecter>AnimeArsenal_StoneHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

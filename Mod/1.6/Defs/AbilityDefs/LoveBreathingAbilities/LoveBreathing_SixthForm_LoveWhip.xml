@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>LoveBreathing_SixthForm_LoveWhip</defName>
+    <label>Sixth Form: Cat-Legged Winds of Love Whip</label>
+    <description>A razor-precise whip crack of love breathing energy — a single pink-green line that snaps to the target faster than the eye can follow. No arc, no spread. Pure speed and penetration. The most economical technique in the style, meant to be used constantly between heavier forms.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>90</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>140</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>15</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>22</range>
+      <warmupTime>0.25</warmupTime>
+      <noiseRadius>2</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>LoveBreathing_LoveWhip_Projectile_LOne</projectileDef>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A fast whip-crack slash at range. 18 damage, moderate armor penetration. Low cooldown — use it constantly.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cooldownMultiplier>0.94</cooldownMultiplier>
+        <description>22 damage. Slightly faster. Penetrates armor better.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>LoveBreathing_LoveWhip_Projectile_LTwo</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>270</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cooldownMultiplier>0.89</cooldownMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <description>27 damage. Longer range. The whip line starts to glow with unmistakable love breathing color.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>LoveBreathing_LoveWhip_Projectile_LThree</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>460</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cooldownMultiplier>0.83</cooldownMultiplier>
+        <rangeMultiplier>1.15</rangeMultiplier>
+        <description>33 damage. High armor penetration. The strike arrives nearly instantly.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>LoveBreathing_LoveWhip_Projectile_LFour</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cooldownMultiplier>0.78</cooldownMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <description>40 damage. Very high armor penetration. Barely any cooldown. A constant whip of love breathing at everything in range.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>LoveBreathing_LoveWhip_Projectile_LFive</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1050</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <cooldownMultiplier>0.72</cooldownMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <description>Perfected. 50 damage, near-full armor penetration, maximum range. Fires so fast it becomes background noise — a constant pink-green thread weaving through every engagement. Max Level.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>LoveBreathing_LoveWhip_Projectile_LSix</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

@@ -10,7 +10,7 @@
     <degreeDatas>
       <li>
         <label>grace under pressure</label>
-        <description>[PAWN_nameDef] maintains elegant composure even in dire circumstances. [PAWN_possessive] artistic nature and social grace help [PAWN_objective] inspire others while creating beauty from chaos.</description>
+        <description>[PAWN_nameDef] doesn't rattle. Chaos, pressure, things going wrong — [PAWN_pronoun] moves through it with an ease that either reassures people or slightly unsettles them. [PAWN_pronoun] makes it look simple. It isn't.</description>
         <degree>1</degree>
         <statOffsets>
           <SocialImpact>0.35</SocialImpact>
@@ -28,6 +28,7 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>BotanicalKnowledge</defName>
     <commonality>0</commonality>
@@ -37,23 +38,25 @@
     <degreeDatas>
       <li>
         <label>botanical knowledge</label>
-        <description>[PAWN_nameDef] has deep understanding of plant life and natural remedies. [PAWN_pronoun] can coax growth from the most stubborn soil and craft healing medicines from simple herbs.</description>
+        <description>[PAWN_nameDef] knows plants the way others know people — their needs, their rhythms, what they'll give you if you ask correctly. [PAWN_pronoun] can coax growth from difficult ground and find nutrition where others find nothing. People are less predictable, and [PAWN_pronoun] finds them proportionally less interesting.</description>
         <degree>1</degree>
         <statOffsets>
           <PlantWorkSpeed>0.4</PlantWorkSpeed>
           <PlantHarvestYield>0.25</PlantHarvestYield>
           <DrugHarvestYield>0.3</DrugHarvestYield>
-          <ForagedNutritionPerDay>1.5</ForagedNutritionPerDay>
+          <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
         <skillGains>
           <Plants>6</Plants>
           <Medicine>3</Medicine>
           <Intellectual>1</Intellectual>
+          <Social>-1</Social>
         </skillGains>
         <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>ElegantFighter</defName>
@@ -67,11 +70,11 @@
     <degreeDatas>
       <li>
         <label>elegant fighter</label>
-        <description>[PAWN_nameDef] fights with the grace of a dancer. [PAWN_possessive] flowing combat style emphasizes finesse over brute force, finding beauty even in battle.</description>
+        <description>[PAWN_nameDef] fights like [PAWN_pronoun] would rather not leave a mark — on the room, on [PAWN_possessive] clothes, on [PAWN_objective]. [PAWN_possessive] style is all movement and angle, slipping hits rather than absorbing them, placing strikes precisely rather than landing them hard.</description>
         <degree>1</degree>
         <statOffsets>
-          <MeleeHitChance>6</MeleeHitChance>
-          <MeleeDodgeChance>8</MeleeDodgeChance>
+          <MeleeHitChance>0.06</MeleeHitChance>
+          <MeleeDodgeChance>0.08</MeleeDodgeChance>
           <MoveSpeed>0.15</MoveSpeed>
         </statOffsets>
         <skillGains>
@@ -83,6 +86,7 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>NaturalHarmony</defName>
     <commonality>0</commonality>
@@ -92,22 +96,25 @@
     <degreeDatas>
       <li>
         <label>natural harmony</label>
-        <description>[PAWN_nameDef] lives in perfect harmony with nature. [PAWN_pronoun] draws strength from the outdoors and connects effortlessly with wild creatures, needing little artificial beauty.</description>
+        <description>[PAWN_nameDef] is most themselves outdoors, among animals, in unstructured space. Wild creatures respond to [PAWN_objective] with unusual ease. Indoors, surrounded by people and noise and artificial things, [PAWN_pronoun] functions — but [PAWN_pronoun] is somewhere between tolerated and uncomfortable.</description>
         <degree>1</degree>
         <statOffsets>
           <TameAnimalChance>0.3</TameAnimalChance>
           <TrainAnimalChance>0.25</TrainAnimalChance>
           <AnimalGatherSpeed>0.2</AnimalGatherSpeed>
           <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+          <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
         <skillGains>
           <Animals>5</Animals>
           <Plants>2</Plants>
+          <Social>-1</Social>
         </skillGains>
         <marketValueFactorOffset>0.06</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>SeasonalWisdom</defName>
@@ -118,12 +125,13 @@
     <degreeDatas>
       <li>
         <label>seasonal wisdom</label>
-        <description>[PAWN_nameDef] understands the natural rhythms of the seasons. [PAWN_possessive] work adapts to nature's cycles, and harsh weather cannot dampen [PAWN_possessive] spirits.</description>
+        <description>[PAWN_nameDef] works with the land, not against it. [PAWN_pronoun] reads seasons, soil, and weather with a fluency that takes most people a lifetime to develop — and [PAWN_pronoun] seems to have simply always had it.</description>
         <degree>1</degree>
         <statOffsets>
           <PlantWorkSpeed>0.3</PlantWorkSpeed>
           <WorkSpeedGlobal>0.08</WorkSpeedGlobal>
-          <SocialImpact>5</SocialImpact>
+          <SocialImpact>0.05</SocialImpact>
+          <ComfyTemperatureMin>-10</ComfyTemperatureMin>
         </statOffsets>
         <skillGains>
           <Plants>4</Plants>
@@ -133,6 +141,7 @@
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>PetalDance</defName>
@@ -144,11 +153,11 @@
     <degreeDatas>
       <li>
         <label>petal dance</label>
-        <description>[PAWN_nameDef] moves through combat like a deadly flower in the wind. [PAWN_possessive] flowing movements become more beautiful and effective when facing multiple foes, turning battle into art.</description>
+        <description>[PAWN_nameDef]'s fighting style is almost hard to watch seriously — too fluid, too deliberate, more like movement than combat. It works. [PAWN_pronoun] hits cleanly, evades cleanly, and brings the same care to [PAWN_possessive] movement in practice as [PAWN_pronoun] does in art.</description>
         <degree>1</degree>
         <statOffsets>
-          <MeleeHitChance>5</MeleeHitChance>
-          <MeleeDodgeChance>6</MeleeDodgeChance>
+          <MeleeHitChance>0.05</MeleeHitChance>
+          <MeleeDodgeChance>0.06</MeleeDodgeChance>
           <MoveSpeed>0.25</MoveSpeed>
           <MeditationFocusGain>0.3</MeditationFocusGain>
         </statOffsets>
@@ -157,7 +166,7 @@
           <Artistic>3</Artistic>
           <Intellectual>1</Intellectual>
         </skillGains>
-        <marketValueFactorOffset>0.15</marketValueFactorOffset>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>

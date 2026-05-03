@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Enmu_FleshHandstwo</defName>
+    <label>Flesh Hands</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Flesh hands erupt from the ground and seize the target, preventing all movement while slowly crushing them.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>22</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>DS_FleshHands_Hediff_L1</hediffDef>
+        <severityAdjustment>1.0</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Roots target: 0% Moving. 4 blunt damage per tick for 800 ticks.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.045</resourceCostMultiplier>
+        <description>5 damage/tick for 900 ticks. 0% Moving.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_FleshHands_Hediff_L2</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.136</resourceCostMultiplier>
+        <description>6 damage/tick for 1100 ticks. 0% Moving.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_FleshHands_Hediff_L3</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.227</resourceCostMultiplier>
+        <description>8 damage/tick for 1400 ticks. Range increased to 12. 0% Moving.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_FleshHands_Hediff_L4</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.318</resourceCostMultiplier>
+        <description>10 damage/tick for 1700 ticks. Also applies -30% consciousness. 0% Moving.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_FleshHands_Hediff_L5</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.56</cooldownMultiplier>
+        <resourceCostMultiplier>1.455</resourceCostMultiplier>
+        <description>Perfected. 13 damage/tick for 2200 ticks. -30% consciousness. 0% Moving. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_FleshHands_Hediff_L6</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

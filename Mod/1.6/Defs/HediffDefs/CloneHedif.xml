@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>DS_WhitePrincess_Lifespan</defName>
+    <label>construct lifespan</label>
+    <description>This construct exists only for a limited time before dissolving.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_DespawnAfterTicks">
+        <despawnAfterTicks>15000</despawnAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li><label>active</label><minSeverity>0.01</minSeverity></li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_DomaClone_Lifespan</defName>
+    <label>construct lifespan</label>
+    <description>This construct exists only for a limited time before dissolving.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_DespawnAfterTicks">
+        <despawnAfterTicks>12000</despawnAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li><label>active</label><minSeverity>0.01</minSeverity></li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FrozenLotus_Lifespan</defName>
+    <label>construct lifespan</label>
+    <description>This construct exists only for a limited time before dissolving.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_DespawnAfterTicks">
+        <despawnAfterTicks>7500</despawnAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li><label>active</label><minSeverity>0.01</minSeverity></li>
+    </stages>
+  </HediffDef>
+
+</Defs>

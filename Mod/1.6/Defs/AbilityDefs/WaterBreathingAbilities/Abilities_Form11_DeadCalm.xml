@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Water_Breathing_DeadCalm</defName>
+    <label>Water Breathing: Dead Calm</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>The user enters a state of perfect stillness. Movement is nearly halted. Incoming projectiles are deflected. Enemies who approach are cut by resonating sword pressure. Toggle to activate or deactivate.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>300</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>0</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.1</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+        <hediffDef>WaterBreathing_DeadCalm</hediffDef>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Enter stillness. Deflect projectiles. Nearby enemies take 8 damage per pulse. Movement nearly halted.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>The calm deepens. Sword pressure grows stronger. Cooldown reduced.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <cooldownMultiplier>0.70</cooldownMultiplier>
+        <description>Perfected. Absolute stillness, absolute deflection, devastating sword pressure. Max Level.</description>
+      </li>
+    </levels>
+
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

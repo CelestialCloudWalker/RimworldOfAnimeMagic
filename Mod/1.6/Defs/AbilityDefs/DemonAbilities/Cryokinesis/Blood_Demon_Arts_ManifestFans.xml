@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_ManifestFans</defName>
+    <label>Manifest Fans</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>{0}'s manifests his twin war fans from frozen blood, using them to slash enemies with razor-sharp ice crystals that inflict Hypothermia.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>12</resourceCost>
+    <baseExperienceGain>40</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1.5</range>
+      <warmupTime>0.3</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+        <baseDamage>10</baseDamage>
+        <damageDef>Cut</damageDef>
+        <armorPen>0.1</armorPen>
+        <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>Hypothermia</hediffDef>
+        <severityAdjustment>0.04</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Slashes with razor-sharp ice fans. 10 Cut damage. Applies 0.04 Hypothermia severity per hit.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>40</experienceRequired>
+        <description>Ice fans grow sharper. 12 Cut damage. Applies 0.05 Hypothermia severity per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>12</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.1</armorPen>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.05</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <description>The fans slice deeper. 15 Cut damage. Applies 0.06 Hypothermia severity per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>15</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.15</armorPen>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>{0}'s mastery sharpens the fans to a lethal edge. 19 Cut damage. Applies 0.08 Hypothermia severity per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>19</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.08</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>The fans channel {0}'s full killing intent. 24 Cut damage. Applies 0.10 Hypothermia severity per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>24</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.25</armorPen>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.10</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <description>Perfected mastery. The fans are extensions of {0}'s, crystallized into instruments of death. 30 Cut damage. Applies 0.13 Hypothermia severity per hit. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>30</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.3</armorPen>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.13</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

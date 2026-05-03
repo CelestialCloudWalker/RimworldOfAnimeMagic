@@ -10,7 +10,7 @@
     <degreeDatas>
       <li>
         <label>ice in veins</label>
-        <description>[PAWN_nameDef] has ice flowing through [PAWN_possessive] veins. [PAWN_pronoun] moves with deliberate precision, immune to heat and pain, but slower than others in all endeavors.</description>
+        <description>[PAWN_nameDef] moves deliberately, thinks deliberately, and feels pain as a fact rather than an emergency. Cold that stops others [PAWN_pronoun] doesn't notice. The tradeoff is everything runs at the same speed — work, movement, reaction. Measured. Exact. Slow.</description>
         <degree>1</degree>
         <statOffsets>
           <ComfyTemperatureMin>-50</ComfyTemperatureMin>
@@ -29,6 +29,7 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>FrozenFocus</defName>
     <commonality>0</commonality>
@@ -38,7 +39,7 @@
     <degreeDatas>
       <li>
         <label>frozen focus</label>
-        <description>[PAWN_nameDef] possesses crystalline mental clarity. [PAWN_possessive] mind remains calm and focused even under extreme stress, though [PAWN_pronoun] seems distant from others.</description>
+        <description>[PAWN_nameDef] doesn't get rattled. [PAWN_possessive] mind stays clear under pressure that makes others stumble — useful in research, in crisis, in anything that requires thinking when it's hard to think. [PAWN_pronoun] is harder to reach emotionally, which people notice eventually.</description>
         <degree>1</degree>
         <statOffsets>
           <ResearchSpeed>0.4</ResearchSpeed>
@@ -56,20 +57,20 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>GlacialEndurance</defName>
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>glacial endurance</label>
-        <description>[PAWN_nameDef] has the endurance of an ancient glacier. [PAWN_pronoun] moves slowly but with inexorable precision, rarely needing food or rest.</description>
+        <description>[PAWN_nameDef] runs on less. Less food, less sleep, less urgency. [PAWN_pronoun] moves slowly and shoots with the patience of someone who has already decided where the shot is going. Nothing about [PAWN_objective] is quick. Everything about [PAWN_objective] is thorough.</description>
         <degree>1</degree>
         <statOffsets>
-          <BedHungerRateFactor>0.5</BedHungerRateFactor>
           <RestRateMultiplier>0.7</RestRateMultiplier>
           <PainShockThreshold>0.3</PainShockThreshold>
           <MoveSpeed>-0.4</MoveSpeed>
-          <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+          <ShootingAccuracyPawn>0.05</ShootingAccuracyPawn>
           <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
         </statOffsets>
         <skillGains>
@@ -81,6 +82,7 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>WintersHeart</defName>
     <commonality>0</commonality>
@@ -90,15 +92,17 @@
     <degreeDatas>
       <li>
         <label>winter's heart</label>
-        <description>[PAWN_nameDef] thrives in the bitter cold of winter. [PAWN_possessive] combat prowess increases with dropping temperatures, but [PAWN_pronoun] suffers greatly in heat.</description>
+        <description>[PAWN_nameDef] is built for cold. [PAWN_pronoun] fights better when the air hurts to breathe and most people are focused on staying warm. Heat is the enemy — [PAWN_pronoun] struggles more than most when temperatures climb.</description>
         <degree>1</degree>
         <statOffsets>
           <ComfyTemperatureMin>-60</ComfyTemperatureMin>
           <ComfyTemperatureMax>15</ComfyTemperatureMax>
-          <MeleeHitChance>6</MeleeHitChance>
-          <MeleeDPS>0.2</MeleeDPS>
-          <MentalBreakThreshold>-5</MentalBreakThreshold>
+          <MeleeHitChance>0.06</MeleeHitChance>
+          <MentalBreakThreshold>-0.05</MentalBreakThreshold>
         </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.2</MeleeDamageFactor>
+        </statFactors>
         <skillGains>
           <Melee>4</Melee>
           <Crafting>2</Crafting>
@@ -107,6 +111,7 @@
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>CryogenicHealing</defName>
@@ -117,11 +122,10 @@
     <degreeDatas>
       <li>
         <label>cryogenic healing</label>
-        <description>[PAWN_nameDef] heals with the slow certainty of frozen time. [PAWN_possessive] recovery is gradual but complete, and infections cannot take hold in [PAWN_possessive] chilled body.</description>
+        <description>[PAWN_nameDef] heals slowly and completely. [PAWN_pronoun] doesn't rush recovery — [PAWN_possessive] body handles infection like cold handles bacteria, steadily and thoroughly. [PAWN_possessive] surgical work shares the same quality: unhurried, precise, reliable.</description>
         <degree>1</degree>
         <statOffsets>
-          <InjuryHealingFactor>2.0</InjuryHealingFactor>
-          <ImmunityGainSpeed>2.0</ImmunityGainSpeed>
+          <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
           <SurgerySuccessChanceFactor>0.3</SurgerySuccessChanceFactor>
           <MedicalTendSpeed>0.25</MedicalTendSpeed>
           <ComfyTemperatureMin>-45</ComfyTemperatureMin>
@@ -135,19 +139,20 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>AbsoluteZero</defName>
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>absolute zero</label>
-        <description>[PAWN_nameDef] embodies the ultimate cold. [PAWN_possessive] body exists at temperatures that would kill others, preserving everything around [PAWN_objective] but making [PAWN_objective] emotionally distant.</description>
+        <description>[PAWN_nameDef] exists at a temperature that shouldn't be survivable. [PAWN_pronoun] is functional in cold that kills others, immune to food contamination, and largely indifferent to psychic pressure. [PAWN_possessive] company is about as warm as [PAWN_objective] sounds — most people find it hard to get close.</description>
         <degree>1</degree>
         <statOffsets>
           <ComfyTemperatureMin>-80</ComfyTemperatureMin>
           <ComfyTemperatureMax>40</ComfyTemperatureMax>
           <SocialImpact>-0.5</SocialImpact>
-          <MeleeHitChance>4</MeleeHitChance>
+          <MeleeHitChance>0.04</MeleeHitChance>
           <FoodPoisonChance>-1.0</FoodPoisonChance>
           <PsychicSensitivity>-0.3</PsychicSensitivity>
         </statOffsets>

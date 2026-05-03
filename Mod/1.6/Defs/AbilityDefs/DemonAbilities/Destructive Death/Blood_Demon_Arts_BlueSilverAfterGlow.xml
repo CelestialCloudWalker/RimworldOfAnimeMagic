@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Akaza_BlueSilverAfterGlow</defName>
+    <label>Final Form: Blue Silver Chaotic Afterglow</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Akaza's ultimate technique. Afterimage clones surround the target, each striking with terrifying speed. Requires Compass Needle at 60% severity or higher.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>18000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>75</resourceCost>
+    <baseExperienceGain>100</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>1.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+        <baseDamage>8</baseDamage>
+        <damageDef>Cut</damageDef>
+        <armorPen>0.15</armorPen>
+        <repeatAmount>12</repeatAmount>
+        <damageInterval>8</damageInterval>
+        <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+        <requiredHediffs>
+          <li>Compass_Needle_Hedif_One</li>
+          <li>Compass_Needle_Hedif_Two</li>
+          <li>Compass_Needle_Hedif_Four</li>
+          <li>Compass_Needle_Hedif_Six</li>
+        </requiredHediffs>
+        <minimumSeverity>0</minimumSeverity>
+        <failMessage>Requires Compass Needle at 60%+ severity (Locked On stage or higher).</failMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>12 strikes of 8 Cut each. Requires Compass Needle at 60%+ severity.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.922</cooldownMultiplier>
+        <resourceCostMultiplier>1.013</resourceCostMultiplier>
+        <description>12 strikes of 8 Cut. Clone duration increased.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>8</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.15</armorPen>
+            <repeatAmount>12</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <cooldownMultiplier>0.844</cooldownMultiplier>
+        <resourceCostMultiplier>1.04</resourceCostMultiplier>
+        <description>14 strikes of 8 Cut. Requires CN 60%+.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>8</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.15</armorPen>
+            <repeatAmount>14</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <cooldownMultiplier>0.767</cooldownMultiplier>
+        <resourceCostMultiplier>1.067</resourceCostMultiplier>
+        <description>14 strikes of 8 Cut. CN activation threshold reduced to 50%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>8</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.15</armorPen>
+            <repeatAmount>14</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>620</experienceRequired>
+        <cooldownMultiplier>0.689</cooldownMultiplier>
+        <resourceCostMultiplier>1.107</resourceCostMultiplier>
+        <description>14 strikes of 8 Cut. Vital organ targeting added. CN 50%+ required.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>8</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.15</armorPen>
+            <repeatAmount>14</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>0</initialStrikeDamage>
+            <initialStrikeArmorPen>0.15</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>8</vitalOrganDamage>
+            <vitalOrganArmorPen>0.8</vitalOrganArmorPen>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <cooldownMultiplier>0.611</cooldownMultiplier>
+        <resourceCostMultiplier>1.147</resourceCostMultiplier>
+        <description>Perfected. 16 strikes of 8 Cut. Vital organ targeting. CN 50%+ required. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>8</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.15</armorPen>
+            <repeatAmount>16</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>0</initialStrikeDamage>
+            <initialStrikeArmorPen>0.15</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>8</vitalOrganDamage>
+            <vitalOrganArmorPen>0.8</vitalOrganArmorPen>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

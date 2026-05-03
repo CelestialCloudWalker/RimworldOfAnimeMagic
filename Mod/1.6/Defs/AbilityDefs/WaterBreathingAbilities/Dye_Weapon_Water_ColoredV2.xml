@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Dye_Weapon_Water_Colored</defName>
     <label>Dye Weapon: Water Colored</label>
-    <description>A technique that channels focused breathing into attacks.</description>
     <category>WaterBreathing_Ability_Catergory</category>
+    <description>A technique that channels focused breathing into attacks.</description>
     <iconPath>UI/Abilities/AbilityEmbu</iconPath>
     <targetRequired>false</targetRequired>
-    <requiredGeneDefName>Gene_WaterBreath</requiredGeneDefName>
-    <resourceCost>20</resourceCost>
+    <hostile>false</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
     <baseExperienceGain>5</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>-1</range>
@@ -29,8 +31,8 @@
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>150</experienceRequired>
-        <description>A technique that channels focused breathing into attacks.</description>
-        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>Enhanced breathing infusion.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
             <enchantDef>Water_Blade_Technique_LevelTwo</enchantDef>
@@ -40,8 +42,8 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>350</experienceRequired>
-        <description>A technique that channels focused breathing into attacks..</description>
-        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>Stronger breathing infusion.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
             <enchantDef>Water_Blade_Technique_LevelThree</enchantDef>
@@ -51,8 +53,8 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>600</experienceRequired>
-        <description>A technique that channels focused breathing into attacks..</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Potent breathing infusion. Cost reduced.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
             <enchantDef>Water_Blade_Technique_LevelFour</enchantDef>
@@ -62,8 +64,8 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>900</experienceRequired>
-        <description>A technique that channels focused breathing into attacks.</description>
-        <resourceCostMultiplier>0.85</resourceCostMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Fierce breathing infusion.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
             <enchantDef>Water_Blade_Technique_LevelFive</enchantDef>
@@ -73,8 +75,8 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>1300</experienceRequired>
-        <description>A technique that channels focused breathing into attacks.</description>
-        <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Perfected. Fully mastered, Now breathing flows freely through every strike. Max Level.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
             <enchantDef>Water_Blade_Technique_LevelSix</enchantDef>
@@ -82,5 +84,5 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

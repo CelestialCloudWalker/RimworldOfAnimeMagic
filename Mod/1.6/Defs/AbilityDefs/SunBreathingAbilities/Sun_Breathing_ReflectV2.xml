@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Sun_Breathing_Reflect</defName>
     <label>Sun Breathing: Reflect</label>
     <category>SunBreathing_Ability_Catergory</category>
     <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
     <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
-
-
-    <requiredGeneDefName>Gene_SunBreath</requiredGeneDefName>
-    <resourceCost>20</resourceCost>
+    <hostile>false</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
     <baseExperienceGain>8</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
 
@@ -19,12 +18,11 @@
       <range>-1</range>
     </verbProperties>
 
-
     <comps>
       <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-        <radius>3.8</radius>
-        <TicksActive>850</TicksActive>
-        <MaxShotsToReflect>14</MaxShotsToReflect>
+        <radius>3</radius>
+        <TicksActive>600</TicksActive>
+        <MaxShotsToReflect>10</MaxShotsToReflect>
         <effecterDef>AnimeArsenal_Deflect</effecterDef>
         <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
       </li>
@@ -37,28 +35,35 @@
         <experienceRequired>0</experienceRequired>
         <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <cumulativeEffects>false</cumulativeEffects>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>Wider deflection field. Reflects up to 13 shots.</description>
+        <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-            <radius>3.8</radius>
-            <TicksActive>850</TicksActive>
-            <MaxShotsToReflect>14</MaxShotsToReflect>
+            <radius>4</radius>
+            <TicksActive>800</TicksActive>
+            <MaxShotsToReflect>13</MaxShotsToReflect>
             <effecterDef>AnimeArsenal_Deflect</effecterDef>
             <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
           </li>
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Level 2)</labelSuffix>
-        <experienceRequired>100</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
-        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>Extended duration. Reflects up to 18 shots.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-            <radius>5</radius>
-            <TicksActive>1050</TicksActive>
+            <radius>4</radius>
+            <TicksActive>1000</TicksActive>
             <MaxShotsToReflect>18</MaxShotsToReflect>
             <effecterDef>AnimeArsenal_Deflect</effecterDef>
             <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
@@ -66,79 +71,57 @@
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Level 3)</labelSuffix>
-        <experienceRequired>250</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Larger radius. Reflects up to 25 shots. Cost reduced.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-            <radius>5.2</radius>
+            <radius>5</radius>
             <TicksActive>1300</TicksActive>
-            <MaxShotsToReflect>24</MaxShotsToReflect>
+            <MaxShotsToReflect>25</MaxShotsToReflect>
             <effecterDef>AnimeArsenal_Deflect</effecterDef>
             <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
           </li>
         </levelComps>
       </li>
 
-
       <li>
-        <labelSuffix> (Level 4)</labelSuffix>
-        <experienceRequired>450</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
-        <resourceCostMultiplier>0.85</resourceCostMultiplier>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Wide radius. Reflects up to 34 shots over an extended window.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
             <radius>6</radius>
             <TicksActive>1600</TicksActive>
-            <MaxShotsToReflect>32</MaxShotsToReflect>
+            <MaxShotsToReflect>34</MaxShotsToReflect>
             <effecterDef>AnimeArsenal_Deflect</effecterDef>
             <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
           </li>
         </levelComps>
       </li>
-
-
-      <li>
-        <labelSuffix> (Level 5)</labelSuffix>
-        <experienceRequired>700</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
-        <resourceCostMultiplier>0.8</resourceCostMultiplier>
-        <cumulativeEffects>false</cumulativeEffects>
-        <levelComps>
-          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-            <radius>7</radius>
-            <TicksActive>1950</TicksActive>
-            <MaxShotsToReflect>42</MaxShotsToReflect>
-            <effecterDef>AnimeArsenal_Deflect</effecterDef>
-            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
-          </li>
-        </levelComps>
-      </li>
-
 
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>1050</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
-        <resourceCostMultiplier>0.75</resourceCostMultiplier>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Perfected. Maximum radius deflection field. Reflects up to 45 shots. Max Level.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
-            <radius>8.5</radius>
-            <TicksActive>2400</TicksActive>
-            <MaxShotsToReflect>56</MaxShotsToReflect>
+            <radius>7.5</radius>
+            <TicksActive>2000</TicksActive>
+            <MaxShotsToReflect>45</MaxShotsToReflect>
             <effecterDef>AnimeArsenal_Deflect</effecterDef>
             <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
           </li>
         </levelComps>
       </li>
+
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
-
-
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

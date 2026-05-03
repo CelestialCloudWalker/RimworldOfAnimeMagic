@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef ParentName="RimKetsu_MoteAttachedBase">
+    <defName>RimKetsu_Mote_FlowerBreathingAura</defName>
+    <mote>
+      <fadeInTime>0.45</fadeInTime>
+      <solidTime>999999</solidTime>
+      <fadeOutTime>0.45</fadeOutTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_PawnBodySilhouette</graphicClass>
+      <color>(1.0, 0.6, 0.75, 0.7)</color>
+      <shaderType>MoteMultiplyAddScroll</shaderType>
+      <texPath>Things/Mote/Transparent</texPath>
+      <shaderParameters>
+        <_MultiplyTexA>/Things/Mote/Cloudy_B</_MultiplyTexA>
+        <_MultiplyTexB>/Things/Mote/Cloudy_C</_MultiplyTexB>
+        <_DetailTex>/Things/Mote/Speckles</_DetailTex>
+        <_detailIntensity>1.1</_detailIntensity>
+        <_texAScale>0.36</_texAScale>
+        <_texBScale>0.28</_texBScale>
+        <_DetailScale>1.1</_DetailScale>
+        <_texAScrollSpeed>(0.06, 0.16, 0)</_texAScrollSpeed>
+        <_texBScrollSpeed>(0.12, 0.04, 0)</_texBScrollSpeed>
+        <_detailScrollSpeed>(0.1, 0.1, 0)</_detailScrollSpeed>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FlowerBloomRing</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.05</fadeInTime>
+      <solidTime>0.08</solidTime>
+      <fadeOutTime>0.55</fadeOutTime>
+      <growthRate>7.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/RadiationDistortion_A</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <color>(1.0, 0.65, 0.8, 0.92)</color>
+      <shaderType>MoteMultiplyAddCircularGrayscale</shaderType>
+      <shaderParameters>
+        <_MultiplyTex>/Things/Mote/RadiationDistortion_B</_MultiplyTex>
+        <_texAScale>0.28</_texAScale>
+        <_texBScale>0.28</_texBScale>
+        <_texAScrollSpeed>1.8</_texAScrollSpeed>
+        <_texBScrollSpeed>-1.1</_texBScrollSpeed>
+        <_Intensity>10</_Intensity>
+      </shaderParameters>
+      <drawSize>(3.0, 3.0)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FlowerGlowHit</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverheadLow</altitudeLayer>
+    <mote>
+      <fadeInTime>0.03</fadeInTime>
+      <solidTime>0.1</solidTime>
+      <fadeOutTime>0.45</fadeOutTime>
+      <growthRate>4.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/BrightFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(1.0, 0.68, 0.82, 0.85)</color>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FlowerPetalCyclone</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.06</fadeInTime>
+      <solidTime>0.12</solidTime>
+      <fadeOutTime>0.6</fadeOutTime>
+      <growthRate>9.0</growthRate>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MotePsychicWarmupNeuroquake</shaderType>
+      <texPath>Things/Mote/MoteHellfireCannon_HeatWaveDistortion</texPath>
+      <shaderParameters>
+        <_distortionIntensity>0.22</_distortionIntensity>
+        <_brightnessMultiplier>1.15</_brightnessMultiplier>
+        <_distortionTint>(0.08, 0.0, 0.04, 0)</_distortionTint>
+        <_pulseSpeed>2.2</_pulseSpeed>
+      </shaderParameters>
+      <drawSize>3.0</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FlowerFullBloom</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.2</fadeInTime>
+      <solidTime>0.5</solidTime>
+      <fadeOutTime>0.4</fadeOutTime>
+      <growthRate>2.5</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/BrightFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(1.0, 0.75, 0.88, 1.0)</color>
+      <drawSize>3.2</drawSize>
+    </graphicData>
+  </ThingDef>
+
+
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_FlowerPetalSpark</defName>
+    <graphicData>
+      <texPath>Things/Mote/SparkThrown</texPath>
+      <color>(1.0, 0.6, 0.75, 0.9)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <fadeInTime>0.02</fadeInTime>
+    <solidTime>0.08</solidTime>
+    <fadeOutTime>0.3</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_FlowerBladeTrail</defName>
+    <graphicData>
+      <texPath>Things/Mote/LongSparkThrown</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(1.0, 0.72, 0.82, 0.88)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.01</fadeInTime>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.26</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_FlowerBloomMist</defName>
+    <graphicData>
+      <texPath>Things/Mote/MetaPuff</texPath>
+      <shaderType>Transparent</shaderType>
+      <color>(1.0, 0.7, 0.82, 0.4)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>0.18</solidTime>
+    <fadeOutTime>0.9</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Static">
+    <defName>RimKetsu_Fleck_FlowerBurstFlash</defName>
+    <graphicData>
+      <texPath>Things/Mote/ExplosionFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(1.0, 0.6, 0.78, 0.8)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.04</solidTime>
+    <fadeOutTime>0.14</fadeOutTime>
+  </FleckDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_FlowerBreathingAmbient</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlowerBloomMist</fleckDef>
+        <chancePerTick>0.06</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>0.1~0.35</speed>
+        <scale>0.5~0.9</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlowerBladeTrail</fleckDef>
+        <chancePerTick>0.05</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <speed>0.6~1.5</speed>
+        <scale>0.1~0.2</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_Exhaustion_Flower</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlowerBloomMist</fleckDef>
+        <chancePerTick>0.03</chancePerTick>
+        <positionRadius>0.25</positionRadius>
+        <speed>0.03~0.15</speed>
+        <scale>0.3~0.5</scale>
+        <color>(1.0, 0.6, 0.72, 0.28)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_EnchantAmbient_Flower</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlowerPetalSpark</fleckDef>
+        <chancePerTick>0.22</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>0.8~2.0</speed>
+        <scale>0.12~0.24</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlowerBladeTrail</fleckDef>
+        <chancePerTick>0.18</chancePerTick>
+        <positionRadius>0.38</positionRadius>
+        <speed>1.2~3.0</speed>
+        <scale>0.16~0.32</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlowerBloomMist</fleckDef>
+        <chancePerTick>0.14</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>0.2~0.6</speed>
+        <scale>0.8~1.4</scale>
+        <color>(1.0, 0.68, 0.82, 0.88)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlowerBurstFlash</fleckDef>
+        <chancePerTick>0.04</chancePerTick>
+        <positionRadius>0.2</positionRadius>
+        <scale>0.5~1.0</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_FlowerBreathingHit</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FlowerBloomRing</moteDef>
+        <burstCount>1~2</burstCount>
+        <scale>0.7~1.1</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FlowerGlowHit</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.9~1.4</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.1</positionRadius>
+        <moteDef>RimKetsu_Mote_EmberSpark</moteDef>
+        <burstCount>10~16</burstCount>
+        <speed>4.0~8.0</speed>
+        <scale>0.1~0.2</scale>
+        <color>(1.0, 0.7, 0.82, 1.0)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.3</positionRadius>
+        <fleckDef>AirPuff</fleckDef>
+        <burstCount>5~7</burstCount>
+        <speed>0.4~1.0</speed>
+        <scale>0.6~1.0</scale>
+        <color>(1.0, 0.65, 0.8, 0.55)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>ExplosionFlash</fleckDef>
+        <burstCount>1~1</burstCount>
+        <scale>2.0~3.2</scale>
+        <color>(1.0, 0.65, 0.82, 0.6)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_FlowerFullBloomActivate</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FlowerFullBloom</moteDef>
+        <burstCount>3~4</burstCount>
+        <scale>1.0~2.2</scale>
+        <positionRadius>0.3</positionRadius>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FlowerBloomRing</moteDef>
+        <burstCount>2~3</burstCount>
+        <scale>1.0~1.8</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.5</positionRadius>
+        <moteDef>RimKetsu_Mote_EmberSpark</moteDef>
+        <burstCount>30~50</burstCount>
+        <speed>5.0~11.0</speed>
+        <scale>0.08~0.18</scale>
+        <color>(1.0, 0.72, 0.88, 1.0)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>ExplosionFlash</fleckDef>
+        <burstCount>1~1</burstCount>
+        <scale>5.5~7.5</scale>
+        <color>(1.0, 0.72, 0.88, 0.7)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.5</positionRadius>
+        <fleckDef>AirPuff</fleckDef>
+        <burstCount>8~12</burstCount>
+        <speed>0.8~1.8</speed>
+        <scale>0.8~1.4</scale>
+        <color>(1.0, 0.7, 0.85, 0.5)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+
+</Defs>

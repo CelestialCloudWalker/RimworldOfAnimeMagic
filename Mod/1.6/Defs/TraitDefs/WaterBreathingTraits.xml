@@ -36,8 +36,7 @@
         <degree>1</degree>
         <statOffsets>
           <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
-          <MentalBreakThreshold>3</MentalBreakThreshold>
-          <RestRateMultiplier>1.3</RestRateMultiplier>
+          <MentalBreakThreshold>0.03</MentalBreakThreshold>
         </statOffsets>
         <skillGains>
           <Crafting>2</Crafting>
@@ -62,8 +61,7 @@
         <statOffsets>
           <SurgerySuccessChanceFactor>0.4</SurgerySuccessChanceFactor>
           <MedicalTendSpeed>0.3</MedicalTendSpeed>
-          <InjuryHealingFactor>0.5</InjuryHealingFactor>
-          <ImmunityGainSpeed>0.8</ImmunityGainSpeed>
+          <ImmunityGainSpeed>0.35</ImmunityGainSpeed>
         </statOffsets>
         <skillGains>
           <Medicine>6</Medicine>
@@ -111,7 +109,7 @@
         <statOffsets>
           <MoveSpeed>0.15</MoveSpeed>
           <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
-          <MentalBreakThreshold>5</MentalBreakThreshold>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
           <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
         </statOffsets>
         <skillGains>
@@ -151,7 +149,7 @@
 
   <TraitDef>
     <defName>Purification</defName>
-    <commonality>0.</commonality>
+    <commonality>0</commonality>
     <forcedPassions>
       <li>Medicine</li>
     </forcedPassions>
@@ -161,8 +159,8 @@
         <description>[PAWN_nameDef] embodies water's cleansing properties. [PAWN_possessive] presence purifies disease and toxins, and [PAWN_pronoun] excels at cleaning and maintaining a healthy environment.</description>
         <degree>1</degree>
         <statOffsets>
-          <ImmunityGainSpeed>1.2</ImmunityGainSpeed>
-          <FoodPoisonChance>-1.0</FoodPoisonChance>
+          <ImmunityGainSpeed>0.35</ImmunityGainSpeed>
+          <FoodPoisonChance>-0.8</FoodPoisonChance>
           <SurgerySuccessChanceFactor>0.3</SurgerySuccessChanceFactor>
           <CookSpeed>0.2</CookSpeed>
         </statOffsets>

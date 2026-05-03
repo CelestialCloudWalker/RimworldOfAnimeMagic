@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Gyutaro_BloodSickle_Stab</defName>
+    <label>Blood Sickle Stab</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Drive both kamas deep into a single target with tremendous force. High blood poisoning severity per hit.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2200</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>22</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1.5</range>
+      <warmupTime>0.4</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <initialStrikeDamage>22</initialStrikeDamage>
+        <damageType>Cut</damageType>
+        <initialStrikeArmorPen>0.15</initialStrikeArmorPen>
+        <targetVitalOrgans>true</targetVitalOrgans>
+        <vitalOrganDefNames>
+          <li>Heart</li>
+          <li>Liver</li>
+          <li>Lung</li>
+          <li>Stomach</li>
+        </vitalOrganDefNames>
+        <vitalOrganDamage>6</vitalOrganDamage>
+        <vitalOrganArmorPen>0.15</vitalOrganArmorPen>
+        <dashSpeed>1.5</dashSpeed>
+        <stunDuration>0</stunDuration>
+        <effectRadius>0</effectRadius>
+        <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+        <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>BloodPoison_Hediff</hediffDef>
+        <severityAdjustment>0.08</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>22 Cut single target with dash. Targets Heart, Liver, Lung, Stomach. Blood Poisoning +0.08.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.914</cooldownMultiplier>
+        <resourceCostMultiplier>1.045</resourceCostMultiplier>
+        <description>26 Cut. Blood Poisoning +0.09.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <initialStrikeDamage>26</initialStrikeDamage>
+            <damageType>Cut</damageType>
+            <initialStrikeArmorPen>0.15</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Liver</li>
+              <li>Lung</li>
+              <li>Stomach</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>7</vitalOrganDamage>
+            <vitalOrganArmorPen>0.15</vitalOrganArmorPen>
+            <dashSpeed>1.5</dashSpeed>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.09</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.827</cooldownMultiplier>
+        <resourceCostMultiplier>1.136</resourceCostMultiplier>
+        <description>32 Cut. Armor penetration increased. Blood Poisoning +0.11.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <initialStrikeDamage>32</initialStrikeDamage>
+            <damageType>Cut</damageType>
+            <initialStrikeArmorPen>0.30</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Liver</li>
+              <li>Lung</li>
+              <li>Stomach</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>8</vitalOrganDamage>
+            <vitalOrganArmorPen>0.30</vitalOrganArmorPen>
+            <dashSpeed>1.5</dashSpeed>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.11</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.741</cooldownMultiplier>
+        <resourceCostMultiplier>1.227</resourceCostMultiplier>
+        <description>40 Cut. Blood Poisoning +0.11.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <initialStrikeDamage>40</initialStrikeDamage>
+            <damageType>Cut</damageType>
+            <initialStrikeArmorPen>0.30</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Liver</li>
+              <li>Lung</li>
+              <li>Stomach</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>10</vitalOrganDamage>
+            <vitalOrganArmorPen>0.30</vitalOrganArmorPen>
+            <dashSpeed>1.5</dashSpeed>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.11</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.655</cooldownMultiplier>
+        <resourceCostMultiplier>1.318</resourceCostMultiplier>
+        <description>50 Cut. Now also targets Kidney and Brain. Blood Poisoning +0.14.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <initialStrikeDamage>50</initialStrikeDamage>
+            <damageType>Cut</damageType>
+            <initialStrikeArmorPen>0.30</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Liver</li>
+              <li>Lung</li>
+              <li>Stomach</li>
+              <li>Kidney</li>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>8</vitalOrganDamage>
+            <vitalOrganArmorPen>0.30</vitalOrganArmorPen>
+            <dashSpeed>1.5</dashSpeed>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.14</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.568</cooldownMultiplier>
+        <resourceCostMultiplier>1.455</resourceCostMultiplier>
+        <description>Perfected. 62 Cut. All major organs targeted. Blood Poisoning +0.16. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <initialStrikeDamage>62</initialStrikeDamage>
+            <damageType>Cut</damageType>
+            <initialStrikeArmorPen>0.30</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Liver</li>
+              <li>Lung</li>
+              <li>Stomach</li>
+              <li>Kidney</li>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>8</vitalOrganDamage>
+            <vitalOrganArmorPen>0.30</vitalOrganArmorPen>
+            <dashSpeed>1.5</dashSpeed>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.16</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

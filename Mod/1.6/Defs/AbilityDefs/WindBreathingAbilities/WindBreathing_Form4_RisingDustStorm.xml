@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>WindBreathing_Form4_RisingDustStorm</defName>
+    <label>Fourth Form: Rising Dust Storm</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>A single explosive revolution of the blade. Enemies in close reach are struck by the sword's edge; the storm of dust and wind that rises with it hammers foes at far greater range.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>38</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+
+    <comps>
+
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+        <damage>18</damage>
+        <radius>2.5</radius>
+        <damageDef>Cut</damageDef>
+        <repeatCount>3</repeatCount>
+        <damageInterval>6</damageInterval>
+        <maxTargets>20</maxTargets>
+        <affectCaster>false</affectCaster>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <effecter>RimKetsu_Effecter_BladeSpinBurst_Spin</effecter>
+        <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+      </li>
+
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+        <damage>14</damage>
+        <radius>7</radius>
+        <damageDef>Cut</damageDef>
+        <repeatCount>3</repeatCount>
+        <damageInterval>6</damageInterval>
+        <maxTargets>30</maxTargets>
+        <affectCaster>false</affectCaster>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <effecter>RimKetsu_Effecter_BladeSpinBurst_Spin</effecter>
+        <hitEffecter>AnimeArsenal_WindHitG</hitEffecter>
+      </li>
+
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>An explosive rotation that hits close with the blade and far with the gust.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>The rising dust thickens; the storm grows harder to escape.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>21</damage>
+            <radius>2.5</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>3</repeatCount>
+            <damageInterval>6</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>RimKetsu_Effecter_BladeSpinBurst_Spin</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>16</damage>
+            <radius>8</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>3</repeatCount>
+            <damageInterval>6</damageInterval>
+            <maxTargets>30</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>RimKetsu_Effecter_BladeSpinBurst_Spin</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>The storm lifts even heavy foes off their footing.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>24</damage>
+            <radius>3.0</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>3</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>RimKetsu_Effecter_BladeSpinBurst_Spin</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>19</damage>
+            <radius>8</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>3</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>30</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>RimKetsu_Effecter_BladeSpinBurst_Spin</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>Dust and devastation. Cost slightly reduced.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>28</damage>
+            <radius>3.0</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>22</damage>
+            <radius>9</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>30</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>A rising cyclone that swallows entire squads.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>32</damage>
+            <radius>3.5</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>4</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>26</damage>
+            <radius>10</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>4</damageInterval>
+            <maxTargets>30</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Perfected. The rising dust storm leaves nothing standing. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>37</damage>
+            <radius>3.5</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>4</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>30</damage>
+            <radius>10</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>4</damageInterval>
+            <maxTargets>30</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

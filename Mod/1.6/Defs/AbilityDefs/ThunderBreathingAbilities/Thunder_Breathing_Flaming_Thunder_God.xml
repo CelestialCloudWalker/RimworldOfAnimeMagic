@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Thunder_Breathing_Flaming_Thunder_God</defName>
+    <label>Seventh Form: Flaming Thunder God</label>
+    <description>An original form created through extreme mastery. The user propels themselves forward using their legs alone at speeds beyond human comprehension, delivering a single slash of absolute devastating power. The movement resembles a god of thunder descending — fire and lightning trailing in their wake.</description>
+    <iconPath>UI/Abilities/AbilityLeap</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>50</resourceCost>
+    <baseExperienceGain>40</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>25</range>
+      <warmupTime>1.2</warmupTime>
+      <noiseRadius>10</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <strikeDamage>45</strikeDamage>
+        <strikeDamageDef>Thunder_Breathing_Damage</strikeDamageDef>
+        <strikeRadius>2</strikeRadius>
+        <armorPen>0.7</armorPen>
+        <strikeEffecter>AnimeArsenal_ThunderHit</strikeEffecter>
+        <castEffecter>AnimeArsenal_ThunderJump</castEffecter>
+        <hasCone>true</hasCone>
+        <coneDamage>25</coneDamage>
+        <coneDamageDef>Thunder_Breathing_Damage</coneDamageDef>
+        <coneLength>10</coneLength>
+        <coneWidth>3</coneWidth>
+        <coneArmorPen>0.5</coneArmorPen>
+        <coneForward>true</coneForward>
+        <coneCount>1</coneCount>
+        <delayedBurstDamage>20</delayedBurstDamage>
+        <delayedBurstRadius>5</delayedBurstRadius>
+        <delayedBurstDamageDef>Thunder_Breathing_Damage</delayedBurstDamageDef>
+        <delayedBurstDelayTicks>15</delayedBurstDelayTicks>
+        <delayedBurstMaxTargets>8</delayedBurstMaxTargets>
+        <delayedBurstWaveCount>1</delayedBurstWaveCount>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Charges at godlike speed and delivers a singular devastating slash. 45 damage on impact, forward lightning cone, delayed thunder burst. High armor penetration.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <description>55 damage. Cone and burst damage increased. The god's speed grows.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>55</strikeDamage>
+            <strikeDamageDef>Thunder_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>2.5</strikeRadius>
+            <armorPen>0.75</armorPen>
+            <strikeEffecter>AnimeArsenal_ThunderHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_ThunderJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>30</coneDamage>
+            <coneDamageDef>Thunder_Breathing_Damage</coneDamageDef>
+            <coneLength>12</coneLength>
+            <coneWidth>3.5</coneWidth>
+            <coneArmorPen>0.55</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>1</coneCount>
+            <delayedBurstDamage>25</delayedBurstDamage>
+            <delayedBurstRadius>6</delayedBurstRadius>
+            <delayedBurstDamageDef>Thunder_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>15</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>9</delayedBurstMaxTargets>
+            <delayedBurstWaveCount>1</delayedBurstWaveCount>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>650</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>66 damage. Cone splits into two directions. Two-wave burst.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>66</strikeDamage>
+            <strikeDamageDef>Thunder_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>3</strikeRadius>
+            <armorPen>0.8</armorPen>
+            <strikeEffecter>AnimeArsenal_ThunderHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_ThunderJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>35</coneDamage>
+            <coneDamageDef>Thunder_Breathing_Damage</coneDamageDef>
+            <coneLength>13</coneLength>
+            <coneWidth>4</coneWidth>
+            <coneArmorPen>0.6</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>2</coneCount>
+            <coneSpreadArc>45</coneSpreadArc>
+            <delayedBurstDamage>30</delayedBurstDamage>
+            <delayedBurstRadius>6</delayedBurstRadius>
+            <delayedBurstDamageDef>Thunder_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>15</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>10</delayedBurstMaxTargets>
+            <delayedBurstWaveCount>2</delayedBurstWaveCount>
+            <delayedBurstTicksBetweenWaves>15</delayedBurstTicksBetweenWaves>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.3</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>78 damage. Three cone directions. Two expanding burst waves.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>78</strikeDamage>
+            <strikeDamageDef>Thunder_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>3</strikeRadius>
+            <armorPen>0.85</armorPen>
+            <strikeEffecter>AnimeArsenal_ThunderHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_ThunderJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>40</coneDamage>
+            <coneDamageDef>Thunder_Breathing_Damage</coneDamageDef>
+            <coneLength>14</coneLength>
+            <coneWidth>4</coneWidth>
+            <coneArmorPen>0.65</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>3</coneCount>
+            <coneSpreadArc>60</coneSpreadArc>
+            <delayedBurstDamage>35</delayedBurstDamage>
+            <delayedBurstRadius>7</delayedBurstRadius>
+            <delayedBurstDamageDef>Thunder_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>15</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>12</delayedBurstMaxTargets>
+            <delayedBurstWaveCount>2</delayedBurstWaveCount>
+            <delayedBurstTicksBetweenWaves>12</delayedBurstTicksBetweenWaves>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1600</experienceRequired>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.3</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>92 damage. Three cones, three burst waves. The thunder god's presence fills the battlefield.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>92</strikeDamage>
+            <strikeDamageDef>Thunder_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>3.5</strikeRadius>
+            <armorPen>0.88</armorPen>
+            <strikeEffecter>AnimeArsenal_ThunderHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_ThunderJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>46</coneDamage>
+            <coneDamageDef>Thunder_Breathing_Damage</coneDamageDef>
+            <coneLength>15</coneLength>
+            <coneWidth>4.5</coneWidth>
+            <coneArmorPen>0.7</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>3</coneCount>
+            <coneSpreadArc>70</coneSpreadArc>
+            <delayedBurstDamage>40</delayedBurstDamage>
+            <delayedBurstRadius>7</delayedBurstRadius>
+            <delayedBurstDamageDef>Thunder_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>15</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>14</delayedBurstMaxTargets>
+            <delayedBurstWaveCount>3</delayedBurstWaveCount>
+            <delayedBurstTicksBetweenWaves>12</delayedBurstTicksBetweenWaves>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>2200</experienceRequired>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <rangeMultiplier>1.3</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Perfected. 110 damage. Four spreading lightning cones and three massive expanding burst waves. A descent of the Flaming Thunder God at absolute mastery — the battlefield is scorched by fire and split by lightning. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>110</strikeDamage>
+            <strikeDamageDef>Thunder_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>4</strikeRadius>
+            <armorPen>0.92</armorPen>
+            <strikeEffecter>AnimeArsenal_ThunderHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_ThunderJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>55</coneDamage>
+            <coneDamageDef>Thunder_Breathing_Damage</coneDamageDef>
+            <coneLength>16</coneLength>
+            <coneWidth>5</coneWidth>
+            <coneArmorPen>0.75</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>4</coneCount>
+            <coneSpreadArc>90</coneSpreadArc>
+            <delayedBurstDamage>48</delayedBurstDamage>
+            <delayedBurstRadius>8</delayedBurstRadius>
+            <delayedBurstDamageDef>Thunder_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>15</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>16</delayedBurstMaxTargets>
+            <delayedBurstWaveCount>3</delayedBurstWaveCount>
+            <delayedBurstTicksBetweenWaves>10</delayedBurstTicksBetweenWaves>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

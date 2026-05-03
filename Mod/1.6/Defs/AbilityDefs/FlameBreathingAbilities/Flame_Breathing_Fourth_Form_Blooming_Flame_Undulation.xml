@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Flame_Breathing_Fourth_Form_Blooming_Flame_Undulation</defName>
+    <label>Fourth Form: Blooming Flame Undulation</label>
+    <description>Flame erupts from the user in all directions, striking nearby enemies in a rapid blooming burst. At higher mastery each pulse hits harder and leaves enemies burning.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>60</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <radius>5</radius>
+        <damage>18</damage>
+        <damageDef>Flame</damageDef>
+        <repeatCount>3</repeatCount>
+        <damageInterval>8</damageInterval>
+        <affectCaster>false</affectCaster>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <effecter>AnimeArsenal_FlameJump</effecter>
+        <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Three waves of flame bloom outward from the user.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>The bloom spreads further and each wave hits harder.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>5.5</radius>
+            <damage>22</damage>
+            <damageDef>Flame</damageDef>
+            <repeatCount>3</repeatCount>
+            <damageInterval>8</damageInterval>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FlameJump</effecter>
+            <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>Each wave now sets enemies ablaze and Singes them on contact.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>6</radius>
+            <damage>26</damage>
+            <damageDef>Flame</damageDef>
+            <repeatCount>3</repeatCount>
+            <damageInterval>8</damageInterval>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.25</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FlameJump</effecter>
+            <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <radius>6</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.2</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>A fourth wave is added. The undulation never stops.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>6.5</radius>
+            <damage>30</damage>
+            <damageDef>Flame</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>8</damageInterval>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.3</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FlameJump</effecter>
+            <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <radius>6.5</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.25</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>The bloom expands. Each wave scorches deeper, faster.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>7</radius>
+            <damage>34</damage>
+            <damageDef>Flame</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>7</damageInterval>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.35</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FlameJump</effecter>
+            <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <radius>7</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.3</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Mastered. Five waves of absolute flame. Nothing survives the full bloom. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>8</radius>
+            <damage>40</damage>
+            <damageDef>Flame</damageDef>
+            <repeatCount>5</repeatCount>
+            <damageInterval>7</damageInterval>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.4</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FlameJump</effecter>
+            <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <radius>8</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.35</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

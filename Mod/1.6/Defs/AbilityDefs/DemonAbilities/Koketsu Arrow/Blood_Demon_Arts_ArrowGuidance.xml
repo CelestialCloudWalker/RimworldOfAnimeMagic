@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Koketsu_ArrowGuidance</defName>
+    <label>Arrow Guidance</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Channel arrow-reading instincts into an ally, dramatically improving their ranged accuracy for a short time.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>6000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>12</resourceCost>
+    <baseExperienceGain>40</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.3</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>DS_ArrowGuidance_L1</hediffDef>
+        <severityAdjustment>1.0</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>+20% ShootingAccuracy for 1500 ticks. Range 12.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>40</experienceRequired>
+        <cooldownMultiplier>0.917</cooldownMultiplier>
+        <resourceCostMultiplier>1.083</resourceCostMultiplier>
+        <description>+25% ShootingAccuracy for 1700 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowGuidance_L2</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.833</cooldownMultiplier>
+        <resourceCostMultiplier>1.167</resourceCostMultiplier>
+        <description>+30% ShootingAccuracy for 2000 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowGuidance_L3</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <cooldownMultiplier>0.750</cooldownMultiplier>
+        <resourceCostMultiplier>1.250</resourceCostMultiplier>
+        <description>+38% ShootingAccuracy + AimingDelay x0.75 for 2400 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowGuidance_L4</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <cooldownMultiplier>0.667</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <description>+46% ShootingAccuracy + AimingDelay x0.70 for 2900 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowGuidance_L5</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <cooldownMultiplier>0.583</cooldownMultiplier>
+        <resourceCostMultiplier>1.417</resourceCostMultiplier>
+        <description>Perfected. +55% ShootingAccuracy, AimingDelay x0.65, +15% MeleeHitChance for 2900 ticks. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowGuidance_L6</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

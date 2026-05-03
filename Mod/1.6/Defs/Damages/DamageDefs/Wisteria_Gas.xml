@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef>
+    <defName>AA_WisteriaToxCloud</defName>
+    <label>wisteria toxin cloud</label>
+    <description>A billowing cloud of wisteria toxin. Suppresses demonic regeneration on contact.</description>
+    <thingClass>RimWorld.Gas</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Gas</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <neverMultiSelect>true</neverMultiSelect>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Things/Gas/GasCloudThickA</texPath>
+      <graphicClass>Graphic_Gas</graphicClass>
+      <color>(110, 55, 185)</color>
+    </graphicData>
+    <gas>
+      <expireSeconds>
+        <min>30</min>
+        <max>50</max>
+      </expireSeconds>
+      <rotationSpeed>3</rotationSpeed>
+    </gas>
+  </ThingDef>
+
+  <DamageDef>
+    <defName>WisteriaToxSpray</defName>
+    <label>wisteria toxin</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>false</externalViolence>
+    <hediff>AA_WisteriaWound</hediff>
+    <hediffSkin>AA_WisteriaWound</hediffSkin>
+    <armorCategory>Sharp</armorCategory>
+    <harmsHealth>true</harmsHealth>
+    <defaultDamage>2</defaultDamage>
+    <makesBlood>false</makesBlood>
+  </DamageDef>
+
+</Defs>

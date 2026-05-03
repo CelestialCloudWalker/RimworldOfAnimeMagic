@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Frost_Breathing_Form7_RagingBlizzardCrimsonStrikes</defName>
+    <label>Seventh Form: Raging Blizzard, Crimson Strikes</label>
+    <description>The user erupts into a frenzied series of slashes that carve through everything in reach, then unleashes a raging blizzard that hammers all enemies at greater range. The blade draws crimson close; the cold punishes everything beyond.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>700</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>418</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>17</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>5</noiseRadius>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+        <damage>20</damage>
+        <radius>3.0</radius>
+        <damageDef>Frost_Breathing_Damage</damageDef>
+        <repeatCount>3</repeatCount>
+        <damageInterval>7</damageInterval>
+        <maxTargets>12</maxTargets>
+        <affectCaster>false</affectCaster>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <effecter>AnimeArsenal_FrostHit</effecter>
+        <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+        <damage>10</damage>
+        <radius>6.0</radius>
+        <damageDef>Frost_Breathing_Damage</damageDef>
+        <repeatCount>3</repeatCount>
+        <damageInterval>7</damageInterval>
+        <maxTargets>20</maxTargets>
+        <affectCaster>false</affectCaster>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <effecter>AnimeArsenal_FrostHit</effecter>
+        <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+        <severityAdjustment>0.45</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>3 crimson slashes (20 dmg each) close-range. 3 blizzard hits (10 dmg each) to r6.0. Applies ChillingSting to primary target.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>260</experienceRequired>
+        <resourceCostMultiplier>1.12</resourceCostMultiplier>
+        <description>Crimson strikes bite harder. The blizzard pushes further out.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>24</damage>
+            <radius>3.0</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>3</repeatCount>
+            <damageInterval>7</damageInterval>
+            <maxTargets>12</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>12</damage>
+            <radius>6.5</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>3</repeatCount>
+            <damageInterval>7</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.52</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>A fourth slash joins each wave. Crimson reach widens. Frost Bitten near-reliable from the ChillingSting alone.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>28</damage>
+            <radius>3.5</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>6</damageInterval>
+            <maxTargets>12</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>14</damage>
+            <radius>7.0</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>6</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.60</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>880</experienceRequired>
+        <resourceCostMultiplier>1.28</resourceCostMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>Crimson and blizzard both hit harder. Deep Freeze reachable on a combo with another form.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>33</damage>
+            <radius>3.5</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>6</damageInterval>
+            <maxTargets>12</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>17</damage>
+            <radius>7.5</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>6</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.68</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1250</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>The blizzard swallows an entire squad. Crimson strikes carve deep into armor. Deep Freeze near-guaranteed on a combo.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>38</damage>
+            <radius>4.0</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>12</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>20</damage>
+            <radius>8.0</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>4</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.78</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1800</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>Perfected. Five crimson slashes carve through the nearest foes; the blizzard punishes everything beyond. Frozen Through on a combo. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Inner">
+            <damage>45</damage>
+            <radius>4.0</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>5</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>12</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst_Outer">
+            <damage>24</damage>
+            <radius>9.0</radius>
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <repeatCount>5</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>20</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FrostHit</effecter>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.90</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

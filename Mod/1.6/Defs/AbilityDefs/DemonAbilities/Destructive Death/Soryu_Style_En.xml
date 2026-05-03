@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Soryu_Style_Technique_1</defName>
+    <label>Soryu Style</label>
+    <description>Imbues attacks with Soryu Style technique.</description>
+    <enchantHediff>Soryu_Style_Hedif_1</enchantHediff>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Soryu_Style_Technique_2</defName>
+    <label>Soryu Style</label>
+    <description>Imbues attacks with Soryu Style technique.</description>
+    <enchantHediff>Soryu_Style_Hedif_2</enchantHediff>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Soryu_Style_Technique_3</defName>
+    <label>Soryu Style</label>
+    <description>Imbues attacks with Soryu Style technique.</description>
+    <enchantHediff>Soryu_Style_Hedif_3</enchantHediff>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Soryu_Style_Technique_4</defName>
+    <label>Soryu Style</label>
+    <description>Imbues attacks with Soryu Style technique.</description>
+    <enchantHediff>Soryu_Style_Hedif_4</enchantHediff>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Soryu_Style_Technique_5</defName>
+    <label>Soryu Style</label>
+    <description>Imbues attacks with Soryu Style technique.</description>
+    <enchantHediff>Soryu_Style_Hedif_5</enchantHediff>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Soryu_Style_Technique_6</defName>
+    <label>Soryu Style</label>
+    <description>Imbues attacks with Soryu Style technique.</description>
+    <enchantHediff>Soryu_Style_Hedif_6</enchantHediff>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+</Defs>

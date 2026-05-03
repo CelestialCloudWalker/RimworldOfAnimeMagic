@@ -2,13 +2,18 @@
 <Defs>
 
   <AnimeArsenal.EnchantDef>
-    <defName>Thunder_Blade_Technique_Base</defName>
+    <defName>Thunder_Blade_Technique</defName>
     <label>Thunder Blade Technique</label>
     <description>A technique that allows a Thunder Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Thunder_Heart</enchantHediff>
     <resourceGene>Gene_ThunderBreath</resourceGene>
-    <ticksBetweenCost>380</ticksBetweenCost>
+    <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ThunderBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ThunderBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Thunder</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Thunder</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_ThunderHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -17,8 +22,13 @@
     <description>A technique that allows a Thunder Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Thunder_Heart_LevelTwo</enchantHediff>
     <resourceGene>Gene_ThunderBreath</resourceGene>
-    <ticksBetweenCost>340</ticksBetweenCost>
+    <ticksBetweenCost>410</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ThunderBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ThunderBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Thunder</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Thunder</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_ThunderHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -27,8 +37,13 @@
     <description>A technique that allows a Thunder Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Thunder_Heart_LevelThree</enchantHediff>
     <resourceGene>Gene_ThunderBreath</resourceGene>
-    <ticksBetweenCost>300</ticksBetweenCost>
-    <resourceCostPerTick>4</resourceCostPerTick>
+    <ticksBetweenCost>370</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ThunderBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ThunderBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Thunder</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Thunder</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_ThunderHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -37,8 +52,13 @@
     <description>A technique that allows a Thunder Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Thunder_Heart_LevelFour</enchantHediff>
     <resourceGene>Gene_ThunderBreath</resourceGene>
-    <ticksBetweenCost>260</ticksBetweenCost>
-    <resourceCostPerTick>4</resourceCostPerTick>
+    <ticksBetweenCost>330</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ThunderBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ThunderBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Thunder</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Thunder</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_ThunderHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -47,8 +67,13 @@
     <description>A technique that allows a Thunder Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Thunder_Heart_LevelFive</enchantHediff>
     <resourceGene>Gene_ThunderBreath</resourceGene>
-    <ticksBetweenCost>220</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
+    <ticksBetweenCost>290</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ThunderBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ThunderBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Thunder</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Thunder</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_ThunderHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -57,7 +82,12 @@
     <description>A technique that allows a Thunder Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Thunder_Heart_LevelSix</enchantHediff>
     <resourceGene>Gene_ThunderBreath</resourceGene>
-    <ticksBetweenCost>180</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
+    <ticksBetweenCost>250</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ThunderBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ThunderBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Thunder</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Thunder</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_ThunderHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

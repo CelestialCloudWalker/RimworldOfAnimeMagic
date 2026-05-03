@@ -35,4 +35,11 @@
     <tattooType>Face</tattooType>
     <category>Tribal</category>
   </TattooDef>
+  <TattooDef>
+    <defName>DS_Nezuko_FlowerTattoo</defName>
+    <label>Giyu Breathing Mark</label>
+    <texPath>Tattoo/Mark_TomiokaGiyu/normal</texPath>
+    <tattooType>Face</tattooType>
+    <category>Tribal</category>
+  </TattooDef>
 </Defs>

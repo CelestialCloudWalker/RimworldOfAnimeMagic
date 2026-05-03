@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>WindBreathing_Form9_IdatenTyphoon</defName>
+    <label>Ninth Form: Idaten Typhoon</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>Leap to a position and unleash a devastating typhoon on landing. Cones of wind blast outward in multiple directions, leaving behind howling gale zones that shred anything caught inside.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>70</resourceCost>
+    <baseExperienceGain>14</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <strikeDamage>40</strikeDamage>
+        <strikeRadius>1.5</strikeRadius>
+        <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+
+        <hasCone>true</hasCone>
+        <coneDamage>55</coneDamage>
+        <coneLength>14</coneLength>
+        <coneWidth>7</coneWidth>
+        <coneArmorPen>0.30</coneArmorPen>
+        <coneCount>2</coneCount>
+        <coneSpreadFull>false</coneSpreadFull>
+        <coneSpreadArc>180</coneSpreadArc>
+        <coneEffecter>AnimeArsenal_WindHit</coneEffecter>
+        <coneHitEffecter>AnimeArsenal_WindHit</coneHitEffecter>
+
+        <midHazardDef>WindForm8_GaleHazard_LOne</midHazardDef>
+        <endHazardDef>WindForm8_GaleHazard_LOne</endHazardDef>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Land and release two blasts of typhoon wind. Gale zones linger at the mid and far point of each blast.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <description>Three wind blasts fan from the landing point, each leaving gale zones behind.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>45</strikeDamage>
+            <strikeRadius>1.5</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>65</coneDamage>
+            <coneLength>14</coneLength>
+            <coneWidth>7</coneWidth>
+            <coneArmorPen>0.33</coneArmorPen>
+            <coneCount>3</coneCount>
+            <coneSpreadFull>false</coneSpreadFull>
+            <coneSpreadArc>180</coneSpreadArc>
+            <coneEffecter>AnimeArsenal_WindHit</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_WindHit</coneHitEffecter>
+            <midHazardDef>WindForm8_GaleHazard_LTwo</midHazardDef>
+            <endHazardDef>WindForm8_GaleHazard_LTwo</endHazardDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <description>Four blasts, wider cones. Gale zones intensify.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>52</strikeDamage>
+            <strikeRadius>1.8</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>75</coneDamage>
+            <coneLength>15</coneLength>
+            <coneWidth>8</coneWidth>
+            <coneArmorPen>0.36</coneArmorPen>
+            <coneCount>4</coneCount>
+            <coneSpreadFull>false</coneSpreadFull>
+            <coneSpreadArc>240</coneSpreadArc>
+            <coneEffecter>AnimeArsenal_WindHit</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_WindHit</coneHitEffecter>
+            <midHazardDef>WindForm8_GaleHazard_LThree</midHazardDef>
+            <endHazardDef>WindForm8_GaleHazard_LThree</endHazardDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <description>Four blasts across a wide arc, tearing through armor. Stronger gale zones.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>60</strikeDamage>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>88</coneDamage>
+            <coneLength>16</coneLength>
+            <coneWidth>9</coneWidth>
+            <coneArmorPen>0.40</coneArmorPen>
+            <coneCount>4</coneCount>
+            <coneSpreadFull>false</coneSpreadFull>
+            <coneSpreadArc>300</coneSpreadArc>
+            <coneEffecter>AnimeArsenal_WindHit</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_WindHit</coneHitEffecter>
+            <midHazardDef>WindForm8_GaleHazard_LFour</midHazardDef>
+            <endHazardDef>WindForm8_GaleHazard_LFour</endHazardDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1350</experienceRequired>
+        <description>Five blasts ring the landing point. Gale zones form a deadly perimeter.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>70</strikeDamage>
+            <strikeRadius>2.2</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>102</coneDamage>
+            <coneLength>17</coneLength>
+            <coneWidth>10</coneWidth>
+            <coneArmorPen>0.44</coneArmorPen>
+            <coneCount>5</coneCount>
+            <coneSpreadFull>true</coneSpreadFull>
+            <coneEffecter>AnimeArsenal_WindHit</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_WindHit</coneHitEffecter>
+            <midHazardDef>WindForm8_GaleHazard_LFive</midHazardDef>
+            <endHazardDef>WindForm8_GaleHazard_LFive</endHazardDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1950</experienceRequired>
+        <description>Perfected. Six blasts in a full circle, each leaving gale zones that shred any formation. Idaten — the god of swift wind. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>82</strikeDamage>
+            <strikeRadius>2.5</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>120</coneDamage>
+            <coneLength>18</coneLength>
+            <coneWidth>11</coneWidth>
+            <coneArmorPen>0.50</coneArmorPen>
+            <coneCount>6</coneCount>
+            <coneSpreadFull>true</coneSpreadFull>
+            <coneEffecter>AnimeArsenal_WindHit</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_WindHit</coneHitEffecter>
+            <midHazardDef>WindForm8_GaleHazard_LSix</midHazardDef>
+            <endHazardDef>WindForm8_GaleHazard_LSix</endHazardDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

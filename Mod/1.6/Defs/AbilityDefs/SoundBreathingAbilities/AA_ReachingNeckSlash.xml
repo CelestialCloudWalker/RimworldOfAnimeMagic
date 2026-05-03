@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>AA_ReachingNeckSlash</defName>
+    <label>Reaching Neck Slash</label>
+    <description>A whip-crack slash that strikes from unusual range, aimed directly at the neck. Against demons, the results are often immediately fatal.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>35</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>6</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <dashSpeed>4.0</dashSpeed>
+        <damageType>Cut</damageType>
+        <initialStrikeDamage>20</initialStrikeDamage>
+        <initialStrikeArmorPen>0.3</initialStrikeArmorPen>
+        <targetBodyParts>
+          <li>Neck</li>
+        </targetBodyParts>
+        <vitalOrganDamage>120</vitalOrganDamage>
+        <vitalOrganArmorPen>0.5</vitalOrganArmorPen>
+        <targetGene>BloodDemonArt</targetGene>
+        <castEffecter>AnimeArsenal_SoundJump</castEffecter>
+        <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>20 strike damage + 120 neck damage on demons. Range 6.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>25 strike + 150 neck damage.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>4.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>25</initialStrikeDamage>
+            <initialStrikeArmorPen>0.35</initialStrikeArmorPen>
+            <targetBodyParts>
+              <li>Neck</li>
+            </targetBodyParts>
+            <vitalOrganDamage>150</vitalOrganDamage>
+            <vitalOrganArmorPen>0.55</vitalOrganArmorPen>
+            <targetGene>BloodDemonArt</targetGene>
+            <castEffecter>AnimeArsenal_SoundJump</castEffecter>
+            <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>30 strike + 200 neck damage. Virtually guaranteed decapitation.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>4.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>30</initialStrikeDamage>
+            <initialStrikeArmorPen>0.4</initialStrikeArmorPen>
+            <targetBodyParts>
+              <li>Neck</li>
+            </targetBodyParts>
+            <vitalOrganDamage>200</vitalOrganDamage>
+            <vitalOrganArmorPen>0.6</vitalOrganArmorPen>
+            <targetGene>BloodDemonArt</targetGene>
+            <castEffecter>AnimeArsenal_SoundJump</castEffecter>
+            <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

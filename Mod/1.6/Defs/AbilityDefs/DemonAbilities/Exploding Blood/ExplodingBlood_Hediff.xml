@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>DS_BloodMarked_Hediff</defName>
+    <label>blood marked</label>
+    <description>Demon blood has been flicked onto this pawn. The blood pulses with energy, ready to detonate.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.85, 0.15, 0.25)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>DS_RegenDown_2000</defName>
+    <label>regen suppression</label>
+    <description>Demon blood fire burns through regenerative tissue, slowing healing.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.4, 0.1)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>0.20</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_RegenDown_4000</defName>
+    <label>regen suppression</label>
+    <description>Demon blood fire deeply burns through regenerative tissue, heavily suppressing healing for an extended period.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.25, 0.05)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>0.10</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>DS_Nezuko_CleansingFlame_L1</defName>
+    <label>cleansing flame</label>
+    <description>Pink demon fire surges through the body, overwhelming debilitating effects with raw regenerative force.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.6, 0.8)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>4.0</InjuryHealingFactor>
+          <ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.15</ArmorRating_Blunt>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_CleansingFlame_L2</defName>
+    <label>cleansing flame</label>
+    <description>Pink demon fire surges more intensely, pushing through debuffs with greater force.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.6, 0.8)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>4.5</InjuryHealingFactor>
+          <ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.15</ArmorRating_Blunt>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_CleansingFlame_L3</defName>
+    <label>cleansing flame</label>
+    <description>Intense pink demon fire burns through all debuffs, restoring clarity and resilience.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.55, 0.75)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>700</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>5.0</InjuryHealingFactor>
+          <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.20</ArmorRating_Blunt>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_CleansingFlame_L4</defName>
+    <label>cleansing flame</label>
+    <description>Demon fire burns at higher intensity, covering more ground and pushing through stronger debuffs.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.55, 0.75)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>700</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>5.0</InjuryHealingFactor>
+          <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.20</ArmorRating_Blunt>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_CleansingFlame_L5</defName>
+    <label>cleansing flame</label>
+    <description>Nezuko's demon fire erupts in a wave, washing over nearby allies and burning away debilitating effects from all it touches.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.5, 0.70)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>6.0</InjuryHealingFactor>
+          <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.25</ArmorRating_Blunt>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_CleansingFlame_L6</defName>
+    <label>cleansing flame</label>
+    <description>Perfected cleansing flame. A wide eruption of demon fire that overwhelms all debuffs and leaves allies burning with renewed strength.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.45, 0.65)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>6.0</InjuryHealingFactor>
+          <ArmorRating_Sharp>1.30</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.30</ArmorRating_Blunt>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>DS_Nezuko_DemonicTransformation_L1</defName>
+    <label>demonic transformation</label>
+    <description>Nezuko's demon blood surges. Her body grows stronger and regenerates at frightening speed.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.5, 0.7)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>3.0</InjuryHealingFactor>
+          <MeleeDamageFactor>1.10</MeleeDamageFactor>
+          <ArmorRating_Sharp>1.10</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.10</ArmorRating_Blunt>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_DemonicTransformation_L2</defName>
+    <label>demonic transformation</label>
+    <description>Nezuko's demon blood surges more powerfully. Regeneration accelerates further.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.5, 0.7)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>3.5</InjuryHealingFactor>
+          <MeleeDamageFactor>1.10</MeleeDamageFactor>
+          <ArmorRating_Sharp>1.10</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.10</ArmorRating_Blunt>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_DemonicTransformation_L3</defName>
+    <label>demonic transformation</label>
+    <description>Nezuko's demon blood surges. Flowery tattoos bloom across her skin as her power grows.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.5, 0.7)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>DS_Nezuko_FlowerTattoo</tattooDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>3.5</InjuryHealingFactor>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+          <ArmorRating_Sharp>1.10</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.10</ArmorRating_Blunt>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_DemonicTransformation_L4</defName>
+    <label>demonic transformation</label>
+    <description>Nezuko's demon blood surges at full strength. Resistance hardened.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.5, 0.7)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>DS_Nezuko_FlowerTattoo</tattooDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>3.5</InjuryHealingFactor>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+          <ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.15</ArmorRating_Blunt>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_DemonicTransformation_L5</defName>
+    <label>demonic transformation</label>
+    <description>Nezuko's demon blood reaches its peak surge. Regeneration is almost instant.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.45, 0.65)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>DS_Nezuko_FlowerTattoo</tattooDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>5.0</InjuryHealingFactor>
+          <MeleeDamageFactor>1.20</MeleeDamageFactor>
+          <ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.15</ArmorRating_Blunt>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_DemonicTransformation_L6</defName>
+    <label>demonic transformation</label>
+    <description>Nezuko's demon blood reaches its absolute peak. Nothing can stop her regeneration.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.35, 0.55)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_ApplyFaceTattoo">
+        <tattooDef>DS_Nezuko_FlowerTattoo</tattooDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>5.5</InjuryHealingFactor>
+          <MeleeDamageFactor>1.22</MeleeDamageFactor>
+          <ArmorRating_Sharp>1.165</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.165</ArmorRating_Blunt>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>DS_Nezuko_BrightRedWeapon_L1</defName>
+    <label>bright red weapon</label>
+    <description>Nezuko's blood ignites in pink-red flame, empowering her strikes at the cost of her own blood.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.3, 0.5)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>2</damageAmount>
+        <intervalTicks>60</intervalTicks>
+        <damageDef>Cut</damageDef>
+      </li>
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>DS_RegenDown_2000</hediffDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_BrightRedWeapon_L2</defName>
+    <label>bright red weapon</label>
+    <description>Nezuko's blood ignites more intensely. Her strikes hit harder.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.3, 0.5)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>2</damageAmount>
+        <intervalTicks>60</intervalTicks>
+        <damageDef>Cut</damageDef>
+      </li>
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>DS_RegenDown_2000</hediffDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.18</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_BrightRedWeapon_L3</defName>
+    <label>bright red weapon</label>
+    <description>Nezuko's blood burns hotter. Demon regeneration is suppressed far longer on hit.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.25, 0.45)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>2</damageAmount>
+        <intervalTicks>60</intervalTicks>
+        <damageDef>Cut</damageDef>
+      </li>
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>DS_RegenDown_4000</hediffDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.20</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_BrightRedWeapon_L4</defName>
+    <label>bright red weapon</label>
+    <description>Nezuko has refined the technique. She bleeds less while maintaining full power.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.25, 0.45)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>1</damageAmount>
+        <intervalTicks>60</intervalTicks>
+        <damageDef>Cut</damageDef>
+      </li>
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>DS_RegenDown_4000</hediffDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.20</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_BrightRedWeapon_L5</defName>
+    <label>bright red weapon</label>
+    <description>Nezuko's blood burns at peak intensity. Demons struck by her attacks struggle to regenerate for a long time.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.2, 0.4)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>1</damageAmount>
+        <intervalTicks>60</intervalTicks>
+        <damageDef>Cut</damageDef>
+      </li>
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>DS_RegenDown_4000</hediffDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.20</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Nezuko_BrightRedWeapon_L6</defName>
+    <label>bright red weapon</label>
+    <description>Perfected bright red weapon technique. Maximum striking power with minimal self-cost. Demons hit cannot regenerate for an extended time.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.15, 0.35)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>1</damageAmount>
+        <intervalTicks>90</intervalTicks>
+        <damageDef>Cut</damageDef>
+      </li>
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>DS_RegenDown_4000</hediffDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.25</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

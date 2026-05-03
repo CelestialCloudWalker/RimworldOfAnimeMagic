@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Blood_Enhance_Technique</defName>
     <label>Blood Enhance Technique</label>
@@ -11,7 +11,7 @@
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Blood_Enhance_Technique_LevelTwo</defName>
     <label>LevelTwo Blood Technique</label>
@@ -22,7 +22,7 @@
     <resourceCostPerTick>5</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Blood_Enhance_Technique_LevelThree</defName>
     <label>LevelThree Blood Technique</label>
@@ -33,7 +33,7 @@
     <resourceCostPerTick>4</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
 
-  
+
   <AnimeArsenal.EnchantDef>
     <defName>Blood_Enhance_Technique_Master</defName>
     <label>Master Blood Technique</label>
@@ -43,4 +43,6 @@
     <ticksBetweenCost>300</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
   </AnimeArsenal.EnchantDef>
+
+
 </Defs>

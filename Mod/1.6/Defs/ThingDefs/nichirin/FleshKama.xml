@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>DS_FleshKama</defName>
+    <label>flesh kama</label>
+    <description>A warped version of a Nichirin.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/FleshKama</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <equipmentType>Primary</equipmentType>
+    <costList>
+      <Scarlet_Steel>20</Scarlet_Steel>
+    </costList>
+    <techLevel>Medieval</techLevel>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <recipeMaker>
+      <researchPrerequisite>AA_FleshBladeResearch</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>1.5</Mass>
+    </statBases>
+    <equippedAngleOffset>-50</equippedAngleOffset>
+    <equippedDistanceOffset>0.2</equippedDistanceOffset>
+    <tools>
+      <li>
+        <label>blade back</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>1.1</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="AnimeArsenal.DrawOffsetExt">
+        <offsetEast>(0.2, 0, 0.5)</offsetEast>
+        <offsetWest>(-0.05, 0, -0.3)</offsetWest>
+        <offsetNorth>(0, 0, -0.05)</offsetNorth>
+        <offsetSouth>(0, -0.1, -0.1)</offsetSouth>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DS_FleshKamaBound</defName>
+    <label>flesh kama bound</label>
+    <description>Gyutaro's flesh kama exists as an extension of himself.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="EMF.HediffCompProperties_BoundWeapon" />
+    </comps>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

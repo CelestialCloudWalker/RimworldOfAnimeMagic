@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>MistBreathing_Vanish</defName>
+    <label>Vanish</label>
+    <description>Obscured within a scattering cloud of mist and dust, the user briefly disappears from sight.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <initialSeverity>1.0</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+        <fadeDurationTicks>50</fadeDurationTicks>
+        <affectedByDisruptor>false</affectedByDisruptor>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>vanished</label>
+        <minSeverity>0.0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MistBreathing_ObscuringVeil</defName>
+    <label>Obscuring Veil</label>
+    <description>Wrapped in a thick shroud of churned mist and scattered dust, the user becomes nearly impossible to perceive.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <initialSeverity>1.0</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+        <fadeDurationTicks>50</fadeDurationTicks>
+        <affectedByDisruptor>false</affectedByDisruptor>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>obscured</label>
+        <minSeverity>0.0</minSeverity>
+        <statFactors>
+          <MeleeDodgeChance>1.25</MeleeDodgeChance>
+          <RangedCooldownFactor>0.85</RangedCooldownFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MistBreathing_Disoriented</defName>
+    <label>Disoriented</label>
+    <description>Dust and mist clog the senses — vision blurs, footing wavers, and every swing feels like reaching through fog.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <initialSeverity>1.0</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>disoriented</label>
+        <minSeverity>0.0</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>-0.20</MeleeHitChance>
+          <RangedCooldownFactor>0.30</RangedCooldownFactor>
+        </statOffsets>
+        <statFactors>
+          <MeleeCooldownFactor>1.30</MeleeCooldownFactor>
+          <ShootingAccuracyPawn>0.75</ShootingAccuracyPawn>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MistBreathing_Misdirection</defName>
+    <label>Misdirection</label>
+    <description>The user moves with deceptive, mist-like unpredictability.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>faint haze</label>
+        <minSeverity>0.0</minSeverity>
+        <statOffsets>
+          <MoveSpeed>0.05</MoveSpeed>
+          <MeleeHitChance>-0.04</MeleeHitChance>
+        </statOffsets>
+      </li>
+      <li>
+        <label>low clouds</label>
+        <minSeverity>0.30</minSeverity>
+        <statOffsets>
+          <MoveSpeed>0.12</MoveSpeed>
+          <MeleeHitChance>-0.09</MeleeHitChance>
+        </statOffsets>
+      </li>
+      <li>
+        <label>distant haze</label>
+        <minSeverity>0.60</minSeverity>
+        <statOffsets>
+          <MoveSpeed>0.22</MoveSpeed>
+          <MeleeHitChance>-0.16</MeleeHitChance>
+        </statOffsets>
+      </li>
+      <li>
+        <label>shrouded</label>
+        <minSeverity>0.85</minSeverity>
+        <statOffsets>
+          <MoveSpeed>0.35</MoveSpeed>
+          <MeleeHitChance>-0.25</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

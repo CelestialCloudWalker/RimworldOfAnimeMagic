@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Beast_Breathing_SecondFang_Slice</defName>
+    <label>Beast Breathing: Second Fang — Slice</label>
+    <description>Both blades swing simultaneously in opposite diagonals, sending two crossing slashes toward the target in an X-shaped cut. The twin arcs converge at the point of impact — strike and counter-strike in the same instant.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>360</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>410</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>22</resourceCost>
+    <baseExperienceGain>14</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>0.35</warmupTime>
+      <noiseRadius>2</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+        <projectileDef>Beast_Breathing_SecondFang_Projectile_LOne</projectileDef>
+        <projectileCount>2</projectileCount>
+        <spreadAngle>20</spreadAngle>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Two crossing slashes fired toward the target in an X pattern. Each slash hits for 12 damage with a small AOE on impact.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>130</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <rangeMultiplier>1.15</rangeMultiplier>
+        <cooldownMultiplier>0.92</cooldownMultiplier>
+        <description>Each slash hits for 15 damage. Slashes travel farther and faster. The X widens slightly.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>Beast_Breathing_SecondFang_Projectile_LTwo</projectileDef>
+            <projectileCount>2</projectileCount>
+            <spreadAngle>22</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>290</experienceRequired>
+        <resourceCostMultiplier>1.28</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>Each slash hits for 19 damage. AOE radius grows. Armor pen increases sharply.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>Beast_Breathing_SecondFang_Projectile_LThree</projectileDef>
+            <projectileCount>2</projectileCount>
+            <spreadAngle>24</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>490</experienceRequired>
+        <resourceCostMultiplier>1.40</resourceCostMultiplier>
+        <rangeMultiplier>1.35</rangeMultiplier>
+        <cooldownMultiplier>0.83</cooldownMultiplier>
+        <description>Each slash hits for 24 damage. The crossing arcs cover a wider impact zone. Hard to sidestep at range.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>Beast_Breathing_SecondFang_Projectile_LFour</projectileDef>
+            <projectileCount>2</projectileCount>
+            <spreadAngle>26</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>730</experienceRequired>
+        <resourceCostMultiplier>1.50</resourceCostMultiplier>
+        <rangeMultiplier>1.45</rangeMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Each slash hits for 30 damage. The twin arcs blur into a single tearing motion. Devastating at mid-range.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>Beast_Breathing_SecondFang_Projectile_LFive</projectileDef>
+            <projectileCount>2</projectileCount>
+            <spreadAngle>28</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1080</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <rangeMultiplier>1.50</rangeMultiplier>
+        <cooldownMultiplier>0.78</cooldownMultiplier>
+        <description>Perfected. Each slash hits for 38 damage across a massive impact radius. The X-cut arrives before the target can react — two blades, one motion, nowhere to go. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>Beast_Breathing_SecondFang_Projectile_LSix</projectileDef>
+            <projectileCount>2</projectileCount>
+            <spreadAngle>30</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

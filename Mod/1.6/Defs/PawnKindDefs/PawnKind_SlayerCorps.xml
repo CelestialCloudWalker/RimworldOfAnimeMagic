@@ -361,11 +361,150 @@
   </PawnKindDef>
 
   <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_BeastHashira_PK</defName>
+    <label>Beast Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Beast_Breathing_EighthForm_ExplosiveRush</li>
+      <li>Beast_Breathing_FifthFang_CrazyCutting</li>
+      <li>Beast_Breathing_FirstFangPierce</li>
+      <li>Beast_Breathing_FourthFang_SliceNDice</li>
+      <li>Beast_Breathing_Ninth_Fang_Frenzied_Hunt</li>
+      <li>Beast_Breathing_SecondFang_Slice</li>
+      <li>Beast_Breathing_SeventhForm_SpatialAwareness</li>
+      <li>Beast_Breathing_Sixth_Fang_Pounce</li>
+      <li>Beast_Breathing_TenthFang_WhirlingFangs</li>
+      <li>Beast_Breathing_ThirdFang_Devour</li>
+      <li>Eleventh_Fang_Scatter_Fang</li>
+      <li>Beast_Breathing_Savage_Instinct</li>
+    </abilities>
+    <titleSelectOne>
+      <li>AA_BeastHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_BeastBreath_Xeno>1</AA_BeastBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_FrostHashira_PK</defName>
+    <label>Frost Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Frost_Breathing_BlisteringEightfoldStings</li>
+      <li>Frost_Breathing_ColdShiveringChatters</li>
+      <li>Frost_Breathing_DarkBlizzardSweep</li>
+      <li>Frost_Breathing_Form4_LamentationPunishment</li>
+      <li>Frost_Breathing_Form5_EndlessGroaningTorturousCleansing</li>
+      <li>Frost_Breathing_Form6_BlueSkinWaterLily</li>
+      <li>Frost_Breathing_Form7_RagingBlizzardCrimsonStrikes</li>
+      <li>Frost_Breathing_Frost_Breathing_Strike</li>
+      <li>Frost_Breathing_Glacial_Nichirin</li>
+      <li>Frost_Breathing_Permafrost_Arc</li>
+      <li>Frost_Breathing_Second_Form_Glacial_Dance</li>
+      <li>Frost_Breathing_Third_Form_Shattering_Froste</li>
+    </abilities>
+    <titleSelectOne>
+      <li>AA_FrostHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_FrostBreath_Xeno>1</AA_FrostBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_ThunderHashira_PK</defName>
+    <label>Thunder Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Fifth_Form_Heat_Lightning</li>
+      <li>First_Form_Thunderclap_and_Flash</li>
+      <li>Second_Form_Rice_Spirit</li>
+      <li>Thunder_Breathing_Slash</li>
+      <li>Third_Form_Thunder_Swarm</li>
+      <li>Thunder_Breathing_Distant_Thunder</li>
+      <li>Thunder_Breathing_Flaming_Thunder_God</li>
+      <li>Thunder_Breathing_Lightning_Nichirin</li>
+    </abilities>
+    <titleSelectOne>
+      <li>AA_ThunderHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_ThunderBreath_Xeno>1</AA_ThunderBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
+    <defName>AA_FlowerHashira_PK</defName>
+    <label>Flower Hashira</label>
+    <combatPower>8000</combatPower>
+    <apparelMoney>15000~25000</apparelMoney>
+    <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>First_Form_Cloven_Camellia</li>
+      <li>Flower_Breathing_Blooming_Nichirin</li>
+      <li>FlowerBreathing_CrimsonHanagoromo</li>
+      <li>FlowerBreathing_FifthForm_PeoniesOfFutility</li>
+      <li>FlowerBreathing_FinalForm_EquinoctialVermilionEye</li>
+      <li>Second_Form_Blooming_Tempest</li>
+      <li>FlowerBreathing_SecondForm_HonorableShadowPlum</li>
+      <li>FlowerBreathing_SixthForm_WhirlingPeach</li>
+      <li>Third_Form_Drifting_Hanafubuk</li>
+    </abilities>
+    <titleSelectOne>
+      <li>AA_FlowerHashira</li>
+    </titleSelectOne>
+    <xenotypeSet>
+      <xenotypeChances>
+        <AA_FlowerBreath_Xeno>1</AA_FlowerBreath_Xeno>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired>
+      <li>DemonSlayerCorp_Haori</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SlayerCorpsBase">
     <defName>AA_FlameHashira_PK</defName>
     <label>Flame Hashira</label>
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Flame_Breathing_Burning_Parry</li>
+      <li>Flame_Breathing_Fifth_Form_Flame_Tiger</li>
+      <li>Flame_Breathing_First_Form_Unknowing_Fire</li>
+      <li>Flame_Breathing_Fourth_Form_Blooming_Flame_Undulation</li>
+      <li>Flame_Breathing_Ninth_Form_Purgatory</li>
+      <li>Flame_Breathing_Scarlet_Nichirin</li>
+      <li>Flame_Breathing_Second_Form_Rising_Scorching_Sun</li>
+      <li>Flame_Breathing_Set_Your_Hearts_Ablaze</li>
+      <li>Flame_Breathing_Seventh_Form_Sunfire_Burst</li>
+      <li>Flame_Breathing_Scorching_Arc</li>
+      <li>Flame_Breathing_Sixth_Form_Embers_of_Fury</li>
+      <li>Flame_Breathing_Third_Form_Blazing_Universe</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_FlameHashira</li>
     </titleSelectOne>
@@ -385,6 +524,22 @@
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Water_Breathing_WaterWheel</li>
+      <li>Water_Breathing_FlowingDance</li>
+      <li>Water_Breathing_StrikingTide</li>
+      <li>Water_Breathing_BlessedRain</li>
+      <li>Water_Breathing_DropRippleThrust</li>
+      <li>Water_Breathing_WaterfallBasin</li>
+      <li>Water_Breathing_SplashingWaterFlow</li>
+      <li>Water_Breathing_DeadCalm</li>
+      <li>Dye_Weapon_Water_Colored</li>
+      <li>Water_Breathing_Disperse</li>
+      <li>Water_Breathing_Multi_Strike</li>
+      <li>Water_Breathing_Reflect</li>
+      <li>Water_Breathing_Slash</li>
+      <li>Water_Breathing_Strike</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_WaterHashira</li>
     </titleSelectOne>
@@ -404,6 +559,18 @@
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Dye_Weapon_Wind_Colored</li>
+      <li>WindBreathing_Form1_DustWhirlwindCutter</li>
+      <li>WindBreathing_Form2_ClawsPurifyingWind</li>
+      <li>WindBreathing_Form3_ClearStormWindTree</li>
+      <li>WindBreathing_Form4_RisingDustStorm</li>
+      <li>WindBreathing_Form5_ColdMountainWind</li>
+      <li>WindBreathing_Form6_BlackWindMountainGust</li>
+      <li>WindBreathing_Form7_GaleSuddenGust</li>
+      <li>WindBreathing_Form8_PrimaryGaleSlash</li>
+      <li>WindBreathing_Form9_IdatenTyphoon</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_WindHashira</li>
     </titleSelectOne>
@@ -423,6 +590,19 @@
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Eighth_Form_Boulder_Rain_Falling_Heaven</li>
+      <li>Eleventh_Form_Hurled_Stone_Distant_Summit</li>
+      <li>Seventh_Form_Crumbling_Ridge_Open_Sky</li>
+      <li>Sixth_Form_Granite_Fang_Rising_Crag</li>
+      <li>Stone_Breathing_Strike_Fifth</li>
+      <li>Stone_Breathing_Strike</li>
+      <li>Stone_Breathing_Multi_Strike</li>
+      <li>Stone_Breathing_Granite_Nichirin</li>
+      <li>Stone_Breathing_Smash</li>
+      <li>Stone_Breathing_Reflect</li>
+      <li>Tenth_Form_Stone_Wall_Unyielding_Summit</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_StoneHashira</li>
     </titleSelectOne>
@@ -442,6 +622,16 @@
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Butterfly_Dance_Caprice</li>
+      <li>Dance_of_the_Bee_Sting_True_Flutter</li>
+      <li>Dance_of_the_Centipede_Hundred_Legged_Zigzag</li>
+      <li>Dance_of_the_Hornet_Scattering_Swarm</li>
+      <li>Dance_of_the_Mantis_Deflecting_Guard</li>
+      <li>InsectBreathing_DanceOfDragonfly_CompoundEyeHexagon</li>
+      <li>InsectBreathing_DanceOfHorsefly_EnticingSlash</li>
+      <li>Insect_Breathing_Wisteria_Venom</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_InsectHashira</li>
     </titleSelectOne>
@@ -461,6 +651,18 @@
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Love_Breathing_Eighth_Form_Scattering_Affection</li>
+      <li>Love_Breathing_Ninth_Form_Whirling_Devotion</li>
+      <li>Love_Breathing_Rosy_Nichirin</li>
+      <li>Love_Breathing_Seventh_Form_Frenzied_Passion</li>
+      <li>Love_Breathing_Strike_Fourth_Form_Heartseeker</li>
+      <li>LoveBreathing_FifthForm_Wildclaw</li>
+      <li>LoveBreathing_FirstForm_ShiversOfFirstLove</li>
+      <li>LoveBreathing_SecondForm_LovePangs</li>
+      <li>LoveBreathing_SixthForm_LoveWhip</li>
+      <li>LoveBreathing_ThirdForm_CatloveShower</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_LoveHashira</li>
     </titleSelectOne>
@@ -480,6 +682,22 @@
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Eleventh_Form_Swirling_Haze</li>
+      <li>Love_Breathing_Ninth_Form_Whirling_Devotion</li>
+      <li>Mist_Breathing_Eighth_Form_Mist_Step</li>
+      <li>Mist_Breathing_EightLayeredMist</li>
+      <li>Mist_Breathing_LowCloudsDistantHaze</li>
+      <li>Mist_Breathing_LunarDispersingMist</li>
+      <li>Mist_Breathing_Ninth_Form_Dispersing_Flurry</li>
+      <li>Mist_Breathing_ObscuringClouds</li>
+      <li>Mist_Breathing_Pale_Nichirin</li>
+      <li>Mist_Breathing_ScatteringMistSlash</li>
+      <li>Mist_Breathing_SeaOfCloudsAndHaze</li>
+      <li>Mist_Breathing_ShiftingFlowSlash</li>
+      <li>Tenth_Form_Parting_Mist_Open_Sky</li>
+      <li>Twelfth_Form_Still_Mist_Unseen_Blade</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_MistHashira</li>
     </titleSelectOne>
@@ -499,6 +717,15 @@
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Fifth_Form_Slithering_Serpent</li>
+      <li>First_Form_Winding_Serpent_Slash</li>
+      <li>Fourth_Form_Twin_Headed_Reptile</li>
+      <li>Serpent_Breathing_Venom_Colored</li>
+      <li>Serpent_Breathing_Venom_Fangs</li>
+      <li>Sixth_Form_Uncoiling_Stillness</li>
+      <li>Third_Form_Coil_Choke</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_SerpentHashira</li>
     </titleSelectOne>
@@ -518,6 +745,18 @@
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>AA_FireworksShow</li>
+      <li>AA_FirstForm_Roar</li>
+      <li>AA_FirstForm_Roar_Explosive</li>
+      <li>AA_FireworksShow_GrandFinale</li>
+      <li>AA_FlashyRisingKick</li>
+      <li>AA_FifthForm_StringPerformance</li>
+      <li>AA_FifthForm_StringPerformance_LightShow</li>
+      <li>AA_ReachingNeckSlash</li>
+      <li>Dye_Weapon_Sound_Colored</li>
+      <li>Musical_Score_Ability</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_SoundHashira</li>
     </titleSelectOne>
@@ -537,6 +776,16 @@
     <combatPower>8000</combatPower>
     <apparelMoney>15000~25000</apparelMoney>
     <canBeSapper>true</canBeSapper>
+    <abilities>
+      <li>Fifth_Form_Scattering_Grove_Endless_Sky</li>
+      <li>First_Form_Ancient_Root_Rising_Fang</li>
+      <li>Forest_Breathing_Multi_Strike</li>
+      <li>Forest_Breathing_Spore</li>
+      <li>Forest_Breathing_Verdant_Nichirin</li>
+      <li>Forest_Breathing_Leap</li>
+      <li>Seventh_Form_Gnarled_Root_Still_Waters</li>
+      <li>Third_Form_Splitting_Oak</li>
+    </abilities>
     <titleSelectOne>
       <li>AA_ForestHashira</li>
     </titleSelectOne>

@@ -36,15 +36,15 @@
         <description>[PAWN_nameDef] harnesses the power of wind to enhance [PAWN_possessive] ranged attacks. [PAWN_possessive] shots ride the air currents with supernatural accuracy and range.</description>
         <degree>1</degree>
         <statOffsets>
-          <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
+          <ShootingAccuracyPawn>6</ShootingAccuracyPawn>
           <HuntingStealth>0.3</HuntingStealth>
-          <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+          <MoveSpeed>-0.1</MoveSpeed>
         </statOffsets>
         <skillGains>
           <Shooting>6</Shooting>
           <Intellectual>2</Intellectual>
         </skillGains>
-        <marketValueFactorOffset>0.15</marketValueFactorOffset>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
@@ -62,10 +62,12 @@
         <degree>1</degree>
         <statOffsets>
           <MeleeHitChance>8</MeleeHitChance>
-          <MeleeDPS>0.3</MeleeDPS>
           <MeleeDodgeChance>6</MeleeDodgeChance>
           <MoveSpeed>0.25</MoveSpeed>
         </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.2</MeleeDamageFactor>
+        </statFactors>
         <skillGains>
           <Melee>5</Melee>
           <Artistic>2</Artistic>
@@ -84,10 +86,10 @@
         <description>[PAWN_nameDef] has adapted to changes in air pressure and altitude. [PAWN_possessive] efficient breathing and stamina make [PAWN_objective] immune to weather effects and altitude sickness.</description>
         <degree>1</degree>
         <statOffsets>
-          <RestRateMultiplier>1.4</RestRateMultiplier>
           <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
-          <MentalBreakThreshold>5</MentalBreakThreshold>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
           <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+          <PainShockThreshold>0.1</PainShockThreshold>
         </statOffsets>
         <skillGains>
           <Construction>2</Construction>
@@ -139,13 +141,14 @@
         <statOffsets>
           <SocialImpact>0.4</SocialImpact>
           <MoveSpeed>0.2</MoveSpeed>
-          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+          <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
         </statOffsets>
         <skillGains>
           <Social>5</Social>
           <Intellectual>2</Intellectual>
         </skillGains>
-        <marketValueFactorOffset>0.15</marketValueFactorOffset>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
@@ -159,13 +162,13 @@
     <degreeDatas>
       <li>
         <label>storm front</label>
-        <description>[PAWN_nameDef] can sense changing weather patterns and atmospheric conditions. [PAWN_possessive] connection to air currents provides LevelTwo environmental awareness and mood stability.</description>
+        <description>[PAWN_nameDef] can sense changing weather patterns and atmospheric conditions. [PAWN_possessive] connection to air currents provides sharp environmental awareness and mood stability.</description>
         <degree>1</degree>
         <statOffsets>
           <ResearchSpeed>0.3</ResearchSpeed>
-          <MentalBreakThreshold>8</MentalBreakThreshold>
+          <MentalBreakThreshold>-0.08</MentalBreakThreshold>
           <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
-          <TrapSpringChance>-0.4</TrapSpringChance>
+          <TrapSpringChance>-0.2</TrapSpringChance>
         </statOffsets>
         <skillGains>
           <Intellectual>5</Intellectual>

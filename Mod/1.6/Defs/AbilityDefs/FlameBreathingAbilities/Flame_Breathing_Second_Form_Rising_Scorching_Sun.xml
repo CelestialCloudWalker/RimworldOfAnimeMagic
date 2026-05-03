@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Flame_Breathing_Second_Form_Rising_Scorching_Sun</defName>
+    <label>Second Form: Rising Scorching Sun</label>
+    <description>A rising slash that sends a blade of searing flame forward in a tight arc. At higher mastery the strike bites twice — a second wave of heat follows the first, and everything caught in its path is left burning.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>50</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <strikeDamage>0</strikeDamage>
+        <strikeRadius>0</strikeRadius>
+
+        <hasCone>true</hasCone>
+        <coneDamage>55</coneDamage>
+        <coneDamageDef>Cut</coneDamageDef>
+        <coneLength>14</coneLength>
+        <coneWidth>3</coneWidth>
+        <coneArmorPen>0.25</coneArmorPen>
+        <coneCount>1</coneCount>
+        <coneSpreadFull>false</coneSpreadFull>
+        <coneSpreadArc>0</coneSpreadArc>
+        <coneEffecter>AnimeArsenal_FlameJump</coneEffecter>
+        <coneHitEffecter>AnimeArsenal_FlameJump</coneHitEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A rising slash launches a tight blade of flame forward. Heavy, precise, unforgiving.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>The slash drives deeper. The cone bites harder.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>0</strikeDamage>
+            <strikeRadius>0</strikeRadius>
+
+            <hasCone>true</hasCone>
+            <coneDamage>68</coneDamage>
+            <coneDamageDef>Cut</coneDamageDef>
+            <coneLength>14</coneLength>
+            <coneWidth>3</coneWidth>
+            <coneArmorPen>0.28</coneArmorPen>
+            <coneCount>1</coneCount>
+            <coneSpreadFull>false</coneSpreadFull>
+            <coneSpreadArc>0</coneSpreadArc>
+            <coneEffecter>AnimeArsenal_FlameJump</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_FlameJump</coneHitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>A second wave of heat follows the first slash. Targets caught in the arc are left ablaze.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>0</strikeDamage>
+            <strikeRadius>0</strikeRadius>
+            <hasCone>true</hasCone>
+            <coneDamage>80</coneDamage>
+            <coneDamageDef>Cut</coneDamageDef>
+            <coneLength>14</coneLength>
+            <coneWidth>3</coneWidth>
+            <coneArmorPen>0.30</coneArmorPen>
+            <coneCount>1</coneCount>
+            <coneSpreadFull>false</coneSpreadFull>
+            <coneSpreadArc>0</coneSpreadArc>
+            <coneEffecter>AnimeArsenal_FlameJump</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_FlameJump</coneHitEffecter>
+            <burstDamage>35</burstDamage>
+            <burstDamageDef>Flame</burstDamageDef>
+            <burstRadius>2.0</burstRadius>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>12</burstInterval>
+          </li>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>The second wave scorches more fiercely. Armor provides less protection.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>0</strikeDamage>
+            <strikeRadius>0</strikeRadius>
+
+            <hasCone>true</hasCone>
+            <coneDamage>92</coneDamage>
+            <coneDamageDef>Cut</coneDamageDef>
+            <coneLength>15</coneLength>
+            <coneWidth>3</coneWidth>
+            <coneArmorPen>0.34</coneArmorPen>
+            <coneCount>1</coneCount>
+            <coneSpreadFull>false</coneSpreadFull>
+            <coneSpreadArc>0</coneSpreadArc>
+            <coneEffecter>AnimeArsenal_FlameJump</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_FlameJump</coneHitEffecter>
+
+            <burstDamage>45</burstDamage>
+            <burstDamageDef>Flame</burstDamageDef>
+            <burstRadius>2.0</burstRadius>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>12</burstInterval>
+          </li>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>The sun rises hotter. The second wave punishes anything still standing.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>0</strikeDamage>
+            <strikeRadius>0</strikeRadius>
+
+            <hasCone>true</hasCone>
+            <coneDamage>108</coneDamage>
+            <coneDamageDef>Cut</coneDamageDef>
+            <coneLength>16</coneLength>
+            <coneWidth>4</coneWidth>
+            <coneArmorPen>0.38</coneArmorPen>
+            <coneCount>1</coneCount>
+            <coneSpreadFull>false</coneSpreadFull>
+            <coneSpreadArc>0</coneSpreadArc>
+            <coneEffecter>AnimeArsenal_FlameJump</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_FlameJump</coneHitEffecter>
+
+            <burstDamage>55</burstDamage>
+            <burstDamageDef>Flame</burstDamageDef>
+            <burstRadius>2.5</burstRadius>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>10</burstInterval>
+          </li>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Perfected. The rising sun devours everything in its path. Two waves of flame, nothing walks away unburned. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>0</strikeDamage>
+            <strikeRadius>0</strikeRadius>
+
+            <hasCone>true</hasCone>
+            <coneDamage>128</coneDamage>
+            <coneDamageDef>Cut</coneDamageDef>
+            <coneLength>17</coneLength>
+            <coneWidth>4</coneWidth>
+            <coneArmorPen>0.44</coneArmorPen>
+            <coneCount>1</coneCount>
+            <coneSpreadFull>false</coneSpreadFull>
+            <coneSpreadArc>0</coneSpreadArc>
+            <coneEffecter>AnimeArsenal_FlameJump</coneEffecter>
+            <coneHitEffecter>AnimeArsenal_FlameJump</coneHitEffecter>
+
+            <burstDamage>65</burstDamage>
+            <burstDamageDef>Flame</burstDamageDef>
+            <burstRadius>2.5</burstRadius>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>10</burstInterval>
+          </li>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

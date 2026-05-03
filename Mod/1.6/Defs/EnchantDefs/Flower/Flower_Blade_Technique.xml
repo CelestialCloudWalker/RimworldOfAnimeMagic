@@ -9,6 +9,11 @@
     <resourceGene>Gene_FlowerBreath</resourceGene>
     <ticksBetweenCost>520</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlowerBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlowerBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flower</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flower</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FlowerHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -20,6 +25,11 @@
     <resourceGene>Gene_FlowerBreath</resourceGene>
     <ticksBetweenCost>480</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlowerBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlowerBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flower</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flower</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FlowerHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -31,6 +41,11 @@
     <resourceGene>Gene_FlowerBreath</resourceGene>
     <ticksBetweenCost>440</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlowerBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlowerBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flower</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flower</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FlowerHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -42,6 +57,11 @@
     <resourceGene>Gene_FlowerBreath</resourceGene>
     <ticksBetweenCost>600</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlowerBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlowerBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flower</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flower</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FlowerHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -53,6 +73,11 @@
     <resourceGene>Gene_FlowerBreath</resourceGene>
     <ticksBetweenCost>900</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlowerBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlowerBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flower</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flower</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FlowerHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -64,5 +89,10 @@
     <resourceGene>Gene_FlowerBreath</resourceGene>
     <ticksBetweenCost>1300</ticksBetweenCost>
     <resourceCostPerTick>2</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlowerBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlowerBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flower</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flower</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FlowerHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

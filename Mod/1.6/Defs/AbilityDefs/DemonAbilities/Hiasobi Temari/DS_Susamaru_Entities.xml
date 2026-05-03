@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DS_SusamaruBall_Proj_LOne</defName>
+    <label>temari ball</label>
+    <graphicData>
+      <texPath>Things/Ball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.75, 0.75)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <speed>28</speed>
+    </projectile>
+    <comps>
+      <li Class="EMF.ProjectileCompProperties_ImpactAOEDamage">
+        <radius>1.5</radius>
+        <damageAmount>8</damageAmount>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DS_SusamaruBall_Proj_LTwo</defName>
+    <label>temari ball</label>
+    <graphicData>
+      <texPath>Things/Ball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.75, 0.75)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>27</damageAmountBase>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <speed>28</speed>
+    </projectile>
+    <comps>
+      <li Class="EMF.ProjectileCompProperties_ImpactAOEDamage">
+        <radius>1.5</radius>
+        <damageAmount>10</damageAmount>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DS_SusamaruBall_Proj_LThree</defName>
+    <label>temari ball</label>
+    <graphicData>
+      <texPath>Things/Ball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.75, 0.75)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>32</damageAmountBase>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <speed>28</speed>
+    </projectile>
+    <comps>
+      <li Class="EMF.ProjectileCompProperties_ImpactAOEDamage">
+        <radius>2.0</radius>
+        <damageAmount>12</damageAmount>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DS_SusamaruBall_Proj_LFour</defName>
+    <label>temari ball</label>
+    <graphicData>
+      <texPath>Things/Ball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.75, 0.75)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>38</damageAmountBase>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <speed>28</speed>
+    </projectile>
+    <comps>
+      <li Class="EMF.ProjectileCompProperties_ImpactAOEDamage">
+        <radius>2.0</radius>
+        <damageAmount>14</damageAmount>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DS_SusamaruBall_Proj_LFive</defName>
+    <label>temari ball</label>
+    <graphicData>
+      <texPath>Things/Ball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.75, 0.75)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>45</damageAmountBase>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <speed>28</speed>
+    </projectile>
+    <comps>
+      <li Class="EMF.ProjectileCompProperties_ImpactAOEDamage">
+        <radius>2.5</radius>
+        <damageAmount>18</damageAmount>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DS_SusamaruBall_Proj_LSix</defName>
+    <label>temari ball</label>
+    <graphicData>
+      <texPath>Things/Ball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.75, 0.75)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>54</damageAmountBase>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <speed>28</speed>
+    </projectile>
+    <comps>
+      <li Class="EMF.ProjectileCompProperties_ImpactAOEDamage">
+        <radius>2.5</radius>
+        <damageAmount>22</damageAmount>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseFleshbeast">
+    <defName>DS_SusamaruBall_Entity</defName>
+    <label>temari ball</label>
+    <description>A supernaturally animated temari ball left behind by Susamaru's Blood Demon Art. It spins with lethal momentum, crushing anything it rolls into while radiating destructive force in all directions.</description>
+    <graphicData>
+      <texPath>Things/Ball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <statBases>
+      <MoveSpeed>2.8</MoveSpeed>
+      <ToxicResistance>1.0</ToxicResistance>
+    </statBases>
+    <race>
+      <body>Fingerspike</body>
+      <baseBodySize>0.6</baseBodySize>
+      <lifeExpectancy>1</lifeExpectancy>
+      <hasGenders>false</hasGenders>
+      <bloodDef>Filth_Blood</bloodDef>
+      <trainability>None</trainability>
+      <deathAction>
+        <workerClass>DeathActionWorker_SmallExplosion</workerClass>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>temari slam</label>
+        <labelNoLocation>ball</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef>
+    <defName>DS_SusamaruBall_Entity</defName>
+    <label>temari ball</label>
+    <race>DS_SusamaruBall_Entity</race>
+    <combatPower>50</combatPower>
+    <isFighter>false</isFighter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Ball</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(0.9, 0.9)</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Ball</texPath>
+          <drawSize>(0.6, 0.6)</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

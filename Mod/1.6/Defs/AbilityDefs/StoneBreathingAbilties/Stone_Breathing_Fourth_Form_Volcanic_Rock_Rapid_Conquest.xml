@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Stone_Breathing_Multi_Strike</defName>
+    <label>Stone Breathing: Fourth Form: Volcanic Rock, Rapid Conquest</label>
+    <description>肆ノ型　流紋岩・速征 — The user swings both axe and flail simultaneously from opposite ends of the chain in wide sweeping arcs, striking multiple opponents with rapid repeated blows.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>840</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>1.2</warmupTime>
+      <noiseRadius>8</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Cleave">
+        <NumberOfCuts>6</NumberOfCuts>
+        <BaseDamage>10</BaseDamage>
+        <TicksBetweenCuts>8</TicksBetweenCuts>
+        <DamageDef>Stone_Breathing_Damage</DamageDef>
+        <radius>5</radius>
+        <maxTargets>4</maxTargets>
+        <CleaveDamageEffecter>AnimeArsenal_StoneHit2</CleaveDamageEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Wide dual-weapon sweep. Strikes up to 4 enemies with 6 rapid cuts each.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>240</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <description>Sweep arc widened. More cuts per target.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>8</NumberOfCuts>
+            <BaseDamage>13</BaseDamage>
+            <TicksBetweenCuts>7</TicksBetweenCuts>
+            <DamageDef>Stone_Breathing_Damage</DamageDef>
+            <radius>6</radius>
+            <maxTargets>5</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_StoneHit2</CleaveDamageEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.88</cooldownMultiplier>
+        <description>Maximal conquest sweep. Cuts down up to 6 enemies simultaneously.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>10</NumberOfCuts>
+            <BaseDamage>16</BaseDamage>
+            <TicksBetweenCuts>6</TicksBetweenCuts>
+            <DamageDef>Stone_Breathing_Damage</DamageDef>
+            <radius>7</radius>
+            <maxTargets>6</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_StoneHit2</CleaveDamageEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

@@ -17,7 +17,7 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>Inscet_Breathing_Damage</damageDef>
+      <damageDef>Insect_Breathing_Damage</damageDef>
       <damageAmountBase>4</damageAmountBase>
       <armorPenetrationBase>0.35</armorPenetrationBase>
       <ExplosionRadius>1</ExplosionRadius>
@@ -60,7 +60,7 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>Inscet_Breathing_Damage</damageDef>
+      <damageDef>Insect_Breathing_Damage</damageDef>
       <damageAmountBase>6</damageAmountBase>
       <armorPenetrationBase>0.4</armorPenetrationBase>
       <ExplosionRadius>1.2</ExplosionRadius>
@@ -102,7 +102,7 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>Inscet_Breathing_Damage</damageDef>
+      <damageDef>Insect_Breathing_Damage</damageDef>
       <damageAmountBase>8</damageAmountBase>
       <armorPenetrationBase>0.48</armorPenetrationBase>
       <ExplosionRadius>2</ExplosionRadius>
@@ -144,7 +144,7 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>Inscet_Breathing_Damage</damageDef>
+      <damageDef>Insect_Breathing_Damage</damageDef>
       <damageAmountBase>10</damageAmountBase>
       <armorPenetrationBase>0.58</armorPenetrationBase>
       <ExplosionRadius>1.8</ExplosionRadius>
@@ -186,7 +186,7 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>Inscet_Breathing_Damage</damageDef>
+      <damageDef>Insect_Breathing_Damage</damageDef>
       <damageAmountBase>13</damageAmountBase>
       <armorPenetrationBase>0.7</armorPenetrationBase>
       <ExplosionRadius>2.2</ExplosionRadius>
@@ -228,7 +228,7 @@
       </shaderParameters>
     </graphicData>
     <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
-      <damageDef>Inscet_Breathing_Damage</damageDef>
+      <damageDef>Insect_Breathing_Damage</damageDef>
       <damageAmountBase>16</damageAmountBase>
       <armorPenetrationBase>0.85</armorPenetrationBase>
       <ExplosionRadius>2.8</ExplosionRadius>

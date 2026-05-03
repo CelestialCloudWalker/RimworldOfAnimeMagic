@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Gyutaro_BloodSickle_Directional</defName>
+    <label>Blood Sickle Slash</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Hurl blood sickles in a sweeping directional arc, carving through everything in their path and spreading Blood Poisoning.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>0.4</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>14</damageAmount>
+        <damageType>Cut</damageType>
+        <rectWidth>3</rectWidth>
+        <rectLength>8</rectLength>
+        <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+        <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>BloodPoison_Hediff</hediffDef>
+        <severityAdjustment>0.04</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+        <effectRadius>8</effectRadius>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>14 Cut in a forward arc. Applies Blood Poisoning +0.04 to all hit.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.91</cooldownMultiplier>
+        <resourceCostMultiplier>1.05</resourceCostMultiplier>
+        <description>17 Cut. Range extended. Blood Poisoning +0.04.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>17</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>3</rectWidth>
+            <rectLength>9</rectLength>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.04</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>21 Cut. Arc widened. Blood Poisoning +0.06.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>21</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>9</rectLength>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.73</cooldownMultiplier>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <description>27 Cut. Blood Poisoning +0.06.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>27</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>9</rectLength>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.64</cooldownMultiplier>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <description>34 Cut. Stuns hit targets for 60 ticks. Blood Poisoning +0.06.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>34</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>9</rectLength>
+            <stunChance>1.0</stunChance>
+            <stunDuration>60</stunDuration>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.55</cooldownMultiplier>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <description>Perfected. 42 Cut. Stun 60t. Blood Poisoning +0.10. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>42</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>9</rectLength>
+            <stunChance>1.0</stunChance>
+            <stunDuration>60</stunDuration>
+            <castEffecter>DS_Effecter_GyutaroBloodSlash</castEffecter>
+            <impactEffecter>DS_Effecter_GyutaroBloodImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.10</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

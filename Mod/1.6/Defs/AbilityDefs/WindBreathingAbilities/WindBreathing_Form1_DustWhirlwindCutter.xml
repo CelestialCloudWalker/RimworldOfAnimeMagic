@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>WindBreathing_Form1_DustWhirlwindCutter</defName>
+    <label>First Form: Dust Whirlwind Cutter</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>A furious forward dash that cleaves every enemy in the path. The blade's true edge strikes all who stand directly in the lane; the wind wake that follows reaches twice as far, scything those on the flanks.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>700</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>100</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+        <damageDef>Cut</damageDef>
+        <damageAmount><min>20</min><max>25</max></damageAmount>
+        <armourPen><min>0.3</min><max>0.3</max></armourPen>
+        <width>3</width>
+        <splashRadius>1.5</splashRadius>
+        <splashDamageAmount><min>8</min><max>12</max></splashDamageAmount>
+        <meleeSkillFactor>0.4</meleeSkillFactor>
+        <castEffecter>AnimeArsenal_WindJump</castEffecter>
+        <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+        <impactEffecter>AnimeArsenal_WindHitH</impactEffecter>
+        <splashEffecter>AnimeArsenal_WindHitF</splashEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+      <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+        <delayTicks>25</delayTicks>
+        <radius>6</radius>
+        <maxTargets>8</maxTargets>
+        <damageAmount>20</damageAmount>
+        <damageDef>Cut</damageDef>
+        <armourPen>0.25</armourPen>
+        <burstEffecter>AnimeArsenal_WindHit</burstEffecter>
+        <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Dash forward, cleaving all in your path. A moment later, the wind wake erupts on both flanks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>20</min><max>25</max></damageAmount>
+            <armourPen><min>0.3</min><max>0.3</max></armourPen>
+            <width>3</width>
+            <splashRadius>1.5</splashRadius>
+            <splashDamageAmount><min>8</min><max>12</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WindHit</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>6</radius>
+            <maxTargets>8</maxTargets>
+            <damageAmount>20</damageAmount>
+            <damageDef>Cut</damageDef>
+            <armourPen>0.25</armourPen>
+            <burstEffecter>AnimeArsenal_WindHit</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Faster dash, wider wind wake.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>28</min><max>34</max></damageAmount>
+            <armourPen><min>0.35</min><max>0.35</max></armourPen>
+            <width>3</width>
+            <splashRadius>1.5</splashRadius>
+            <splashDamageAmount><min>10</min><max>14</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WindHit</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>7</radius>
+            <maxTargets>8</maxTargets>
+            <damageAmount>26</damageAmount>
+            <damageDef>Cut</damageDef>
+            <armourPen>0.25</armourPen>
+            <burstEffecter>AnimeArsenal_WindHit</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>280</experienceRequired>
+        <rangeMultiplier>1.35</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>The dash stuns those struck in the lane. The wind wake fans further and hits harder.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>38</min><max>45</max></damageAmount>
+            <armourPen><min>0.4</min><max>0.4</max></armourPen>
+            <width>3</width>
+            <splashRadius>2</splashRadius>
+            <splashDamageAmount><min>12</min><max>18</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <stunTicksOnHit>20</stunTicksOnHit>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WindHit</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>8</radius>
+            <maxTargets>10</maxTargets>
+            <damageAmount>34</damageAmount>
+            <damageDef>Cut</damageDef>
+            <armourPen>0.3</armourPen>
+            <burstEffecter>AnimeArsenal_WindHit</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Devastating lane cuts with prolonged stun. The wind wake shreds everything nearby.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>50</min><max>60</max></damageAmount>
+            <armourPen><min>0.45</min><max>0.45</max></armourPen>
+            <width>3</width>
+            <splashRadius>2</splashRadius>
+            <splashDamageAmount><min>15</min><max>22</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <stunTicksOnHit>30</stunTicksOnHit>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WindHit</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>9</radius>
+            <maxTargets>12</maxTargets>
+            <damageAmount>44</damageAmount>
+            <damageDef>Cut</damageDef>
+            <armourPen>0.35</armourPen>
+            <burstEffecter>AnimeArsenal_WindHit</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <description>Perfected. The blade tears through the lane, then the wind wake erupts in every direction. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>65</min><max>75</max></damageAmount>
+            <armourPen><min>0.5</min><max>0.5</max></armourPen>
+            <width>3</width>
+            <splashRadius>2.5</splashRadius>
+            <splashDamageAmount><min>20</min><max>28</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <stunTicksOnHit>40</stunTicksOnHit>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WindHit</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>10</radius>
+            <maxTargets>15</maxTargets>
+            <damageAmount>56</damageAmount>
+            <damageDef>Cut</damageDef>
+            <armourPen>0.4</armourPen>
+            <waveCount>2</waveCount>
+            <ticksBetweenWaves>18</ticksBetweenWaves>
+            <radiusGrowthPerWave>2</radiusGrowthPerWave>
+            <damageDecayPerWave>0.5</damageDecayPerWave>
+            <burstEffecter>AnimeArsenal_WindHit</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AnimeArsenal.EnchantDef>
+    <defName>Compass_Needle_Technique_1</defName>
+    <label>Compass Needle</label>
+    <description>Akaza's instinct sharpens with every exchange of blows.</description>
+    <enchantHediff>Compass_Needle_Hedif_One</enchantHediff>
+    <ticksBetweenCost>100</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Compass_Needle_Technique_2</defName>
+    <label>Compass Needle</label>
+    <description>Akaza's instinct sharpens faster with each exchange.</description>
+    <enchantHediff>Compass_Needle_Hedif_Two</enchantHediff>
+    <ticksBetweenCost>100</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Compass_Needle_Technique_3</defName>
+    <label>Compass Needle</label>
+    <description>Akaza's instinct sharpens faster with each exchange.</description>
+    <enchantHediff>Compass_Needle_Hedif_Two</enchantHediff>
+    <ticksBetweenCost>100</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Compass_Needle_Technique_4</defName>
+    <label>Compass Needle</label>
+    <description>Akaza reads every movement — dodge sharpened further.</description>
+    <enchantHediff>Compass_Needle_Hedif_Four</enchantHediff>
+    <ticksBetweenCost>100</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Compass_Needle_Technique_5</defName>
+    <label>Compass Needle</label>
+    <description>Akaza reads every movement — dodge sharpened further.</description>
+    <enchantHediff>Compass_Needle_Hedif_Four</enchantHediff>
+    <ticksBetweenCost>100</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Compass_Needle_Technique_6</defName>
+    <label>Compass Needle</label>
+    <description>Perfected instinct. On the Edge ignites at 75% severity.</description>
+    <enchantHediff>Compass_Needle_Hedif_Six</enchantHediff>
+    <ticksBetweenCost>100</ticksBetweenCost>
+    <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_AkazaGeometricActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_AkazaFullPowerAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_AkazaFatigueAmbient</exhaustionEffecter>
+  </AnimeArsenal.EnchantDef>
+
+</Defs>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Koketsu_ArrowShot</defName>
+    <label>Arrow Shot</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Fire a blast that launches the target into the air and slams them back down on landing.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>22</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>0.4</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundLaunch">
+        <damage>12</damage>
+        <damageDef>Blunt</damageDef>
+        <knockbackDistance>6</knockbackDistance>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>12 Blunt on launch. 8 Blunt on landing. Range 10.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.045</resourceCostMultiplier>
+        <description>15 Blunt launch. 10 Blunt landing.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundLaunch">
+            <damage>15</damage>
+            <damageDef>Blunt</damageDef>
+            <knockbackDistance>6</knockbackDistance>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.136</resourceCostMultiplier>
+        <description>Arrow Slam. 18 Blunt launch. 14 Blunt landing + DS_ArrowSlam_LandingIncap (300t immobilize).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundLaunch">
+            <damage>18</damage>
+            <damageDef>Blunt</damageDef>
+            <knockbackDistance>6</knockbackDistance>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowSlam_LandingIncap</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.227</resourceCostMultiplier>
+        <description>24 Blunt launch. 20 Blunt landing + incap. Greater knockback distance.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundLaunch">
+            <damage>24</damage>
+            <damageDef>Blunt</damageDef>
+            <knockbackDistance>7</knockbackDistance>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowSlam_LandingIncap</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.318</resourceCostMultiplier>
+        <description>30 Blunt launch. 26 Blunt landing + incap. Landing AoE radius 2 hits nearby enemies.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundLaunch">
+            <damage>30</damage>
+            <damageDef>Blunt</damageDef>
+            <knockbackDistance>7</knockbackDistance>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowSlam_LandingIncap</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>15</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>2</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.560</cooldownMultiplier>
+        <resourceCostMultiplier>1.455</resourceCostMultiplier>
+        <description>Perfected Arrow Slam. 38 Blunt launch. 34 Blunt landing + incap. AoE 18 Blunt radius 2. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundLaunch">
+            <damage>38</damage>
+            <damageDef>Blunt</damageDef>
+            <knockbackDistance>7</knockbackDistance>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowSlam_LandingIncap</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>18</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>2</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

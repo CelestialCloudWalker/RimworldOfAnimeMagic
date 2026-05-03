@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Temari_Onslaught</defName>
+    <label>Temari Onslaught</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Kick the area with explosive force, then summon a looping Temari ball entity that continues to kick enemies on its own.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>4000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>32</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.6</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>14</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>5</rectWidth>
+        <rectLength>5</rectLength>
+        <useOriginAsCenter>true</useOriginAsCenter>
+      </li>
+      <li Class="EMF.CompProperties_AbilitySummonPawn">
+        <summonKind>DS_TemariBall_Entity</summonKind>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+        <lifespanHediff>DS_TemariBall_Lifespan_L1</lifespanHediff>
+        <targetKind>DS_TemariBall_Entity</targetKind>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>14 Blunt AoE 5x5. Summons Temari Ball (HP 1, 7 Blunt every 150t).</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.910</cooldownMultiplier>
+        <resourceCostMultiplier>1.031</resourceCostMultiplier>
+        <description>17 Blunt AoE 6x6. Temari Ball L2.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>17</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_TemariBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_TemariBall_Lifespan_L2</lifespanHediff>
+            <targetKind>DS_TemariBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.820</cooldownMultiplier>
+        <resourceCostMultiplier>1.125</resourceCostMultiplier>
+        <description>20 Blunt AoE 6x6. Ball damage increased (x0.65 = 13 Blunt per hit).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>20</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_TemariBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_TemariBall_Lifespan_L3</lifespanHediff>
+            <targetKind>DS_TemariBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.730</cooldownMultiplier>
+        <resourceCostMultiplier>1.219</resourceCostMultiplier>
+        <description>26 Blunt AoE 6x6. Ball hits faster (every 120t).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>26</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_TemariBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_TemariBall_Lifespan_L4</lifespanHediff>
+            <targetKind>DS_TemariBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.640</cooldownMultiplier>
+        <resourceCostMultiplier>1.313</resourceCostMultiplier>
+        <description>32 Blunt AoE 6x6 + secondary 16 Blunt AoE burst. Ball L5 (21 Blunt, fast).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>32</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>16</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>3</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_TemariBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_TemariBall_Lifespan_L5</lifespanHediff>
+            <targetKind>DS_TemariBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.550</cooldownMultiplier>
+        <resourceCostMultiplier>1.438</resourceCostMultiplier>
+        <description>Perfected. 40 Blunt AoE 6x6 + 20 Blunt burst. Ball L6 (32 Blunt, fast). Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>40</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>20</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>3</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_TemariBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_TemariBall_Lifespan_L6</lifespanHediff>
+            <targetKind>DS_TemariBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

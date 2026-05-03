@@ -1,32 +1,51 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Mist_Breathing_Damage</defName>
     <label>mist slash</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} vanished into the mist.</deathMessage>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>true</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>false</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <deathMessage>{0} vanished into the mist, never to return.</deathMessage>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <defaultStoppingPower>0.2</defaultStoppingPower>
     <hediff>PhantomsOfMist</hediff>
     <hediffSkin>PhantomsOfMist</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Sharp</armorCategory>
     <impactSoundType>Slice</impactSoundType>
-    <harmsHealth>true</harmsHealth>
-    <causeStun>true</causeStun>
-    <constantStunDurationTicks>360</constantStunDurationTicks>
+    <minDamageToFragment>14</minDamageToFragment>
+    <defaultDamage>7</defaultDamage>
+    <defaultArmorPenetration>0.12</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0.35</overkillPctToDestroyPart>
+    <additionalHediffs>
+      <li>
+        <hediff>PsychicHangover</hediff>
+        <severityPerDamageDealt>0.06</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>0.4</buildingDamageFactor>
+    <plantDamageFactor>0.7</plantDamageFactor>
+    <corpseDamageFactor>0.8</corpseDamageFactor>
+    <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>PhantomsOfMist</defName>
     <label>mist slash</label>
     <labelNoun>a mist slash</labelNoun>
-    <description>A disorienting cut that confuses and disorients.</description>
+    <description>A disorienting cut delivered through blinding mist. The wound confuses as much as it bleeds — victims struggle to track where the next strike is coming from.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
         <labelTendedWellInner>sutured</labelTendedWellInner>
         <labelSolidTendedWell>set</labelSolidTendedWell>
-        <severityPerDayTended>-0.72</severityPerDayTended>
+        <severityPerDayTended>-0.50</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
         <infectionChance>0.15</infectionChance>
@@ -42,13 +61,56 @@
         <permanentLabel>mist slash scar</permanentLabel>
       </li>
     </comps>
+    <stages>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.16</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.06</painOffset>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
     <injuryProps>
       <painPerSeverity>0.04</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
       <bleedRate>0.035</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Cut off</destroyedLabel>
-      <destroyedOutLabel>Cut out</destroyedOutLabel>
+      <destroyedLabel>cut off</destroyedLabel>
+      <destroyedOutLabel>cut apart</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

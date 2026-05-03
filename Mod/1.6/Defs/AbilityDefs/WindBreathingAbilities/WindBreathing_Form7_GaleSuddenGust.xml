@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>WindBreathing_Form7_GaleSuddenGust</defName>
+    <label>Seventh Form: Gale, Sudden Gust</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>A two-part technique. The user leaps to a chosen position, then unleashes a delayed eruption of gale-force wind at a second chosen location. Enemies cannot predict where the storm will fall.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>55</resourceCost>
+    <baseExperienceGain>12</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <strikeDamage>35</strikeDamage>
+        <strikeRadius>2.0</strikeRadius>
+        <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+        <castEffecter>AnimeArsenal_WindJump</castEffecter>
+        <delayedBurstDamage>15</delayedBurstDamage>
+        <delayedBurstRadius>5</delayedBurstRadius>
+        <delayedBurstDelayTicks>40</delayedBurstDelayTicks>
+        <delayedBurstMaxTargets>6</delayedBurstMaxTargets>
+        <delayedBurstArmorPen>0.15</delayedBurstArmorPen>
+        <delayedBurstEffecter>AnimeArsenal_WindHit</delayedBurstEffecter>
+        <delayedBurstHitEffecter>AnimeArsenal_WindHit</delayedBurstHitEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Leap to one location; unleash a delayed AoE wind blast at another. The gust takes a moment to build.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>The gust erupts faster and the landing strike bites deeper.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>35</strikeDamage>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <delayedBurstDamage>15</delayedBurstDamage>
+            <delayedBurstRadius>5</delayedBurstRadius>
+            <delayedBurstDelayTicks>40</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>6</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.15</delayedBurstArmorPen>
+            <delayedBurstEffecter>AnimeArsenal_WindHit</delayedBurstEffecter>
+            <delayedBurstHitEffecter>AnimeArsenal_WindHit</delayedBurstHitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>The wind anticipates where it is needed. The gust's reach grows and its timing sharpens.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>35</strikeDamage>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <delayedBurstDamage>15</delayedBurstDamage>
+            <delayedBurstRadius>5</delayedBurstRadius>
+            <delayedBurstDelayTicks>40</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>6</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.15</delayedBurstArmorPen>
+            <delayedBurstEffecter>AnimeArsenal_WindHit</delayedBurstEffecter>
+            <delayedBurstHitEffecter>AnimeArsenal_WindHit</delayedBurstHitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>Sudden, unpredictable, inescapable. The wind cuts through armor. Cost slightly reduced.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>35</strikeDamage>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <delayedBurstDamage>15</delayedBurstDamage>
+            <delayedBurstRadius>5</delayedBurstRadius>
+            <delayedBurstDelayTicks>40</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>6</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.15</delayedBurstArmorPen>
+            <delayedBurstEffecter>AnimeArsenal_WindHit</delayedBurstEffecter>
+            <delayedBurstHitEffecter>AnimeArsenal_WindHit</delayedBurstHitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>The gale erupts before enemies realize the danger — then erupts again.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>35</strikeDamage>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <delayedBurstDamage>15</delayedBurstDamage>
+            <delayedBurstRadius>5</delayedBurstRadius>
+            <delayedBurstDelayTicks>40</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>6</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.15</delayedBurstArmorPen>
+            <delayedBurstEffecter>AnimeArsenal_WindHit</delayedBurstEffecter>
+            <delayedBurstHitEffecter>AnimeArsenal_WindHit</delayedBurstHitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1600</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Perfected. Gale and caster move as one mind. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>35</strikeDamage>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <delayedBurstDamage>15</delayedBurstDamage>
+            <delayedBurstRadius>5</delayedBurstRadius>
+            <delayedBurstDelayTicks>40</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>6</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.15</delayedBurstArmorPen>
+            <delayedBurstEffecter>AnimeArsenal_WindHit</delayedBurstEffecter>
+            <delayedBurstHitEffecter>AnimeArsenal_WindHit</delayedBurstHitEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

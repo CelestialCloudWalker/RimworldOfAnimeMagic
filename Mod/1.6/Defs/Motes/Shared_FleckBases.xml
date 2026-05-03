@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleckDef Name="RimKetsu_FleckBase_Thrown" Abstract="True">
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+  </FleckDef>
+
+  <FleckDef Name="RimKetsu_FleckBase_Static" Abstract="True">
+    <fleckSystemClass>FleckSystemStatic</fleckSystemClass>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+  </FleckDef>
+
+  <ThingDef Name="RimKetsu_MoteBase" Abstract="True" ParentName="MoteBase">
+    <isSaveable>false</isSaveable>
+    <useHitPoints>false</useHitPoints>
+  </ThingDef>
+
+  <ThingDef Name="RimKetsu_MoteAttachedBase" Abstract="True" ParentName="RimKetsu_MoteBase">
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+  </ThingDef>
+
+</Defs>

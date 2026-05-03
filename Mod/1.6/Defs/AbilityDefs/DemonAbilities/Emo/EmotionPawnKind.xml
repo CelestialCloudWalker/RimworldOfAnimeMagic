@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef>
+    <defName>DS_Sekido_Entity</defName>
+    <label>Sekido</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <combatPower>135</combatPower>
+    <initialResistanceRange><min>0</min><max>0</max></initialResistanceRange>
+    <initialWillRange><min>0</min><max>0</max></initialWillRange>
+    <skills><li><skill>Melee</skill></li></skills>
+    <weaponMoney><min>0</min><max>0</max></weaponMoney>
+    <apparelMoney><min>0</min><max>0</max></apparelMoney>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_Karaku_Entity</defName>
+    <label>Karaku</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <combatPower>120</combatPower>
+    <initialResistanceRange><min>0</min><max>0</max></initialResistanceRange>
+    <initialWillRange><min>0</min><max>0</max></initialWillRange>
+    <skills><li><skill>Melee</skill></li></skills>
+    <weaponMoney><min>0</min><max>0</max></weaponMoney>
+    <apparelMoney><min>0</min><max>0</max></apparelMoney>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_Aizetsu_Entity</defName>
+    <label>Aizetsu</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <combatPower>115</combatPower>
+    <initialResistanceRange><min>0</min><max>0</max></initialResistanceRange>
+    <initialWillRange><min>0</min><max>0</max></initialWillRange>
+    <skills>
+      <li><skill>Melee</skill></li>
+      <li><skill>Shooting</skill></li>
+    </skills>
+    <weaponMoney><min>0</min><max>0</max></weaponMoney>
+    <apparelMoney><min>0</min><max>0</max></apparelMoney>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_Urogi_Entity</defName>
+    <label>Urogi</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <combatPower>125</combatPower>
+    <initialResistanceRange><min>0</min><max>0</max></initialResistanceRange>
+    <initialWillRange><min>0</min><max>0</max></initialWillRange>
+    <skills>
+      <li><skill>Melee</skill></li>
+      <li><skill>Shooting</skill></li>
+    </skills>
+    <weaponMoney><min>0</min><max>0</max></weaponMoney>
+    <apparelMoney><min>0</min><max>0</max></apparelMoney>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_Zohakuten_Entity</defName>
+    <label>Zohakuten</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <combatPower>260</combatPower>
+    <initialResistanceRange><min>0</min><max>0</max></initialResistanceRange>
+    <initialWillRange><min>0</min><max>0</max></initialWillRange>
+    <skills>
+      <li><skill>Melee</skill></li>
+      <li><skill>Shooting</skill></li>
+    </skills>
+    <weaponMoney><min>0</min><max>0</max></weaponMoney>
+    <apparelMoney><min>0</min><max>0</max></apparelMoney>
+  </PawnKindDef>
+
+</Defs>

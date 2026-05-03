@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_SoryuStyle</defName>
+    <label>Blood Demon Art: Soryu Style</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Akaza channels his fighting spirit into every strike, increasing melee damage, hit chance, attack speed, and skill.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+        <enchantDef>Soryu_Style_Technique_1</enchantDef>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Melee damage +8%, hit chance +6%, cooldown -10%, melee skill +2.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <description>Melee damage +10%, hit chance +8%, cooldown -12%, melee skill +2.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Soryu_Style_Technique_2</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <description>Melee damage +12%, hit chance +10%, cooldown -15%, melee skill +3.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Soryu_Style_Technique_3</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <description>Melee damage +15%, hit chance +12%, cooldown -18%, melee skill +3.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Soryu_Style_Technique_4</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <description>Melee damage +18%, hit chance +14%, cooldown -20%, melee skill +4.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Soryu_Style_Technique_5</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <description>Perfected. Melee damage +22%, hit chance +16%, cooldown -25%, melee skill +4. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchant">
+            <enchantDef>Soryu_Style_Technique_6</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

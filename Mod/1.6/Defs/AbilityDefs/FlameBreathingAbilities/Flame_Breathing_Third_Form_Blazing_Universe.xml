@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Flame_Breathing_Third_Form_Blazing_Universe</defName>
+    <label>Third Form: Blazing Universe</label>
+    <description>A wide sweeping inferno similar to Rising Scorching Sun, but far broader. At higher mastery the arc expands dramatically, engulfing a massive swath of battlefield.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>55</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>6</rectWidth>
+        <rectLength>12</rectLength>
+        <damageType>Cut</damageType>
+        <damageAmount>26</damageAmount>
+        <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+        <impactEffecter>AnimeArsenal_Flamehit2</impactEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A wide blade of flame cuts through the air ahead.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>Wider. More of the universe burns.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>6</rectWidth>
+            <rectLength>12</rectLength>
+            <damageType>Cut</damageType>
+            <damageAmount>32</damageAmount>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>The arc ignites. Targets struck are left burning and Singed.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>7</rectWidth>
+            <rectLength>13</rectLength>
+            <damageType>Cut</damageType>
+            <damageAmount>36</damageAmount>
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+            <hediffSeverity>0.3</hediffSeverity>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit2</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>13</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.2</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>The arc expands dramatically. Enemies far to the sides are no longer safe.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>9</rectWidth>
+            <rectLength>14</rectLength>
+            <damageType>Cut</damageType>
+            <damageAmount>40</damageAmount>
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+            <hediffSeverity>0.35</hediffSeverity>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit2</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>14</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.25</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>The universe burns. The arc is massive, the heat absolute.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>11</rectWidth>
+            <rectLength>15</rectLength>
+            <damageType>Cut</damageType>
+            <damageAmount>46</damageAmount>
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+            <hediffSeverity>0.4</hediffSeverity>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit2</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>15</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.3</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Mastered. The blazing universe is fully realized. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>13</rectWidth>
+            <rectLength>16</rectLength>
+            <damageType>Cut</damageType>
+            <damageAmount>54</damageAmount>
+            <hediffDef>Flame_Breathing_Singed</hediffDef>
+            <hediffSeverity>0.5</hediffSeverity>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit2</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>16</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_Singed</hediff>
+            <hediffSeverity>0.35</hediffSeverity>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

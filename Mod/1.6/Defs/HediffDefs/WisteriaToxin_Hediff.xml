@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>WisteriaToxin_Hediff</defName>
+    <label>wisteria poisoning</label>
+    <description>The toxic scent of wisteria permeates the demon's body, disrupting their supernatural regeneration and clouding their senses. Demons have no resistance to this ancient poison — without breathing discipline, there is no way to slow it.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.2, 0.8)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <lethalSeverity>1.0</lethalSeverity>
+    <isBad>true</isBad>
+    <comps>
+
+
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+      </li>
+
+      <li Class="AnimeArsenal.HediffCompProperties_RegenSuppression">
+        <suppressAboveSeverity>0.0</suppressAboveSeverity>
+        <regenMultiplier>0.0</regenMultiplier>
+        <suppressWoundHealing>true</suppressWoundHealing>
+        <suppressLimbRegen>true</suppressLimbRegen>
+        <suppressOrganRegen>true</suppressOrganRegen>
+        <suppressScarHealing>true</suppressScarHealing>
+        <suppressionWeight>1</suppressionWeight>
+      </li>
+
+    </comps>
+    <stages>
+      <li>
+        <label>faint</label>
+        <minSeverity>0</minSeverity>
+        <painOffset>0.05</painOffset>
+      </li>
+      <li>
+        <label>mild</label>
+        <minSeverity>0.15</minSeverity>
+        <painOffset>0.15</painOffset>
+        <vomitMtbDays>8</vomitMtbDays>
+        <capMods>
+          <li><capacity>Moving</capacity><offset>-0.15</offset></li>
+          <li><capacity>Consciousness</capacity><offset>-0.08</offset></li>
+          <li><capacity>Manipulation</capacity><offset>-0.10</offset></li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.35</minSeverity>
+        <painOffset>0.25</painOffset>
+        <vomitMtbDays>4</vomitMtbDays>
+        <lifeThreatening>true</lifeThreatening>
+        <capMods>
+          <li><capacity>Moving</capacity><offset>-0.30</offset></li>
+          <li><capacity>Consciousness</capacity><offset>-0.20</offset></li>
+          <li><capacity>Manipulation</capacity><offset>-0.20</offset></li>
+          <li><capacity>Talking</capacity><offset>-0.15</offset></li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.40</WorkSpeedGlobal>
+          <MeleeDPS>-0.20</MeleeDPS>
+        </statOffsets>
+        <mentalStateGivers>
+          <li><mentalState>WanderConfused</mentalState><mtbDays>12</mtbDays></li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>severe</label>
+        <minSeverity>0.60</minSeverity>
+        <painOffset>0.40</painOffset>
+        <vomitMtbDays>2</vomitMtbDays>
+        <lifeThreatening>true</lifeThreatening>
+        <capMods>
+          <li><capacity>Moving</capacity><offset>-0.50</offset></li>
+          <li><capacity>Consciousness</capacity><offset>-0.35</offset></li>
+          <li><capacity>Manipulation</capacity><offset>-0.40</offset></li>
+          <li><capacity>Talking</capacity><offset>-0.30</offset></li>
+          <li><capacity>Sight</capacity><offset>-0.20</offset></li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.70</WorkSpeedGlobal>
+          <MeleeDPS>-0.40</MeleeDPS>
+        </statOffsets>
+        <mentalStateGivers>
+          <li><mentalState>WanderConfused</mentalState><mtbDays>5</mtbDays></li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.80</minSeverity>
+        <painOffset>0.60</painOffset>
+        <vomitMtbDays>1</vomitMtbDays>
+        <lifeThreatening>true</lifeThreatening>
+        <deathMtbDays>3</deathMtbDays>
+        <capMods>
+          <li><capacity>Moving</capacity><postFactor>0.20</postFactor></li>
+          <li><capacity>Consciousness</capacity><postFactor>0.35</postFactor></li>
+          <li><capacity>Manipulation</capacity><postFactor>0.25</postFactor></li>
+          <li><capacity>Talking</capacity><postFactor>0.20</postFactor></li>
+          <li><capacity>Sight</capacity><offset>-0.50</offset></li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.95</WorkSpeedGlobal>
+          <MeleeDPS>-0.70</MeleeDPS>
+        </statOffsets>
+        <mentalStateGivers>
+          <li><mentalState>WanderConfused</mentalState><mtbDays>2</mtbDays></li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>NichirinWound_Hediff</defName>
+    <label>nichirin wound</label>
+    <description>A wound dealt by a Nichirin blade. The sun-forged steel disrupts demonic regeneration, slowing recovery and blocking limb regrowth as long as the wound persists.</description>
+    <displayWound>true</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.8, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.30</severityPerDay>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_RegenSuppression">
+        <suppressAboveSeverity>0.0</suppressAboveSeverity>
+        <regenMultiplier>0.0</regenMultiplier>
+        <suppressWoundHealing>true</suppressWoundHealing>
+        <suppressLimbRegen>true</suppressLimbRegen>
+        <suppressOrganRegen>true</suppressOrganRegen>
+        <suppressScarHealing>true</suppressScarHealing>
+        <suppressionWeight>1</suppressionWeight>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>fresh</label>
+        <minSeverity>0</minSeverity>
+        <painOffset>0.10</painOffset>
+      </li>
+      <li>
+        <label>deep</label>
+        <minSeverity>0.50</minSeverity>
+        <painOffset>0.25</painOffset>
+        <capMods>
+          <li><capacity>Moving</capacity><offset>-0.10</offset></li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Flame_Breathing_Damage</defName>
+    <label>flame burn</label>
+    <workerClass>DamageWorker_Flame</workerClass>
+    <damageEffecter>AnimeArsenal_FlamehitDamage</damageEffecter>
+    <externalViolence>true</externalViolence>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <harmsHealth>true</harmsHealth>
+    <deathMessage>{0} was burned alive by scorching flames.</deathMessage>
+    <combatLogRules>Damage_Flame</combatLogRules>
+    <hediff>BurningOfFlame</hediff>
+    <hediffSkin>BurningOfFlame</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <armorCategory>Heat</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>10</defaultDamage>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+    <additionalHediffs>
+      <li>
+        <hediff>Flame_Breathing_Singed</hediff>
+        <severityPerDamageDealt>0.08</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <scaleDamageToBuildingsBasedOnFlammability>true</scaleDamageToBuildingsBasedOnFlammability>
+    <igniteChanceByTargetFlammability>
+      <points>
+        <li>(0.0, 0.0)</li>
+        <li>(0.3, 0.3)</li>
+        <li>(0.7, 0.8)</li>
+        <li>(1.0, 1.0)</li>
+      </points>
+    </igniteChanceByTargetFlammability>
+    <igniteCellChance>0.25</igniteCellChance>
+    <buildingDamageFactor>1.25</buildingDamageFactor>
+    <plantDamageFactor>2.5</plantDamageFactor>
+    <corpseDamageFactor>1.5</corpseDamageFactor>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>BurningOfFlame</defName>
+    <label>flame burn</label>
+    <labelNoun>a flame burn</labelNoun>
+    <description>Flesh scorched by intense heat. Severe pain and risk of tissue death.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>tended</labelTendedWellInner>
+        <labelSolidTendedWell>tended</labelSolidTendedWell>
+        <severityPerDayTended>-0.75</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.30</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>flame burn scar</permanentLabel>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <statOffsets>
+          <ComfyTemperatureMin>5</ComfyTemperatureMin>
+          <ComfyTemperatureMax>-3</ComfyTemperatureMax>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.3</minSeverity>
+        <statOffsets>
+          <ComfyTemperatureMin>12</ComfyTemperatureMin>
+          <ComfyTemperatureMax>-8</ComfyTemperatureMax>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <statOffsets>
+          <ComfyTemperatureMin>20</ComfyTemperatureMin>
+          <ComfyTemperatureMax>-15</ComfyTemperatureMax>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <statOffsets>
+          <ComfyTemperatureMin>30</ComfyTemperatureMin>
+          <ComfyTemperatureMax>-25</ComfyTemperatureMax>
+        </statOffsets>
+      </li>
+    </stages>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.0075</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Burned off</destroyedLabel>
+      <destroyedOutLabel>Burned out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+</Defs>

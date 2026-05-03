@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Nezuko_BrightRedWeapon</defName>
+    <label>Bright Red Weapon</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Nezuko ignites her own blood, coating her attacks in pink-red demon fire. She takes self-damage to empower her strikes and hinder demon regeneration.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+        <hediffDef>DS_Nezuko_BrightRedWeapon_L1</hediffDef>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Toggle. Melee damage +15%. Applies regen-down (1500t) to demons on hit. Caster bleeds while active.</description>
+      </li>
+      
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.033</resourceCostMultiplier>
+        <description>Melee damage +18%. Regen-down 1500t on hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_BrightRedWeapon_L2</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.133</resourceCostMultiplier>
+        <description>Melee damage +20%. Regen-down duration 2500t.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_BrightRedWeapon_L3</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.233</resourceCostMultiplier>
+        <description>Melee damage +20%. Regen-down 2500t. Self-bleed rate reduced by 1 HP.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_BrightRedWeapon_L4</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.367</resourceCostMultiplier>
+        <description>Melee damage +20%. Regen-down extended to 3500t on demon hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_BrightRedWeapon_L5</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.560</cooldownMultiplier>
+        <resourceCostMultiplier>1.500</resourceCostMultiplier>
+        <description>Perfected. Melee damage +25%. Regen-down 5000t on demon hit. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_BrightRedWeapon_L6</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

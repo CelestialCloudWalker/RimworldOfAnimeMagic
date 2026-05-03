@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Mist_Breathing_ScatteringMistSlash</defName>
+    <label>Mist Breathing: Scattering Mist Slash</label>
+    <description>A single sweeping slash erupts forward, scattering mist and dust in all directions. Enemies caught in the spread are cut; the cloud swallows the user whole, granting a fleeting moment of invisibility and leaving behind just enough misdirection to slip away.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>540</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>320</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>18</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.35</warmupTime>
+      <noiseRadius>2</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>4</rectWidth>
+        <rectLength>12</rectLength>
+        <damageAmount>16</damageAmount>
+        <damageType>Mist_Breathing_Damage</damageType>
+        <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+        <hediffDef>MistBreathing_Vanish</hediffDef>
+        <severityAdjustment>1.0</severityAdjustment>
+        <applyToTarget>false</applyToTarget>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+        <hediffDef>MistBreathing_Misdirection</hediffDef>
+        <severityAdjustment>0.18</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>16 damage in a forward arc. Kicks up dust and vanishes briefly. Grants low Misdirection.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>130</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>20 damage. The mist spreads wider. Vanish window slightly extended.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>5</rectWidth>
+            <rectLength>12</rectLength>
+            <damageAmount>20</damageAmount>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.22</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <cooldownMultiplier>0.92</cooldownMultiplier>
+        <description>25 damage. Faster draw. The dust cloud erupts harder — harder to track through.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>5</rectWidth>
+            <rectLength>13</rectLength>
+            <damageAmount>25</damageAmount>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.27</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>510</experienceRequired>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>31 damage. Extended reach. Misdirection edges into "Faint Haze" territory more reliably.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>6</rectWidth>
+            <rectLength>13</rectLength>
+            <damageAmount>31</damageAmount>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.32</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>770</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>38 damage. Wide scatter and a long invisible window. The slash and the disappearance feel like one motion.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>6</rectWidth>
+            <rectLength>14</rectLength>
+            <damageAmount>38</damageAmount>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.38</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1150</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 46 damage across a wide forward scatter. The mist consumes the user instantly — they are simply gone. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>7</rectWidth>
+            <rectLength>14</rectLength>
+            <damageAmount>46</damageAmount>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.45</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

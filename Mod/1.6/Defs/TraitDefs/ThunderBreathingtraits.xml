@@ -10,17 +10,18 @@
         <description>[PAWN_nameDef] moves with the speed of a lightning strike. [PAWN_possessive] incredible reflexes give [PAWN_objective] the first strike in any encounter, though such speed comes with its own challenges.</description>
         <degree>1</degree>
         <statOffsets>
-          <MoveSpeed>0.5</MoveSpeed>
-          <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
-          <MeleeHitChance>10</MeleeHitChance>
-          <MeleeDodgeChance>12</MeleeDodgeChance>
-          <RestRateMultiplier>0.8</RestRateMultiplier>
+          <MoveSpeed>0.35</MoveSpeed>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <MeleeHitChance>6</MeleeHitChance>
+          <MeleeDodgeChance>8</MeleeDodgeChance>
+          <FoodPoisonChance>0.1</FoodPoisonChance>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
         </statOffsets>
         <skillGains>
           <Melee>5</Melee>
           <Shooting>3</Shooting>
         </skillGains>
-        <marketValueFactorOffset>0.18</marketValueFactorOffset>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
@@ -35,8 +36,9 @@
         <degree>1</degree>
         <statOffsets>
           <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
-          <MentalBreakThreshold>8</MentalBreakThreshold>
+          <MentalBreakThreshold>0.08</MentalBreakThreshold>
           <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+          <PsychicSensitivity>0.2</PsychicSensitivity>
         </statOffsets>
         <skillGains>
           <Crafting>3</Crafting>
@@ -59,8 +61,8 @@
         <description>[PAWN_nameDef] channels electrical energy through [PAWN_possessive] hands. [PAWN_possessive] natural affinity with electronics makes [PAWN_objective] exceptionally skilled at crafting and repairing electrical devices.</description>
         <degree>1</degree>
         <statOffsets>
-          <WorkSpeedGlobal>0.4</WorkSpeedGlobal>
-          <FixBrokenDownBuildingSuccessChance>0.5</FixBrokenDownBuildingSuccessChance>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+          <FixBrokenDownBuildingSuccessChance>0.3</FixBrokenDownBuildingSuccessChance>
           <ResearchSpeed>0.2</ResearchSpeed>
         </statOffsets>
         <skillGains>
@@ -81,8 +83,8 @@
         <description>[PAWN_nameDef] can move in sudden bursts of incredible speed. [PAWN_possessive] lightning-fast movement allows for quick escapes and rapid rescue operations, though sustained speed taxes [PAWN_possessive] body.</description>
         <degree>1</degree>
         <statOffsets>
-          <MoveSpeed>0.6</MoveSpeed>
-          <MeleeDodgeChance>15</MeleeDodgeChance>
+          <MoveSpeed>0.4</MoveSpeed>
+          <MeleeDodgeChance>10</MeleeDodgeChance>
           <CarryingCapacity>-20</CarryingCapacity>
           <BedHungerRateFactor>1.2</BedHungerRateFactor>
         </statOffsets>
@@ -110,7 +112,6 @@
         <statOffsets>
           <ShootingAccuracyPawn>6</ShootingAccuracyPawn>
           <MeleeHitChance>8</MeleeHitChance>
-          <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
         </statOffsets>
         <skillGains>
           <Shooting>4</Shooting>
@@ -135,7 +136,7 @@
         <description>[PAWN_nameDef] commands attention like a clap of thunder. [PAWN_possessive] booming voice and imposing presence make [PAWN_objective] a natural leader, though subtlety is not [PAWN_possessive] strength.</description>
         <degree>1</degree>
         <statOffsets>
-          <SocialImpact>0.6</SocialImpact>
+          <SocialImpact>0.4</SocialImpact>
           <MeleeHitChance>8</MeleeHitChance>
           <HuntingStealth>-0.8</HuntingStealth>
           <ArrestSuccessChance>0.3</ArrestSuccessChance>

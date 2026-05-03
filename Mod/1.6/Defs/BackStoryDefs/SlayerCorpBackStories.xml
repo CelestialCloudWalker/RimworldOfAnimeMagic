@@ -4,8 +4,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_DemonSlayerTrainee</defName>
     <title>Demon Slayer Trainee</title>
-    <titleShort>Demon Slayer Trainee</titleShort>
-    <baseDesc>[PAWN_nameDef] has been trained by a formar Hashira as a child, learning basic sword techniques.</baseDesc>
+    <titleShort>DS Trainee</titleShort>
+    <baseDesc>[PAWN_nameDef] was taken on as a child by a former Hashira, drilled in footwork, breathing control, and the fundamentals of swordsmanship before most children had learned to read.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -13,8 +13,8 @@
     </spawnCategories>
     <skillGains>
       <Melee>3</Melee>
-      <Medicine>2</Medicine>
-      <Construction>2</Construction>
+      <Medicine>1</Medicine>
+      <Construction>1</Construction>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -30,8 +30,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Orphaned_by_Demons</defName>
     <title>Orphaned by Demons</title>
-    <titleShort>Orphaned by Demons</titleShort>
-    <baseDesc>[PAWN_nameDef]'s parents where killed by demons, taken in by the Corps who taught them basic skills.</baseDesc>
+    <titleShort>Demon Orphan</titleShort>
+    <baseDesc>[PAWN_nameDef]'s parents were killed by demons when [PAWN_pronoun] was very young. Taken in by the Corps, [PAWN_pronoun] grew up on grief and determination in equal measure.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -57,8 +57,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Mountain_Hermit_Child</defName>
     <title>Mountain Hermit Child</title>
-    <titleShort>Mountain Hermit Child</titleShort>
-    <baseDesc>[PAWN_nameDef] grew up isolated in the mountains, learning to live off the land and fighting wild animals.</baseDesc>
+    <titleShort>Hermit Child</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up alone in the high mountains, learning to hunt, build shelter, and survive encounters with wild animals long before [PAWN_pronoun] ever met another person.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -67,8 +67,8 @@
     <skillGains>
       <Melee>3</Melee>
       <Construction>2</Construction>
-      <Animals>2</Animals>
-      <Plants>1</Plants>
+      <Animals>3</Animals>
+      <Plants>2</Plants>
     </skillGains>
     <workDisables>
       <li>Social</li>
@@ -85,10 +85,57 @@
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef>
+    <defName>RK_Wisteria_Village_Child</defName>
+    <title>Wisteria Village Child</title>
+    <titleShort>Wisteria Child</titleShort>
+    <baseDesc>[PAWN_nameDef] was raised in one of the hidden wisteria villages that shelter Demon Slayers. From infancy [PAWN_pronoun] knew the smell of wisteria, the names of the Hashira, and why the nights must be feared.</baseDesc>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>3</Plants>
+      <Medicine>2</Medicine>
+      <Social>2</Social>
+      <Melee>1</Melee>
+    </skillGains>
+    <requiredWorkTags>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Swordsmith_Apprentice_Child</defName>
+    <title>Swordsmith's Apprentice</title>
+    <titleShort>Smith Apprentice</titleShort>
+    <baseDesc>[PAWN_nameDef] was born into the Swordsmith Village and began working the bellows and polishing blades before [PAWN_possessive] tenth birthday. The sound of hammer on steel was a lullaby.</baseDesc>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Crafting>4</Crafting>
+      <Artistic>2</Artistic>
+      <Mining>1</Mining>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Crafting</li>
+    </requiredWorkTags>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
     <defName>RK_Beast_Breathing_Hashira</defName>
     <title>Beast Breathing Hashira</title>
-    <titleShort>Beast Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Beast Breathing.</baseDesc>
+    <titleShort>Beast Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] clawed [PAWN_possessive] way to the rank of Hashira through sheer feral instinct. [PAWN_pronoun] fights like something not quite human, dual blades moving in patterns no formal school ever taught.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -96,14 +143,14 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Animals>4</Animals>
-      <Melee>7</Melee>
-      <Construction>4</Construction>
-      <Mining>1</Mining>
+      <Animals>5</Animals>
+      <Melee>8</Melee>
+      <Construction>2</Construction>
+      <Plants>1</Plants>
     </skillGains>
     <workDisables>
       <li>Intellectual</li>
-      <li>Social </li>
+      <li>Social</li>
     </workDisables>
     <requiredWorkTags>
       <li>Violent</li>
@@ -123,8 +170,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Flame_Breathing_Hashira</defName>
     <title>Flame Breathing Hashira</title>
-    <titleShort>Flame Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Flame Breathing.</baseDesc>
+    <titleShort>Flame Hashira</titleShort>
+    <baseDesc>The title of Flame Hashira is a birthright — and a burden. [PAWN_nameDef] carries both with unyielding resolve, the roaring intensity of [PAWN_possessive] blade matched only by the warmth [PAWN_pronoun] shows those under [PAWN_possessive] protection.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -133,8 +180,8 @@
     </spawnCategories>
     <skillGains>
       <Social>4</Social>
-      <Melee>8</Melee>
-      <Construction>2</Construction>
+      <Melee>9</Melee>
+      <Medicine>1</Medicine>
       <Cooking>1</Cooking>
     </skillGains>
     <requiredWorkTags>
@@ -143,17 +190,19 @@
     <forcedTraits>
       <Tough>0</Tough>
       <Brawler>0</Brawler>
+      <Kind>0</Kind>
     </forcedTraits>
     <disallowedTraits>
       <Wimp>0</Wimp>
+      <Abrasive>0</Abrasive>
     </disallowedTraits>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Water_Breathing_Hashira</defName>
     <title>Water Breathing Hashira</title>
-    <titleShort>Water Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Water Breathing.</baseDesc>
+    <titleShort>Water Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] embodies the adaptability of water — calm and yielding until the moment of strike. As Hashira, [PAWN_pronoun] mentors many, fights without ego, and endures without breaking.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -162,12 +211,13 @@
     </spawnCategories>
     <skillGains>
       <Medicine>4</Medicine>
-      <Social>1</Social>
+      <Social>3</Social>
       <Melee>8</Melee>
-      <Construction>2</Construction>
+      <Construction>1</Construction>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
+      <li>Caring</li>
     </requiredWorkTags>
     <forcedTraits>
       <Tough>0</Tough>
@@ -183,8 +233,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Thunder_Breathing_Hashira</defName>
     <title>Thunder Breathing Hashira</title>
-    <titleShort>Thunder Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Thunder Breathing.</baseDesc>
+    <titleShort>Thunder Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] moves faster than the eye can follow. [PAWN_possessive] Thunder Breathing reduces every fight to a single, impossible instant — blink and you've already lost. The anxiety that drives [PAWN_pronoun] is also what makes [PAWN_pronoun] unstoppable.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -193,12 +243,11 @@
     </spawnCategories>
     <skillGains>
       <Medicine>2</Medicine>
-      <Melee>8</Melee>
-      <Shooting>5</Shooting>
+      <Melee>9</Melee>
+      <Shooting>3</Shooting>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
-      <li>Shooting</li>
     </requiredWorkTags>
     <forcedTraits>
       <Tough>0</Tough>
@@ -208,14 +257,15 @@
     <disallowedTraits>
       <Wimp>0</Wimp>
       <Brawler>0</Brawler>
+      <SpeedOffset>-1</SpeedOffset>
     </disallowedTraits>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Flower_Breathing_Hashira</defName>
     <title>Flower Breathing Hashira</title>
-    <titleShort>Flower Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Flower Breathing.</baseDesc>
+    <titleShort>Flower Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef]'s technique looks like a dance and ends like a guillotine. Every strike is precise, graceful, and final. Behind the elegance lives a grief [PAWN_pronoun] has never allowed [PAWN_possessive] to share.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -225,8 +275,8 @@
     <skillGains>
       <Medicine>3</Medicine>
       <Melee>8</Melee>
-      <Artistic>3</Artistic>
-      <Plants>1</Plants>
+      <Artistic>4</Artistic>
+      <Plants>2</Plants>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -245,8 +295,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Stone_Breathing_Hashira</defName>
     <title>Stone Breathing Hashira</title>
-    <titleShort>Stone Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Stone Breathing.</baseDesc>
+    <titleShort>Stone Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] is immovable. No demon has ever knocked [PAWN_pronoun] off [PAWN_possessive] feet, and most have stopped trying. Stone Breathing demands absolute physical dominance — [PAWN_pronoun] has spent a lifetime delivering it.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -254,12 +304,13 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Mining>4</Mining>
+      <Mining>5</Mining>
       <Melee>9</Melee>
-      <Construction>3</Construction>
+      <Construction>4</Construction>
     </skillGains>
     <workDisables>
       <li>Intellectual</li>
+      <li>Social</li>
     </workDisables>
     <requiredWorkTags>
       <li>Violent</li>
@@ -271,14 +322,15 @@
     </forcedTraits>
     <disallowedTraits>
       <Wimp>0</Wimp>
+      <SpeedOffset>1</SpeedOffset>
     </disallowedTraits>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Wind_Breathing_Hashira</defName>
     <title>Wind Breathing Hashira</title>
-    <titleShort>Wind Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Wind Breathing.</baseDesc>
+    <titleShort>Wind Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] is a storm given a human shape — unpredictable, relentless, and as likely to insult [PAWN_possessive] allies as [PAWN_possessive] enemies. [PAWN_possessive] Wind Breathing is brutally effective, which [PAWN_pronoun] considers sufficient justification for everything else.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -286,9 +338,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Shooting>2</Shooting>
+      <Shooting>3</Shooting>
       <Melee>8</Melee>
-      <Construction>4</Construction>
+      <Construction>2</Construction>
+      <Medicine>1</Medicine>
     </skillGains>
     <workDisables>
       <li>Social</li>
@@ -310,8 +363,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Insect_Breathing_Hashira</defName>
     <title>Insect Breathing Hashira</title>
-    <titleShort>Insect Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Insect Breathing.</baseDesc>
+    <titleShort>Insect Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] cannot behead a demon with raw strength — so [PAWN_pronoun] doesn't try. Instead [PAWN_possessive] blade carries a wisteria-derived poison that paralyses from the inside. [PAWN_pronoun] explains this with a smile that never quite reaches [PAWN_possessive] eyes.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -319,10 +372,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Medicine>5</Medicine>
+      <Medicine>6</Medicine>
       <Melee>7</Melee>
       <Intellectual>4</Intellectual>
-      <Plants>1</Plants>
+      <Plants>2</Plants>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -341,8 +394,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Love_Breathing_Hashira</defName>
     <title>Love Breathing Hashira</title>
-    <titleShort>Love Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Love Breathing.</baseDesc>
+    <titleShort>Love Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] fights with everything [PAWN_pronoun] has — which turns out to be considerable. Loud, affectionate, and frighteningly skilled, [PAWN_pronoun] developed Love Breathing from scratch and would be delighted to tell you how, at length, right now.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -350,9 +403,9 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Cooking>5</Cooking>
+      <Cooking>4</Cooking>
       <Melee>8</Melee>
-      <Social>4</Social>
+      <Social>5</Social>
       <Medicine>1</Medicine>
     </skillGains>
     <requiredWorkTags>
@@ -373,8 +426,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Sound_Breathing_Hashira</defName>
     <title>Sound Breathing Hashira</title>
-    <titleShort>Sound Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Sound Breathing.</baseDesc>
+    <titleShort>Sound Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] was a shinobi before [PAWN_pronoun] was a Hashira. [PAWN_possessive] Sound Breathing turns every fight into a performance — explosions, misdirection, and five blades at once. The theatrics are intentional. So is every kill.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -382,10 +435,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Artistic>4</Artistic>
+      <Artistic>5</Artistic>
       <Melee>8</Melee>
       <Crafting>3</Crafting>
-      <Shooting>1</Shooting>
+      <Shooting>2</Shooting>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -403,8 +456,39 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Mist_Breathing_Hashira</defName>
     <title>Mist Breathing Hashira</title>
-    <titleShort>Mist Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Mist Breathing.</baseDesc>
+    <titleShort>Mist Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] passes through a battle like fog — present, lethal, and then simply gone. [PAWN_possessive] Mist Breathing confounds enemies who cannot track something that seems to exist everywhere and nowhere at once.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>Hashira</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>1</Construction>
+      <Melee>8</Melee>
+      <Shooting>4</Shooting>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+      <SpeedOffset>1</SpeedOffset>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+      <Brawler>0</Brawler>
+      <SpeedOffset>-1</SpeedOffset>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Serpent_Breathing_Hashira</defName>
+    <title>Serpent Breathing Hashira</title>
+    <titleShort>Serpent Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef]'s blade moves in coiling, winding patterns that slip past any guard. [PAWN_pronoun] is difficult to like and impossible to predict — a combination that has served [PAWN_pronoun] well against demons and colleagues alike.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -414,39 +498,8 @@
     <skillGains>
       <Construction>2</Construction>
       <Melee>8</Melee>
-      <Shooting>4</Shooting>
-      <Intellectual>1</Intellectual>
-    </skillGains>
-    <requiredWorkTags>
-      <li>Violent</li>
-      <li>Shooting</li>
-    </requiredWorkTags>
-    <forcedTraits>
-      <Tough>0</Tough>
-      <SpeedOffset>1</SpeedOffset>
-    </forcedTraits>
-    <disallowedTraits>
-      <Wimp>0</Wimp>
-      <Brawler>0</Brawler>
-    </disallowedTraits>
-  </AlienRace.AlienBackstoryDef>
-
-  <AlienRace.AlienBackstoryDef>
-    <defName>RK_Serpent_Breathing_Hashira</defName>
-    <title>Serpent Breathing Hashira</title>
-    <titleShort>Serpent Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Serpent Breathing.</baseDesc>
-    <slot>Adulthood</slot>
-    <spawnCategories>
-      <li>RimKetsu</li>
-      <li>Hashira</li>
-      <li>SlayerCorp</li>
-    </spawnCategories>
-    <skillGains>
-      <Construction>3</Construction>
-      <Melee>8</Melee>
       <Medicine>2</Medicine>
-      <Crafting>1</Crafting>
+      <Crafting>2</Crafting>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -464,8 +517,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Forest_Breathing_Hashira</defName>
     <title>Forest Breathing Hashira</title>
-    <titleShort>Forest Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Forest Breathing.</baseDesc>
+    <titleShort>Forest Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] fights as the forest does — with patience, with roots, and with an overwhelming weight that eventually smothers everything beneath it. [PAWN_pronoun] tends [PAWN_possessive] wisteria grove and [PAWN_possessive] sword with equal care.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -473,10 +526,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Construction>3</Construction>
+      <Construction>2</Construction>
       <Melee>8</Melee>
-      <Plants>3</Plants>
-      <Animals>2</Animals>
+      <Plants>4</Plants>
+      <Animals>3</Animals>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -493,8 +546,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Frost_Breathing_Hashira</defName>
     <title>Frost Breathing Hashira</title>
-    <titleShort>Frost Breathing Hashira</titleShort>
-    <baseDesc>[PAWN_nameDef] has reached the highest rank in the Demon Slayer Corps, mastering the art of Frost Breathing.</baseDesc>
+    <titleShort>Frost Hashira</titleShort>
+    <baseDesc>[PAWN_nameDef] is still and silent before the strike, like a frozen lake — and just as dangerous to trust. [PAWN_possessive] Frost Breathing trades speed for precision, landing cuts of surgical exactness that demons rarely survive long enough to describe.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -502,10 +555,279 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Construction>3</Construction>
+      <Construction>2</Construction>
       <Melee>8</Melee>
-      <Medicine>3</Medicine>
+      <Medicine>4</Medicine>
       <Mining>1</Mining>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Mizunoto</defName>
+    <title>Mizunoto Demon Slayer</title>
+    <titleShort>Mizunoto</titleShort>
+    <baseDesc>[PAWN_nameDef] only recently survived the Final Selection. The certification is fresh, the sword is new, and the demons ahead are not yet real in [PAWN_possessive] mind. That will change quickly.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>2</Melee>
+      <Medicine>1</Medicine>
+      <Construction>1</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Mizunoe</defName>
+    <title>Mizunoe Demon Slayer</title>
+    <titleShort>Mizunoe</titleShort>
+    <baseDesc>A handful of missions survived, a handful of demons slain. [PAWN_nameDef] has stopped flinching at the sound of screaming and started noticing patterns in how demons move at night.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>3</Melee>
+      <Medicine>1</Medicine>
+      <Construction>1</Construction>
+      <Shooting>1</Shooting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Tsuchinoeto</defName>
+    <title>Tsuchinoeto Demon Slayer</title>
+    <titleShort>Tsuchinoeto</titleShort>
+    <baseDesc>[PAWN_nameDef] has earned [PAWN_possessive] third rank through consistent results and, perhaps more importantly, consistent survival. [PAWN_pronoun] has begun to understand that talent alone does not keep you alive.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>3</Melee>
+      <Medicine>2</Medicine>
+      <Construction>1</Construction>
+      <Shooting>1</Shooting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Tsuchinoene</defName>
+    <title>Tsuchinoene Demon Slayer</title>
+    <titleShort>Tsuchinoene</titleShort>
+    <baseDesc>Reaching the fourth rank required [PAWN_nameDef] to kill demons that would have killed [PAWN_pronoun] a year ago. [PAWN_pronoun] carries the names of the slayers who died beside [PAWN_pronoun] on the road to this rank.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>4</Melee>
+      <Medicine>2</Medicine>
+      <Construction>2</Construction>
+      <Social>1</Social>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Kanoto</defName>
+    <title>Kanoto Demon Slayer</title>
+    <titleShort>Kanoto</titleShort>
+    <baseDesc>[PAWN_nameDef] is a middle-ranked slayer of solid ability and proven nerve. [PAWN_pronoun] has stopped counting kills and started counting the people [PAWN_pronoun] has managed to protect.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>4</Melee>
+      <Medicine>2</Medicine>
+      <Construction>2</Construction>
+      <Social>1</Social>
+      <Shooting>1</Shooting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Kanoe</defName>
+    <title>Kanoe Demon Slayer</title>
+    <titleShort>Kanoe</titleShort>
+    <baseDesc>The sixth rank is where many slayers spend their careers — capable enough to survive, skilled enough to be trusted with independent missions. [PAWN_nameDef] has earned that trust, repeatedly.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>5</Melee>
+      <Medicine>2</Medicine>
+      <Construction>2</Construction>
+      <Social>2</Social>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Hinoto</defName>
+    <title>Hinoto Demon Slayer</title>
+    <titleShort>Hinoto</titleShort>
+    <baseDesc>[PAWN_nameDef] operates at a level that most slayers never reach. [PAWN_possessive] breathing technique is deeply refined and [PAWN_pronoun] has fought demons that carry centuries of hatred — and walked away.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>5</Melee>
+      <Medicine>3</Medicine>
+      <Construction>2</Construction>
+      <Social>2</Social>
+      <Shooting>1</Shooting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Hinoe</defName>
+    <title>Hinoe Demon Slayer</title>
+    <titleShort>Hinoe</titleShort>
+    <baseDesc>Two ranks below Hashira, [PAWN_nameDef] is a slayer of exceptional ability. Corps command trusts [PAWN_pronoun] with the most dangerous solo assignments. The gap between [PAWN_pronoun] and the Hashira is real — but [PAWN_pronoun] is closing it.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>6</Melee>
+      <Medicine>3</Medicine>
+      <Construction>2</Construction>
+      <Social>2</Social>
+      <Intellectual>1</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Tsuchinoto</defName>
+    <title>Tsuchinoto Demon Slayer</title>
+    <titleShort>Tsuchinoto</titleShort>
+    <baseDesc>The second-highest non-Hashira rank. [PAWN_nameDef] is spoken of in Corps circles as a future Pillar. [PAWN_pronoun] does not disagree, but has learned to say nothing until the blade has spoken first.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>6</Melee>
+      <Medicine>3</Medicine>
+      <Construction>3</Construction>
+      <Social>2</Social>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Rank_Kinoe</defName>
+    <title>Kinoe Demon Slayer</title>
+    <titleShort>Kinoe</titleShort>
+    <baseDesc>The highest rank below Hashira. [PAWN_nameDef] has effectively mastered [PAWN_possessive] breathing style and defeated demons that would overwhelm most of the Corps. The only thing standing between [PAWN_pronoun] and a Hashira title is a vacant seat — or the death of whoever currently holds it.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>7</Melee>
+      <Medicine>3</Medicine>
+      <Construction>3</Construction>
+      <Social>3</Social>
+      <Intellectual>2</Intellectual>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -520,9 +842,9 @@
 
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Former_Hashira</defName>
-    <title>Former Breathing Hashira</title>
-    <titleShort>Former Breathing Hashira</titleShort>
-    <baseDesc>No longer a Hashira, [PAWN_nameDef] lives in quiet retirement.</baseDesc>
+    <title>Former Hashira</title>
+    <titleShort>Former Hashira</titleShort>
+    <baseDesc>The rank was stripped by injury or choice, not by failure. [PAWN_nameDef] carries the knowledge and the scars of a Hashira's career and has quietly accepted that the hardest battles are behind [PAWN_pronoun]. [PAWN_pronoun] spends the peace writing down everything [PAWN_pronoun] learned.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -530,10 +852,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Intellectual>5</Intellectual>
-      <Melee>7</Melee>
+      <Intellectual>6</Intellectual>
+      <Melee>6</Melee>
       <Medicine>3</Medicine>
-      <Social>2</Social>
+      <Social>3</Social>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -550,7 +872,7 @@
     <defName>RK_Retired_Slayer</defName>
     <title>Retired Slayer</title>
     <titleShort>Retired Slayer</titleShort>
-    <baseDesc>One of the few to survive long enough to retire, [PAWN_nameDef] stands as proof of the Corps’ harsh trials.</baseDesc>
+    <baseDesc>Most slayers die young. [PAWN_nameDef] did not. [PAWN_pronoun] retired after a career of quiet competence and now lives proof that consistency outlasts heroics. [PAWN_pronoun] is reluctant to talk about [PAWN_possessive] service, but [PAWN_possessive] hands still move to reach for a sword that is no longer there.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -561,7 +883,7 @@
       <Construction>3</Construction>
       <Melee>4</Melee>
       <Medicine>3</Medicine>
-      <Crafting>2</Crafting>
+      <Crafting>3</Crafting>
     </skillGains>
     <requiredWorkTags>
       <li>Violent</li>
@@ -578,7 +900,7 @@
     <defName>RK_Kakushi</defName>
     <title>Kakushi</title>
     <titleShort>Kakushi</titleShort>
-    <baseDesc>A member of the Kakushi, [PAWN_nameDef] supports the Demon Slayers in both battlefield care and daily duties.</baseDesc>
+    <baseDesc>[PAWN_nameDef] is one of the unsung members of the Corps — a Kakushi who arrives after every battle to tend the wounded, clean the blood, and carry the ones who cannot walk. [PAWN_pronoun] has dragged more slayers back from the brink than any demon has ever sent forward.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -586,14 +908,15 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Social>4</Social>
-      <Crafting>1</Crafting>
-      <Construction>1</Construction>
-      <Melee>2</Melee>
-      <Medicine>5</Medicine>
+      <Social>3</Social>
+      <Crafting>2</Crafting>
+      <Construction>2</Construction>
+      <Melee>1</Melee>
+      <Medicine>6</Medicine>
     </skillGains>
     <requiredWorkTags>
-      <li>Violent</li>
+      <li>Caring</li>
+      <li>Hauling</li>
     </requiredWorkTags>
     <forcedTraits>
       <Tough>0</Tough>
@@ -608,7 +931,7 @@
     <defName>RK_Swordsmith</defName>
     <title>Swordsmith</title>
     <titleShort>Swordsmith</titleShort>
-    <baseDesc>[PAWN_nameDef] is devoted to the sacred art of swordmaking.</baseDesc>
+    <baseDesc>[PAWN_nameDef] has never fought a demon, yet [PAWN_possessive] work has killed hundreds of them. A dedicated swordsmith of the village, [PAWN_pronoun] pours everything into blades that will hold a nichirin edge under the worst conditions imaginable.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -616,10 +939,10 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Social>2</Social>
+      <Social>1</Social>
       <Crafting>10</Crafting>
       <Artistic>5</Artistic>
-      <Mining>2</Mining>
+      <Mining>3</Mining>
     </skillGains>
     <workDisables>
       <li>Violent</li>
@@ -639,8 +962,8 @@
   <AlienRace.AlienBackstoryDef>
     <defName>RK_Demon_Slayer_Corps_Member</defName>
     <title>Demon Slayer Corps Member</title>
-    <titleShort>Demon Slayer Corps Member</titleShort>
-    <baseDesc>[PAWN_nameDef] is a member of the Demon Slayer Corps, dedicated to hunting demons and protecting humanity.</baseDesc>
+    <titleShort>Corps Member</titleShort>
+    <baseDesc>[PAWN_nameDef] passed the Final Selection, received [PAWN_possessive] nichirin blade, and has been hunting demons ever since. [PAWN_possessive] rank is unspecified — [PAWN_pronoun] tends not to mention it. The work speaks for itself.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimKetsu</li>
@@ -648,17 +971,183 @@
       <li>SlayerCorp</li>
     </spawnCategories>
     <skillGains>
-      <Melee>6</Melee>
-      <Construction>3</Construction>
+      <Melee>5</Melee>
+      <Construction>2</Construction>
       <Shooting>2</Shooting>
-      <Medicine>1</Medicine>
+      <Medicine>2</Medicine>
     </skillGains>
     <requiredWorkTags>
-      <li>Crafting</li>
+      <li>Violent</li>
     </requiredWorkTags>
     <forcedTraits>
       <Tough>0</Tough>
     </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Corps_Crow_Handler</defName>
+    <title>Corps Crow Handler</title>
+    <titleShort>Crow Handler</titleShort>
+    <baseDesc>[PAWN_nameDef] raises, trains, and interprets the messenger crows that carry orders between the Corps and its scattered slayers. [PAWN_pronoun] knows every bird by name and voice, and a bird trained by [PAWN_pronoun] has never failed to deliver its message.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>7</Animals>
+      <Social>3</Social>
+      <Medicine>2</Medicine>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Animals</li>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <disallowedTraits>
+      <Bloodlust>0</Bloodlust>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Corps_Intelligence_Officer</defName>
+    <title>Corps Intelligence Officer</title>
+    <titleShort>Intel Officer</titleShort>
+    <baseDesc>[PAWN_nameDef] works in the shadows behind the Corps' battles — compiling reports on demon activity, mapping movement patterns, and building the intelligence that keeps slayers alive. [PAWN_pronoun] has never held a sword in combat, but [PAWN_possessive] work has saved more lives than most who have.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>7</Intellectual>
+      <Social>4</Social>
+      <Medicine>2</Medicine>
+      <Melee>1</Melee>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+      <li>Social</li>
+    </requiredWorkTags>
+    <disallowedTraits>
+      <Bloodlust>0</Bloodlust>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Wisteria_Farmer</defName>
+    <title>Wisteria Farmer</title>
+    <titleShort>Wisteria Farmer</titleShort>
+    <baseDesc>[PAWN_nameDef] tends the wisteria fields that protect the hidden villages from demon incursion. The work is quiet, unglamorous, and vital. [PAWN_pronoun] has never seen a demon — the wisteria ensures that — and intends to keep it that way.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>8</Plants>
+      <Medicine>3</Medicine>
+      <Construction>3</Construction>
+      <Animals>2</Animals>
+    </skillGains>
+    <workDisables>
+      <li>Violent</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>PlantWork</li>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <disallowedTraits>
+      <Bloodlust>0</Bloodlust>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Wisteria_Village_Elder</defName>
+    <title>Wisteria Village Elder</title>
+    <titleShort>Village Elder</titleShort>
+    <baseDesc>[PAWN_nameDef] has overseen a wisteria-protected village for decades, coordinating rest, resupply, and recovery for slayers passing through. [PAWN_pronoun] has heard enough stories to know exactly how bad things are, and [PAWN_pronoun] has chosen to keep smiling anyway.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>7</Social>
+      <Medicine>4</Medicine>
+      <Plants>3</Plants>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>Violent</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Social</li>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Kind>0</Kind>
+    </forcedTraits>
+    <disallowedTraits>
+      <Bloodlust>0</Bloodlust>
+      <Abrasive>0</Abrasive>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Traveling_Medicine_Seller</defName>
+    <title>Traveling Medicine Seller</title>
+    <titleShort>Medicine Seller</titleShort>
+    <baseDesc>[PAWN_nameDef] travels the roads between towns carrying medicines, tonics, and the kind of knowledge that only comes from treating injuries in the field with no surgeon nearby. [PAWN_pronoun] asks no questions about wounds and charges nothing to those who cannot pay.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>7</Medicine>
+      <Social>4</Social>
+      <Plants>3</Plants>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Caring</li>
+      <li>Social</li>
+    </requiredWorkTags>
+    <disallowedTraits>
+      <Bloodlust>0</Bloodlust>
+    </disallowedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>RK_Nichirin_Ore_Miner</defName>
+    <title>Nichirin Ore Miner</title>
+    <titleShort>Ore Miner</titleShort>
+    <baseDesc>[PAWN_nameDef] spent years working the high-altitude mines that supply the special ore for nichirin blades. The work is dangerous, the air is thin, and the material is irreplaceable. [PAWN_pronoun] takes every seam personally.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RimKetsu</li>
+      <li>SlayerCorp</li>
+    </spawnCategories>
+    <skillGains>
+      <Mining>8</Mining>
+      <Construction>4</Construction>
+      <Crafting>2</Crafting>
+      <Medicine>1</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Mining</li>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <disallowedTraits>
+      <Wimp>0</Wimp>
+    </disallowedTraits>
   </AlienRace.AlienBackstoryDef>
 
 </Defs>

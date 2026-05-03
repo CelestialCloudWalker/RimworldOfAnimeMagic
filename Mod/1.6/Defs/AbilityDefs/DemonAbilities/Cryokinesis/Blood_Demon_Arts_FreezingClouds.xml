@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_FreezingClouds</defName>
+    <label>Freezing Clouds</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Doma exhales an enormous billowing cloud of frozen air, saturating a wide area with Crystalized Air that slowly freezes all who breathe it.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>4000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>38</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.8</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+        <gasDef>DS_CrystalizedAir_Gas</gasDef>
+        <gasLifetimeTicks><min>1200</min><max>1200</max></gasLifetimeTicks>
+        <angle>360</angle>
+        <range>8</range>
+        <numCellsToHit>60</numCellsToHit>
+        <gasSpawnChance>0.5</gasSpawnChance>
+        <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+        <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+        <damageIntervalTicks>120</damageIntervalTicks>
+        <affectHostile>true</affectHostile>
+        <affectFriendly>false</affectFriendly>
+        <affectAnimals>true</affectAnimals>
+        <affectMechanoids>false</affectMechanoids>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Floods a radius-8 area with Crystalized Air. Pawns gain Crystalized Air Exposure (+0.04 severity per 2s). Lasts 1200 ticks.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.91</cooldownMultiplier>
+        <resourceCostMultiplier>1.026</resourceCostMultiplier>
+        <description>Radius extended to 9. Gas lifetime increased to 1400 ticks. Crystalized Air Exposure +0.04 per 2s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1400</min><max>1400</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>9</range>
+            <numCellsToHit>70</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <resourceCostMultiplier>1.079</resourceCostMultiplier>
+        <description>Radius extended to 10. The cloud spreads further. Crystalized Air Exposure +0.04 per 2s. Lasts 1400 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1400</min><max>1400</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>10</range>
+            <numCellsToHit>80</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.73</cooldownMultiplier>
+        <resourceCostMultiplier>1.132</resourceCostMultiplier>
+        <description>Radius extended to 12. Exposure severity increased (+0.048 per 2s). Lasts 1400 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1400</min><max>1400</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>12</range>
+            <numCellsToHit>100</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.048</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.64</cooldownMultiplier>
+        <resourceCostMultiplier>1.211</resourceCostMultiplier>
+        <description>Radius extended to 14. Exposure severity doubled (+0.096 per 2s). Lasts 1400 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1400</min><max>1400</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>14</range>
+            <numCellsToHit>120</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.096</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.55</cooldownMultiplier>
+        <resourceCostMultiplier>1.316</resourceCostMultiplier>
+        <description>Perfected. Radius extended to 16. Gas lifetime increased to 1800 ticks. Exposure severity +0.096 per 2s. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1800</min><max>1800</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>16</range>
+            <numCellsToHit>140</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.096</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Nezuko_HeadKick</defName>
+    <label>Head Kick</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Nezuko launches a devastating kick at the target's head. The force is enough to incapacitate demons but will never outright kill them — their regeneration takes over just in time.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>2</range>
+      <warmupTime>0.4</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <dashSpeed>1.5</dashSpeed>
+        <damageType>Blunt</damageType>
+        <initialStrikeDamage>30</initialStrikeDamage>
+        <initialStrikeArmorPen>0.15</initialStrikeArmorPen>
+        <targetVitalOrgans>true</targetVitalOrgans>
+        <vitalOrganDefNames>
+          <li>Brain</li>
+        </vitalOrganDefNames>
+        <vitalOrganDamage>30</vitalOrganDamage>
+        <vitalOrganArmorPen>0.15</vitalOrganArmorPen>
+        <stunDuration>0</stunDuration>
+        <effectRadius>0</effectRadius>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>30 Blunt targeting Brain. Cannot kill demons. Range 2.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.040</resourceCostMultiplier>
+        <description>36 Blunt (head). Cooldown reduced.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>1.5</dashSpeed>
+            <damageType>Blunt</damageType>
+            <initialStrikeDamage>36</initialStrikeDamage>
+            <initialStrikeArmorPen>0.15</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>36</vitalOrganDamage>
+            <vitalOrganArmorPen>0.15</vitalOrganArmorPen>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.120</resourceCostMultiplier>
+        <description>44 Blunt (head). Adds 30t stun on hit to simulate pain shock.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>1.5</dashSpeed>
+            <damageType>Blunt</damageType>
+            <initialStrikeDamage>44</initialStrikeDamage>
+            <initialStrikeArmorPen>0.15</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>44</vitalOrganDamage>
+            <vitalOrganArmorPen>0.15</vitalOrganArmorPen>
+            <stunDuration>30</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.200</resourceCostMultiplier>
+        <description>54 Blunt (head). Increased head targeting accuracy.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>1.5</dashSpeed>
+            <damageType>Blunt</damageType>
+            <initialStrikeDamage>54</initialStrikeDamage>
+            <initialStrikeArmorPen>0.20</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>54</vitalOrganDamage>
+            <vitalOrganArmorPen>0.20</vitalOrganArmorPen>
+            <stunDuration>30</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.280</resourceCostMultiplier>
+        <description>64 Blunt. Guaranteed Brain hit. Stun 80t.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>1.5</dashSpeed>
+            <damageType>Blunt</damageType>
+            <initialStrikeDamage>64</initialStrikeDamage>
+            <initialStrikeArmorPen>0.25</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>64</vitalOrganDamage>
+            <vitalOrganArmorPen>0.25</vitalOrganArmorPen>
+            <stunDuration>80</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.560</cooldownMultiplier>
+        <resourceCostMultiplier>1.400</resourceCostMultiplier>
+        <description>Perfected. 78 Blunt (Brain). 80t stun. Full armorPen 0.30. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>1.5</dashSpeed>
+            <damageType>Blunt</damageType>
+            <initialStrikeDamage>78</initialStrikeDamage>
+            <initialStrikeArmorPen>0.30</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>78</vitalOrganDamage>
+            <vitalOrganArmorPen>0.30</vitalOrganArmorPen>
+            <stunDuration>80</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

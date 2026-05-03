@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>NightmareDream_L3</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>4</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>worsening nightmares</label>
+        <description>The nightmares grow more vivid. I can still smell the blood when I wake.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>NightmareDream_L5</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>abyssal nightmares</label>
+        <description>Something reached into my dreams and showed me the abyss. I cannot sleep without seeing it.</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>NightmareDream</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>3</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>nightmare</label>
+        <description>I had nightmares that felt so real. I watched demons eat the ones I love.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>PleasantDream</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>2</durationDays>
+    <stackLimit>2</stackLimit>
+    <stages>
+      <li>
+        <label>pleasant dreams</label>
+        <description>I had the most wonderful dream. I got to spent time with the ones I love.</description>
+        <baseMoodEffect>+12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ImplantedMemory_Betrayal</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>10</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>betrayed by friend</label>
+        <description>I remember being betrayed by someone I loved. The memory feels so real.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ImplantedMemory_Victory</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>7</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>great victory</label>
+        <description>I remember achieving a great victory. It fills me with confidence.</description>
+        <baseMoodEffect>+10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ImplantedMemory_Loss</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>8</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>terrible loss</label>
+        <description>I remember losing something precious. The grief feels overwhelming.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DreamMoodPositive</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>manipulated dreams</label>
+        <description>My dreams were unusually positive and uplifting. I feel strangely optimistic.</description>
+        <baseMoodEffect>+15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DreamMoodNegative</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>disturbing dreams</label>
+        <description>My dreams were filled with anxiety and dread. I can't shake the feeling.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>DreamMoodPositive_L4</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>6</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>heart manipulation</label>
+        <description>My dreams filled me with a warmth I can't explain. I feel… content. Unshakeably so.</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DreamMoodNegative_L4</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>6</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>heart manipulation</label>
+        <description>A deep dread has settled into my chest. Something reached into my dreams and twisted something inside me.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>PleasantDream_L3</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>3</durationDays>
+    <stackLimit>2</stackLimit>
+    <stages>
+      <li>
+        <label>beautiful dreams</label>
+        <description>My dreams were so vivid and joyful. I woke feeling completely at peace.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>PleasantDream_L5</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>4</durationDays>
+    <stackLimit>2</stackLimit>
+    <stages>
+      <li>
+        <label>transcendent dreams</label>
+        <description>I dreamed of a world without pain. I still feel the warmth of it now.</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SweetDreams_Mood_L1</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>sweet dreams</label>
+        <description>I slept so peacefully. I feel ready to face the day.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SweetDreams_Mood_L3</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>sweet dreams</label>
+        <description>That was the best sleep I've ever had. I feel wonderful.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SweetDreams_Mood_L6</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>blissful dreams</label>
+        <description>That sleep was transcendent. I feel like I could do anything.</description>
+        <baseMoodEffect>16</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

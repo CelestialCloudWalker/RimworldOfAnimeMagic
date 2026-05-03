@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Beast_Breathing_FourthFang_SliceNDice</defName>
+    <label>Beast Breathing: Fourth Fang — Slice 'n' Dice</label>
+    <description>Both blades carve diagonally across the target in rapid alternating pairs — high, low, across, back — until the target is carved from every angle. Wild, relentless, and overwhelming. Beast Breathing at its most feral.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>660</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>430</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>32</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3</range>
+      <warmupTime>0.45</warmupTime>
+      <noiseRadius>3</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Cleave">
+        <NumberOfCuts>6</NumberOfCuts>
+        <BaseDamage>10</BaseDamage>
+        <TicksBetweenCuts>5</TicksBetweenCuts>
+        <DamageDef>Beast_Breathing_Damage</DamageDef>
+        <radius>0.5</radius>
+        <maxTargets>1</maxTargets>
+        <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>6 rapid diagonal slashes for 10 damage each (60 total). Hits land on random body parts — arms, legs, torso, head. Chaotic and relentless.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>170</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>6 slashes for 13 damage each (78 total). Cuts land faster.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>6</NumberOfCuts>
+            <BaseDamage>13</BaseDamage>
+            <TicksBetweenCuts>5</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>370</experienceRequired>
+        <resourceCostMultiplier>1.28</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>7 slashes for 16 damage each (112 total). An extra diagonal pair unlocks — the barrage grows harder to endure.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>7</NumberOfCuts>
+            <BaseDamage>16</BaseDamage>
+            <TicksBetweenCuts>5</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>610</experienceRequired>
+        <resourceCostMultiplier>1.38</resourceCostMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>7 slashes for 20 damage each (140 total). Cuts arrive faster. No part of the body is safe.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>7</NumberOfCuts>
+            <BaseDamage>20</BaseDamage>
+            <TicksBetweenCuts>4</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>1.48</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>8 slashes for 24 damage each (192 total). The blade pairs blur into a continuous diagonal storm. Limbs buckle under the assault.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>8</NumberOfCuts>
+            <BaseDamage>24</BaseDamage>
+            <TicksBetweenCuts>4</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1320</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 8 slashes for 30 damage each (240 total). Cuts come in an instant — diagonal pairs that shred the target completely from every angle. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>8</NumberOfCuts>
+            <BaseDamage>30</BaseDamage>
+            <TicksBetweenCuts>3</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

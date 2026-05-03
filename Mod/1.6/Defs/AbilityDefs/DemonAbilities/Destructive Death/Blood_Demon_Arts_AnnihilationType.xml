@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Akaza_AnnihilationType</defName>
+    <label>Annihilation Type</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>The pinnacle of Soryu Style striking — a single devastating blow that dismantles the enemy's body completely.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>32</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1.5</range>
+      <warmupTime>0.8</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+        <baseDamage>26</baseDamage>
+        <damageDef>Cut</damageDef>
+        <armorPen>0.2</armorPen>
+        <downedThreshold>0.3</downedThreshold>
+        <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>26 Cut damage. Guaranteed down if target is below 30% HP.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.913</cooldownMultiplier>
+        <resourceCostMultiplier>1.031</resourceCostMultiplier>
+        <description>30 Cut damage. Guaranteed down if target is below 30% HP.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>30</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <downedThreshold>0.3</downedThreshold>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.827</cooldownMultiplier>
+        <resourceCostMultiplier>1.094</resourceCostMultiplier>
+        <description>36 Cut damage. Guaranteed down if target is below 40% HP.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>36</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <downedThreshold>0.4</downedThreshold>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.74</cooldownMultiplier>
+        <resourceCostMultiplier>1.156</resourceCostMultiplier>
+        <description>44 Cut damage. Guaranteed down if target is below 40% HP.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>44</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <downedThreshold>0.4</downedThreshold>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.653</cooldownMultiplier>
+        <resourceCostMultiplier>1.219</resourceCostMultiplier>
+        <description>52 Cut damage. Guaranteed down below 40% HP. Vital variant available when Compass Needle is active.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>52</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <downedThreshold>0.4</downedThreshold>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>0</initialStrikeDamage>
+            <initialStrikeArmorPen>0.2</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>10</vitalOrganDamage>
+            <vitalOrganArmorPen>0.8</vitalOrganArmorPen>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.567</cooldownMultiplier>
+        <resourceCostMultiplier>1.313</resourceCostMultiplier>
+        <description>Perfected. 62 Cut damage. Guaranteed down below 50% HP. Vital variant when Compass Needle active. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>62</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <downedThreshold>0.5</downedThreshold>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>0</initialStrikeDamage>
+            <initialStrikeArmorPen>0.2</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>10</vitalOrganDamage>
+            <vitalOrganArmorPen>0.8</vitalOrganArmorPen>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

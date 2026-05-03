@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Sweet_Insistence</defName>
+    <label>Blood Demon Arts: Sweet Insistence</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enmu induces sleep in a waking target before filling their rest with pleasant dreams. The effect is gentler than working with a naturally sleeping mind, but needs no setup.</description>
+    <iconPath>UI/Abilities/DemonSleepAbility6</iconPath>
+    <displayOrder>211</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>26</resourceCost>
+    <baseExperienceGain>6</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5</range>
+      <warmupTime>2.5</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <useSleepHediff>false</useSleepHediff>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <sleepDurationHours>4</sleepDurationHours>
+        <maxTargets>1</maxTargets>
+        <range>5</range>
+        
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>PleasantDream</dreamEffectType>
+        <effectSeverity>0.22</effectSeverity>
+        <restBonus>0.15</restBonus>
+        <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+        <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Forces target asleep (4h) then grants pleasant dreams. PleasantDream (+12 mood). effectSeverity 0.22, restBonus 15%. Range 5.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>40</experienceRequired>
+        <resourceCostMultiplier>1.115</resourceCostMultiplier>
+        <description>effectSeverity 0.28, restBonus 20%. Range 6.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>6</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.28</effectSeverity>
+            <restBonus>0.20</restBonus>
+            <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>90</experienceRequired>
+        <resourceCostMultiplier>1.231</resourceCostMultiplier>
+        <description>Upgraded to PleasantDream_L3 (+15 mood) and DreamBliss_L3. effectSeverity 0.35, restBonus 25%. Range 6.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>6</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.35</effectSeverity>
+            <restBonus>0.25</restBonus>
+            <pleasantDreamThought>PleasantDream_L3</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss_L3</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>170</experienceRequired>
+        <resourceCostMultiplier>1.385</resourceCostMultiplier>
+        <description>effectSeverity 0.42, restBonus 29%. Range 7. DreamBliss_L3.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>7</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.42</effectSeverity>
+            <restBonus>0.29</restBonus>
+            <pleasantDreamThought>PleasantDream_L3</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss_L3</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>280</experienceRequired>
+        <resourceCostMultiplier>1.500</resourceCostMultiplier>
+        <description>Upgraded to PleasantDream_L5 (+20 mood) and DreamBliss_L5. effectSeverity 0.48, restBonus 33%. Range 8.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>8</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.48</effectSeverity>
+            <restBonus>0.33</restBonus>
+            <pleasantDreamThought>PleasantDream_L5</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss_L5</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>420</experienceRequired>
+        <resourceCostMultiplier>1.654</resourceCostMultiplier>
+        <description>Perfected. effectSeverity 0.55, restBonus 36%. PleasantDream_L5, DreamBliss_L5. Range 8. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>8</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.55</effectSeverity>
+            <restBonus>0.36</restBonus>
+            <pleasantDreamThought>PleasantDream_L5</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss_L5</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

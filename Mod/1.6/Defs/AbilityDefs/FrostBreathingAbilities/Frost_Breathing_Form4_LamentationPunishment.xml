@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Frost_Breathing_Form4_LamentationPunishment</defName>
+    <label>Fourth Form: Lamentation, Punishment</label>
+    <description>The user erupts forward in a blinding frost-dash, carving a frozen line through every enemy in their path. Each soul caught in the rush is stopped cold — shivering, stunned, unable to act as punishment is delivered upon them.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>415</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>16</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+      <warmupTime>0.3</warmupTime>
+      <noiseRadius>3</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
+        <avoidEnemies>false</avoidEnemies>
+        <castEffecter>AnimeArsenal_FrostHit</castEffecter>
+        <landEffecter>AnimeArsenal_FrostHit</landEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+        <damageDef>Frost_Breathing_Damage</damageDef>
+        <damageAmount>
+          <min>25</min>
+          <max>30</max>
+        </damageAmount>
+        <armourPen>
+          <min>0.15</min>
+          <max>0.15</max>
+        </armourPen>
+        <width>2</width>
+        <stunTicksOnHit>80</stunTicksOnHit>
+        <hediffOnHit>FrostBreathing_ChillingSting</hediffOnHit>
+        <hediffSeverity>0.35</hediffSeverity>
+        <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+        <canHitFriendly>false</canHitFriendly>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>25–30 damage dash through the line. Stuns each target for ~1.3 seconds. Applies ChillingSting.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>32–38 damage. Armor penetration sharpens. ChillingSting severity increases.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
+            <avoidEnemies>false</avoidEnemies>
+            <castEffecter>AnimeArsenal_FrostHit</castEffecter>
+            <landEffecter>AnimeArsenal_FrostHit</landEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <damageAmount>
+              <min>32</min>
+              <max>38</max>
+            </damageAmount>
+            <armourPen>
+              <min>0.18</min>
+              <max>0.18</max>
+            </armourPen>
+            <width>2</width>
+            <stunTicksOnHit>82</stunTicksOnHit>
+            <hediffOnHit>FrostBreathing_ChillingSting</hediffOnHit>
+            <hediffSeverity>0.43</hediffSeverity>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+            <canHitFriendly>false</canHitFriendly>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>430</experienceRequired>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>40–47 damage. Cooldown drops. ChillingSting deep enough to reach Frost Bitten reliably.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
+            <avoidEnemies>false</avoidEnemies>
+            <castEffecter>AnimeArsenal_FrostHit</castEffecter>
+            <landEffecter>AnimeArsenal_FrostHit</landEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <damageAmount>
+              <min>40</min>
+              <max>47</max>
+            </damageAmount>
+            <armourPen>
+              <min>0.22</min>
+              <max>0.22</max>
+            </armourPen>
+            <width>2</width>
+            <stunTicksOnHit>88</stunTicksOnHit>
+            <hediffOnHit>FrostBreathing_ChillingSting</hediffOnHit>
+            <hediffSeverity>0.52</hediffSeverity>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+            <canHitFriendly>false</canHitFriendly>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>50–58 damage. Stun approaches 1.6 seconds. Deep Freeze within reach on a combo.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
+            <avoidEnemies>false</avoidEnemies>
+            <castEffecter>AnimeArsenal_FrostHit</castEffecter>
+            <landEffecter>AnimeArsenal_FrostHit</landEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <damageAmount>
+              <min>50</min>
+              <max>58</max>
+            </damageAmount>
+            <armourPen>
+              <min>0.27</min>
+              <max>0.27</max>
+            </armourPen>
+            <width>2</width>
+            <stunTicksOnHit>95</stunTicksOnHit>
+            <hediffOnHit>FrostBreathing_ChillingSting</hediffOnHit>
+            <hediffSeverity>0.62</hediffSeverity>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+            <canHitFriendly>false</canHitFriendly>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1020</experienceRequired>
+        <resourceCostMultiplier>1.45</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>61–70 damage. Armor shredded. Stun surpasses 1.7 seconds. Deep Freeze near-certain on a combo.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
+            <avoidEnemies>false</avoidEnemies>
+            <castEffecter>AnimeArsenal_FrostHit</castEffecter>
+            <landEffecter>AnimeArsenal_FrostHit</landEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <damageAmount>
+              <min>61</min>
+              <max>70</max>
+            </damageAmount>
+            <armourPen>
+              <min>0.32</min>
+              <max>0.32</max>
+            </armourPen>
+            <width>2</width>
+            <stunTicksOnHit>105</stunTicksOnHit>
+            <hediffOnHit>FrostBreathing_ChillingSting</hediffOnHit>
+            <hediffSeverity>0.73</hediffSeverity>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+            <canHitFriendly>false</canHitFriendly>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1500</experienceRequired>
+        <resourceCostMultiplier>1.45</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>Perfected. 74–85 damage — the dash becomes a blade of pure cold. Full 2-second stun. Frozen Through guaranteed on a combo. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash">
+            <avoidEnemies>false</avoidEnemies>
+            <castEffecter>AnimeArsenal_FrostHit</castEffecter>
+            <landEffecter>AnimeArsenal_FrostHit</landEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Frost_Breathing_Damage</damageDef>
+            <damageAmount>
+              <min>74</min>
+              <max>85</max>
+            </damageAmount>
+            <armourPen>
+              <min>0.38</min>
+              <max>0.38</max>
+            </armourPen>
+            <width>2</width>
+            <stunTicksOnHit>120</stunTicksOnHit>
+            <hediffOnHit>FrostBreathing_ChillingSting</hediffOnHit>
+            <hediffSeverity>0.88</hediffSeverity>
+            <hitEffecter>AnimeArsenal_FrostHit</hitEffecter>
+            <canHitFriendly>false</canHitFriendly>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Forest_Breathing_Spore</defName>
+    <label>Sixth Form: Drowsing Spore, Still Forest</label>
+    <description>Exhales a dense cloud of toxic forest spores that blanket an area, slowly poisoning and lulling enemies into unconsciousness.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>1.0</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+        <gasDef>AA_WisteriaToxCloud</gasDef>
+        <numCellsToHit>12</numCellsToHit>
+        <gasLifetimeTicks>1800~2400</gasLifetimeTicks>
+        <gasSpawnChance>0.75</gasSpawnChance>
+        <range>7</range>
+        <angle>70</angle>
+        <damageDef>Forest_Breathing_Damage</damageDef>
+        <damageAmount>2~4</damageAmount>
+        <damageIntervalTicks>60</damageIntervalTicks>
+        <affectHostile>true</affectHostile>
+        <affectNeutral>true</affectNeutral>
+        <affectFriendly>false</affectFriendly>
+        <affectAnimals>true</affectAnimals>
+        <affectMechanoids>false</affectMechanoids>
+        <hediffOnExposure>ToxicBuildup</hediffOnExposure>
+        <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <areaOfEffect>true</areaOfEffect>
+        <areaRadius>5</areaRadius>
+        <maxTargets>3</maxTargets>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <useSleepHediff>true</useSleepHediff>
+        <sleepSeverity>0.8</sleepSeverity>
+        <selfCentered>false</selfCentered>
+        <onlyWeakWilled>true</onlyWeakWilled>
+        <willThreshold>0.7</willThreshold>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Releases a toxic spore cloud. Poisons and may put weaker enemies to sleep.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <description>Wider cloud. Poison damage increased. Sleep affects more targets.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>AA_WisteriaToxCloud</gasDef>
+            <numCellsToHit>16</numCellsToHit>
+            <gasLifetimeTicks>2000~2800</gasLifetimeTicks>
+            <gasSpawnChance>0.8</gasSpawnChance>
+            <range>8</range>
+            <angle>75</angle>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <damageAmount>3~5</damageAmount>
+            <damageIntervalTicks>60</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectNeutral>true</affectNeutral>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+            <hediffOnExposure>ToxicBuildup</hediffOnExposure>
+            <hediffSeverityPerInterval>0.05</hediffSeverityPerInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <areaOfEffect>true</areaOfEffect>
+            <areaRadius>6</areaRadius>
+            <maxTargets>4</maxTargets>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <useSleepHediff>true</useSleepHediff>
+            <sleepSeverity>0.9</sleepSeverity>
+            <selfCentered>false</selfCentered>
+            <onlyWeakWilled>true</onlyWeakWilled>
+            <willThreshold>0.7</willThreshold>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Dense cloud. Longer duration. Sleep will threshold lowered.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>AA_WisteriaToxCloud</gasDef>
+            <numCellsToHit>20</numCellsToHit>
+            <gasLifetimeTicks>2400~3200</gasLifetimeTicks>
+            <gasSpawnChance>0.85</gasSpawnChance>
+            <range>9</range>
+            <angle>80</angle>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <damageAmount>4~7</damageAmount>
+            <damageIntervalTicks>55</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectNeutral>true</affectNeutral>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+            <hediffOnExposure>ToxicBuildup</hediffOnExposure>
+            <hediffSeverityPerInterval>0.07</hediffSeverityPerInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <areaOfEffect>true</areaOfEffect>
+            <areaRadius>6</areaRadius>
+            <maxTargets>5</maxTargets>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <useSleepHediff>true</useSleepHediff>
+            <sleepSeverity>1.0</sleepSeverity>
+            <selfCentered>false</selfCentered>
+            <onlyWeakWilled>true</onlyWeakWilled>
+            <willThreshold>0.8</willThreshold>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Very dense cloud. Faster poison tick. Deep sleep applied.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>AA_WisteriaToxCloud</gasDef>
+            <numCellsToHit>25</numCellsToHit>
+            <gasLifetimeTicks>2800~3600</gasLifetimeTicks>
+            <gasSpawnChance>0.9</gasSpawnChance>
+            <range>10</range>
+            <angle>85</angle>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <damageAmount>5~8</damageAmount>
+            <damageIntervalTicks>50</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectNeutral>true</affectNeutral>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+            <hediffOnExposure>ToxicBuildup</hediffOnExposure>
+            <hediffSeverityPerInterval>0.09</hediffSeverityPerInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <areaOfEffect>true</areaOfEffect>
+            <areaRadius>7</areaRadius>
+            <maxTargets>6</maxTargets>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <useSleepHediff>true</useSleepHediff>
+            <sleepSeverity>1.2</sleepSeverity>
+            <deepSleep>true</deepSleep>
+            <selfCentered>false</selfCentered>
+            <onlyWeakWilled>true</onlyWeakWilled>
+            <willThreshold>0.85</willThreshold>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1000</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Overwhelming cloud. High poison severity. Most enemies put into deep sleep.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>AA_WisteriaToxCloud</gasDef>
+            <numCellsToHit>30</numCellsToHit>
+            <gasLifetimeTicks>3200~4000</gasLifetimeTicks>
+            <gasSpawnChance>0.9</gasSpawnChance>
+            <range>11</range>
+            <angle>90</angle>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <damageAmount>6~10</damageAmount>
+            <damageIntervalTicks>45</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectNeutral>true</affectNeutral>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+            <hediffOnExposure>ToxicBuildup</hediffOnExposure>
+            <hediffSeverityPerInterval>0.11</hediffSeverityPerInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <areaOfEffect>true</areaOfEffect>
+            <areaRadius>8</areaRadius>
+            <maxTargets>8</maxTargets>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <useSleepHediff>true</useSleepHediff>
+            <sleepSeverity>1.4</sleepSeverity>
+            <deepSleep>true</deepSleep>
+            <wakeResistance>0.5</wakeResistance>
+            <selfCentered>false</selfCentered>
+            <onlyWeakWilled>false</onlyWeakWilled>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1500</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Perfected. A suffocating spore fog blankets the battlefield. All enemies poisoned and drawn into irresistible deep sleep. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>AA_WisteriaToxCloud</gasDef>
+            <numCellsToHit>38</numCellsToHit>
+            <gasLifetimeTicks>4000~5000</gasLifetimeTicks>
+            <gasSpawnChance>0.95</gasSpawnChance>
+            <range>12</range>
+            <angle>100</angle>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <damageAmount>8~12</damageAmount>
+            <damageIntervalTicks>40</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectNeutral>true</affectNeutral>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+            <hediffOnExposure>ToxicBuildup</hediffOnExposure>
+            <hediffSeverityPerInterval>0.14</hediffSeverityPerInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <areaOfEffect>true</areaOfEffect>
+            <areaRadius>9</areaRadius>
+            <maxTargets>12</maxTargets>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <useSleepHediff>true</useSleepHediff>
+            <sleepSeverity>1.8</sleepSeverity>
+            <deepSleep>true</deepSleep>
+            <wakeResistance>1.0</wakeResistance>
+            <selfCentered>false</selfCentered>
+            <onlyWeakWilled>false</onlyWeakWilled>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

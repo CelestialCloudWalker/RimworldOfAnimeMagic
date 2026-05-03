@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>Compass_Needle_Hedif_One</defName>
+    <label>Compass Needle</label>
+    <description>Akaza's fighting instinct sharpens with each exchange.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.2, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_SeverityOnMeleeHitDealt">
+        <severityGain>0.04</severityGain>
+        <chanceToApply>1.0</chanceToApply>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_SeverityOnMeleeHitReceived">
+        <severityGain>0.04</severityGain>
+        <chanceToApply>1.0</chanceToApply>
+        <meleeRangeOnly>true</meleeRangeOnly>
+      </li>
+      <li Class="EMF.HediffCompProperties_SeverityPerInterval">
+        <severityChange>
+          <min>-0.02</min>
+          <max>-0.02</max>
+        </severityChange>
+        <intervalTicks>60</intervalTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>sensing</label>
+        <minSeverity>0</minSeverity>
+      </li>
+      <li>
+        <label>reading</label>
+        <minSeverity>0.2</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.05</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.04</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>tracking</label>
+        <minSeverity>0.4</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.10</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.08</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>locked on</label>
+        <minSeverity>0.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.15</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.12</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>on the edge</label>
+        <minSeverity>0.8</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.20</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.16</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Compass_Needle_Hedif_Two</defName>
+    <label>Compass Needle</label>
+    <description>Akaza's fighting instinct sharpens faster with each exchange.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.2, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_SeverityOnMeleeHitDealt">
+        <severityGain>0.044</severityGain>
+        <chanceToApply>1.0</chanceToApply>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_SeverityOnMeleeHitReceived">
+        <severityGain>0.044</severityGain>
+        <chanceToApply>1.0</chanceToApply>
+        <meleeRangeOnly>true</meleeRangeOnly>
+      </li>
+      <li Class="EMF.HediffCompProperties_SeverityPerInterval">
+        <severityChange>
+          <min>-0.02</min>
+          <max>-0.02</max>
+        </severityChange>
+        <intervalTicks>60</intervalTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>sensing</label>
+        <minSeverity>0</minSeverity>
+      </li>
+      <li>
+        <label>reading</label>
+        <minSeverity>0.2</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.05</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.04</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>tracking</label>
+        <minSeverity>0.4</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.10</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.08</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>locked on</label>
+        <minSeverity>0.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.15</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.12</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>on the edge</label>
+        <minSeverity>0.8</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.20</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.16</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Compass_Needle_Hedif_Four</defName>
+    <label>Compass Needle</label>
+    <description>Akaza's instinct reads opponents more deeply, granting greater evasion.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.2, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_SeverityOnMeleeHitDealt">
+        <severityGain>0.044</severityGain>
+        <chanceToApply>1.0</chanceToApply>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_SeverityOnMeleeHitReceived">
+        <severityGain>0.044</severityGain>
+        <chanceToApply>1.0</chanceToApply>
+        <meleeRangeOnly>true</meleeRangeOnly>
+      </li>
+      <li Class="EMF.HediffCompProperties_SeverityPerInterval">
+        <severityChange>
+          <min>-0.02</min>
+          <max>-0.02</max>
+        </severityChange>
+        <intervalTicks>60</intervalTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>sensing</label>
+        <minSeverity>0</minSeverity>
+      </li>
+      <li>
+        <label>reading</label>
+        <minSeverity>0.2</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.06</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.04</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>tracking</label>
+        <minSeverity>0.4</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.12</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.08</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>locked on</label>
+        <minSeverity>0.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.18</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.12</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>on the edge</label>
+        <minSeverity>0.8</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.24</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.16</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Compass_Needle_Hedif_Six</defName>
+    <label>Compass Needle</label>
+    <description>Perfected instinct. On the Edge ignites sooner, at the peak of battle rhythm.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.2, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_SeverityOnMeleeHitDealt">
+        <severityGain>0.044</severityGain>
+        <chanceToApply>1.0</chanceToApply>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_SeverityOnMeleeHitReceived">
+        <severityGain>0.044</severityGain>
+        <chanceToApply>1.0</chanceToApply>
+        <meleeRangeOnly>true</meleeRangeOnly>
+      </li>
+      <li Class="EMF.HediffCompProperties_SeverityPerInterval">
+        <severityChange>
+          <min>-0.02</min>
+          <max>-0.02</max>
+        </severityChange>
+        <intervalTicks>60</intervalTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>sensing</label>
+        <minSeverity>0</minSeverity>
+      </li>
+      <li>
+        <label>reading</label>
+        <minSeverity>0.2</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.06</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.04</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>tracking</label>
+        <minSeverity>0.4</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.12</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.08</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>locked on</label>
+        <minSeverity>0.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.18</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.12</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>on the edge</label>
+        <minSeverity>0.75</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>0.24</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.16</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

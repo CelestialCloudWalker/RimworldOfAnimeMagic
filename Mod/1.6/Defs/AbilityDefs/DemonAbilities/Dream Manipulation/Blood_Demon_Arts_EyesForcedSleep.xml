@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseFleshbeast">
+    <defName>DS_EnmuTentacle_Entity_Armed_Big</defName>
+    <label>armed flesh eye tendril</label>
+    <description>A larger, more aggressive tendril of flesh conjured by Enmu. Its whip-like extensions can slam enemies from range while it pulses dream energy across a wide area.</description>
+    <statBases>
+      <MoveSpeed>0.6</MoveSpeed>
+      <ToxicResistance>1.0</ToxicResistance>
+    </statBases>
+    <race>
+      <body>Fingerspike</body>
+      <baseBodySize>1.0</baseBodySize>
+      <lifeExpectancy>1</lifeExpectancy>
+      <hasGenders>false</hasGenders>
+      <bloodDef>Filth_Blood</bloodDef>
+      <trainability>None</trainability>
+      <deathAction>
+        <workerClass>DeathActionWorker_SmallExplosion</workerClass>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>tendril lash</label>
+        <labelNoLocation>tendril</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <extraMeleeDamages>
+          <li>
+            <def>DS_EnmuSleepTouch_Damage</def>
+            <amount>1</amount>
+          </li>
+        </extraMeleeDamages>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>flesh whip</label>
+        <labelNoLocation>whip</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.6</chanceFactor>
+        <extraMeleeDamages>
+          <li>
+            <def>DS_EnmuSleepTouch_Damage</def>
+            <amount>2</amount>
+          </li>
+        </extraMeleeDamages>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Enmu_EyesForcedSleeptwo</defName>
+    <label>Eyes of Forced Unconscious Sleep</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enmu conjures a writhing flesh tendril that pulses with sleep-inducing demon art, inflicting all nearby enemies with his dream manipulation.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>6000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>40</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.8</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="EMF.CompProperties_AbilitySummonPawn">
+        <summonKind>DS_EnmuTentacle_Entity_L1</summonKind>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+        <lifespanHediff>DS_EnmuTentacle_Lifespan_L1</lifespanHediff>
+        <targetKind>DS_EnmuTentacle_Entity_L1</targetKind>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Summons a Flesh Eye Tendril (HP 80). Pulses DS_EnmuSleepTouch in radius 8 every 120 ticks.</description>
+      </li>
+      
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.917</cooldownMultiplier>
+        <resourceCostMultiplier>1.025</resourceCostMultiplier>
+        <description>Tendril HP increased to 100. Pulse radius 8.</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_EnmuTentacle_Entity_L2</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_EnmuTentacle_Lifespan_L2</lifespanHediff>
+            <targetKind>DS_EnmuTentacle_Entity_L2</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.833</cooldownMultiplier>
+        <resourceCostMultiplier>1.10</resourceCostMultiplier>
+        <description>Tendril HP 120. Pulse radius expanded to 10.</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_EnmuTentacle_Entity_L3</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_EnmuTentacle_Lifespan_L3</lifespanHediff>
+            <targetKind>DS_EnmuTentacle_Entity_L3</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <resourceCostMultiplier>1.175</resourceCostMultiplier>
+        <description>Tendril pulses 25% faster (every 90 ticks). HP 120, radius 10.</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_EnmuTentacle_Entity_L4</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_EnmuTentacle_Lifespan_L4</lifespanHediff>
+            <targetKind>DS_EnmuTentacle_Entity_L4</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.667</cooldownMultiplier>
+        <resourceCostMultiplier>1.275</resourceCostMultiplier>
+        <description>Tendril gains Flesh Whip melee attacks (14 blunt + sleep touch). HP 150, radius 10, fast pulse.</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_EnmuTentacle_Entity_Armed_L5</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_EnmuTentacle_Lifespan_L5</lifespanHediff>
+            <targetKind>DS_EnmuTentacle_Entity_Armed_L5</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.583</cooldownMultiplier>
+        <resourceCostMultiplier>1.40</resourceCostMultiplier>
+        <description>Perfected. HP 180. Pulse radius 12, fast interval. Flesh Whip attacks. Max Level.</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_EnmuTentacle_Entity_Armed_L6</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_EnmuTentacle_Lifespan_L6</lifespanHediff>
+            <targetKind>DS_EnmuTentacle_Entity_Armed_L6</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

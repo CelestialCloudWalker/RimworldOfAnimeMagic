@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Water_Breathing_StrikingTide</defName>
+    <label>Water Breathing: Striking Tide</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>The user surges forward like a crashing wave, cutting through hostile pawns from start to finish of the dash. Hits harder than Water Wheel.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>230</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>40</resourceCost>
+    <baseExperienceGain>25</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>16</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>2</rectWidth>
+        <rectLength>16</rectLength>
+        <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+        <damageType>Water_Breathing_Damage</damageType>
+        <damageAmount>25</damageAmount>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A surging forward dash that cuts all enemies in its path.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>16</rectLength>
+            <damageType>Water_Breathing_Damage</damageType>
+            <damageAmount>25</damageAmount>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>160</experienceRequired>
+        <rangeMultiplier>1.15</rangeMultiplier>
+        <cooldownMultiplier>0.95</cooldownMultiplier>
+        <description>More force, slightly wider reach.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>18</rectLength>
+            <damageType>Water_Breathing_Damage</damageType>
+            <damageAmount>30</damageAmount>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <rangeMultiplier>1.3</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Extended range, heavier cuts.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>21</rectLength>
+            <damageType>Water_Breathing_Damage</damageType>
+            <damageAmount>36</damageAmount>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Water_Breathing_Turbulent</defName>
+    <label>Water Breathing: Turbulent</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>An evolved Striking Tide. The user crashes through enemies like a turbulent current — multiple overlapping cuts tear through anything in the dash path.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>235</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>55</resourceCost>
+    <baseExperienceGain>35</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>3</rectWidth>
+        <rectLength>18</rectLength>
+        <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+        <damageType>Water_Breathing_Damage</damageType>
+        <damageAmount>42</damageAmount>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <radius>2</radius>
+        <damage>12</damage>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A turbulent wave of cuts through the dash path, plus a shockwave on landing.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>3</rectWidth>
+            <rectLength>18</rectLength>
+            <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+            <damageType>Water_Breathing_Damage</damageType>
+            <damageAmount>42</damageAmount>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>2</radius>
+            <damage>12</damage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <rangeMultiplier>1.15</rangeMultiplier>
+        <cooldownMultiplier>0.95</cooldownMultiplier>
+        <description>Greater dash force. Shockwave grows slightly.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>3</rectWidth>
+            <rectLength>21</rectLength>
+            <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+            <damageType>Water_Breathing_Damage</damageType>
+            <damageAmount>50</damageAmount>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>2</radius>
+            <damage>16</damage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Perfected. A violent surge with heavy path damage and a punishing end explosion. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>4</rectWidth>
+            <rectLength>23</rectLength>
+            <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+            <damageType>Water_Breathing_Damage</damageType>
+            <damageAmount>61</damageAmount>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>3</radius>
+            <damage>22</damage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

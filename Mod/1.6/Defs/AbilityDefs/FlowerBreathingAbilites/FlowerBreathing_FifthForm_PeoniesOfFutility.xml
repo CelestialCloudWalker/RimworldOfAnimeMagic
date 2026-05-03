@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>FlowerBreathing_FifthForm_PeoniesOfFutility</defName>
+    <label>Fifth Form: Peonies of Futility</label>
+    <description>Nine consecutive slashes that spiral and fold back on themselves in rapid succession — each strike flowing directly from the last, weaving together into something that feels less like a sword technique and more like being caught in a current. There is no gap to counter. There is no moment to breathe.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>720</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>450</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>38</resourceCost>
+    <baseExperienceGain>24</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5</range>
+      <warmupTime>0.4</warmupTime>
+      <noiseRadius>2</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>2</rectWidth>
+        <rectLength>3</rectLength>
+        <damageAmount>11</damageAmount>
+        <repeatAmount>6</repeatAmount>
+        <damageInterval>7</damageInterval>
+        <damageType>Flower_Breathing_Damage</damageType>
+        <impactEffecter>AnimeArsenal_FlowerHit</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>6 hits of 11 damage (66 total). The flurry is fast and relentless — not yet the full nine, but already difficult to escape.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>190</experienceRequired>
+        <resourceCostMultiplier>1.14</resourceCostMultiplier>
+        <cooldownMultiplier>0.95</cooldownMultiplier>
+        <description>7 hits of 13 damage (91 total). Another slash added to the weave. The rhythm tightens.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>3</rectLength>
+            <damageAmount>13</damageAmount>
+            <repeatAmount>7</repeatAmount>
+            <damageInterval>7</damageInterval>
+            <damageType>Flower_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FlowerHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>420</experienceRequired>
+        <resourceCostMultiplier>1.26</resourceCostMultiplier>
+        <cooldownMultiplier>0.90</cooldownMultiplier>
+        <description>7 hits of 16 damage (112 total). Faster interval. Each strike flows directly from the last — the pattern begins to feel inevitable.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>3</rectLength>
+            <damageAmount>16</damageAmount>
+            <repeatAmount>7</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <damageType>Flower_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FlowerHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <resourceCostMultiplier>1.36</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>8 hits of 18 damage (144 total). Eight weaving slashes. The flurry begins to feel like a single unbroken motion.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>3</rectLength>
+            <damageAmount>18</damageAmount>
+            <repeatAmount>8</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <damageType>Flower_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FlowerHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1020</experienceRequired>
+        <resourceCostMultiplier>1.46</resourceCostMultiplier>
+        <cooldownMultiplier>0.81</cooldownMultiplier>
+        <description>9 hits of 20 damage (180 total). The full nine — consecutive, flowing, relentless. The technique as it was meant to be performed.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>3</rectLength>
+            <damageAmount>20</damageAmount>
+            <repeatAmount>9</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <damageType>Flower_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FlowerHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1500</experienceRequired>
+        <resourceCostMultiplier>1.54</resourceCostMultiplier>
+        <cooldownMultiplier>0.78</cooldownMultiplier>
+        <description>Perfected. 9 hits of 24 damage (216 total). Fastest possible interval. Nine slashes, nine petals, no room to breathe between them. The target has no answer. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>3</rectLength>
+            <damageAmount>24</damageAmount>
+            <repeatAmount>9</repeatAmount>
+            <damageInterval>5</damageInterval>
+            <damageType>Flower_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FlowerHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

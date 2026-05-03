@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Mist_Breathing_EightLayeredMist</defName>
+    <label>Mist Breathing: Eight-Layered Mist</label>
+    <description>Eight consecutive strikes erupt in a shroud of mist around the user, cutting down everything nearby in a flurry of overlapping slashes. Each layer of the mist deepens the user's Misdirection, making them harder to track and harder to hit.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>720</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>310</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Cleave">
+        <NumberOfCuts>8</NumberOfCuts>
+        <BaseDamage>9</BaseDamage>
+        <TicksBetweenCuts>6</TicksBetweenCuts>
+        <DamageDef>Mist_Breathing_Damage</DamageDef>
+        <radius>2.5</radius>
+        <maxTargets>8</maxTargets>
+        <CleaveDamageEffecter>AnimeArsenal_MistHit</CleaveDamageEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>MistBreathing_Misdirection</hediffDef>
+        <severityAdjustment>0.30</severityAdjustment>
+        <applyToTarget>false</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>8 hits, 9 damage each. Strikes all enemies nearby in a ring of mist. Grants low Misdirection.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>11 damage per hit. The mist thickens — Misdirection grows stronger.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>8</NumberOfCuts>
+            <BaseDamage>11</BaseDamage>
+            <TicksBetweenCuts>6</TicksBetweenCuts>
+            <DamageDef>Mist_Breathing_Damage</DamageDef>
+            <radius>2.5</radius>
+            <maxTargets>8</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_MistHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.40</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>330</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>13 damage per hit. Faster slashes. Reach widens. Misdirection reaches "Low Clouds" intensity.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>8</NumberOfCuts>
+            <BaseDamage>13</BaseDamage>
+            <TicksBetweenCuts>5</TicksBetweenCuts>
+            <DamageDef>Mist_Breathing_Damage</DamageDef>
+            <radius>3.0</radius>
+            <maxTargets>10</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_MistHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.52</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>570</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>16 damage per hit. Eight layers blur into something barely visible. Misdirection enters "Distant Haze."</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>8</NumberOfCuts>
+            <BaseDamage>16</BaseDamage>
+            <TicksBetweenCuts>5</TicksBetweenCuts>
+            <DamageDef>Mist_Breathing_Damage</DamageDef>
+            <radius>3.0</radius>
+            <maxTargets>10</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_MistHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.65</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>860</experienceRequired>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>19 damage per hit. Wider reach. The mist swallows the user — Misdirection nears its peak.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>8</NumberOfCuts>
+            <BaseDamage>19</BaseDamage>
+            <TicksBetweenCuts>4</TicksBetweenCuts>
+            <DamageDef>Mist_Breathing_Damage</DamageDef>
+            <radius>3.5</radius>
+            <maxTargets>12</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_MistHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.82</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1250</experienceRequired>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 23 damage per hit. Eight layers of mist, eight strikes indistinguishable from the fog itself. Misdirection peaks. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>8</NumberOfCuts>
+            <BaseDamage>23</BaseDamage>
+            <TicksBetweenCuts>4</TicksBetweenCuts>
+            <DamageDef>Mist_Breathing_Damage</DamageDef>
+            <radius>3.5</radius>
+            <maxTargets>12</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_MistHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

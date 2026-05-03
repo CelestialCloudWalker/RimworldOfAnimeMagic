@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Akaza_Willow</defName>
+    <label>Crushing Type: Ten Thousand Leaves Flashing Willow</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Vanish in an instant and reappear at the target location, immediately releasing a devastating shockwave upon arrival.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>4500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>48</resourceCost>
+    <baseExperienceGain>100</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+      <warmupTime>0.8</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+        <damageAmount>16</damageAmount>
+        <damageType>Cut</damageType>
+        <armorPenetration>0.15</armorPenetration>
+        <casterEffecter>DS_Effecter_AkazaTeleportArrival</casterEffecter>
+        <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>22</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>6</rectWidth>
+        <rectLength>6</rectLength>
+        <delayTicks>60</delayTicks>
+        <useOriginAsCenter>true</useOriginAsCenter>
+        <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+        <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Teleport to target. On arrival: 16 Cut direct hit + 22 Blunt AoE shockwave in a 6x6 area.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.911</cooldownMultiplier>
+        <resourceCostMultiplier>1.042</resourceCostMultiplier>
+        <description>20 Cut direct hit + 28 Blunt AoE shockwave.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>20</damageAmount>
+            <damageType>Cut</damageType>
+            <armorPenetration>0.15</armorPenetration>
+            <casterEffecter>DS_Effecter_AkazaTeleportArrival</casterEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>28</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <delayTicks>60</delayTicks>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <cooldownMultiplier>0.822</cooldownMultiplier>
+        <resourceCostMultiplier>1.104</resourceCostMultiplier>
+        <description>24 Cut direct hit + 34 Blunt AoE in a wider 10x10 area.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>24</damageAmount>
+            <damageType>Cut</damageType>
+            <armorPenetration>0.15</armorPenetration>
+            <casterEffecter>DS_Effecter_AkazaTeleportArrival</casterEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>34</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>10</rectWidth>
+            <rectLength>10</rectLength>
+            <delayTicks>60</delayTicks>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <cooldownMultiplier>0.733</cooldownMultiplier>
+        <resourceCostMultiplier>1.167</resourceCostMultiplier>
+        <description>30 Cut direct hit + 42 Blunt AoE. Shockwave covers a 10x10 area.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>30</damageAmount>
+            <damageType>Cut</damageType>
+            <armorPenetration>0.15</armorPenetration>
+            <casterEffecter>DS_Effecter_AkazaTeleportArrival</casterEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>42</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>10</rectWidth>
+            <rectLength>10</rectLength>
+            <delayTicks>60</delayTicks>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>620</experienceRequired>
+        <cooldownMultiplier>0.644</cooldownMultiplier>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <description>36 Cut direct hit + 50 Blunt AoE. Shockwave stuns all hit pawns for 150 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>36</damageAmount>
+            <damageType>Cut</damageType>
+            <armorPenetration>0.15</armorPenetration>
+            <casterEffecter>DS_Effecter_AkazaTeleportArrival</casterEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>50</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>10</rectWidth>
+            <rectLength>10</rectLength>
+            <delayTicks>60</delayTicks>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <stunChance>1.0</stunChance>
+            <stunDuration>150</stunDuration>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <cooldownMultiplier>0.556</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <description>Perfected. 44 Cut direct hit + 60 Blunt AoE. Stuns all hit pawns 150 ticks. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>44</damageAmount>
+            <damageType>Cut</damageType>
+            <armorPenetration>0.15</armorPenetration>
+            <casterEffecter>DS_Effecter_AkazaTeleportArrival</casterEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>60</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>10</rectWidth>
+            <rectLength>10</rectLength>
+            <delayTicks>60</delayTicks>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <stunChance>1.0</stunChance>
+            <stunDuration>150</stunDuration>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

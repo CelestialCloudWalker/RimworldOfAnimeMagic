@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Mercys_Reach</defName>
+    <label>Blood Demon Arts: Mercy's Reach</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enmu reaches into a waking target's mind and drags them into sleep before filling their dreams with nightmares. Less potent than manipulating a naturally sleeping mind, but requires no preparation.</description>
+    <iconPath>UI/Abilities/DemonSleepAbilityNightmare</iconPath>
+    <displayOrder>210</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>26</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5</range>
+      <warmupTime>2.5</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <useSleepHediff>false</useSleepHediff>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <sleepDurationHours>3</sleepDurationHours>
+        <maxTargets>1</maxTargets>
+        <range>5</range>
+
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>Nightmare</dreamEffectType>
+        <effectSeverity>0.30</effectSeverity>
+        <restPenalty>0.15</restPenalty>
+        <nightmareThought>NightmareDream</nightmareThought>
+        <nightmareHediff>NightmareTrauma</nightmareHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Forces target asleep (3h) then plants nightmares. NightmareDream (-8 mood). effectSeverity 0.30, restPenalty 15%. Range 5.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <resourceCostMultiplier>1.115</resourceCostMultiplier>
+        <description>effectSeverity 0.38, restPenalty 20%. Range 6.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>6</range>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>0.38</effectSeverity>
+            <restPenalty>0.20</restPenalty>
+            <nightmareThought>NightmareDream</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>110</experienceRequired>
+        <resourceCostMultiplier>1.231</resourceCostMultiplier>
+        <description>Upgraded to NightmareDream_L3 (-10 mood). effectSeverity 0.45, restPenalty 24%. Range 6.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>6</range>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>0.45</effectSeverity>
+            <restPenalty>0.24</restPenalty>
+            <nightmareThought>NightmareDream_L3</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>210</experienceRequired>
+        <resourceCostMultiplier>1.385</resourceCostMultiplier>
+        <description>effectSeverity 0.52, restPenalty 29%. Range 7. NightmareDream_L3.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>7</range>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>0.52</effectSeverity>
+            <restPenalty>0.29</restPenalty>
+            <nightmareThought>NightmareDream_L3</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>340</experienceRequired>
+        <resourceCostMultiplier>1.500</resourceCostMultiplier>
+        <description>Upgraded to NightmareDream_L5 (-14 mood). effectSeverity 0.58, restPenalty 33%. Range 8.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>8</range>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>0.58</effectSeverity>
+            <restPenalty>0.33</restPenalty>
+            <nightmareThought>NightmareDream_L5</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>520</experienceRequired>
+        <resourceCostMultiplier>1.654</resourceCostMultiplier>
+        <description>Perfected. effectSeverity 0.65, restPenalty 38%. NightmareDream_L5. Range 8. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>8</range>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>0.65</effectSeverity>
+            <restPenalty>0.38</restPenalty>
+            <nightmareThought>NightmareDream_L5</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

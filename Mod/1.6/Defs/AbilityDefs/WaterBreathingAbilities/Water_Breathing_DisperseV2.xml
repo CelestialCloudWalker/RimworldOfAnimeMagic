@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Water_Breathing_Disperse</defName>
     <label>Water Breathing: Disperse</label>
-    <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <category>WaterBreathing_Ability_Catergory</category>
-    <iconPath>UI/Abilities/AbilityDash</iconPath>
+    <description>A technique that creates cutting attacks around a targeted enemy.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
     <targetRequired>true</targetRequired>
-
-    <requiredGeneDefName>Gene_WaterBreath</requiredGeneDefName>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <resourceCost>25</resourceCost>
     <baseExperienceGain>30</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -31,7 +33,7 @@
       <li Class="EMF.CompProperties_AbilityDamageInRadius">
         <radius>4</radius>
         <damageParms>
-          <damageAmount>7~10</damageAmount>
+          <damageAmount>9~13</damageAmount>
           <damageDef>Water_Breathing_Damage</damageDef>
         </damageParms>
         <friendlyFireParms>
@@ -53,16 +55,14 @@
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>180</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
-        <resourceCostMultiplier>1.15</resourceCostMultiplier>
-        <verbProperties>
-          <range>14</range>
-        </verbProperties>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Radius increased.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>4</radius>
+            <radius>5</radius>
             <damageParms>
-              <damageAmount>9~13</damageAmount>
+              <damageAmount>12~17</damageAmount>
               <damageDef>Water_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -78,16 +78,15 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>400</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy</description>
-        <resourceCostMultiplier>1.3</resourceCostMultiplier>
-        <verbProperties>
-          <range>16</range>
-        </verbProperties>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Radius and range increased.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>5</radius>
+            <radius>6</radius>
             <damageParms>
-              <damageAmount>12~16</damageAmount>
+              <damageAmount>15~21</damageAmount>
               <damageDef>Water_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -103,16 +102,15 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>650</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
-        <resourceCostMultiplier>1.5</resourceCostMultiplier>
-        <verbProperties>
-          <range>18</range>
-        </verbProperties>
+        <resourceCostMultiplier>2.2</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Range doubled.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>5</radius>
+            <radius>6</radius>
             <damageParms>
-              <damageAmount>15~20</damageAmount>
+              <damageAmount>19~26</damageAmount>
               <damageDef>Water_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -128,16 +126,15 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>950</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
-        <resourceCostMultiplier>1.7</resourceCostMultiplier>
-        <verbProperties>
-          <range>20</range>
-        </verbProperties>
+        <resourceCostMultiplier>2.2</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Damage heightened.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
             <radius>6</radius>
             <damageParms>
-              <damageAmount>18~24</damageAmount>
+              <damageAmount>23~31</damageAmount>
               <damageDef>Water_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -153,16 +150,15 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>1350</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
-        <resourceCostMultiplier>2.0</resourceCostMultiplier>
-        <verbProperties>
-          <range>22</range>
-        </verbProperties>
+        <resourceCostMultiplier>2.2</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. Devastates all enemies around the target in a wide arc of beast-style cuts. Max Level.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>6</radius>
+            <radius>7</radius>
             <damageParms>
-              <damageAmount>22~28</damageAmount>
+              <damageAmount>28~37</damageAmount>
               <damageDef>Water_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -175,5 +171,5 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

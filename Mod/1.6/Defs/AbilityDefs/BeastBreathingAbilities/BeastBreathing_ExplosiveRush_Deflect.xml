@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>BeastBreathing_ExplosiveRush_Deflect_LOne</defName>
+    <label>explosive rush (charging)</label>
+    <description>Barreling forward at blinding speed — incoming fire glances off before it can land.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.85, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>80</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectilesPassive">
+        <radius>3</radius>
+        <maxShotsBeforeReset>6</maxShotsBeforeReset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BeastBreathing_ExplosiveRush_Deflect_LTwo</defName>
+    <label>explosive rush (charging)</label>
+    <description>Barreling forward at blinding speed — incoming fire glances off before it can land.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.85, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>90</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectilesPassive">
+        <radius>3</radius>
+        <maxShotsBeforeReset>8</maxShotsBeforeReset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BeastBreathing_ExplosiveRush_Deflect_LThree</defName>
+    <label>explosive rush (charging)</label>
+    <description>Barreling forward at blinding speed — incoming fire glances off before it can land.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.85, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>100</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectilesPassive">
+        <radius>3.5</radius>
+        <maxShotsBeforeReset>10</maxShotsBeforeReset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BeastBreathing_ExplosiveRush_Deflect_LFour</defName>
+    <label>explosive rush (charging)</label>
+    <description>Barreling forward at blinding speed — incoming fire glances off before it can land.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.85, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>110</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectilesPassive">
+        <radius>4</radius>
+        <maxShotsBeforeReset>13</maxShotsBeforeReset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BeastBreathing_ExplosiveRush_Deflect_LFive</defName>
+    <label>explosive rush (charging)</label>
+    <description>Barreling forward at blinding speed — incoming fire glances off before it can land.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.85, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>120</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectilesPassive">
+        <radius>4.5</radius>
+        <maxShotsBeforeReset>16</maxShotsBeforeReset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BeastBreathing_ExplosiveRush_Deflect_LSix</defName>
+    <label>explosive rush (charging)</label>
+    <description>Barreling forward at blinding speed — incoming fire glances off before it can land.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.85, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>130</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectilesPassive">
+        <radius>5</radius>
+        <maxShotsBeforeReset>20</maxShotsBeforeReset>
+      </li>
+    </comps>
+  </HediffDef>
+
+
+</Defs>

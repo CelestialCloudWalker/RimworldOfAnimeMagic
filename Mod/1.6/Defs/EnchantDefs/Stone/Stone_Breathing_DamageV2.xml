@@ -1,17 +1,28 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Stone_Breathing_Damage</defName>
     <label>stone crush</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was crushed to death.</deathMessage>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <deathMessage>{0} was crushed to nothing under overwhelming stone force.</deathMessage>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <defaultStoppingPower>0.9</defaultStoppingPower>
     <hediff>SmashOfStone</hediff>
     <hediffSkin>SmashOfStone</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Blunt</armorCategory>
     <impactSoundType>Blunt</impactSoundType>
-    <harmsHealth>true</harmsHealth>
+    <minDamageToFragment>8</minDamageToFragment>
+    <defaultDamage>12</defaultDamage>
+    <defaultArmorPenetration>0.25</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0.2</overkillPctToDestroyPart>
     <bluntInnerHitChance>0.8</bluntInnerHitChance>
     <bluntInnerHitDamageFractionToConvert>0.2~0.4</bluntInnerHitDamageFractionToConvert>
     <bluntInnerHitDamageFractionToAdd>0.1~0.3</bluntInnerHitDamageFractionToAdd>
@@ -32,19 +43,23 @@
         <li>(0.8, 0.5)</li>
       </points>
     </bluntStunChancePerDamagePctOfCorePartToBodyCurve>
+    <buildingDamageFactor>1.5</buildingDamageFactor>
+    <plantDamageFactor>1.2</plantDamageFactor>
+    <corpseDamageFactor>0.7</corpseDamageFactor>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>SmashOfStone</defName>
     <label>stone crush</label>
     <labelNoun>a stone crush</labelNoun>
-    <description>Severe blunt trauma.</description>
+    <description>Severe blunt trauma from an impact like stone. Bones fracture, organs compress, and the body struggles to move under the crushing aftermath.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
         <labelTendedWellInner>treated</labelTendedWellInner>
         <labelSolidTendedWell>set</labelSolidTendedWell>
-        <severityPerDayTended>-0.65</severityPerDayTended>
+        <severityPerDayTended>-0.50</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
         <infectionChance>0.15</infectionChance>
@@ -53,13 +68,56 @@
         <permanentLabel>stone crush scar</permanentLabel>
       </li>
     </comps>
+    <stages>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.12</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
     <injuryProps>
       <painPerSeverity>0.05</painPerSeverity>
       <averagePainPerSeverityPermanent>0.008</averagePainPerSeverityPermanent>
       <bleedRate>0.02</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Crushed</destroyedLabel>
-      <destroyedOutLabel>Pulverized</destroyedOutLabel>
+      <destroyedLabel>crushed</destroyedLabel>
+      <destroyedOutLabel>pulverized</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

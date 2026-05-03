@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>AA_FireworksShow</defName>
+    <label>Fireworks Show</label>
+    <description>Tengen hurls a volley of Anti-Demon Bombs across the target area. Every bomb detonates on impact, shredding demonic flesh and hostile structures while leaving allies completely unharmed. Demons that survive are left disoriented by the wisteria-laced blasts.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>40</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_FireworksShow">
+        <bombCount>6</bombCount>
+        <scatterRadius>5</scatterRadius>
+        <projectileDef>AA_Projectile_AntiDemonBomb</projectileDef>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>6 bombs scatter across the target area.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>Scatter range widens. More bombs.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_FireworksShow">
+            <bombCount>6</bombCount>
+            <scatterRadius>6</scatterRadius>
+            <projectileDef>AA_Projectile_AntiDemonBomb</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>7 bombs. Each explosion punches through demon defenses.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_FireworksShow">
+            <bombCount>7</bombCount>
+            <scatterRadius>7</scatterRadius>
+            <projectileDef>AA_Projectile_AntiDemonBomb</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>AA_FireworksShow_GrandFinale</defName>
+    <label>Fireworks Show: Grand Finale</label>
+    <description>Flamboyant beyond reason — Tengen fills the sky with wisteria-laced explosions. Twelve bombs carpet the area, each detonating on contact. A spectacle fit for a God of Festivals. Only demons and their fortifications suffer.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>70</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_FireworksShow">
+        <bombCount>12</bombCount>
+        <scatterRadius>9</scatterRadius>
+        <projectileDef>AA_Projectile_AntiDemonBomb_Heavy</projectileDef>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>12 bombs erupt across a wide area.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <description>14 bombs. The sky belongs to Tengen.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_FireworksShow">
+            <bombCount>14</bombCount>
+            <scatterRadius>10</scatterRadius>
+            <projectileDef>AA_Projectile_AntiDemonBomb_Heavy</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>650</experienceRequired>
+        <description>16 bombs. Maximum flamboyance. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_FireworksShow">
+            <bombCount>16</bombCount>
+            <scatterRadius>12</scatterRadius>
+            <projectileDef>AA_Projectile_AntiDemonBomb_Heavy</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

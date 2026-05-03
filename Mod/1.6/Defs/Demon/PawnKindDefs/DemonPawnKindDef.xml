@@ -110,7 +110,7 @@
     <factionLeader>true</factionLeader>
     <canBeSapper>true</canBeSapper>
     <abilities>
-      <li>Blood_Demon_Art_Groundlash_Tentacles</li>
+      <li>DS_Enmu_FleshWhips</li>
       <li>Blood_Demon_Arts_Devour</li>
     </abilities>
     <titleSelectOne>
@@ -124,7 +124,7 @@
     <combatPower>800</combatPower>
     <canBeSapper>true</canBeSapper>
     <abilities>
-      <li>Blood_Demon_Art_Groundlash_Tentacles</li>
+      <li>DS_Enmu_FleshWhips</li>
       <li>Blood_Demon_Arts_Devour</li>
     </abilities>
     <titleSelectOne>

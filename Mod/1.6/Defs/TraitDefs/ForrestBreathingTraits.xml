@@ -11,23 +11,25 @@
     <degreeDatas>
       <li>
         <label>woodland survivor</label>
-        <description>[PAWN_nameDef] thrives in the wilderness. [PAWN_pronoun] can hunt with deadly precision, find sustenance where others starve, and needs little comfort when surrounded by nature.</description>
+        <description>[PAWN_nameDef] doesn't need much to get by — just space, sky, and something to hunt. [PAWN_pronoun] reads wilderness the way others read rooms, finding food, predicting weather, moving quietly. Colony life is fine. [PAWN_pronoun] just doesn't need it.</description>
         <degree>1</degree>
         <statOffsets>
           <HuntingStealth>0.4</HuntingStealth>
-          <ForagedNutritionPerDay>2.0</ForagedNutritionPerDay>
           <AnimalGatherSpeed>0.3</AnimalGatherSpeed>
           <TameAnimalChance>0.2</TameAnimalChance>
+          <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
         </statOffsets>
         <skillGains>
           <Animals>4</Animals>
           <Shooting>3</Shooting>
           <Plants>2</Plants>
+          <Crafting>-1</Crafting>
         </skillGains>
         <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>CamouflageExpert</defName>
@@ -38,14 +40,14 @@
     <degreeDatas>
       <li>
         <label>camouflage expert</label>
-        <description>[PAWN_nameDef] moves like a shadow through natural terrain. [PAWN_possessive] mastery of concealment makes [PAWN_objective] nearly invisible to enemies and deadly from ambush.</description>
+        <description>[PAWN_nameDef] disappears into terrain the way other people step through a door. [PAWN_pronoun] doesn't rush, doesn't make noise, doesn't get caught in traps. When [PAWN_pronoun] decides to shoot, [PAWN_possessive] target usually doesn't get a second chance to notice [PAWN_objective].</description>
         <degree>1</degree>
         <statOffsets>
           <HuntingStealth>0.5</HuntingStealth>
           <TrapSpringChance>-0.4</TrapSpringChance>
-          <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+          <ShootingAccuracyPawn>0.04</ShootingAccuracyPawn>
           <RangedWeapon_Cooldown>-0.15</RangedWeapon_Cooldown>
-          <MeleeDodgeChance>5</MeleeDodgeChance>
+          <MeleeDodgeChance>0.05</MeleeDodgeChance>
         </statOffsets>
         <skillGains>
           <Shooting>5</Shooting>
@@ -56,6 +58,7 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>NaturesGuardian</defName>
     <commonality>0</commonality>
@@ -65,14 +68,13 @@
     <degreeDatas>
       <li>
         <label>nature's guardian</label>
-        <description>[PAWN_nameDef] is a devoted protector of the natural world. [PAWN_pronoun] works expertly with wood and plants but struggles with industrial manufacturing that harms the environment.</description>
+        <description>[PAWN_nameDef] builds with wood and plants like someone who actually understands what they're working with. Industrial manufacturing — smelting, machining, mass production — makes [PAWN_objective] impatient in a way that shows up in the work.</description>
         <degree>1</degree>
         <statOffsets>
           <PlantWorkSpeed>0.35</PlantWorkSpeed>
           <PlantHarvestYield>0.2</PlantHarvestYield>
           <ConstructionSpeed>0.2</ConstructionSpeed>
-          <MentalBreakThreshold>-0.1</MentalBreakThreshold>
-          <MentalBreakThreshold>3</MentalBreakThreshold>
+          <MentalBreakThreshold>-0.07</MentalBreakThreshold>
           <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
         </statOffsets>
         <skillGains>
@@ -85,6 +87,7 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>RootNetwork</defName>
     <commonality>0</commonality>
@@ -94,7 +97,7 @@
     <degreeDatas>
       <li>
         <label>root network</label>
-        <description>[PAWN_nameDef] feels connected to the living network of nature itself. [PAWN_possessive] heightened awareness allows [PAWN_objective] to sense danger and understand natural phenomena with uncanny insight.</description>
+        <description>[PAWN_nameDef] has a quality of attention that's hard to name — a low-level awareness of surroundings, a sensitivity to patterns others miss. [PAWN_pronoun] doesn't explain it. [PAWN_pronoun] just notices things, and things tend to notice [PAWN_objective] back.</description>
         <degree>1</degree>
         <statOffsets>
           <ResearchSpeed>0.25</ResearchSpeed>
@@ -102,16 +105,19 @@
           <MeditationFocusGain>0.3</MeditationFocusGain>
           <AnimalGatherYield>0.15</AnimalGatherYield>
           <TrapSpringChance>-0.5</TrapSpringChance>
+          <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
         <skillGains>
           <Intellectual>4</Intellectual>
           <Animals>3</Animals>
           <Plants>2</Plants>
+          <Social>-1</Social>
         </skillGains>
         <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>SeasonalAdaptation</defName>
@@ -122,7 +128,7 @@
     <degreeDatas>
       <li>
         <label>seasonal adaptation</label>
-        <description>[PAWN_nameDef] changes with the seasons like the forest itself. [PAWN_possessive] body adapts to temperature extremes, and [PAWN_pronoun] finds strength in nature's eternal cycles.</description>
+        <description>[PAWN_nameDef] takes temperature changes the way trees take seasons — adjusting rather than suffering. [PAWN_pronoun] grows into cycles, works steadily through conditions that ground others, and doesn't require much beyond the basics to function.</description>
         <degree>1</degree>
         <statOffsets>
           <ComfyTemperatureMin>-35</ComfyTemperatureMin>
@@ -130,15 +136,18 @@
           <PlantWorkSpeed>0.3</PlantWorkSpeed>
           <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
           <RestRateMultiplier>1.2</RestRateMultiplier>
+          <SocialImpact>-0.08</SocialImpact>
         </statOffsets>
         <skillGains>
           <Plants>4</Plants>
           <Animals>2</Animals>
+          <Social>-1</Social>
         </skillGains>
         <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>Photosynthesis</defName>
@@ -149,13 +158,12 @@
     <degreeDatas>
       <li>
         <label>photosynthesis</label>
-        <description>[PAWN_nameDef] draws sustenance from sunlight like a plant. [PAWN_pronoun] needs less food during bright days but becomes sluggish and hungry in darkness or underground.</description>
+        <description>[PAWN_nameDef]'s body runs on something closer to sunlight than food. [PAWN_pronoun] eats less than most, grows things better than most, and gets sick less often. What exactly is happening physiologically [PAWN_pronoun] either doesn't know or doesn't feel the need to explain.</description>
         <degree>1</degree>
         <statOffsets>
-          <BedHungerRateFactor>0.7</BedHungerRateFactor>
           <PlantWorkSpeed>0.4</PlantWorkSpeed>
           <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
-          <MentalBreakThreshold>5</MentalBreakThreshold>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
           <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
         </statOffsets>
         <skillGains>

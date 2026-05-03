@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Abyssal_Visions</defName>
+    <label>Blood Demon Arts: Abyssal Visions</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>A blood demon art that plants nightmares in sleeping targets' minds.</description>
+    <iconPath>UI/Abilities/DemonSleepAbilityNightmare</iconPath>
+    <displayOrder>210</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>8</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5</range>
+      <warmupTime>2.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>Nightmare</dreamEffectType>
+        <effectSeverity>0.5</effectSeverity>
+        <restPenalty>0.25</restPenalty>
+        <nightmareThought>NightmareDream</nightmareThought>
+        <nightmareHediff>NightmareTrauma</nightmareHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Plants nightmares in a sleeping target. NightmareDream thought (-8 mood, 3 days). Rest penalty 25%. Range 5.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <resourceCostMultiplier>1.10</resourceCostMultiplier>
+        <description>Nightmares deepen. Rest penalty 32%. Range 6.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>0.6</effectSeverity>
+            <restPenalty>0.32</restPenalty>
+            <nightmareThought>NightmareDream</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>110</experienceRequired>
+        <resourceCostMultiplier>1.20</resourceCostMultiplier>
+        <description>Nightmares worsen. NightmareDream_L3 thought (-10 mood, 4 days). Rest penalty 38%. Range 6.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>0.7</effectSeverity>
+            <restPenalty>0.38</restPenalty>
+            <nightmareThought>NightmareDream_L3</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>210</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <description>Nightmares grow harrowing. Rest penalty 45%. Range 7. NightmareTrauma severity increased.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>0.80</effectSeverity>
+            <restPenalty>0.45</restPenalty>
+            <nightmareThought>NightmareDream_L3</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>340</experienceRequired>
+        <resourceCostMultiplier>1.45</resourceCostMultiplier>
+        <description>The abyss opens in their mind. NightmareDream_L5 thought (-14 mood, 5 days). Rest penalty 50%. Range 8.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>0.90</effectSeverity>
+            <restPenalty>0.50</restPenalty>
+            <nightmareThought>NightmareDream_L5</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>520</experienceRequired>
+        <resourceCostMultiplier>1.60</resourceCostMultiplier>
+        <description>Perfected. Abyssal nightmares at full potency. Rest penalty 55%. effectSeverity 1.0. Range 8. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>Nightmare</dreamEffectType>
+            <effectSeverity>1.0</effectSeverity>
+            <restPenalty>0.55</restPenalty>
+            <nightmareThought>NightmareDream_L5</nightmareThought>
+            <nightmareHediff>NightmareTrauma</nightmareHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

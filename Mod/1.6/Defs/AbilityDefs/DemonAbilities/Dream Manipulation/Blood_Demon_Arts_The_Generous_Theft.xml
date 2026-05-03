@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_The_Generous_Theft</defName>
+    <label>Blood Demon Arts: The Generous Theft </label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enmu forces a waking target under before slipping into their dreams to steal skills. The mind fights back before surrendering — less is taken, and it costs more.</description>
+    <iconPath>UI/Abilities/DemonAbilitySkillSteal</iconPath>
+    <displayOrder>214</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>39</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>2</range>
+      <warmupTime>6.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <useSleepHediff>false</useSleepHediff>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <sleepDurationHours>3</sleepDurationHours>
+        <maxTargets>1</maxTargets>
+        <range>2</range>
+        
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>SkillTransfer</dreamEffectType>
+        <effectSeverity>0.15</effectSeverity>
+        <transferFromTarget>true</transferFromTarget>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Forces target asleep (3h) then steals skill XP. effectSeverity 0.15. Range 2. Warmup 6s.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <resourceCostMultiplier>1.103</resourceCostMultiplier>
+        <description>effectSeverity 0.20. Range 2. Warmup 5.5s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>2</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.20</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>170</experienceRequired>
+        <resourceCostMultiplier>1.231</resourceCostMultiplier>
+        <description>effectSeverity 0.26. Range 3. Warmup 5s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>3</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.26</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <resourceCostMultiplier>1.385</resourceCostMultiplier>
+        <description>effectSeverity 0.31. Range 3. Warmup 4.5s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>3</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.31</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>460</experienceRequired>
+        <resourceCostMultiplier>1.513</resourceCostMultiplier>
+        <description>effectSeverity 0.36. Range 4. Warmup 4s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>4</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.36</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>660</experienceRequired>
+        <resourceCostMultiplier>1.641</resourceCostMultiplier>
+        <description>Perfected. effectSeverity 0.40. Range 4. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>4</range>
+            
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.40</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

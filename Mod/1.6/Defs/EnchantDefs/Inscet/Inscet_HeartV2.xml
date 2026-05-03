@@ -2,7 +2,7 @@
 <Defs>
 
   <HediffDef>
-    <defName>Inscet_Heart</defName>
+    <defName>Insect_Heart</defName>
     <label>Insect Heart</label>
     <description>Strikes weaken enemies with subtle toxins.</description>
     <displayWound>false</displayWound>
@@ -13,14 +13,14 @@
     <isBad>false</isBad>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Inscet_Breathing_Damage</damageType>
+        <damageType>Insect_Breathing_Damage</damageType>
         <damageValue>5</damageValue>
       </li>
     </comps>
   </HediffDef>
 
   <HediffDef>
-    <defName>Inscet_Heart_LevelTwo</defName>
+    <defName>Insect_Heart_LevelTwo</defName>
     <label>Insect Heart</label>
     <description>Strikes weaken enemies with subtle toxins.</description>
     <displayWound>false</displayWound>
@@ -31,14 +31,14 @@
     <isBad>false</isBad>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Inscet_Breathing_Damage</damageType>
+        <damageType>Insect_Breathing_Damage</damageType>
         <damageValue>8</damageValue>
       </li>
     </comps>
   </HediffDef>
 
   <HediffDef>
-    <defName>Inscet_Heart_LevelThree</defName>
+    <defName>Insect_Heart_LevelThree</defName>
     <label>Insect Heart</label>
     <description>Strikes weaken enemies with subtle toxins.</description>
     <displayWound>false</displayWound>
@@ -49,14 +49,14 @@
     <isBad>false</isBad>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Inscet_Breathing_Damage</damageType>
+        <damageType>Insect_Breathing_Damage</damageType>
         <damageValue>11</damageValue>
       </li>
     </comps>
   </HediffDef>
 
   <HediffDef>
-    <defName>Inscet_Heart_LevelFour</defName>
+    <defName>Insect_Heart_LevelFour</defName>
     <label>Insect Heart</label>
     <description>Strikes weaken enemies with subtle toxins.</description>
     <displayWound>false</displayWound>
@@ -67,14 +67,14 @@
     <isBad>false</isBad>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Inscet_Breathing_Damage</damageType>
+        <damageType>Insect_Breathing_Damage</damageType>
         <damageValue>14</damageValue>
       </li>
     </comps>
   </HediffDef>
 
   <HediffDef>
-    <defName>Inscet_Heart_LevelFive</defName>
+    <defName>Insect_Heart_LevelFive</defName>
     <label>Insect Heart</label>
     <description>Strikes weaken enemies with subtle toxins.</description>
     <displayWound>false</displayWound>
@@ -85,14 +85,14 @@
     <isBad>false</isBad>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Inscet_Breathing_Damage</damageType>
+        <damageType>Insect_Breathing_Damage</damageType>
         <damageValue>18</damageValue>
       </li>
     </comps>
   </HediffDef>
 
   <HediffDef>
-    <defName>Inscet_Heart_LevelSix</defName>
+    <defName>Insect_Heart_LevelSix</defName>
     <label>Insect Heart</label>
     <description>Strikes weaken enemies with subtle toxins.</description>
     <displayWound>false</displayWound>
@@ -103,7 +103,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="AnimeArsenal.HediffCompProperties_Enchant">
-        <damageType>Inscet_Breathing_Damage</damageType>
+        <damageType>Insect_Breathing_Damage</damageType>
         <damageValue>23</damageValue>
       </li>
     </comps>

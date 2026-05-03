@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Mist_Breathing_ShiftingFlowSlash</defName>
+    <label>Mist Breathing: Shifting Flow Slash</label>
+    <description>The user dissolves into the battlefield, flowing from enemy to enemy in a single continuous motion — each slash precise, each step dissolving into mist. With every target cut, their movements grow harder to read, leaving behind a deepening haze of misdirection.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>480</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>310</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>16</range>
+      <warmupTime>0.45</warmupTime>
+      <noiseRadius>3</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>3</maxJumps>
+        <ticksBetweenJumps>5</ticksBetweenJumps>
+        <jumpDistance>6</jumpDistance>
+        <targetSearchRadius>10</targetSearchRadius>
+        <jumpDamageDef>Mist_Breathing_Damage</jumpDamageDef>
+        <jumpDamage>5~7</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
+        <casterEffecter>AnimeArsenal_MistJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>MistBreathing_Misdirection</hediffDef>
+        <severityAdjustment>0.28</severityAdjustment>
+        <applyToTarget>false</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>5~7 damage per slash. Flows through up to 3 targets. Grants Misdirection on use — stacks with existing haze.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>140</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>6~9 damage. Adds a 4th target. Misdirection gain increased — reliably reaches Low Clouds on a full flow.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>4</maxJumps>
+            <ticksBetweenJumps>5</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>12</targetSearchRadius>
+            <jumpDamageDef>Mist_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>6~9</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
+            <casterEffecter>AnimeArsenal_MistJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.36</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <resourceCostMultiplier>1.30</resourceCostMultiplier>
+        <cooldownMultiplier>0.92</cooldownMultiplier>
+        <description>8~11 damage. Flows faster. Misdirection edges toward Distant Haze on a full flow.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>4</maxJumps>
+            <ticksBetweenJumps>4</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>13</targetSearchRadius>
+            <jumpDamageDef>Mist_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>8~11</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
+            <casterEffecter>AnimeArsenal_MistJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.44</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>540</experienceRequired>
+        <resourceCostMultiplier>1.45</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>10~14 damage. Adds a 5th target. Search radius extended. Distant Haze reliable on a full flow.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>5</maxJumps>
+            <ticksBetweenJumps>4</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>15</targetSearchRadius>
+            <jumpDamageDef>Mist_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>10~14</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
+            <casterEffecter>AnimeArsenal_MistJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.52</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>800</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>13~18 damage. The flow becomes near-continuous — each slash bleeds into the next. Full flow reliably reaches Shrouded.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>5</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>8</jumpDistance>
+            <targetSearchRadius>17</targetSearchRadius>
+            <jumpDamageDef>Mist_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>13~18</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
+            <casterEffecter>AnimeArsenal_MistJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.62</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1200</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 16~22 damage across 6 targets in an instant. On a full flow the user is simply a blur — Shrouded immediately. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>6</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>8</jumpDistance>
+            <targetSearchRadius>19</targetSearchRadius>
+            <jumpDamageDef>Mist_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>16~22</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
+            <casterEffecter>AnimeArsenal_MistJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.75</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

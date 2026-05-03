@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Beast_Breathing_SeventhForm_SpatialAwareness</defName>
+    <label>Beast Breathing: Seventh Form — Spatial Awareness</label>
+    <description>The user crouches low, both arms extended wide with palms open, and goes completely still. Through the faintest disturbances in the air — breath, heartbeat, the shift of weight — they feel every enemy around them. Their positions, their movements, their weaknesses. All of it arrives as pure sensation before the eye could ever register it.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1400</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayOrder>450</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>18</resourceCost>
+    <baseExperienceGain>25</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>BeastBreathing_SpatialAwareness_LOne</hediffDef>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Feel the air. Enemies nearby reveal themselves as pressure shifts. Minor boost to melee accuracy, dodge, and movement. Sight range extends to 14 tiles.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_SpatialAwareness_LOne</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>160</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>Footfalls and breath become readable. Improved accuracy and dodge. Sight range 17 tiles. Duration extends.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_SpatialAwareness_LTwo</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.28</resourceCostMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>Weak points register through air displacement. Melee cooldown shortens. Sight range 20 tiles. Vital organ targeting improves.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_SpatialAwareness_LThree</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>580</experienceRequired>
+        <resourceCostMultiplier>1.40</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>Cover and concealment fail. Enemies felt through walls. Sight range 24 tiles. Vital strikes land with high reliability.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_SpatialAwareness_LFour</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>860</experienceRequired>
+        <resourceCostMultiplier>1.50</resourceCostMultiplier>
+        <cooldownMultiplier>0.78</cooldownMultiplier>
+        <description>The entire field resolves into sensation. Sight range 28 tiles. All combat stats at near-peak. Nothing hides, nothing surprises.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_SpatialAwareness_LFive</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1260</experienceRequired>
+        <resourceCostMultiplier>1.58</resourceCostMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <description>Perfected. An entire mountain worth of enemies felt through still air. Sight range 34 tiles. Every stat at maximum. Nothing on the battlefield is hidden. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_SpatialAwareness_LSix</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

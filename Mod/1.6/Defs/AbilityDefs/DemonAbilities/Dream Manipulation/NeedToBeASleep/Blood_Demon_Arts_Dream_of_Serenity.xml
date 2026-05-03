@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Dream_of_Serenity</defName>
+    <label>Blood Demon Arts: Serene Dreams</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Grant peaceful dreams to a sleeping target, improving their mood and rest quality.</description>
+    <iconPath>UI/Abilities/DemonSleepAbility6</iconPath>
+    <displayOrder>211</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>6</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5</range>
+      <warmupTime>2.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>PleasantDream</dreamEffectType>
+        <effectSeverity>0.35</effectSeverity>
+        <restBonus>0.25</restBonus>
+        <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+        <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Grants pleasant dreams. PleasantDream thought (+12 mood, 2 days). DreamBliss hediff. Rest bonus 25%. Range 5.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>40</experienceRequired>
+        <resourceCostMultiplier>1.10</resourceCostMultiplier>
+        <description>Dreams grow more vivid. Rest bonus 32%. Range 6.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.45</effectSeverity>
+            <restBonus>0.32</restBonus>
+            <pleasantDreamThought>PleasantDream</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>90</experienceRequired>
+        <resourceCostMultiplier>1.20</resourceCostMultiplier>
+        <description>Beautiful dreams. PleasantDream_L3 thought (+15 mood, 3 days). DreamBliss_L3 hediff (+14% consciousness). Rest bonus 38%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.55</effectSeverity>
+            <restBonus>0.38</restBonus>
+            <pleasantDreamThought>PleasantDream_L3</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss_L3</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>170</experienceRequired>
+        <resourceCostMultiplier>1.30</resourceCostMultiplier>
+        <description>Dreams deepen further. Rest bonus 44%. Range 7. DreamBliss_L3 hediff.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.65</effectSeverity>
+            <restBonus>0.44</restBonus>
+            <pleasantDreamThought>PleasantDream_L3</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss_L3</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>280</experienceRequired>
+        <resourceCostMultiplier>1.40</resourceCostMultiplier>
+        <description>Transcendent dreams. PleasantDream_L5 thought (+20 mood, 4 days). DreamBliss_L5 hediff (+18% consciousness). Rest bonus 50%. Range 8.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.75</effectSeverity>
+            <restBonus>0.50</restBonus>
+            <pleasantDreamThought>PleasantDream_L5</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss_L5</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>420</experienceRequired>
+        <resourceCostMultiplier>1.50</resourceCostMultiplier>
+        <description>Perfected. Transcendent dreams at full potency. Rest bonus 55%. effectSeverity 0.85. Range 8. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.85</effectSeverity>
+            <restBonus>0.55</restBonus>
+            <pleasantDreamThought>PleasantDream_L5</pleasantDreamThought>
+            <pleasantDreamHediff>DreamBliss_L5</pleasantDreamHediff>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

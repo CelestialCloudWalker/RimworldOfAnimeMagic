@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>WindForm8_Slash_Projectile_LOne</defName>
+    <label>Primary Gale Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.2</drawSize>
+      <shaderParameters>
+        <_Color>(180, 255, 180, 255)</_Color>
+        <_brightnessMultiplier>1.4</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Wind_Breathing_Damage</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <armorPenetrationBase>0.30</armorPenetrationBase>
+      <ExplosionRadius>2.8</ExplosionRadius>
+      <stoppingPower>1.0</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>32</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>6</aoeDamage>
+      <leaveHazardDef>WindForm8_GaleHazard_LOne</leaveHazardDef>
+      <trailHazardDef>WindForm8_GaleHazard_LOne</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>8</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(180, 255, 180, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.18</MoteInterval>
+        <MoteDuration>38</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>WindForm8_Slash_Projectile_LTwo</defName>
+    <label>Primary Gale Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(153, 255, 153, 255)</_Color>
+        <_brightnessMultiplier>1.5</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Wind_Breathing_Damage</damageDef>
+      <damageAmountBase>17</damageAmountBase>
+      <armorPenetrationBase>0.36</armorPenetrationBase>
+      <ExplosionRadius>3.2</ExplosionRadius>
+      <stoppingPower>1.2</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>35</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>8</aoeDamage>
+      <leaveHazardDef>WindForm8_GaleHazard_LTwo</leaveHazardDef>
+      <trailHazardDef>WindForm8_GaleHazard_LTwo</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>8</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(153, 255, 153, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.15</MoteInterval>
+        <MoteDuration>42</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>WindForm8_Slash_Projectile_LThree</defName>
+    <label>Primary Gale Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.8</drawSize>
+      <shaderParameters>
+        <_Color>(120, 255, 120, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Wind_Breathing_Damage</damageDef>
+      <damageAmountBase>21</damageAmountBase>
+      <armorPenetrationBase>0.44</armorPenetrationBase>
+      <ExplosionRadius>3.8</ExplosionRadius>
+      <stoppingPower>1.4</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>38</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>10</aoeDamage>
+      <leaveHazardDef>WindForm8_GaleHazard_LThree</leaveHazardDef>
+      <trailHazardDef>WindForm8_GaleHazard_LThree</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>8</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>23</glowRadius>
+        <glowColor>(120, 255, 120, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.13</MoteInterval>
+        <MoteDuration>46</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>WindForm8_Slash_Projectile_LFour</defName>
+    <label>Primary Gale Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.0</drawSize>
+      <shaderParameters>
+        <_Color>(90, 255, 90, 255)</_Color>
+        <_brightnessMultiplier>1.7</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Wind_Breathing_Damage</damageDef>
+      <damageAmountBase>26</damageAmountBase>
+      <armorPenetrationBase>0.53</armorPenetrationBase>
+      <ExplosionRadius>4.2</ExplosionRadius>
+      <stoppingPower>1.6</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>42</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>13</aoeDamage>
+      <leaveHazardDef>WindForm8_GaleHazard_LFour</leaveHazardDef>
+      <trailHazardDef>WindForm8_GaleHazard_LFour</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>8</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>26</glowRadius>
+        <glowColor>(90, 255, 90, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.11</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>WindForm8_Slash_Projectile_LFive</defName>
+    <label>Primary Gale Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.3</drawSize>
+      <shaderParameters>
+        <_Color>(55, 255, 55, 255)</_Color>
+        <_brightnessMultiplier>1.85</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Wind_Breathing_Damage</damageDef>
+      <damageAmountBase>32</damageAmountBase>
+      <armorPenetrationBase>0.63</armorPenetrationBase>
+      <ExplosionRadius>4.8</ExplosionRadius>
+      <stoppingPower>1.8</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>46</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>16</aoeDamage>
+      <leaveHazardDef>WindForm8_GaleHazard_LFive</leaveHazardDef>
+      <trailHazardDef>WindForm8_GaleHazard_LFive</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>8</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>29</glowRadius>
+        <glowColor>(55, 255, 55, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.09</MoteInterval>
+        <MoteDuration>55</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>WindForm8_Slash_Projectile_LSix</defName>
+    <label>Primary Gale Slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.8</drawSize>
+      <shaderParameters>
+        <_Color>(20, 255, 20, 255)</_Color>
+        <_brightnessMultiplier>2.2</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Wind_Breathing_Damage</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <armorPenetrationBase>0.75</armorPenetrationBase>
+      <ExplosionRadius>5.6</ExplosionRadius>
+      <stoppingPower>2.2</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>52</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>20</aoeDamage>
+      <leaveHazardDef>WindForm8_GaleHazard_LSix</leaveHazardDef>
+      <trailHazardDef>WindForm8_GaleHazard_LSix</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>8</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>33</glowRadius>
+        <glowColor>(20, 255, 20, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.07</MoteInterval>
+        <MoteDuration>65</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Musical_Score_Technique</defName>
+    <label>Musical Score Technique I</label>
+    <enchantHediff>Musical_Score_LevelOne</enchantHediff>
+    <resourceGene>Gene_SoundBreath</resourceGene>
+    <ticksBetweenCost>440</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Musical_Score_Technique_LevelTwo</defName>
+    <label>Musical Score Technique II</label>
+    <enchantHediff>Musical_Score_LevelTwo</enchantHediff>
+    <resourceGene>Gene_SoundBreath</resourceGene>
+    <ticksBetweenCost>400</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+  </AnimeArsenal.EnchantDef>
+
+</Defs>

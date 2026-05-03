@@ -1,32 +1,52 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Wind_Breathing_Damage</defName>
     <label>wind slash</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was torn apart by slicing winds.</deathMessage>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>true</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <deathMessage>{0} was torn to pieces by slicing winds.</deathMessage>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <defaultStoppingPower>0.3</defaultStoppingPower>
     <hediff>SharpnessOfWind</hediff>
     <hediffSkin>SharpnessOfWind</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
-    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-    <impactSoundType>Slice</impactSoundType>
     <armorCategory>Sharp</armorCategory>
-    <harmsHealth>true</harmsHealth>
+    <impactSoundType>Slice</impactSoundType>
+    <minDamageToFragment>10</minDamageToFragment>
+    <defaultDamage>9</defaultDamage>
+    <defaultArmorPenetration>0.14</defaultArmorPenetration>
     <overkillPctToDestroyPart>0.7</overkillPctToDestroyPart>
+    <additionalHediffs>
+      <li>
+        <hediff>BloodLoss</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>0.4</buildingDamageFactor>
+    <plantDamageFactor>2.0</plantDamageFactor>
+    <corpseDamageFactor>1.4</corpseDamageFactor>
+    <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>SharpnessOfWind</defName>
     <label>wind slash</label>
     <labelNoun>a wind slash</labelNoun>
-    <description>Deep lacerations. Blood loss is rapid and dangerous.</description>
+    <description>Deep lacerations from invisible blades of wind. Blood loss is rapid and unrelenting — the wounds are wide and refuse to close easily.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
         <labelTendedWellInner>sutured</labelTendedWellInner>
         <labelSolidTendedWell>set</labelSolidTendedWell>
-        <severityPerDayTended>-0.78</severityPerDayTended>
+        <severityPerDayTended>-0.50</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
         <infectionChance>0.15</infectionChance>
@@ -35,13 +55,56 @@
         <permanentLabel>wind slash scar</permanentLabel>
       </li>
     </comps>
+    <stages>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.06</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.14</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.28</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.18</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
     <injuryProps>
       <painPerSeverity>0.08</painPerSeverity>
       <averagePainPerSeverityPermanent>0.015</averagePainPerSeverityPermanent>
       <bleedRate>0.12</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Sliced off</destroyedLabel>
-      <destroyedOutLabel>Sliced apart</destroyedOutLabel>
+      <destroyedLabel>sliced off</destroyedLabel>
+      <destroyedOutLabel>sliced apart</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

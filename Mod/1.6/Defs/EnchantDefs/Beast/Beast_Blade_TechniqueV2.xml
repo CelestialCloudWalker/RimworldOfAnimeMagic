@@ -9,6 +9,11 @@
     <resourceGene>Gene_BeastBreath</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>6</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_BeastRoarActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_BeastBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Beast</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Beast</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -20,6 +25,11 @@
     <resourceGene>Gene_BeastBreath</resourceGene>
     <ticksBetweenCost>380</ticksBetweenCost>
     <resourceCostPerTick>6</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_BeastRoarActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_BeastBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Beast</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Beast</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -31,6 +41,11 @@
     <resourceGene>Gene_BeastBreath</resourceGene>
     <ticksBetweenCost>340</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_BeastRoarActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_BeastBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Beast</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Beast</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -42,6 +57,11 @@
     <resourceGene>Gene_BeastBreath</resourceGene>
     <ticksBetweenCost>300</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_BeastRoarActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_BeastBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Beast</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Beast</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -53,6 +73,11 @@
     <resourceGene>Gene_BeastBreath</resourceGene>
     <ticksBetweenCost>260</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_BeastRoarActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_BeastBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Beast</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Beast</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -64,5 +89,10 @@
     <resourceGene>Gene_BeastBreath</resourceGene>
     <ticksBetweenCost>220</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_BeastRoarActivate</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_BeastBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Beast</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Beast</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_BeastHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

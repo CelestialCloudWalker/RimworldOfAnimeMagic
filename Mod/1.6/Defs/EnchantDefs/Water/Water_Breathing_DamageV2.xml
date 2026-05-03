@@ -1,32 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Water_Breathing_Damage</defName>
     <label>water slash</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was drowned by crushing waves.</deathMessage>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>true</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>false</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <deathMessage>{0} was carved apart by crushing waves of water.</deathMessage>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <defaultStoppingPower>0.2</defaultStoppingPower>
     <hediff>FreshnessOfWater</hediff>
     <hediffSkin>FreshnessOfWater</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Sharp</armorCategory>
     <impactSoundType>Slice</impactSoundType>
-    <harmsHealth>true</harmsHealth>
-    <makesBlood>true</makesBlood>
-    <canInterruptJobs>true</canInterruptJobs>
+    <minDamageToFragment>20</minDamageToFragment>
+    <defaultDamage>8</defaultDamage>
+    <defaultArmorPenetration>0.20</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0.6</overkillPctToDestroyPart>
+    <additionalHediffs>
+      <li>
+        <hediff>BloodLoss</hediff>
+        <severityPerDamageDealt>0.010</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>0.5</buildingDamageFactor>
+    <plantDamageFactor>0.8</plantDamageFactor>
+    <corpseDamageFactor>1.1</corpseDamageFactor>
+    <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>FreshnessOfWater</defName>
     <label>water slash</label>
     <labelNoun>a water slash</labelNoun>
-    <description>A clean cut. Heavy bleeding from severed tissue.</description>
+    <description>A clean, precise cut delivered with the flowing force of water. The wound is surgically thin but bleeds heavily — water breathing leaves no ragged edges, only deep loss.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
         <labelTendedWellInner>sutured</labelTendedWellInner>
         <labelSolidTendedWell>set</labelSolidTendedWell>
-        <severityPerDayTended>-0.75</severityPerDayTended>
+        <severityPerDayTended>-0.50</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
         <infectionChance>0.05</infectionChance>
@@ -36,14 +55,52 @@
         <becomePermanentChanceFactor>0.15</becomePermanentChanceFactor>
       </li>
     </comps>
+    <stages>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.04</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.18</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.14</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
     <injuryProps>
       <painPerSeverity>0.0125</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
       <bleedRate>0.055</bleedRate>
       <canMerge>false</canMerge>
-      <destroyedLabel>Cut off</destroyedLabel>
-      <destroyedOutLabel>Cut out</destroyedOutLabel>
+      <destroyedLabel>cut off</destroyedLabel>
+      <destroyedOutLabel>cut apart</destroyedOutLabel>
       <useRemovedLabel>true</useRemovedLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

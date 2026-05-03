@@ -17,7 +17,7 @@
           <MeleeHitChance>8</MeleeHitChance>
           <MoveSpeed>0.25</MoveSpeed>
           <ShootingAccuracyPawn>-6</ShootingAccuracyPawn>
-          <TrapSpringChance>-0.4</TrapSpringChance>
+          <TrapSpringChance>-0.2</TrapSpringChance>
         </statOffsets>
         <skillGains>
           <Melee>5</Melee>
@@ -42,10 +42,12 @@
         <degree>1</degree>
         <statOffsets>
           <MeleeHitChance>6</MeleeHitChance>
-          <MeleeDPS>0.25</MeleeDPS>
-          <ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+          <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
           <SurgerySuccessChanceFactor>0.2</SurgerySuccessChanceFactor>
         </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.2</MeleeDamageFactor>
+        </statFactors>
         <skillGains>
           <Melee>4</Melee>
           <Medicine>4</Medicine>
@@ -68,16 +70,16 @@
         <description>[PAWN_nameDef] possesses the mesmerizing stare of a serpent. [PAWN_possessive] eyes can entrance others, making [PAWN_objective] exceptionally persuasive and manipulative in social situations.</description>
         <degree>1</degree>
         <statOffsets>
-          <SocialImpact>0.5</SocialImpact>
-          <NegotiationAbility>0.6</NegotiationAbility>
-          <ArrestSuccessChance>0.4</ArrestSuccessChance>
+          <SocialImpact>0.25</SocialImpact>
+          <NegotiationAbility>0.2</NegotiationAbility>
+          <ArrestSuccessChance>0.2</ArrestSuccessChance>
           <PsychicSensitivity>0.3</PsychicSensitivity>
         </statOffsets>
         <skillGains>
           <Social>6</Social>
           <Intellectual>2</Intellectual>
         </skillGains>
-        <marketValueFactorOffset>0.15</marketValueFactorOffset>
+        <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
@@ -94,11 +96,9 @@
           <MoveSpeed>0.3</MoveSpeed>
           <HuntingStealth>0.5</HuntingStealth>
           <MeleeDodgeChance>8</MeleeDodgeChance>
-          <ConstructionSpeed>0.2</ConstructionSpeed>
         </statOffsets>
         <skillGains>
           <Melee>3</Melee>
-          <Construction>2</Construction>
           <Animals>2</Animals>
         </skillGains>
         <marketValueFactorOffset>0.08</marketValueFactorOffset>
@@ -122,7 +122,7 @@
           <ComfyTemperatureMin>5</ComfyTemperatureMin>
           <ComfyTemperatureMax>35</ComfyTemperatureMax>
           <PsychicSensitivity>-0.3</PsychicSensitivity>
-          <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
         </statOffsets>
         <skillGains>
           <Intellectual>5</Intellectual>
@@ -142,14 +142,14 @@
         <description>[PAWN_nameDef] periodically sheds [PAWN_possessive] outer layer like a serpent, emerging renewed and healed. [PAWN_possessive] regenerative abilities are remarkable, leaving no permanent scars.</description>
         <degree>1</degree>
         <statOffsets>
-          <InjuryHealingFactor>2.5</InjuryHealingFactor>
-          <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+          <InjuryHealingFactor>0.3</InjuryHealingFactor>
+          <ImmunityGainSpeed>0.4</ImmunityGainSpeed>
           <PainShockThreshold>0.2</PainShockThreshold>
         </statOffsets>
         <skillGains>
           <Medicine>3</Medicine>
         </skillGains>
-        <marketValueFactorOffset>0.18</marketValueFactorOffset>
+        <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
@@ -168,15 +168,12 @@
         <statOffsets>
           <MeleeHitChance>7</MeleeHitChance>
           <ArrestSuccessChance>0.5</ArrestSuccessChance>
-          <ConstructionSpeed>0.25</ConstructionSpeed>
-          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
         </statOffsets>
         <skillGains>
           <Melee>4</Melee>
           <Crafting>3</Crafting>
-          <Construction>2</Construction>
         </skillGains>
-        <marketValueFactorOffset>0.1</marketValueFactorOffset>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>

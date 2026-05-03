@@ -1,47 +1,108 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Flower_Breathing_Damage</defName>
     <label>flower slash</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>true</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>false</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
     <deathMessage>{0} was cut down by blossoming strikes.</deathMessage>
+    <defaultStoppingPower>0.2</defaultStoppingPower>
     <hediff>FragranceOfFlower</hediff>
     <hediffSkin>FragranceOfFlower</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <impactSoundType>Slice</impactSoundType>
     <armorCategory>Sharp</armorCategory>
-    <harmsHealth>true</harmsHealth>
-    <causeStun>true</causeStun>
-    <constantStunDurationTicks>300</constantStunDurationTicks>
+    <defaultDamage>8</defaultDamage>
+    <defaultArmorPenetration>0.20</defaultArmorPenetration>
+    <minDamageToFragment>99999</minDamageToFragment>
+    <overkillPctToDestroyPart>0.5</overkillPctToDestroyPart>
+    <additionalHediffs>
+      <li>
+        <hediff>BloodLoss</hediff>
+        <severityPerDamageDealt>0.008</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>0.3</buildingDamageFactor>
+    <plantDamageFactor>0.6</plantDamageFactor>
+    <corpseDamageFactor>1.0</corpseDamageFactor>
+    <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>FragranceOfFlower</defName>
     <label>flower slash</label>
     <labelNoun>a flower slash</labelNoun>
-    <description>A precise cut that bleeds profusely.</description>
+    <description>A precise, flowing cut. Bleeds cleanly and deeply — more dangerous than it first appears.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
         <labelTendedWellInner>sutured</labelTendedWellInner>
         <labelSolidTendedWell>set</labelSolidTendedWell>
-        <severityPerDayTended>-0.78</severityPerDayTended>
+        <severityPerDayTended>-0.50</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
-        <infectionChance>0.25</infectionChance>
+        <infectionChance>0.15</infectionChance>
       </li>
       <li Class="HediffCompProperties_GetsPermanent">
         <permanentLabel>flower slash scar</permanentLabel>
       </li>
     </comps>
+    <stages>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.03</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.07</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.06</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.12</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
     <injuryProps>
-      <painPerSeverity>0.0325</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
-      <bleedRate>0.05</bleedRate>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.006</averagePainPerSeverityPermanent>
+      <bleedRate>0.09</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Cut off</destroyedLabel>
-      <destroyedOutLabel>Cut out</destroyedOutLabel>
+      <destroyedLabel>cut off</destroyedLabel>
+      <destroyedOutLabel>cut apart</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

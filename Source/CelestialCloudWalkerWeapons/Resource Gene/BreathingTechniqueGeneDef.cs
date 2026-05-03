@@ -1,11 +1,11 @@
-﻿using Talented;
+﻿using RimWorld;
+using UnityEngine;
 using Verse;
-using RimWorld;
-using System.Collections.Generic;
+using EMF;
 
 namespace AnimeArsenal
 {
-    public class BreathingTechniqueGeneDef : TalentedGeneDef
+    public class BreathingTechniqueGeneDef : EMF.BasicResourceGeneDef
     {
         public float exhaustionPerTick = 0.001f;
         public HediffDef exhaustionHediff;
@@ -14,12 +14,20 @@ namespace AnimeArsenal
         public int exhausationCooldownTicks = 2000;
 
         public bool scaleWithBreathing = true;
-
         public bool canCoexistWithDemon = false;
+        public GeneDef demonHybridGene;
+
+        public StatDef maxStat;
+        public StatDef regenTicks;
+        public StatDef regenStat;
+        public StatDef regenSpeedStat;
+        public StatDef costMult;
+
+        public Color styleBarColor = Color.white;
 
         public BreathingTechniqueGeneDef()
         {
-            this.geneClass = typeof(BreathingTechniqueGene);
+            geneClass = typeof(BreathingTechniqueGene);
         }
     }
 }

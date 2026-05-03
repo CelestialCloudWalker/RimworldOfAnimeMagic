@@ -4,67 +4,23 @@
     <defName>Gene_SerpentBreath</defName>
     <label>Serpent Breath</label>
     <prerequisite>Gene_BreathingPotential</prerequisite>
-    <resourceName>Serpent Breath</resourceName>
     <description>Serpent Breathing Gene.</description>
     <iconPath>UI/Icons/Genes/serpent</iconPath>
     <resourceLabel>Serpent Breath</resourceLabel>
     <resourceDescription>Current stored Breath.</resourceDescription>
-    <TalentTrees>
-      <li>Serpent_BreathingStyleBlankTree</li>
-    </TalentTrees>
-    <experienceFormula>Basic_LinearXP</experienceFormula>
-    <experienceGainSettings>
-      <experienceTypes>
-      <li Class="Talented.DamageTakenExperienceTypeDef">
-        <baseXP>6</baseXP>
-        <damageFactor>0.11</damageFactor>
-      </li>
-      <li Class="Talented.DamageDealtExperienceTypeDef">
-        <baseXP>16</baseXP>
-        <damageFactor>0.21</damageFactor>
-      </li>
-      <li Class="Talented.VerbExperienceTypeDef">
-        <VerbClassName>Verb_CastAbility</VerbClassName>
-        <baseXP>16</baseXP>
-      </li>
-      <li Class="Talented.VerbExperienceTypeDef">
-        <VerbClassName>Verb_MeleeAttack</VerbClassName>
-        <baseXP>13</baseXP>
-      </li>
-      <li Class="Talented.SkillExperienceTypeDef">
-        <SkillDef>Melee</SkillDef>
-        <baseXP>3.8</baseXP>
-      </li>
-      <li Class="Talented.SkillExperienceTypeDef">
-        <SkillDef>Shooting</SkillDef>
-        <baseXP>1.5</baseXP>
-      </li>
-      <li Class="Talented.SkillExperienceTypeDef">
-        <SkillDef>Medicine</SkillDef>
-        <baseXP>1.5</baseXP>
-      </li>
-      <li Class="Talented.JobExperienceTypeDef">
-        <SkillDef>AttackMelee</SkillDef>
-        <baseXP>19</baseXP>
-      </li>
-      <li Class="Talented.JobExperienceTypeDef">
-        <SkillDef>AttackStatic</SkillDef>
-        <baseXP>15</baseXP>
-      </li>
-      <li Class="Talented.JobExperienceTypeDef">
-        <SkillDef>Hunt</SkillDef>
-        <baseXP>14</baseXP>
-      </li>
-      <li Class="Talented.JobExperienceTypeDef">
-        <SkillDef>Goto</SkillDef>
-        <baseXP>3</baseXP>
-      </li>
-      <li Class="Talented.JobExperienceTypeDef">
-        <SkillDef>Wait_Combat</SkillDef>
-        <baseXP>5</baseXP>
-      </li>
-    </experienceTypes>
-    </experienceGainSettings>
+    <styleBarColor>(0.541, 0.169, 0.886)</styleBarColor>
+    <regenTicks>SerpentBreath_RegenTicks</regenTicks>
+    <regenStat>SerpentBreath_RegenAmount</regenStat>
+    <regenSpeedStat>SerpentBreath_RegenRate</regenSpeedStat>
+    <costMult>SerpentBreath_Cost</costMult>
+    <maxStat>SerpentBreath</maxStat>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <exhaustionHediff>SerpentBreathing_Fatigue</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>
@@ -81,7 +37,23 @@
         <applyOnGeneRemove>false</applyOnGeneRemove>
       </li>
       <li Class="DeathTimerExtension">
-        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <hediffsToWatch>
+          <li>BreathingMarkApply</li>
+          <li>BreathingMarkApplyMastery</li>
+          <li>BreathingMarkApplyTranscendence</li>
+          <li>BreathingMarkApplyTanjiro</li>
+          <li>BreathingMarkApplyTanjiroMastery</li>
+          <li>BreathingMarkApplyTanjiroTranscendence</li>
+          <li>BreathingMarkApplySanemi</li>
+          <li>BreathingMarkApplySanemiMastery</li>
+          <li>BreathingMarkApplySanemiTranscendence</li>
+          <li>BreathingMarkApplyMuichiro</li>
+          <li>BreathingMarkApplyMuichiroMastery</li>
+          <li>BreathingMarkApplyMuichiroTranscendence</li>
+          <li>BreathingMarkApplyGiyu</li>
+          <li>BreathingMarkApplyGiyuMastery</li>
+          <li>BreathingMarkApplyGiyuTranscendence</li>
+        </hediffsToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
         <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
         <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>
@@ -96,28 +68,18 @@
         <createCurseHediff>true</createCurseHediff>
         <activateOnGeneAdd>false</activateOnGeneAdd>
       </li>
+      <li Class="AnimeArsenal.BreathingProgressionExtension">
+        <killsRequiredPerLevel><li>5</li><li>15</li><li>30</li><li>60</li></killsRequiredPerLevel>
+        <demonKillsRequiredPerLevel><li>2</li><li>8</li><li>20</li><li>40</li></demonKillsRequiredPerLevel>
+        <levelUpMode>AnyPawn</levelUpMode>
+        <breathRestoredPerKill>10</breathRestoredPerKill>
+        <breathRestoredPerDemonKill>25</breathRestoredPerDemonKill>
+        <killsRequiredForSpecialization>30</killsRequiredForSpecialization>
+        <demonKillsRequiredForSpecialization>10</demonKillsRequiredForSpecialization>
+        <specializationUnlockMode>AnyPawn</specializationUnlockMode>
+        <unlockSpecializationsProgressively>false</unlockSpecializationsProgressively>
+        <abilityUnlocks />
+      </li>
     </modExtensions>
-    <maxStat>SerpentBreath</maxStat>
-    <biostatCpx>2</biostatCpx>
-    <biostatMet>1</biostatMet>
-    <resourceGizmoThresholds>
-      <li>0.25</li>
-      <li>0.5</li>
-      <li>0.75</li>
-    </resourceGizmoThresholds>
-    <displayCategory>BreathingTechnique</displayCategory>
-    <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(138, 43, 226)</barColor>
-    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <exhaustionPerTick>0.0004</exhaustionPerTick>
-    <exhaustionHediff>SerpentBreathing_Fatigue</exhaustionHediff>
-    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
-    <TabLabel>Talents</TabLabel>
-    <regenTicks>SerpentBreath_RegenTicks</regenTicks>
-    <regenStat>SerpentBreath_RegenAmount</regenStat>
-    <regenSpeedStat>SerpentBreath_RegenRate</regenSpeedStat>
-    <costMult>SerpentBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 </Defs>

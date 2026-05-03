@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef>
+    <defName>LoveBreathing_CatloveHazard_LOne</defName>
+    <label>love zone</label>
+    <description>A lingering trace of love breathing energy. Dangerous to stand in.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>3.5</drawSize>
+      <color>(200, 255, 185)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>120</durationTicks>
+        <radius>2.0</radius>
+        <damagePerTick>4</damagePerTick>
+        <damageDef>Love_Breathing_Damage</damageDef>
+        <armorPen>0.10</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LoveBreathing_CatloveHazard_LTwo</defName>
+    <label>love zone</label>
+    <description>A lingering trace of love breathing energy. Dangerous to stand in.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>4.0</drawSize>
+      <color>(220, 255, 170)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>150</durationTicks>
+        <radius>2.2</radius>
+        <damagePerTick>5</damagePerTick>
+        <damageDef>Love_Breathing_Damage</damageDef>
+        <armorPen>0.12</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LoveBreathing_CatloveHazard_LThree</defName>
+    <label>love zone</label>
+    <description>A lingering trace of love breathing energy. Dangerous to stand in.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>4.5</drawSize>
+      <color>(255, 240, 150)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>180</durationTicks>
+        <radius>2.5</radius>
+        <damagePerTick>7</damagePerTick>
+        <damageDef>Love_Breathing_Damage</damageDef>
+        <armorPen>0.16</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LoveBreathing_CatloveHazard_LFour</defName>
+    <label>love zone</label>
+    <description>A lingering trace of love breathing energy. Dangerous to stand in.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>5.0</drawSize>
+      <color>(255, 190, 175)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>200</durationTicks>
+        <radius>2.8</radius>
+        <damagePerTick>9</damagePerTick>
+        <damageDef>Love_Breathing_Damage</damageDef>
+        <armorPen>0.20</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LoveBreathing_CatloveHazard_LFive</defName>
+    <label>love zone</label>
+    <description>A lingering trace of love breathing energy. Dangerous to stand in.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>5.5</drawSize>
+      <color>(255, 140, 200)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>240</durationTicks>
+        <radius>3.2</radius>
+        <damagePerTick>11</damagePerTick>
+        <damageDef>Love_Breathing_Damage</damageDef>
+        <armorPen>0.26</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LoveBreathing_CatloveHazard_LSix</defName>
+    <label>love zone</label>
+    <description>A lingering trace of love breathing energy. Dangerous to stand in.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>6.5</drawSize>
+      <color>(255, 80, 190)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>300</durationTicks>
+        <radius>3.6</radius>
+        <damagePerTick>14</damagePerTick>
+        <damageDef>Love_Breathing_Damage</damageDef>
+        <armorPen>0.32</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

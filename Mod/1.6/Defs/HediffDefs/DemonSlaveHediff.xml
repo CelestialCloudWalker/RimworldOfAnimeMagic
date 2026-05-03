@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
   <HediffDef>
     <defName>DemonWorkSlaveHediff</defName>
-    <label>Demon work slave</label>
-    <description>This pawn has been turned into a Demon work slave. They have no needs, no thoughts, and are focused solely on commands.</description>
+    <label>demon work slave</label>
+    <description>This pawn has been turned into a demon work slave. They have no needs, no thoughts, and are focused solely on commands. If their master strays too far or dies, something primal awakens.</description>
     <hediffClass>AnimeArsenal.Hediff_DemonWorkSlave</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
     <initialSeverity>0.1</initialSeverity>
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
     <comps>
-      <li Class="AnimeArsenal.HediffCompProperties_DemonWorkSlaveEffect" />
+      <li Class="AnimeArsenal.HediffCompProperties_DemonWorkSlaveEffect">
+        <regenerationTicks>250</regenerationTicks>
+        <checkMasterDistance>true</checkMasterDistance>
+        <masterMaxDistance>30</masterMaxDistance>
+        <ticksBeforeBerserkWithoutMaster>2000</ticksBeforeBerserkWithoutMaster>
+        <goFeralOnMasterDeath>true</goFeralOnMasterDeath>
+        <goFeralOnHediffExpired>true</goFeralOnHediffExpired>
+        <applyColorTint>false</applyColorTint>
+        <slaveColor>(0.2, 0.7, 0.2, 1.0)</slaveColor>
+        <masterDeathMessage>{0} has gone feral — their master is dead.</masterDeathMessage>
+        <masterTooFarMessage>{0} is losing their bond with their master.</masterTooFarMessage>
+        <berserkMessage>{0} has broken free and gone berserk!</berserkMessage>
+      </li>
+
       <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
         <overrideThinkTreeDef>DemonWorkSlave</overrideThinkTreeDef>
       </li>
     </comps>
+
     <stages>
       <li>
         <capMods>
@@ -27,4 +42,5 @@
       </li>
     </stages>
   </HediffDef>
+
 </Defs>

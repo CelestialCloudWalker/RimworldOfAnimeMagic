@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Sound_Breathing_Disperse</defName>
     <label>Sound Breathing: Disperse</label>
-    <category>SoundBreathing_Ability_Catergory</category>
     <description>A technique that creates cutting attacks around a targeted enemy.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
     <targetRequired>true</targetRequired>
-
-
-    <requiredGeneDefName>Gene_SoundBreath</requiredGeneDefName>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <resourceCost>25</resourceCost>
     <baseExperienceGain>30</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -28,10 +28,9 @@
       </targetParams>
     </verbProperties>
 
-
     <comps>
       <li Class="EMF.CompProperties_AbilityDamageInRadius">
-        <radius>5</radius>
+        <radius>4</radius>
         <damageParms>
           <damageAmount>9~13</damageAmount>
           <damageDef>Sound_Breathing_Damage</damageDef>
@@ -46,20 +45,18 @@
     </comps>
 
     <levels>
-
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
         <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
-
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>180</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.4</resourceCostMultiplier>
         <rangeMultiplier>1.1</rangeMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Radius increased.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
             <radius>5</radius>
@@ -72,24 +69,23 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef></explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_SoundHit2</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
-
 
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>400</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>
         <rangeMultiplier>1.25</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Radius and range increased.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
             <radius>6</radius>
             <damageParms>
-              <damageAmount>16~22</damageAmount>
+              <damageAmount>15~21</damageAmount>
               <damageDef>Sound_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -97,24 +93,23 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef></explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_SoundHit2</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
-
 
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>650</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>2.2</resourceCostMultiplier>
         <rangeMultiplier>2</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Range doubled.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
             <radius>6</radius>
             <damageParms>
-              <damageAmount>20~28</damageAmount>
+              <damageAmount>19~26</damageAmount>
               <damageDef>Sound_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -122,24 +117,23 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef></explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_SoundHit2</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
-
 
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>950</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>2.2</resourceCostMultiplier>
         <rangeMultiplier>2</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Damage heightened.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>7.5</radius>
+            <radius>6</radius>
             <damageParms>
-              <damageAmount>25~31</damageAmount>
+              <damageAmount>23~31</damageAmount>
               <damageDef>Sound_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -147,24 +141,23 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef></explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_SoundHit2</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
-
 
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>1350</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
         <resourceCostMultiplier>2.2</resourceCostMultiplier>
         <rangeMultiplier>2</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. Devastates all enemies around the target in a wide arc of beast-style cuts. Max Level.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>9</radius>
+            <radius>7</radius>
             <damageParms>
-              <damageAmount>31~43</damageAmount>
+              <damageAmount>28~37</damageAmount>
               <damageDef>Sound_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -172,10 +165,10 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef></explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_SoundHit2</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

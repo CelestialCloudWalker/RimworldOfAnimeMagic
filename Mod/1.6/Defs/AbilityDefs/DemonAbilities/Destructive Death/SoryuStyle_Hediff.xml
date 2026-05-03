@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>Soryu_Style_Hedif_1</defName>
+    <label>Soryu Style</label>
+    <description>Akaza's fighting spirit — melee strikes carry greater force and precision.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.4, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <label>active</label>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>0.06</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.08</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Soryu_Style_Hedif_2</defName>
+    <label>Soryu Style</label>
+    <description>Akaza's fighting spirit — sharpened further.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.4, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <label>active</label>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>0.08</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.10</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Soryu_Style_Hedif_3</defName>
+    <label>Soryu Style</label>
+    <description>Akaza's fighting spirit — a master's precision.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.4, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <label>active</label>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>0.10</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.12</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Soryu_Style_Hedif_4</defName>
+    <label>Soryu Style</label>
+    <description>Akaza's fighting spirit — relentless pressure.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.4, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <label>active</label>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>0.12</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Soryu_Style_Hedif_5</defName>
+    <label>Soryu Style</label>
+    <description>Akaza's fighting spirit — overwhelming force.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.4, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <label>active</label>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>0.14</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.18</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Soryu_Style_Hedif_6</defName>
+    <label>Soryu Style</label>
+    <description>Akaza's fighting spirit — perfected.</description>
+    <displayWound>false</displayWound>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.4, 0.2)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <label>active</label>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>0.16</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.22</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_FrostSweep</defName>
+    <label>Frost Sweep</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Doma swings his fans in a wide arc, spraying a cone of frozen air that chills enemies and fills the area with Crystalized Air gas.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+        <gasDef>DS_CrystalizedAir_Gas</gasDef>
+        <gasLifetimeTicks>
+          <min>800</min>
+          <max>1200</max>
+        </gasLifetimeTicks>
+        <angle>45</angle>
+        <range>8</range>
+        <numCellsToHit>20</numCellsToHit>
+        <gasSpawnChance>0.8</gasSpawnChance>
+        <damageDef>DS_CrystalizedAir</damageDef>
+        <damageAmount>
+          <min>1</min>
+          <max>3</max>
+        </damageAmount>
+        <damageIntervalTicks>120</damageIntervalTicks>
+        <affectHostile>true</affectHostile>
+        <affectFriendly>false</affectFriendly>
+        <affectAnimals>true</affectAnimals>
+        <affectMechanoids>false</affectMechanoids>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>8</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>5</rectWidth>
+        <rectLength>8</rectLength>
+        <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>Hypothermia</hediffDef>
+        <severityAdjustment>0.06</severityAdjustment>
+        <effectRadius>8</effectRadius>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Cone AoE: 8 Blunt damage, Hypothermia +0.06, and Crystalized Air gas in a 45° forward cone. Range 8.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.91</cooldownMultiplier>
+        <resourceCostMultiplier>1.05</resourceCostMultiplier>
+        <description>Range extended to 9. 10 Blunt damage, Hypothermia +0.06, Crystalized Air gas in a 45° cone.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks>
+              <min>800</min>
+              <max>1200</max>
+            </gasLifetimeTicks>
+            <angle>45</angle>
+            <range>9</range>
+            <numCellsToHit>22</numCellsToHit>
+            <gasSpawnChance>0.8</gasSpawnChance>
+            <damageDef>DS_CrystalizedAir</damageDef>
+            <damageAmount>
+              <min>1</min>
+              <max>3</max>
+            </damageAmount>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>10</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>9</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>Cone widens to 60°. 13 Blunt damage, Hypothermia +0.06, Crystalized Air gas in a wider forward arc. Range 9.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks>
+              <min>800</min>
+              <max>1200</max>
+            </gasLifetimeTicks>
+            <angle>60</angle>
+            <range>9</range>
+            <numCellsToHit>26</numCellsToHit>
+            <gasSpawnChance>0.8</gasSpawnChance>
+            <damageDef>DS_CrystalizedAir</damageDef>
+            <damageAmount>
+              <min>1</min>
+              <max>3</max>
+            </damageAmount>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>13</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>7</rectWidth>
+            <rectLength>9</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.73</cooldownMultiplier>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <description>Hypothermia buildup increased. 17 Blunt damage, Hypothermia +0.072, Crystalized Air gas in a 60° cone. Range 9.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks>
+              <min>800</min>
+              <max>1200</max>
+            </gasLifetimeTicks>
+            <angle>60</angle>
+            <range>9</range>
+            <numCellsToHit>26</numCellsToHit>
+            <gasSpawnChance>0.8</gasSpawnChance>
+            <damageDef>DS_CrystalizedAir</damageDef>
+            <damageAmount>
+              <min>1</min>
+              <max>3</max>
+            </damageAmount>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>17</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>7</rectWidth>
+            <rectLength>9</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.072</severityAdjustment>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.64</cooldownMultiplier>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <description>Gas cloud settles into a denser, consistent form. 22 Blunt damage, Hypothermia +0.072, Crystalized Air lingers for exactly 600 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks>
+              <min>600</min>
+              <max>600</max>
+            </gasLifetimeTicks>
+            <angle>60</angle>
+            <range>9</range>
+            <numCellsToHit>26</numCellsToHit>
+            <gasSpawnChance>0.85</gasSpawnChance>
+            <damageDef>DS_CrystalizedAir</damageDef>
+            <damageAmount>
+              <min>1</min>
+              <max>3</max>
+            </damageAmount>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>22</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>7</rectWidth>
+            <rectLength>9</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.072</severityAdjustment>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.55</cooldownMultiplier>
+        <resourceCostMultiplier>1.50</resourceCostMultiplier>
+        <description>Perfected. The frozen storm extends further. 28 Blunt damage, Hypothermia +0.072, Crystalized Air gas covers a 60° cone at range 10. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks>
+              <min>600</min>
+              <max>600</max>
+            </gasLifetimeTicks>
+            <angle>60</angle>
+            <range>10</range>
+            <numCellsToHit>32</numCellsToHit>
+            <gasSpawnChance>0.85</gasSpawnChance>
+            <damageDef>DS_CrystalizedAir</damageDef>
+            <damageAmount>
+              <min>1</min>
+              <max>3</max>
+            </damageAmount>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>28</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>7</rectWidth>
+            <rectLength>10</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.072</severityAdjustment>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

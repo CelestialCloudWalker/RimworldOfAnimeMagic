@@ -1,5 +1,6 @@
-﻿using RimWorld;
-using Talented;
+﻿using EMF;
+using RimWorld;
+using System.Linq;
 using Verse;
 
 namespace AnimeArsenal
@@ -21,132 +22,158 @@ namespace AnimeArsenal
         private int resourceCostTimer = 0;
         private bool ranOutOfResources = false;
 
+        private Effecter _ambientEffecter;
+        private Effecter _exhaustionEffecter;
+
         private Gene_BasicResource _ResourceGene;
         private Gene_BasicResource ResourceGene
         {
             get
             {
-                if (_ResourceGene != null)
-                    return _ResourceGene;
-
+                if (_ResourceGene != null) return _ResourceGene;
                 if (Props.enchantDef.resourceGene != null)
                 {
                     _ResourceGene = (Gene_BasicResource)parent.pawn.genes.GetGene(Props.enchantDef.resourceGene);
-                    if (_ResourceGene != null)
-                        return _ResourceGene;
+                    if (_ResourceGene != null) return _ResourceGene;
                 }
-
                 _ResourceGene = parent.pawn.genes.GetFirstGeneOfType<Gene_BasicResource>();
                 return _ResourceGene;
             }
         }
 
-        private BreathingTechniqueGene BreathingTechniqueGene => this.parent.pawn.genes.GetFirstGeneOfType<BreathingTechniqueGene>();
+        private BreathingTechniqueGene BreathingTechniqueGene =>
+            parent.pawn.genes.GenesListForReading
+                .OfType<BreathingTechniqueGene>()
+                .FirstOrDefault(g => !g.IsStyleGene);
+
+        private void ForceOff()
+        {
+            if (!IsActive) return;
+            IsActive = false;
+            OnToggleOff();
+        }
 
         public override void OnToggleOff()
         {
-            RemoveHediff(this.parent.pawn);
+            RemoveHediff(parent.pawn);
+            SpawnOneShot(Props.enchantDef.deactivateEffecter);
+            CleanupEffecter(ref _ambientEffecter);
+            CleanupEffecter(ref _exhaustionEffecter);
+            BreathingTechniqueGene?.StartLingerEffect();
         }
 
         public override void OnToggleOn()
         {
             ranOutOfResources = false;
-            ApplyHediff(this.parent.pawn);
+            ApplyHediff(parent.pawn);
+            SpawnOneShot(Props.enchantDef.activateEffecter);
         }
 
         public override void CompTick()
         {
             base.CompTick();
 
-            if (ranOutOfResources)
-            {
-                return;
-            }
-
             if (IsActive)
             {
-                resourceCostTimer += 1;
+                resourceCostTimer++;
 
                 if (resourceCostTimer >= Props.enchantDef.ticksBetweenCost)
                 {
+                    resourceCostTimer = 0;
+
                     if (ResourceGene != null && Props.enchantDef.resourceCostPerTick > 0)
                     {
                         if (!ResourceGene.Has(Props.enchantDef.resourceCostPerTick))
                         {
                             ranOutOfResources = true;
-                            OnToggleOff();
-                            resourceCostTimer = 0;
+                            ForceOff();
                             return;
                         }
-
                         ResourceGene.Consume(Props.enchantDef.resourceCostPerTick);
                     }
-
-                    resourceCostTimer = 0;
                 }
 
-                if (BreathingTechniqueGene != null)
+                BreathingTechniqueGene?.TickActiveExhaustion();
+
+                bool isExhausted = BreathingTechniqueGene?.isExhausted ?? false;
+                if (isExhausted)
                 {
-                    BreathingTechniqueGene.TickActiveExhaustion();
+                    CleanupEffecter(ref _ambientEffecter);
+                    MaintainEffecter(ref _exhaustionEffecter, Props.enchantDef.exhaustionEffecter);
+                }
+                else
+                {
+                    CleanupEffecter(ref _exhaustionEffecter);
+                    MaintainEffecter(ref _ambientEffecter, Props.enchantDef.ambientEffecter);
                 }
             }
             else
             {
-                if (BreathingTechniqueGene != null)
+                CleanupEffecter(ref _ambientEffecter);
+                CleanupEffecter(ref _exhaustionEffecter);
+
+                var btGene = BreathingTechniqueGene;
+                if (btGene != null)
                 {
-                    BreathingTechniqueGene.TickExhausted();
-                    BreathingTechniqueGene.ReduceExhaustionBuildup();
+                    btGene.TickExhausted();
+                    btGene.TickLinger();
+                    btGene.ReduceExhaustionBuildup();
+                }
+
+                if (ranOutOfResources && ResourceGene != null
+                    && ResourceGene.Has(Props.enchantDef.resourceCostPerTick))
+                {
+                    ranOutOfResources = false;
                 }
             }
         }
 
+        private void MaintainEffecter(ref Effecter effecter, EffecterDef def)
+        {
+            if (def == null) return;
+            if (effecter == null)
+                effecter = def.Spawn();
+            effecter.EffectTick(parent.pawn, parent.pawn);
+        }
+
+        private void CleanupEffecter(ref Effecter effecter)
+        {
+            effecter?.Cleanup();
+            effecter = null;
+        }
+
+        private void SpawnOneShot(EffecterDef def)
+        {
+            if (def == null) return;
+            def.Spawn(parent.pawn, parent.pawn.Map).Cleanup();
+        }
+
         public override bool CanStart()
         {
-            if (Props.enchantDef == null)
-            {
-                return false;
-            }
-
-            if (ranOutOfResources)
-            {
-                return false;
-            }
+            if (Props.enchantDef == null) return false;
+            if (ranOutOfResources) return false;
 
             if (ResourceGene != null)
-            {
-                return Props.enchantDef.resourceCostPerTick > 0 && ResourceGene.Has(GetChannelCost());
-            }
+                return Props.enchantDef.resourceCostPerTick > 0
+                    && ResourceGene.Has(Props.enchantDef.resourceCostPerTick);
+
             return true;
         }
 
-        private float GetChannelCost()
+        private void ApplyHediff(Pawn pawn)
         {
-            if (Props.enchantDef == null)
-                return 5f;
-
-            float baseCost = Props.enchantDef.resourceCostPerTick;
-
-            if (BreathingTechniqueGene != null && BreathingTechniqueGene.isExhausted)
-                return baseCost * 2f;
-
-            return baseCost;
-        }
-
-        private void ApplyHediff(Pawn Pawn)
-        {
-            Pawn.health.GetOrAddHediff(Props.enchantDef.enchantHediff);
-            Messages.Message("Added " + Props.enchantDef.enchantHediff.label + " to " + Pawn.Label,
+            pawn.health.GetOrAddHediff(Props.enchantDef.enchantHediff);
+            Messages.Message("Added " + Props.enchantDef.enchantHediff.label + " to " + pawn.Label,
                 MessageTypeDefOf.NeutralEvent);
         }
 
-        private void RemoveHediff(Pawn Pawn)
+        private void RemoveHediff(Pawn pawn)
         {
-            Hediff existingHediff = Pawn.health.hediffSet.GetFirstHediffOfDef(Props.enchantDef.enchantHediff);
-
-            if (existingHediff != null)
+            Hediff existing = pawn.health.hediffSet.GetFirstHediffOfDef(Props.enchantDef.enchantHediff);
+            if (existing != null)
             {
-                Pawn.health.RemoveHediff(existingHediff);
-                Messages.Message("Removed " + Props.enchantDef.enchantHediff.label + " from " + Pawn.Label,
+                pawn.health.RemoveHediff(existing);
+                Messages.Message("Removed " + Props.enchantDef.enchantHediff.label + " from " + pawn.Label,
                     MessageTypeDefOf.NeutralEvent);
             }
         }
@@ -156,6 +183,7 @@ namespace AnimeArsenal
             base.PostExposeData();
             Scribe_Values.Look(ref resourceCostTimer, "resourceCostTimer", 0);
             Scribe_Values.Look(ref ranOutOfResources, "ranOutOfResources", false);
+            Scribe_Values.Look(ref IsActive, "isActive", false);
         }
     }
 }

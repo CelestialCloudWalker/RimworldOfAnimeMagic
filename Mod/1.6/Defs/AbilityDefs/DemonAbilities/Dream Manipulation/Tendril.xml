@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>DS_EnmuSleepTouch</defName>
+    <label>dream touch</label>
+    <labelNoun>a dream touch</labelNoun>
+    <description>Sleep-inducing demon art seeps into the victim's mind.</description>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600</disappearsAfterTicks>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0</painPerSeverity>
+      <bleedRate>0</bleedRate>
+      <canMerge>true</canMerge>
+    </injuryProps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.05</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <DamageDef>
+    <defName>DS_EnmuSleepTouch_Damage</defName>
+    <label>dream touch</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <hediff>DS_EnmuSleepTouch</hediff>
+    <externalViolence>true</externalViolence>
+    <armorCategory>Sharp</armorCategory>
+    <impactSoundType>Blunt</impactSoundType>
+    <harmsHealth>true</harmsHealth>
+  </DamageDef>
+
+  <HediffDef>
+    <defName>DS_EnmuTentacle_Lifespan</defName>
+    <label>flesh tendril lifespan</label>
+    <description>This tendril will dissolve after its duration ends.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.15, 0.25)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_AddHediffAOEPerInterval">
+        <hediff>DS_EnmuSleepTouch</hediff>
+        <radius>8</radius>
+        <intervalTicks>120</intervalTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <ThingDef ParentName="BaseFleshbeast">
+    <defName>DS_EnmuTentacle_Entity</defName>
+    <label>flesh eye tendril</label>
+    <description>A writhing tendril of flesh conjured by Enmu's demon blood art. It pulses with dream energy, dragging nearby victims into forced unconsciousness.</description>
+    <statBases>
+      <MoveSpeed>0.5</MoveSpeed>
+      <ToxicResistance>1.0</ToxicResistance>
+    </statBases>
+    <race>
+      <body>Fingerspike</body>
+      <lifeExpectancy>1</lifeExpectancy>
+      <hasGenders>false</hasGenders>
+      <bloodDef>Filth_Blood</bloodDef>
+      <trainability>None</trainability>
+      <deathAction>
+        <workerClass>DeathActionWorker_SmallExplosion</workerClass>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>tendril lash</label>
+        <labelNoLocation>tendril</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <extraMeleeDamages>
+          <li>
+            <def>DS_EnmuSleepTouch_Damage</def>
+            <amount>1</amount>
+          </li>
+        </extraMeleeDamages>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  
+
+</Defs>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Blood_Demon_Arts_Demons_Embrace</defName>
     <label>Blood Demon Arts: Demon's Embrace</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
@@ -13,14 +13,11 @@
     <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
     <hostile>true</hostile>
     <aiCanUse>true</aiCanUse>
-    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
     <resourceCost>50</resourceCost>
     <baseExperienceGain>15</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
-    <cooldownTicksRange>
-      <min>300</min>
-      <max>300</max>
-    </cooldownTicksRange>
+    <cooldownTicksRange>300</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <drawAimPie>True</drawAimPie>
@@ -46,10 +43,6 @@
         <experienceRequired>60</experienceRequired>
         <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.96</resourceCostMultiplier>
-        <verbProperties>
-          <range>6</range>
-          <warmupTime>0.95</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
         </levelComps>
@@ -59,10 +52,6 @@
         <experienceRequired>140</experienceRequired>
         <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.92</resourceCostMultiplier>
-        <verbProperties>
-          <range>7</range>
-          <warmupTime>0.9</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
         </levelComps>
@@ -72,10 +61,6 @@
         <experienceRequired>260</experienceRequired>
         <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.88</resourceCostMultiplier>
-        <verbProperties>
-          <range>8</range>
-          <warmupTime>0.85</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
         </levelComps>
@@ -85,10 +70,6 @@
         <experienceRequired>420</experienceRequired>
         <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.84</resourceCostMultiplier>
-        <verbProperties>
-          <range>9</range>
-          <warmupTime>0.8</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
         </levelComps>
@@ -98,14 +79,10 @@
         <experienceRequired>650</experienceRequired>
         <description>A blood demon art that turns a target into a demon.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
-        <verbProperties>
-          <range>11</range>
-          <warmupTime>0.75</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave" />
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

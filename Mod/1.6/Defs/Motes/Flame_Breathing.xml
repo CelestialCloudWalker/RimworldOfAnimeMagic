@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_FlameEmber</defName>
+    <graphicData>
+      <texPath>Things/Mote/SparkThrown</texPath>
+      <color>(1.0, 0.5, 0.1, 1.0)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <fadeInTime>0.02</fadeInTime>
+    <solidTime>0.06</solidTime>
+    <fadeOutTime>0.22</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Static">
+    <defName>RimKetsu_Fleck_FlameExplosionFlash</defName>
+    <graphicData>
+      <texPath>Things/Mote/ExplosionFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(1.0, 0.4, 0.05, 0.85)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.15</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_FlameSmokeLight</defName>
+    <graphicData>
+      <texPath>Things/Mote/DustPuff</texPath>
+      <shaderType>Transparent</shaderType>
+      <color>(0.3, 0.25, 0.22, 0.5)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverheadLow</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>0.5</solidTime>
+    <fadeOutTime>1.3</fadeOutTime>
+  </FleckDef>
+
+  <ThingDef ParentName="RimKetsu_MoteAttachedBase">
+    <defName>RimKetsu_Mote_FlameBreathingAura</defName>
+    <mote>
+      <fadeInTime>0.3</fadeInTime>
+      <solidTime>999999</solidTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_PawnBodySilhouette</graphicClass>
+      <color>(1.0, 0.35, 0.05, 0.75)</color>
+      <shaderType>MoteMultiplyAddScroll</shaderType>
+      <texPath>Things/Mote/Transparent</texPath>
+      <shaderParameters>
+        <_MultiplyTexA>/Things/Mote/Cloudy_B</_MultiplyTexA>
+        <_MultiplyTexB>/Things/Mote/Cloudy_C</_MultiplyTexB>
+        <_DetailTex>/Things/Mote/Speckles</_DetailTex>
+        <_detailIntensity>1.5</_detailIntensity>
+        <_texAScale>0.45</_texAScale>
+        <_texBScale>0.35</_texBScale>
+        <_DetailScale>1.3</_DetailScale>
+        <_texAScrollSpeed>(0, 0.25, 0)</_texAScrollSpeed>
+        <_texBScrollSpeed>(0.2, 0, 0)</_texBScrollSpeed>
+        <_detailScrollSpeed>(0.2, 0.2, 0)</_detailScrollSpeed>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FlameSlashBurst</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.04</fadeInTime>
+      <solidTime>0.08</solidTime>
+      <fadeOutTime>0.4</fadeOutTime>
+      <growthRate>8.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/RadiationDistortion_A</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <color>(1.0, 0.4, 0.0, 1.0)</color>
+      <shaderType>MoteMultiplyAddCircularGrayscale</shaderType>
+      <shaderParameters>
+        <_MultiplyTex>/Things/Mote/RadiationDistortion_B</_MultiplyTex>
+        <_texAScale>0.3</_texAScale>
+        <_texBScale>0.3</_texBScale>
+        <_texAScrollSpeed>2.5</_texAScrollSpeed>
+        <_texBScrollSpeed>-1.5</_texBScrollSpeed>
+        <_Intensity>13</_Intensity>
+      </shaderParameters>
+      <drawSize>(2.0, 2.0)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FlamePillar</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <solidTime>0.5</solidTime>
+      <fadeOutTime>0.6</fadeOutTime>
+      <growthRate>15.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/PowerBeam</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(1.0, 0.45, 0.0, 1.0)</color>
+      <drawSize>(1.0, 4.0)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_EmberSpark</defName>
+    <thingClass>MoteThrown</thingClass>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>
+      <fadeInTime>0.03</fadeInTime>
+      <solidTime>0.06</solidTime>
+      <fadeOutTime>0.22</fadeOutTime>
+      <collide>true</collide>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/SparkThrown</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(1.0, 0.55, 0.1, 1.0)</color>
+    </graphicData>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_FlameBreathingAmbient</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlameEmber</fleckDef>
+        <chancePerTick>0.1</chancePerTick>
+        <positionRadius>0.35</positionRadius>
+        <speed>0.6~1.8</speed>
+        <scale>0.1~0.2</scale>
+        <rotationRate>-180~180</rotationRate>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlameSmokeLight</fleckDef>
+        <chancePerTick>0.025</chancePerTick>
+        <positionRadius>0.2</positionRadius>
+        <speed>0.1~0.3</speed>
+        <scale>0.4~0.7</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_Exhaustion_Flame</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlameSmokeLight</fleckDef>
+        <chancePerTick>0.05</chancePerTick>
+        <positionRadius>0.25</positionRadius>
+        <speed>0.05~0.15</speed>
+        <scale>0.4~0.7</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlameEmber</fleckDef>
+        <chancePerTick>0.02</chancePerTick>
+        <positionRadius>0.2</positionRadius>
+        <speed>0.1~0.3</speed>
+        <scale>0.06~0.1</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_EnchantAmbient_Flame</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlameEmber</fleckDef>
+        <chancePerTick>0.25</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>1.0~2.5</speed>
+        <scale>0.16~0.32</scale>
+        <rotationRate>-180~180</rotationRate>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlameSmokeLight</fleckDef>
+        <chancePerTick>0.09</chancePerTick>
+        <positionRadius>0.25</positionRadius>
+        <speed>0.2~0.5</speed>
+        <scale>0.7~1.2</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FlameExplosionFlash</fleckDef>
+        <chancePerTick>0.03</chancePerTick>
+        <positionRadius>0.2</positionRadius>
+        <scale>0.4~0.9</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_FlameBreathingHit</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.15</positionRadius>
+        <moteDef>RimKetsu_Mote_EmberSpark</moteDef>
+        <burstCount>8~14</burstCount>
+        <speed>3.0~6.5</speed>
+        <scale>0.15~0.28</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FlameSlashBurst</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.7~1.1</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.35</positionRadius>
+        <fleckDef>AirPuff</fleckDef>
+        <burstCount>4~6</burstCount>
+        <speed>0.4~0.9</speed>
+        <scale>0.6~1.0</scale>
+        <color>(1.0, 0.4, 0.05, 0.65)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_FlamePillarActivate</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FlamePillar</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>1.0~1.0</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.5</positionRadius>
+        <moteDef>RimKetsu_Mote_EmberSpark</moteDef>
+        <burstCount>20~30</burstCount>
+        <speed>4.0~9.0</speed>
+        <scale>0.1~0.25</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.3</positionRadius>
+        <fleckDef>ExplosionFlash</fleckDef>
+        <burstCount>1~1</burstCount>
+        <scale>3.0~4.5</scale>
+        <color>(1.0, 0.5, 0.05, 0.8)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

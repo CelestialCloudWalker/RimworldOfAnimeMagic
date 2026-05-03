@@ -15,5 +15,46 @@
     </stages>
   </ThoughtDef>
 
+  <ThoughtDef>
+    <defName>DemonHungry_Mild</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>999</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>hungry</label>
+        <description>I should find someone to eat soon.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DemonHungry_Severe</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>999</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>severely hungry</label>
+        <description>I need to feed NOW. The hunger is overwhelming.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DemonHungry_Ravenous</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>999</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>ravenous</label>
+        <description>I'm losing control... must feed... can barely think straight...</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 
 </Defs>

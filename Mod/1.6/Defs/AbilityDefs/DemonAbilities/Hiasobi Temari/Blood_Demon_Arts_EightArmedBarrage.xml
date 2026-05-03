@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Susamaru_EightArmedBarrage</defName>
+    <label>BDA: Eight-Armed Barrage</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Susamaru sprouts additional arms and simultaneously launches temari balls in every direction. The impact devastates all nearby enemies, and an animated ball is left behind to continue terrorizing the battlefield.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>4500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>35</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.7</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>18 Blunt AoE 7x7. Summons temari ball (HP 1, pulses 10 Blunt every 150t for 60s).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>18</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>7</rectWidth>
+            <rectLength>7</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_SusamaruBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_SusamaruBall_Barrage_Lifespan_L1</lifespanHediff>
+            <targetKind>DS_SusamaruBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.911</cooldownMultiplier>
+        <resourceCostMultiplier>1.057</resourceCostMultiplier>
+        <description>22 Blunt AoE 7x7. Ball L2 (12 Blunt per pulse).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>22</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>7</rectWidth>
+            <rectLength>7</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_SusamaruBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_SusamaruBall_Barrage_Lifespan_L2</lifespanHediff>
+            <targetKind>DS_SusamaruBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.822</cooldownMultiplier>
+        <resourceCostMultiplier>1.114</resourceCostMultiplier>
+        <description>28 Blunt AoE 7x7. Ball pulses faster (130t interval), 16 Blunt.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>28</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>7</rectWidth>
+            <rectLength>7</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_SusamaruBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_SusamaruBall_Barrage_Lifespan_L3</lifespanHediff>
+            <targetKind>DS_SusamaruBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.733</cooldownMultiplier>
+        <resourceCostMultiplier>1.200</resourceCostMultiplier>
+        <description>34 Blunt AoE 8x8 + secondary 16 Blunt radial burst r4. Ball 18 Blunt/110t, 70s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>34</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>8</rectWidth>
+            <rectLength>8</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>16</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>4</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_SusamaruBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_SusamaruBall_Barrage_Lifespan_L4</lifespanHediff>
+            <targetKind>DS_SusamaruBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.644</cooldownMultiplier>
+        <resourceCostMultiplier>1.314</resourceCostMultiplier>
+        <description>40 Blunt AoE 8x8 + 20 Blunt burst r4. Ball 22 Blunt/100t, 80s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>40</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>8</rectWidth>
+            <rectLength>8</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>20</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>4</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_SusamaruBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_SusamaruBall_Barrage_Lifespan_L5</lifespanHediff>
+            <targetKind>DS_SusamaruBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.556</cooldownMultiplier>
+        <resourceCostMultiplier>1.429</resourceCostMultiplier>
+        <description>Perfected. 48 Blunt AoE 8x8 + 28 Blunt burst r5. Ball 28 Blunt/90t, lasts 90s. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>48</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>8</rectWidth>
+            <rectLength>8</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>28</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>5</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_SusamaruBall_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityApplyLifespan">
+            <lifespanHediff>DS_SusamaruBall_Barrage_Lifespan_L6</lifespanHediff>
+            <targetKind>DS_SusamaruBall_Entity</targetKind>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

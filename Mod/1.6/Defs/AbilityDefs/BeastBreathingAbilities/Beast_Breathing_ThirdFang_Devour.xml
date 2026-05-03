@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Beast_Breathing_ThirdFang_Devour</defName>
+    <label>Beast Breathing: Third Fang — Devour</label>
+    <description>Both blades sweep horizontally in the same instant, aimed directly at the target's throat. The dual slash is meant to sever — two cuts that arrive as one, from opposite angles, with nowhere to dodge.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>550</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>420</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>24</resourceCost>
+    <baseExperienceGain>16</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3</range>
+      <warmupTime>0.35</warmupTime>
+      <noiseRadius>2</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Cleave">
+        <NumberOfCuts>2</NumberOfCuts>
+        <BaseDamage>20</BaseDamage>
+        <TicksBetweenCuts>1</TicksBetweenCuts>
+        <DamageDef>Beast_Breathing_Damage</DamageDef>
+        <radius>0.5</radius>
+        <maxTargets>1</maxTargets>
+        <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <damageType>Beast_Breathing_Damage</damageType>
+        <initialStrikeDamage>0</initialStrikeDamage>
+        <vitalOrganDamage>22</vitalOrganDamage>
+        <vitalOrganArmorPen>0.30</vitalOrganArmorPen>
+        <targetVitalOrgans>false</targetVitalOrgans>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>Head</li>
+        </targetBodyParts>
+        <vitalStrikeBaseChance>0.88</vitalStrikeBaseChance>
+        <vitalStrikeMinChance>0.60</vitalStrikeMinChance>
+        <vitalStrikeMaxChance>0.96</vitalStrikeMaxChance>
+        <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+        <showMissMessage>true</showMissMessage>
+        <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Two simultaneous slashes to the neck/head for 20 damage each (40 total), plus a 22-damage vital strike on the throat. High armor penetration.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>25 damage per slash (50 total). Vital strike rises to 28. Armor pen climbs.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>2</NumberOfCuts>
+            <BaseDamage>25</BaseDamage>
+            <TicksBetweenCuts>1</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>0</initialStrikeDamage>
+            <vitalOrganDamage>28</vitalOrganDamage>
+            <vitalOrganArmorPen>0.36</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.89</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.62</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.96</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>330</experienceRequired>
+        <resourceCostMultiplier>1.28</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>31 damage per slash (62 total). Vital strike hits for 35. Cooldown tightens.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>2</NumberOfCuts>
+            <BaseDamage>31</BaseDamage>
+            <TicksBetweenCuts>1</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>0</initialStrikeDamage>
+            <vitalOrganDamage>35</vitalOrganDamage>
+            <vitalOrganArmorPen>0.42</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.90</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.65</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.97</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>560</experienceRequired>
+        <resourceCostMultiplier>1.38</resourceCostMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>38 damage per slash (76 total). Vital strike hits for 43. The twin blades carve through armor cleanly.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>2</NumberOfCuts>
+            <BaseDamage>38</BaseDamage>
+            <TicksBetweenCuts>1</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>0</initialStrikeDamage>
+            <vitalOrganDamage>43</vitalOrganDamage>
+            <vitalOrganArmorPen>0.48</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.91</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.68</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.97</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>840</experienceRequired>
+        <resourceCostMultiplier>1.48</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>46 damage per slash (92 total). Vital strike hits for 53. The two blades arrive as a single sensation — unavoidable.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>2</NumberOfCuts>
+            <BaseDamage>46</BaseDamage>
+            <TicksBetweenCuts>1</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>0</initialStrikeDamage>
+            <vitalOrganDamage>53</vitalOrganDamage>
+            <vitalOrganArmorPen>0.54</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.93</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.70</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.98</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1220</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 55 damage per slash (110 total). Vital strike hits for 65 with massive armor penetration. Both blades find the throat — no armor survives it. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>2</NumberOfCuts>
+            <BaseDamage>55</BaseDamage>
+            <TicksBetweenCuts>1</TicksBetweenCuts>
+            <DamageDef>Beast_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_BeastHit2</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>0</initialStrikeDamage>
+            <vitalOrganDamage>65</vitalOrganDamage>
+            <vitalOrganArmorPen>0.62</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.95</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.73</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.99</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+
+
+</Defs>

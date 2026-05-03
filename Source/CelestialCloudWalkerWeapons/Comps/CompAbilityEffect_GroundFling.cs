@@ -151,7 +151,7 @@ namespace AnimeArsenal
 
                 if (Props.showMessages)
                 {
-                    Messages.Message($"{pawn.LabelShort} is whipped and flung from the ground!",
+                    Messages.Message(string.Format(Props.flingMessage, pawn.LabelShort),
                         pawn, MessageTypeDefOf.NeutralEvent);
                 }
             }
@@ -406,6 +406,7 @@ namespace AnimeArsenal
     public class CompProperties_AbilityEffect_GroundFling : CompProperties_AbilityEffect
     {
         public float effectRadius = 2.0f;
+        public string flingMessage = "{0} is whipped and flung from the ground!";
 
         public int maxTargets = 1;
         public bool affectCaster = false;

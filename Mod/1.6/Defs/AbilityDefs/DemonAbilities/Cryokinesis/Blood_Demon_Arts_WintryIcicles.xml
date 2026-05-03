@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_WintryIcicles</defName>
+    <label>Wintry Icicles</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Doma conjures a storm of frozen icicles that rain down across a wide area. The icicles fall randomly within the chosen zone — some beyond the caster's line of sight — piercing targets before the ice shatters.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.6</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_WintryIcicles">
+        <radius>6</radius>
+        <icicleCount>10</icicleCount>
+        <maxTargetsHit>-1</maxTargetsHit>
+        <damageAmount>4</damageAmount>
+        <damageDef>Blunt</damageDef>
+        <armorPen>0.15</armorPen>
+        <icicleMote>DS_Mote_Icicle</icicleMote>
+        <moteScale>1.2</moteScale>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>10 icicles rain down in a radius-6 area. Each deals 4 Blunt damage.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.907</cooldownMultiplier>
+        <resourceCostMultiplier>1.033</resourceCostMultiplier>
+        <description>12 icicles in a radius-7 area. Each deals 5 Blunt damage.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_WintryIcicles">
+            <radius>7</radius>
+            <icicleCount>12</icicleCount>
+            <maxTargetsHit>-1</maxTargetsHit>
+            <damageAmount>5</damageAmount>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.15</armorPen>
+            <icicleMote>DS_Mote_Icicle</icicleMote>
+            <moteScale>1.2</moteScale>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.813</cooldownMultiplier>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>15 icicles in a radius-7 area. Each deals 6 Blunt damage.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_WintryIcicles">
+            <radius>7</radius>
+            <icicleCount>15</icicleCount>
+            <maxTargetsHit>-1</maxTargetsHit>
+            <damageAmount>6</damageAmount>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.15</armorPen>
+            <icicleMote>DS_Mote_Icicle</icicleMote>
+            <moteScale>1.2</moteScale>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.72</cooldownMultiplier>
+        <resourceCostMultiplier>1.167</resourceCostMultiplier>
+        <description>19 icicles in a radius-7 area. Each deals 8 Blunt damage.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_WintryIcicles">
+            <radius>7</radius>
+            <icicleCount>19</icicleCount>
+            <maxTargetsHit>-1</maxTargetsHit>
+            <damageAmount>8</damageAmount>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.15</armorPen>
+            <icicleMote>DS_Mote_Icicle</icicleMote>
+            <moteScale>1.2</moteScale>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.627</cooldownMultiplier>
+        <resourceCostMultiplier>1.267</resourceCostMultiplier>
+        <description>24 icicles in a radius-7 area. Each deals 10 Blunt damage and applies Hypothermia +0.03 on impact.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_WintryIcicles">
+            <radius>7</radius>
+            <icicleCount>24</icicleCount>
+            <maxTargetsHit>-1</maxTargetsHit>
+            <damageAmount>10</damageAmount>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.15</armorPen>
+            <hediffOnHit>Hypothermia</hediffOnHit>
+            <hediffSeverity>0.03</hediffSeverity>
+            <icicleMote>DS_Mote_Icicle</icicleMote>
+            <moteScale>1.2</moteScale>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.533</cooldownMultiplier>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <description>Perfected. 30 icicles in a radius-8 area. Each deals 14 Blunt damage and applies Hypothermia +0.03 on impact. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_WintryIcicles">
+            <radius>8</radius>
+            <icicleCount>30</icicleCount>
+            <maxTargetsHit>-1</maxTargetsHit>
+            <damageAmount>14</damageAmount>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.15</armorPen>
+            <hediffOnHit>Hypothermia</hediffOnHit>
+            <hediffSeverity>0.03</hediffSeverity>
+            <icicleMote>DS_Mote_Icicle</icicleMote>
+            <moteScale>1.2</moteScale>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

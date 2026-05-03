@@ -4,79 +4,23 @@
     <defName>Gene_FrostBreath</defName>
     <label>Frost Breath</label>
     <prerequisite>Gene_BreathingPotential</prerequisite>
-    <resourceName>Frost Breath</resourceName>
     <description>Frost Breathing Gene.</description>
     <iconPath>UI/Icons/Genes/frost</iconPath>
     <resourceLabel>Frost Breath</resourceLabel>
     <resourceDescription>Current stored Breath.</resourceDescription>
-    <TalentTrees>
-      <li>Frost_BreathingStyleBlankTree</li>
-    </TalentTrees>
-    <experienceFormula>Basic_LinearXP</experienceFormula>
-    <experienceGainSettings>
-      <experienceTypes>
-        <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>10</baseXP>
-          <damageFactor>0.18</damageFactor>
-        </li>
-        <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>14</baseXP>
-          <damageFactor>0.19</damageFactor>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Melee</SkillDef>
-          <baseXP>3.5</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Construction</SkillDef>
-          <baseXP>2</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Shooting</SkillDef>
-          <baseXP>1.5</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>AttackMelee</SkillDef>
-          <baseXP>16</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>AttackStatic</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>BuildSnowman</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>ClearSnow</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Wait_Combat</SkillDef>
-          <baseXP>5</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>FinishFrame</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>BuildRoof</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Repair</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Hunt</SkillDef>
-          <baseXP>12</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Flee</SkillDef>
-          <baseXP>6</baseXP>
-        </li>
-      </experienceTypes>
-    </experienceGainSettings>
+    <styleBarColor>(0.333, 0.420, 0.184)</styleBarColor>
+    <regenTicks>FrostBreath_RegenTicks</regenTicks>
+    <regenStat>FrostBreath_RegenAmount</regenStat>
+    <regenSpeedStat>FrostBreath_RegenRate</regenSpeedStat>
+    <costMult>FrostBreath_Cost</costMult>
+    <maxStat>FrostBreath</maxStat>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <exhaustionHediff>FrostBreathing_Fatigue</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
+
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>
@@ -93,7 +37,23 @@
         <applyOnGeneRemove>false</applyOnGeneRemove>
       </li>
       <li Class="DeathTimerExtension">
-        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <hediffsToWatch>
+          <li>BreathingMarkApply</li>
+          <li>BreathingMarkApplyMastery</li>
+          <li>BreathingMarkApplyTranscendence</li>
+          <li>BreathingMarkApplyTanjiro</li>
+          <li>BreathingMarkApplyTanjiroMastery</li>
+          <li>BreathingMarkApplyTanjiroTranscendence</li>
+          <li>BreathingMarkApplySanemi</li>
+          <li>BreathingMarkApplySanemiMastery</li>
+          <li>BreathingMarkApplySanemiTranscendence</li>
+          <li>BreathingMarkApplyMuichiro</li>
+          <li>BreathingMarkApplyMuichiroMastery</li>
+          <li>BreathingMarkApplyMuichiroTranscendence</li>
+          <li>BreathingMarkApplyGiyu</li>
+          <li>BreathingMarkApplyGiyuMastery</li>
+          <li>BreathingMarkApplyGiyuTranscendence</li>
+        </hediffsToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
         <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
         <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>
@@ -107,31 +67,20 @@
         <immediateDeathMaxDays>30</immediateDeathMaxDays>
         <createCurseHediff>true</createCurseHediff>
         <activateOnGeneAdd>false</activateOnGeneAdd>
+
+      </li>
+      <li Class="AnimeArsenal.BreathingProgressionExtension">
+        <killsRequiredPerLevel><li>5</li><li>15</li><li>30</li><li>60</li></killsRequiredPerLevel>
+        <demonKillsRequiredPerLevel><li>2</li><li>8</li><li>20</li><li>40</li></demonKillsRequiredPerLevel>
+        <levelUpMode>AnyPawn</levelUpMode>
+        <breathRestoredPerKill>10</breathRestoredPerKill>
+        <breathRestoredPerDemonKill>25</breathRestoredPerDemonKill>
+        <killsRequiredForSpecialization>30</killsRequiredForSpecialization>
+        <demonKillsRequiredForSpecialization>10</demonKillsRequiredForSpecialization>
+        <specializationUnlockMode>AnyPawn</specializationUnlockMode>
+        <unlockSpecializationsProgressively>false</unlockSpecializationsProgressively>
+        <abilityUnlocks />
       </li>
     </modExtensions>
-    <maxStat>FrostBreath</maxStat>
-    <biostatCpx>2</biostatCpx>
-    <biostatMet>1</biostatMet>
-    <resourceGizmoThresholds>
-      <li>0.25</li>
-      <li>0.5</li>
-      <li>0.75</li>
-    </resourceGizmoThresholds>
-    <displayCategory>BreathingTechnique</displayCategory>
-    <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(173, 216, 230)</barColor>
-    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <exhaustionPerTick>0.0004</exhaustionPerTick>
-    <exhaustionHediff>FrostBreathing_Fatigue</exhaustionHediff>
-    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
-    <TabLabel>Talents</TabLabel>
-    <regenTicks>FrostBreath_RegenTicks</regenTicks>
-    <regenStat>FrostBreath_RegenAmount</regenStat>
-    <regenSpeedStat>FrostBreath_RegenRate</regenSpeedStat>
-    <costMult>FrostBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
-
-
 </Defs>

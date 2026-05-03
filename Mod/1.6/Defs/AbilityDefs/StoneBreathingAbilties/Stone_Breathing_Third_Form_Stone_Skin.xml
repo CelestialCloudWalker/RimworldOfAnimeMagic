@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Stone_Breathing_Reflect</defName>
+    <label>Stone Breathing: Third Form: Stone Skin</label>
+    <description>参ノ型　岩軀の膚 — The user spins the chain in a continuous omnidirectional flurry, striking all surrounding enemies repeatedly. Also functions as a defensive measure, deflecting attacks from every angle.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>32</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>10</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <radius>4</radius>
+        <damage>8</damage>
+        <damageDef>Stone_Breathing_Damage</damageDef>
+        <armorPen>0.2</armorPen>
+        <repeatCount>4</repeatCount>
+        <damageInterval>15</damageInterval>
+        <maxTargets>8</maxTargets>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <affectCaster>false</affectCaster>
+        <effecter>AnimeArsenal_StoneHit2</effecter>
+        <hitEffecter>AnimeArsenal_StoneHit2</hitEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Spin the chain in a close-range flurry, striking all nearby enemies 4 times.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <description>Spin radius and hit count increased.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>5</radius>
+            <damage>11</damage>
+            <damageDef>Stone_Breathing_Damage</damageDef>
+            <armorPen>0.22</armorPen>
+            <repeatCount>5</repeatCount>
+            <damageInterval>12</damageInterval>
+            <maxTargets>10</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <affectCaster>false</affectCaster>
+            <effecter>AnimeArsenal_StoneHit2</effecter>
+            <hitEffecter>AnimeArsenal_StoneHit2</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>480</experienceRequired>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Relentless spin. 6-hit burst at maximum radius. Suppresses enemy approach.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>6</radius>
+            <damage>14</damage>
+            <damageDef>Stone_Breathing_Damage</damageDef>
+            <armorPen>0.28</armorPen>
+            <repeatCount>6</repeatCount>
+            <damageInterval>10</damageInterval>
+            <maxTargets>12</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <affectCaster>false</affectCaster>
+            <effecter>AnimeArsenal_StoneHit2</effecter>
+            <hitEffecter>AnimeArsenal_StoneHit2</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Enmu_WoOUMtwo</defName>
+    <label>Whispers of Ordained Unconscious Mesmerism</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enmu breathes a cone of dream-laced whispers that force the Sleepwalking mental break in all caught within, dulling the mind with disorientation. At higher mastery a Nightmare variant tears deeper — far more costly but far more devastating.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>0</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.8</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <useSleepHediff>false</useSleepHediff>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <sleepDurationHours>2</sleepDurationHours>
+        <maxTargets>10</maxTargets>
+        <range>12</range>
+
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>WoOUM_Disorientation</hediffDef>
+        <severityAdjustment>0.15</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Cone (r12, 90°) forces Sleepwalking mental break and applies Disorientation (+10% consciousness debuff) to all targets hit.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.914</cooldownMultiplier>
+        <resourceCostMultiplier>1.036</resourceCostMultiplier>
+        <description>Cone (r12, 90°). Sleepwalk + Disorientation. Cooldown reduced.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>2</sleepDurationHours>
+            <maxTargets>10</maxTargets>
+            <range>12</range>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WoOUM_Disorientation</hediffDef>
+            <severityAdjustment>0.15</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.829</cooldownMultiplier>
+        <resourceCostMultiplier>1.143</resourceCostMultiplier>
+        <description>Cone widens to r14. Disorientation strengthened to +15% consciousness debuff.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>2</sleepDurationHours>
+            <maxTargets>10</maxTargets>
+            <range>14</range>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WoOUM_Disorientation</hediffDef>
+            <severityAdjustment>0.45</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.743</cooldownMultiplier>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <description>Sleepwalk duration extended. Cone r14, Disorientation +15%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>10</maxTargets>
+            <range>14</range>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WoOUM_Disorientation</hediffDef>
+            <severityAdjustment>0.45</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.657</cooldownMultiplier>
+        <resourceCostMultiplier>1.357</resourceCostMultiplier>
+        <description>Nightmare variant unlocked. Applies Nightmare Disorientation (-30% consciousness, -15% moving). Cone r14.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>10</maxTargets>
+            <range>14</range>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WoOUM_Disorientation_Nightmare</hediffDef>
+            <severityAdjustment>0.30</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.571</cooldownMultiplier>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <description>Perfected. Cone widens to r16. Nightmare Disorientation at full strength (-30% consciousness, -15% moving). Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>10</maxTargets>
+            <range>16</range>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WoOUM_Disorientation_Nightmare</hediffDef>
+            <severityAdjustment>0.70</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

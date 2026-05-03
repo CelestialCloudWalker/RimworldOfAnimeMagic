@@ -3,7 +3,6 @@
   <AnimeArsenal.BloodDemonArtsGeneDef Name="AA_BloodDemonArtsGene" Abstract="True">
     <geneClass>AnimeArsenal.BloodDemonArtsGene</geneClass>
     <resourceGizmoType>AnimeArsenal.GeneGizmoBlood</resourceGizmoType>
-
     <exclusionTags>
       <li>BreathingUser</li>
     </exclusionTags>
@@ -16,19 +15,59 @@
     </resourceGizmoThresholds>
     <displayCategory>DemonBloodArts</displayCategory>
     <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <regenTicks>BloodDemonArts_RegenTicks</regenTicks>
-    <regenStat>BloodDemonArts_RegenAmount</regenStat>
-    <regenSpeedStat>AnimeArsenal_BloodDemonArtsRegenSpeed</regenSpeedStat>
-    <costMult>BloodDemonArts_Cost</costMult>
+    <primaryResourceDef>BloodDemonArts_Resource</primaryResourceDef>
     <maxStat>BloodDemonArts</maxStat>
+
+    <bodyPartHealthBaseMultiplier>1.2</bodyPartHealthBaseMultiplier>
+    <bodyPartHealthBonusPerPawnEaten>0.02</bodyPartHealthBonusPerPawnEaten>
+    <regenAmountBase>5</regenAmountBase>
+    <regenAmountPerPawnEaten>0.05</regenAmountPerPawnEaten>
+    <regenAmountMax>50</regenAmountMax>
+    <regenTicksBase>2500</regenTicksBase>
+    <regenTicksReductionPerPawnEaten>5</regenTicksReductionPerPawnEaten>
+    <regenTicksMin>500</regenTicksMin>
+    <consciousnessPerPawnEaten>0.0015</consciousnessPerPawnEaten>
+    <movingPerPawnEaten>0.002</movingPerPawnEaten>
+    <manipulationPerPawnEaten>0.0018</manipulationPerPawnEaten>
+    <talkingPerPawnEaten>0.0005</talkingPerPawnEaten>
+    <eatingPerPawnEaten>0.0008</eatingPerPawnEaten>
+    <sightPerPawnEaten>0.0012</sightPerPawnEaten>
+    <hearingPerPawnEaten>0.001</hearingPerPawnEaten>
+    <breathingPerPawnEaten>0.0012</breathingPerPawnEaten>
+    <bloodFiltrationPerPawnEaten>0.0015</bloodFiltrationPerPawnEaten>
+    <bloodPumpingPerPawnEaten>0.0015</bloodPumpingPerPawnEaten>
+    <metabolismPerPawnEaten>0.001</metabolismPerPawnEaten>
 
     <modExtensions>
       <li Class="AnimeArsenal.DemonSanityExtension">
+        <daysUntilHungry>2.5</daysUntilHungry>
+        <hungerRateMultiplier>1.0</hungerRateMultiplier>
+        <useCustomHungerRate>true</useCustomHungerRate>
         <ticksBetweenSanityDecay>2500</ticksBetweenSanityDecay>
         <sanityDecayPerTick>1.0</sanityDecayPerTick>
         <ticksSinceLastMealBeforeDecay>60000</ticksSinceLastMealBeforeDecay>
         <maxSanity>100</maxSanity>
         <startingSanity>100</startingSanity>
+        <thresholdEffects>
+          <li>
+            <sanityThreshold>50</sanityThreshold>
+            <thoughtToApply>DemonHungry_Mild</thoughtToApply>
+            <hediffToApply>DemonHunger_Mild</hediffToApply>
+            <label>Mild hunger effects</label>
+          </li>
+          <li>
+            <sanityThreshold>25</sanityThreshold>
+            <thoughtToApply>DemonHungry_Severe</thoughtToApply>
+            <hediffToApply>DemonHunger_Severe</hediffToApply>
+            <label>Severe hunger effects</label>
+          </li>
+          <li>
+            <sanityThreshold>10</sanityThreshold>
+            <thoughtToApply>DemonHungry_Ravenous</thoughtToApply>
+            <hediffToApply>DemonHunger_Critical</hediffToApply>
+            <label>Critical hunger effects</label>
+          </li>
+        </thresholdEffects>
         <sanityRestoredPerPawnEaten>25</sanityRestoredPerPawnEaten>
         <lowSanityThreshold>50</lowSanityThreshold>
         <criticalSanityThreshold>25</criticalSanityThreshold>
@@ -70,14 +109,28 @@
         <pawnsRequiredForSpecialization>50</pawnsRequiredForSpecialization>
         <unlockSpecializationsProgressively>true</unlockSpecializationsProgressively>
         <availableSpecializations>
-          <li>BloodDemonArt_BloodManipulator</li>
-          <li>BloodDemonArt_RegenerationMaster</li>
-          <li>BloodDemonArt_CombatSpecialist</li>
+          <li>BloodDemonArt_DestructiveDeath</li>
+          <li>BloodDemonArt_Cryokinetic</li>
+          <li>BloodDemonArt_KoketsuArrow</li>
+          <li>BloodDemonArt_HiasobiTemari</li>
+          <li>BloodDemonArt_DreamManipulation</li>
+          <li>BloodDemonArt_BloodBewitchment</li>
+          <li>BloodDemonArt_ThreadManipulation</li>
+          <li>BloodDemonArt_SentientObiSash</li>
+          <li>BloodDemonArt_BloodManipulation</li>
+          <li>BloodDemonArt_PorcelainVaseSpells</li>
         </availableSpecializations>
         <specializationUnlockThresholds>
           <li>50</li>
           <li>70</li>
-          <li>90</li>  
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
         </specializationUnlockThresholds>
 
 
@@ -291,17 +344,17 @@
         </regenInstantLimb>
 
         <regenInstantOrgan>
-          <li>false</li>
-          <li>false</li>
-          <li>false</li>
-          <li>false</li>
-          <li>false</li>
-          <li>false</li>
-          <li>false</li>
-          <li>false</li>
-          <li>false</li>
-          <li>false</li>
-          <li>false</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
           <li>true</li>
           <li>true</li>
           <li>true</li>
@@ -516,11 +569,11 @@
         <healingMultiplier>1.2</healingMultiplier>
         <ticksBetweenHealing>180</ticksBetweenHealing>
         <healingPerTick>0.3</healingPerTick>
-        <instantLimbRegeneration>false</instantLimbRegeneration>
-        <instantOrganRegeneration>false</instantOrganRegeneration>
-        <canRegenerateOrgans>false</canRegenerateOrgans>
+        <instantLimbRegeneration>true</instantLimbRegeneration>
+        <instantOrganRegeneration>true</instantOrganRegeneration>
+        <canRegenerateOrgans>true</canRegenerateOrgans>
         <canRegenerateBrain>false</canRegenerateBrain>
-        <canRegenerateHeart>false</canRegenerateHeart>
+        <canRegenerateHeart>true</canRegenerateHeart>
         <canRegenerateHead>false</canRegenerateHead>
         <scarHealChance>0.05</scarHealChance>
         <scarHealInterval>4000</scarHealInterval>
@@ -566,112 +619,10 @@
   <AnimeArsenal.BloodDemonArtsGeneDef ParentName="AA_BloodDemonArtsGene">
     <defName>BloodDemonArt</defName>
     <label>Blood Demon Art</label>
-    <resourceName>Blood Art</resourceName>
     <description>A demon with blood arts that grow stronger with kills and training.</description>
     <iconPath>UI/Icons/Genes/Demon</iconPath>
     <resourceLabel>Blood Art</resourceLabel>
     <resourceDescription>Demon Blood Art that evolves with power.</resourceDescription>
-
-    <TalentTrees>
-      <li>BloodDemonArtStyleTree</li>
-    </TalentTrees>
-
-    <experienceFormula>Basic_LinearXP</experienceFormula>
-    <experienceGainSettings>
-      <experienceTypes>
-        <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>6</baseXP>
-          <damageFactor>0.12</damageFactor>
-        </li>
-        <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>18</baseXP>
-          <damageFactor>0.25</damageFactor>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Melee</SkillDef>
-          <baseXP>4</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Medicine</SkillDef>
-          <baseXP>3</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Shooting</SkillDef>
-          <baseXP>1.5</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>AttackMelee</SkillDef>
-          <baseXP>20</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>AttackStatic</SkillDef>
-          <baseXP>16</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Hunt</SkillDef>
-          <baseXP>16</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>PredatorHunt</SkillDef>
-          <baseXP>18</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>TendPatient</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>ExtractSkull</SkillDef>
-          <baseXP>15</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>PrisonerExecution</SkillDef>
-          <baseXP>18</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>GuiltyColonistExecution</SkillDef>
-          <baseXP>18</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>SlaveExecution</SkillDef>
-          <baseXP>18</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>PrisonerBloodfeed</SkillDef>
-          <baseXP>25</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Sacrifice</SkillDef>
-          <baseXP>22</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Scarify</SkillDef>
-          <baseXP>15</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Blind</SkillDef>
-          <baseXP>15</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>DeliverToAltar</SkillDef>
-          <baseXP>12</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>FeedPatient</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>ExtractBioferrite</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>ExecuteEntity</SkillDef>
-          <baseXP>18</baseXP>
-        </li>
-      </experienceTypes>
-    </experienceGainSettings>
-
-    <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(0.545, 0.0, 0.0, 1.0)</barColor>
 
     <makeImmuneTo>
       <li>Flu</li>
@@ -689,7 +640,5 @@
       <li>HeartAttack</li>
       <li>HeartArteryBlockage</li>
     </hediffGiversCannotGive>
-
-    <TabLabel>Talents</TabLabel>
   </AnimeArsenal.BloodDemonArtsGeneDef>
 </Defs>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelTwo</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelTwo</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>410</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelThree</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelThree</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>370</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelFour</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelFour</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>330</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelFive</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelFive</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>290</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Flame_Blade_Technique_LevelSix</defName>
+    <label>Flame Blade Technique</label>
+    <description>A technique that allows a Flame Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Flame_Heart_LevelSix</enchantHediff>
+    <resourceGene>Gene_FlameBreath</resourceGene>
+    <ticksBetweenCost>250</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+</Defs>

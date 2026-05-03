@@ -28,11 +28,6 @@
       <steamWorkshopUrl>steam://url/CommunityFilePage/839005762</steamWorkshopUrl>
     </li>
     <li>
-      <packageId>com.emo.talented</packageId>
-      <displayName>Talented - Talent Tree Framework</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/3412307423</steamWorkshopUrl>
-    </li>
-    <li>
       <packageId>Ludeon.RimWorld.Biotech</packageId>
       <displayName>Biotech</displayName>
     </li>

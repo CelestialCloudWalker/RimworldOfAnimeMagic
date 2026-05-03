@@ -13,8 +13,8 @@ namespace AnimeArsenal
         public int NumberOfCuts = 8;
         public float BaseDamage = 8f;
         public int TicksBetweenCuts = 10;
-        public DamageDef DamageDef;  
-        public StatDef ScaleStat;    
+        public DamageDef DamageDef;
+        public StatDef ScaleStat;
         public EffecterDef CleaveDamageEffecter;
 
         public float radius = 8f;
@@ -44,7 +44,7 @@ namespace AnimeArsenal
 
             foreach (Pawn pawn in targets.Take(Props.maxTargets))
             {
-                AppleCleaveEffects(pawn);
+                ApplyCleaveEffects(pawn);
             }
         }
 
@@ -77,7 +77,7 @@ namespace AnimeArsenal
             return !pawn.Dead;
         }
 
-        private void AppleCleaveEffects(Pawn targetPawn)
+        private void ApplyCleaveEffects(Pawn targetPawn)
         {
             parent.pawn.Map.GetComponent<CleaveManager>()?.StartCleaveSequence(targetPawn, Props, parent.pawn);
         }
@@ -197,7 +197,14 @@ namespace AnimeArsenal
                 DamageInfo.SourceCategory.ThingOrUnknown
             );
 
-            targetPawn.TakeDamage(damageInfo);
+            try
+            {
+                targetPawn.TakeDamage(damageInfo);
+            }
+            catch (System.Exception ex)
+            {
+                Log.Warning($"[AnimeArsenal] CleaveSequence.ApplyCut caught exception on {targetPawn?.LabelShort}: {ex.Message}");
+            }
         }
 
         public void ExposeData()

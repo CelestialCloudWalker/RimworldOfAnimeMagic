@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Koketsu_Finale</defName>
+    <label>Koketsu Arrow, Finale</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>The killing stroke of the Koketsu Arrow style. A single perfectly aimed strike intended to end the fight.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>40</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>1.0</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <dashSpeed>2.0</dashSpeed>
+        <damageType>Cut</damageType>
+        <initialStrikeDamage>30</initialStrikeDamage>
+        <initialStrikeArmorPen>0.25</initialStrikeArmorPen>
+        <targetVitalOrgans>true</targetVitalOrgans>
+        <vitalOrganDefNames>
+          <li>Brain</li>
+          <li>Heart</li>
+          <li>Spine</li>
+        </vitalOrganDefNames>
+        <vitalOrganDamage>30</vitalOrganDamage>
+        <vitalOrganArmorPen>0.25</vitalOrganArmorPen>
+        <additionalDamageFactorFromMeleeSkill>1.5</additionalDamageFactorFromMeleeSkill>
+        <stunDuration>0</stunDuration>
+        <effectRadius>0</effectRadius>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>30 Cut. Dashes to target. High vital organ hit chance. Range 8.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.050</resourceCostMultiplier>
+        <description>36 Cut. Faster cooldown.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>36</initialStrikeDamage>
+            <initialStrikeArmorPen>0.25</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+              <li>Heart</li>
+              <li>Spine</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>36</vitalOrganDamage>
+            <vitalOrganArmorPen>0.25</vitalOrganArmorPen>
+            <additionalDamageFactorFromMeleeSkill>1.5</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.125</resourceCostMultiplier>
+        <description>44 Cut. Applies DS_ArrowDown_Finale (300t immobilize) on hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>44</initialStrikeDamage>
+            <initialStrikeArmorPen>0.30</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+              <li>Heart</li>
+              <li>Spine</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>44</vitalOrganDamage>
+            <vitalOrganArmorPen>0.30</vitalOrganArmorPen>
+            <additionalDamageFactorFromMeleeSkill>1.5</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowDown_Finale</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.200</resourceCostMultiplier>
+        <description>54 Cut. Armor penetration increased to 0.45. ArrowDown 300t on hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>54</initialStrikeDamage>
+            <initialStrikeArmorPen>0.45</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+              <li>Heart</li>
+              <li>Spine</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>54</vitalOrganDamage>
+            <vitalOrganArmorPen>0.45</vitalOrganArmorPen>
+            <additionalDamageFactorFromMeleeSkill>1.5</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>0</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowDown_Finale</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.300</resourceCostMultiplier>
+        <description>64 Cut. Guaranteed down via 180t stun regardless of HP. ArrowDown 300t.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>64</initialStrikeDamage>
+            <initialStrikeArmorPen>0.45</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+              <li>Heart</li>
+              <li>Spine</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>64</vitalOrganDamage>
+            <vitalOrganArmorPen>0.45</vitalOrganArmorPen>
+            <additionalDamageFactorFromMeleeSkill>1.5</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>180</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowDown_Finale</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.560</cooldownMultiplier>
+        <resourceCostMultiplier>1.400</resourceCostMultiplier>
+        <description>Perfected. 78 Cut. Armor pen 0.50. 180t stun. ArrowDown 300t. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>78</initialStrikeDamage>
+            <initialStrikeArmorPen>0.50</initialStrikeArmorPen>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Brain</li>
+              <li>Heart</li>
+              <li>Spine</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>78</vitalOrganDamage>
+            <vitalOrganArmorPen>0.50</vitalOrganArmorPen>
+            <additionalDamageFactorFromMeleeSkill>1.5</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>180</stunDuration>
+            <effectRadius>0</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_ArrowDown_Finale</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

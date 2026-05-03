@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef>
+    <defName>DS_CrystalizedAir</defName>
+    <label>crystalized air</label>
+    <canInterruptJobs>false</canInterruptJobs>
+    <makesBlood>false</makesBlood>
+    <defaultDamage>0</defaultDamage>
+    <harmsHealth>false</harmsHealth>
+    <soundExplosion>Explosion_Smoke</soundExplosion>
+    <combatLogRules>Damage_Smoke</combatLogRules>
+  </DamageDef>
+
+  <HediffDef>
+    <defName>DS_CrystalizedAirExposure</defName>
+    <label>crystalized air exposure</label>
+    <description>Exposure to Doma's frozen air. Prolonged exposure causes increasing Hypothermia.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <minSeverity>0</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>0.001</initialSeverity>
+    <defaultLabelColor>(0.6, 0.85, 1.0)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.5</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>chilled</label>
+        <minSeverity>0.2</minSeverity>
+      </li>
+      <li>
+        <label>freezing</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef>
+    <defName>DS_CrystalizedAir_Gas</defName>
+    <label>crystalized air</label>
+    <description>Frozen air crystallized by Doma's blood demon art.</description>
+    <thingClass>RimWorld.Gas</thingClass>
+    <category>Gas</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Gas</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <drawerType>RealtimeOnly</drawerType>
+    <graphicData>
+      <texPath>VFX/smoke_04_a</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.6, 0.85, 1.0)</color>
+      <drawSize>(1.5, 1.5)</drawSize>
+    </graphicData>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.04</fillPercent>
+    <neverMultiSelect>true</neverMultiSelect>
+    <gas>
+      <expireSeconds>
+        <min>13</min>
+        <max>20</max>
+      </expireSeconds>
+      <rotationSpeed>2.5</rotationSpeed>
+    </gas>
+  </ThingDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>DS_Fleck_IcicleShard</defName>
+    <graphicData>
+      <texPath>VFX/muzzle_02_a</texPath>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <color>(0.75, 0.93, 1.0)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.02</fadeInTime>
+    <solidTime>0.12</solidTime>
+    <fadeOutTime>0.18</fadeOutTime>
+  </FleckDef>
+
+  <EffecterDef>
+    <defName>DS_Effecter_IcicleShard</defName>
+    <children>
+      <li Class="Verse.SubEffecterDef">
+        <subEffecterClass>Verse.SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>DS_Fleck_IcicleShard</fleckDef>
+        <burstCount>
+          <min>2</min>
+          <max>3</max>
+        </burstCount>
+        <ticksBetweenMotes>5</ticksBetweenMotes>
+        <positionRadius>0.3</positionRadius>
+        <scale>
+          <min>0.5</min>
+          <max>1.0</max>
+        </scale>
+        <speed>
+          <min>0.0</min>
+          <max>0.06</max>
+        </speed>
+        <angle>
+          <min>0</min>
+          <max>360</max>
+        </angle>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>DS_Fleck_CloudPuff</defName>
+    <graphicData>
+      <texPath>VFX/smoke_04_a</texPath>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <color>(0.6, 0.85, 1.0)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.1</fadeInTime>
+    <solidTime>0.3</solidTime>
+    <fadeOutTime>0.6</fadeOutTime>
+    <growthRate>0.8</growthRate>
+  </FleckDef>
+
+  <EffecterDef>
+    <defName>DS_Effecter_CloudPuff</defName>
+    <children>
+      <li Class="Verse.SubEffecterDef">
+        <subEffecterClass>Verse.SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>DS_Fleck_CloudPuff</fleckDef>
+        <burstCount>
+          <min>2</min>
+          <max>4</max>
+        </burstCount>
+        <ticksBetweenMotes>8</ticksBetweenMotes>
+        <positionRadius>0.45</positionRadius>
+        <scale>
+          <min>0.4</min>
+          <max>1.1</max>
+        </scale>
+        <speed>
+          <min>0.0</min>
+          <max>0.08</max>
+        </speed>
+        <angle>
+          <min>0</min>
+          <max>360</max>
+        </angle>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <ThingDef>
+    <defName>DS_Mote_Icicle</defName>
+    <label>icicle</label>
+    <thingClass>Verse.MoteThrown</thingClass>
+    <category>Mote</category>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <neverMultiSelect>true</neverMultiSelect>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>VFX/muzzle_02_a</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.7, 0.9, 1.0)</color>
+      <drawSize>(1.5, 1.5)</drawSize>
+    </graphicData>
+    <mote>
+      <fadeInTime>0.05</fadeInTime>
+      <solidTime>0.1</solidTime>
+      <fadeOutTime>0.4</fadeOutTime>
+    </mote>
+  </ThingDef>
+
+</Defs>

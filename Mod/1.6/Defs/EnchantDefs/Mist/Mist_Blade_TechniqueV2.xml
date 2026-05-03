@@ -7,8 +7,13 @@
     <description>A technique that allows a Mist Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Mist_Heart</enchantHediff>
     <resourceGene>Gene_MistBreath</resourceGene>
-    <ticksBetweenCost>400</ticksBetweenCost>
+    <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MistBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MistBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Mist</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Mist</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_MistHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -17,8 +22,13 @@
     <description>A technique that allows a Mist Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Mist_Heart_LevelTwo</enchantHediff>
     <resourceGene>Gene_MistBreath</resourceGene>
-    <ticksBetweenCost>360</ticksBetweenCost>
+    <ticksBetweenCost>410</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MistBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MistBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Mist</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Mist</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_MistHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -27,8 +37,13 @@
     <description>A technique that allows a Mist Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Mist_Heart_LevelThree</enchantHediff>
     <resourceGene>Gene_MistBreath</resourceGene>
-    <ticksBetweenCost>320</ticksBetweenCost>
-    <resourceCostPerTick>4</resourceCostPerTick>
+    <ticksBetweenCost>370</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MistBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MistBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Mist</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Mist</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_MistHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -37,8 +52,13 @@
     <description>A technique that allows a Mist Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Mist_Heart_LevelFour</enchantHediff>
     <resourceGene>Gene_MistBreath</resourceGene>
-    <ticksBetweenCost>280</ticksBetweenCost>
-    <resourceCostPerTick>4</resourceCostPerTick>
+    <ticksBetweenCost>330</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MistBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MistBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Mist</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Mist</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_MistHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -47,8 +67,13 @@
     <description>A technique that allows a Mist Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Mist_Heart_LevelFive</enchantHediff>
     <resourceGene>Gene_MistBreath</resourceGene>
-    <ticksBetweenCost>240</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
+    <ticksBetweenCost>290</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MistBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MistBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Mist</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Mist</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_MistHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -57,7 +82,12 @@
     <description>A technique that allows a Mist Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Mist_Heart_LevelSix</enchantHediff>
     <resourceGene>Gene_MistBreath</resourceGene>
-    <ticksBetweenCost>200</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
+    <ticksBetweenCost>250</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MistBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MistBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Mist</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Mist</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_MistHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

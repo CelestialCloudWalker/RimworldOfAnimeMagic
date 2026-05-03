@@ -19,6 +19,20 @@ namespace AnimeArsenal
         private static readonly Texture2D SanityCriticalTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.9f, 0.1f, 0.1f));
         private static readonly Texture2D SanityEmptyTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.03f, 0.035f, 0.05f));
 
+        protected override string Title
+        {
+            get
+            {
+                string label = BloodDemonArtsGene?.Def?.resourceLabel;
+                if (!label.NullOrEmpty()) return label;
+                return BloodDemonArtsGene?.def?.label ?? "Blood";
+            }
+        }
+
+        protected override Color BarColor => new Color(0.7f, 0.05f, 0.05f);
+
+        protected override Color BarHighlightColor => new Color(0.9f, 0.15f, 0.15f);
+
         public GeneGizmoBlood(BloodDemonArtsGene gene, List<IGeneResourceDrain> drainGenes, Color barColor, Color barHighlightColor)
             : base(gene, drainGenes, barColor, barHighlightColor)
         {
@@ -31,13 +45,12 @@ namespace AnimeArsenal
             float exhaustionProgress = BloodDemonArtsGene.ExhaustionProgress;
             DrawDraggableBarTarget(barRect, exhaustionProgress, DragBarTex);
 
-
             return result;
         }
 
         private void DrawSanityBar(Vector2 topLeft, float maxWidth)
         {
-            float yOffset = 75f; 
+            float yOffset = 75f;
             float gizmoWidth = Mathf.Min(140f, maxWidth);
             Rect sanityRect = new Rect(topLeft.x, topLeft.y + yOffset, gizmoWidth, 30f);
 
@@ -45,13 +58,11 @@ namespace AnimeArsenal
 
             Rect innerRect = sanityRect.ContractedBy(4f);
 
-         
             Text.Font = GameFont.Tiny;
             Text.Anchor = TextAnchor.UpperLeft;
             Rect labelRect = new Rect(innerRect.x, innerRect.y, innerRect.width, 12f);
             Widgets.Label(labelRect, "Sanity");
 
-           
             Rect barBgRect = new Rect(innerRect.x, innerRect.y + 12f, innerRect.width, 12f);
             Widgets.DrawBoxSolid(barBgRect, SanityEmptyTex.GetPixel(0, 0));
 
@@ -93,9 +104,7 @@ namespace AnimeArsenal
             try
             {
                 if (BloodDemonArtsGene?.pawn == null)
-                {
                     return "Blood Art Resource";
-                }
 
                 string text = "";
 
@@ -103,7 +112,10 @@ namespace AnimeArsenal
                 {
                     float baseBlood = BloodDemonArtsGene.Value;
                     float totalBlood = baseBlood;
-                    float maxBlood = BloodDemonArtsGene.pawn.GetStatValue(BloodDemonArtsGene.Def.maxStat);
+                    BloodDemonArtsGeneDef demonDef = BloodDemonArtsGene.def as BloodDemonArtsGeneDef;
+                    float maxBlood = demonDef?.maxStat != null
+                        ? BloodDemonArtsGene.pawn.GetStatValue(demonDef.maxStat)
+                        : BloodDemonArtsGene.Max;
 
                     text = string.Format("{0}: {1} / {2}",
                         BloodDemonArtsGene.Def?.resourceLabel?.CapitalizeFirst()?.Colorize(ColoredText.TipSectionTitleColor) ?? "Blood Art",
@@ -124,8 +136,8 @@ namespace AnimeArsenal
 
                         float sanityPercent = BloodDemonArtsGene.CurrentSanity / BloodDemonArtsGene.MaxSanity;
                         Color sanityColor = sanityPercent <= 0.25f ? Color.red :
-                                          sanityPercent <= 0.5f ? new Color(1f, 0.5f, 0f) :
-                                          Color.green;
+                                           sanityPercent <= 0.5f ? new Color(1f, 0.5f, 0f) :
+                                           Color.green;
 
                         text += string.Format("\nCurrent: {0} / {1} ({2})",
                             BloodDemonArtsGene.CurrentSanity.ToString("F0"),
@@ -165,9 +177,7 @@ namespace AnimeArsenal
                         text += string.Format("\nStatus: {0}", status);
 
                         if (sanityPercent <= (sanityExt.mentalBreakThreshold / sanityExt.maxSanity))
-                        {
                             text += "\n" + "WILL HUNT HUMANS!".Colorize(Color.red);
-                        }
                     }
                     catch { }
                 }
@@ -195,9 +205,7 @@ namespace AnimeArsenal
                     }
 
                     if (sanityExt != null)
-                    {
                         text += string.Format("\nSanity/Pawn: +{0}", sanityExt.sanityRestoredPerPawnEaten);
-                    }
                 }
                 catch { }
 
@@ -250,7 +258,8 @@ namespace AnimeArsenal
 
                 try
                 {
-                    if (BloodDemonArtsGene.Def?.resourceDescription != null && !BloodDemonArtsGene.Def.resourceDescription.NullOrEmpty())
+                    if (BloodDemonArtsGene.Def?.resourceDescription != null &&
+                        !BloodDemonArtsGene.Def.resourceDescription.NullOrEmpty())
                     {
                         text += "\n\n" + BloodDemonArtsGene.Def.resourceDescription;
                     }

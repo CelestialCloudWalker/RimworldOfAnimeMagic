@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Mist_Breathing_SeaOfCloudsAndHaze</defName>
+    <label>Mist Breathing: Sea of Clouds and Haze</label>
+    <description>The user dashes into their target and erupts into a relentless flurry of slashes — so rapid the air itself fills with dust and mist. At the height of the storm, the cloud closes around the user completely, swallowing them from sight and leaving behind a disorienting haze that makes them nearly impossible to track.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>660</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>330</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>35</resourceCost>
+    <baseExperienceGain>22</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>3</rectWidth>
+        <rectLength>3</rectLength>
+        <damageAmount>5</damageAmount>
+        <repeatAmount>4</repeatAmount>
+        <damageInterval>8</damageInterval>
+        <damageType>Cut</damageType>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+        <hediffDef>MistBreathing_Vanish</hediffDef>
+        <severityAdjustment>1.0</severityAdjustment>
+        <applyToTarget>false</applyToTarget>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+        <hediffDef>MistBreathing_Misdirection</hediffDef>
+        <severityAdjustment>0.30</severityAdjustment>
+        <applyToTarget>false</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>4 hits of 5 damage (20 total). Kicks up a dust cloud on completion. Grants Vanish and moderate Misdirection.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>160</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>4 hits of 7 damage (28 total). Flurry tightens. Misdirection gain slightly increased.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>3</rectWidth>
+            <rectLength>3</rectLength>
+            <damageAmount>7</damageAmount>
+            <repeatAmount>4</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <damageType>Cut</damageType>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.36</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>370</experienceRequired>
+        <resourceCostMultiplier>1.30</resourceCostMultiplier>
+        <cooldownMultiplier>0.92</cooldownMultiplier>
+        <description>5 hits of 8 damage (40 total). A fifth slash joins the storm. The dust cloud erupts harder.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>3</rectWidth>
+            <rectLength>3</rectLength>
+            <damageAmount>8</damageAmount>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>7</damageInterval>
+            <damageType>Cut</damageType>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.42</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>620</experienceRequired>
+        <resourceCostMultiplier>1.45</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>5 hits of 10 damage (50 total). Extended range. Misdirection reliably reaches Distant Haze.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>3.5</rectWidth>
+            <rectLength>3.5</rectLength>
+            <damageAmount>10</damageAmount>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>7</damageInterval>
+            <damageType>Cut</damageType>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.50</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>920</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>6 hits of 12 damage (72 total). A sixth slash tears through. The haze that follows is deep — Distant Haze guaranteed, Shrouded within reach.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>3.5</rectWidth>
+            <rectLength>3.5</rectLength>
+            <damageAmount>12</damageAmount>
+            <repeatAmount>6</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <damageType>Cut</damageType>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.60</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1380</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 6 hits of 15 damage (90 total). The flurry is a white blur. The sea of haze closes completely — Shrouded on use. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <damageAmount>15</damageAmount>
+            <repeatAmount>6</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <damageType>Cut</damageType>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>MistBreathing_Vanish</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.72</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

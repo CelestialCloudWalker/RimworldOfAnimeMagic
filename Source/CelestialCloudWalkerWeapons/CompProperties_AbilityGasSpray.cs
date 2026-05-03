@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
 using System.Linq;
-using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -12,19 +12,19 @@ namespace AnimeArsenal
         public int numCellsToHit = 9;
         public IntRange gasLifetimeTicks = new IntRange(1800, 3600);
         public float gasSpawnChance = 0.8f;
-
         public float range = 8.0f;
         public float angle = 60.0f;
-
         public DamageDef damageDef;
         public IntRange damageAmount = new IntRange(3, 6);
         public int damageIntervalTicks = 60;
-
         public bool affectHostile = true;
         public bool affectNeutral = true;
         public bool affectFriendly = false;
         public bool affectAnimals = true;
         public bool affectMechanoids = false;
+        public HediffDef hediffOnExposure;
+        public float hediffSeverityPerInterval = 0.05f;
+        public EffecterDef spawnEffecter;
 
         public CompProperties_AbilityGasSpray()
         {
@@ -40,39 +40,15 @@ namespace AnimeArsenal
         {
             base.Apply(target, dest);
 
-            if (Props.gasDef == null) return;
+            Pawn pawn = parent.pawn;
+            if (pawn?.Map == null) return;
 
-            Map map = parent.pawn.Map;
-            IntVec3 targetCell = target.Cell;
+            IntVec3 targetCell = target.IsValid && target.Cell != IntVec3.Invalid
+                ? target.Cell
+                : pawn.Position;
 
-            List<IntVec3> affectedCells = GetCellsInCone(parent.pawn.Position, targetCell, map, Props.numCellsToHit, Props.range, Props.angle);
-
-            foreach (IntVec3 cell in affectedCells)
-            {
-                if (Rand.Chance(Props.gasSpawnChance))
-                {
-                    SpawnGasAt(cell, map);
-                }
-            }
-        }
-
-        private void SpawnGasAt(IntVec3 cell, Map map)
-        {
-            if (!cell.InBounds(map) || cell.Filled(map))
-                return;
-
-            if (map.thingGrid.ThingAt(cell, Props.gasDef) != null)
-                return;
-
-            Thing gas = ThingMaker.MakeThing(Props.gasDef);
-
-            if (gas is Gas gasInstance)
-            {
-                var densityField = typeof(Gas).GetField("density", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                densityField?.SetValue(gasInstance, 1.0f);
-            }
-
-            GenSpawn.Spawn(gas, cell, map);
+            Map map = pawn.Map;
+            List<IntVec3> cells = GetCellsInCone(pawn.Position, targetCell, map);
 
             ToxicGasManager gasManager = map.GetComponent<ToxicGasManager>();
             if (gasManager == null)
@@ -81,41 +57,71 @@ namespace AnimeArsenal
                 map.components.Add(gasManager);
             }
 
-            gasManager.RegisterGasCloud(cell, Props);
+            int spawned = 0;
+            foreach (IntVec3 cell in cells)
+            {
+                if (spawned >= Props.numCellsToHit) break;
+                if (!cell.InBounds(map) || cell.Filled(map)) continue;
+                if (!Rand.Chance(Props.gasSpawnChance)) continue;
+                if (Props.gasDef != null && map.thingGrid.ThingAt(cell, Props.gasDef) != null) continue;
+                if (Props.gasDef != null)
+                {
+                    Thing gas = ThingMaker.MakeThing(Props.gasDef);
+                    GenSpawn.Spawn(gas, cell, map);
+                }
+
+                if (Props.spawnEffecter != null)
+                {
+                    Effecter e = Props.spawnEffecter.Spawn(cell, map);
+                    e.Cleanup();
+                }
+
+                gasManager.RegisterGasCloud(cell, Props);
+                spawned++;
+            }
         }
 
-        private List<IntVec3> GetCellsInCone(IntVec3 start, IntVec3 target, Map map, int maxCells, float range, float coneAngle)
+        private List<IntVec3> GetCellsInCone(IntVec3 origin, IntVec3 target, Map map)
         {
-            List<IntVec3> cells = new List<IntVec3>();
-            Vector3 startVec = start.ToVector3Shifted();
-            Vector3 targetVec = target.ToVector3Shifted();
-            Vector3 direction = (targetVec - startVec).normalized;
+            List<IntVec3> result = new List<IntVec3>();
 
-            float halfAngleRad = (coneAngle * 0.5f) * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(target.x - origin.x, target.z - origin.z);
+            bool fullCircle = Props.angle >= 360f || direction.magnitude < 0.01f;
 
-            foreach (IntVec3 cell in GenRadial.RadialCellsAround(start, range, true))
+            float halfAngle = Props.angle * 0.5f;
+            float rangeSq = Props.range * Props.range;
+
+            foreach (IntVec3 cell in GenRadial.RadialCellsAround(origin, Props.range, true))
             {
-                if (!cell.InBounds(map) || cell == start)
-                    continue;
+                if (!cell.InBounds(map)) continue;
 
-                Vector3 cellVec = cell.ToVector3Shifted();
-                Vector3 toCell = (cellVec - startVec).normalized;
+                float distSq = (cell - origin).LengthHorizontalSquared;
+                if (distSq > rangeSq) continue;
 
-                float angleToCell = Vector3.Angle(direction, toCell) * Mathf.Deg2Rad;
-
-                if (angleToCell <= halfAngleRad)
+                if (!fullCircle)
                 {
-                    float distance = Vector3.Distance(startVec, cellVec);
-                    if (distance <= range)
-                    {
-                        cells.Add(cell);
-                        if (cells.Count >= maxCells)
-                            break;
-                    }
+                    Vector2 toCell = new Vector2(cell.x - origin.x, cell.z - origin.z);
+                    float angleBetween = Vector2.Angle(direction, toCell);
+                    if (angleBetween > halfAngle) continue;
                 }
+
+                result.Add(cell);
             }
 
-            return cells;
+            return result;
+        }
+
+        public override void DrawEffectPreview(LocalTargetInfo target)
+        {
+            Pawn pawn = parent.pawn;
+            if (pawn?.Map == null) return;
+
+            IntVec3 targetCell = target.IsValid && target.Cell != IntVec3.Invalid
+                ? target.Cell
+                : pawn.Position;
+
+            List<IntVec3> cells = GetCellsInCone(pawn.Position, targetCell, pawn.Map);
+            GenDraw.DrawFieldEdges(cells, Color.cyan);
         }
     }
 
@@ -125,129 +131,125 @@ namespace AnimeArsenal
 
         public ToxicGasManager(Map map) : base(map) { }
 
-        public int GetActiveCloudCount() => activeClouds.Count;
-
         public void RegisterGasCloud(IntVec3 position, CompProperties_AbilityGasSpray props)
         {
-            if (!activeClouds.ContainsKey(position))
+            if (activeClouds.ContainsKey(position)) return;
+
+            activeClouds[position] = new GasCloudData
             {
-                activeClouds[position] = new GasCloudData
-                {
-                    position = position,
-                    lifetimeRemaining = props.gasLifetimeTicks.RandomInRange,
-                    nextDamageTick = GenTicks.TicksGame + props.damageIntervalTicks,
-                    damageDef = props.damageDef,
-                    damageAmount = props.damageAmount,
-                    damageInterval = props.damageIntervalTicks,
-                    affectHostile = props.affectHostile,
-                    affectNeutral = props.affectNeutral,
-                    affectFriendly = props.affectFriendly,
-                    affectAnimals = props.affectAnimals,
-                    affectMechanoids = props.affectMechanoids,
-                    gasDef = props.gasDef
-                };
-            }
+                position = position,
+                lifetimeRemaining = props.gasLifetimeTicks.RandomInRange,
+                nextDamageTick = GenTicks.TicksGame + props.damageIntervalTicks,
+                damageDef = props.damageDef,
+                damageAmount = props.damageAmount,
+                damageInterval = props.damageIntervalTicks,
+                affectHostile = props.affectHostile,
+                affectNeutral = props.affectNeutral,
+                affectFriendly = props.affectFriendly,
+                affectAnimals = props.affectAnimals,
+                affectMechanoids = props.affectMechanoids,
+                gasDef = props.gasDef,
+                hediffOnExposure = props.hediffOnExposure,
+                hediffSeverityPerInterval = props.hediffSeverityPerInterval
+            };
+        }
+
+        public void RegisterGasCloudManual(IntVec3 position, CompProperties_FrozenLotusRanged props, Map map)
+        {
+            if (activeClouds.ContainsKey(position)) return;
+
+            activeClouds[position] = new GasCloudData
+            {
+                position = position,
+                lifetimeRemaining = props.gasLifetimeTicks.RandomInRange,
+                nextDamageTick = GenTicks.TicksGame + props.damageIntervalTicks,
+                damageDef = props.damageDef,
+                damageAmount = props.damageAmount,
+                damageInterval = props.damageIntervalTicks,
+                affectHostile = true,
+                affectNeutral = true,
+                affectFriendly = false,
+                affectAnimals = true,
+                affectMechanoids = false,
+                gasDef = props.gasDef
+            };
         }
 
         public override void MapComponentTick()
         {
-            if (activeClouds.Count == 0) return;
+            base.MapComponentTick();
 
             List<IntVec3> toRemove = new List<IntVec3>();
-            int currentTick = GenTicks.TicksGame;
 
             foreach (var kvp in activeClouds)
             {
                 GasCloudData data = kvp.Value;
-
-                Thing gas = map.thingGrid.ThingAt(data.position, data.gasDef);
-                if (gas == null)
-                {
-                    toRemove.Add(kvp.Key);
-                    continue;
-                }
-
                 data.lifetimeRemaining--;
 
                 if (data.lifetimeRemaining <= 0)
                 {
-                    gas.Destroy();
+                    if (data.gasDef != null && data.position.InBounds(map))
+                    {
+                        Thing gasThing = map.thingGrid.ThingAt(data.position, data.gasDef);
+                        gasThing?.Destroy();
+                    }
                     toRemove.Add(kvp.Key);
                     continue;
                 }
 
-                if (currentTick >= data.nextDamageTick)
+                if (GenTicks.TicksGame >= data.nextDamageTick)
                 {
-                    DamagePawnsAt(data);
-                    data.nextDamageTick = currentTick + data.damageInterval;
+                    ApplyEffectsToPawnsAt(data);
+                    data.nextDamageTick = GenTicks.TicksGame + data.damageInterval;
                 }
             }
 
-            foreach (IntVec3 pos in toRemove)
-                activeClouds.Remove(pos);
+            foreach (IntVec3 cell in toRemove)
+                activeClouds.Remove(cell);
         }
 
-        private void DamagePawnsAt(GasCloudData data)
+        private void ApplyEffectsToPawnsAt(GasCloudData data)
         {
-            foreach (Thing thing in map.thingGrid.ThingsListAtFast(data.position).ToList())
+            if (!data.position.InBounds(map)) return;
+
+            foreach (Thing thing in data.position.GetThingList(map).ToList())
             {
-                if (!(thing is Pawn pawn) || pawn.Dead || !ShouldAffectPawn(pawn, data))
-                    continue;
+                if (!(thing is Pawn pawn) || pawn.Dead) continue;
 
-                int damage = data.damageAmount.RandomInRange;
-                DamageInfo damageInfo = new DamageInfo(data.damageDef, damage, 0f, -1f, null, null, null,
-                                                     DamageInfo.SourceCategory.ThingOrUnknown);
+                bool isHostile = pawn.Faction == null || pawn.Faction.HostileTo(Faction.OfPlayer);
+                bool isFriendly = pawn.Faction != null && !pawn.Faction.HostileTo(Faction.OfPlayer);
+                bool isAnimal = pawn.RaceProps.Animal;
+                bool isMechanoid = pawn.RaceProps.IsMechanoid;
 
-                pawn.TakeDamage(damageInfo);
+                if (isAnimal && !data.affectAnimals) continue;
+                if (isMechanoid && !data.affectMechanoids) continue;
+                if (isHostile && !data.affectHostile) continue;
+                if (isFriendly && !data.affectFriendly) continue;
 
-                if (PawnUtility.ShouldSendNotificationAbout(pawn))
-                    MoteMaker.ThrowText(pawn.DrawPos, map, damage.ToString(), Color.red, 1.9f);
-            }
-        }
-
-        private bool ShouldAffectPawn(Pawn pawn, GasCloudData data)
-        {
-            if (pawn.RaceProps.IsMechanoid)
-                return data.affectMechanoids;
-
-            if (!pawn.RaceProps.Humanlike)
-                return data.affectAnimals;
-
-            if (pawn.Faction == null)
-                return data.affectNeutral;
-
-            if (pawn.Faction.HostileTo(Faction.OfPlayer))
-                return data.affectHostile;
-
-            if (pawn.Faction == Faction.OfPlayer)
-                return data.affectFriendly;
-
-            return data.affectNeutral;
-        }
-
-        public override void ExposeData()
-        {
-            if (Scribe.mode == LoadSaveMode.Saving)
-            {
-                List<GasCloudData> cloudList = activeClouds.Values.ToList();
-                Scribe_Collections.Look(ref cloudList, "activeClouds", LookMode.Deep);
-            }
-            else if (Scribe.mode == LoadSaveMode.LoadingVars)
-            {
-                List<GasCloudData> cloudList = new List<GasCloudData>();
-                Scribe_Collections.Look(ref cloudList, "activeClouds", LookMode.Deep);
-
-                activeClouds.Clear();
-                if (cloudList != null)
+                if (data.damageDef != null)
                 {
-                    foreach (GasCloudData data in cloudList)
-                        activeClouds[data.position] = data;
+                    int dmg = data.damageAmount.RandomInRange;
+                    DamageInfo dinfo = new DamageInfo(data.damageDef, dmg, 0f, -1f, null);
+                    pawn.TakeDamage(dinfo);
+                }
+
+                if (data.hediffOnExposure != null && data.hediffSeverityPerInterval > 0f)
+                {
+                    Hediff existing = pawn.health.hediffSet.GetFirstHediffOfDef(data.hediffOnExposure);
+                    if (existing != null)
+                        existing.Severity += data.hediffSeverityPerInterval;
+                    else
+                    {
+                        Hediff newHediff = HediffMaker.MakeHediff(data.hediffOnExposure, pawn);
+                        newHediff.Severity = data.hediffSeverityPerInterval;
+                        pawn.health.AddHediff(newHediff);
+                    }
                 }
             }
         }
     }
 
-    public class GasCloudData : IExposable
+    public class GasCloudData
     {
         public IntVec3 position;
         public int lifetimeRemaining;
@@ -261,35 +263,7 @@ namespace AnimeArsenal
         public bool affectAnimals;
         public bool affectMechanoids;
         public ThingDef gasDef;
-
-        public void ExposeData()
-        {
-            Scribe_Values.Look(ref position, "position");
-            Scribe_Values.Look(ref lifetimeRemaining, "lifetimeRemaining");
-            Scribe_Values.Look(ref nextDamageTick, "nextDamageTick");
-            Scribe_Defs.Look(ref damageDef, "damageDef");
-            Scribe_Values.Look(ref damageInterval, "damageInterval");
-            Scribe_Values.Look(ref affectHostile, "affectHostile");
-            Scribe_Values.Look(ref affectNeutral, "affectNeutral");
-            Scribe_Values.Look(ref affectFriendly, "affectFriendly");
-            Scribe_Values.Look(ref affectAnimals, "affectAnimals");
-            Scribe_Values.Look(ref affectMechanoids, "affectMechanoids");
-            Scribe_Defs.Look(ref gasDef, "gasDef");
-
-            if (Scribe.mode == LoadSaveMode.Saving)
-            {
-                int min = damageAmount.min;
-                int max = damageAmount.max;
-                Scribe_Values.Look(ref min, "damageMin");
-                Scribe_Values.Look(ref max, "damageMax");
-            }
-            else if (Scribe.mode == LoadSaveMode.LoadingVars)
-            {
-                int min = 3, max = 6;
-                Scribe_Values.Look(ref min, "damageMin");
-                Scribe_Values.Look(ref max, "damageMax");
-                damageAmount = new IntRange(min, max);
-            }
-        }
+        public HediffDef hediffOnExposure;
+        public float hediffSeverityPerInterval;
     }
 }

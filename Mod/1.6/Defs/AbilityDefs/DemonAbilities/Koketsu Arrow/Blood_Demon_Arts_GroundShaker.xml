@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Koketsu_GroundShaker</defName>
+    <label>Ground Shaker</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Slam the ground with chakra force, erupting rock chunks and a dust cloud in all directions. The shockwave deals heavy blunt damage and disorients all caught in it.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>16</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>3</rectWidth>
+        <rectLength>3</rectLength>
+        <useOriginAsCenter>true</useOriginAsCenter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>16 Blunt in 3x3 around caster. Rock chunks erupt from the ground.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.914</cooldownMultiplier>
+        <resourceCostMultiplier>1.033</resourceCostMultiplier>
+        <description>19 Blunt in 3x3. More chunks erupt.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>19</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>3</rectWidth>
+            <rectLength>3</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.829</cooldownMultiplier>
+        <resourceCostMultiplier>1.100</resourceCostMultiplier>
+        <description>24 Blunt in wider 4x4. More chunks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>24</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.743</cooldownMultiplier>
+        <resourceCostMultiplier>1.167</resourceCostMultiplier>
+        <description>30 Blunt in 4x4. Dust cloud lingers 300 ticks (-10% sight).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>30</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>0</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>3</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hediff>DS_GroundShaker_Dust_L4</hediff>
+            <hediffSeverity>1.0</hediffSeverity>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.657</cooldownMultiplier>
+        <resourceCostMultiplier>1.267</resourceCostMultiplier>
+        <description>37 Blunt in 4x4. Choking dust cloud 600 ticks (-25% sight, -10% moving).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>37</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>0</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>3</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hediff>DS_GroundShaker_Dust_L5</hediff>
+            <hediffSeverity>1.0</hediffSeverity>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.571</cooldownMultiplier>
+        <resourceCostMultiplier>1.400</resourceCostMultiplier>
+        <description>Perfected. 46 Blunt in 4x4. Choking dust. Outer fling ring pushes enemies back. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>46</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>0</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>4</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hediff>DS_GroundShaker_Dust_L5</hediff>
+            <hediffSeverity>1.0</hediffSeverity>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>4.0</effectRadius>
+            <maxTargets>8</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>false</affectDowned>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <damage>12</damage>
+            <armorPenetration>0.0</armorPenetration>
+            <flingDistance>3</flingDistance>
+            <showMessages>false</showMessages>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+
+
+
+</Defs>

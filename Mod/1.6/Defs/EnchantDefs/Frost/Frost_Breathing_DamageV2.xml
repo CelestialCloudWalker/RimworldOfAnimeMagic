@@ -1,25 +1,46 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Frost_Breathing_Damage</defName>
     <label>frost freeze</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} froze where they stood.</deathMessage>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <deathMessage>{0} froze solid where they stood, entombed in ice.</deathMessage>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <defaultStoppingPower>0.3</defaultStoppingPower>
+    <stabChanceOfForcedInternal>0.05</stabChanceOfForcedInternal>
     <hediff>FreezingOfFrost</hediff>
     <hediffSkin>FreezingOfFrost</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
-    <impactSoundType>Slice</impactSoundType>
     <armorCategory>Sharp</armorCategory>
-    <harmsHealth>true</harmsHealth>
+    <impactSoundType>Slice</impactSoundType>
+    <minDamageToFragment>18</minDamageToFragment>
+    <defaultDamage>7</defaultDamage>
+    <defaultArmorPenetration>0.05</defaultArmorPenetration>
     <overkillPctToDestroyPart>0.1</overkillPctToDestroyPart>
+    <additionalHediffs>
+      <li>
+        <hediff>Hypothermia</hediff>
+        <severityPerDamageDealt>0.05</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>0.5</buildingDamageFactor>
+    <plantDamageFactor>1.5</plantDamageFactor>
+    <corpseDamageFactor>0.8</corpseDamageFactor>
+    <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>FreezingOfFrost</defName>
     <label>frost freeze</label>
     <labelNoun>a frost freeze</labelNoun>
-    <description>Tissue frozen solid. Circulation halted and necrosis setting in.</description>
+    <description>Tissue frozen solid by supernatural cold. Circulation halted, necrosis setting in, movement growing sluggish as ice crystallizes within the flesh.</description>
     <displayWound>false</displayWound>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
@@ -42,6 +63,12 @@
           <ComfyTemperatureMin>-5</ComfyTemperatureMin>
           <ComfyTemperatureMax>3</ComfyTemperatureMax>
         </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.06</offset>
+          </li>
+        </capMods>
       </li>
       <li>
         <minSeverity>0.3</minSeverity>
@@ -49,6 +76,16 @@
           <ComfyTemperatureMin>-12</ComfyTemperatureMin>
           <ComfyTemperatureMax>8</ComfyTemperatureMax>
         </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
       </li>
       <li>
         <minSeverity>0.5</minSeverity>
@@ -56,6 +93,20 @@
           <ComfyTemperatureMin>-20</ComfyTemperatureMin>
           <ComfyTemperatureMax>15</ComfyTemperatureMax>
         </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.28</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.18</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
       </li>
       <li>
         <minSeverity>0.8</minSeverity>
@@ -63,6 +114,24 @@
           <ComfyTemperatureMin>-30</ComfyTemperatureMin>
           <ComfyTemperatureMax>25</ComfyTemperatureMax>
         </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.42</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.28</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <injuryProps>
@@ -70,8 +139,9 @@
       <averagePainPerSeverityPermanent>0.01</averagePainPerSeverityPermanent>
       <bleedRate>0</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Frozen off</destroyedLabel>
-      <destroyedOutLabel>Frozen solid</destroyedOutLabel>
+      <destroyedLabel>frozen off</destroyedLabel>
+      <destroyedOutLabel>frozen solid</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Disorder</defName>
+    <label>Disorder</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Akaza unleashes a rapid volley of compressed air shockwaves in a cone, overwhelming opponents with relentless pressure.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>22</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>6</range>
+      <warmupTime>0.3</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>4</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>3</rectWidth>
+        <rectLength>6</rectLength>
+        <repeatAmount>3</repeatAmount>
+        <damageInterval>8</damageInterval>
+        <impactEffecter>DS_Effecter_AkazaShockwaveImpact_Light</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>3 hits of 4 Blunt in a forward cone.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.91</cooldownMultiplier>
+        <resourceCostMultiplier>1.045</resourceCostMultiplier>
+        <description>4 hits of 5 Blunt.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>5</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>3</rectWidth>
+            <rectLength>7</rectLength>
+            <repeatAmount>4</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact_Light</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <resourceCostMultiplier>1.136</resourceCostMultiplier>
+        <description>5 hits of 6 Blunt. Cone widened.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>6</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>7</rectLength>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact_Light</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.73</cooldownMultiplier>
+        <resourceCostMultiplier>1.182</resourceCostMultiplier>
+        <description>6 hits of 8 Blunt. Shockwaves fire faster.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>8</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>7</rectLength>
+            <repeatAmount>6</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact_Light</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.64</cooldownMultiplier>
+        <resourceCostMultiplier>1.273</resourceCostMultiplier>
+        <description>8 hits of 10 Blunt. Each hit stuns for 60 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>10</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>7</rectLength>
+            <repeatAmount>8</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <stunChance>1.0</stunChance>
+            <stunDuration>60</stunDuration>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact_Light</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.55</cooldownMultiplier>
+        <resourceCostMultiplier>1.364</resourceCostMultiplier>
+        <description>Perfected. 10 hits of 13 Blunt. Wider shockwave radius. Stun 60 ticks per hit. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>13</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>7</rectWidth>
+            <rectLength>9</rectLength>
+            <repeatAmount>10</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <stunChance>1.0</stunChance>
+            <stunDuration>60</stunDuration>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact_Light</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

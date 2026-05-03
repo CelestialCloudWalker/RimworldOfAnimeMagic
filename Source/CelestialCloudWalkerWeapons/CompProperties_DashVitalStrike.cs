@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -21,29 +22,34 @@ namespace AnimeArsenal
             IntVec3 startPosition = casterPawn.Position;
             Map map = casterPawn.Map;
 
-            List<IntVec3> dashPath = GetDashPath(casterPawn, target.Thing.Position, map);
-
-            if (dashPath != null && dashPath.Count > 0)
+            if (Props.castEffecter != null)
             {
-                ExecuteDash(casterPawn, dashPath, map);
+                Effecter e = Props.castEffecter.Spawn();
+                e.Trigger(new TargetInfo(startPosition, map), new TargetInfo(startPosition, map));
+                e.Cleanup();
             }
+
+            List<IntVec3> dashPath = GetDashPath(casterPawn, target.Thing.Position, map);
+            if (dashPath != null && dashPath.Count > 0)
+                ExecuteDash(casterPawn, dashPath, map);
 
             if (Props.initialStrikeDamage > 0)
-            {
                 ApplyStrikeDamage(casterPawn, target.Pawn, Props.initialStrikeDamage,
                     Props.initialStrikeArmorPen, Props.damageType);
-            }
 
             ApplyVitalOrganDamage(casterPawn, target.Pawn);
 
             if (Props.stunDuration > 0)
-            {
                 ApplyStun(target.Pawn, Props.stunDuration);
-            }
 
             if (Props.effectRadius > 0)
-            {
                 ApplyAoEDamage(casterPawn, target.Thing.Position);
+
+            if (Props.impactEffecter != null)
+            {
+                Effecter e = Props.impactEffecter.Spawn();
+                e.Trigger(new TargetInfo(target.Thing.Position, map), new TargetInfo(target.Thing.Position, map));
+                e.Cleanup();
             }
 
             SpawnDashEffects(startPosition, target.Thing.Position, dashPath, map);
@@ -67,9 +73,7 @@ namespace AnimeArsenal
                 IntVec3 cell = interpolated.ToIntVec3();
 
                 if (cell.InBounds(map) && cell.Standable(map))
-                {
                     path.Add(cell);
-                }
             }
 
             IntVec3 finalPos = path.LastOrDefault();
@@ -77,9 +81,7 @@ namespace AnimeArsenal
             {
                 if (CellFinder.TryFindRandomCellNear(targetPos, map, 2,
                     (IntVec3 c) => c.Standable(map) && c != targetPos, out IntVec3 validCell))
-                {
                     path.Add(validCell);
-                }
             }
 
             return path;
@@ -90,14 +92,22 @@ namespace AnimeArsenal
             if (path == null || path.Count == 0) return;
 
             IntVec3 finalPosition = path[path.Count - 1];
-
             caster.Position = finalPosition;
             caster.Notify_Teleported(false, true);
 
             if (path.Count > 1)
             {
-                IntVec3 direction = path[path.Count - 1] - path[path.Count - 2];
-                caster.Rotation = Rot4.FromIntVec3(direction);
+                IntVec3 raw = path[path.Count - 1] - path[path.Count - 2];
+                IntVec3 cardinal = new IntVec3(Math.Sign(raw.x), 0, Math.Sign(raw.z));
+                if (cardinal.x != 0 && cardinal.z != 0)
+                {
+                    if (Math.Abs(raw.x) >= Math.Abs(raw.z))
+                        cardinal.z = 0;
+                    else
+                        cardinal.x = 0;
+                }
+                if (cardinal != IntVec3.Zero)
+                    caster.Rotation = Rot4.FromIntVec3(cardinal);
             }
         }
 
@@ -106,10 +116,7 @@ namespace AnimeArsenal
             if (target == null || target.Dead) return;
 
             if (Props.scaleStat != null)
-            {
-                float statValue = instigator.GetStatValue(Props.scaleStat);
-                damage *= statValue;
-            }
+                damage *= instigator.GetStatValue(Props.scaleStat);
 
             if (Props.additionalDamageFactorFromMeleeSkill > 0)
             {
@@ -133,6 +140,27 @@ namespace AnimeArsenal
                 if (!hasGene) return;
             }
 
+            float hitChance = Props.vitalStrikeBaseChance;
+
+            if (Props.scaleChanceByMeleeSkill)
+            {
+                float attackerMelee = instigator.skills?.GetSkill(SkillDefOf.Melee)?.Level ?? 0f;
+                float defenderMelee = target.skills?.GetSkill(SkillDefOf.Melee)?.Level ?? 0f;
+                hitChance += (attackerMelee - defenderMelee) * 0.02f;
+            }
+
+            hitChance = Mathf.Clamp(hitChance, Props.vitalStrikeMinChance, Props.vitalStrikeMaxChance);
+
+            if (Rand.Value > hitChance)
+            {
+                if (Props.showMissMessage && !string.IsNullOrEmpty(Props.missMessage))
+                {
+                    string msg = Props.missMessage.Replace("{INSTIGATOR}", instigator.LabelShortCap);
+                    Messages.Message(msg, instigator, MessageTypeDefOf.NeutralEvent, false);
+                }
+                return;
+            }
+
             List<BodyPartRecord> targetParts = GetTargetBodyParts(target);
 
             if (targetParts?.Count > 0)
@@ -141,12 +169,8 @@ namespace AnimeArsenal
                 {
                     DamageInfo dinfo = new DamageInfo(
                         Props.vitalOrganDamageType ?? Props.damageType,
-                        Props.vitalOrganDamage,
-                        Props.vitalOrganArmorPen,
-                        -1f,
-                        instigator,
-                        part);
-
+                        Props.vitalOrganDamage, Props.vitalOrganArmorPen,
+                        -1f, instigator, part);
                     target.TakeDamage(dinfo);
                 }
             }
@@ -154,11 +178,8 @@ namespace AnimeArsenal
             {
                 DamageInfo dinfo = new DamageInfo(
                     Props.vitalOrganDamageType ?? Props.damageType,
-                    Props.vitalOrganDamage,
-                    Props.vitalOrganArmorPen,
-                    -1f,
-                    instigator);
-
+                    Props.vitalOrganDamage, Props.vitalOrganArmorPen,
+                    -1f, instigator);
                 target.TakeDamage(dinfo);
             }
         }
@@ -178,9 +199,7 @@ namespace AnimeArsenal
             }
 
             if (Props.targetVitalOrgans)
-            {
                 return GetVitalOrgans(pawn);
-            }
 
             return null;
         }
@@ -188,7 +207,6 @@ namespace AnimeArsenal
         private List<BodyPartRecord> GetVitalOrgans(Pawn pawn)
         {
             var vitalParts = new List<BodyPartRecord>();
-
             var vitalOrganDefNames = Props.vitalOrganDefNames ?? new List<string>
             {
                 "Heart", "Brain", "Liver", "Kidney", "Lung", "Stomach"
@@ -197,9 +215,7 @@ namespace AnimeArsenal
             foreach (var part in pawn.RaceProps.body.AllParts)
             {
                 if (vitalOrganDefNames.Contains(part.def.defName))
-                {
                     vitalParts.Add(part);
-                }
             }
 
             return vitalParts.Count > 0 ? vitalParts : null;
@@ -208,30 +224,25 @@ namespace AnimeArsenal
         private void ApplyStun(Pawn target, int duration)
         {
             if (target == null || target.Dead) return;
-
             target.stances?.stunner?.StunFor(duration, parent.pawn);
         }
 
         private void ApplyAoEDamage(Pawn instigator, IntVec3 center)
         {
             if (Props.effectRadius <= 0) return;
-
             Map map = instigator.Map;
             if (map == null) return;
 
-            IEnumerable<IntVec3> cells = GenRadial.RadialCellsAround(center, Props.effectRadius, true);
-
-            foreach (IntVec3 cell in cells)
+            foreach (IntVec3 cell in GenRadial.RadialCellsAround(center, Props.effectRadius, true))
             {
                 if (!cell.InBounds(map)) continue;
-
-                List<Thing> things = cell.GetThingList(map);
-                foreach (Thing thing in things)
+                foreach (Thing thing in cell.GetThingList(map))
                 {
                     if (thing is Pawn pawn && pawn != instigator && pawn.HostileTo(instigator))
                     {
                         float aoeDamage = Props.initialStrikeDamage * 0.5f;
-                        DamageInfo dinfo = new DamageInfo(Props.damageType, aoeDamage, Props.initialStrikeArmorPen * 0.5f, -1f, instigator);
+                        DamageInfo dinfo = new DamageInfo(Props.damageType, aoeDamage,
+                            Props.initialStrikeArmorPen * 0.5f, -1f, instigator);
                         pawn.TakeDamage(dinfo);
                     }
                 }
@@ -241,27 +252,17 @@ namespace AnimeArsenal
         private void SpawnDashEffects(IntVec3 start, IntVec3 end, List<IntVec3> path, Map map)
         {
             if (Props.dashStartMote != null)
-            {
                 MoteMaker.MakeStaticMote(start, map, Props.dashStartMote);
-            }
 
             if (Props.dashTrailMote != null && path != null)
-            {
                 foreach (IntVec3 cell in path)
-                {
                     MoteMaker.MakeStaticMote(cell, map, Props.dashTrailMote);
-                }
-            }
 
             if (Props.dashEndMote != null)
-            {
                 MoteMaker.MakeStaticMote(end, map, Props.dashEndMote);
-            }
 
             if (Props.dashSound != null)
-            {
                 Props.dashSound.PlayOneShot(new TargetInfo(end, map));
-            }
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
@@ -272,8 +273,7 @@ namespace AnimeArsenal
                     Messages.Message("Must target a pawn", MessageTypeDefOf.RejectInput, false);
                 return false;
             }
-
-            return base.Valid(target, throwMessages);
+            return true;
         }
     }
 
@@ -295,10 +295,18 @@ namespace AnimeArsenal
         public float vitalOrganDamage = 0f;
         public float vitalOrganArmorPen = 0f;
         public DamageDef vitalOrganDamageType;
-        public string targetGene; 
-
-        public int stunDuration = 0; 
+        public string targetGene;
+        public EffecterDef castEffecter;
+        public EffecterDef impactEffecter;
+        public int stunDuration = 0;
         public float effectRadius = 0f;
+
+        public float vitalStrikeBaseChance = 0.65f;
+        public float vitalStrikeMinChance = 0.10f;
+        public float vitalStrikeMaxChance = 0.90f;
+        public bool scaleChanceByMeleeSkill = true;
+        public bool showMissMessage = true;
+        public string missMessage = "{INSTIGATOR}'s strike failed to find the neck.";
 
         public CompProperties_DashVitalStrike()
         {

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Speed_QuickCuts</defName>
+    <label>Quick Cuts</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Chain teleport slashes to multiple targets in rapid succession. Each upgrade adds another chain hit.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>0</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>2</maxJumps>
+        <ticksBetweenJumps>4</ticksBetweenJumps>
+        <jumpDistance>5</jumpDistance>
+        <targetSearchRadius>8</targetSearchRadius>
+        <jumpDamageDef>Cut</jumpDamageDef>
+        <jumpDamage>14</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>14 Cut. Chains to 2 targets within range 8.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.913</cooldownMultiplier>
+        <resourceCostMultiplier>1.036</resourceCostMultiplier>
+        <description>16 Cut. Chains to 3 targets.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>3</maxJumps>
+            <ticksBetweenJumps>4</ticksBetweenJumps>
+            <jumpDistance>5</jumpDistance>
+            <targetSearchRadius>8</targetSearchRadius>
+            <jumpDamageDef>Cut</jumpDamageDef>
+            <jumpDamage>16</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.827</cooldownMultiplier>
+        <resourceCostMultiplier>1.107</resourceCostMultiplier>
+        <description>18 Cut. Chains to 4 targets.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>4</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>5</jumpDistance>
+            <targetSearchRadius>8</targetSearchRadius>
+            <jumpDamageDef>Cut</jumpDamageDef>
+            <jumpDamage>18</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.740</cooldownMultiplier>
+        <resourceCostMultiplier>1.214</resourceCostMultiplier>
+        <description>22 Cut. Chains to 5 targets.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>5</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>8</targetSearchRadius>
+            <jumpDamageDef>Cut</jumpDamageDef>
+            <jumpDamage>22</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.653</cooldownMultiplier>
+        <resourceCostMultiplier>1.321</resourceCostMultiplier>
+        <description>26 Cut. Chains to 6 targets. Chain range extended to 10.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>6</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>10</targetSearchRadius>
+            <jumpDamageDef>Cut</jumpDamageDef>
+            <jumpDamage>26</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.567</cooldownMultiplier>
+        <resourceCostMultiplier>1.464</resourceCostMultiplier>
+        <description>Perfected. 32 Cut. Chains to 8 targets. Range 10. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>8</maxJumps>
+            <ticksBetweenJumps>1</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>10</targetSearchRadius>
+            <jumpDamageDef>Cut</jumpDamageDef>
+            <jumpDamage>32</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

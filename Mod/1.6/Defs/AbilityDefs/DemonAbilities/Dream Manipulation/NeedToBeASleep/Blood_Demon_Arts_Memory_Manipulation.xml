@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Memory_Manipulation</defName>
+    <label>Blood Demon Arts: Memory Manipulation</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>A blood demon art that plants false memories in sleeping targets' minds.</description>
+    <iconPath>UI/Abilities/DemonSleepAbility3</iconPath>
+    <displayOrder>213</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3</range>
+      <warmupTime>4.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>MemoryImplantation</dreamEffectType>
+        <effectSeverity>0.4</effectSeverity>
+        <memoryImplantHediff>MemoryDisorientation</memoryImplantHediff>
+        <implantedMemoryThoughts>
+          <li>ImplantedMemory_Loss</li>
+        </implantedMemoryThoughts>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Implants ImplantedMemory_Loss (-12 mood, 8d). Applies MemoryDisorientation. Range 3. Warmup 4s.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>65</experienceRequired>
+        <resourceCostMultiplier>1.08</resourceCostMultiplier>
+        <description>Memory implantation more vivid. effectSeverity 0.50. Warmup 3.5s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.50</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>140</experienceRequired>
+        <resourceCostMultiplier>1.20</resourceCostMultiplier>
+        <description>Betrayal memory unlocked. Implants Loss + Betrayal thoughts. Applies MemoryDisorientation_L3. Range 4. Warmup 3s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.58</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation_L3</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+              <li>ImplantedMemory_Betrayal</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <resourceCostMultiplier>1.32</resourceCostMultiplier>
+        <description>Loss + Betrayal memories implanted. MemoryDisorientation_L3. effectSeverity 0.65. Range 5.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.65</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation_L3</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+              <li>ImplantedMemory_Betrayal</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>390</experienceRequired>
+        <resourceCostMultiplier>1.48</resourceCostMultiplier>
+        <description>Victory memory unlocked. Implants Loss + Betrayal + Victory. Applies MemoryDisorientation_L5. Range 5. Warmup 2s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.75</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation_L5</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+              <li>ImplantedMemory_Betrayal</li>
+              <li>ImplantedMemory_Victory</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>570</experienceRequired>
+        <resourceCostMultiplier>1.60</resourceCostMultiplier>
+        <description>Perfected. Full memory rewrite. Loss + Betrayal + Victory implanted. MemoryDisorientation_L5. effectSeverity 0.85. Range 6. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.85</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation_L5</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+              <li>ImplantedMemory_Betrayal</li>
+              <li>ImplantedMemory_Victory</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

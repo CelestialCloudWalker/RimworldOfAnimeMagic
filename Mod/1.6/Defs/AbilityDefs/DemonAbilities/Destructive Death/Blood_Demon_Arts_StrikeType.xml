@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Akaza_StrikeType</defName>
+    <label>Strike Type</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Akaza closes the distance in an instant, delivering a precise short-range strike. Higher mastery adds additional hits in rapid succession.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>18</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1.5</range>
+      <warmupTime>0.4</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+        <baseDamage>16</baseDamage>
+        <damageDef>Cut</damageDef>
+        <armorPen>0.2</armorPen>
+        <repeatAmount>1</repeatAmount>
+        <damageInterval>8</damageInterval>
+        <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>16 Cut damage. Single instant strike.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.913</cooldownMultiplier>
+        <description>19 Cut damage. Single instant strike.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>19</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <repeatAmount>1</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.827</cooldownMultiplier>
+        <resourceCostMultiplier>1.111</resourceCostMultiplier>
+        <description>19 Cut damage x2 hits in rapid succession.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>19</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <repeatAmount>2</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.74</cooldownMultiplier>
+        <resourceCostMultiplier>1.167</resourceCostMultiplier>
+        <description>24 Cut damage x2 hits.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>24</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <repeatAmount>2</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.653</cooldownMultiplier>
+        <resourceCostMultiplier>1.278</resourceCostMultiplier>
+        <description>24 Cut damage x3 hits. Vital variant available when Compass Needle is active.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>24</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <repeatAmount>3</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.567</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <description>Perfected. 33 Cut damage x3 hits. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>33</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <repeatAmount>3</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_AkazaGeometricActivate</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

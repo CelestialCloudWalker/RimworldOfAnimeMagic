@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef Name="AA_DemonHornBase" Abstract="True">
+    <biostatCpx>0</biostatCpx>
+    <endogeneCategory>Headbone</endogeneCategory>
+    <displayCategory>Cosmetic</displayCategory>
+    <displayOrderInCategory>110</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <randomChosen>true</randomChosen>
+    <exclusionTags>
+      <li>Headbone</li>
+      <li>AA_DemonHorn</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <GeneDef ParentName="AA_DemonHornBase">
+    <defName>AA_DemonHorn_Curved</defName>
+    <label>curved demon horn</label>
+    <description>Carriers of this gene grow a single curved horn, a subtle mark of demonic blood.</description>
+    <iconPath>UI/Icons/Genes/Gene_HeadboneCenterhorn</iconPath>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>DemonHorns/Demon_Horn</texPath>
+        <shaderTypeDef>CutoutComplex</shaderTypeDef>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+            <offset>(0.0, 0.0, 0.0)</offset>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+            <offset>(0.0, 0.0, 0.02)</offset>
+          </dataNorth>
+          <dataEast>
+            <layer>80</layer>
+            <offset>(0.0, 0.0, 0.0)</offset>
+          </dataEast>
+          <dataSouth>
+            <layer>80</layer>
+            <offset>(0.0, 0.0, 0.0)</offset>
+          </dataSouth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>demon</symbol></li>
+        <li><symbol>oni</symbol></li>
+        <li><symbol>kib</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>horn</symbol></li>
+        <li><symbol>spike</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef ParentName="AA_DemonHornBase">
+    <defName>AA_DemonHorn_Swept</defName>
+    <label>swept demon horns</label>
+    <description>Carriers of this gene grow a pair of horns swept back from the skull, a common mark of demonic heritage.</description>
+    <iconPath>UI/Icons/Genes/Gene_HeadboneMinihorns</iconPath>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>DemonHorns/Demon_Horn1</texPath>
+        <shaderTypeDef>CutoutComplex</shaderTypeDef>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+            <offset>(0.0, 0.0, 0.0)</offset>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+            <offset>(0.0, 0.0, 0.02)</offset>
+          </dataNorth>
+          <dataEast>
+            <layer>80</layer>
+            <offset>(0.0, 0.0, 0.0)</offset>
+          </dataEast>
+          <dataSouth>
+            <layer>80</layer>
+            <offset>(0.0, 0.0, 0.0)</offset>
+          </dataSouth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>demon</symbol></li>
+        <li><symbol>devil</symbol></li>
+        <li><symbol>hell</symbol></li>
+        <li><symbol>oni</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>horn</symbol></li>
+        <li><symbol>fang</symbol></li>
+        <li><symbol>vil</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef ParentName="AA_DemonHornBase">
+    <defName>AA_DemonHorn_Devil</defName>
+    <label>demon horns</label>
+    <description>Carriers of this gene grow a prominent pair of upward-curving devil horns, an unmistakable sign of demonic origin.</description>
+    <iconPath>UI/Icons/Genes/Gene_HeadboneMinihorns</iconPath>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>DemonHorns/Demon_Horn2</texPath>
+        <shaderTypeDef>CutoutComplex</shaderTypeDef>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+            <offset>(0.0, 0.0, 0.0)</offset>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+            <offset>(0.0, 0.0, 0.02)</offset>
+          </dataNorth>
+          <dataEast>
+            <layer>80</layer>
+            <offset>(0.0, 0.0, 0.0)</offset>
+          </dataEast>
+          <dataSouth>
+            <layer>80</layer>
+            <offset>(0.0, 0.0, 0.0)</offset>
+          </dataSouth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>devil</symbol></li>
+        <li><symbol>luci</symbol></li>
+        <li><symbol>beelze</symbol></li>
+        <li><symbol>demon</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>horn</symbol></li>
+        <li><symbol>spike</symbol></li>
+        <li><symbol>vil</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+</Defs>

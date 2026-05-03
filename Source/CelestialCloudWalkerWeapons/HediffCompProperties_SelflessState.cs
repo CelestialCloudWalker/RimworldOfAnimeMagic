@@ -1,27 +1,21 @@
 ﻿using RimWorld;
-using System;
 using System.Linq;
 using UnityEngine;
 using Verse;
-using Verse.AI;
+using HarmonyLib;
 
 namespace AnimeArsenal
 {
     public class SelflessStateProperties : DefModExtension
     {
         public int durationTicks = 1000;
-        public int fadeDurationTicks = 75;
     }
 
     public class Hediff_SelflessState : HediffWithComps
     {
         private int ticksRemaining;
         private bool initialized = false;
-        private int fadeTicksRemaining = 0;
-
         private SelflessStateProperties Properties => def.GetModExtension<SelflessStateProperties>();
-
-        public bool IsInvisible => initialized && fadeTicksRemaining <= 0 && ticksRemaining > 0;
 
         public override void PostAdd(DamageInfo? dinfo)
         {
@@ -29,7 +23,6 @@ namespace AnimeArsenal
             if (!initialized && Properties != null)
             {
                 ticksRemaining = Properties.durationTicks;
-                fadeTicksRemaining = Properties.fadeDurationTicks;
                 initialized = true;
             }
         }
@@ -37,21 +30,13 @@ namespace AnimeArsenal
         public override void Tick()
         {
             base.Tick();
-            if (this.pawn == null || !this.pawn.Spawned)
-                return;
-
+            if (pawn == null || !pawn.Spawned) return;
             if (Properties != null && ticksRemaining > 0)
             {
                 ticksRemaining--;
-
-                if (fadeTicksRemaining > 0)
-                {
-                    fadeTicksRemaining--;
-                }
-
                 if (ticksRemaining <= 0)
                 {
-                    this.pawn.health.RemoveHediff(this);
+                    pawn.health.RemoveHediff(this);
                     return;
                 }
             }
@@ -61,7 +46,6 @@ namespace AnimeArsenal
         {
             base.ExposeData();
             Scribe_Values.Look(ref ticksRemaining, "ticksRemaining", 0);
-            Scribe_Values.Look(ref fadeTicksRemaining, "fadeTicksRemaining", 0);
             Scribe_Values.Look(ref initialized, "initialized", false);
         }
 
@@ -70,17 +54,11 @@ namespace AnimeArsenal
             get
             {
                 if (Properties != null && ticksRemaining > 0)
-                {
-                    int secondsRemaining = Mathf.CeilToInt(ticksRemaining / 60f);
-                    return secondsRemaining + "s";
-                }
+                    return Mathf.CeilToInt(ticksRemaining / 60f) + "s";
                 return base.LabelInBrackets;
             }
         }
 
-        public override bool TryMergeWith(Hediff other)
-        {
-            return false;
-        }
+        public override bool TryMergeWith(Hediff other) => false;
     }
 }

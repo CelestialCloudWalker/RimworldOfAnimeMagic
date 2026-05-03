@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_CompassNeedle</defName>
+    <label>Compass Needle</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Akaza's instinct sharpens with every blow exchanged, granting increasing dodge and damage. Grants access to Vital Shot while active.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>0</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>5</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleEnchantDemon">
+        <enchantDef>Compass_Needle_Technique_1</enchantDef>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Toggle. +4% severity per melee hit. Each 20% severity: +5% dodge, +4% damage. Drain 3 resource / 100 ticks. Grants Vital Shot access.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <description>Severity gain per hit increased to +4.4%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchantDemon">
+            <enchantDef>Compass_Needle_Technique_2</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>Compass Needle refined. Severity gain +4.4%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchantDemon">
+            <enchantDef>Compass_Needle_Technique_3</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>Dodge bonus per 20% severity increased to +6%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchantDemon">
+            <enchantDef>Compass_Needle_Technique_4</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <description>Compass Needle refined further. Dodge +6% per 20% severity.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchantDemon">
+            <enchantDef>Compass_Needle_Technique_5</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <description>Perfected. On the Edge activates at 75% severity. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleEnchantDemon">
+            <enchantDef>Compass_Needle_Technique_6</enchantDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

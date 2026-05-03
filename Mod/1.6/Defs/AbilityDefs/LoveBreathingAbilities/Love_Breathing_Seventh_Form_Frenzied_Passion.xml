@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Love_Breathing_Seventh_Form_Frenzied_Passion</defName>
+    <label>Seventh Form: Frenzied Passion</label>
+    <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+    <iconPath>UI/Abilities/AbilityMultiDash</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>25</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>15</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>4</maxJumps>
+        <ticksBetweenJumps>4</ticksBetweenJumps>
+        <jumpDistance>5</jumpDistance>
+        <targetSearchRadius>12</targetSearchRadius>
+        <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+        <jumpDamage>4~5</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <debugScaling>true</debugScaling>
+        <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <description>5~7 damage. Dashes to 5 targets. Search radius extended.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>5</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>5</jumpDistance>
+            <targetSearchRadius>14</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>5~7</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>6~9 damage. Dashes to 6 targets. Jump distance increased.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>6</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>17</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>6~9</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>650</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>7~11 damage. Dashes to 7 targets. Range doubled.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>7</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>20</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>7~11</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>8~13 Love. Dashes to 7 targets. Jump distance and search radius increased.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>7</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>23</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>8~13</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <debugScaling>true</debugScaling>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1350</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. 10~15 damage. Dashes to 10 targets at blinding speed. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>10</maxJumps>
+            <ticksBetweenJumps>1</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>27</targetSearchRadius>
+            <jumpDamageDef>Love_Breathing_Damage</jumpDamageDef>
+            <jumpDamage>10~15</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <casterEffecter>AnimeArsenal_LoveJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_LoveHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

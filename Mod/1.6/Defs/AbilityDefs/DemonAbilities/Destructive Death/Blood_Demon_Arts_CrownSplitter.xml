@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Akaza_CrownSplitter</defName>
+    <label>Leg Type: Crown Splitter</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>A powerful leg strike that sends a shockwave outward, damaging and stunning nearby enemies.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>0.6</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+        <baseDamage>20</baseDamage>
+        <damageDef>Blunt</damageDef>
+        <armorPen>0.15</armorPen>
+        <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+        <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>8</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>4</rectWidth>
+        <rectLength>4</rectLength>
+        <useOriginAsCenter>true</useOriginAsCenter>
+        <stunChance>1.0</stunChance>
+        <stunDuration>180</stunDuration>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>20 Blunt direct hit. 8 Blunt AoE shockwave. Stuns nearby enemies for 180 ticks.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.036</resourceCostMultiplier>
+        <description>23 Blunt direct hit. 10 Blunt AoE shockwave in a wider radius. Stuns 180 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>23</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.15</armorPen>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>10</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>5</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <stunChance>1.0</stunChance>
+            <stunDuration>180</stunDuration>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.107</resourceCostMultiplier>
+        <description>28 Blunt direct hit. 13 Blunt AoE. Stun duration increased to 230 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>28</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.15</armorPen>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>13</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>5</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <stunChance>1.0</stunChance>
+            <stunDuration>230</stunDuration>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.179</resourceCostMultiplier>
+        <description>34 Blunt direct hit with increased armor penetration. 18 Blunt AoE. Stun 230 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>34</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.30</armorPen>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>18</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>5</rectWidth>
+            <rectLength>5</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <stunChance>1.0</stunChance>
+            <stunDuration>230</stunDuration>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <description>40 Blunt direct hit. 24 Blunt AoE. Explosion radius doubled. Stun 230 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>40</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.30</armorPen>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>24</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>10</rectWidth>
+            <rectLength>10</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <stunChance>1.0</stunChance>
+            <stunDuration>230</stunDuration>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.56</cooldownMultiplier>
+        <resourceCostMultiplier>1.357</resourceCostMultiplier>
+        <description>Perfected. 48 Blunt direct hit. 32 Blunt AoE in a massive radius. Stun 230 ticks. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>48</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.30</armorPen>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>32</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>10</rectWidth>
+            <rectLength>10</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <stunChance>1.0</stunChance>
+            <stunDuration>230</stunDuration>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

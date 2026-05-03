@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_DreamNeedle</defName>
+    <label>Blood Demon Arts: Dream Needle</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Causes targets to fall asleep instantly.</description>
+    <iconPath>UI/Abilities/DemonSleepAbilitySleep</iconPath>
+    <cooldownTicksRange>100</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>1.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <useSleepHediff>false</useSleepHediff>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <sleepDurationHours>4</sleepDurationHours>
+        <maxTargets>1</maxTargets>
+        <range>12</range>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Forces 1 target asleep for 4 hours. Range 12.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.90</cooldownMultiplier>
+        <resourceCostMultiplier>1.10</resourceCostMultiplier>
+        <description>Sleep duration 5h. Range 14. Faster cast.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>5</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>14</range>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>110</experienceRequired>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <resourceCostMultiplier>1.20</resourceCostMultiplier>
+        <description>Sleep duration 6h. Range 16. Can hit up to 2 targets.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>6</sleepDurationHours>
+            <maxTargets>2</maxTargets>
+            <range>16</range>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <description>Sleep 6h. Range 18. 2 targets. Faster cooldown.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>6</sleepDurationHours>
+            <maxTargets>2</maxTargets>
+            <range>18</range>
+
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.65</cooldownMultiplier>
+        <resourceCostMultiplier>1.50</resourceCostMultiplier>
+        <description>Sleep duration 8h. Range 20. Up to 3 targets.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>8</sleepDurationHours>
+            <maxTargets>3</maxTargets>
+            <range>20</range>
+
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>480</experienceRequired>
+        <cooldownMultiplier>0.60</cooldownMultiplier>
+        <resourceCostMultiplier>1.60</resourceCostMultiplier>
+        <description>Perfected. 8h sleep. Range 20. 3 targets. Minimum cooldown. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>8</sleepDurationHours>
+            <maxTargets>3</maxTargets>
+            <range>20</range>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

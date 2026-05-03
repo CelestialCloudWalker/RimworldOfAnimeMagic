@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.AbilityResourceDef>
+    <defName>BloodDemonArts_Resource</defName>
+    <resourceName>Blood Art</resourceName>
+    <barColor>(0.545, 0.0, 0.0, 1.0)</barColor>
+    <maxStat>BloodDemonArts</maxStat>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>BreathingPotential_Resource</defName>
+    <resourceName>Breathing Potential</resourceName>
+    <barColor>(0.9, 0.9, 0.9, 1.0)</barColor>
+    <maxStat>BreathingPotential</maxStat>
+    <regenTicks>BreathingPotential_RegenTicks</regenTicks>
+    <regenStat>BreathingPotential_RegenAmount</regenStat>
+    <regenSpeedStat>BreathingPotential_RegenRate</regenSpeedStat>
+    <costMult>BreathingPotential_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>BeastBreath_Resource</defName>
+    <resourceName>Beast Breath</resourceName>
+    <barColor>(0.545, 0.271, 0.075)</barColor>
+    <maxStat>BeastBreath</maxStat>
+    <regenTicks>BeastBreath_RegenTicks</regenTicks>
+    <regenStat>BeastBreath_RegenAmount</regenStat>
+    <regenSpeedStat>BeastBreath_RegenRate</regenSpeedStat>
+    <costMult>BeastBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>FlameBreath_Resource</defName>
+    <resourceName>Flame Breath</resourceName>
+    <barColor>(1.0, 0.271, 0.0)</barColor>
+    <maxStat>FlameBreath</maxStat>
+    <regenTicks>FlameBreath_RegenTicks</regenTicks>
+    <regenStat>FlameBreath_RegenAmount</regenStat>
+    <regenSpeedStat>FlameBreath_RegenRate</regenSpeedStat>
+    <costMult>FlameBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>FlowerBreath_Resource</defName>
+    <resourceName>Flower Breath</resourceName>
+    <barColor>(1.0, 0.714, 0.757)</barColor>
+    <maxStat>FlowerBreath</maxStat>
+    <regenTicks>FlowerBreath_RegenTicks</regenTicks>
+    <regenStat>FlowerBreath_RegenAmount</regenStat>
+    <regenSpeedStat>FlowerBreath_RegenRate</regenSpeedStat>
+    <costMult>FlowerBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>ForestBreath_Resource</defName>
+    <resourceName>Forest Breath</resourceName>
+    <barColor>(0.333, 0.420, 0.184)</barColor>
+    <maxStat>ForestBreath</maxStat>
+    <regenTicks>ForestBreath_RegenTicks</regenTicks>
+    <regenStat>ForestBreath_RegenAmount</regenStat>
+    <regenSpeedStat>ForestBreath_RegenRate</regenSpeedStat>
+    <costMult>ForestBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>FrostBreath_Resource</defName>
+    <resourceName>Frost Breath</resourceName>
+    <barColor>(0.678, 0.847, 0.902)</barColor>
+    <maxStat>FrostBreath</maxStat>
+    <regenTicks>FrostBreath_RegenTicks</regenTicks>
+    <regenStat>FrostBreath_RegenAmount</regenStat>
+    <regenSpeedStat>FrostBreath_RegenRate</regenSpeedStat>
+    <costMult>FrostBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>InsectBreath_Resource</defName>
+    <resourceName>Insect Breath</resourceName>
+    <barColor>(0.855, 0.439, 0.839)</barColor>
+    <maxStat>InsectBreath</maxStat>
+    <regenTicks>InsectBreath_RegenTicks</regenTicks>
+    <regenStat>InsectBreath_RegenAmount</regenStat>
+    <regenSpeedStat>InsectBreath_RegenRate</regenSpeedStat>
+    <costMult>InsectBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>LoveBreath_Resource</defName>
+    <resourceName>Love Breath</resourceName>
+    <barColor>(1.0, 0.714, 0.757)</barColor>
+    <maxStat>LoveBreath</maxStat>
+    <regenTicks>LoveBreath_RegenTicks</regenTicks>
+    <regenStat>LoveBreath_RegenAmount</regenStat>
+    <regenSpeedStat>LoveBreath_RegenRate</regenSpeedStat>
+    <costMult>LoveBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>MistBreath_Resource</defName>
+    <resourceName>Mist Breath</resourceName>
+    <barColor>(0.753, 0.753, 0.753)</barColor>
+    <maxStat>MistBreath</maxStat>
+    <regenTicks>MistBreath_RegenTicks</regenTicks>
+    <regenStat>MistBreath_RegenAmount</regenStat>
+    <regenSpeedStat>MistBreath_RegenRate</regenSpeedStat>
+    <costMult>MistBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>MoonBreath_Resource</defName>
+    <resourceName>Moon Breath</resourceName>
+    <barColor>(0.541, 0.169, 0.886)</barColor>
+    <maxStat>MoonBreath</maxStat>
+    <regenTicks>MoonBreath_RegenTicks</regenTicks>
+    <regenStat>MoonBreath_RegenAmount</regenStat>
+    <regenSpeedStat>MoonBreath_RegenRate</regenSpeedStat>
+    <costMult>MoonBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>SerpentBreath_Resource</defName>
+    <resourceName>Serpent Breath</resourceName>
+    <barColor>(0.541, 0.169, 0.886)</barColor>
+    <maxStat>SerpentBreath</maxStat>
+    <regenTicks>SerpentBreath_RegenTicks</regenTicks>
+    <regenStat>SerpentBreath_RegenAmount</regenStat>
+    <regenSpeedStat>SerpentBreath_RegenRate</regenSpeedStat>
+    <costMult>SerpentBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>SoundBreath_Resource</defName>
+    <resourceName>Sound Breath</resourceName>
+    <barColor>(1.0, 0.843, 0.0)</barColor>
+    <maxStat>SoundBreath</maxStat>
+    <regenTicks>SoundBreath_RegenTicks</regenTicks>
+    <regenStat>SoundBreath_RegenAmount</regenStat>
+    <regenSpeedStat>SoundBreath_RegenRate</regenSpeedStat>
+    <costMult>SoundBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>StoneBreath_Resource</defName>
+    <resourceName>Stone Breath</resourceName>
+    <barColor>(0.663, 0.663, 0.663)</barColor>
+    <maxStat>StoneBreath</maxStat>
+    <regenTicks>StoneBreath_RegenTicks</regenTicks>
+    <regenStat>StoneBreath_RegenAmount</regenStat>
+    <regenSpeedStat>StoneBreath_RegenRate</regenSpeedStat>
+    <costMult>StoneBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>SunBreath_Resource</defName>
+    <resourceName>Sun Breath</resourceName>
+    <barColor>(1.0, 0.271, 0.0)</barColor>
+    <maxStat>SunBreath</maxStat>
+    <regenTicks>SunBreath_RegenTicks</regenTicks>
+    <regenStat>SunBreath_RegenAmount</regenStat>
+    <regenSpeedStat>SunBreath_RegenRate</regenSpeedStat>
+    <costMult>SunBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>ThunderBreath_Resource</defName>
+    <resourceName>Thunder Breath</resourceName>
+    <barColor>(0.0, 0.749, 1.0)</barColor>
+    <maxStat>ThunderBreath</maxStat>
+    <regenTicks>ThunderBreath_RegenTicks</regenTicks>
+    <regenStat>ThunderBreath_RegenAmount</regenStat>
+    <regenSpeedStat>ThunderBreath_RegenRate</regenSpeedStat>
+    <costMult>ThunderBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>WaterBreath_Resource</defName>
+    <resourceName>Water Breath</resourceName>
+    <barColor>(0.0, 0.412, 0.580)</barColor>
+    <maxStat>WaterBreath</maxStat>
+    <regenTicks>WaterBreath_RegenTicks</regenTicks>
+    <regenStat>WaterBreath_RegenAmount</regenStat>
+    <regenSpeedStat>WaterBreath_RegenRate</regenSpeedStat>
+    <costMult>WaterBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+  <EMF.AbilityResourceDef>
+    <defName>WindBreath_Resource</defName>
+    <resourceName>Wind Breath</resourceName>
+    <barColor>(0.196, 0.804, 0.196)</barColor>
+    <maxStat>WindBreath</maxStat>
+    <regenTicks>WindBreath_RegenTicks</regenTicks>
+    <regenStat>WindBreath_RegenAmount</regenStat>
+    <regenSpeedStat>WindBreath_RegenRate</regenSpeedStat>
+    <costMult>WindBreath_Cost</costMult>
+    <regenTicksDefault>2500</regenTicksDefault>
+    <regenStatDefault>5</regenStatDefault>
+    <regenSpeedStatDefault>1</regenSpeedStatDefault>
+  </EMF.AbilityResourceDef>
+
+</Defs>

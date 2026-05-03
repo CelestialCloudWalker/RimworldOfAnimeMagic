@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Memory_Dream_Parasite</defName>
+    <label>Blood Demon Arts: Dream Parasite</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enter a sleeping target's dreams and steal their knowledge and skills.</description>
+    <iconPath>UI/Abilities/DemonAbilitySkillSteal</iconPath>
+    <displayOrder>214</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>2</range>
+      <warmupTime>5.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>SkillTransfer</dreamEffectType>
+        <effectSeverity>0.25</effectSeverity>
+        <transferFromTarget>true</transferFromTarget>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Steals skill XP from a sleeping target. effectSeverity 0.25. Range 2. Warmup 5s.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <resourceCostMultiplier>1.10</resourceCostMultiplier>
+        <description>More skill XP extracted. effectSeverity 0.33. Warmup 4.5s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.33</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>170</experienceRequired>
+        <resourceCostMultiplier>1.20</resourceCostMultiplier>
+        <description>Deeper extraction. effectSeverity 0.42. Range 3. Warmup reduced to 3.5s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.42</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <resourceCostMultiplier>1.33</resourceCostMultiplier>
+        <description>Skilled dreamer. effectSeverity 0.50. Range 3. Warmup 3.0s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.50</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>460</experienceRequired>
+        <resourceCostMultiplier>1.47</resourceCostMultiplier>
+        <description>Master parasite. effectSeverity 0.58. Range extended to 4. Warmup 2.5s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.58</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>660</experienceRequired>
+        <resourceCostMultiplier>1.60</resourceCostMultiplier>
+        <description>Perfected. Maximum skill extraction. effectSeverity 0.65. Range 5. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>SkillTransfer</dreamEffectType>
+            <effectSeverity>0.65</effectSeverity>
+            <transferFromTarget>true</transferFromTarget>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

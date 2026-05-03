@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_Stomp</defName>
+    <label>Rime: Stomp</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Rime slams the ground with tremendous force, dealing heavy damage in the immediate impact zone while the shockwave stuns all enemies in a wider radius.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>20</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>3</rectWidth>
+        <rectLength>3</rectLength>
+        <useOriginAsCenter>true</useOriginAsCenter>
+        <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <damage>10</damage>
+        <damageDef>Blunt</damageDef>
+        <radius>3</radius>
+        <affectCaster>false</affectCaster>
+        <effecter>RimKetsu_Effecter_DomaIceSpray</effecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>20 Blunt in inner 3x3. 10 Blunt + 60t stun in outer radius 3.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>24 Blunt in inner 4x4. 12 Blunt + 60t stun in outer radius 3.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>24</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>12</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>3</radius>
+            <affectCaster>false</affectCaster>
+            <effecter>RimKetsu_Effecter_DomaIceSpray</effecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>30 Blunt in inner 4x4. 15 Blunt + 90t stun in outer radius 3.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>30</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>15</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>3</radius>
+            <affectCaster>false</affectCaster>
+            <effecter>RimKetsu_Effecter_DomaIceSpray</effecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.3</resourceCostMultiplier>
+        <description>38 Blunt in inner 4x4. 19 Blunt + 90t stun in wider outer radius 4.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>38</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>19</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>4</radius>
+            <affectCaster>false</affectCaster>
+            <effecter>RimKetsu_Effecter_DomaIceSpray</effecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <description>46 Blunt in inner 4x4. 24 Blunt + 90t stun in outer radius 4.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>46</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>24</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>4</radius>
+            <affectCaster>false</affectCaster>
+            <effecter>RimKetsu_Effecter_DomaIceSpray</effecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.56</cooldownMultiplier>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <description>Perfected. 56 Blunt in inner 4x4. 30 Blunt + 150t stun in outer radius 5. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>56</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>30</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>5</radius>
+            <affectCaster>false</affectCaster>
+            <effecter>RimKetsu_Effecter_DomaIceSpray</effecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

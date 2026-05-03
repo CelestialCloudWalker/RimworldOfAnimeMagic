@@ -10,22 +10,25 @@
     <degreeDatas>
       <li>
         <label>compound eyes</label>
-        <description>[PAWN_nameDef] sees the world through multifaceted compound eyes. [PAWN_possessive] LevelTwo vision grants LevelThree accuracy and the ability to work effectively even in complete darkness.</description>
+        <description>[PAWN_nameDef] sees differently. [PAWN_possessive] visual field is wider, [PAWN_possessive] motion tracking faster, [PAWN_possessive] aim noticeably better as a result. [PAWN_pronoun] also spots things [PAWN_pronoun] probably wasn't meant to, which makes [PAWN_objective] occasionally difficult to be around.</description>
         <degree>1</degree>
         <statOffsets>
-          <ShootingAccuracyPawn>8</ShootingAccuracyPawn>
+          <ShootingAccuracyPawn>0.08</ShootingAccuracyPawn>
           <TrapSpringChance>-0.6</TrapSpringChance>
           <ResearchSpeed>0.2</ResearchSpeed>
           <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <SocialImpact>-0.15</SocialImpact>
         </statOffsets>
         <skillGains>
           <Shooting>5</Shooting>
           <Intellectual>3</Intellectual>
+          <Social>-1</Social>
         </skillGains>
         <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>ChitinousSkin</defName>
@@ -33,14 +36,13 @@
     <degreeDatas>
       <li>
         <label>chitinous skin</label>
-        <description>[PAWN_nameDef] has developed a tough, insect-like carapace. [PAWN_possessive] natural armor protects [PAWN_objective] from harm, though [PAWN_possessive] appearance unsettles others.</description>
+        <description>[PAWN_nameDef] has developed a carapace where skin used to be. It works — cuts that would wound others don't get through cleanly, blunt trauma distributes differently. It also looks like exactly what it is, and most people react to it accordingly.</description>
         <degree>1</degree>
         <statOffsets>
           <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
           <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
           <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
           <SocialImpact>-0.4</SocialImpact>
-          <PawnBeauty>-2</PawnBeauty>
         </statOffsets>
         <skillGains>
           <Animals>2</Animals>
@@ -51,6 +53,7 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>HiveMind</defName>
     <commonality>0</commonality>
@@ -60,7 +63,7 @@
     <degreeDatas>
       <li>
         <label>hive mind</label>
-        <description>[PAWN_nameDef] functions as part of a collective consciousness. [PAWN_pronoun] excels when working with others but struggles with individual creativity and independent thought.</description>
+        <description>[PAWN_nameDef] functions best as part of something. Coordinated work, shared tasks, collective effort — [PAWN_pronoun] slots into group dynamics better than most people understand their own role. Alone, asked to create or think independently, [PAWN_pronoun] loses something essential.</description>
         <degree>1</degree>
         <statOffsets>
           <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
@@ -79,27 +82,29 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>Metamorphosis</defName>
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>metamorphosis</label>
-        <description>[PAWN_nameDef] undergoes constant internal change like an insect in metamorphosis. [PAWN_possessive] body and mind adapt continuously, learning and growing stronger over time.</description>
+        <description>[PAWN_nameDef] learns fast and heals quickly — two things that look like separate traits but probably have the same source. [PAWN_pronoun] adapts to new skills with less friction than most, and minor injuries don't linger the way they do for others.</description>
         <degree>1</degree>
         <statOffsets>
           <GlobalLearningFactor>0.35</GlobalLearningFactor>
           <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
-          <InjuryHealingFactor>0.3</InjuryHealingFactor>
+          <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
         </statOffsets>
         <skillGains>
           <Intellectual>2</Intellectual>
           <Medicine>2</Medicine>
         </skillGains>
-        <marketValueFactorOffset>0.15</marketValueFactorOffset>
+        <marketValueFactorOffset>0.08</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>SwarmTactics</defName>
@@ -110,14 +115,16 @@
     <degreeDatas>
       <li>
         <label>swarm tactics</label>
-        <description>[PAWN_nameDef] fights with the coordinated fury of a swarm. [PAWN_pronoun] becomes increasingly effective with more allies nearby, but falters when isolated.</description>
+        <description>[PAWN_nameDef] fights with a coordination instinct that seems almost involuntary — reading positions, filling gaps, pressing pressure. [PAWN_pronoun] works alone when necessary but operates differently when others are fighting nearby. Colony isolation makes [PAWN_objective] restless in ways that eventually surface.</description>
         <degree>1</degree>
         <statOffsets>
-          <MeleeHitChance>6</MeleeHitChance>
-          <MeleeDPS>0.15</MeleeDPS>
+          <MeleeHitChance>0.06</MeleeHitChance>
           <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
           <MentalBreakThreshold>0.1</MentalBreakThreshold>
         </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+        </statFactors>
         <skillGains>
           <Melee>4</Melee>
           <Social>2</Social>
@@ -127,17 +134,17 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>InsectoidDigestion</defName>
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>insectoid digestion</label>
-        <description>[PAWN_nameDef] can digest almost any organic matter like an insect. [PAWN_pronoun] never suffers from food poisoning and can sustain [PAWN_objective] on the most basic nutrients.</description>
+        <description>[PAWN_nameDef] processes organic matter with a thoroughness that has no equivalent in normal biology. Food poisoning isn't something [PAWN_pronoun] experiences. [PAWN_possessive] body extracts nutrition from things others can't touch. The social cost of eating in front of people is [PAWN_possessive] to manage.</description>
         <degree>1</degree>
         <statOffsets>
           <FoodPoisonChance>-1.0</FoodPoisonChance>
-          <BedHungerRateFactor>0.8</BedHungerRateFactor>
           <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
           <SocialImpact>-0.2</SocialImpact>
         </statOffsets>
@@ -150,6 +157,7 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>WebWeaving</defName>
     <commonality>0</commonality>
@@ -159,17 +167,19 @@
     <degreeDatas>
       <li>
         <label>web weaving</label>
-        <description>[PAWN_nameDef] spins intricate patterns like a spider weaving its web. [PAWN_possessive] delicate touch excels at textile work and trap construction, creating both functional and beautiful designs.</description>
+        <description>[PAWN_nameDef] works with a precision that's almost unsettling to watch — fine, repetitive, deliberate. Textiles, traps, anything that rewards patience and a steady hand. [PAWN_pronoun] has no interest in speed and no patience for work that doesn't reward care.</description>
         <degree>1</degree>
         <statOffsets>
           <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
           <ConstructionSpeed>0.2</ConstructionSpeed>
           <TrapSpringChance>-0.4</TrapSpringChance>
+          <SocialImpact>-0.15</SocialImpact>
         </statOffsets>
         <skillGains>
           <Crafting>5</Crafting>
           <Artistic>3</Artistic>
           <Construction>2</Construction>
+          <Social>-1</Social>
         </skillGains>
         <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>

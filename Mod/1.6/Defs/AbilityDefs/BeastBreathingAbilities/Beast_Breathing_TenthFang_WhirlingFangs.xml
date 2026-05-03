@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Beast_Breathing_TenthFang_WhirlingFangs</defName>
+    <label>Beast Breathing: Tenth Fang — Whirling Fangs</label>
+    <description>Both swords spin in rapid overlapping circles, the blades becoming a blur that intercepts anything flying toward the user. Arrows, bolts, bullets — all of it deflected by the constant rotation of dual steel. A technique born not from training but from pure wild instinct.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>470</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>14</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <radius>3.5</radius>
+        <TicksActive>700</TicksActive>
+        <MaxShotsToReflect>12</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+        <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Spin both swords to deflect incoming projectiles. Deflects up to 12 shots over 700 ticks. Radius 3.5 tiles.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>140</experienceRequired>
+        <resourceCostMultiplier>0.96</resourceCostMultiplier>
+        <description>Deflects up to 16 shots. Duration extends to 900 ticks.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>4.0</radius>
+            <TicksActive>900</TicksActive>
+            <MaxShotsToReflect>16</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <resourceCostMultiplier>0.94</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>Deflects up to 22 shots. Radius widens to 4.5 tiles. Duration 1100 ticks.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>4.5</radius>
+            <TicksActive>1100</TicksActive>
+            <MaxShotsToReflect>22</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <resourceCostMultiplier>0.92</resourceCostMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>Deflects up to 29 shots. Duration 1400 ticks. The spin covers allies nearby.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>5.0</radius>
+            <TicksActive>1400</TicksActive>
+            <MaxShotsToReflect>29</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <resourceCostMultiplier>0.90</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>Deflects up to 38 shots over 1700 ticks. Wide radius. A sustained wall of spinning steel.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>5.5</radius>
+            <TicksActive>1700</TicksActive>
+            <MaxShotsToReflect>38</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <resourceCostMultiplier>0.90</resourceCostMultiplier>
+        <cooldownMultiplier>0.78</cooldownMultiplier>
+        <description>Perfected. Deflects up to 50 shots over 2100 ticks across a 6-tile radius. Both blades spin without pause — an impenetrable wall of rotating steel. Max Level.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>6.0</radius>
+            <TicksActive>2100</TicksActive>
+            <MaxShotsToReflect>50</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_BeastReflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

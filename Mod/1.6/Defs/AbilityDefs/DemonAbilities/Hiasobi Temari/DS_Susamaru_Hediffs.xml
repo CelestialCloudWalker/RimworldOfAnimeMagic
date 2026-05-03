@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>DS_SusamaruBall_Barrage_Lifespan_L1</defName>
+    <label>temari ball — active</label>
+    <description>This temari ball will dissolve when its demonic energy is spent.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.95, 0.60, 0.80)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>10</damageAmount>
+        <intervalTicks>150</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_SusamaruBall_Barrage_Lifespan_L2</defName>
+    <label>temari ball — active</label>
+    <description>This temari ball will dissolve when its demonic energy is spent.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.93, 0.56, 0.77)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>12</damageAmount>
+        <intervalTicks>150</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_SusamaruBall_Barrage_Lifespan_L3</defName>
+    <label>temari ball — active</label>
+    <description>This temari ball will dissolve when its demonic energy is spent.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.90, 0.52, 0.74)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>16</damageAmount>
+        <intervalTicks>130</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_SusamaruBall_Barrage_Lifespan_L4</defName>
+    <label>temari ball — active</label>
+    <description>This temari ball will dissolve when its demonic energy is spent.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.87, 0.47, 0.70)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4200</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>18</damageAmount>
+        <intervalTicks>110</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_SusamaruBall_Barrage_Lifespan_L5</defName>
+    <label>temari ball — active</label>
+    <description>This temari ball will dissolve when its demonic energy is spent.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.83, 0.42, 0.66)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>22</damageAmount>
+        <intervalTicks>100</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_SusamaruBall_Barrage_Lifespan_L6</defName>
+    <label>temari ball — active</label>
+    <description>This temari ball will dissolve when its demonic energy is spent.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.78, 0.36, 0.61)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>28</damageAmount>
+        <intervalTicks>90</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>AA_Selfess_State_Ability</defName>
     <label>Selfess State</label>
     <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
     <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>1200</cooldownTicksRange>
     <targetRequired>false</targetRequired>
-    <requiredGeneDefName>Gene_BreathingPotential</requiredGeneDefName>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>30</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -62,7 +62,7 @@
         </levelComps>
       </li>
       <li>
-        <labelSuffix> (LevelFour)</labelSuffix>
+        <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>750</experienceRequired>
         <description>Erases fighting intent, masking the user from enemies' senses and aggression.</description>
         <resourceCostMultiplier>1.8</resourceCostMultiplier>
@@ -74,7 +74,7 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 
   <HediffDef>
     <defName>AnimeArsenal_SelflessLevelOne</defName>
@@ -86,6 +86,13 @@
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1.0</maxSeverity>
     <duplicationAllowed>false</duplicationAllowed>
+    <comps>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+        <fadeDurationTicks>50</fadeDurationTicks>
+        <affectedByDisruptor>false</affectedByDisruptor>
+      </li>
+    </comps>
     <stages>
       <li>
         <statOffsets>
@@ -110,7 +117,6 @@
     <modExtensions>
       <li Class="AnimeArsenal.SelflessStateProperties">
         <durationTicks>2400</durationTicks>
-        <fadeDurationTicks>50</fadeDurationTicks>
       </li>
     </modExtensions>
   </HediffDef>
@@ -125,6 +131,13 @@
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1.0</maxSeverity>
     <duplicationAllowed>false</duplicationAllowed>
+    <comps>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+        <fadeDurationTicks>75</fadeDurationTicks>
+        <affectedByDisruptor>false</affectedByDisruptor>
+      </li>
+    </comps>
     <stages>
       <li>
         <statOffsets>
@@ -154,7 +167,6 @@
     <modExtensions>
       <li Class="AnimeArsenal.SelflessStateProperties">
         <durationTicks>2880</durationTicks>
-        <fadeDurationTicks>75</fadeDurationTicks>
       </li>
     </modExtensions>
   </HediffDef>
@@ -169,6 +181,13 @@
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1.0</maxSeverity>
     <duplicationAllowed>false</duplicationAllowed>
+    <comps>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+        <fadeDurationTicks>100</fadeDurationTicks>
+        <affectedByDisruptor>false</affectedByDisruptor>
+      </li>
+    </comps>
     <stages>
       <li>
         <statOffsets>
@@ -202,7 +221,6 @@
     <modExtensions>
       <li Class="AnimeArsenal.SelflessStateProperties">
         <durationTicks>3600</durationTicks>
-        <fadeDurationTicks>100</fadeDurationTicks>
       </li>
     </modExtensions>
   </HediffDef>
@@ -217,6 +235,13 @@
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1.0</maxSeverity>
     <duplicationAllowed>false</duplicationAllowed>
+    <comps>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+        <fadeDurationTicks>150</fadeDurationTicks>
+        <affectedByDisruptor>false</affectedByDisruptor>
+      </li>
+    </comps>
     <stages>
       <li>
         <statOffsets>
@@ -250,8 +275,8 @@
     <modExtensions>
       <li Class="AnimeArsenal.SelflessStateProperties">
         <durationTicks>4320</durationTicks>
-        <fadeDurationTicks>150</fadeDurationTicks>
       </li>
     </modExtensions>
   </HediffDef>
+
 </Defs>

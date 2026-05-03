@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_A_Kinder_Truth</defName>
+    <label>Blood Demon Arts: A Kinder Truth</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enmu forces a waking target into sleep then plants false memories while they're under. Implanting into an unwilling mind is far harder — only darker, simpler memories take hold.</description>
+    <iconPath>UI/Abilities/DemonSleepAbility3</iconPath>
+    <displayOrder>213</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>33</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3</range>
+      <warmupTime>5.0</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <useSleepHediff>false</useSleepHediff>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <sleepDurationHours>3</sleepDurationHours>
+        <maxTargets>1</maxTargets>
+        <range>3</range>
+        <showMessage>true</showMessage>
+        <overrideMessage>{pawn} has been pulled into {caster}'s dream!</overrideMessage>
+
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>MemoryImplantation</dreamEffectType>
+        <effectSeverity>0.25</effectSeverity>
+        <memoryImplantHediff>MemoryDisorientation</memoryImplantHediff>
+        <implantedMemoryThoughts>
+          <li>ImplantedMemory_Loss</li>
+        </implantedMemoryThoughts>
+        <showMessage>true</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Forces target asleep (3h) then implants ImplantedMemory_Loss. MemoryDisorientation applied. effectSeverity 0.25. Range 3.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>65</experienceRequired>
+        <resourceCostMultiplier>1.091</resourceCostMultiplier>
+        <description>effectSeverity 0.32. Range 3. Warmup 4.5s.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>3</range>
+            <showMessage>true</showMessage>
+            <overrideMessage>{pawn} has been pulled into {caster}'s dream!</overrideMessage>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.32</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>140</experienceRequired>
+        <resourceCostMultiplier>1.212</resourceCostMultiplier>
+        <description>Upgraded to MemoryDisorientation_L3. effectSeverity 0.38. Range 4.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>4</range>
+            <showMessage>true</showMessage>
+            <overrideMessage>{pawn} has been pulled into {caster}'s dream!</overrideMessage>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.38</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation_L3</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <resourceCostMultiplier>1.364</resourceCostMultiplier>
+        <description>Betrayal memory unlocked. Loss + Betrayal implanted. MemoryDisorientation_L3. effectSeverity 0.43. Range 4.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>4</range>
+            <showMessage>true</showMessage>
+            <overrideMessage>{pawn} has been pulled into {caster}'s dream!</overrideMessage>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.43</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation_L3</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+              <li>ImplantedMemory_Betrayal</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>390</experienceRequired>
+        <resourceCostMultiplier>1.515</resourceCostMultiplier>
+        <description>Upgraded to MemoryDisorientation_L5. Loss + Betrayal. effectSeverity 0.49. Range 5.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>5</range>
+            <showMessage>true</showMessage>
+            <overrideMessage>{pawn} has been pulled into {caster}'s dream!</overrideMessage>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.49</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation_L5</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+              <li>ImplantedMemory_Betrayal</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>570</experienceRequired>
+        <resourceCostMultiplier>1.697</resourceCostMultiplier>
+        <description>Perfected. Loss + Betrayal. MemoryDisorientation_L5. effectSeverity 0.55. Range 5. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>3</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>5</range>
+            <showMessage>true</showMessage>
+            <overrideMessage>{pawn} has been pulled into {caster}'s dream!</overrideMessage>
+
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>MemoryImplantation</dreamEffectType>
+            <effectSeverity>0.55</effectSeverity>
+            <memoryImplantHediff>MemoryDisorientation_L5</memoryImplantHediff>
+            <implantedMemoryThoughts>
+              <li>ImplantedMemory_Loss</li>
+              <li>ImplantedMemory_Betrayal</li>
+            </implantedMemoryThoughts>
+            <showMessage>true</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

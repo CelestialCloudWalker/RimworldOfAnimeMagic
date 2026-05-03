@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Nezuko_ExplodingBlood</defName>
+    <label>Demon Blood Art: Exploding Blood</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Nezuko detonates all Blood Marked targets in range, triggering a massive explosion of demon blood. Deals heavy damage — especially devastating to demons — and leaves regen-suppressing burns behind.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>35</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <damage>28</damage>
+        <damageDef>Burn</damageDef>
+        <radius>2</radius>
+        <affectCaster>false</affectCaster>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Detonates Blood Marked targets. 28 Flame damage in radius 2 around caster. Hits all hostiles.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.913</cooldownMultiplier>
+        <resourceCostMultiplier>1.029</resourceCostMultiplier>
+        <description>34 Flame. Bonus damage x1.3 vs demons. Radius 2.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>34</damage>
+            <damageDef>Burn</damageDef>
+            <radius>2</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.827</cooldownMultiplier>
+        <resourceCostMultiplier>1.114</resourceCostMultiplier>
+        <description>40 Flame. Explosion radius expanded to 3. Demon x1.3.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>40</damage>
+            <damageDef>Burn</damageDef>
+            <radius>3</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.740</cooldownMultiplier>
+        <resourceCostMultiplier>1.200</resourceCostMultiplier>
+        <description>50 Flame. Applies DS_RegenDown_2000 hediff on hit (2000t regen suppression). Radius 3. Demon x1.3.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>50</damage>
+            <damageDef>Burn</damageDef>
+            <radius>3</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.653</cooldownMultiplier>
+        <resourceCostMultiplier>1.314</resourceCostMultiplier>
+        <description>60 Flame. Regen suppression doubled to 4000t. Radius 3. Demon x1.3.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>60</damage>
+            <damageDef>Burn</damageDef>
+            <radius>3</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.567</cooldownMultiplier>
+        <resourceCostMultiplier>1.429</resourceCostMultiplier>
+        <description>Perfected. 75 Flame. Demon x1.5. Radius 4. Regen-down 4000t. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>75</damage>
+            <damageDef>Burn</damageDef>
+            <radius>4</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

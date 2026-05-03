@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_CatloveSlash_Projectile_LOne</defName>
+    <label>catlove slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.2</drawSize>
+      <shaderParameters>
+        <_Color>(210, 255, 190, 255)</_Color>
+        <_brightnessMultiplier>1.4</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <armorPenetrationBase>0.12</armorPenetrationBase>
+      <ExplosionRadius>2.5</ExplosionRadius>
+      <stoppingPower>1.0</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>28</speed>
+      <arcHeightFactor>0.15</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>6</aoeDamage>
+      <leaveHazardDef>LoveBreathing_CatloveHazard_LOne</leaveHazardDef>
+      <trailHazardDef>LoveBreathing_CatloveHazard_LOne</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>6</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(210, 255, 190, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.18</MoteInterval>
+        <MoteDuration>38</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_CatloveSlash_Projectile_LTwo</defName>
+    <label>catlove slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.5</drawSize>
+      <shaderParameters>
+        <_Color>(230, 255, 175, 255)</_Color>
+        <_brightnessMultiplier>1.5</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>17</damageAmountBase>
+      <armorPenetrationBase>0.18</armorPenetrationBase>
+      <ExplosionRadius>2.8</ExplosionRadius>
+      <stoppingPower>1.1</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>31</speed>
+      <arcHeightFactor>0.15</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>8</aoeDamage>
+      <leaveHazardDef>LoveBreathing_CatloveHazard_LTwo</leaveHazardDef>
+      <trailHazardDef>LoveBreathing_CatloveHazard_LTwo</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>6</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(230, 255, 175, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.15</MoteInterval>
+        <MoteDuration>42</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_CatloveSlash_Projectile_LThree</defName>
+    <label>catlove slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.8</drawSize>
+      <shaderParameters>
+        <_Color>(255, 240, 155, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>21</damageAmountBase>
+      <armorPenetrationBase>0.26</armorPenetrationBase>
+      <ExplosionRadius>3.2</ExplosionRadius>
+      <stoppingPower>1.2</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>34</speed>
+      <arcHeightFactor>0.15</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>10</aoeDamage>
+      <leaveHazardDef>LoveBreathing_CatloveHazard_LThree</leaveHazardDef>
+      <trailHazardDef>LoveBreathing_CatloveHazard_LThree</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>7</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(255, 240, 155, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.13</MoteInterval>
+        <MoteDuration>46</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_CatloveSlash_Projectile_LFour</defName>
+    <label>catlove slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.0</drawSize>
+      <shaderParameters>
+        <_Color>(255, 190, 175, 255)</_Color>
+        <_brightnessMultiplier>1.75</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>26</damageAmountBase>
+      <armorPenetrationBase>0.34</armorPenetrationBase>
+      <ExplosionRadius>3.6</ExplosionRadius>
+      <stoppingPower>1.4</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>37</speed>
+      <arcHeightFactor>0.15</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>13</aoeDamage>
+      <leaveHazardDef>LoveBreathing_CatloveHazard_LFour</leaveHazardDef>
+      <trailHazardDef>LoveBreathing_CatloveHazard_LFour</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>8</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>23</glowRadius>
+        <glowColor>(255, 190, 175, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.11</MoteInterval>
+        <MoteDuration>50</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_CatloveSlash_Projectile_LFive</defName>
+    <label>catlove slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.3</drawSize>
+      <shaderParameters>
+        <_Color>(255, 140, 200, 255)</_Color>
+        <_brightnessMultiplier>1.9</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>32</damageAmountBase>
+      <armorPenetrationBase>0.44</armorPenetrationBase>
+      <ExplosionRadius>4.2</ExplosionRadius>
+      <stoppingPower>1.6</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>41</speed>
+      <arcHeightFactor>0.15</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>16</aoeDamage>
+      <leaveHazardDef>LoveBreathing_CatloveHazard_LFive</leaveHazardDef>
+      <trailHazardDef>LoveBreathing_CatloveHazard_LFive</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>8</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>26</glowRadius>
+        <glowColor>(255, 140, 200, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.09</MoteInterval>
+        <MoteDuration>55</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_CatloveSlash_Projectile_LSix</defName>
+    <label>catlove slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.8</drawSize>
+      <shaderParameters>
+        <_Color>(255, 80, 190, 255)</_Color>
+        <_brightnessMultiplier>2.2</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <armorPenetrationBase>0.56</armorPenetrationBase>
+      <ExplosionRadius>5.0</ExplosionRadius>
+      <stoppingPower>2.0</stoppingPower>
+      <ExplosionEffect>AnimeArsenal_WindJump</ExplosionEffect>
+      <speed>46</speed>
+      <arcHeightFactor>0.15</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>20</aoeDamage>
+      <leaveHazardDef>LoveBreathing_CatloveHazard_LSix</leaveHazardDef>
+      <trailHazardDef>LoveBreathing_CatloveHazard_LSix</trailHazardDef>
+      <trailSelectMode>Interval</trailSelectMode>
+      <trailSpawnRegion>WholePath</trailSpawnRegion>
+      <trailHazardInterval>3</trailHazardInterval>
+      <maxTrailHazards>9</maxTrailHazards>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>30</glowRadius>
+        <glowColor>(255, 80, 190, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.07</MoteInterval>
+        <MoteDuration>65</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

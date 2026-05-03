@@ -22,16 +22,26 @@ namespace AnimeArsenal
     {
         HediffCompProperties_Enchant Props => (HediffCompProperties_Enchant)props;
 
-        public void ApplyEnchant(Pawn TargetPawn)
+        public void ApplyEnchant(Pawn targetPawn)
         {
             if (Props.damageType != null && Props.damageValue > 0)
             {
-                TargetPawn.TakeDamage(new DamageInfo(Props.damageType, Props.damageValue));
+                targetPawn.TakeDamage(new DamageInfo(Props.damageType, Props.damageValue));
             }
 
             if (Props.hediffToApply != null)
             {
-                TargetPawn.health.AddHediff(Props.hediffToApply);
+                targetPawn.health.AddHediff(Props.hediffToApply);
+            }
+
+            EnchantDef enchantDef = DefDatabase<EnchantDef>.AllDefs
+                .FirstOrDefault(d => d.enchantHediff == parent.def);
+
+            if (enchantDef?.hitEffecter != null && targetPawn.Map != null)
+            {
+                enchantDef.hitEffecter
+                    .Spawn(targetPawn, targetPawn.Map)
+                    .Cleanup();
             }
         }
     }
@@ -49,10 +59,8 @@ namespace AnimeArsenal
     public class ApplyFaceTattoo : HediffComp
     {
         HediffCompProperties_ApplyFaceTattoo Props => (HediffCompProperties_ApplyFaceTattoo)props;
-
-
         private TattooDef OriginalTattoo = null;
-    
+
         public override void CompPostMake()
         {
             Log.Message("CompPostMake running for face tattoo");
@@ -70,11 +78,8 @@ namespace AnimeArsenal
         public override void CompPostPostRemoved()
         {
             base.CompPostPostRemoved();
-
-
             if (OriginalTattoo != null)
             {
-
                 this.Pawn.style.FaceTattoo = OriginalTattoo;
                 this.Pawn.style.Notify_StyleItemChanged();
             }
@@ -83,7 +88,6 @@ namespace AnimeArsenal
         public override void CompExposeData()
         {
             base.CompExposeData();
-
             Scribe_Defs.Look(ref OriginalTattoo, "originalTattoo");
         }
     }

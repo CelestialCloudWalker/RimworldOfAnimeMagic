@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Water_Breathing_WaterfallBasin</defName>
+    <label>Water Breathing: Waterfall Basin</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>The user leaps toward a chosen location and crashes down with tremendous force, delivering a concentrated heavy strike to enemies at the landing point.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>270</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>16</range>
+      <warmupTime>0.7</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+        <effectRadius>2.0</effectRadius>
+        <maxTargets>1</maxTargets>
+        <affectCaster>false</affectCaster>
+        <affectDowned>true</affectDowned>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <damage>14</damage>
+        <armorPenetration>0.1</armorPenetration>
+        <flingDistance>3</flingDistance>
+        <groundEffecter>AnimeArsenal_WaterHit2</groundEffecter>
+        <hitEffecter>AnimeArsenal_WaterHit2</hitEffecter>
+        <hitEffecterCount>5</hitEffecterCount>
+        <hitEffecterRadius>2.0</hitEffecterRadius>
+        <showMessages>true</showMessages>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Leap to a target location and crush enemies on landing. Small but punishing AoE.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <rangeMultiplier>1.15</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Heavier landing impact.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>2.0</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <damage>14</damage>
+            <armorPenetration>0.1</armorPenetration>
+            <flingDistance>3</flingDistance>
+            <groundEffecter>AnimeArsenal_WaterHit2</groundEffecter>
+            <hitEffecter>AnimeArsenal_WaterHit2</hitEffecter>
+            <hitEffecterCount>5</hitEffecterCount>
+            <hitEffecterRadius>2.0</hitEffecterRadius>
+            <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <rangeMultiplier>1.3</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Crashing descent with devastating impact force.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>2.0</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <damage>14</damage>
+            <armorPenetration>0.1</armorPenetration>
+            <flingDistance>3</flingDistance>
+            <groundEffecter>AnimeArsenal_WaterHit2</groundEffecter>
+            <hitEffecter>AnimeArsenal_WaterHit2</hitEffecter>
+            <hitEffecterCount>5</hitEffecterCount>
+            <hitEffecterRadius>2.0</hitEffecterRadius>
+            <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. A meteoric drop strike. Enormous landing damage at extended range. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>2.0</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <damage>14</damage>
+            <armorPenetration>0.1</armorPenetration>
+            <flingDistance>3</flingDistance>
+            <groundEffecter>AnimeArsenal_WaterHit2</groundEffecter>
+            <hitEffecter>AnimeArsenal_WaterHit2</hitEffecter>
+            <hitEffecterCount>5</hitEffecterCount>
+            <hitEffecterRadius>2.0</hitEffecterRadius>
+            <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

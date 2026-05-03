@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Abstract="True" Name="AA_Projectile_AntiDemonBombBase">
+    <thingClass>AnimeArsenal.Projectile_AntiDemonBomb</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <neverMultiSelect>true</neverMultiSelect>
+    <graphicData>
+      <texPath>Things/Item/Equipment/ADB_Bead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.3, 0.3)</drawSize>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <projectile>
+      <arcHeightFactor>2</arcHeightFactor>
+      <shadowSize>0.4</shadowSize>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="AA_Projectile_AntiDemonBombBase">
+    <defName>AA_Projectile_AntiDemonBomb</defName>
+    <label>anti-demon bomb</label>
+    <projectile Class="AnimeArsenal.ProjectileProperties_AntiDemonBomb">
+      <speed>28</speed>
+      <arcHeightFactor>2</arcHeightFactor>
+      <shadowSize>0.4</shadowSize>
+      <targetGenes>
+        <li>BloodDemonArt</li>
+      </targetGenes>
+      <damageAmount>25</damageAmount>
+      <explosionRadius>3</explosionRadius>
+      <armorPenetration>0.3</armorPenetration>
+      <applyHediff>DS_Stun_Hediff</applyHediff>
+      <hediffSeverity>0.5</hediffSeverity>
+      <impactEffecter>AA_AntidemonBombImpact</impactEffecter>
+      <explosionEffecter>AA_AntidemonBombImpact</explosionEffecter>
+      <onlyHostileBuildings>true</onlyHostileBuildings>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="AA_Projectile_AntiDemonBombBase">
+    <defName>AA_Projectile_AntiDemonBomb_Heavy</defName>
+    <label>anti-demon bomb (heavy)</label>
+    <projectile Class="AnimeArsenal.ProjectileProperties_AntiDemonBomb">
+      <speed>28</speed>
+      <arcHeightFactor>2</arcHeightFactor>
+      <shadowSize>0.4</shadowSize>
+      <targetGenes>
+        <li>BloodDemonArt</li>
+      </targetGenes>
+      <damageAmount>30</damageAmount>
+      <explosionRadius>3.5</explosionRadius>
+      <armorPenetration>0.4</armorPenetration>
+      <applyHediff>DS_Stun_Hediff</applyHediff>
+      <hediffSeverity>0.7</hediffSeverity>
+      <impactEffecter>AA_AntidemonBombImpact</impactEffecter>
+      <explosionEffecter>AA_AntidemonBombImpact</explosionEffecter>
+      <onlyHostileBuildings>true</onlyHostileBuildings>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseMakeableGrenade">
+    <defName>AA_AntiDemonBomb</defName>
+    <label>anti-demon bombs</label>
+    <description>A wisteria-laced explosive bead. Equip and throw at a target location. Detonates on impact, shredding demonic flesh and hostile structures while leaving non-demons completely unharmed.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Equipment/ADB_Bead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.15, 0.15)</drawSize>
+    </graphicData>
+    <uiIconScale>0.5</uiIconScale>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <Mass>0.3</Mass>
+      <MarketValue>180</MarketValue>
+      <Flammability>0</Flammability>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <WorkToMake>800</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Neutroamine>5</Neutroamine>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <weaponTags>
+      <li>GrenadeDestructive</li>
+      <li>AA_AntiDemonBombTag</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li>
+        <label>throw anti-demon bomb</label>
+        <verbClass>AnimeArsenal.Verb_ThrowAntiDemonBomb</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>18</range>
+        <warmupTime>0.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>true</canTargetPawns>
+        </targetParams>
+        <defaultProjectile>AA_Projectile_AntiDemonBomb</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <tradeability>Sellable</tradeability>
+    <smeltable>false</smeltable>
+  </ThingDef>
+
+</Defs>

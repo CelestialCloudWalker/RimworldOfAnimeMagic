@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Blood_Demon_Arts_Pain_Blade</defName>
     <label>Blood Demon Arts: Pain Blade</label>
     <category>BloodDemonArts_AbilityCaterogry</category>
@@ -12,7 +12,7 @@
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
-    <requiredGeneDefName>BloodDemonArt</requiredGeneDefName>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -44,10 +44,6 @@
         <experienceRequired>65</experienceRequired>
         <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.04</resourceCostMultiplier>
-        <verbProperties>
-          <range>22</range>
-          <warmupTime>0.48</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
             <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile_LevelTwo</projectileDef>
@@ -59,10 +55,6 @@
         <experienceRequired>150</experienceRequired>
         <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.08</resourceCostMultiplier>
-        <verbProperties>
-          <range>24</range>
-          <warmupTime>0.46</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
             <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile_LevelTwo</projectileDef>
@@ -74,10 +66,6 @@
         <experienceRequired>270</experienceRequired>
         <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.12</resourceCostMultiplier>
-        <verbProperties>
-          <range>27</range>
-          <warmupTime>0.44</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
             <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile_LevelThree</projectileDef>
@@ -89,10 +77,6 @@
         <experienceRequired>440</experienceRequired>
         <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.16</resourceCostMultiplier>
-        <verbProperties>
-          <range>30</range>
-          <warmupTime>0.42</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
             <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile_Advanced</projectileDef>
@@ -104,10 +88,6 @@
         <experienceRequired>680</experienceRequired>
         <description>A ranged technique that sends a slash toward targets.</description>
         <resourceCostMultiplier>1.2</resourceCostMultiplier>
-        <verbProperties>
-          <range>34</range>
-          <warmupTime>0.4</warmupTime>
-        </verbProperties>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
             <projectileDef>Blood_Demon_Arts_Pain_Blade_Projectile_Master</projectileDef>
@@ -115,5 +95,5 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

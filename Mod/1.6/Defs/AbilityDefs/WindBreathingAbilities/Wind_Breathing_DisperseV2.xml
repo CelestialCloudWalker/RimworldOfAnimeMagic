@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Wind_Breathing_Disperse</defName>
     <label>Wind Breathing: Disperse</label>
     <category>WindBreathing_Ability_Catergory</category>
     <description>A technique that creates cutting attacks around a targeted enemy.</description>
-    <iconPath>UI/Abilities/AbilityDash</iconPath>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
     <targetRequired>true</targetRequired>
-
-
-    <requiredGeneDefName>Gene_WindBreath</requiredGeneDefName>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <resourceCost>25</resourceCost>
     <baseExperienceGain>30</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
 
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>15</range>
+      <range>12</range>
       <warmupTime>1.0</warmupTime>
       <noiseRadius>8</noiseRadius>
       <requireLineOfSight>false</requireLineOfSight>
@@ -28,12 +29,11 @@
       </targetParams>
     </verbProperties>
 
-
     <comps>
       <li Class="EMF.CompProperties_AbilityDamageInRadius">
-        <radius>5</radius>
+        <radius>4</radius>
         <damageParms>
-          <damageAmount>6~9</damageAmount>
+          <damageAmount>9~13</damageAmount>
           <damageDef>Wind_Breathing_Damage</damageDef>
         </damageParms>
         <friendlyFireParms>
@@ -41,32 +41,28 @@
           <canTargetNeutral>true</canTargetNeutral>
           <canTargetFriendly>false</canTargetFriendly>
         </friendlyFireParms>
-        <explosionEffecterDef>AnimeArsenal_NatureHit2</explosionEffecterDef>
+        <explosionEffecterDef>AnimeArsenal_WindHit</explosionEffecterDef>
       </li>
     </comps>
 
     <levels>
-
       <li>
         <labelSuffix> (Level 1)</labelSuffix>
         <experienceRequired>0</experienceRequired>
         <description>A technique that creates cutting attacks around a targeted enemy.</description>
       </li>
 
-
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>180</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
-        <resourceCostMultiplier>1.08</resourceCostMultiplier>
-        <verbProperties>
-          <range>17</range>
-        </verbProperties>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Radius increased.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
             <radius>5</radius>
             <damageParms>
-              <damageAmount>8~12</damageAmount>
+              <damageAmount>12~17</damageAmount>
               <damageDef>Wind_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -74,25 +70,23 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef>AnimeArsenal_NatureHit2</explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_WindHit</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
-
 
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>400</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
-        <resourceCostMultiplier>1.16</resourceCostMultiplier>
-        <verbProperties>
-          <range>20</range>
-        </verbProperties>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Radius and range increased.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>5.8</radius>
+            <radius>6</radius>
             <damageParms>
-              <damageAmount>11~15</damageAmount>
+              <damageAmount>15~21</damageAmount>
               <damageDef>Wind_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -100,25 +94,23 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef>AnimeArsenal_NatureHit2</explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_WindHit</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
-
 
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>650</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
-        <resourceCostMultiplier>1.28</resourceCostMultiplier>
-        <verbProperties>
-          <range>23</range>
-        </verbProperties>
+        <resourceCostMultiplier>2.2</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Range doubled.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>7</radius>
+            <radius>6</radius>
             <damageParms>
-              <damageAmount>14~19</damageAmount>
+              <damageAmount>19~26</damageAmount>
               <damageDef>Wind_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -126,25 +118,23 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef>AnimeArsenal_NatureHit2</explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_WindHit</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
-
 
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>950</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
-        <resourceCostMultiplier>1.4</resourceCostMultiplier>
-        <verbProperties>
-          <range>26</range>
-        </verbProperties>
+        <resourceCostMultiplier>2.2</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>A technique that creates cutting attacks around a targeted enemy. Damage heightened.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>7.5</radius>
+            <radius>6</radius>
             <damageParms>
-              <damageAmount>17~24</damageAmount>
+              <damageAmount>23~31</damageAmount>
               <damageDef>Wind_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -152,25 +142,23 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef>AnimeArsenal_NatureHit2</explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_WindHit</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
-
 
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>1350</experienceRequired>
-        <description>A technique that creates cutting attacks around a targeted enemy.</description>
-        <resourceCostMultiplier>1.56</resourceCostMultiplier>
-        <verbProperties>
-          <range>30</range>
-        </verbProperties>
+        <resourceCostMultiplier>2.2</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. Devastates all enemies around the target in a wide arc of beast-style cuts. Max Level.</description>
         <levelComps>
           <li Class="EMF.CompProperties_AbilityDamageInRadius">
-            <radius>9</radius>
+            <radius>7</radius>
             <damageParms>
-              <damageAmount>21~29</damageAmount>
+              <damageAmount>28~37</damageAmount>
               <damageDef>Wind_Breathing_Damage</damageDef>
             </damageParms>
             <friendlyFireParms>
@@ -178,10 +166,11 @@
               <canTargetNeutral>true</canTargetNeutral>
               <canTargetFriendly>false</canTargetFriendly>
             </friendlyFireParms>
-            <explosionEffecterDef>AnimeArsenal_NatureHit2</explosionEffecterDef>
+            <explosionEffecterDef>AnimeArsenal_WindHit</explosionEffecterDef>
           </li>
         </levelComps>
       </li>
+
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

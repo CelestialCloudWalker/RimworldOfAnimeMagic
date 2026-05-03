@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Sound_Breathing_Reflect</defName>
     <label>Sound Breathing: Reflect</label>
-    <category>SoundBreathing_Ability_Catergory</category>
     <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
     <iconPath>UI/Abilities/DeflectAbility</iconPath>
     <targetRequired>false</targetRequired>
-
-
-    <requiredGeneDefName>Gene_SoundBreath</requiredGeneDefName>
+    <hostile>false</hostile>
+    <resourceDef>BeastBreath_Resource</resourceDef>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>8</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -18,7 +16,6 @@
       <verbClass>Verb_CastAbility</verbClass>
       <range>-1</range>
     </verbProperties>
-
 
     <comps>
       <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
@@ -48,12 +45,11 @@
         </levelComps>
       </li>
 
-
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>Wider deflection field. Reflects up to 15 shots.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
@@ -66,12 +62,11 @@
         </levelComps>
       </li>
 
-
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Extended duration. Reflects up to 21 shots.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
@@ -84,12 +79,11 @@
         </levelComps>
       </li>
 
-
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>450</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <description>Larger radius. Reflects up to 24 shots. Cost reduced.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
@@ -102,12 +96,11 @@
         </levelComps>
       </li>
 
-
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>700</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <description>Wide radius. Reflects up to 29 shots over an extended window.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
@@ -120,12 +113,11 @@
         </levelComps>
       </li>
 
-
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>1050</experienceRequired>
-        <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
         <resourceCostMultiplier>0.8</resourceCostMultiplier>
+        <description>Perfected. Maximum radius deflection field. Reflects up to 40 shots. Max Level.</description>
         <cumulativeEffects>false</cumulativeEffects>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
@@ -137,8 +129,9 @@
           </li>
         </levelComps>
       </li>
+
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 
   <HediffDef>
     <defName>AnimeArsenal_SoundDeflectionField</defName>
@@ -152,8 +145,8 @@
     <comps>
       <li Class="HediffCompProperties_Disappears">
         <disappearsAfterTicks>
-          <min>1000</min>
-          <max>1000</max>
+          <min>2350</min>
+          <max>2350</max>
         </disappearsAfterTicks>
       </li>
     </comps>

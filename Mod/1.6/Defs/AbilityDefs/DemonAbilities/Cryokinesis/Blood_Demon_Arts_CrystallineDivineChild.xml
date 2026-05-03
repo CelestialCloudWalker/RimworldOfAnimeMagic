@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef>
+    <defName>DS_DomaClone_Entity</defName>
+    <label>Crystalline Divine Child</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <combatPower>150</combatPower>
+    <initialResistanceRange><min>0</min><max>0</max></initialResistanceRange>
+    <initialWillRange><min>0</min><max>0</max></initialWillRange>
+    <skills>
+      <li><skill>Melee</skill></li>
+    </skills>
+    <weaponMoney><min>0</min><max>0</max></weaponMoney>
+    <apparelMoney><min>0</min><max>0</max></apparelMoney>
+  </PawnKindDef>
+
+  <HediffDef>
+    <defName>DS_DomaClone_Lifespan_1</defName>
+    <label>crystalline form</label>
+    <description>1.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-34.56</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>active</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_DomaClone_Lifespan_2</defName>
+    <label>crystalline form</label>
+    <description>2.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-21.6</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>active</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_DomaClone_Lifespan_3</defName>
+    <label>crystalline form</label>
+    <description>3.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-14.4</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>active</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_DomaClone_Lifespan_4</defName>
+    <label>crystalline form</label>
+    <description>4.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-9.6</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>active</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_CrystallineDivineChild</defName>
+    <label>Crystalline Divine Child</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Doma crystallizes part of his blood demon art into a smaller copy of himself that fights autonomously using his techniques. Higher mastery produces more copies that linger longer on the battlefield.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>8000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>55</resourceCost>
+    <baseExperienceGain>100</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>1.0</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="EMF.CompProperties_AbilitySummonPawn">
+        <summonKind>DS_DomaClone_Entity</summonKind>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_CloneSummon">
+        <copyName>true</copyName>
+        <copyApparel>true</copyApparel>
+        <copySkills>true</copySkills>
+        <copyTraits>true</copyTraits>
+        <copyGenes>true</copyGenes>
+        <copyAbilities>true</copyAbilities>
+        <summonKindPrefix>DS_DomaClone</summonKindPrefix>
+        <lifespanHediff>DS_DomaClone_Lifespan_1</lifespanHediff>
+        <blockedAbilities>
+          <li>DS_Doma_CrystallineDivineChild</li>
+          <li>DS_Doma_ColdWhitePrincesses</li>
+        </blockedAbilities>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Summons 1 Crystalline Divine Child that mirrors Doma's abilities. Lingers for a short time.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.925</cooldownMultiplier>
+        <resourceCostMultiplier>1.018</resourceCostMultiplier>
+        <description>Summons 1 Crystalline Divine Child. Clone lingers longer (~67s).</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_DomaClone_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <summonKindPrefix>DS_DomaClone</summonKindPrefix>
+            <lifespanHediff>DS_DomaClone_Lifespan_2</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_CrystallineDivineChild</li>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <resourceCostMultiplier>1.073</resourceCostMultiplier>
+        <description>Summons 2 Crystalline Divine Children (~67s each).</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_DomaClone_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <spawnCount>2</spawnCount>
+            <summonKindPrefix>DS_DomaClone</summonKindPrefix>
+            <lifespanHediff>DS_DomaClone_Lifespan_2</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_CrystallineDivineChild</li>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <cooldownMultiplier>0.775</cooldownMultiplier>
+        <resourceCostMultiplier>1.127</resourceCostMultiplier>
+        <description>Summons 2 Crystalline Divine Children. Lifespan extended (~100s each).</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_DomaClone_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <spawnCount>2</spawnCount>
+            <summonKindPrefix>DS_DomaClone</summonKindPrefix>
+            <lifespanHediff>DS_DomaClone_Lifespan_3</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_CrystallineDivineChild</li>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>620</experienceRequired>
+        <cooldownMultiplier>0.70</cooldownMultiplier>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>Summons 3 Crystalline Divine Children (~100s each).</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_DomaClone_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <spawnCount>3</spawnCount>
+            <summonKindPrefix>DS_DomaClone</summonKindPrefix>
+            <lifespanHediff>DS_DomaClone_Lifespan_3</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_CrystallineDivineChild</li>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <cooldownMultiplier>0.625</cooldownMultiplier>
+        <resourceCostMultiplier>1.273</resourceCostMultiplier>
+        <description>Perfected. Summons 3 Crystalline Divine Children that linger for a very long time (~150s each). Max Level.</description>
+        <levelComps>
+          <li Class="EMF.CompProperties_AbilitySummonPawn">
+            <summonKind>DS_DomaClone_Entity</summonKind>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <spawnCount>3</spawnCount>
+            <summonKindPrefix>DS_DomaClone</summonKindPrefix>
+            <lifespanHediff>DS_DomaClone_Lifespan_4</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_CrystallineDivineChild</li>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

@@ -1,33 +1,59 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Sun_Breathing_Damage</defName>
     <label>sun burn</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was incinerated by blazing heat.</deathMessage>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <deathMessage>{0} was incinerated by blazing solar fire.</deathMessage>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <defaultStoppingPower>0.4</defaultStoppingPower>
     <hediff>RadianceOfSun</hediff>
     <hediffSkin>RadianceOfSun</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Heat</armorCategory>
     <impactSoundType>Blunt</impactSoundType>
-    <harmsHealth>true</harmsHealth>
+    <minDamageToFragment>99999</minDamageToFragment>
+    <defaultDamage>12</defaultDamage>
+    <defaultArmorPenetration>0.15</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0.3</overkillPctToDestroyPart>
+    <scaleDamageToBuildingsBasedOnFlammability>true</scaleDamageToBuildingsBasedOnFlammability>
+    <igniteChanceByTargetFlammability>
+      <points>
+        <li>(0.0, 0.0)</li>
+        <li>(0.3, 0.4)</li>
+        <li>(0.7, 0.9)</li>
+        <li>(1.0, 1.0)</li>
+      </points>
+    </igniteChanceByTargetFlammability>
+    <igniteCellChance>0.35</igniteCellChance>
+    <buildingDamageFactor>1.0</buildingDamageFactor>
+    <plantDamageFactor>3.0</plantDamageFactor>
+    <corpseDamageFactor>1.5</corpseDamageFactor>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>RadianceOfSun</defName>
     <label>sun burn</label>
     <labelNoun>a sun burn</labelNoun>
-    <description>Flesh scorched by heat. Severe pain and tissue death.</description>
+    <description>Flesh scorched by divine solar fire. The heat does not merely burn — it purges. Demons struck by this light find their regeneration failing as the wound refuses to close.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
         <labelTendedWellInner>tended</labelTendedWellInner>
         <labelSolidTendedWell>tended</labelSolidTendedWell>
-        <severityPerDayTended>-0.75</severityPerDayTended>
+        <severityPerDayTended>-0.40</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
-        <infectionChance>0.30</infectionChance>
+        <infectionChance>0.20</infectionChance>
       </li>
       <li Class="HediffCompProperties_GetsPermanent">
         <permanentLabel>sun burn scar</permanentLabel>
@@ -37,39 +63,85 @@
       <li>
         <minSeverity>0.1</minSeverity>
         <statOffsets>
-          <ComfyTemperatureMin>5</ComfyTemperatureMin>
-          <ComfyTemperatureMax>-3</ComfyTemperatureMax>
+          <ComfyTemperatureMin>6</ComfyTemperatureMin>
+          <ComfyTemperatureMax>-4</ComfyTemperatureMax>
         </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.04</offset>
+          </li>
+        </capMods>
       </li>
       <li>
         <minSeverity>0.3</minSeverity>
         <statOffsets>
-          <ComfyTemperatureMin>12</ComfyTemperatureMin>
-          <ComfyTemperatureMax>-8</ComfyTemperatureMax>
+          <ComfyTemperatureMin>14</ComfyTemperatureMin>
+          <ComfyTemperatureMax>-10</ComfyTemperatureMax>
         </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
       </li>
       <li>
         <minSeverity>0.5</minSeverity>
         <statOffsets>
-          <ComfyTemperatureMin>20</ComfyTemperatureMin>
-          <ComfyTemperatureMax>-15</ComfyTemperatureMax>
+          <ComfyTemperatureMin>22</ComfyTemperatureMin>
+          <ComfyTemperatureMax>-18</ComfyTemperatureMax>
         </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.18</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.14</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
       </li>
       <li>
         <minSeverity>0.8</minSeverity>
+        <painOffset>0.15</painOffset>
         <statOffsets>
-          <ComfyTemperatureMin>30</ComfyTemperatureMin>
-          <ComfyTemperatureMax>-25</ComfyTemperatureMax>
+          <ComfyTemperatureMin>32</ComfyTemperatureMin>
+          <ComfyTemperatureMax>-28</ComfyTemperatureMax>
         </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.22</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <injuryProps>
-      <painPerSeverity>0.05</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.0075</averagePainPerSeverityPermanent>
+      <painPerSeverity>0.06</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.009</averagePainPerSeverityPermanent>
       <bleedRate>0</bleedRate>
       <canMerge>false</canMerge>
-      <destroyedLabel>Burned off</destroyedLabel>
-      <destroyedOutLabel>Burned out</destroyedOutLabel>
+      <destroyedLabel>burned off</destroyedLabel>
+      <destroyedOutLabel>burned away</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

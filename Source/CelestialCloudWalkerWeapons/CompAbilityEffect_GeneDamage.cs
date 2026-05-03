@@ -15,29 +15,16 @@ namespace AnimeArsenal
 
             if (target.Pawn == null) return;
 
-            GeneDamageModExtension ext = null;
-
-            if (parent is TalentedLevelingAbility levelingAbility)
-            {
-                ext = levelingAbility.GetModExtension<GeneDamageModExtension>();
-            }
-            else
-            {
-                ext = parent.def.GetModExtension<GeneDamageModExtension>();
-            }
+            var ext = parent.def.GetModExtension<GeneDamageModExtension>();
 
             if (ext == null) return;
 
             if (!ShouldApplyDamage(target.Pawn, ext.targetGene)) return;
 
             if (ext.damageDelay > 0)
-            {
                 QueueDelayedDamage(target.Pawn, ext);
-            }
             else
-            {
                 ApplyDamageToTarget(target.Pawn, ext);
-            }
         }
 
         private void QueueDelayedDamage(Pawn targetPawn, GeneDamageModExtension ext)
@@ -94,9 +81,7 @@ namespace AnimeArsenal
             }
 
             if (ext.targetVitalOrgans)
-            {
                 return GetVitalOrgans(pawn, ext);
-            }
 
             return null;
         }
@@ -113,9 +98,7 @@ namespace AnimeArsenal
             foreach (var part in pawn.RaceProps.body.AllParts)
             {
                 if (vitalOrganDefNames.Contains(part.def.defName))
-                {
                     vitalParts.Add(part);
-                }
             }
 
             return vitalParts.Count > 0 ? vitalParts : null;
@@ -178,9 +161,7 @@ namespace AnimeArsenal
                 foreach (var part in pawn.RaceProps.body.AllParts)
                 {
                     if (vitalOrganDefNames.Contains(part.def.defName))
-                    {
                         vitalParts.Add(part);
-                    }
                 }
 
                 return vitalParts.Count > 0 ? vitalParts : null;

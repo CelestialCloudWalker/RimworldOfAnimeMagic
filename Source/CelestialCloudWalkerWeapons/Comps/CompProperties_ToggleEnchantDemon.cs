@@ -1,5 +1,5 @@
 ﻿using RimWorld;
-using Talented;
+using EMF;
 using Verse;
 
 namespace AnimeArsenal

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>AA_FirstForm_Roar</defName>
+    <label>First Form: Roar</label>
+    <description>A single thunderous blow. Simple, brutal, and devastatingly effective.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>5</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>2</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityDamage">
+        <damageAmount>35</damageAmount>
+        <damageDef>Cut</damageDef>
+        <armorPenetration>0.35</armorPenetration>
+        <applyToTarget>true</applyToTarget>
+        <meleeSkillFactor>0.5</meleeSkillFactor>
+        <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>35 base damage. Scales with melee skill.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>45 damage.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDamage">
+            <damageAmount>45</damageAmount>
+            <damageDef>Cut</damageDef>
+            <armorPenetration>0.4</armorPenetration>
+            <applyToTarget>true</applyToTarget>
+            <meleeSkillFactor>0.5</meleeSkillFactor>
+            <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>55 damage. Briefly stuns the target.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDamage">
+            <damageAmount>55</damageAmount>
+            <damageDef>Cut</damageDef>
+            <armorPenetration>0.45</armorPenetration>
+            <applyToTarget>true</applyToTarget>
+            <meleeSkillFactor>0.5</meleeSkillFactor>
+            <stunTicks>120</stunTicks>
+            <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>AA_FirstForm_Roar_Explosive</defName>
+    <label>First Form: Roar (Explosive)</label>
+    <description>The thunderous strike detonates on impact, scattering wisteria-laced bombs across the surrounding area.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>2</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityDamage">
+        <damageAmount>40</damageAmount>
+        <damageDef>Cut</damageDef>
+        <armorPenetration>0.4</armorPenetration>
+        <applyToTarget>true</applyToTarget>
+        <meleeSkillFactor>0.5</meleeSkillFactor>
+        <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_FireworksShow">
+        <bombCount>4</bombCount>
+        <scatterRadius>3</scatterRadius>
+        <projectileDef>AA_Projectile_AntiDemonBomb</projectileDef>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>40 damage + 4 bombs scatter around the target.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <description>45 damage + 5 bombs, wider scatter.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDamage">
+            <damageAmount>45</damageAmount>
+            <damageDef>Cut</damageDef>
+            <armorPenetration>0.4</armorPenetration>
+            <applyToTarget>true</applyToTarget>
+            <meleeSkillFactor>0.5</meleeSkillFactor>
+            <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_FireworksShow">
+            <bombCount>5</bombCount>
+            <scatterRadius>4</scatterRadius>
+            <projectileDef>AA_Projectile_AntiDemonBomb</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <description>55 damage + 6 heavy bombs. Maximum carnage.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDamage">
+            <damageAmount>55</damageAmount>
+            <damageDef>Cut</damageDef>
+            <armorPenetration>0.45</armorPenetration>
+            <applyToTarget>true</applyToTarget>
+            <meleeSkillFactor>0.5</meleeSkillFactor>
+            <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_FireworksShow">
+            <bombCount>6</bombCount>
+            <scatterRadius>5</scatterRadius>
+            <projectileDef>AA_Projectile_AntiDemonBomb_Heavy</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

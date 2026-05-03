@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Enmu_FleshWhips</defName>
+    <label>Flesh Whips</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enmu lashes flesh tendrils at a target, striking them from range and pushing them back.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>16</resourceCost>
+    <baseExperienceGain>40</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.3</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+        <effectRadius>2.0</effectRadius>
+        <maxTargets>1</maxTargets>
+        <affectCaster>false</affectCaster>
+        <affectDowned>true</affectDowned>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <damage>14</damage>
+        <armorPenetration>0.1</armorPenetration>
+        <flingDistance>3</flingDistance>
+        <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
+        <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
+        <hitEffecterCount>5</hitEffecterCount>
+        <hitEffecterRadius>2.0</hitEffecterRadius>
+        <showMessages>true</showMessages>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>14 Cut damage. Pushes target 3 tiles away.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>40</experienceRequired>
+        <cooldownMultiplier>0.911</cooldownMultiplier>
+        <resourceCostMultiplier>1.0625</resourceCostMultiplier>
+        <description>17 Cut damage. Pushes target 4 tiles away.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>2.0</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <damage>17</damage>
+            <armorPenetration>0.1</armorPenetration>
+            <flingDistance>4</flingDistance>
+            <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
+            <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
+            <hitEffecterCount>5</hitEffecterCount>
+            <hitEffecterRadius>2.0</hitEffecterRadius>
+            <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.822</cooldownMultiplier>
+        <resourceCostMultiplier>1.1875</resourceCostMultiplier>
+        <description>20 Cut damage. Pushes 5 tiles. Applies minor stun on hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>2.0</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <damage>20</damage>
+            <armorPenetration>0.1</armorPenetration>
+            <flingDistance>5</flingDistance>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>0.4</stunSeverity>
+            <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
+            <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
+            <hitEffecterCount>5</hitEffecterCount>
+            <hitEffecterRadius>2.0</hitEffecterRadius>
+            <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <cooldownMultiplier>0.733</cooldownMultiplier>
+        <resourceCostMultiplier>1.3125</resourceCostMultiplier>
+        <description>26 Cut damage. Push 5 tiles. Minor stun.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>2.0</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <damage>26</damage>
+            <armorPenetration>0.1</armorPenetration>
+            <flingDistance>5</flingDistance>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>0.4</stunSeverity>
+            <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
+            <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
+            <hitEffecterCount>5</hitEffecterCount>
+            <hitEffecterRadius>2.0</hitEffecterRadius>
+            <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <cooldownMultiplier>0.644</cooldownMultiplier>
+        <resourceCostMultiplier>1.4375</resourceCostMultiplier>
+        <description>32 Cut damage. Pushes 7 tiles. Stun upgraded to 80 ticks.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>2.0</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <damage>32</damage>
+            <armorPenetration>0.1</armorPenetration>
+            <flingDistance>7</flingDistance>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>1.0</stunSeverity>
+            <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
+            <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
+            <hitEffecterCount>5</hitEffecterCount>
+            <hitEffecterRadius>2.0</hitEffecterRadius>
+            <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <cooldownMultiplier>0.556</cooldownMultiplier>
+        <resourceCostMultiplier>1.625</resourceCostMultiplier>
+        <description>Perfected. 40 Cut damage. Pushes 8 tiles. 80t stun. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>2.0</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <damage>40</damage>
+            <armorPenetration>0.1</armorPenetration>
+            <flingDistance>8</flingDistance>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>1.0</stunSeverity>
+            <groundEffecter>AnimeArsenal_WhipHit</groundEffecter>
+            <hitEffecter>AnimeArsenal_WhipHit_Single</hitEffecter>
+            <hitEffecterCount>5</hitEffecterCount>
+            <hitEffecterRadius>2.0</hitEffecterRadius>
+            <showMessages>true</showMessages>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

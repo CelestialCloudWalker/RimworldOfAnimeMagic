@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef>
+    <defName>DS_WhitePrincess_Entity</defName>
+    <label>White Princess</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <combatPower>120</combatPower>
+    <initialResistanceRange><min>0</min><max>0</max></initialResistanceRange>
+    <initialWillRange><min>0</min><max>0</max></initialWillRange>
+    <skills>
+      <li><skill>Melee</skill></li>
+      <li><skill>Shooting</skill></li>
+    </skills>
+    <weaponMoney><min>0</min><max>0</max></weaponMoney>
+    <apparelMoney><min>0</min><max>0</max></apparelMoney>
+  </PawnKindDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_ColdWhitePrincesses</defName>
+    <label>Cold White Princesses</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Doma conjures frozen lotus constructs in the form of White Princesses. A severe burst of frozen air erupts on cast, then each Princess hunts enemies and spreads Crystalized Air gas across the battlefield.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>100</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.8</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+        <gasDef>DS_CrystalizedAir_Gas</gasDef>
+        <gasLifetimeTicks><min>1200</min><max>1200</max></gasLifetimeTicks>
+        <angle>360</angle>
+        <range>8</range>
+        <numCellsToHit>60</numCellsToHit>
+        <gasSpawnChance>0.5</gasSpawnChance>
+        <damageDef>Cut</damageDef>
+        <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+        <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+        <damageIntervalTicks>120</damageIntervalTicks>
+        <spawnEffecter>DS_Effecter_CloudPuff</spawnEffecter>
+        <affectHostile>true</affectHostile>
+        <affectFriendly>false</affectFriendly>
+        <affectAnimals>true</affectAnimals>
+        <affectMechanoids>false</affectMechanoids>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_CloneSummon">
+        <spawnKind>DS_WhitePrincess_Entity</spawnKind>
+        <spawnCount>1</spawnCount>
+        <spawnRadius>3</spawnRadius>
+        <cloneNickname>White Princess</cloneNickname>
+        <copyName>true</copyName>
+        <copyApparel>true</copyApparel>
+        <copySkills>true</copySkills>
+        <copyTraits>true</copyTraits>
+        <copyGenes>true</copyGenes>
+        <copyAbilities>true</copyAbilities>
+        <lifespanHediff>DS_WhitePrincess_Lifespan</lifespanHediff>
+        <blockedAbilities>
+          <li>DS_Doma_ColdWhitePrincesses</li>
+          <li>DS_Doma_CrystallineDivineChild</li>
+        </blockedAbilities>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>AoE frost burst on cast. Summons 1 White Princess that hunts enemies and spreads Crystalized Air gas.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.022</resourceCostMultiplier>
+        <rangeMultiplier>4.0</rangeMultiplier>
+        <description>Summons 1 White Princess. Princess spawns further from the caster.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1200</min><max>1200</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>8</range>
+            <numCellsToHit>60</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <damageDef>Cut</damageDef>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <spawnEffecter>DS_Effecter_CloudPuff</spawnEffecter>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_WhitePrincess_Entity</spawnKind>
+            <spawnCount>1</spawnCount>
+            <spawnRadius>3</spawnRadius>
+            <cloneNickname>White Princess</cloneNickname>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_WhitePrincess_Lifespan</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+              <li>DS_Doma_CrystallineDivineChild</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.089</resourceCostMultiplier>
+        <rangeMultiplier>4.0</rangeMultiplier>
+        <description>Summons 2 White Princesses. Both hunt enemies and spread Crystalized Air gas.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1200</min><max>1200</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>8</range>
+            <numCellsToHit>60</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <damageDef>Cut</damageDef>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <spawnEffecter>DS_Effecter_CloudPuff</spawnEffecter>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_WhitePrincess_Entity</spawnKind>
+            <spawnCount>2</spawnCount>
+            <spawnRadius>3</spawnRadius>
+            <cloneNickname>White Princess</cloneNickname>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_WhitePrincess_Lifespan</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+              <li>DS_Doma_CrystallineDivineChild</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.156</resourceCostMultiplier>
+        <rangeMultiplier>4.0</rangeMultiplier>
+        <description>Summons 2 White Princesses. Cast AoE now applies Hypothermia (+0.1 severity).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1200</min><max>1200</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>8</range>
+            <numCellsToHit>60</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <damageDef>Cut</damageDef>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <spawnEffecter>DS_Effecter_CloudPuff</spawnEffecter>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.1</severityAdjustment>
+            <effectRadius>8</effectRadius>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_WhitePrincess_Entity</spawnKind>
+            <spawnCount>2</spawnCount>
+            <spawnRadius>3</spawnRadius>
+            <cloneNickname>White Princess</cloneNickname>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_WhitePrincess_Lifespan</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+              <li>DS_Doma_CrystallineDivineChild</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>620</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.244</resourceCostMultiplier>
+        <rangeMultiplier>4.0</rangeMultiplier>
+        <description>Summons 3 White Princesses. Cast AoE applies severe Hypothermia (+0.25 severity) to all enemies in range.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1200</min><max>1200</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>8</range>
+            <numCellsToHit>60</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <damageDef>Cut</damageDef>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <spawnEffecter>DS_Effecter_CloudPuff</spawnEffecter>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.25</severityAdjustment>
+            <effectRadius>8</effectRadius>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_WhitePrincess_Entity</spawnKind>
+            <spawnCount>3</spawnCount>
+            <spawnRadius>3</spawnRadius>
+            <cloneNickname>White Princess</cloneNickname>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_WhitePrincess_Lifespan</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+              <li>DS_Doma_CrystallineDivineChild</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <cooldownMultiplier>0.56</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <rangeMultiplier>4.0</rangeMultiplier>                
+        <description>Perfected. Summons 3 White Princesses. Cast AoE applies severe Hypothermia (+0.25 severity). Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>1200</min><max>1200</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>8</range>
+            <numCellsToHit>60</numCellsToHit>
+            <gasSpawnChance>0.5</gasSpawnChance>
+            <damageDef>Cut</damageDef>
+            <hediffOnExposure>DS_CrystalizedAirExposure</hediffOnExposure>
+            <hediffSeverityPerInterval>0.04</hediffSeverityPerInterval>
+            <damageIntervalTicks>120</damageIntervalTicks>
+            <spawnEffecter>DS_Effecter_CloudPuff</spawnEffecter>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.25</severityAdjustment>
+            <effectRadius>8</effectRadius>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_WhitePrincess_Entity</spawnKind>
+            <spawnCount>3</spawnCount>
+            <spawnRadius>3</spawnRadius>
+            <cloneNickname>White Princess</cloneNickname>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_WhitePrincess_Lifespan</lifespanHediff>
+            <blockedAbilities>
+              <li>DS_Doma_ColdWhitePrincesses</li>
+              <li>DS_Doma_CrystallineDivineChild</li>
+            </blockedAbilities>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

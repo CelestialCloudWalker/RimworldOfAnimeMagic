@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>LoveBreathing_FirstForm_ShiversOfFirstLove</defName>
+    <label>First Form: Shivers of First Love</label>
+    <description>A single long, winding swing of the blade — but the whip's reach coils through the air and cuts from every angle at once. Those nearby feel it land in multiple places before they register the first strike. The pain comes in waves, like the sudden, unexpected sting of love itself.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>480</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>100</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>6</range>
+      <warmupTime>0.45</warmupTime>
+      <noiseRadius>2</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+        <baseDamage>18</baseDamage>
+        <radius>4.5</radius>
+        <maxTargets>8</maxTargets>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <radius>4.5</radius>
+        <damage>8</damage>
+        <damageDef>Love_Breathing_Damage</damageDef>
+        <armorPen>0.10</armorPen>
+        <repeatCount>3</repeatCount>
+        <damageInterval>8</damageInterval>
+        <maxTargets>8</maxTargets>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hitEffecter>AnimeArsenal_LoveHit</hitEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A sweeping whip arc that strikes all nearby enemies for 18 damage, followed by 3 cutting echoes of 8 damage each. Applies Shivering Heart.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>140</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>Whip sweep hits for 22 damage. Echo cuts rise to 10 each. Shivering Heart severity increases.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>22</baseDamage>
+            <radius>4.8</radius>
+            <maxTargets>8</maxTargets>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>4.8</radius>
+            <damage>10</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.12</armorPen>
+            <repeatCount>3</repeatCount>
+            <damageInterval>8</damageInterval>
+            <maxTargets>8</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_LoveHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>310</experienceRequired>
+        <resourceCostMultiplier>1.28</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>Whip sweep hits for 27 damage. Echo cuts grow to 13 each. Range widens. Armor pen improves.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>27</baseDamage>
+            <radius>5.2</radius>
+            <maxTargets>10</maxTargets>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>5.2</radius>
+            <damage>13</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.16</armorPen>
+            <repeatCount>3</repeatCount>
+            <damageInterval>7</damageInterval>
+            <maxTargets>10</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_LoveHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>540</experienceRequired>
+        <resourceCostMultiplier>1.40</resourceCostMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>Whip sweep hits for 33 damage. Four echo cuts of 15 each. Shivering Heart reaches full severity reliably.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>33</baseDamage>
+            <radius>5.5</radius>
+            <maxTargets>10</maxTargets>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>5.5</radius>
+            <damage>15</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.20</armorPen>
+            <repeatCount>4</repeatCount>
+            <damageInterval>7</damageInterval>
+            <maxTargets>10</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_LoveHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>820</experienceRequired>
+        <resourceCostMultiplier>1.50</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>Whip sweep hits for 40 damage. Four echo cuts of 19 each. The cuts blur into one overwhelming sensation. Shivering Heart guaranteed.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>40</baseDamage>
+            <radius>5.8</radius>
+            <maxTargets>12</maxTargets>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>5.8</radius>
+            <damage>19</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.25</armorPen>
+            <repeatCount>4</repeatCount>
+            <damageInterval>6</damageInterval>
+            <maxTargets>12</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_LoveHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1200</experienceRequired>
+        <resourceCostMultiplier>1.50</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>Perfected. Whip sweep hits for 50 damage. Five echo cuts of 24 each. The blade moves in all directions at once — a single strike that arrives from everywhere. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TwistAreaEffect">
+            <baseDamage>50</baseDamage>
+            <radius>6.0</radius>
+            <maxTargets>12</maxTargets>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>6.0</radius>
+            <damage>24</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.30</armorPen>
+            <repeatCount>5</repeatCount>
+            <damageInterval>5</damageInterval>
+            <maxTargets>12</maxTargets>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <hitEffecter>AnimeArsenal_LoveHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

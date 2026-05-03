@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>FlowerBreathing_FinalForm_EquinoctialVermilionEye</defName>
+    <label>Final Form: Equinoctial Vermilion Eye</label>
+    <description>A focusing technique that pushes kinetic vision to its absolute limit. The sclera turns red. The world slows. Every incoming strike becomes readable — every gap becomes exploitable. The most powerful technique in Flower Breathing, and the most dangerous. Each use tears at the blood vessels behind the eyes. Use it too freely, and the sight it depends on will be gone forever.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>499</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>28</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>1</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+        <hediffDef>FlowerBreathing_VermilionEye_L1</hediffDef>
+        <applyToTarget>false</applyToTarget>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+        <hediffDef>FlowerBreathing_EyeStrain</hediffDef>
+        <applyToTarget>false</applyToTarget>
+        <severityAdjustment>0.30</severityAdjustment>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Raises kinetic vision to its peak for 8 seconds. Massively improves dodge, melee accuracy, and reaction speed. Each use strains the eyes — 0.30 severity added. Do not use carelessly.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <resourceCostMultiplier>1.12</resourceCostMultiplier>
+        <cooldownMultiplier>0.92</cooldownMultiplier>
+        <description>Duration extends to 10 seconds. Perception sharpens further. Eye strain reduced slightly — 0.25 severity per use. Technique becoming more controlled.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>FlowerBreathing_VermilionEye_L2</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>FlowerBreathing_EyeStrain</hediffDef>
+            <applyToTarget>false</applyToTarget>
+            <severityAdjustment>0.25</severityAdjustment>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <resourceCostMultiplier>1.22</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>12 seconds of perfect perception. Combat stats substantially buffed. Eye strain further reduced — 0.20 severity per use. The technique is being mastered.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>FlowerBreathing_VermilionEye_L3</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>FlowerBreathing_EyeStrain</hediffDef>
+            <applyToTarget>false</applyToTarget>
+            <severityAdjustment>0.20</severityAdjustment>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <resourceCostMultiplier>1.30</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>15 seconds. Peak perception and near-perfect evasion. Eye strain down to 0.15 per use. The world runs in slow motion and the eyes are learning to bear it.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>FlowerBreathing_VermilionEye_L4</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>FlowerBreathing_EyeStrain</hediffDef>
+            <applyToTarget>false</applyToTarget>
+            <severityAdjustment>0.15</severityAdjustment>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <resourceCostMultiplier>1.38</resourceCostMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <description>18 seconds. Extraordinary perception. Melee accuracy and dodge are nearly superhuman during the technique. Only 0.10 severity strain per use — still not zero. The eyes are never truly safe.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>FlowerBreathing_VermilionEye_L5</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>FlowerBreathing_EyeStrain</hediffDef>
+            <applyToTarget>false</applyToTarget>
+            <severityAdjustment>0.10</severityAdjustment>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1600</experienceRequired>
+        <resourceCostMultiplier>1.44</resourceCostMultiplier>
+        <cooldownMultiplier>0.70</cooldownMultiplier>
+        <description>Perfected. 22 seconds of absolute clarity. The user becomes near-untouchable — a ghost among blossoms. Eye strain at minimum: 0.07 per use. Even mastery cannot fully silence the cost. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Caster">
+            <hediffDef>FlowerBreathing_VermilionEye_L6</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff_Target">
+            <hediffDef>FlowerBreathing_EyeStrain</hediffDef>
+            <applyToTarget>false</applyToTarget>
+            <severityAdjustment>0.07</severityAdjustment>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

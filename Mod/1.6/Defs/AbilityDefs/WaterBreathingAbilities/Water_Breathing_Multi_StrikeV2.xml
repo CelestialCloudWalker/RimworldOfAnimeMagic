@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Water_Breathing_Multi_Strike</defName>
     <label>Water Breathing: Multi Strike</label>
-    <description>An offensive technique using quick dashes to strike multiple enemies.</description>
     <category>WaterBreathing_Ability_Catergory</category>
+    <description>An offensive technique using quick dashes to strike multiple enemies.</description>
     <iconPath>UI/Abilities/AbilityMultiDash</iconPath>
     <cooldownTicksRange>600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
     <targetRequired>true</targetRequired>
-
-    <requiredGeneDefName>Gene_WaterBreath</requiredGeneDefName>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>25</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
@@ -29,12 +31,12 @@
 
     <comps>
       <li Class="AnimeArsenal.CompProperties_BaseStance">
-        <maxJumps>3</maxJumps>
-        <ticksBetweenJumps>5</ticksBetweenJumps>
-        <jumpDistance>4</jumpDistance>
-        <targetSearchRadius>15</targetSearchRadius>
+        <maxJumps>4</maxJumps>
+        <ticksBetweenJumps>4</ticksBetweenJumps>
+        <jumpDistance>5</jumpDistance>
+        <targetSearchRadius>12</targetSearchRadius>
         <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
-        <jumpDamage>3~4</jumpDamage>
+        <jumpDamage>4~5</jumpDamage>
         <scaleStat>MeleeDamageFactor</scaleStat>
         <debugScaling>true</debugScaling>
         <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
@@ -52,19 +54,17 @@
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>150</experienceRequired>
-        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
         <resourceCostMultiplier>1.1</resourceCostMultiplier>
-        <verbProperties>
-          <range>17</range>
-        </verbProperties>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <description>5~7 damage. Dashes to 5 targets. Search radius extended.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_BaseStance">
-            <maxJumps>4</maxJumps>
-            <ticksBetweenJumps>4</ticksBetweenJumps>
-            <jumpDistance>4</jumpDistance>
-            <targetSearchRadius>17</targetSearchRadius>
+            <maxJumps>5</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>5</jumpDistance>
+            <targetSearchRadius>14</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
-            <jumpDamage>3~5</jumpDamage>
+            <jumpDamage>5~7</jumpDamage>
             <scaleStat>MeleeDamageFactor</scaleStat>
             <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
@@ -76,19 +76,18 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>350</experienceRequired>
-        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
-        <resourceCostMultiplier>1.25</resourceCostMultiplier>
-        <verbProperties>
-          <range>20</range>
-        </verbProperties>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>6~9 damage. Dashes to 6 targets. Jump distance increased.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_BaseStance">
-            <maxJumps>5</maxJumps>
-            <ticksBetweenJumps>4</ticksBetweenJumps>
-            <jumpDistance>5</jumpDistance>
-            <targetSearchRadius>20</targetSearchRadius>
+            <maxJumps>6</maxJumps>
+            <ticksBetweenJumps>3</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>17</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
-            <jumpDamage>4~6</jumpDamage>
+            <jumpDamage>6~9</jumpDamage>
             <scaleStat>MeleeDamageFactor</scaleStat>
             <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
@@ -99,20 +98,19 @@
 
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
-        <experienceRequired>600</experienceRequired>
-        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
-        <resourceCostMultiplier>1.4</resourceCostMultiplier>
-        <verbProperties>
-          <range>23</range>
-        </verbProperties>
+        <experienceRequired>650</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>7~11 damage. Dashes to 7 targets. Range doubled.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_BaseStance">
-            <maxJumps>6</maxJumps>
-            <ticksBetweenJumps>3</ticksBetweenJumps>
-            <jumpDistance>5</jumpDistance>
-            <targetSearchRadius>23</targetSearchRadius>
+            <maxJumps>7</maxJumps>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>6</jumpDistance>
+            <targetSearchRadius>20</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
-            <jumpDamage>4~7</jumpDamage>
+            <jumpDamage>7~11</jumpDamage>
             <scaleStat>MeleeDamageFactor</scaleStat>
             <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
@@ -124,19 +122,18 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>900</experienceRequired>
-        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
         <resourceCostMultiplier>1.6</resourceCostMultiplier>
-        <verbProperties>
-          <range>26</range>
-        </verbProperties>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>8~13 Water. Dashes to 7 targets. Jump distance and search radius increased.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_BaseStance">
             <maxJumps>7</maxJumps>
-            <ticksBetweenJumps>3</ticksBetweenJumps>
-            <jumpDistance>6</jumpDistance>
-            <targetSearchRadius>26</targetSearchRadius>
+            <ticksBetweenJumps>2</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>23</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
-            <jumpDamage>5~8</jumpDamage>
+            <jumpDamage>8~13</jumpDamage>
             <scaleStat>MeleeDamageFactor</scaleStat>
             <debugScaling>true</debugScaling>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
@@ -147,20 +144,19 @@
 
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
-        <experienceRequired>1300</experienceRequired>
-        <description>An offensive technique using quick dashes to strike multiple enemies.</description>
-        <resourceCostMultiplier>1.8</resourceCostMultiplier>
-        <verbProperties>
-          <range>30</range>
-        </verbProperties>
+        <experienceRequired>1350</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. 10~15 damage. Dashes to 10 targets at blinding speed. Max Level.</description>
         <levelComps>
           <li Class="AnimeArsenal.CompProperties_BaseStance">
-            <maxJumps>8</maxJumps>
-            <ticksBetweenJumps>2</ticksBetweenJumps>
-            <jumpDistance>6</jumpDistance>
-            <targetSearchRadius>30</targetSearchRadius>
+            <maxJumps>10</maxJumps>
+            <ticksBetweenJumps>1</ticksBetweenJumps>
+            <jumpDistance>7</jumpDistance>
+            <targetSearchRadius>27</targetSearchRadius>
             <jumpDamageDef>Water_Breathing_Damage</jumpDamageDef>
-            <jumpDamage>6~9</jumpDamage>
+            <jumpDamage>10~15</jumpDamage>
             <scaleStat>MeleeDamageFactor</scaleStat>
             <casterEffecter>AnimeArsenal_WaterJump</casterEffecter>
             <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
@@ -168,5 +164,5 @@
         </levelComps>
       </li>
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

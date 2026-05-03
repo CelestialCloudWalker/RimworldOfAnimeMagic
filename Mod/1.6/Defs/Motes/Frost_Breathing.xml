@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="RimKetsu_MoteAttachedBase">
+    <defName>RimKetsu_Mote_FrostBreathingAura</defName>
+    <mote>
+      <fadeInTime>0.4</fadeInTime>
+      <solidTime>999999</solidTime>
+      <fadeOutTime>0.4</fadeOutTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_PawnBodySilhouette</graphicClass>
+      <color>(0.72, 0.92, 1.0, 0.78)</color>
+      <shaderType>MoteMultiplyAddScroll</shaderType>
+      <texPath>Things/Mote/Transparent</texPath>
+      <shaderParameters>
+        <_MultiplyTexA>/Things/Mote/Cloudy_B</_MultiplyTexA>
+        <_MultiplyTexB>/Things/Mote/Cloudy_C</_MultiplyTexB>
+        <_DetailTex>/Things/Mote/Speckles</_DetailTex>
+        <_detailIntensity>1.5</_detailIntensity>
+        <_texAScale>0.42</_texAScale>
+        <_texBScale>0.34</_texBScale>
+        <_DetailScale>1.2</_DetailScale>
+        <_texAScrollSpeed>(0.04, 0.14, 0)</_texAScrollSpeed>
+        <_texBScrollSpeed>(0.1, 0.03, 0)</_texBScrollSpeed>
+        <_detailScrollSpeed>(0.08, 0.08, 0)</_detailScrollSpeed>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FrostCrystalBurst</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.02</fadeInTime>
+      <solidTime>0.0</solidTime>
+      <fadeOutTime>0.32</fadeOutTime>
+      <growthRate>18.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/RadiationDistortion_A</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <color>(0.9, 0.97, 1.0, 1.0)</color>
+      <shaderType>MoteMultiplyAddCircularGrayscale</shaderType>
+      <shaderParameters>
+        <_MultiplyTex>/Things/Mote/RadiationDistortion_B</_MultiplyTex>
+        <_texAScale>0.2</_texAScale>
+        <_texBScale>0.2</_texBScale>
+        <_texAScrollSpeed>4.0</_texAScrollSpeed>
+        <_texBScrollSpeed>-2.8</_texBScrollSpeed>
+        <_Intensity>16</_Intensity>
+      </shaderParameters>
+      <drawSize>(1.4, 1.4)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FrostIceNeedleHit</defName>
+    <thingClass>MoteThrown</thingClass>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>
+      <fadeInTime>0.02</fadeInTime>
+      <solidTime>0.06</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+      <collide>true</collide>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/LongSparkThrown</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.88, 0.97, 1.0, 1.0)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FrostGroundCrack</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>Filth</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.25</fadeInTime>
+      <solidTime>3.0</solidTime>
+      <fadeOutTime>1.2</fadeOutTime>
+      <growthRate>0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/GroundCracks/GroundCrackHuge</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.7, 0.92, 1.0, 0.7)</color>
+      <renderInstanced>false</renderInstanced>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <drawSize>(3.2, 3.2)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_FrostSnapFlash</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.02</fadeInTime>
+      <solidTime>0.04</solidTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <growthRate>5.5</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/BrightFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.9, 0.97, 1.0, 0.95)</color>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_FrostCrystalShard</defName>
+    <graphicData>
+      <texPath>Things/Mote/LongSparkThrown</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.85, 0.96, 1.0, 1.0)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <fadeInTime>0.01</fadeInTime>
+    <solidTime>0.06</solidTime>
+    <fadeOutTime>0.22</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_FrostCloudPuff</defName>
+    <graphicData>
+      <texPath>Things/Mote/DustPuff</texPath>
+      <shaderType>Transparent</shaderType>
+      <color>(0.78, 0.92, 1.0, 0.5)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverheadLow</altitudeLayer>
+    <fadeInTime>0.1</fadeInTime>
+    <solidTime>0.4</solidTime>
+    <fadeOutTime>1.2</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Static">
+    <defName>RimKetsu_Fleck_FrostBurstFlash</defName>
+    <graphicData>
+      <texPath>Things/Mote/ExplosionFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.88, 0.97, 1.0, 0.85)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.04</solidTime>
+    <fadeOutTime>0.12</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_FrostIceNeedle</defName>
+    <graphicData>
+      <texPath>Things/Mote/SparkThrown</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.92, 0.98, 1.0, 1.0)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <fadeInTime>0.01</fadeInTime>
+    <solidTime>0.04</solidTime>
+    <fadeOutTime>0.15</fadeOutTime>
+  </FleckDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_FrostBreathingAmbient</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FrostCrystalShard</fleckDef>
+        <chancePerTick>0.1</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>0.8~2.2</speed>
+        <scale>0.1~0.22</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FrostCloudPuff</fleckDef>
+        <chancePerTick>0.05</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <speed>0.1~0.35</speed>
+        <scale>0.4~0.8</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_Exhaustion_Frost</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FrostCloudPuff</fleckDef>
+        <chancePerTick>0.03</chancePerTick>
+        <positionRadius>0.25</positionRadius>
+        <speed>0.04~0.18</speed>
+        <scale>0.28~0.5</scale>
+        <color>(0.8, 0.94, 1.0, 0.28)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_EnchantAmbient_Frost</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FrostCrystalShard</fleckDef>
+        <chancePerTick>0.30</chancePerTick>
+        <positionRadius>0.45</positionRadius>
+        <speed>1.5~4.0</speed>
+        <scale>0.16~0.36</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FrostIceNeedle</fleckDef>
+        <chancePerTick>0.14</chancePerTick>
+        <positionRadius>0.35</positionRadius>
+        <speed>2.0~5.0</speed>
+        <scale>0.1~0.22</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FrostCloudPuff</fleckDef>
+        <chancePerTick>0.12</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>0.2~0.6</speed>
+        <scale>0.7~1.3</scale>
+        <color>(0.82, 0.95, 1.0, 0.9)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_FrostBurstFlash</fleckDef>
+        <chancePerTick>0.05</chancePerTick>
+        <positionRadius>0.2</positionRadius>
+        <scale>0.8~1.6</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_FrostBreathingHit</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FrostCrystalBurst</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.9~1.4</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FrostGroundCrack</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.7~1.2</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FrostSnapFlash</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.8~1.3</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.15</positionRadius>
+        <moteDef>RimKetsu_Mote_FrostIceNeedleHit</moteDef>
+        <burstCount>12~18</burstCount>
+        <speed>3.5~7.0</speed>
+        <scale>0.8~1.4</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.4</positionRadius>
+        <fleckDef>AirPuff</fleckDef>
+        <burstCount>5~8</burstCount>
+        <speed>0.5~1.1</speed>
+        <scale>0.7~1.2</scale>
+        <color>(0.75, 0.93, 1.0, 0.5)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>ExplosionFlash</fleckDef>
+        <burstCount>1~1</burstCount>
+        <scale>2.2~3.4</scale>
+        <color>(0.88, 0.97, 1.0, 0.65)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_FrostGlacialSurge</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FrostCrystalBurst</moteDef>
+        <burstCount>3~4</burstCount>
+        <scale>1.2~2.4</scale>
+        <positionRadius>0.3</positionRadius>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_FrostGroundCrack</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>1.4~2.0</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.5</positionRadius>
+        <moteDef>RimKetsu_Mote_FrostIceNeedleHit</moteDef>
+        <burstCount>25~38</burstCount>
+        <speed>5.0~10.0</speed>
+        <scale>0.6~1.2</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.4</positionRadius>
+        <fleckDef>AirPuff</fleckDef>
+        <burstCount>8~12</burstCount>
+        <speed>0.8~1.8</speed>
+        <scale>0.8~1.4</scale>
+        <color>(0.78, 0.95, 1.0, 0.55)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>ExplosionFlash</fleckDef>
+        <burstCount>1~1</burstCount>
+        <scale>5.0~7.0</scale>
+        <color>(0.9, 0.98, 1.0, 0.7)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_ArmSwipe</defName>
+    <label>Rime: Arm Swipe</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Rime sweeps an enormous arm through the air in front of it, sending everything in the wide cone flying.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>22</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>0.6</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>22</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>7</rectWidth>
+        <rectLength>8</rectLength>
+        <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>22 Blunt in a wide forward cone.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.913</cooldownMultiplier>
+        <resourceCostMultiplier>1.091</resourceCostMultiplier>
+        <description>27 Blunt. Cone widened.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>27</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>9</rectWidth>
+            <rectLength>8</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.827</cooldownMultiplier>
+        <resourceCostMultiplier>1.182</resourceCostMultiplier>
+        <description>33 Blunt. Sweep range extended.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>33</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>9</rectWidth>
+            <rectLength>10</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.74</cooldownMultiplier>
+        <resourceCostMultiplier>1.273</resourceCostMultiplier>
+        <description>42 Blunt. Enemies hit are knocked back away from Rime.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>42</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>9</rectWidth>
+            <rectLength>10</rectLength>
+            <knockbackDistance>3</knockbackDistance>
+            <knockbackDirectional>true</knockbackDirectional>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.653</cooldownMultiplier>
+        <resourceCostMultiplier>1.364</resourceCostMultiplier>
+        <description>50 Blunt. Cone widened further. Knockback retained.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>50</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>11</rectWidth>
+            <rectLength>10</rectLength>
+            <knockbackDistance>3</knockbackDistance>
+            <knockbackDirectional>true</knockbackDirectional>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.567</cooldownMultiplier>
+        <resourceCostMultiplier>1.455</resourceCostMultiplier>
+        <description>Perfected. 62 Blunt in a massive forward cone. Knockback on hit. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>62</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>11</rectWidth>
+            <rectLength>10</rectLength>
+            <knockbackDistance>3</knockbackDistance>
+            <knockbackDirectional>true</knockbackDirectional>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

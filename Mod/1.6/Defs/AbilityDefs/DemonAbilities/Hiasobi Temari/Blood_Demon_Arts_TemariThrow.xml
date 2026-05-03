@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Susamaru_TemariThrow</defName>
+    <label>BDA: Temari Throw</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Susamaru hurls a temari ball with demonic force at a distant target. The ball crashes into the enemy with bone-shattering power, sending shockwaves through anyone nearby.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1400</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>60</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>DS_SusamaruBall_Proj_LOne</projectileDef>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>22 Blunt on impact. 8 Blunt AoE splash radius 1.5. Range 14.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>60</experienceRequired>
+        <cooldownMultiplier>0.907</cooldownMultiplier>
+        <resourceCostMultiplier>1.050</resourceCostMultiplier>
+        <description>27 Blunt on impact. 10 Blunt splash r1.5.</description>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>DS_SusamaruBall_Proj_LTwo</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>140</experienceRequired>
+        <cooldownMultiplier>0.814</cooldownMultiplier>
+        <resourceCostMultiplier>1.150</resourceCostMultiplier>
+        <description>32 Blunt on impact. Splash radius expands to 2.0, 12 Blunt.</description>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>DS_SusamaruBall_Proj_LThree</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>260</experienceRequired>
+        <cooldownMultiplier>0.721</cooldownMultiplier>
+        <resourceCostMultiplier>1.250</resourceCostMultiplier>
+        <description>38 Blunt on impact. 14 Blunt splash r2.0.</description>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>DS_SusamaruBall_Proj_LFour</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>420</experienceRequired>
+        <cooldownMultiplier>0.629</cooldownMultiplier>
+        <resourceCostMultiplier>1.400</resourceCostMultiplier>
+        <description>45 Blunt on impact. Splash expands to r2.5, 18 Blunt. Range extended to 17.</description>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>DS_SusamaruBall_Proj_LFive</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>660</experienceRequired>
+        <cooldownMultiplier>0.536</cooldownMultiplier>
+        <resourceCostMultiplier>1.700</resourceCostMultiplier>
+        <description>Perfected. 54 Blunt on impact. 22 Blunt splash r2.5. Range 17. Max Level.</description>
+        <levelComps>
+          <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>DS_SusamaruBall_Proj_LSix</projectileDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

@@ -8,6 +8,11 @@
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>480</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_WaterBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_WaterBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Water</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Water</exhaustionEffecter>
+    <hitEffecter>RimKetsu_Effecter_WaterBreathingHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -18,6 +23,11 @@
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>440</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_WaterBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_WaterBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_WaterBreathingAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Water</exhaustionEffecter>
+    <hitEffecter>RimKetsu_Effecter_WaterBreathingHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -28,6 +38,11 @@
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>400</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_WaterBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_WaterBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_WaterBreathingAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Water</exhaustionEffecter>
+    <hitEffecter>RimKetsu_Effecter_WaterBreathingHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -38,6 +53,11 @@
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>360</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_WaterBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_WaterBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_WaterBreathingAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Water</exhaustionEffecter>
+    <hitEffecter>RimKetsu_Effecter_WaterBreathingHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -48,6 +68,11 @@
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>320</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_WaterBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_WaterBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_WaterBreathingAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Water</exhaustionEffecter>
+    <hitEffecter>RimKetsu_Effecter_WaterBreathingHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -58,5 +83,10 @@
     <resourceGene>Gene_WaterBreath</resourceGene>
     <ticksBetweenCost>280</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_WaterBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_WaterBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_WaterBreathingAmbient</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Water</exhaustionEffecter>
+    <hitEffecter>RimKetsu_Effecter_WaterBreathingHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

@@ -2,62 +2,92 @@
 <Defs>
 
   <AnimeArsenal.EnchantDef>
-    <defName>Inscet_Blade_Technique</defName>
-    <label>Inscet Blade Technique</label>
-    <description>A technique that allows a Inscet Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Inscet_Heart</enchantHediff>
+    <defName>Insect_Blade_Technique</defName>
+    <label>Insect Blade Technique</label>
+    <description>A technique that allows a Insect Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Insect_Heart</enchantHediff>
     <resourceGene>Gene_InsectBreath</resourceGene>
-    <ticksBetweenCost>500</ticksBetweenCost>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_InsectBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Insect</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_InsectHit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Insect_Blade_Technique_LevelTwo</defName>
+    <label>Insect Blade Technique</label>
+    <description>A technique that allows a Insect Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Insect_Heart_LevelTwo</enchantHediff>
+    <resourceGene>Gene_InsectBreath</resourceGene>
+    <ticksBetweenCost>410</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_InsectBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Insect</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_InsectHit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Insect_Blade_Technique_LevelThree</defName>
+    <label>Insect Blade Technique</label>
+    <description>A technique that allows a Insect Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Insect_Heart_LevelThree</enchantHediff>
+    <resourceGene>Gene_InsectBreath</resourceGene>
+    <ticksBetweenCost>370</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_InsectBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Insect</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_InsectHit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Insect_Blade_Technique_LevelFour</defName>
+    <label>Insect Blade Technique</label>
+    <description>A technique that allows a Insect Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Insect_Heart_LevelFour</enchantHediff>
+    <resourceGene>Gene_InsectBreath</resourceGene>
+    <ticksBetweenCost>330</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_InsectBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Insect</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_InsectHit2</hitEffecter>
+  </AnimeArsenal.EnchantDef>
+
+  <AnimeArsenal.EnchantDef>
+    <defName>Insect_Blade_Technique_LevelFive</defName>
+    <label>Insect Blade Technique</label>
+    <description>A technique that allows a Insect Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Insect_Heart_LevelFive</enchantHediff>
+    <resourceGene>Gene_InsectBreath</resourceGene>
+    <ticksBetweenCost>290</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_InsectBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Insect</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_InsectHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
-    <defName>Inscet_Blade_Technique_LevelTwo</defName>
-    <label>Inscet Blade Technique</label>
-    <description>A technique that allows a Inscet Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Inscet_Heart_LevelTwo</enchantHediff>
+    <defName>Insect_Blade_Technique_LevelSix</defName>
+    <label>Insect Blade Technique</label>
+    <description>A technique that allows a Insect Breathing user to imbue their attacks with their breathing style.</description>
+    <enchantHediff>Insect_Heart_LevelSix</enchantHediff>
     <resourceGene>Gene_InsectBreath</resourceGene>
-    <ticksBetweenCost>460</ticksBetweenCost>
+    <ticksBetweenCost>250</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
-  </AnimeArsenal.EnchantDef>
-
-  <AnimeArsenal.EnchantDef>
-    <defName>Inscet_Blade_Technique_LevelThree</defName>
-    <label>Inscet Blade Technique</label>
-    <description>A technique that allows a Inscet Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Inscet_Heart_LevelThree</enchantHediff>
-    <resourceGene>Gene_InsectBreath</resourceGene>
-    <ticksBetweenCost>420</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
-  </AnimeArsenal.EnchantDef>
-
-  <AnimeArsenal.EnchantDef>
-    <defName>Inscet_Blade_Technique_LevelFour</defName>
-    <label>Inscet Blade Technique</label>
-    <description>A technique that allows a Inscet Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Inscet_Heart_LevelFour</enchantHediff>
-    <resourceGene>Gene_InsectBreath</resourceGene>
-    <ticksBetweenCost>380</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
-  </AnimeArsenal.EnchantDef>
-
-  <AnimeArsenal.EnchantDef>
-    <defName>Inscet_Blade_Technique_LevelFive</defName>
-    <label>Inscet Blade Technique</label>
-    <description>A technique that allows a Inscet Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Inscet_Heart_LevelFive</enchantHediff>
-    <resourceGene>Gene_InsectBreath</resourceGene>
-    <ticksBetweenCost>340</ticksBetweenCost>
-    <resourceCostPerTick>2</resourceCostPerTick>
-  </AnimeArsenal.EnchantDef>
-
-  <AnimeArsenal.EnchantDef>
-    <defName>Inscet_Blade_Technique_LevelSix</defName>
-    <label>Inscet Blade Technique</label>
-    <description>A technique that allows a Inscet Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Inscet_Heart_LevelFour</enchantHediff>
-    <resourceGene>Gene_InsectBreath</resourceGene>
-    <ticksBetweenCost>300</ticksBetweenCost>
-    <resourceCostPerTick>2</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_InsectBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Insect</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Insect</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_InsectHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

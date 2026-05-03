@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Water_Breathing_DropRippleThrust</defName>
+    <label>Water Breathing: Drop Ripple Thrust</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>A single concentrated thrust of maximum force, condensed into one precise point. Strikes a single target for heavy damage.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>260</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>35</resourceCost>
+    <baseExperienceGain>25</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+      <warmupTime>0.8</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>1</rectWidth>
+        <rectLength>14</rectLength>
+        <damageAmount>35</damageAmount>
+        <damageType>Cut</damageType>
+        <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A heavy single-target thrust. Deals significant damage to one enemy.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <cooldownMultiplier>0.95</cooldownMultiplier>
+        <description>The thrust drives deeper.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>1</rectWidth>
+            <rectLength>14</rectLength>
+            <damageAmount>44</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Devastating single blow with increased range.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>1</rectWidth>
+            <rectLength>14</rectLength>
+            <damageAmount>55</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <rangeMultiplier>1.3</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Perfected. A single thrust of overwhelming force. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>1</rectWidth>
+            <rectLength>14</rectLength>
+            <damageAmount>68</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Water_Breathing_DropRippleThrust_Barrage</defName>
+    <label>Water Breathing: Drop Ripple Thrust, Barrage</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>An evolved Drop Ripple Thrust. The concentrated thrust explodes outward into a wide fan of rippling strikes, hitting all enemies in a broad arc in front of the user.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>265</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>55</resourceCost>
+    <baseExperienceGain>40</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+      <warmupTime>0.8</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>7</rectWidth>
+        <rectLength>14</rectLength>
+        <damageAmount>28</damageAmount>
+        <damageType>Cut</damageType>
+        <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A wide fan of rippling thrusts. Hits all enemies in a broad arc in front of the caster.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>250</experienceRequired>
+        <rangeMultiplier>1.15</rangeMultiplier>
+        <cooldownMultiplier>0.95</cooldownMultiplier>
+        <description>Wider arc, more damage per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>9</rectWidth>
+            <rectLength>14</rectLength>
+            <damageAmount>35</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Perfected. A devastating spread of ripple thrusts that devastates anything caught in the arc. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>11</rectWidth>
+            <rectLength>14</rectLength>
+            <damageAmount>44</damageAmount>
+            <damageType>Cut</damageType>
+            <impactEffecter>AnimeArsenal_WaterHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

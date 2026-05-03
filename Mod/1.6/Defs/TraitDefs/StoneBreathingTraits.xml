@@ -23,10 +23,6 @@
           <Social>4</Social>
           <Construction>3</Construction>
         </skillGains>
-        <disallowedMentalStates>
-          <li>Berserk</li>
-          <li>Tantrum</li>
-        </disallowedMentalStates>
         <marketValueFactorOffset>0.12</marketValueFactorOffset>
       </li>
     </degreeDatas>
@@ -43,7 +39,6 @@
         <statOffsets>
           <PainShockThreshold>0.5</PainShockThreshold>
           <BedHungerRateFactor>0.7</BedHungerRateFactor>
-          <RestRateMultiplier>0.8</RestRateMultiplier>
           <MoveSpeed>-0.3</MoveSpeed>
           <GeneralLaborSpeed>0.2</GeneralLaborSpeed>
         </statOffsets>
@@ -97,10 +92,12 @@
         <degree>1</degree>
         <statOffsets>
           <MeleeHitChance>-3</MeleeHitChance>
-          <MeleeDPS>0.6</MeleeDPS>
           <MoveSpeed>-0.25</MoveSpeed>
           <ConstructionSpeed>-0.2</ConstructionSpeed>
         </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.5</MeleeDamageFactor>
+        </statFactors>
         <skillGains>
           <Melee>5</Melee>
           <Mining>2</Mining>
@@ -177,8 +174,7 @@
         <description>[PAWN_nameDef] shapes stone and crystal with artistic precision. [PAWN_possessive] work transforms raw minerals into objects of beauty and value, finding art in the earth's treasures.</description>
         <degree>1</degree>
         <statOffsets>
-          <WorkSpeedGlobal>0.35</WorkSpeedGlobal>
-          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+          <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
           <MiningYield>0.2</MiningYield>
         </statOffsets>
         <skillGains>

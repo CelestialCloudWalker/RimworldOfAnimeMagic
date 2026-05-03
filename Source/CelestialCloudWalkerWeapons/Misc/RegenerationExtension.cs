@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
-using Talented;
 using System;
+using EMF;
 
 namespace AnimeArsenal
 {
@@ -42,6 +42,11 @@ namespace AnimeArsenal
         public bool onlyNotifyMajorParts = true;
 
         public string resourceName = "Blood Art";
+
+        public List<string> protectedHediffPrefixes = new List<string>
+        {
+            "DS_", "AA_", "RimKetsu_"
+        };
     }
 
     public static class RegenerationHelper
@@ -88,11 +93,28 @@ namespace AnimeArsenal
         public static bool IsOrgan(BodyPartRecord part)
         {
             var baseName = GetBasePartName(part.def.defName).ToLower();
-            return OrganTags.Contains(baseName) ||
-                   part.def.tags.Any(tag => tag == BodyPartTagDefOf.BloodPumpingSource ||
-                                           tag == BodyPartTagDefOf.BloodFiltrationSource ||
-                                           tag == BodyPartTagDefOf.BreathingSource ||
-                                           tag == BodyPartTagDefOf.ConsciousnessSource);
+
+            if (OrganTags.Contains(baseName))
+                return true;
+
+            if (part.def.tags.Any(tag =>
+                tag == BodyPartTagDefOf.BloodPumpingSource ||
+                tag == BodyPartTagDefOf.BloodFiltrationSource ||
+                tag == BodyPartTagDefOf.BreathingSource ||
+                tag == BodyPartTagDefOf.ConsciousnessSource ||
+                tag == BodyPartTagDefOf.SightSource ||
+                tag == BodyPartTagDefOf.HearingSource ||
+                tag == BodyPartTagDefOf.TalkingSource ||
+                tag == BodyPartTagDefOf.EatingSource))
+                return true;
+
+            if (baseName.Contains("eye") || baseName.Contains("ear") ||
+                baseName.Contains("heart") || baseName.Contains("brain") ||
+                baseName.Contains("lung") || baseName.Contains("kidney") ||
+                baseName.Contains("liver") || baseName.Contains("stomach"))
+                return true;
+
+            return false;
         }
 
         public static bool IsMajorPart(BodyPartRecord part)
@@ -100,27 +122,62 @@ namespace AnimeArsenal
             return IsOrgan(part) || MajorParts.Contains(GetBasePartName(part.def.defName).ToLower());
         }
 
-        public static bool IsPermanentInjury(Hediff hediff)
+        public static bool IsPermanentInjury(Hediff hediff, RegenerationExtension ext)
         {
-            if (hediff.IsPermanent() || hediff.def.chronic) return true;
+            if (ext?.protectedHediffPrefixes != null)
+            {
+                foreach (var prefix in ext.protectedHediffPrefixes)
+                {
+                    if (hediff.def.defName.StartsWith(prefix))
+                        return false;
+                }
+            }
+
+            if (hediff is HediffWithComps hwc &&
+                hwc.comps != null &&
+                hwc.comps.Any(c => c is HediffComp_Disappears))
+                return false;
+
+            if (hediff.def.hediffClass != null)
+            {
+                var className = hediff.def.hediffClass.Name;
+                if (className.Contains("Ability") || className.Contains("Gene"))
+                    return false;
+            }
+
+            if (hediff.def.tendable || hediff.def.everCurableByItem)
+                return false;
+
+            if (hediff.IsPermanent() || hediff.def.chronic)
+                return true;
 
             var defName = hediff.def.defName.ToLower();
-            return PermanentKeywords.Any(keyword => defName.Contains(keyword)) ||
-                   (!hediff.def.tendable && !hediff.def.everCurableByItem && hediff.Severity > 0);
+            if (PermanentKeywords.Any(keyword => defName.Contains(keyword)))
+                return true;
+
+            if (!hediff.def.tendable &&
+                !hediff.def.everCurableByItem &&
+                hediff.Severity > 0 &&
+                hediff.Part != null)
+                return true;
+
+            return false;
         }
 
         public static bool CanConsumeResource(Pawn pawn, RegenerationExtension ext, float cost)
         {
             if (!ext.consumeResourcesOnRegeneration) return true;
             var gene = GetResourceGene(pawn);
-            return gene?.Value >= (cost + ext.minimumResourcesRequired);
+            if (gene == null) return false;
+            return gene.Value >= (cost + ext.minimumResourcesRequired * gene.Max);
         }
 
         public static bool TryConsumeResource(Pawn pawn, RegenerationExtension ext, float cost)
         {
             if (!ext.consumeResourcesOnRegeneration) return true;
             var gene = GetResourceGene(pawn);
-            if (gene?.Value >= (cost + ext.minimumResourcesRequired))
+            if (gene == null) return false;
+            if (gene.Value >= (cost + ext.minimumResourcesRequired * gene.Max))
             {
                 gene.Consume(cost);
                 return true;
@@ -128,17 +185,18 @@ namespace AnimeArsenal
             return false;
         }
 
-        private static Gene_BasicResource GetResourceGene(Pawn pawn)
+        private static EMF.Gene_BasicResource GetResourceGene(Pawn pawn)
         {
             return pawn.genes?.GenesListForReading
                 .FirstOrDefault(g => g.Active && g.def.GetModExtension<RegenerationExtension>() != null)
-                as Gene_BasicResource;
+                as EMF.Gene_BasicResource;
         }
     }
 
     public class MapComponent_BloodDemonRegeneration : MapComponent
     {
         private Dictionary<int, int> lastResourceWarn = new Dictionary<int, int>();
+        private HashSet<int> pendingInstantRegen = new HashSet<int>();
 
         public MapComponent_BloodDemonRegeneration(Map map) : base(map) { }
 
@@ -146,7 +204,11 @@ namespace AnimeArsenal
         {
             base.MapComponentTick();
 
-            foreach (var pawn in map.mapPawns.AllPawnsSpawned.Where(p => HasRegenGene(p) && !p.Dead))
+            var pawnsToProcess = map.mapPawns.AllPawnsSpawned
+                .Where(p => HasRegenGene(p) && !p.Dead)
+                .ToList();
+
+            foreach (var pawn in pawnsToProcess)
             {
                 var ext = GetRegenExtension(pawn);
                 if (ext != null && Find.TickManager.TicksGame % ext.ticksBetweenHealing == 0)
@@ -164,8 +226,10 @@ namespace AnimeArsenal
                 return;
             }
 
-            ProcessNormalRegen(pawn, ext);
-            ProcessInstantRegen(pawn, ext);
+            RegenSuppressionState suppression = RegenSuppressionTracker.GetState(pawn);
+
+            ProcessNormalRegen(pawn, ext, suppression);
+            ProcessInstantRegen(pawn, ext, suppression);
             TryStandUp(pawn);
         }
 
@@ -185,22 +249,36 @@ namespace AnimeArsenal
         private bool HasFatalDamage(Pawn pawn, RegenerationExtension ext)
         {
             return pawn.health.hediffSet.GetMissingPartsCommonAncestors()
-                .Any(mp => ext.fatalBodyParts.Any(fp => RegenerationHelper.IsPartType(mp.Part.def.defName, fp)) ||
-                          (!ext.canRegenerateHead && RegenerationHelper.IsPartType(mp.Part.def.defName, "Head")));
+                .Any(mp =>
+                    ext.fatalBodyParts.Any(fp =>
+                        RegenerationHelper.IsPartType(mp.Part.def.defName, fp)) ||
+                    (!ext.canRegenerateHead &&
+                        RegenerationHelper.IsPartType(mp.Part.def.defName, "Head")));
         }
 
-        private void ProcessNormalRegen(Pawn pawn, RegenerationExtension ext)
+        private void ProcessNormalRegen(Pawn pawn, RegenerationExtension ext,
+            RegenSuppressionState suppression)
         {
-            var injuries = pawn.health.hediffSet.hediffs.OfType<Hediff_Injury>()
-                .Where(i => !i.IsPermanent() && i.Severity > 0).ToList();
+            if (suppression.suppressWound && suppression.regenMultiplier <= 0f)
+                return;
+
+            var injuries = pawn.health.hediffSet.hediffs
+                .OfType<Hediff_Injury>()
+                .Where(i => !i.IsPermanent() && i.Severity > 0)
+                .ToList();
 
             bool blocked = false;
-
             float sanityMultiplier = RegenerationHelper.GetSanityMultiplier(pawn);
+
+            float effectiveMultiplier = sanityMultiplier;
+            if (suppression.suppressWound)
+                effectiveMultiplier *= suppression.regenMultiplier;
 
             foreach (var injury in injuries)
             {
-                float heal = ext.healingPerTick * ext.healingMultiplier * sanityMultiplier;
+                float heal = ext.healingPerTick * ext.healingMultiplier * effectiveMultiplier;
+
+                if (heal <= 0f) continue;
 
                 if (injury.Severity <= heal * 0.1f)
                 {
@@ -218,9 +296,25 @@ namespace AnimeArsenal
 
                 if (Rand.Chance(0.05f))
                 {
-                    Color moteColor = sanityMultiplier >= 1f ? Color.green :
-                                     sanityMultiplier >= 0.75f ? Color.yellow : Color.red;
-                    string moteText = sanityMultiplier >= 1f ? "Regenerating..." : "Weak Regen...";
+                    Color moteColor;
+                    string moteText;
+
+                    if (suppression.AnyEffect)
+                    {
+                        moteColor = Color.red;
+                        moteText = suppression.isRecovering ? "Recovering..." : "Suppressed...";
+                    }
+                    else if (sanityMultiplier >= 1f)
+                    {
+                        moteColor = Color.green;
+                        moteText = "Regenerating...";
+                    }
+                    else
+                    {
+                        moteColor = Color.yellow;
+                        moteText = "Weak Regen...";
+                    }
+
                     MoteMaker.ThrowText(pawn.DrawPos, map, moteText, moteColor, 2f);
                 }
             }
@@ -228,61 +322,206 @@ namespace AnimeArsenal
             if (blocked) ShowResourceWarning(pawn, ext);
         }
 
-        private void ProcessInstantRegen(Pawn pawn, RegenerationExtension ext)
+        private void ProcessInstantRegen(Pawn pawn, RegenerationExtension ext,
+            RegenSuppressionState suppression)
         {
-            var missing = pawn.health.hediffSet.GetMissingPartsCommonAncestors().ToList();
+            int pawnId = pawn.thingIDNumber;
 
-            if (ext.instantLimbRegeneration)
+            if (!suppression.suppressScar)
             {
-                var limb = missing.FirstOrDefault(x => CanRegenPart(x.Part, ext, false));
-                if (limb != null && RegenerationHelper.TryConsumeResource(pawn, ext, ext.resourceCostPerLimbRegen))
-                    RegenPart(pawn, limb.Part, ext, "Limb Regenerated!", Color.green);
+                var permanentInjuries = pawn.health.hediffSet.hediffs
+                    .Where(h => RegenerationHelper.IsPermanentInjury(h, ext) && h.Visible)
+                    .ToList();
+
+                if (permanentInjuries.Count > 0)
+                {
+                    var injury = permanentInjuries.RandomElement();
+
+                    if (RegenerationHelper.TryConsumeResource(pawn, ext, ext.resourceCostPerScarHeal))
+                    {
+                        pawn.health.RemoveHediff(injury);
+
+                        if (!ext.onlyNotifyMajorParts ||
+                            (injury.Part != null && RegenerationHelper.IsMajorPart(injury.Part)))
+                        {
+                            Messages.Message(
+                                $"{pawn.LabelShort} has healed {injury.Label}!",
+                                pawn,
+                                MessageTypeDefOf.PositiveEvent);
+                            MoteMaker.ThrowText(pawn.DrawPos, map, "Scar Healed!", Color.cyan, 3f);
+                        }
+
+                        return;
+                    }
+                    else if (Prefs.DevMode)
+                    {
+                        Log.Warning($"[Regen] Not enough resources to heal permanent injury");
+                    }
+                }
             }
 
-            if (ext.instantOrganRegeneration)
+            var allMissingParts = pawn.health.hediffSet.hediffs
+                .OfType<Hediff_MissingPart>()
+                .Select(h => h.Part)
+                .Distinct()
+                .ToList();
+
+            if (allMissingParts.Count == 0)
             {
-                var organ = missing.FirstOrDefault(x => CanRegenPart(x.Part, ext, true));
-                if (organ != null && RegenerationHelper.TryConsumeResource(pawn, ext, ext.resourceCostPerOrganRegen))
-                    RegenPart(pawn, organ.Part, ext, "Organ Regenerated!", Color.cyan);
+                pendingInstantRegen.Remove(pawnId);
+                return;
+            }
+
+            if (ext.instantOrganRegeneration && ext.canRegenerateOrgans
+                && !suppression.suppressOrgan)
+            {
+                var organ = allMissingParts.FirstOrDefault(part => CanRegenPart(part, ext, true));
+                if (organ != null)
+                {
+                    if (Prefs.DevMode)
+                        Log.Message($"[Regen] Found organ to regen: {organ.Label}");
+
+                    pendingInstantRegen.Add(pawnId);
+
+                    if (RegenerationHelper.TryConsumeResource(pawn, ext, ext.resourceCostPerOrganRegen))
+                    {
+                        RegenNaturalPart(pawn, organ, ext, "Organ Regenerated!", Color.cyan);
+                        pendingInstantRegen.Remove(pawnId);
+                        return;
+                    }
+                    else if (Prefs.DevMode)
+                    {
+                        Log.Warning($"[Regen] Not enough resources to regen organ");
+                    }
+                }
+                else if (Prefs.DevMode)
+                {
+                    Log.Message($"[Regen] No organs found that can be regenerated");
+                }
+            }
+
+            if (ext.instantLimbRegeneration && !suppression.suppressLimb)
+            {
+                var limb = allMissingParts.FirstOrDefault(part => CanRegenPart(part, ext, false));
+                if (limb != null)
+                {
+                    if (Prefs.DevMode)
+                        Log.Message($"[Regen] Found limb to regen: {limb.Label}");
+
+                    pendingInstantRegen.Add(pawnId);
+
+                    if (RegenerationHelper.TryConsumeResource(pawn, ext, ext.resourceCostPerLimbRegen))
+                    {
+                        RegenNaturalPart(pawn, limb, ext, "Limb Regenerated!", Color.green);
+                        pendingInstantRegen.Remove(pawnId);
+                    }
+                    else if (Prefs.DevMode)
+                    {
+                        Log.Warning($"[Regen] Not enough resources to regen limb");
+                    }
+                }
             }
         }
 
-        private bool CanRegenPart(BodyPartRecord part, RegenerationExtension ext, bool isOrgan)
+        private bool CanRegenPart(BodyPartRecord part, RegenerationExtension ext, bool checkingForOrgan)
         {
-            if (ext.fatalBodyParts.Any(fp => RegenerationHelper.IsPartType(part.def.defName, fp))) return false;
-            if (RegenerationHelper.IsPartType(part.def.defName, "Head") && !ext.canRegenerateHead) return false;
+            if (Prefs.DevMode)
+                Log.Message($"[CanRegenPart] Checking {part.Label} ({part.def.defName}), checkingForOrgan={checkingForOrgan}");
 
-            if (isOrgan)
+            if (ext.fatalBodyParts.Any(fp => RegenerationHelper.IsPartType(part.def.defName, fp)))
             {
-                if (!ext.canRegenerateOrgans || !RegenerationHelper.IsOrgan(part)) return false;
-                if (RegenerationHelper.IsPartType(part.def.defName, "Brain") && !ext.canRegenerateBrain) return false;
-                if (RegenerationHelper.IsPartType(part.def.defName, "Heart") && !ext.canRegenerateHeart) return false;
+                if (Prefs.DevMode) Log.Message($"  -> BLOCKED: Fatal part");
+                return false;
+            }
+
+            if (RegenerationHelper.IsPartType(part.def.defName, "Head") && !ext.canRegenerateHead)
+            {
+                if (Prefs.DevMode) Log.Message($"  -> BLOCKED: Head not allowed");
+                return false;
+            }
+
+            bool isOrgan = RegenerationHelper.IsOrgan(part);
+            if (Prefs.DevMode) Log.Message($"  -> IsOrgan: {isOrgan}");
+
+            if (checkingForOrgan)
+            {
+                if (!isOrgan)
+                {
+                    if (Prefs.DevMode) Log.Message($"  -> BLOCKED: Not an organ");
+                    return false;
+                }
+
+                if (!ext.canRegenerateOrgans)
+                {
+                    if (Prefs.DevMode) Log.Message($"  -> BLOCKED: canRegenerateOrgans = false");
+                    return false;
+                }
+
+                if (RegenerationHelper.IsPartType(part.def.defName, "Brain") && !ext.canRegenerateBrain)
+                {
+                    if (Prefs.DevMode) Log.Message($"  -> BLOCKED: Brain regen disabled");
+                    return false;
+                }
+
+                if (RegenerationHelper.IsPartType(part.def.defName, "Heart") && !ext.canRegenerateHeart)
+                {
+                    if (Prefs.DevMode) Log.Message($"  -> BLOCKED: Heart regen disabled");
+                    return false;
+                }
+
+                if (Prefs.DevMode) Log.Message($"  -> ALLOWED: Can regen organ");
                 return true;
             }
 
-            return !RegenerationHelper.IsOrgan(part);
+            bool result = !isOrgan;
+            if (Prefs.DevMode)
+                Log.Message($"  -> {(result ? "ALLOWED" : "BLOCKED")}: Limb check (not organ = {result})");
+            return result;
         }
 
-        private void RegenPart(Pawn pawn, BodyPartRecord part, RegenerationExtension ext, string text, Color color)
+        private void RegenNaturalPart(Pawn pawn, BodyPartRecord part, RegenerationExtension ext,
+            string text, Color color)
         {
-            var missing = pawn.health.hediffSet.hediffs.OfType<Hediff_MissingPart>()
+            if (Prefs.DevMode)
+                Log.Message($"[RegenNaturalPart] Starting regeneration of {part.Label}");
+
+            var missingPartHediff = pawn.health.hediffSet.hediffs
+                .OfType<Hediff_MissingPart>()
                 .FirstOrDefault(h => h.Part == part);
 
-            if (missing != null)
+            if (missingPartHediff != null)
             {
-                pawn.health.RemoveHediff(missing);
-                var cut = HediffMaker.MakeHediff(HediffDefOf.Cut, pawn, part);
-                cut.Severity = 0.01f;
-                pawn.health.AddHediff(cut);
+                if (Prefs.DevMode) Log.Message($"[RegenNaturalPart] Removing missing part hediff");
+                pawn.health.RemoveHediff(missingPartHediff);
             }
+
+            var otherHediffs = pawn.health.hediffSet.hediffs
+                .Where(h => h.Part == part && h != missingPartHediff)
+                .ToList();
+
+            foreach (var hediff in otherHediffs)
+            {
+                if (Prefs.DevMode) Log.Message($"[RegenNaturalPart] Removing hediff: {hediff.def.defName}");
+                pawn.health.RemoveHediff(hediff);
+            }
+
+            pawn.health.RestorePart(part, null, true);
+
+            Hediff_Injury injury = (Hediff_Injury)HediffMaker.MakeHediff(HediffDefOf.Cut, pawn, part);
+            injury.Severity = 1f;
+            pawn.health.AddHediff(injury, part, null, null);
+
+            if (Prefs.DevMode) Log.Message($"[RegenNaturalPart] Part restored, added small cut");
 
             RefreshPawn(pawn);
 
             if (!ext.onlyNotifyMajorParts || RegenerationHelper.IsMajorPart(part))
             {
                 var name = RegenerationHelper.GetBasePartName(part.def.defName);
-                Messages.Message($"{pawn.LabelShort} has instantly regenerated their {name}!",
-                    pawn, MessageTypeDefOf.PositiveEvent);
+                Messages.Message(
+                    $"{pawn.LabelShort} has regenerated their natural {name}!",
+                    pawn,
+                    MessageTypeDefOf.PositiveEvent);
                 MoteMaker.ThrowText(pawn.DrawPos, map, text, color, 4f);
             }
         }
@@ -300,14 +539,22 @@ namespace AnimeArsenal
 
             if (consciousness > 0.3f && moving > 0.2f && blood > 0.3f)
             {
-                var major = pawn.health.hediffSet.hediffs.OfType<Hediff_Injury>()
-                    .Where(i => i.Severity > 15f).ToList();
+                var major = pawn.health.hediffSet.hediffs
+                    .OfType<Hediff_Injury>()
+                    .Where(i => i.Severity > 15f)
+                    .ToList();
 
-                foreach (var injury in major)
+                var toRemove = new List<Hediff_Injury>();
+
+                foreach (var inj in major)
                 {
-                    injury.Heal(injury.Severity * 0.5f);
-                    if (injury.Severity < 1f) pawn.health.RemoveHediff(injury);
+                    inj.Heal(inj.Severity * 0.5f);
+                    if (inj.Severity < 1f)
+                        toRemove.Add(inj);
                 }
+
+                foreach (var inj in toRemove)
+                    pawn.health.RemoveHediff(inj);
 
                 pawn.health.capacities.Notify_CapacityLevelsDirty();
                 pawn.health.summaryHealth.Notify_HealthChanged();
@@ -334,21 +581,41 @@ namespace AnimeArsenal
 
         private void RefreshPawn(Pawn pawn)
         {
+            foreach (var hediff in pawn.health.hediffSet.hediffs.OfType<Hediff_Injury>().ToList())
+            {
+                if (hediff.Bleeding && hediff.Part != null &&
+                    !pawn.health.hediffSet.PartIsMissing(hediff.Part))
+                {
+                    if (hediff.Severity < 5f)
+                        hediff.Tended(1.0f, 1.0f, 1);
+                }
+            }
+
             pawn.health.capacities.Notify_CapacityLevelsDirty();
             pawn.health.summaryHealth.Notify_HealthChanged();
-            if (pawn.Spawned) pawn.Notify_ColorChanged();
+            pawn.health.hediffSet.DirtyCache();
+
+            if (pawn.Spawned)
+            {
+                pawn.Notify_ColorChanged();
+                pawn.Drawer.renderer.SetAllGraphicsDirty();
+            }
+
             PortraitsCache.SetDirty(pawn);
         }
 
         private void KillFromFatalDamage(Pawn pawn, RegenerationExtension ext)
         {
             var fatalPart = pawn.health.hediffSet.GetMissingPartsCommonAncestors()
-                .Where(mp => ext.fatalBodyParts.Any(fp => RegenerationHelper.IsPartType(mp.Part.def.defName, fp)))
+                .Where(mp => ext.fatalBodyParts.Any(fp =>
+                    RegenerationHelper.IsPartType(mp.Part.def.defName, fp)))
                 .Select(mp => RegenerationHelper.GetBasePartName(mp.Part.def.defName).ToLower())
                 .FirstOrDefault() ?? "vital part";
 
-            Messages.Message($"{pawn.LabelShort} dies from catastrophic {fatalPart} damage - even regeneration cannot save them.",
-                pawn, MessageTypeDefOf.NegativeEvent);
+            Messages.Message(
+                $"{pawn.LabelShort} dies from catastrophic {fatalPart} damage - even regeneration cannot save them.",
+                pawn,
+                MessageTypeDefOf.NegativeEvent);
             MoteMaker.ThrowText(pawn.DrawPos, map, $"Fatal {fatalPart} Damage!", Color.red, 5f);
             FilthMaker.TryMakeFilth(pawn.Position, map, ThingDefOf.Filth_Blood, 5);
             pawn.Kill(null);
@@ -357,59 +624,23 @@ namespace AnimeArsenal
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Collections.Look(ref lastResourceWarn, "lastResourceWarn", LookMode.Value, LookMode.Value);
+
+            Scribe_Collections.Look(
+                ref lastResourceWarn,
+                "lastResourceWarn",
+                LookMode.Value,
+                LookMode.Value);
+
+            Scribe_Collections.Look(
+                ref pendingInstantRegen,
+                "pendingInstantRegen",
+                LookMode.Value);
 
             if (lastResourceWarn == null)
                 lastResourceWarn = new Dictionary<int, int>();
-        }
-    }
 
-    public class BloodDemonRegenerationGene : Gene
-    {
-        private int lastScarCheck = 0;
-
-        public override void Tick()
-        {
-            base.Tick();
-
-            var ext = def.GetModExtension<RegenerationExtension>();
-            if (ext == null) return;
-
-            if (Find.TickManager.TicksGame - lastScarCheck >= ext.scarHealInterval)
-            {
-                lastScarCheck = Find.TickManager.TicksGame;
-                ProcessScarHealing(ext);
-            }
-        }
-
-        private void ProcessScarHealing(RegenerationExtension ext)
-        {
-            var scar = pawn.health.hediffSet.hediffs.FirstOrDefault(RegenerationHelper.IsPermanentInjury);
-
-            if (scar != null && Rand.Chance(ext.scarHealChance) &&
-                RegenerationHelper.TryConsumeResource(pawn, ext, ext.resourceCostPerScarHeal))
-            {
-                pawn.health.RemoveHediff(scar);
-
-                if (pawn.Map != null)
-                {
-                    var type = scar.def.label ?? "Permanent Injury";
-                    MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, $"{type} healed", Color.blue, 2f);
-
-                    var name = scar.def.defName.ToLower();
-                    if (name.Contains("blindness") || name.Contains("hearing") || name.Contains("dementia"))
-                    {
-                        Messages.Message($"{pawn.LabelShort}'s {type} has been completely healed by regeneration!",
-                            pawn, MessageTypeDefOf.PositiveEvent);
-                    }
-                }
-            }
-        }
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref lastScarCheck, "lastScarCheck", 0);
+            if (pendingInstantRegen == null)
+                pendingInstantRegen = new HashSet<int>();
         }
     }
 }

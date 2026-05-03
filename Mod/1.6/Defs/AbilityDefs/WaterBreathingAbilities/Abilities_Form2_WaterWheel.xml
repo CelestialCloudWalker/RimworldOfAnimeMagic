@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Water_Breathing_WaterWheel</defName>
+    <label>Water Breathing: Water Wheel</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>The user dashes forward, cutting through every enemy in their path from start to finish.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>210</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+      <warmupTime>0.6</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+        <damageDef>Cut</damageDef>
+        <damageAmount><min>20</min><max>25</max></damageAmount>
+        <armourPen><min>0.3</min><max>0.3</max></armourPen>
+        <width>3</width>
+        <splashRadius>1.5</splashRadius>
+        <splashDamageAmount><min>8</min><max>12</max></splashDamageAmount>
+        <meleeSkillFactor>0.4</meleeSkillFactor>
+        <castEffecter>AnimeArsenal_WaterJump</castEffecter>
+        <hitEffecter>AnimeArsenal_WaterHit</hitEffecter>
+        <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+        <splashEffecter>AnimeArsenal_WaterHit2</splashEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Dash forward, slashing all enemies in your path.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>20</min><max>25</max></damageAmount>
+            <armourPen><min>0.3</min><max>0.3</max></armourPen>
+            <width>3</width>
+            <splashRadius>1.5</splashRadius>
+            <splashDamageAmount><min>8</min><max>12</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <castEffecter>AnimeArsenal_WaterJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WaterHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WaterHit2</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Faster dash with slightly more range.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>28</min><max>34</max></damageAmount>
+            <armourPen><min>0.35</min><max>0.35</max></armourPen>
+            <width>3</width>
+            <splashRadius>1.5</splashRadius>
+            <splashDamageAmount><min>10</min><max>14</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <castEffecter>AnimeArsenal_WaterJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WaterHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WaterHit2</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>280</experienceRequired>
+        <rangeMultiplier>1.35</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Extended dash range, increased cutting force.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>38</min><max>45</max></damageAmount>
+            <armourPen><min>0.4</min><max>0.4</max></armourPen>
+            <width>3</width>
+            <splashRadius>2</splashRadius>
+            <splashDamageAmount><min>12</min><max>18</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <stunTicksOnHit>20</stunTicksOnHit>
+            <castEffecter>AnimeArsenal_WaterJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WaterHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WaterHit2</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Long-range dash, devastating cuts.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>50</min><max>60</max></damageAmount>
+            <armourPen><min>0.45</min><max>0.45</max></armourPen>
+            <width>3</width>
+            <splashRadius>2</splashRadius>
+            <splashDamageAmount><min>15</min><max>22</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <stunTicksOnHit>30</stunTicksOnHit>
+            <castEffecter>AnimeArsenal_WaterJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WaterHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WaterHit2</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <rangeMultiplier>1.5</rangeMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <description>Perfected dash. A single blur that cleaves all before it. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDashPathDamage">
+            <damageDef>Cut</damageDef>
+            <damageAmount><min>65</min><max>75</max></damageAmount>
+            <armourPen><min>0.5</min><max>0.5</max></armourPen>
+            <width>3</width>
+            <splashRadius>2.5</splashRadius>
+            <splashDamageAmount><min>20</min><max>28</max></splashDamageAmount>
+            <meleeSkillFactor>0.4</meleeSkillFactor>
+            <stunTicksOnHit>40</stunTicksOnHit>
+            <castEffecter>AnimeArsenal_WaterJump</castEffecter>
+            <hitEffecter>AnimeArsenal_WaterHit</hitEffecter>
+            <impactEffecter>AnimeArsenal_WaterHit</impactEffecter>
+            <splashEffecter>AnimeArsenal_WaterHit2</splashEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Water_Breathing_LateralWaterWheel</defName>
+    <label>Water Breathing: Lateral Water Wheel</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>An improved Water Wheel. Instead of a dash, the user erupts with a massive arc of slashing force around themselves, striking all nearby enemies.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>215</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.8</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <radius>6</radius>
+        <damage>18</damage>
+        <hitEffecter>AnimeArsenal_WaterHit2</hitEffecter>
+        <effecter>RimKetsu_Effecter_WaterHit_A</effecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A wide arc of slashing force around the caster. Radius 6.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Larger burst, more damage. Radius 7.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>7</radius>
+            <damage>23</damage>
+            <hitEffecter>AnimeArsenal_WaterHit2</hitEffecter>
+            <effecter>RimKetsu_Effecter_WaterHit_B</effecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Devastating range. Radius 8.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>8</radius>
+            <damage>29</damage>
+            <hitEffecter>AnimeArsenal_WaterHit2</hitEffecter>
+            <effecter>AnimeArsenal_WaterJump</effecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. An enormous lateral arc that engulfs all enemies nearby. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>10</radius>
+            <damage>36</damage>
+            <hitEffecter>AnimeArsenal_WaterHit2</hitEffecter>
+            <effecter>AnimeArsenal_WaterJump</effecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

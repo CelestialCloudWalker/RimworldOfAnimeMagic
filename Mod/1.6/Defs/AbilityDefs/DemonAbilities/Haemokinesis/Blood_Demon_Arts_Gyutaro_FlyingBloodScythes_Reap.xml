@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Gyutaro_FlyingBloodScythes_Reap</defName>
+    <label>Flying Blood Scythes: Reap</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Gyutaro's ultimate technique. A storm of blood scythes fills the entire map, shredding everything in range and rapidly stacking Blood Poisoning. Requires Rampant Arc Rampage at Level 5.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>12000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>70</resourceCost>
+    <baseExperienceGain>100</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>1.2</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Cleave">
+        <BaseDamage>20</BaseDamage>
+        <DamageDef>Cut</DamageDef>
+        <NumberOfCuts>8</NumberOfCuts>
+        <TicksBetweenCuts>20</TicksBetweenCuts>
+        <radius>18</radius>
+        <maxTargets>50</maxTargets>
+        <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>BloodPoison_Hediff</hediffDef>
+        <severityAdjustment>0.06</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+        <effectRadius>18</effectRadius>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+        <requiredHediff>DS_ReapUnlocked</requiredHediff>
+        <minimumSeverity>0</minimumSeverity>
+        <failMessage>Requires Rampant Arc Rampage Level 5 or higher.</failMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>8 hits of 20 Cut in a radius-18 area. Blood Poisoning +0.06 per hit. Requires Rampant Arc Rampage L5.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.917</cooldownMultiplier>
+        <resourceCostMultiplier>1.029</resourceCostMultiplier>
+        <description>8 hits of 24 Cut. Radius extended to 20. Blood Poisoning +0.06.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>24</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>8</NumberOfCuts>
+            <TicksBetweenCuts>20</TicksBetweenCuts>
+            <radius>20</radius>
+            <maxTargets>50</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>20</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediff>DS_ReapUnlocked</requiredHediff>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Rampant Arc Rampage Level 5 or higher.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <cooldownMultiplier>0.833</cooldownMultiplier>
+        <resourceCostMultiplier>1.086</resourceCostMultiplier>
+        <description>8 hits of 28 Cut. Radius extended to 24. Blood Poisoning +0.06.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>28</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>8</NumberOfCuts>
+            <TicksBetweenCuts>20</TicksBetweenCuts>
+            <radius>24</radius>
+            <maxTargets>50</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>24</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediff>DS_ReapUnlocked</requiredHediff>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Rampant Arc Rampage Level 5 or higher.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <resourceCostMultiplier>1.157</resourceCostMultiplier>
+        <description>8 hits of 35 Cut. Radius 28. Blood Poisoning +0.06.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>35</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>8</NumberOfCuts>
+            <TicksBetweenCuts>20</TicksBetweenCuts>
+            <radius>28</radius>
+            <maxTargets>50</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>28</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediff>DS_ReapUnlocked</requiredHediff>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Rampant Arc Rampage Level 5 or higher.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>620</experienceRequired>
+        <cooldownMultiplier>0.667</cooldownMultiplier>
+        <resourceCostMultiplier>1.243</resourceCostMultiplier>
+        <description>8 hits of 44 Cut. Radius 32. Blood Poisoning +0.08.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>44</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>8</NumberOfCuts>
+            <TicksBetweenCuts>20</TicksBetweenCuts>
+            <radius>32</radius>
+            <maxTargets>50</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.08</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>32</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediff>DS_ReapUnlocked</requiredHediff>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Rampant Arc Rampage Level 5 or higher.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <cooldownMultiplier>0.583</cooldownMultiplier>
+        <resourceCostMultiplier>1.343</resourceCostMultiplier>
+        <description>Perfected. 8 hits of 55 Cut across a radius-38 storm. Blood Poisoning +0.08 per hit. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>55</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>8</NumberOfCuts>
+            <TicksBetweenCuts>20</TicksBetweenCuts>
+            <radius>38</radius>
+            <maxTargets>50</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.08</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>38</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediff>DS_ReapUnlocked</requiredHediff>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Rampant Arc Rampage Level 5 or higher.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

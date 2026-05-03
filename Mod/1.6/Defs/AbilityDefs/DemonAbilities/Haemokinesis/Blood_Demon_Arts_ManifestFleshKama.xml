@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>DS_FleshKamaBound_1</defName>
+    <label>flesh kama bound</label>
+    <description>Gyutaro's flesh kama exists as an extension of himself.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="EMF.HediffCompProperties_BoundWeapon" />
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>BloodPoison_Hediff</hediffDef>
+        <intialSeverity><min>0.04</min><max>0.04</max></intialSeverity>
+        <severityIncrease><min>0.04</min><max>0.04</max></severityIncrease>
+        <chanceToApply>1.0</chanceToApply>
+      </li>
+    </comps>
+    <stages>
+      <li><becomeVisible>false</becomeVisible></li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FleshKamaBound_3</defName>
+    <label>flesh kama bound</label>
+    <description>Gyutaro's flesh kama exists as an extension of himself.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="EMF.HediffCompProperties_BoundWeapon" />
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>BloodPoison_Hediff</hediffDef>
+        <intialSeverity><min>0.06</min><max>0.06</max></intialSeverity>
+        <severityIncrease><min>0.06</min><max>0.06</max></severityIncrease>
+        <chanceToApply>1.0</chanceToApply>
+      </li>
+    </comps>
+    <stages>
+      <li><becomeVisible>false</becomeVisible></li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FleshKamaBound_5</defName>
+    <label>flesh kama bound</label>
+    <description>Gyutaro's flesh kama exists as an extension of himself.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="EMF.HediffCompProperties_BoundWeapon" />
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>BloodPoison_Hediff</hediffDef>
+        <intialSeverity><min>0.08</min><max>0.08</max></intialSeverity>
+        <severityIncrease><min>0.08</min><max>0.08</max></severityIncrease>
+        <chanceToApply>1.0</chanceToApply>
+      </li>
+    </comps>
+    <stages>
+      <li><becomeVisible>false</becomeVisible></li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FleshKamaBound_6</defName>
+    <label>flesh kama bound</label>
+    <description>Gyutaro's flesh kama exists as an extension of himself.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="EMF.HediffCompProperties_BoundWeapon" />
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>BloodPoison_Hediff</hediffDef>
+        <intialSeverity><min>0.10</min><max>0.10</max></intialSeverity>
+        <severityIncrease><min>0.10</min><max>0.10</max></severityIncrease>
+        <chanceToApply>1.0</chanceToApply>
+      </li>
+    </comps>
+    <stages>
+      <li><becomeVisible>false</becomeVisible></li>
+    </stages>
+  </HediffDef>
+
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Gyutaro_ManifestFleshKama</defName>
+    <label>Manifest Flesh Kama</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Gyutaro reshapes his own flesh into wickedly curved kamas, infused with Blood Poison that spreads on every strike.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>12</resourceCost>
+    <baseExperienceGain>40</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1.5</range>
+      <warmupTime>0.3</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ManifestWeapon">
+        <weaponDef>DS_FleshKama</weaponDef>
+        <weaponQuality>Normal</weaponQuality>
+        <boundWeaponHediff>DS_FleshKamaBound_1</boundWeaponHediff>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Manifests a flesh kama. Each strike applies Blood Poisoning +0.04. Re-cast recalls.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>40</experienceRequired>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <resourceCostMultiplier>1.083</resourceCostMultiplier>
+        <description>Flesh kama. Blood Poisoning +0.05 per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ManifestWeapon">
+            <weaponDef>DS_FleshKama</weaponDef>
+            <weaponQuality>Good</weaponQuality>
+            <boundWeaponHediff>DS_FleshKamaBound_1</boundWeaponHediff>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <resourceCostMultiplier>1.167</resourceCostMultiplier>
+        <description>Flesh kama. Blood Poisoning +0.06 per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ManifestWeapon">
+            <weaponDef>DS_FleshKama</weaponDef>
+            <weaponQuality>Excellent</weaponQuality>
+            <boundWeaponHediff>DS_FleshKamaBound_3</boundWeaponHediff>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <cooldownMultiplier>0.7</cooldownMultiplier>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <description>Flesh kama. Blood Poisoning +0.06 per hit. Higher quality weapon.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ManifestWeapon">
+            <weaponDef>DS_FleshKama</weaponDef>
+            <weaponQuality>Masterwork</weaponQuality>
+            <boundWeaponHediff>DS_FleshKamaBound_3</boundWeaponHediff>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <cooldownMultiplier>0.6</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <description>Manifests dual flesh kamas. Blood Poisoning +0.08 per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ManifestWeapon">
+            <weaponDef>DS_FleshKama</weaponDef>
+            <weaponQuality>Masterwork</weaponQuality>
+            <boundWeaponHediff>DS_FleshKamaBound_5</boundWeaponHediff>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <cooldownMultiplier>0.5</cooldownMultiplier>
+        <resourceCostMultiplier>1.417</resourceCostMultiplier>
+        <description>Perfected. Dual flesh kamas at peak potency. Blood Poisoning +0.10 per hit. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ManifestWeapon">
+            <weaponDef>DS_FleshKama</weaponDef>
+            <weaponQuality>Legendary</weaponQuality>
+            <boundWeaponHediff>DS_FleshKamaBound_6</boundWeaponHediff>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

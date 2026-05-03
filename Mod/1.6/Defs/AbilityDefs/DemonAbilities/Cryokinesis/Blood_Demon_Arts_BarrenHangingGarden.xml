@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_BarrenHangingGarden</defName>
+    <label>Barren Hanging Garden</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Doma delivers rapid devastating strikes at the target, each one erupting with a burst of frozen air at the impact point.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>35</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+        <baseDamage>6</baseDamage>
+        <damageDef>Cut</damageDef>
+        <armorPen>0.1</armorPen>
+        <repeatAmount>8</repeatAmount>
+        <damageInterval>8</damageInterval>
+        <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+        <gasDef>DS_CrystalizedAir_Gas</gasDef>
+        <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+        <angle>360</angle>
+        <range>2</range>
+        <numCellsToHit>12</numCellsToHit>
+        <gasSpawnChance>0.8</gasSpawnChance>
+        <affectHostile>true</affectHostile>
+        <affectFriendly>false</affectFriendly>
+        <affectAnimals>true</affectAnimals>
+        <affectMechanoids>false</affectMechanoids>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>8 hits of 6 Cut damage. Each hit spawns Crystalized Air gas at the impact point (80% chance).</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.914</cooldownMultiplier>
+        <resourceCostMultiplier>1.029</resourceCostMultiplier>
+        <description>8 hits of 8 Cut damage. Gas spawn chance increased to 90% per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>8</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>8</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>2</range>
+            <numCellsToHit>12</numCellsToHit>
+            <gasSpawnChance>0.9</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.829</cooldownMultiplier>
+        <resourceCostMultiplier>1.086</resourceCostMultiplier>
+        <description>10 hits of 9 Cut damage. Hit count raised. Gas spawn chance 90% per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>9</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>10</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>2</range>
+            <numCellsToHit>12</numCellsToHit>
+            <gasSpawnChance>0.9</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.743</cooldownMultiplier>
+        <resourceCostMultiplier>1.143</resourceCostMultiplier>
+        <description>10 hits of 12 Cut damage. Each hit strikes harder. Gas spawn chance 90% per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>12</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.15</armorPen>
+            <repeatAmount>10</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>2</range>
+            <numCellsToHit>12</numCellsToHit>
+            <gasSpawnChance>0.9</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.657</cooldownMultiplier>
+        <resourceCostMultiplier>1.229</resourceCostMultiplier>
+        <description>12 hits of 15 Cut damage. Each hit has a 20% chance to apply Frostbite. Gas spawn chance 90% per hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>15</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.15</armorPen>
+            <repeatAmount>12</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>2</range>
+            <numCellsToHit>12</numCellsToHit>
+            <gasSpawnChance>0.9</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Frostbite</hediffDef>
+            <severityAdjustment>0.2</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.571</cooldownMultiplier>
+        <resourceCostMultiplier>1.314</resourceCostMultiplier>
+        <description>Perfected. 12 hits of 19 Cut damage. 20% Frostbite chance per hit. Gas spawn chance 90% per hit. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>19</baseDamage>
+            <damageDef>Cut</damageDef>
+            <armorPen>0.2</armorPen>
+            <repeatAmount>12</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>2</range>
+            <numCellsToHit>12</numCellsToHit>
+            <gasSpawnChance>0.9</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Frostbite</hediffDef>
+            <severityAdjustment>0.2</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef>
+    <defName>DS_FrozenLotus_Entity</defName>
+    <label>Frozen Lotus</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <combatPower>100</combatPower>
+    <initialResistanceRange><min>0</min><max>0</max></initialResistanceRange>
+    <initialWillRange><min>0</min><max>0</max></initialWillRange>
+    <skills>
+      <li><skill>Melee</skill></li>
+    </skills>
+    <weaponMoney><min>0</min><max>0</max></weaponMoney>
+    <apparelMoney><min>0</min><max>0</max></apparelMoney>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_FrozenLotus_Entity_Empowered</defName>
+    <label>Frozen Lotus (Empowered)</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <combatPower>150</combatPower>
+    <initialResistanceRange><min>0</min><max>0</max></initialResistanceRange>
+    <initialWillRange><min>0</min><max>0</max></initialWillRange>
+    <skills>
+      <li><skill>Melee</skill></li>
+    </skills>
+    <weaponMoney><min>0</min><max>0</max></weaponMoney>
+    <apparelMoney><min>0</min><max>0</max></apparelMoney>
+  </PawnKindDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_FrozenLotusCast</defName>
+    <label>Frozen Lotus</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Doma spins his fans outward in a lotus pattern, slashing all nearby enemies and leaving behind Frozen Lotus constructs that continue his assault.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.6</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>12</damageAmount>
+        <damageType>Cut</damageType>
+        <rectWidth>6</rectWidth>
+        <rectLength>6</rectLength>
+        <useOriginAsCenter>true</useOriginAsCenter>
+        <castEffecter>RimKetsu_Effecter_DomaIceSpray</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+        <gasDef>DS_CrystalizedAir_Gas</gasDef>
+        <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+        <angle>360</angle>
+        <range>4</range>
+        <numCellsToHit>30</numCellsToHit>
+        <gasSpawnChance>0.8</gasSpawnChance>
+        <affectHostile>true</affectHostile>
+        <affectFriendly>false</affectFriendly>
+        <affectAnimals>true</affectAnimals>
+        <affectMechanoids>false</affectMechanoids>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_CloneSummon">
+        <spawnKind>DS_FrozenLotus_Entity</spawnKind>
+        <spawnCount>1</spawnCount>
+        <copyName>true</copyName>
+        <copyApparel>true</copyApparel>
+        <copySkills>true</copySkills>
+        <copyTraits>true</copyTraits>
+        <copyGenes>true</copyGenes>
+        <copyAbilities>true</copyAbilities>
+        <lifespanHediff>DS_FrozenLotus_Lifespan</lifespanHediff>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>12 Cut AoE around caster. Spawns Crystalized Air gas. Summons 1 Frozen Lotus.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.913</cooldownMultiplier>
+        <resourceCostMultiplier>1.036</resourceCostMultiplier>
+        <description>15 Cut AoE around caster. Crystalized Air gas. Summons 1 Frozen Lotus.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>15</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceSpray</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>4</range>
+            <numCellsToHit>30</numCellsToHit>
+            <gasSpawnChance>0.8</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_FrozenLotus_Entity</spawnKind>
+            <spawnCount>1</spawnCount>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_FrozenLotus_Lifespan</lifespanHediff>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.827</cooldownMultiplier>
+        <resourceCostMultiplier>1.107</resourceCostMultiplier>
+        <description>18 Cut AoE around caster. Crystalized Air gas. Summons 2 Frozen Lotuses.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>18</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceSpray</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>4</range>
+            <numCellsToHit>30</numCellsToHit>
+            <gasSpawnChance>0.8</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_FrozenLotus_Entity</spawnKind>
+            <spawnCount>2</spawnCount>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_FrozenLotus_Lifespan</lifespanHediff>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.74</cooldownMultiplier>
+        <resourceCostMultiplier>1.178</resourceCostMultiplier>
+        <description>Slash radius increased. 24 Cut AoE in a wider area around caster. Crystalized Air gas. Summons 2 Frozen Lotuses.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>24</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>8</rectWidth>
+            <rectLength>8</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceSpray</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>4</range>
+            <numCellsToHit>30</numCellsToHit>
+            <gasSpawnChance>0.8</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_FrozenLotus_Entity</spawnKind>
+            <spawnCount>2</spawnCount>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_FrozenLotus_Lifespan</lifespanHediff>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.653</cooldownMultiplier>
+        <resourceCostMultiplier>1.286</resourceCostMultiplier>
+        <description>30 Cut AoE. Crystalized Air gas. Summons 3 Frozen Lotuses.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>30</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>8</rectWidth>
+            <rectLength>8</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceSpray</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>4</range>
+            <numCellsToHit>30</numCellsToHit>
+            <gasSpawnChance>0.8</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_FrozenLotus_Entity</spawnKind>
+            <spawnCount>3</spawnCount>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_FrozenLotus_Lifespan</lifespanHediff>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.567</cooldownMultiplier>
+        <resourceCostMultiplier>1.393</resourceCostMultiplier>
+        <description>Perfected. 38 Cut AoE. Crystalized Air gas. Summons 3 Empowered Frozen Lotuses with increased HP. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>38</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>8</rectWidth>
+            <rectLength>8</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <castEffecter>RimKetsu_Effecter_DomaIceSpray</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>360</angle>
+            <range>4</range>
+            <numCellsToHit>30</numCellsToHit>
+            <gasSpawnChance>0.8</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_CloneSummon">
+            <spawnKind>DS_FrozenLotus_Entity_Empowered</spawnKind>
+            <spawnCount>3</spawnCount>
+            <copyName>true</copyName>
+            <copyApparel>true</copyApparel>
+            <copySkills>true</copySkills>
+            <copyTraits>true</copyTraits>
+            <copyGenes>true</copyGenes>
+            <copyAbilities>true</copyAbilities>
+            <lifespanHediff>DS_FrozenLotus_Lifespan</lifespanHediff>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

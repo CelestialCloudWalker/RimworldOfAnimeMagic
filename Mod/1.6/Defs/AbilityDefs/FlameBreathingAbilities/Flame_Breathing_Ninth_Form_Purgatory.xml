@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Flame_Breathing_Ninth_Form_Purgatory</defName>
+    <label>Ninth Form: Purgatory</label>
+    <description>The pinnacle of Flame Breathing. A devastating dash-strike aimed directly at the neck. Anything weaker than a full demon is likely to fall in a single blow.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>90</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <dashSpeed>2.0</dashSpeed>
+        <damageType>Cut</damageType>
+        <initialStrikeDamage>55</initialStrikeDamage>
+        <initialStrikeArmorPen>0.4</initialStrikeArmorPen>
+        <targetVitalOrgans>false</targetVitalOrgans>
+        <targetBodyParts>
+          <li>Neck</li>
+        </targetBodyParts>
+        <vitalOrganDamage>80</vitalOrganDamage>
+        <vitalOrganArmorPen>0.5</vitalOrganArmorPen>
+        <vitalOrganDamageType>Cut</vitalOrganDamageType>
+        <vitalStrikeBaseChance>0.75</vitalStrikeBaseChance>
+        <vitalStrikeMinChance>0.25</vitalStrikeMinChance>
+        <vitalStrikeMaxChance>0.95</vitalStrikeMaxChance>
+        <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+        <showMissMessage>true</showMissMessage>
+        <missMessage>{INSTIGATOR}'s strike was deflected from the neck.</missMessage>
+        <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+        <impactEffecter>AnimeArsenal_Flamehit2</impactEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A devastating dash-strike aimed at the neck. High chance to kill lesser demons outright.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>The strike comes faster. The blade finds its mark more reliably.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>68</initialStrikeDamage>
+            <initialStrikeArmorPen>0.4</initialStrikeArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+            </targetBodyParts>
+            <vitalOrganDamage>100</vitalOrganDamage>
+            <vitalOrganArmorPen>0.5</vitalOrganArmorPen>
+            <vitalOrganDamageType>Cut</vitalOrganDamageType>
+            <vitalStrikeBaseChance>0.82</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.30</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.96</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <missMessage>{INSTIGATOR}'s strike was deflected from the neck.</missMessage>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>Purgatory perfected. The neck is found without mercy. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.5</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>85</initialStrikeDamage>
+            <initialStrikeArmorPen>0.45</initialStrikeArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+            </targetBodyParts>
+            <vitalOrganDamage>130</vitalOrganDamage>
+            <vitalOrganArmorPen>0.55</vitalOrganArmorPen>
+            <vitalOrganDamageType>Cut</vitalOrganDamageType>
+            <vitalStrikeBaseChance>0.88</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.40</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.97</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <missMessage>{INSTIGATOR}'s strike was deflected from the neck.</missMessage>
+            <castEffecter>AnimeArsenal_FlameJump</castEffecter>
+            <impactEffecter>AnimeArsenal_Flamehit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

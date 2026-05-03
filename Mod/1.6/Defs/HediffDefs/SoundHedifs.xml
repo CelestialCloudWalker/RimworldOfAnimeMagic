@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>AA_StringPerformance_Hediff</defName>
+    <label>string performance</label>
+    <description>Rhythmic strikes radiate outward, cutting everything hostile in range.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-333</severityPerDay>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_StringPerformance">
+        <pulseIntervalTicks>30</pulseIntervalTicks>
+        <radius>12</radius>
+        <damageType>Cut</damageType>
+        <damagePerPulse>6~10</damagePerPulse>
+        <armorPen>0.2</armorPen>
+        <spawnADB>false</spawnADB>
+        <castEffecter>AnimeArsenal_SoundJump</castEffecter>
+        <pulseEffecter>AnimeArsenal_SoundHit</pulseEffecter>
+        <usePulseEffecter>true</usePulseEffecter>
+      </li>
+    </comps>
+  </HediffDef>
+  <HediffDef>
+    <defName>AA_StringPerformance_Improved_Hediff</defName>
+    <label>string performance (light show)</label>
+    <description>Rhythmic strikes erupt outward, each one detonating a wisteria bomb on every demon struck. A perfect light show.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-200</severityPerDay>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_StringPerformance">
+        <pulseIntervalTicks>25</pulseIntervalTicks>
+        <radius>14</radius>
+        <damageType>Cut</damageType>
+        <damagePerPulse>8~13</damagePerPulse>
+        <armorPen>0.25</armorPen>
+        <spawnADB>true</spawnADB>
+        <adbProjectileDef>AA_Projectile_AntiDemonBomb</adbProjectileDef>
+        <castEffecter>AnimeArsenal_SoundJump</castEffecter>
+        <usePulseEffecter>false</usePulseEffecter>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

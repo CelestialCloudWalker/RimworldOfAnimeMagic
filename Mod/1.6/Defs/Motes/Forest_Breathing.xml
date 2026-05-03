@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_ForestLeaf</defName>
+    <graphicData>
+      <texPath>Things/Mote/SparkThrown</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.2, 0.75, 0.25, 0.9)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <fadeInTime>0.03</fadeInTime>
+    <solidTime>0.3</solidTime>
+    <fadeOutTime>0.6</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_ForestSpore</defName>
+    <graphicData>
+      <texPath>Things/Mote/DustPuff</texPath>
+      <shaderType>Transparent</shaderType>
+      <color>(0.35, 0.6, 0.2, 0.5)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverheadLow</altitudeLayer>
+    <fadeInTime>0.1</fadeInTime>
+    <solidTime>0.5</solidTime>
+    <fadeOutTime>1.5</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Static">
+    <defName>RimKetsu_Fleck_ForestBurstFlash</defName>
+    <graphicData>
+      <texPath>Things/Mote/ExplosionFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.15, 0.7, 0.15, 0.8)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.14</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_ForestVineSlice</defName>
+    <graphicData>
+      <texPath>Things/Mote/LongSparkThrown</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.1, 0.55, 0.1, 0.9)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.01</fadeInTime>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.25</fadeOutTime>
+  </FleckDef>
+
+  <ThingDef ParentName="RimKetsu_MoteAttachedBase">
+    <defName>RimKetsu_Mote_ForestBreathingAura</defName>
+    <mote>
+      <fadeInTime>0.5</fadeInTime>
+      <solidTime>999999</solidTime>
+      <fadeOutTime>0.5</fadeOutTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_PawnBodySilhouette</graphicClass>
+      <color>(0.2, 0.65, 0.2, 0.65)</color>
+      <shaderType>MoteMultiplyAddScroll</shaderType>
+      <texPath>Things/Mote/Transparent</texPath>
+      <shaderParameters>
+        <_MultiplyTexA>/Things/Mote/Cloudy_B</_MultiplyTexA>
+        <_MultiplyTexB>/Things/Mote/Cloudy_C</_MultiplyTexB>
+        <_DetailTex>/Things/Mote/Speckles</_DetailTex>
+        <_detailIntensity>1.2</_detailIntensity>
+        <_texAScale>0.38</_texAScale>
+        <_texBScale>0.3</_texBScale>
+        <_DetailScale>1.15</_DetailScale>
+        <_texAScrollSpeed>(0.04, 0.14, 0)</_texAScrollSpeed>
+        <_texBScrollSpeed>(0.11, 0.04, 0)</_texBScrollSpeed>
+        <_detailScrollSpeed>(0.09, 0.09, 0)</_detailScrollSpeed>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_ForestSlashBurst</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.04</fadeInTime>
+      <solidTime>0.1</solidTime>
+      <fadeOutTime>0.45</fadeOutTime>
+      <growthRate>7.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/RadiationDistortion_A</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <color>(0.15, 0.7, 0.15, 0.9)</color>
+      <shaderType>MoteMultiplyAddCircularGrayscale</shaderType>
+      <shaderParameters>
+        <_MultiplyTex>/Things/Mote/RadiationDistortion_B</_MultiplyTex>
+        <_texAScale>0.28</_texAScale>
+        <_texBScale>0.28</_texBScale>
+        <_texAScrollSpeed>2.0</_texAScrollSpeed>
+        <_texBScrollSpeed>-1.2</_texBScrollSpeed>
+        <_Intensity>11</_Intensity>
+      </shaderParameters>
+      <drawSize>(2.2, 2.2)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_ForestGroundRoots</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>Filth</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.4</fadeInTime>
+      <solidTime>3.0</solidTime>
+      <fadeOutTime>1.2</fadeOutTime>
+      <growthRate>0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/GroundCracks/GroundCrackHuge</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.1, 0.5, 0.1, 0.7)</color>
+      <renderInstanced>false</renderInstanced>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <drawSize>(3.5, 3.5)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_ForestGlowRing</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverheadLow</altitudeLayer>
+    <mote>
+      <fadeInTime>0.03</fadeInTime>
+      <solidTime>0.05</solidTime>
+      <fadeOutTime>0.5</fadeOutTime>
+      <growthRate>8.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/RadiationDistortion_A</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <color>(0.2, 0.8, 0.2, 0.85)</color>
+      <shaderType>MoteMultiplyAddCircularGrayscale</shaderType>
+      <shaderParameters>
+        <_MultiplyTex>/Things/Mote/RadiationDistortion_B</_MultiplyTex>
+        <_texAScale>0.3</_texAScale>
+        <_texBScale>0.3</_texBScale>
+        <_texAScrollSpeed>1.8</_texAScrollSpeed>
+        <_texBScrollSpeed>-1.0</_texBScrollSpeed>
+        <_Intensity>9</_Intensity>
+      </shaderParameters>
+      <drawSize>(1.5, 1.5)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_ForestBreathingAmbient</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_ForestSpore</fleckDef>
+        <chancePerTick>0.05</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>0.1~0.4</speed>
+        <scale>0.4~0.8</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_ForestLeaf</fleckDef>
+        <chancePerTick>0.04</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <speed>0.3~0.8</speed>
+        <scale>0.08~0.16</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_Exhaustion_Forest</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_ForestSpore</fleckDef>
+        <chancePerTick>0.03</chancePerTick>
+        <positionRadius>0.25</positionRadius>
+        <speed>0.04~0.15</speed>
+        <scale>0.3~0.5</scale>
+        <color>(0.2, 0.45, 0.15, 0.35)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_EnchantAmbient_Forest</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_ForestSpore</fleckDef>
+        <chancePerTick>0.18</chancePerTick>
+        <positionRadius>0.45</positionRadius>
+        <speed>0.2~0.7</speed>
+        <scale>0.7~1.3</scale>
+        <color>(0.25, 0.75, 0.2, 0.9)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_ForestLeaf</fleckDef>
+        <chancePerTick>0.14</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>0.8~2.0</speed>
+        <scale>0.1~0.22</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_ForestVineSlice</fleckDef>
+        <chancePerTick>0.06</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <speed>1.2~2.8</speed>
+        <scale>0.15~0.3</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_ForestBreathingHit</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_ForestSlashBurst</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.7~1.1</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_ForestGlowRing</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.8~1.3</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.15</positionRadius>
+        <fleckDef>RimKetsu_Fleck_ForestLeaf</fleckDef>
+        <burstCount>8~14</burstCount>
+        <speed>2.5~5.5</speed>
+        <scale>0.1~0.2</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.35</positionRadius>
+        <fleckDef>AirPuff</fleckDef>
+        <burstCount>4~7</burstCount>
+        <speed>0.5~1.1</speed>
+        <scale>0.6~1.0</scale>
+        <color>(0.2, 0.75, 0.2, 0.55)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_ForestRootSlam</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_ForestGroundRoots</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>1.0~1.0</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.4</positionRadius>
+        <fleckDef>DustPuff</fleckDef>
+        <burstCount>6~10</burstCount>
+        <speed>0.5~1.2</speed>
+        <scale>1.0~1.8</scale>
+        <color>(0.3, 0.5, 0.2, 0.7)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>ExplosionFlash</fleckDef>
+        <burstCount>1~1</burstCount>
+        <scale>2.5~3.5</scale>
+        <color>(0.1, 0.6, 0.1, 0.5)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

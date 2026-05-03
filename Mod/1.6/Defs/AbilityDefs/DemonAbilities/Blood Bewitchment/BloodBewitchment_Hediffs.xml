@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>DS_ConversionTrauma</defName>
+    <label>conversion trauma</label>
+    <description>The mind has been forcibly reshaped. The victim struggles to process what they have become, leaving them psychologically shattered and barely functional.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.1, 0.6)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.05</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.0</minSeverity>
+        <label>fading</label>
+        <painOffset>0.02</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.3</minSeverity>
+        <label>moderate</label>
+        <painOffset>0.08</painOffset>
+        <mentalBreakMtbDays>8</mentalBreakMtbDays>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <label>severe</label>
+        <painOffset>0.15</painOffset>
+        <mentalBreakMtbDays>4</mentalBreakMtbDays>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.50</WorkSpeedGlobal>
+          <MeleeDamageFactor>-0.20</MeleeDamageFactor>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.50</offset>
+          </li>
+        </capMods>
+      </li>
+
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Bewitchment_CasterBleed</defName>
+    <label>blood bewitchment cost</label>
+    <description>Blood pours from wounds self-inflicted in the casting of Blood Bewitchment.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.1, 0.2)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>300</disappearsAfterTicks>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>3</damageAmount>
+        <intervalTicks>30</intervalTicks>
+        <damageDef>Cut</damageDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Bewitchment_FriendlyFirePain</defName>
+    <label>blood bewitchment backlash</label>
+    <description>The bewitchment burns through the victim when they strike others. Each blow deals damage back to themselves.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.1, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2600</disappearsAfterTicks>
+      </li>
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>DS_Bewitchment_MeleeBacklash</hediffDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Bewitchment_MeleeBacklash</defName>
+    <label>bewitchment backlash</label>
+    <description>A flash of burning pain from striking an ally.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.2, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60</disappearsAfterTicks>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>8</damageAmount>
+        <intervalTicks>1</intervalTicks>
+        <damageDef>Burn</damageDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_BloodBewitchment_L1</defName>
+    <label>blood bewitchment</label>
+    <description>The mind is consumed by an uncontrollable violent urge. The victim lashes out at anyone nearby.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.1, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1200</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.20</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_BloodBewitchment_L2</defName>
+    <label>blood bewitchment</label>
+    <description>The mind is consumed by an uncontrollable violent urge. The victim lashes out at anyone nearby.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.1, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.20</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_BloodBewitchment_L3</defName>
+    <label>blood bewitchment</label>
+    <description>A deeper frenzy. The victim's attacks grow wilder and more powerful.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.65, 0.08, 0.28)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1700</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.20</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_BloodBewitchment_L4</defName>
+    <label>blood bewitchment</label>
+    <description>Enhanced frenzy. Attacks deal significantly more damage.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.60, 0.06, 0.25)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2100</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.30</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_BloodBewitchment_L5</defName>
+    <label>blood bewitchment</label>
+    <description>Deep frenzy. Attacks deal more damage and each strike burns the victim from within.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.55, 0.05, 0.22)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>DS_Bewitchment_MeleeBacklash</hediffDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.30</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_BloodBewitchment_L6</defName>
+    <label>blood bewitchment</label>
+    <description>Total frenzy. The victim is barely more than a weapon. Each strike burns them from within.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.50, 0.04, 0.18)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3200</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+      <li Class="EMF.HediffCompProperties_OnMeleeAttackAddHediff">
+        <hediffDef>DS_Bewitchment_MeleeBacklash</hediffDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.30</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ScentVision_L1</defName>
+    <label>illusory blood scent</label>
+    <description>A hallucinatory scent clouds perception. Sight is heavily impaired.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.3, 0.7)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.40</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ScentVision_L2</defName>
+    <label>illusory blood scent</label>
+    <description>A hallucinatory scent clouds perception.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.3, 0.7)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.40</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ScentVision_L3</defName>
+    <label>illusory blood scent</label>
+    <description>Deeper hallucinations. Sight severely impaired.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.55, 0.25, 0.65)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.55</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ScentVision_L4</defName>
+    <label>illusory blood scent</label>
+    <description>Lingering hallucinations. Sight severely impaired for longer.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.55, 0.25, 0.65)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2300</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.55</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ScentVision_L5</defName>
+    <label>illusory blood scent</label>
+    <description>Overpowering hallucinations. Sight and ranged accuracy both severely impaired.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.50, 0.20, 0.60)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2300</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>-0.20</ShootingAccuracyPawn>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.55</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ScentVision_L6</defName>
+    <label>illusory blood scent</label>
+    <description>Total sensory hallucination. Sight is nearly gone. Ranged accuracy is useless.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.45, 0.15, 0.55)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2300</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>-0.20</ShootingAccuracyPawn>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.70</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>DS_MagicalAroma_L1</defName>
+    <label>magical aroma</label>
+    <description>An intoxicating scent weakens the captive's resolve. Their will to resist fades.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.8, 0.4)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <NegotiationAbility>-0.30</NegotiationAbility>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_MagicalAroma_L2</defName>
+    <label>magical aroma</label>
+    <description>An intoxicating scent weakens the captive's resolve.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.8, 0.4)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <NegotiationAbility>-0.36</NegotiationAbility>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_MagicalAroma_L3</defName>
+    <label>magical aroma</label>
+    <description>The aroma clouds not just the mind but the will to speak. Resolve crumbles.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.88, 0.75, 0.35)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <NegotiationAbility>-0.44</NegotiationAbility>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_MagicalAroma_L4</defName>
+    <label>magical aroma</label>
+    <description>Deep intoxication. The captive's resistance is nearly gone.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.85, 0.70, 0.30)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <NegotiationAbility>-0.52</NegotiationAbility>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_MagicalAroma_L5</defName>
+    <label>magical aroma</label>
+    <description>Overwhelming intoxication. All resistance crumbles.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.82, 0.65, 0.25)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <NegotiationAbility>-0.60</NegotiationAbility>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_MagicalAroma_L6</defName>
+    <label>magical aroma</label>
+    <description>Total intoxication. The captive cannot resist anything.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.78, 0.60, 0.20)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <NegotiationAbility>-0.70</NegotiationAbility>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.35</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_AlteredNature_L1</defName>
+    <label>altered nature</label>
+    <description>The mind has been fundamentally altered. This pawn no longer recognizes civilized life — only instinct remains.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.3, 0.7, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.0</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_AlteredNature_L2</defName>
+    <label>altered nature</label>
+    <description>The mind has been fundamentally altered.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.3, 0.7, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4100</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.0</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_AlteredNature_L3</defName>
+    <label>altered nature</label>
+    <description>Deeper alteration. Work is impossible. Only instinct remains.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.28, 0.65, 0.28)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.0</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_AlteredNature_L4</defName>
+    <label>altered nature</label>
+    <description>Deep alteration. The mind is not just changed — it is diminished.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.25, 0.60, 0.25)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.0</WorkSpeedGlobal>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_AlteredNature_L5</defName>
+    <label>altered nature</label>
+    <description>Permanent alteration. This pawn will never return to civilized life.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.22, 0.55, 0.22)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.0</WorkSpeedGlobal>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_AlteredNature_L6</defName>
+    <label>altered nature</label>
+    <description>Total alteration. The pawn exists only as a creature of instinct and violence.</description>
+    <hediffClass>Verse.HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.18, 0.50, 0.18)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AnimeArsenal.HediffCompProperties_ThinkTreeOverride">
+        <overrideThinkTreeDef>Predator</overrideThinkTreeDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.0</WorkSpeedGlobal>
+          <MeleeDamageFactor>1.20</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <ThinkTreeDef>
+    <defName>Predator</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_QueuedJob" />
+        <li Class="JobGiver_ReactToCloseMeleeThreat" />
+        <li Class="ThinkNode_Subtree">
+          <treeDef>LordDuty</treeDef>
+        </li>
+        <li Class="JobGiver_ShamblerFight">
+          <targetAcquireRadius>30</targetAcquireRadius>
+          <targetKeepRadius>40</targetKeepRadius>
+        </li>
+        <li Class="JobGiver_WanderAnywhere">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>60~120</ticksBetweenWandersRange>
+        </li>
+        <li Class="JobGiver_IdleError"/>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+</Defs>

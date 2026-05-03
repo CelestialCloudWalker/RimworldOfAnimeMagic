@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>InsectBreathing_DanceOfHorsefly_EnticingSlash</defName>
+    <label>Dance of the Horsefly: Enticing Slash</label>
+    <description>The user launches forward with a single piercing thrust, then seems to multiply — stabs coming from every direction at once, a whirling confusion of steel that leaves the target drowning in poison before they can identify where the next hit is coming from.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>660</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>430</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>32</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+      <warmupTime>0.4</warmupTime>
+      <noiseRadius>3</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <strikeDamage>18</strikeDamage>
+        <strikeDamageDef>Insect_Breathing_Damage</strikeDamageDef>
+        <strikeRadius>0.5</strikeRadius>
+        <armorPen>0.20</armorPen>
+        <strikeEffecter>AnimeArsenal_InsectHit</strikeEffecter>
+        <burstDamage>0</burstDamage>
+        <burstRadius>0</burstRadius>
+        <burstRepeatCount>0</burstRepeatCount>
+        <burstInterval>0</burstInterval>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>5</rectWidth>
+        <rectLength>5</rectLength>
+        <damageAmount>10</damageAmount>
+        <repeatAmount>3</repeatAmount>
+        <damageInterval>6</damageInterval>
+        <damageType>Insect_Breathing_Damage</damageType>
+        <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>WisteriaToxin_Hediff</hediffDef>
+        <severityAdjustment>0.25</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>18 damage thrust on landing. 3 swarm hits of 10 damage surrounding the target. Injects WisteriaToxin (0.25 severity).</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>190</experienceRequired>
+        <resourceCostMultiplier>1.14</resourceCostMultiplier>
+        <cooldownMultiplier>0.96</cooldownMultiplier>
+        <description>23 thrust damage. 4 swarm hits of 12. Poison deepens — 0.32 severity.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>23</strikeDamage>
+            <strikeDamageDef>Insect_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>0.5</strikeRadius>
+            <armorPen>0.23</armorPen>
+            <strikeEffecter>AnimeArsenal_InsectHit</strikeEffecter>
+            <burstDamage>0</burstDamage>
+            <burstRadius>0</burstRadius>
+            <burstRepeatCount>0</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>5</rectWidth>
+            <rectLength>5</rectLength>
+            <damageAmount>12</damageAmount>
+            <repeatAmount>4</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.32</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>420</experienceRequired>
+        <resourceCostMultiplier>1.26</resourceCostMultiplier>
+        <cooldownMultiplier>0.91</cooldownMultiplier>
+        <description>29 thrust damage. 4 swarm hits of 15. Swarm interval tightens. Poison 0.40 severity.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>29</strikeDamage>
+            <strikeDamageDef>Insect_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>0.5</strikeRadius>
+            <armorPen>0.26</armorPen>
+            <strikeEffecter>AnimeArsenal_InsectHit</strikeEffecter>
+            <burstDamage>0</burstDamage>
+            <burstRadius>0</burstRadius>
+            <burstRepeatCount>0</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>5</rectWidth>
+            <rectLength>5</rectLength>
+            <damageAmount>15</damageAmount>
+            <repeatAmount>4</repeatAmount>
+            <damageInterval>5</damageInterval>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.40</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <resourceCostMultiplier>1.36</resourceCostMultiplier>
+        <cooldownMultiplier>0.86</cooldownMultiplier>
+        <description>36 thrust damage. 5 swarm hits of 17. The swarm is disorienting — the target can barely track the strikes. Poison 0.50 severity.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>36</strikeDamage>
+            <strikeDamageDef>Insect_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>0.5</strikeRadius>
+            <armorPen>0.30</armorPen>
+            <strikeEffecter>AnimeArsenal_InsectHit</strikeEffecter>
+            <burstDamage>0</burstDamage>
+            <burstRadius>0</burstRadius>
+            <burstRepeatCount>0</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>5</rectWidth>
+            <rectLength>5</rectLength>
+            <damageAmount>17</damageAmount>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>5</damageInterval>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.50</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1020</experienceRequired>
+        <resourceCostMultiplier>1.46</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>44 thrust damage. 5 swarm hits of 20. Fastest interval. Poison 0.62 severity — a single cast may be enough.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>44</strikeDamage>
+            <strikeDamageDef>Insect_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>0.5</strikeRadius>
+            <armorPen>0.34</armorPen>
+            <strikeEffecter>AnimeArsenal_InsectHit</strikeEffecter>
+            <burstDamage>0</burstDamage>
+            <burstRadius>0</burstRadius>
+            <burstRepeatCount>0</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>5</rectWidth>
+            <rectLength>5</rectLength>
+            <damageAmount>20</damageAmount>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>4</damageInterval>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.62</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1500</experienceRequired>
+        <resourceCostMultiplier>1.54</resourceCostMultiplier>
+        <cooldownMultiplier>0.78</cooldownMultiplier>
+        <description>Perfected. 54 thrust damage. 6 swarm hits of 24. The target is surrounded completely — no angle is safe. Poison 0.76 severity on a single cast. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>54</strikeDamage>
+            <strikeDamageDef>Insect_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>0.5</strikeRadius>
+            <armorPen>0.38</armorPen>
+            <strikeEffecter>AnimeArsenal_InsectHit</strikeEffecter>
+            <burstDamage>0</burstDamage>
+            <burstRadius>0</burstRadius>
+            <burstRepeatCount>0</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>5</rectWidth>
+            <rectLength>5</rectLength>
+            <damageAmount>24</damageAmount>
+            <repeatAmount>6</repeatAmount>
+            <damageInterval>4</damageInterval>
+            <damageType>Insect_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_InsectHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WisteriaToxin_Hediff</hediffDef>
+            <severityAdjustment>0.76</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

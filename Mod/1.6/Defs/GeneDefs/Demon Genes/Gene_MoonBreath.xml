@@ -1,0 +1,480 @@
+<Defs>
+
+  <AnimeArsenal.BloodDemonArtsGeneDef ParentName="AA_BloodDemonArtsGene">
+    <defName>Gene_MoonBreath</defName>
+    <label>Moon Breathing</label>
+    <description>Moon Breathing — a breathing style so ancient and powerful it has transcended the boundary between demon and slayer. Wielded by Kokushibo, Upper Rank One, this art layers crescent blade waves into overwhelming, infinite forms.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceLabel>Moon Art</resourceLabel>
+    <resourceDescription>A breathing style refined over centuries, blending demon power with the discipline of a former Hashira.</resourceDescription>
+
+    <modExtensions>
+      <li Class="AnimeArsenal.DemonProgressionExtension">
+        <startingRank>Demon</startingRank>
+        <canProgressThroughTalents>true</canProgressThroughTalents>
+
+        <bloodPoolStat>BloodDemonArts</bloodPoolStat>
+        <bloodPoolBonusPerPawnEaten>10</bloodPoolBonusPerPawnEaten>
+        <bloodRestoredPerPawnEaten>30</bloodRestoredPerPawnEaten>
+
+        <pawnsRequiredPerRank>
+          <li>999999</li>
+          <li>90</li>
+          <li>130</li>
+          <li>185</li>
+          <li>250</li>
+          <li>325</li>
+          <li>410</li>
+          <li>560</li>
+          <li>730</li>
+          <li>910</li>
+          <li>1100</li>
+          <li>1300</li>
+          <li>1360</li>
+          <li>1420</li>
+        </pawnsRequiredPerRank>
+
+        <sunlightDamagePerTick>
+          <li>4.8</li>
+          <li>4.5</li>
+          <li>4.2</li>
+          <li>3.9</li>
+          <li>3.5</li>
+          <li>3.2</li>
+          <li>2.9</li>
+          <li>2.6</li>
+          <li>2.2</li>
+          <li>1.9</li>
+          <li>1.6</li>
+          <li>1.2</li>
+          <li>0.8</li>
+          <li>0.4</li>
+        </sunlightDamagePerTick>
+
+        <sunlightDamageThreshold>
+          <li>12</li>
+          <li>18</li>
+          <li>26</li>
+          <li>36</li>
+          <li>50</li>
+          <li>68</li>
+          <li>90</li>
+          <li>118</li>
+          <li>152</li>
+          <li>193</li>
+          <li>241</li>
+          <li>296</li>
+          <li>358</li>
+          <li>430</li>
+        </sunlightDamageThreshold>
+
+        <sunlightTicksBetweenDamage>
+          <li>75</li>
+          <li>88</li>
+          <li>104</li>
+          <li>122</li>
+          <li>144</li>
+          <li>170</li>
+          <li>200</li>
+          <li>235</li>
+          <li>276</li>
+          <li>323</li>
+          <li>376</li>
+          <li>435</li>
+          <li>500</li>
+          <li>572</li>
+        </sunlightTicksBetweenDamage>
+
+        <sunlightTicksToReset>
+          <li>1100</li>
+          <li>1430</li>
+          <li>1815</li>
+          <li>2255</li>
+          <li>2750</li>
+          <li>3300</li>
+          <li>3905</li>
+          <li>4565</li>
+          <li>5280</li>
+          <li>6050</li>
+          <li>6875</li>
+          <li>7755</li>
+          <li>8690</li>
+          <li>9680</li>
+        </sunlightTicksToReset>
+
+        <sunlightMinCoverage>
+          <li>0.28</li>
+          <li>0.33</li>
+          <li>0.38</li>
+          <li>0.43</li>
+          <li>0.47</li>
+          <li>0.51</li>
+          <li>0.55</li>
+          <li>0.59</li>
+          <li>0.63</li>
+          <li>0.67</li>
+          <li>0.71</li>
+          <li>0.75</li>
+          <li>0.79</li>
+          <li>0.82</li>
+        </sunlightMinCoverage>
+
+        <sunlightTolerancePool>
+          <li>10</li>
+          <li>15</li>
+          <li>22</li>
+          <li>31</li>
+          <li>43</li>
+          <li>59</li>
+          <li>79</li>
+          <li>104</li>
+          <li>135</li>
+          <li>173</li>
+          <li>218</li>
+          <li>271</li>
+          <li>333</li>
+          <li>405</li>
+        </sunlightTolerancePool>
+
+        <regenHealingMultiplier>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>4.4</li>
+          <li>5.1</li>
+          <li>5.9</li>
+          <li>6.8</li>
+          <li>7.8</li>
+          <li>9.0</li>
+        </regenHealingMultiplier>
+
+        <regenTicksBetweenHealing>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>90</li>
+          <li>80</li>
+          <li>70</li>
+          <li>61</li>
+          <li>53</li>
+          <li>46</li>
+          <li>40</li>
+        </regenTicksBetweenHealing>
+
+        <regenHealingPerTick>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>3.8</li>
+          <li>4.6</li>
+          <li>5.5</li>
+          <li>6.6</li>
+        </regenHealingPerTick>
+
+        <regenInstantLimb>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </regenInstantLimb>
+
+        <regenInstantOrgan>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>false</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </regenInstantOrgan>
+
+        <regenCanRegenerateOrgans>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </regenCanRegenerateOrgans>
+
+        <regenCanRegenerateHeart>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </regenCanRegenerateHeart>
+
+        <regenScarHealChance>
+          <li>0.04</li>
+          <li>0.07</li>
+          <li>0.11</li>
+          <li>0.15</li>
+          <li>0.20</li>
+          <li>0.25</li>
+          <li>0.31</li>
+          <li>0.37</li>
+          <li>0.44</li>
+          <li>0.51</li>
+          <li>0.59</li>
+          <li>0.67</li>
+          <li>0.76</li>
+          <li>0.86</li>
+        </regenScarHealChance>
+
+        <regenScarHealInterval>
+          <li>1000</li>
+          <li>1000</li>
+          <li>1000</li>
+          <li>1000</li>
+          <li>1000</li>
+          <li>1000</li>
+          <li>1000</li>
+          <li>1000</li>
+          <li>1000</li>
+          <li>2100</li>
+          <li>1800</li>
+          <li>1500</li>
+          <li>1200</li>
+          <li>900</li>
+        </regenScarHealInterval>
+
+        <regenResourceCostPerHeal>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.8</li>
+          <li>0.6</li>
+          <li>0.4</li>
+        </regenResourceCostPerHeal>
+
+        <regenResourceCostPerLimb>
+          <li>52</li>
+          <li>52</li>
+          <li>52</li>
+          <li>52</li>
+          <li>52</li>
+          <li>52</li>
+          <li>52</li>
+          <li>52</li>
+          <li>52</li>
+          <li>52</li>
+          <li>44</li>
+          <li>36</li>
+          <li>28</li>
+          <li>20</li>
+        </regenResourceCostPerLimb>
+
+        <regenResourceCostPerOrgan>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>78</li>
+          <li>62</li>
+          <li>46</li>
+        </regenResourceCostPerOrgan>
+
+        <regenMinResourcesRequired>
+          <li>0.33</li>
+          <li>0.30</li>
+          <li>0.27</li>
+          <li>0.24</li>
+          <li>0.21</li>
+          <li>0.18</li>
+          <li>0.15</li>
+          <li>0.12</li>
+          <li>0.10</li>
+          <li>0.08</li>
+          <li>0.06</li>
+          <li>0.04</li>
+          <li>0.02</li>
+          <li>0.01</li>
+        </regenMinResourcesRequired>
+
+        <bodyDisappearLeaveAsh>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </bodyDisappearLeaveAsh>
+
+        <bodyDisappearFilthAmount>
+          <li>2</li>
+          <li>2</li>
+          <li>3</li>
+          <li>3</li>
+          <li>4</li>
+          <li>4</li>
+          <li>5</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+        </bodyDisappearFilthAmount>
+
+        <bodyDisappearPlayEffect>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+          <li>true</li>
+        </bodyDisappearPlayEffect>
+
+        <bodyDisappearMessage>
+          <li>Moon Breather demon body turned to ash!</li>
+          <li>Moon Breather demon body turned to ash!</li>
+          <li>Moon Breather Lower Rank Six demon body turned to ash!</li>
+          <li>Moon Breather Lower Rank Five demon body turned to ash!</li>
+          <li>Moon Breather Lower Rank Four demon body turned to ash!</li>
+          <li>Moon Breather Lower Rank Three demon body turned to ash!</li>
+          <li>Moon Breather Lower Rank Two demon body turned to ash!</li>
+          <li>Moon Breather Lower Rank One demon body turned to ash!</li>
+          <li>Moon Breather Upper Rank Six demon body turned to ash!</li>
+          <li>Moon Breather Upper Rank Five demon body turned to ash!</li>
+          <li>Moon Breather Upper Rank Four demon body turned to ash!</li>
+          <li>Moon Breather Upper Rank Three demon body turned to ash!</li>
+          <li>Moon Breather Upper Rank Two demon body turned to ash!</li>
+          <li>Kokushibo, Upper Rank One — Moon Breather body turned to ash!</li>
+        </bodyDisappearMessage>
+      </li>
+
+      <li Class="AnimeArsenal.RegenerationExtension">
+        <healingMultiplier>2.2</healingMultiplier>
+        <ticksBetweenHealing>140</ticksBetweenHealing>
+        <healingPerTick>0.5</healingPerTick>
+        <instantLimbRegeneration>false</instantLimbRegeneration>
+        <instantOrganRegeneration>false</instantOrganRegeneration>
+        <canRegenerateOrgans>true</canRegenerateOrgans>
+        <canRegenerateBrain>false</canRegenerateBrain>
+        <canRegenerateHeart>true</canRegenerateHeart>
+        <canRegenerateHead>false</canRegenerateHead>
+        <scarHealChance>0.10</scarHealChance>
+        <scarHealInterval>3200</scarHealInterval>
+        <consumeResourcesOnRegeneration>true</consumeResourcesOnRegeneration>
+        <resourceCostPerHeal>2</resourceCostPerHeal>
+        <resourceCostPerLimbRegen>95</resourceCostPerLimbRegen>
+        <resourceCostPerOrganRegen>185</resourceCostPerOrganRegen>
+        <resourceCostPerScarHeal>45</resourceCostPerScarHeal>
+        <preventRegenIfInsufficientResources>true</preventRegenIfInsufficientResources>
+        <minimumResourcesRequired>0.18</minimumResourcesRequired>
+        <showResourceWarnings>true</showResourceWarnings>
+        <resourceWarningCooldownTicks>2500</resourceWarningCooldownTicks>
+        <preventDeathFromVitalLoss>false</preventDeathFromVitalLoss>
+        <fatalBodyParts>
+          <li>Neck</li>
+          <li>AA_DemonNeck</li>
+          <li>Head</li>
+          <li>Brain</li>
+        </fatalBodyParts>
+        <onlyNotifyMajorParts>true</onlyNotifyMajorParts>
+        <resourceName>Moon Art</resourceName>
+      </li>
+
+      <li Class="AnimeArsenal.SunlightDamageExtension">
+        <damagePerTick>4.8</damagePerTick>
+        <damageThresholdBeforeDeath>14</damageThresholdBeforeDeath>
+        <ticksBetweenDamage>80</ticksBetweenDamage>
+        <ticksToResetDamage>1350</ticksToResetDamage>
+        <minimumCoverageForProtection>0.28</minimumCoverageForProtection>
+        <requireHeadCoverage>true</requireHeadCoverage>
+        <sunTolerancePool>10</sunTolerancePool>
+      </li>
+
+      <li Class="AnimeArsenal.BodyDisappearExtension">
+        <leaveAshFilth>true</leaveAshFilth>
+        <filthAmount>2</filthAmount>
+        <disappearMessage>Moon Breather demon body turned to ash!</disappearMessage>
+        <playEffect>true</playEffect>
+      </li>
+    </modExtensions>
+  </AnimeArsenal.BloodDemonArtsGeneDef>
+
+</Defs>

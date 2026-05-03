@@ -1,9 +1,9 @@
 ﻿using RimWorld;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
-using HarmonyLib;
 
 namespace AnimeArsenal
 {
@@ -11,8 +11,8 @@ namespace AnimeArsenal
     {
         public float sightRange = 15f;
         public int durationTicks = 3600;
-        public float organHitChanceBonus = 0f; 
-        public float vitalOrganChanceMultiplier = 1f; 
+        public float organHitChanceBonus = 0f;
+        public float vitalOrganChanceMultiplier = 1f;
     }
 
     public class Hediff_TransparentWorld : Hediff
@@ -55,10 +55,7 @@ namespace AnimeArsenal
                         map.fogGrid.Unfog(cell);
                     }
                 }
-                catch
-                {
-
-                }
+                catch { }
             }
         }
 
@@ -82,6 +79,13 @@ namespace AnimeArsenal
     public class CompProperties_GiveHediff : CompProperties_AbilityEffect
     {
         public HediffDef hediffDef;
+        public float severityAdjustment = 0f;
+        public bool applyToTarget = true;
+        public float effectRadius = 0f;
+        public List<HediffDef> hediffsToRemove = new List<HediffDef>();
+        public HediffDef casterHediffDef;
+        public float casterHediffSeverity = 1.0f;
+
         public CompProperties_GiveHediff()
         {
             compClass = typeof(CompAbilityEffect_GiveHediff);
@@ -95,27 +99,107 @@ namespace AnimeArsenal
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            if (Props.hediffDef == null) return;
 
-            Pawn targetPawn = this.parent.pawn;
-            if (targetPawn == null) return;
+            if (Props.casterHediffDef != null && parent.pawn != null && !parent.pawn.Dead)
+            {
+                Hediff casterHediff = HediffMaker.MakeHediff(Props.casterHediffDef, parent.pawn);
+                casterHediff.Severity = Props.casterHediffSeverity;
+                parent.pawn.health.AddHediff(casterHediff);
+            }
 
-            var existingHediffs = targetPawn.health.hediffSet.hediffs
+            if (Props.hediffDef == null && Props.hediffsToRemove.NullOrEmpty()) return;
+
+            if (Props.effectRadius > 0f)
+            {
+                foreach (Thing thing in GenRadial.RadialDistinctThingsAround(
+                    target.Cell, parent.pawn.Map, Props.effectRadius, true))
+                {
+                    if (thing is Pawn pawn && !pawn.Dead && pawn != parent.pawn)
+                    {
+                        ApplyHediffToPawn(pawn);
+                    }
+                }
+            }
+            else
+            {
+                Pawn targetPawn = Props.applyToTarget
+                    ? target.Thing as Pawn
+                    : parent.pawn;
+
+                if (targetPawn == null || targetPawn.Dead) return;
+                ApplyHediffToPawn(targetPawn);
+            }
+        }
+
+        private void ApplyHediffToPawn(Pawn targetPawn)
+        {
+            var existingTransparent = targetPawn.health.hediffSet.hediffs
                 .Where(h => h.def.defName.StartsWith("TransparentWorld_"))
                 .ToList();
-
-            foreach (var hediff in existingHediffs)
-            {
+            foreach (var hediff in existingTransparent)
                 targetPawn.health.RemoveHediff(hediff);
+
+            if (!Props.hediffsToRemove.NullOrEmpty())
+            {
+                foreach (HediffDef defToRemove in Props.hediffsToRemove)
+                {
+                    Hediff existing = targetPawn.health.hediffSet.GetFirstHediffOfDef(defToRemove);
+                    if (existing != null)
+                        targetPawn.health.RemoveHediff(existing);
+                }
+            }
+
+            if (Props.hediffDef == null) return;
+
+            if (Props.severityAdjustment > 0f)
+            {
+                Hediff existing = targetPawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffDef);
+                if (existing != null)
+                {
+                    existing.Severity += Props.severityAdjustment;
+                    return;
+                }
             }
 
             Hediff newHediff = HediffMaker.MakeHediff(Props.hediffDef, targetPawn);
+            if (Props.severityAdjustment > 0f)
+                newHediff.Severity = Props.severityAdjustment;
             targetPawn.health.AddHediff(newHediff);
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            return this.parent.pawn != null;
+            if (Props.effectRadius > 0f) return true;
+            if (Props.applyToTarget)
+            {
+                if (target.Thing is Pawn pawn && !pawn.Dead) return true;
+                if (throwMessages)
+                    Messages.Message("Must target a living pawn", MessageTypeDefOf.RejectInput);
+                return false;
+            }
+            return parent.pawn != null;
         }
     }
+
+
+
+    public class CompProperties_GiveHediff_Caster : CompProperties_GiveHediff
+    {
+        public CompProperties_GiveHediff_Caster()
+        {
+            compClass = typeof(CompAbilityEffect_GiveHediff_Caster);
+        }
+    }
+
+    public class CompAbilityEffect_GiveHediff_Caster : CompAbilityEffect_GiveHediff { }
+
+    public class CompProperties_GiveHediff_Target : CompProperties_GiveHediff
+    {
+        public CompProperties_GiveHediff_Target()
+        {
+            compClass = typeof(CompAbilityEffect_GiveHediff_Target);
+        }
+    }
+
+    public class CompAbilityEffect_GiveHediff_Target : CompAbilityEffect_GiveHediff { }
 }

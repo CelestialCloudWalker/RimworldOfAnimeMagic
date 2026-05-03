@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Mist_Breathing_LunarDispersingMist</defName>
+    <label>Mist Breathing: Lunar Dispersing Mist</label>
+    <description>A sweeping crescent slash scatters mist across a wide arc before the user rockets forward, crashing down onto their target like a falling moon. The impact disperses the gathered mist in all directions, disorienting nearby enemies and leaving the user wrapped in a deepening haze.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>780</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>360</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>40</resourceCost>
+    <baseExperienceGain>24</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>16</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>5</rectWidth>
+        <rectLength>10</rectLength>
+        <damageAmount>10</damageAmount>
+        <repeatAmount>3</repeatAmount>
+        <damageInterval>8</damageInterval>
+        <delayTicks>0</delayTicks>
+        <damageType>Mist_Breathing_Damage</damageType>
+        <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <strikeDamage>30</strikeDamage>
+        <strikeDamageDef>Mist_Breathing_Damage</strikeDamageDef>
+        <strikeRadius>1.5</strikeRadius>
+        <delayedBurstDamage>15</delayedBurstDamage>
+        <delayedBurstRadius>4.5</delayedBurstRadius>
+        <delayedBurstDamageDef>Mist_Breathing_Damage</delayedBurstDamageDef>
+        <delayedBurstDelayTicks>20</delayedBurstDelayTicks>
+        <delayedBurstMaxTargets>6</delayedBurstMaxTargets>
+        <delayedBurstArmorPen>0.1</delayedBurstArmorPen>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>MistBreathing_Misdirection</hediffDef>
+        <severityAdjustment>0.35</severityAdjustment>
+        <applyToTarget>false</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>3 hits of 10 damage (30 total) in a forward arc, then leaps to target for 30 sweetspot + 15 dispersing burst. Average Misdirection gain.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>170</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>3 hits of 13 damage (39 total). Leap strike hits for 38, burst for 20. Misdirection grows.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>5</rectWidth>
+            <rectLength>10</rectLength>
+            <damageAmount>13</damageAmount>
+            <repeatAmount>3</repeatAmount>
+            <damageInterval>8</damageInterval>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>38</strikeDamage>
+            <strikeDamageDef>Mist_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>1.5</strikeRadius>
+            <delayedBurstDamage>20</delayedBurstDamage>
+            <delayedBurstRadius>4.5</delayedBurstRadius>
+            <delayedBurstDamageDef>Mist_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>20</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>6</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.1</delayedBurstArmorPen>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.42</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>390</experienceRequired>
+        <resourceCostMultiplier>1.30</resourceCostMultiplier>
+        <cooldownMultiplier>0.92</cooldownMultiplier>
+        <description>4 hits of 13 damage (52 total). Leap hits for 46, burst for 25 in a wider radius. The crescent arc widens.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>6</rectWidth>
+            <rectLength>11</rectLength>
+            <damageAmount>13</damageAmount>
+            <repeatAmount>4</repeatAmount>
+            <damageInterval>7</damageInterval>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>46</strikeDamage>
+            <strikeDamageDef>Mist_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>1.5</strikeRadius>
+            <delayedBurstDamage>25</delayedBurstDamage>
+            <delayedBurstRadius>5</delayedBurstRadius>
+            <delayedBurstDamageDef>Mist_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>20</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>7</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.15</delayedBurstArmorPen>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.50</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>650</experienceRequired>
+        <resourceCostMultiplier>1.45</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>4 hits of 16 damage (64 total). Leap hits for 55, burst for 30. Misdirection reaches Distant Haze.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>6</rectWidth>
+            <rectLength>11</rectLength>
+            <damageAmount>16</damageAmount>
+            <repeatAmount>4</repeatAmount>
+            <damageInterval>7</damageInterval>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>55</strikeDamage>
+            <strikeDamageDef>Mist_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>2</strikeRadius>
+            <delayedBurstDamage>30</delayedBurstDamage>
+            <delayedBurstRadius>5</delayedBurstRadius>
+            <delayedBurstDamageDef>Mist_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>18</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>8</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.15</delayedBurstArmorPen>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.58</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>960</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>5 hits of 16 damage (80 total). Leap hits for 65, burst for 38 across a wide radius. A fifth crescent slash joins the opener.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>7</rectWidth>
+            <rectLength>12</rectLength>
+            <damageAmount>16</damageAmount>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>65</strikeDamage>
+            <strikeDamageDef>Mist_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>2</strikeRadius>
+            <delayedBurstDamage>38</delayedBurstDamage>
+            <delayedBurstRadius>5.5</delayedBurstRadius>
+            <delayedBurstDamageDef>Mist_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>18</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>8</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.20</delayedBurstArmorPen>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.66</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1420</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 5 hits of 20 damage (100 total). Leap crashes for 78, dispersing burst for 46. The moon falls. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>7</rectWidth>
+            <rectLength>12</rectLength>
+            <damageAmount>20</damageAmount>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>6</damageInterval>
+            <damageType>Mist_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_MistHit</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>78</strikeDamage>
+            <strikeDamageDef>Mist_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>2</strikeRadius>
+            <delayedBurstDamage>46</delayedBurstDamage>
+            <delayedBurstRadius>6</delayedBurstRadius>
+            <delayedBurstDamageDef>Mist_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>15</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>10</delayedBurstMaxTargets>
+            <delayedBurstArmorPen>0.20</delayedBurstArmorPen>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>MistBreathing_Misdirection</hediffDef>
+            <severityAdjustment>0.76</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

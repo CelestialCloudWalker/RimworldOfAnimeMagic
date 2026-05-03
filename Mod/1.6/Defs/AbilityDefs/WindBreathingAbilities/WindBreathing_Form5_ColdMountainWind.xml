@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>WindBreathing_Form5_ColdMountainWind</defName>
+    <label>Fifth Form: Cold Mountain Wind</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>The user leaps toward a chosen point and descends with a heavy slash. The blade's impact is deadly to those directly beneath; the cold gust that erupts upon landing sweeps a vast area.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <landingRadius>2.0</landingRadius>
+        <landingEffecterDef>AnimeArsenal_WindHit</landingEffecterDef>
+        <castEffecter>AnimeArsenal_WindJump</castEffecter>
+        <strikeDamage>28</strikeDamage>
+        <strikeDamageDef>Cut</strikeDamageDef>
+        <strikeRadius>2.0</strikeRadius>
+        <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+        <burstDamage>18</burstDamage>
+        <burstRadius>6.0</burstRadius>
+        <burstRepeatCount>2</burstRepeatCount>
+        <burstInterval>10</burstInterval>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A leap into a devastating slash. Landing erupts in an expansive wind burst.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>The descent quickens; the cold wind grows more biting.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>2.0</landingRadius>
+            <landingEffecterDef>AnimeArsenal_WindHit</landingEffecterDef>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <strikeDamage>28</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <burstDamage>18</burstDamage>
+            <burstRadius>6.0</burstRadius>
+            <burstRepeatCount>2</burstRepeatCount>
+            <burstInterval>10</burstInterval>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>Mountain wind shakes the earth on impact.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>2.0</landingRadius>
+            <landingEffecterDef>AnimeArsenal_WindHit</landingEffecterDef>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <strikeDamage>28</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <burstDamage>18</burstDamage>
+            <burstRadius>6.0</burstRadius>
+            <burstRepeatCount>2</burstRepeatCount>
+            <burstInterval>10</burstInterval>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>The cold bites through armor on landing. Cost slightly reduced.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>2.0</landingRadius>
+            <landingEffecterDef>AnimeArsenal_WindHit</landingEffecterDef>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <strikeDamage>28</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <burstDamage>18</burstDamage>
+            <burstRadius>6.0</burstRadius>
+            <burstRepeatCount>2</burstRepeatCount>
+            <burstInterval>10</burstInterval>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>The mountain falls on those below.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>2.0</landingRadius>
+            <landingEffecterDef>AnimeArsenal_WindHit</landingEffecterDef>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <strikeDamage>28</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <burstDamage>18</burstDamage>
+            <burstRadius>6.0</burstRadius>
+            <burstRepeatCount>2</burstRepeatCount>
+            <burstInterval>10</burstInterval>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Perfected. The cold mountain wind scours all below. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <landingRadius>2.0</landingRadius>
+            <landingEffecterDef>AnimeArsenal_WindHit</landingEffecterDef>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <strikeDamage>28</strikeDamage>
+            <strikeDamageDef>Cut</strikeDamageDef>
+            <strikeRadius>2.0</strikeRadius>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <burstDamage>18</burstDamage>
+            <burstRadius>6.0</burstRadius>
+            <burstRepeatCount>2</burstRepeatCount>
+            <burstInterval>10</burstInterval>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

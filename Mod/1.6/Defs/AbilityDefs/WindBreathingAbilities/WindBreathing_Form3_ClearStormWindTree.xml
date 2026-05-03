@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>WindBreathing_Form3_ClearStormWindTree</defName>
+    <label>Third Form: Clear Storm Wind Tree</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>The user erupts into a spinning storm of slashes that strike all enemies surrounding them. The turbulence left behind briefly sharpens their evasion and toughens their guard against incoming blows.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>120</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>40</resourceCost>
+    <baseExperienceGain>9</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>WaterBreathing_FlowLikeWater</hediffDef>
+        <severityAdjustment>1.0</severityAdjustment>
+        <applyToTarget>false</applyToTarget>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <damage>12</damage>
+        <radius>4.5</radius>
+        <damageDef>Cut</damageDef>
+        <repeatCount>5</repeatCount>
+        <damageInterval>8</damageInterval>
+        <maxTargets>8</maxTargets>
+        <affectCaster>false</affectCaster>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <effecter>AnimeArsenal_WindHit</effecter>
+        <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A spinning storm of cuts surrounds the user, followed by a brief defensive boost.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>Wider storm, longer buff duration.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WaterBreathing_FlowLikeWater</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>12</damage>
+            <radius>4.5</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>5</repeatCount>
+            <damageInterval>8</damageInterval>
+            <maxTargets>8</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>Each revolution of the blade lands heavier. Defense holds longer.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WaterBreathing_FlowLikeWater</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>12</damage>
+            <radius>4.5</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>5</repeatCount>
+            <damageInterval>8</damageInterval>
+            <maxTargets>8</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>0.95</resourceCostMultiplier>
+        <description>The tree of wind grows; its roots deflect blows. Cost slightly reduced.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WaterBreathing_FlowLikeWater</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>12</damage>
+            <radius>4.5</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>5</repeatCount>
+            <damageInterval>8</damageInterval>
+            <maxTargets>8</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Storm and shield merge into one seamless motion.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WaterBreathing_FlowLikeWater</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>12</damage>
+            <radius>4.5</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>5</repeatCount>
+            <damageInterval>8</damageInterval>
+            <maxTargets>8</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>Perfected. The clear storm cannot be touched. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>WaterBreathing_FlowLikeWater</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>12</damage>
+            <radius>4.5</radius>
+            <damageDef>Cut</damageDef>
+            <repeatCount>5</repeatCount>
+            <damageInterval>8</damageInterval>
+            <maxTargets>8</maxTargets>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <effecter>AnimeArsenal_WindHit</effecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

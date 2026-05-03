@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>AnimeArsenal_DeflectionField</defName>
+    <label>breathing deflection</label>
+    <description>A defensive technique that uses rapid circular movements to deflect incoming projectiles.</description>
+    <hediffClass>AnimeArsenal.Hediff_DeflectionField</hediffClass>
+    <defaultLabelColor>(0.8, 1.0, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>1250</min>
+          <max>1250</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

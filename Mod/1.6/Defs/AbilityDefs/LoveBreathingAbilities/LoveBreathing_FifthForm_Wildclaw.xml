@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>LoveBreathing_FifthForm_Wildclaw</defName>
+    <label>Fifth Form: Swaying Love, Wildclaw</label>
+    <description>Mitsuri dashes forward in a winding, whip-like path — her blade carving through every enemy along the way before erupting into a rapid claw-burst at the destination. The ground she crosses is left churning with love breathing energy. Close the gap. Leave nothing standing.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>480</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>130</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>35</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>16</range>
+      <warmupTime>0.4</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+
+      <li Class="AnimeArsenal.CompProperties_ConstantResoundingSlashes">
+        <damageType>Love_Breathing_Damage</damageType>
+        <strikeDamage>12~16</strikeDamage>
+        <armorPen>0.18</armorPen>
+        <spawnADBAlongPath>true</spawnADBAlongPath>
+        <adbProjectileDef>LoveBreathing_WildclawTrail_Projectile_LOne</adbProjectileDef>
+        <adbSpawnInterval>3</adbSpawnInterval>
+        <pathEffecter>AnimeArsenal_WindHitK</pathEffecter>
+        <impactEffecter>AnimeArsenal_WindJump</impactEffecter>
+      </li>
+
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <radius>3.0</radius>
+        <damage>10</damage>
+        <damageDef>Love_Breathing_Damage</damageDef>
+        <armorPen>0.18</armorPen>
+        <repeatCount>3</repeatCount>
+        <damageInterval>6</damageInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <affectCaster>false</affectCaster>
+        <effecter>AnimeArsenal_WindJump</effecter>
+        <hitEffecter>AnimeArsenal_WindHitK</hitEffecter>
+      </li>
+
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Dashes to target, dealing 12-16 damage to each enemy along the path. Lands with 3 rapid bursts hitting a 3-tile radius for 10 damage each. Leaves trail hazards behind.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>160</experienceRequired>
+        <resourceCostMultiplier>1.10</resourceCostMultiplier>
+        <description>Path damage 15-20. Landing burst 4 hits, 12 damage each in a 3.5-tile radius. Stronger trail hazards.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ConstantResoundingSlashes">
+            <damageType>Love_Breathing_Damage</damageType>
+            <strikeDamage>15~20</strikeDamage>
+            <armorPen>0.22</armorPen>
+            <spawnADBAlongPath>true</spawnADBAlongPath>
+            <adbProjectileDef>LoveBreathing_WildclawTrail_Projectile_LTwo</adbProjectileDef>
+            <adbSpawnInterval>3</adbSpawnInterval>
+            <pathEffecter>AnimeArsenal_WindHitK</pathEffecter>
+            <impactEffecter>AnimeArsenal_WindJump</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>3.5</radius>
+            <damage>12</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.22</armorPen>
+            <repeatCount>4</repeatCount>
+            <damageInterval>6</damageInterval>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <affectCaster>false</affectCaster>
+            <effecter>AnimeArsenal_WindJump</effecter>
+            <hitEffecter>AnimeArsenal_WindHitK</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <resourceCostMultiplier>1.18</resourceCostMultiplier>
+        <cooldownMultiplier>0.94</cooldownMultiplier>
+        <description>Path damage 19-25. Landing burst 4 hits, 15 damage each in a 4-tile radius. Armor penetration improves. Trail hazards last longer.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ConstantResoundingSlashes">
+            <damageType>Love_Breathing_Damage</damageType>
+            <strikeDamage>19~25</strikeDamage>
+            <armorPen>0.28</armorPen>
+            <spawnADBAlongPath>true</spawnADBAlongPath>
+            <adbProjectileDef>LoveBreathing_WildclawTrail_Projectile_LThree</adbProjectileDef>
+            <adbSpawnInterval>3</adbSpawnInterval>
+            <pathEffecter>AnimeArsenal_WindHitK</pathEffecter>
+            <impactEffecter>AnimeArsenal_WindJump</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>4.0</radius>
+            <damage>15</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.28</armorPen>
+            <repeatCount>4</repeatCount>
+            <damageInterval>5</damageInterval>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <affectCaster>false</affectCaster>
+            <effecter>AnimeArsenal_WindJump</effecter>
+            <hitEffecter>AnimeArsenal_WindHitK</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>590</experienceRequired>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <cooldownMultiplier>0.89</cooldownMultiplier>
+        <description>Path damage 24-31. Landing burst 5 hits, 18 damage each in a 4.5-tile radius. The burst becomes hard to escape at close range.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ConstantResoundingSlashes">
+            <damageType>Love_Breathing_Damage</damageType>
+            <strikeDamage>24~31</strikeDamage>
+            <armorPen>0.34</armorPen>
+            <spawnADBAlongPath>true</spawnADBAlongPath>
+            <adbProjectileDef>LoveBreathing_WildclawTrail_Projectile_LFour</adbProjectileDef>
+            <adbSpawnInterval>3</adbSpawnInterval>
+            <pathEffecter>AnimeArsenal_WindHitK</pathEffecter>
+            <impactEffecter>AnimeArsenal_WindJump</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>4.5</radius>
+            <damage>18</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.34</armorPen>
+            <repeatCount>5</repeatCount>
+            <damageInterval>5</damageInterval>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <affectCaster>false</affectCaster>
+            <effecter>AnimeArsenal_WindJump</effecter>
+            <hitEffecter>AnimeArsenal_WindHitK</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>880</experienceRequired>
+        <resourceCostMultiplier>1.30</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Path damage 30-38. Landing burst 5 hits, 22 damage each in a 5-tile radius. Trail hazards are wide and punishing. Approaching her after the dash is suicide.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ConstantResoundingSlashes">
+            <damageType>Love_Breathing_Damage</damageType>
+            <strikeDamage>30~38</strikeDamage>
+            <armorPen>0.42</armorPen>
+            <spawnADBAlongPath>true</spawnADBAlongPath>
+            <adbProjectileDef>LoveBreathing_WildclawTrail_Projectile_LFive</adbProjectileDef>
+            <adbSpawnInterval>3</adbSpawnInterval>
+            <pathEffecter>AnimeArsenal_WindHitK</pathEffecter>
+            <impactEffecter>AnimeArsenal_WindJump</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>5.0</radius>
+            <damage>22</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.42</armorPen>
+            <repeatCount>5</repeatCount>
+            <damageInterval>4</damageInterval>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <affectCaster>false</affectCaster>
+            <effecter>AnimeArsenal_WindJump</effecter>
+            <hitEffecter>AnimeArsenal_WindHitK</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>1.30</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Perfected. Path damage 38-48. Landing burst 6 rapid hits, 28 damage each in a 5.5-tile radius. The entire path and landing zone become a love breathing killzone. Max Level.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ConstantResoundingSlashes">
+            <damageType>Love_Breathing_Damage</damageType>
+            <strikeDamage>38~48</strikeDamage>
+            <armorPen>0.52</armorPen>
+            <spawnADBAlongPath>true</spawnADBAlongPath>
+            <adbProjectileDef>LoveBreathing_WildclawTrail_Projectile_LSix</adbProjectileDef>
+            <adbSpawnInterval>3</adbSpawnInterval>
+            <pathEffecter>AnimeArsenal_WindHitK</pathEffecter>
+            <impactEffecter>AnimeArsenal_WindJump</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>5.5</radius>
+            <damage>28</damage>
+            <damageDef>Love_Breathing_Damage</damageDef>
+            <armorPen>0.52</armorPen>
+            <repeatCount>6</repeatCount>
+            <damageInterval>4</damageInterval>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+            <affectCaster>false</affectCaster>
+            <effecter>AnimeArsenal_WindJump</effecter>
+            <hitEffecter>AnimeArsenal_WindHitK</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

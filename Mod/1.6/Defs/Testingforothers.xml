@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>AG_ChainsawHands</defName>
+    <label>chainsaw hand</label>
+    <description>It's a chainsaw. For hand. It's not a difficult concept to grasp, to be honest.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+    <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>chainsaw</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>26</power>
+            <cooldownTime>2</cooldownTime>
+            <extraMeleeDamages>
+              <li>
+                <def>AG_EMPStun</def>
+                <amount>15</amount>
+              </li>
+            </extraMeleeDamages>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <addedPartProps>
+      <solid>true</solid>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <DamageDef>
+    <defName>AG_EMPStun</defName>
+    <label>EMP shock</label>
+    <workerClass>DamageWorker_Stun</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been shocked to death.</deathMessage>
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+    <impactSoundType>Electric</impactSoundType>
+    <damageEffecter>Deflect_Metal</damageEffecter>
+    <defaultDamage>50</defaultDamage>
+    <combatLogRules>Damage_EMP</combatLogRules>
+    <causeStun>true</causeStun>
+  </DamageDef>
+</Defs>

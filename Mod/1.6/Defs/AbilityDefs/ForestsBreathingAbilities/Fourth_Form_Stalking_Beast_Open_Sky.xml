@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Forest_Breathing_Leap</defName>
+    <label>Fourth Form: Stalking Beast, Open Sky</label>
+    <description>A technique that launches the user skyward before crashing down on a target, sending a shockwave through the earth like a great beast's pounce.</description>
+    <iconPath>UI/Abilities/AbilityLeap</iconPath>
+    <cooldownTicksRange>700</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>25</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>0.8</warmupTime>
+      <noiseRadius>6</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <strikeDamage>20</strikeDamage>
+        <strikeDamageDef>Forest_Breathing_Damage</strikeDamageDef>
+        <strikeRadius>2</strikeRadius>
+        <armorPen>0.3</armorPen>
+        <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+        <castEffecter>AnimeArsenal_WindJump</castEffecter>
+        <hasCone>true</hasCone>
+        <coneDamage>10</coneDamage>
+        <coneDamageDef>Forest_Breathing_Damage</coneDamageDef>
+        <coneLength>6</coneLength>
+        <coneWidth>3</coneWidth>
+        <coneArmorPen>0.2</coneArmorPen>
+        <coneForward>true</coneForward>
+        <coneCount>1</coneCount>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Leap onto a target, dealing 20 damage on impact with a forward shockwave cone.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>25 impact damage. Cone damage increased. Strike radius wider.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>25</strikeDamage>
+            <strikeDamageDef>Forest_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>2.5</strikeRadius>
+            <armorPen>0.35</armorPen>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>13</coneDamage>
+            <coneDamageDef>Forest_Breathing_Damage</coneDamageDef>
+            <coneLength>7</coneLength>
+            <coneWidth>3</coneWidth>
+            <coneArmorPen>0.2</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>1</coneCount>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>31 impact damage. Cone splits into two directions.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>31</strikeDamage>
+            <strikeDamageDef>Forest_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>3</strikeRadius>
+            <armorPen>0.4</armorPen>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>16</coneDamage>
+            <coneDamageDef>Forest_Breathing_Damage</coneDamageDef>
+            <coneLength>8</coneLength>
+            <coneWidth>3</coneWidth>
+            <coneArmorPen>0.25</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>2</coneCount>
+            <coneSpreadArc>60</coneSpreadArc>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>650</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>38 impact damage. Three cone shockwaves. Delayed burst on impact.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>38</strikeDamage>
+            <strikeDamageDef>Forest_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>3</strikeRadius>
+            <armorPen>0.45</armorPen>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>18</coneDamage>
+            <coneDamageDef>Forest_Breathing_Damage</coneDamageDef>
+            <coneLength>9</coneLength>
+            <coneWidth>3.5</coneWidth>
+            <coneArmorPen>0.3</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>3</coneCount>
+            <coneSpreadArc>90</coneSpreadArc>
+            <delayedBurstDamage>15</delayedBurstDamage>
+            <delayedBurstRadius>4</delayedBurstRadius>
+            <delayedBurstDamageDef>Forest_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>20</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>6</delayedBurstMaxTargets>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>950</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>46 impact damage. Wider impact radius. Delayed burst strengthened.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>46</strikeDamage>
+            <strikeDamageDef>Forest_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>3.5</strikeRadius>
+            <armorPen>0.5</armorPen>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>22</coneDamage>
+            <coneDamageDef>Forest_Breathing_Damage</coneDamageDef>
+            <coneLength>10</coneLength>
+            <coneWidth>4</coneWidth>
+            <coneArmorPen>0.35</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>3</coneCount>
+            <coneSpreadArc>100</coneSpreadArc>
+            <delayedBurstDamage>20</delayedBurstDamage>
+            <delayedBurstRadius>5</delayedBurstRadius>
+            <delayedBurstDamageDef>Forest_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>20</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>8</delayedBurstMaxTargets>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1400</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. 55 damage. Four spreading shockwave cones, large delayed earthburst. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>55</strikeDamage>
+            <strikeDamageDef>Forest_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>4</strikeRadius>
+            <armorPen>0.6</armorPen>
+            <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+            <castEffecter>AnimeArsenal_WindJump</castEffecter>
+            <hasCone>true</hasCone>
+            <coneDamage>28</coneDamage>
+            <coneDamageDef>Forest_Breathing_Damage</coneDamageDef>
+            <coneLength>12</coneLength>
+            <coneWidth>4</coneWidth>
+            <coneArmorPen>0.4</coneArmorPen>
+            <coneForward>true</coneForward>
+            <coneCount>4</coneCount>
+            <coneSpreadArc>120</coneSpreadArc>
+            <delayedBurstDamage>28</delayedBurstDamage>
+            <delayedBurstRadius>6</delayedBurstRadius>
+            <delayedBurstDamageDef>Forest_Breathing_Damage</delayedBurstDamageDef>
+            <delayedBurstDelayTicks>20</delayedBurstDelayTicks>
+            <delayedBurstMaxTargets>10</delayedBurstMaxTargets>
+            <delayedBurstWaveCount>2</delayedBurstWaveCount>
+            <delayedBurstTicksBetweenWaves>15</delayedBurstTicksBetweenWaves>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

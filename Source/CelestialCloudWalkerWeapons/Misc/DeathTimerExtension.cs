@@ -5,10 +5,23 @@ using System.Linq;
 using HarmonyLib;
 using System.Reflection;
 
-
 public class DeathTimerExtension : DefModExtension
 {
     public string hediffToWatch;
+
+    public List<string> hediffsToWatch = new List<string>();
+
+    public List<string> AllHediffsToWatch
+    {
+        get
+        {
+            var all = new List<string>(hediffsToWatch);
+            if (!hediffToWatch.NullOrEmpty() && !all.Contains(hediffToWatch))
+                all.Add(hediffToWatch);
+            return all;
+        }
+    }
+
     public string activationMessage = "{0} has activated a deadly power. Their lifespan has been drastically shortened.";
     public string deathMessage = "{0} has succumbed to the curse, their body unable to sustain the supernatural power any longer.";
 
@@ -27,7 +40,6 @@ public class DeathTimerExtension : DefModExtension
     public bool activateOnGeneAdd = false;
 }
 
-
 public enum DeathCauseType
 {
     HeartFailure,
@@ -37,16 +49,9 @@ public enum DeathCauseType
     Random
 }
 
-[StaticConstructorOnStartup]
 public static class DeathTimerManager
 {
     private static Dictionary<Gene, DeathTimerData> activeDeathTimers = new Dictionary<Gene, DeathTimerData>();
-
-    static DeathTimerManager()
-    {
-        var harmony = new Harmony("DeathTimerExtension.Patches");
-        harmony.PatchAll();
-    }
 
     public class DeathTimerData : IExposable
     {
@@ -55,11 +60,7 @@ public static class DeathTimerManager
         public Gene parentGene;
 
         public DeathTimerData() { }
-
-        public DeathTimerData(Gene gene)
-        {
-            parentGene = gene;
-        }
+        public DeathTimerData(Gene gene) { parentGene = gene; }
 
         public bool HasDeathTimer => deathTick > 0;
         public Pawn Pawn => parentGene?.pawn;
@@ -84,10 +85,7 @@ public static class DeathTimerManager
         }
     }
 
-    public static bool HasDeathTimer(Gene gene)
-    {
-        return activeDeathTimers.ContainsKey(gene);
-    }
+    public static bool HasDeathTimer(Gene gene) => activeDeathTimers.ContainsKey(gene);
 
     public static DeathTimerData GetDeathTimer(Gene gene)
     {
@@ -95,72 +93,75 @@ public static class DeathTimerManager
         return data;
     }
 
-    public static bool PowerActivated(Gene gene)
-    {
-        var timer = GetDeathTimer(gene);
-        return timer?.powerActivated == true;
-    }
+    public static bool PowerActivated(Gene gene) => GetDeathTimer(gene)?.powerActivated == true;
 
-    public static int DaysUntilDeath(Gene gene)
-    {
-        var timer = GetDeathTimer(gene);
-        return timer?.DaysUntilDeath ?? -1;
-    }
+    public static int DaysUntilDeath(Gene gene) => GetDeathTimer(gene)?.DaysUntilDeath ?? -1;
 
     internal static void RegisterGene(Gene gene)
     {
-        if (gene?.def?.HasModExtension<DeathTimerExtension>() == true && !activeDeathTimers.ContainsKey(gene))
-        {
-            var deathTimer = new DeathTimerData(gene);
-            activeDeathTimers[gene] = deathTimer;
+        if (gene?.def?.HasModExtension<DeathTimerExtension>() != true) return;
+        if (activeDeathTimers.ContainsKey(gene)) return;
 
-            var extension = gene.def.GetModExtension<DeathTimerExtension>();
-            if (extension.activateOnGeneAdd)
-            {
-                ActivatePower(gene);
-            }
-        }
+        var deathTimer = new DeathTimerData(gene);
+        activeDeathTimers[gene] = deathTimer;
+
+        if (gene.def.GetModExtension<DeathTimerExtension>().activateOnGeneAdd)
+            ActivatePower(gene);
     }
 
-    internal static void UnregisterGene(Gene gene)
-    {
-        activeDeathTimers.Remove(gene);
-    }
+    internal static void UnregisterGene(Gene gene) => activeDeathTimers.Remove(gene);
 
     internal static void TickGene(Gene gene)
     {
         if (!activeDeathTimers.TryGetValue(gene, out DeathTimerData deathTimer)) return;
-
         var extension = deathTimer.Extension;
         if (extension == null || deathTimer.Pawn == null) return;
 
-        
-        if (Find.TickManager.TicksGame % 60 == 0)
-        {
-            if (!extension.activateOnGeneAdd)
-            {
-                CheckForPowerActivation(deathTimer);
-            }
-            CheckDeathTimer(deathTimer);
-        }
+        if (Find.TickManager.TicksGame % 60 != 0) return;
+
+        if (!extension.activateOnGeneAdd)
+            CheckForPowerActivation(deathTimer);
+
+        CheckDeathTimer(deathTimer);
     }
 
     private static void CheckForPowerActivation(DeathTimerData deathTimer)
     {
-        if (deathTimer.powerActivated || deathTimer.Extension == null || deathTimer.Pawn?.health?.hediffSet == null) return;
+        if (deathTimer.powerActivated) return;
+        if (deathTimer.Extension == null || deathTimer.Pawn?.health?.hediffSet == null) return;
 
         var extension = deathTimer.Extension;
-        HediffDef targetHediffDef = DefDatabase<HediffDef>.GetNamedSilentFail(extension.hediffToWatch);
-        if (targetHediffDef == null)
+        var hediffsToCheck = extension.AllHediffsToWatch;
+
+        if (hediffsToCheck.NullOrEmpty())
         {
-            Log.Warning($"DeathTimerExtension: Could not find hediff '{extension.hediffToWatch}' for gene {deathTimer.parentGene.def.defName}");
+            Log.WarningOnce(
+                $"[DeathTimer] Gene '{deathTimer.parentGene?.def?.defName}' has DeathTimerExtension " +
+                "but no hediffToWatch or hediffsToWatch set. Power will never auto-activate.",
+                deathTimer.parentGene?.def?.shortHash ?? 0);
             return;
         }
 
-        Hediff targetHediff = deathTimer.Pawn.health.hediffSet.GetFirstHediffOfDef(targetHediffDef);
-        if (targetHediff != null && targetHediff.Severity > 0)
+        foreach (string hediffName in hediffsToCheck)
         {
-            ActivatePower(deathTimer.parentGene);
+            if (hediffName.NullOrEmpty()) continue;
+
+            HediffDef targetHediffDef = DefDatabase<HediffDef>.GetNamedSilentFail(hediffName);
+            if (targetHediffDef == null)
+            {
+                Log.WarningOnce(
+                    $"[DeathTimer] Could not find hediff '{hediffName}' " +
+                    $"for gene '{deathTimer.parentGene?.def?.defName}'.",
+                    hediffName.GetHashCode());
+                continue;
+            }
+
+            Hediff targetHediff = deathTimer.Pawn.health.hediffSet.GetFirstHediffOfDef(targetHediffDef);
+            if (targetHediff != null && targetHediff.Severity > 0)
+            {
+                ActivatePower(deathTimer.parentGene);
+                return;
+            }
         }
     }
 
@@ -172,76 +173,64 @@ public static class DeathTimerManager
         var extension = deathTimer.Extension;
         deathTimer.powerActivated = true;
 
-       
         long currentAge = deathTimer.Pawn.ageTracker.AgeBiologicalTicks;
         long maxAgeInTicks = (long)extension.maxAgeInYears * 3600000L;
 
         if (currentAge >= maxAgeInTicks)
         {
-            
-            int daysUntilDeath = Rand.Range(extension.immediateDeathMinDays, extension.immediateDeathMaxDays + 1);
-            deathTimer.deathTick = Find.TickManager.TicksGame + (daysUntilDeath * 60000);
+            int days = Rand.Range(extension.immediateDeathMinDays, extension.immediateDeathMaxDays + 1);
+            deathTimer.deathTick = Find.TickManager.TicksGame + days * 60000;
         }
         else
         {
-            
             long ticksUntilMaxAge = maxAgeInTicks - currentAge;
-            int earlyDeathDays = Rand.Range(extension.minDaysEarlyDeath, extension.maxDaysEarlyDeath + 1);
-            long earlyDeathTicks = (long)earlyDeathDays * 60000L;
+            long earlyDeathTicks = (long)Rand.Range(extension.minDaysEarlyDeath, extension.maxDaysEarlyDeath + 1) * 60000L;
             deathTimer.deathTick = Find.TickManager.TicksGame + (int)(ticksUntilMaxAge - earlyDeathTicks);
 
-            
             if (deathTimer.deathTick < Find.TickManager.TicksGame + 60000)
-            {
                 deathTimer.deathTick = Find.TickManager.TicksGame + 60000;
-            }
         }
 
         if (!extension.activationMessage.NullOrEmpty())
-        {
-            string message = string.Format(extension.activationMessage, deathTimer.Pawn.Name.ToStringShort);
-            Messages.Message(message, deathTimer.Pawn, MessageTypeDefOf.NegativeEvent);
-        }
+            Messages.Message(string.Format(extension.activationMessage, deathTimer.Pawn.Name.ToStringShort),
+                deathTimer.Pawn, MessageTypeDefOf.NegativeEvent);
 
         if (extension.createCurseHediff)
-        {
             CreateCurseHediff(deathTimer);
-        }
     }
 
     private static void CreateCurseHediff(DeathTimerData deathTimer)
     {
         var extension = deathTimer.Extension;
-        string curseDefName = $"DeathCurse_{deathTimer.parentGene.def.defName}";
-        HediffDef curseDef = DefDatabase<HediffDef>.GetNamedSilentFail(curseDefName);
+        string defName = $"DeathCurse_{deathTimer.parentGene.def.defName}";
+        HediffDef curse = DefDatabase<HediffDef>.GetNamedSilentFail(defName);
 
-        if (curseDef == null)
+        if (curse == null)
         {
-            curseDef = new HediffDef();
-            curseDef.defName = curseDefName;
-            curseDef.label = extension.curseHediffLabel;
-            curseDef.description = extension.curseHediffDescription;
-            curseDef.hediffClass = typeof(Hediff_DeathCurse);
-            curseDef.defaultLabelColor = new UnityEngine.Color(0.8f, 0.2f, 0.2f);
-            curseDef.makesSickThought = false;
-            curseDef.maxSeverity = 1.0f;
-            curseDef.initialSeverity = 1.0f;
-            curseDef.everCurableByItem = false;
-            curseDef.tendable = false;
-            curseDef.isBad = true;
-
-            curseDef.stages = new List<HediffStage>();
-            HediffStage stage = new HediffStage();
-            stage.label = extension.curseStageLabel;
-            stage.minSeverity = 0f;
-            curseDef.stages.Add(stage);
-
-            DefDatabase<HediffDef>.Add(curseDef);
+            curse = new HediffDef
+            {
+                defName = defName,
+                label = extension.curseHediffLabel,
+                description = extension.curseHediffDescription,
+                hediffClass = typeof(Hediff_DeathCurse),
+                defaultLabelColor = new UnityEngine.Color(0.8f, 0.2f, 0.2f),
+                makesSickThought = false,
+                maxSeverity = 1.0f,
+                initialSeverity = 1.0f,
+                everCurableByItem = false,
+                tendable = false,
+                isBad = true,
+                stages = new List<HediffStage>
+                {
+                    new HediffStage { label = extension.curseStageLabel, minSeverity = 0f }
+                }
+            };
+            DefDatabase<HediffDef>.Add(curse);
         }
 
-        Hediff curse = HediffMaker.MakeHediff(curseDef, deathTimer.Pawn);
-        curse.Severity = 1f;
-        deathTimer.Pawn.health.AddHediff(curse);
+        Hediff hediff = HediffMaker.MakeHediff(curse, deathTimer.Pawn);
+        hediff.Severity = 1f;
+        deathTimer.Pawn.health.AddHediff(hediff);
     }
 
     private static void CheckDeathTimer(DeathTimerData deathTimer)
@@ -256,80 +245,54 @@ public static class DeathTimerManager
 
         var extension = deathTimer.Extension;
         if (!extension.deathMessage.NullOrEmpty())
+            Messages.Message(string.Format(extension.deathMessage, deathTimer.Pawn.Name.ToStringShort),
+                deathTimer.Pawn, MessageTypeDefOf.PawnDeath);
+
+        DeathCauseType cause = extension.deathCause;
+        if (cause == DeathCauseType.Random)
         {
-            string message = string.Format(extension.deathMessage, deathTimer.Pawn.Name.ToStringShort);
-            Messages.Message(message, deathTimer.Pawn, MessageTypeDefOf.PawnDeath);
+            var valid = System.Enum.GetValues(typeof(DeathCauseType))
+                .Cast<DeathCauseType>().Where(v => v != DeathCauseType.Random).ToArray();
+            cause = valid[Rand.Range(0, valid.Length)];
         }
 
-        DeathCauseType causeToUse = extension.deathCause;
-        if (causeToUse == DeathCauseType.Random)
+        switch (cause)
         {
-            var values = System.Enum.GetValues(typeof(DeathCauseType));
-            var validValues = values.Cast<DeathCauseType>().Where(v => v != DeathCauseType.Random).ToArray();
-            causeToUse = validValues[Rand.Range(0, validValues.Length)];
-        }
-
-        switch (causeToUse)
-        {
-            case DeathCauseType.HeartFailure:
-                KillByHeartFailure(deathTimer.Pawn);
-                break;
-            case DeathCauseType.OrganFailure:
-                KillByOrganFailure(deathTimer.Pawn);
-                break;
-            case DeathCauseType.BloodLoss:
-                KillByBloodLoss(deathTimer.Pawn);
-                break;
-            case DeathCauseType.Asphyxiation:
-                KillByAsphyxiation(deathTimer.Pawn);
-                break;
-            default:
-                KillByHeartFailure(deathTimer.Pawn);
-                break;
+            case DeathCauseType.HeartFailure: KillByHeartFailure(deathTimer.Pawn); break;
+            case DeathCauseType.OrganFailure: KillByOrganFailure(deathTimer.Pawn); break;
+            case DeathCauseType.BloodLoss: KillByBloodLoss(deathTimer.Pawn); break;
+            case DeathCauseType.Asphyxiation: KillByAsphyxiation(deathTimer.Pawn); break;
+            default: KillByHeartFailure(deathTimer.Pawn); break;
         }
     }
 
     private static void KillByHeartFailure(Pawn pawn)
     {
-        BodyPartRecord heart = pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def.defName == "Heart");
-        if (heart != null)
-        {
-            DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, heart);
-            dmg.SetIgnoreArmor(true);
-            pawn.TakeDamage(dmg);
-        }
-        else
-        {
-            DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f);
-            dmg.SetIgnoreArmor(true);
-            pawn.TakeDamage(dmg);
-        }
+        var heart = pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def.defName == "Heart");
+        var dmg = heart != null
+            ? new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, heart)
+            : new DamageInfo(DamageDefOf.Deterioration, 999f);
+        dmg.SetIgnoreArmor(true);
+        pawn.TakeDamage(dmg);
     }
 
     private static void KillByOrganFailure(Pawn pawn)
     {
-        var vitalOrgans = new[] { "Heart", "Liver", "Kidney", "Lung" };
-        var bodyParts = pawn.health.hediffSet.GetNotMissingParts();
-
-        foreach (string organName in vitalOrgans)
+        var parts = pawn.health.hediffSet.GetNotMissingParts();
+        foreach (string name in new[] { "Heart", "Liver", "Kidney", "Lung" })
         {
-            var organ = bodyParts.FirstOrDefault(x => x.def.defName == organName);
+            var organ = parts.FirstOrDefault(x => x.def.defName == name);
             if (organ != null)
             {
-                DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, organ);
+                var dmg = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, organ);
                 dmg.SetIgnoreArmor(true);
                 pawn.TakeDamage(dmg);
-                break;
+                return;
             }
         }
-
-        
-        if (vitalOrgans.All(organName => bodyParts.All(bp => bp.def.defName != organName)))
-        {
-            DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f);
-            dmg.SetIgnoreArmor(true);
-            pawn.TakeDamage(dmg);
-        }
+        var fallback = new DamageInfo(DamageDefOf.Deterioration, 999f);
+        fallback.SetIgnoreArmor(true);
+        pawn.TakeDamage(fallback);
     }
 
     private static void KillByBloodLoss(Pawn pawn)
@@ -337,33 +300,32 @@ public static class DeathTimerManager
         Hediff bloodLoss = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, pawn);
         bloodLoss.Severity = 1.0f;
         pawn.health.AddHediff(bloodLoss);
-
-        DamageInfo dmg = new DamageInfo(DamageDefOf.Cut, 50f);
+        var dmg = new DamageInfo(DamageDefOf.Cut, 50f);
         dmg.SetIgnoreArmor(true);
         pawn.TakeDamage(dmg);
     }
 
     private static void KillByAsphyxiation(Pawn pawn)
     {
-        var lungs = pawn.health.hediffSet.GetNotMissingParts().Where(x => x.def.defName == "Lung").ToList();
+        var lungs = pawn.health.hediffSet.GetNotMissingParts()
+            .Where(x => x.def.defName == "Lung").ToList();
         if (lungs.Any())
         {
             foreach (var lung in lungs)
             {
-                DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, lung);
+                var dmg = new DamageInfo(DamageDefOf.Deterioration, 999f, 999f, -1f, null, lung);
                 dmg.SetIgnoreArmor(true);
                 pawn.TakeDamage(dmg);
             }
         }
         else
         {
-            DamageInfo dmg = new DamageInfo(DamageDefOf.Deterioration, 999f);
+            var dmg = new DamageInfo(DamageDefOf.Deterioration, 999f);
             dmg.SetIgnoreArmor(true);
             pawn.TakeDamage(dmg);
         }
     }
 
-    
     public static void ExposeData()
     {
         var geneKeys = activeDeathTimers.Keys.ToList();
@@ -395,88 +357,48 @@ public static class DeathTimerPatches
 {
     [HarmonyPatch(typeof(Gene), "PostAdd")]
     [HarmonyPostfix]
-    public static void Gene_PostAdd_Postfix(Gene __instance)
-    {
-        DeathTimerManager.RegisterGene(__instance);
-    }
+    public static void Gene_PostAdd_Postfix(Gene __instance) => DeathTimerManager.RegisterGene(__instance);
 
     [HarmonyPatch(typeof(Gene), "PostRemove")]
     [HarmonyPostfix]
-    public static void Gene_PostRemove_Postfix(Gene __instance)
-    {
-        DeathTimerManager.UnregisterGene(__instance);
-    }
+    public static void Gene_PostRemove_Postfix(Gene __instance) => DeathTimerManager.UnregisterGene(__instance);
 
     [HarmonyPatch(typeof(Gene), "Tick")]
     [HarmonyPostfix]
-    public static void Gene_Tick_Postfix(Gene __instance)
-    {
-        DeathTimerManager.TickGene(__instance);
-    }
+    public static void Gene_Tick_Postfix(Gene __instance) => DeathTimerManager.TickGene(__instance);
 
     [HarmonyPatch(typeof(Game), "ExposeData")]
     [HarmonyPostfix]
-    public static void Game_ExposeData_Postfix()
-    {
-        DeathTimerManager.ExposeData();
-    }
+    public static void Game_ExposeData_Postfix() => DeathTimerManager.ExposeData();
 }
 
 public static class DeathTimerExtensions
 {
-    public static bool HasDeathTimer(this Gene gene)
-    {
-        return DeathTimerManager.HasDeathTimer(gene);
-    }
-
-    public static bool PowerActivated(this Gene gene)
-    {
-        return DeathTimerManager.PowerActivated(gene);
-    }
-
-    public static int DaysUntilDeath(this Gene gene)
-    {
-        return DeathTimerManager.DaysUntilDeath(gene);
-    }
-
-    public static DeathTimerManager.DeathTimerData GetDeathTimer(this Gene gene)
-    {
-        return DeathTimerManager.GetDeathTimer(gene);
-    }
-
-    public static void ActivateDeathTimer(this Gene gene)
-    {
-        DeathTimerManager.ActivatePower(gene);
-    }
+    public static bool HasDeathTimer(this Gene gene) => DeathTimerManager.HasDeathTimer(gene);
+    public static bool PowerActivated(this Gene gene) => DeathTimerManager.PowerActivated(gene);
+    public static int DaysUntilDeath(this Gene gene) => DeathTimerManager.DaysUntilDeath(gene);
+    public static DeathTimerManager.DeathTimerData GetDeathTimer(this Gene gene) => DeathTimerManager.GetDeathTimer(gene);
+    public static void ActivateDeathTimer(this Gene gene) => DeathTimerManager.ActivatePower(gene);
 
     public static List<Gene> GetGenesWithActiveDeathTimers(this Pawn pawn)
     {
         if (pawn.genes?.GenesListForReading == null) return new List<Gene>();
-
-        return pawn.genes.GenesListForReading
-            .Where(g => g.HasDeathTimer() && g.PowerActivated())
-            .ToList();
+        return pawn.genes.GenesListForReading.Where(g => g.HasDeathTimer() && g.PowerActivated()).ToList();
     }
 
     public static DeathTimerManager.DeathTimerData GetMostUrgentDeathTimer(this Pawn pawn)
     {
-        var activeTimers = pawn.GetGenesWithActiveDeathTimers()
+        return pawn.GetGenesWithActiveDeathTimers()
             .Select(g => g.GetDeathTimer())
             .Where(dt => dt?.HasDeathTimer == true)
-            .OrderBy(dt => dt.DaysUntilDeath);
-
-        return activeTimers.FirstOrDefault();
+            .OrderBy(dt => dt.DaysUntilDeath)
+            .FirstOrDefault();
     }
 }
 
 public class Hediff_DeathCurse : HediffWithComps
 {
-    public override void PostMake()
-    {
-        base.PostMake();
-        this.Severity = 1f;
-    }
-
+    public override void PostMake() { base.PostMake(); Severity = 1f; }
     public override bool ShouldRemove => false;
 
     public override string TipStringExtra
@@ -484,21 +406,13 @@ public class Hediff_DeathCurse : HediffWithComps
         get
         {
             string baseString = base.TipStringExtra;
-
-            var deathTimers = pawn.GetGenesWithActiveDeathTimers();
-            if (deathTimers.Any())
+            var mostUrgent = pawn.GetMostUrgentDeathTimer();
+            if (mostUrgent?.HasDeathTimer == true)
             {
-                var mostUrgent = pawn.GetMostUrgentDeathTimer();
-                if (mostUrgent != null && mostUrgent.HasDeathTimer)
-                {
-                    int days = mostUrgent.DaysUntilDeath;
-                    string timeText = days <= 0 ? "Death imminent" :
-                                    days == 1 ? "1 day remaining" :
-                                    $"{days} days remaining";
-                    baseString += $"\n\nTime remaining: {timeText}";
-                }
+                int days = mostUrgent.DaysUntilDeath;
+                string time = days <= 0 ? "Death imminent" : days == 1 ? "1 day remaining" : $"{days} days remaining";
+                baseString += $"\n\nTime remaining: {time}";
             }
-
             return baseString;
         }
     }

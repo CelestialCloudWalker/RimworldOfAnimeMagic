@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  <EMF.LevelingResourceAbilityDef>
+  <defName>Blood_Demon_Arts_Tender_Intrusion</defName>
+  <label>Blood Demon Arts: Tender Intrusion</label>
+  <category>BloodDemonArts_AbilityCaterogry</category>
+  <description>Enmu forces a target into sleep before reaching into their emotional state. The manipulation is less precise on an unwilling mind, but it requires no preparation.</description>
+  <iconPath>UI/Abilities/DemonSleepAbility1</iconPath>
+  <displayOrder>215</displayOrder>
+  <aiCanUse>true</aiCanUse>
+  <targetRequired>true</targetRequired>
+  <hostile>true</hostile>
+  <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  <resourceDef>BloodDemonArts_Resource</resourceDef>
+  <resourceCost>26</resourceCost>
+  <baseExperienceGain>10</baseExperienceGain>
+  <showExperienceInTooltip>true</showExperienceInTooltip>
+  <verbProperties>
+    <verbClass>Verb_CastAbility</verbClass>
+    <range>4</range>
+    <warmupTime>3.0</warmupTime>
+    <soundCast>PsycastPsychicEffect</soundCast>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetSelf>false</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+
+  <comps>
+    <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+      <useSleepHediff>false</useSleepHediff>
+      <forceImmediateSleep>true</forceImmediateSleep>
+      <showMessage>true</showMessage>
+      <sleepDurationHours>3</sleepDurationHours>
+      <maxTargets>1</maxTargets>
+      <range>4</range>
+      
+    </li>
+    <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+      <dreamEffectType>MoodManipulation</dreamEffectType>
+      <effectSeverity>0.18</effectSeverity>
+      <moodChange>5</moodChange>
+      <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+      <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+      <showMessage>true</showMessage>
+    </li>
+  </comps>
+
+  <levels>
+    <li>
+      <labelSuffix> (Level 1)</labelSuffix>
+      <experienceRequired>0</experienceRequired>
+      <description>Forces target asleep (3h) then manipulates mood by ±5. effectSeverity 0.18. Range 4.</description>
+    </li>
+
+    <li>
+      <labelSuffix> (Level 2)</labelSuffix>
+      <experienceRequired>50</experienceRequired>
+      <resourceCostMultiplier>1.115</resourceCostMultiplier>
+      <description>Mood ±6. effectSeverity 0.25. Range 5.</description>
+      <levelComps>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+          <useSleepHediff>false</useSleepHediff>
+          <forceImmediateSleep>true</forceImmediateSleep>
+          <showMessage>true</showMessage>
+          <sleepDurationHours>3</sleepDurationHours>
+          <maxTargets>1</maxTargets>
+          <range>5</range>
+          
+        </li>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+          <dreamEffectType>MoodManipulation</dreamEffectType>
+          <effectSeverity>0.25</effectSeverity>
+          <moodChange>6</moodChange>
+          <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+          <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+          <showMessage>true</showMessage>
+        </li>
+      </levelComps>
+    </li>
+
+    <li>
+      <labelSuffix> (Level 3)</labelSuffix>
+      <experienceRequired>110</experienceRequired>
+      <resourceCostMultiplier>1.231</resourceCostMultiplier>
+      <description>Mood ±8. effectSeverity 0.30. Range 6.</description>
+      <levelComps>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+          <useSleepHediff>false</useSleepHediff>
+          <forceImmediateSleep>true</forceImmediateSleep>
+          <showMessage>true</showMessage>
+          <sleepDurationHours>3</sleepDurationHours>
+          <maxTargets>1</maxTargets>
+          <range>6</range>
+          
+        </li>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+          <dreamEffectType>MoodManipulation</dreamEffectType>
+          <effectSeverity>0.30</effectSeverity>
+          <moodChange>8</moodChange>
+          <positiveMoodThought>DreamMoodPositive</positiveMoodThought>
+          <negativeMoodThought>DreamMoodNegative</negativeMoodThought>
+          <showMessage>true</showMessage>
+        </li>
+      </levelComps>
+    </li>
+
+    <li>
+      <labelSuffix> (Level 4)</labelSuffix>
+      <experienceRequired>200</experienceRequired>
+      <resourceCostMultiplier>1.385</resourceCostMultiplier>
+      <description>Upgraded thoughts (DreamMoodPositive_L4/DreamMoodNegative_L4). Mood ±10. effectSeverity 0.35. Range 6.</description>
+      <levelComps>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+          <useSleepHediff>false</useSleepHediff>
+          <forceImmediateSleep>true</forceImmediateSleep>
+          <showMessage>true</showMessage>
+          <sleepDurationHours>3</sleepDurationHours>
+          <maxTargets>1</maxTargets>
+          <range>6</range>
+          
+        </li>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+          <dreamEffectType>MoodManipulation</dreamEffectType>
+          <effectSeverity>0.35</effectSeverity>
+          <moodChange>10</moodChange>
+          <positiveMoodThought>DreamMoodPositive_L4</positiveMoodThought>
+          <negativeMoodThought>DreamMoodNegative_L4</negativeMoodThought>
+          <showMessage>true</showMessage>
+        </li>
+      </levelComps>
+    </li>
+
+    <li>
+      <labelSuffix> (Level 5)</labelSuffix>
+      <experienceRequired>320</experienceRequired>
+      <resourceCostMultiplier>1.500</resourceCostMultiplier>
+      <description>Mood ±11. effectSeverity 0.40. Range 7.</description>
+      <levelComps>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+          <useSleepHediff>false</useSleepHediff>
+          <forceImmediateSleep>true</forceImmediateSleep>
+          <showMessage>true</showMessage>
+          <sleepDurationHours>3</sleepDurationHours>
+          <maxTargets>1</maxTargets>
+          <range>7</range>
+          
+        </li>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+          <dreamEffectType>MoodManipulation</dreamEffectType>
+          <effectSeverity>0.40</effectSeverity>
+          <moodChange>11</moodChange>
+          <positiveMoodThought>DreamMoodPositive_L4</positiveMoodThought>
+          <negativeMoodThought>DreamMoodNegative_L4</negativeMoodThought>
+          <showMessage>true</showMessage>
+        </li>
+      </levelComps>
+    </li>
+
+    <li>
+      <labelSuffix> (Level 6)</labelSuffix>
+      <experienceRequired>480</experienceRequired>
+      <resourceCostMultiplier>1.654</resourceCostMultiplier>
+      <description>Perfected. Mood ±13. effectSeverity 0.45. Range 8. Max Level.</description>
+      <levelComps>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+          <useSleepHediff>false</useSleepHediff>
+          <forceImmediateSleep>true</forceImmediateSleep>
+          <showMessage>true</showMessage>
+          <sleepDurationHours>3</sleepDurationHours>
+          <maxTargets>1</maxTargets>
+          <range>8</range>
+          
+        </li>
+        <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+          <dreamEffectType>MoodManipulation</dreamEffectType>
+          <effectSeverity>0.45</effectSeverity>
+          <moodChange>13</moodChange>
+          <positiveMoodThought>DreamMoodPositive_L4</positiveMoodThought>
+          <negativeMoodThought>DreamMoodNegative_L4</negativeMoodThought>
+          <showMessage>true</showMessage>
+        </li>
+      </levelComps>
+    </li>
+  </levels>
+</EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

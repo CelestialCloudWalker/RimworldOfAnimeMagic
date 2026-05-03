@@ -7,10 +7,14 @@
     <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Forest_Heart</enchantHediff>
     <resourceGene>Gene_ForestBreath</resourceGene>
-    <ticksBetweenCost>540</ticksBetweenCost>
-    <resourceCostPerTick>4</resourceCostPerTick>
+    <ticksBetweenCost>450</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ForestBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ForestBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Forest</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Forest</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_NatureHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
-
 
   <AnimeArsenal.EnchantDef>
     <defName>Forest_Blade_Technique_LevelTwo</defName>
@@ -18,10 +22,14 @@
     <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Forest_Heart_LevelTwo</enchantHediff>
     <resourceGene>Gene_ForestBreath</resourceGene>
-    <ticksBetweenCost>500</ticksBetweenCost>
-    <resourceCostPerTick>4</resourceCostPerTick>
+    <ticksBetweenCost>410</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ForestBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ForestBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Forest</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Forest</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_NatureHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
-
 
   <AnimeArsenal.EnchantDef>
     <defName>Forest_Blade_Technique_LevelThree</defName>
@@ -29,10 +37,14 @@
     <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Forest_Heart_LevelThree</enchantHediff>
     <resourceGene>Gene_ForestBreath</resourceGene>
-    <ticksBetweenCost>460</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
+    <ticksBetweenCost>370</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ForestBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ForestBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Forest</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Forest</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_NatureHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
-
 
   <AnimeArsenal.EnchantDef>
     <defName>Forest_Blade_Technique_LevelFour</defName>
@@ -40,10 +52,14 @@
     <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Forest_Heart_LevelFour</enchantHediff>
     <resourceGene>Gene_ForestBreath</resourceGene>
-    <ticksBetweenCost>420</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
+    <ticksBetweenCost>330</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ForestBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ForestBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Forest</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Forest</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_NatureHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
-
 
   <AnimeArsenal.EnchantDef>
     <defName>Forest_Blade_Technique_LevelFive</defName>
@@ -51,10 +67,14 @@
     <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Forest_Heart_LevelFive</enchantHediff>
     <resourceGene>Gene_ForestBreath</resourceGene>
-    <ticksBetweenCost>380</ticksBetweenCost>
-    <resourceCostPerTick>2</resourceCostPerTick>
+    <ticksBetweenCost>290</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ForestBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ForestBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Forest</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Forest</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_NatureHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
-
 
   <AnimeArsenal.EnchantDef>
     <defName>Forest_Blade_Technique_LevelSix</defName>
@@ -62,7 +82,12 @@
     <description>A technique that allows a Forest Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Forest_Heart_LevelSix</enchantHediff>
     <resourceGene>Gene_ForestBreath</resourceGene>
-    <ticksBetweenCost>340</ticksBetweenCost>
-    <resourceCostPerTick>2</resourceCostPerTick>
+    <ticksBetweenCost>250</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_ForestBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_ForestBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Forest</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Forest</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_NatureHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

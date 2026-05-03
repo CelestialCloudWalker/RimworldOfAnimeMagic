@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef>
+    <defName>WindForm8_GaleHazard_LOne</defName>
+    <label>gale zone</label>
+    <description>A howling column of wind left by the Primary Gale Slash. Standing in it is dangerous.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>3.5</drawSize>
+      <color>(180, 255, 180)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>120</durationTicks>
+        <radius>2.0</radius>
+        <damagePerTick>4</damagePerTick>
+        <damageDef>Wind_Breathing_Damage</damageDef>
+        <armorPen>0.20</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>WindForm8_GaleHazard_LTwo</defName>
+    <label>gale zone</label>
+    <description>A howling column of wind left by the Primary Gale Slash. Standing in it is dangerous.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>4.0</drawSize>
+      <color>(153, 255, 153)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>150</durationTicks>
+        <radius>2.2</radius>
+        <damagePerTick>5</damagePerTick>
+        <damageDef>Wind_Breathing_Damage</damageDef>
+        <armorPen>0.22</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>WindForm8_GaleHazard_LThree</defName>
+    <label>gale zone</label>
+    <description>A howling column of wind left by the Primary Gale Slash. Standing in it is dangerous.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>4.5</drawSize>
+      <color>(120, 255, 120)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>180</durationTicks>
+        <radius>2.5</radius>
+        <damagePerTick>7</damagePerTick>
+        <damageDef>Wind_Breathing_Damage</damageDef>
+        <armorPen>0.26</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>WindForm8_GaleHazard_LFour</defName>
+    <label>gale zone</label>
+    <description>A howling column of wind left by the Primary Gale Slash. Standing in it is dangerous.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>5.0</drawSize>
+      <color>(90, 255, 90)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>200</durationTicks>
+        <radius>2.8</radius>
+        <damagePerTick>9</damagePerTick>
+        <damageDef>Wind_Breathing_Damage</damageDef>
+        <armorPen>0.30</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>WindForm8_GaleHazard_LFive</defName>
+    <label>gale zone</label>
+    <description>A howling column of wind left by the Primary Gale Slash. Standing in it is dangerous.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>5.5</drawSize>
+      <color>(55, 255, 55)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>240</durationTicks>
+        <radius>3.2</radius>
+        <damagePerTick>11</damagePerTick>
+        <damageDef>Wind_Breathing_Damage</damageDef>
+        <armorPen>0.35</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>WindForm8_GaleHazard_LSix</defName>
+    <label>gale zone</label>
+    <description>A howling column of wind left by the Primary Gale Slash. Standing in it is dangerous.</description>
+    <thingClass>Verse.ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>6.5</drawSize>
+      <color>(20, 255, 20)</color>
+    </graphicData>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GaleHazard">
+        <durationTicks>300</durationTicks>
+        <radius>3.6</radius>
+        <damagePerTick>14</damagePerTick>
+        <damageDef>Wind_Breathing_Damage</damageDef>
+        <armorPen>0.40</armorPen>
+        <tickInterval>15</tickInterval>
+        <onlyAffectHostiles>true</onlyAffectHostiles>
+        <hazardEffecter>AnimeArsenal_WindHitK</hazardEffecter>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

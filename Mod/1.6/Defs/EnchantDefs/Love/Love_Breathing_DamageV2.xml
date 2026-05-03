@@ -1,30 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Love_Breathing_Damage</defName>
     <label>love lash</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0}'s heart gave out.</deathMessage>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>true</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>false</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <deathMessage>{0}'s heart gave out from the overwhelming force of love.</deathMessage>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <defaultStoppingPower>0.2</defaultStoppingPower>
     <hediff>HeartbeatsOfLove</hediff>
     <hediffSkin>HeartbeatsOfLove</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Sharp</armorCategory>
     <impactSoundType>Slice</impactSoundType>
-    <harmsHealth>true</harmsHealth>
+    <minDamageToFragment>99999</minDamageToFragment>
+    <defaultDamage>6</defaultDamage>
+    <defaultArmorPenetration>0.08</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0.5</overkillPctToDestroyPart>
+    <additionalHediffs>
+      <li>
+        <hediff>PsychicHangover</hediff>
+        <severityPerDamageDealt>0.04</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>0.3</buildingDamageFactor>
+    <plantDamageFactor>0.5</plantDamageFactor>
+    <corpseDamageFactor>0.6</corpseDamageFactor>
+    <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>HeartbeatsOfLove</defName>
     <label>love lash</label>
     <labelNoun>a love lash</labelNoun>
-    <description>A whipping slash that cuts deep. Heavy bleeding from torn tissue.</description>
+    <description>A whipping slash that cuts with precise and overwhelming force. Clean wounds that bleed steadily, and leave the mind rattled.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
         <labelTendedWellInner>sutured</labelTendedWellInner>
         <labelSolidTendedWell>set</labelSolidTendedWell>
-        <severityPerDayTended>-0.72</severityPerDayTended>
+        <severityPerDayTended>-0.50</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
         <infectionChance>0.15</infectionChance>
@@ -33,13 +54,56 @@
         <permanentLabel>love lash scar</permanentLabel>
       </li>
     </comps>
+    <stages>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.12</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.08</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
     <injuryProps>
       <painPerSeverity>0.04</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
       <bleedRate>0.04</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Severed off</destroyedLabel>
-      <destroyedOutLabel>Severed</destroyedOutLabel>
+      <destroyedLabel>severed off</destroyedLabel>
+      <destroyedOutLabel>severed</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

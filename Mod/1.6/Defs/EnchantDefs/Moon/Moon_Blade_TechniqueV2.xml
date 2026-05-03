@@ -7,8 +7,13 @@
     <description>A technique that allows a Moon Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Moon_Heart</enchantHediff>
     <resourceGene>Gene_MoonBreath</resourceGene>
-    <ticksBetweenCost>420</ticksBetweenCost>
+    <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MoonBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MoonBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Moon</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Moon</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_SerpentHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -17,8 +22,13 @@
     <description>A technique that allows a Moon Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Moon_Heart_LevelTwo</enchantHediff>
     <resourceGene>Gene_MoonBreath</resourceGene>
-    <ticksBetweenCost>380</ticksBetweenCost>
+    <ticksBetweenCost>410</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MoonBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MoonBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Moon</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Moon</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_SerpentHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -27,37 +37,57 @@
     <description>A technique that allows a Moon Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Moon_Heart_LevelThree</enchantHediff>
     <resourceGene>Gene_MoonBreath</resourceGene>
-    <ticksBetweenCost>340</ticksBetweenCost>
-    <resourceCostPerTick>4</resourceCostPerTick>
+    <ticksBetweenCost>370</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MoonBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MoonBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Moon</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Moon</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_SerpentHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
     <defName>Moon_Blade_Technique_LevelFour</defName>
-    <label>Master Moon Blade</label>
+    <label>Moon Blade Technique</label>
     <description>A technique that allows a Moon Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Moon_Heart_LevelFour</enchantHediff>
     <resourceGene>Gene_MoonBreath</resourceGene>
-    <ticksBetweenCost>300</ticksBetweenCost>
-    <resourceCostPerTick>4</resourceCostPerTick>
+    <ticksBetweenCost>330</ticksBetweenCost>
+    <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MoonBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MoonBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Moon</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Moon</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_SerpentHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
     <defName>Moon_Blade_Technique_LevelFive</defName>
-    <label>Master Moon Blade</label>
+    <label>Moon Blade Technique</label>
     <description>A technique that allows a Moon Breathing user to imbue their attacks with their breathing style.</description>
-    <enchantHediff>Moon_Heart_LevelFour</enchantHediff>
+    <enchantHediff>Moon_Heart_LevelFive</enchantHediff>
     <resourceGene>Gene_MoonBreath</resourceGene>
-    <ticksBetweenCost>260</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
+    <ticksBetweenCost>290</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MoonBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MoonBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Moon</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Moon</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_SerpentHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
     <defName>Moon_Blade_Technique_LevelSix</defName>
-    <label>Master Moon Blade</label>
+    <label>Moon Blade Technique</label>
     <description>A technique that allows a Moon Breathing user to imbue their attacks with their breathing style.</description>
     <enchantHediff>Moon_Heart_LevelSix</enchantHediff>
     <resourceGene>Gene_MoonBreath</resourceGene>
-    <ticksBetweenCost>220</ticksBetweenCost>
-    <resourceCostPerTick>3</resourceCostPerTick>
+    <ticksBetweenCost>250</ticksBetweenCost>
+    <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_MoonBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_MoonBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Moon</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Moon</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_SerpentHit</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

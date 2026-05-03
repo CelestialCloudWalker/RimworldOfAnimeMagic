@@ -4,105 +4,31 @@
     <defName>Gene_BeastBreath</defName>
     <label>Beast Breath</label>
     <prerequisite>Gene_BreathingPotential</prerequisite>
-    <resourceName>Beast Breath</resourceName>
     <description>Beast Breathing Gene.</description>
     <iconPath>UI/Icons/Genes/beast</iconPath>
     <resourceLabel>Beast Breath</resourceLabel>
     <resourceDescription>Current stored Breath.</resourceDescription>
-
-    <TalentTrees>
-      <li>Beast_BreathingStyleBlankTree</li>
-    </TalentTrees>
-
-    <experienceFormula>Basic_LinearXP</experienceFormula>
-    <experienceGainSettings>
-      <experienceTypes>
-        <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>8</baseXP>
-          <damageFactor>0.15</damageFactor>
-        </li>
-        <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>12</baseXP>
-          <damageFactor>0.2</damageFactor>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Melee</SkillDef>
-          <baseXP>3</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Animals</SkillDef>
-          <baseXP>2.5</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Shooting</SkillDef>
-          <baseXP>1</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>AttackMelee</SkillDef>
-          <baseXP>15</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>AttackStatic</SkillDef>
-          <baseXP>12</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>SocialFight</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Hunt</SkillDef>
-          <baseXP>18</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>PredatorHunt</SkillDef>
-          <baseXP>20</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Tame</SkillDef>
-          <baseXP>12</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Train</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Slaughter</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>RopeToPen</SkillDef>
-          <baseXP>6</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>RopeRoamerToUnenclosedPen</SkillDef>
-          <baseXP>6</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Unrope</SkillDef>
-          <baseXP>4</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Milk</SkillDef>
-          <baseXP>5</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Shear</SkillDef>
-          <baseXP>5</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Nuzzle</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Wait_Combat</SkillDef>
-          <baseXP>3</baseXP>
-        </li>
-        <li Class="Talented.VerbExperienceTypeDef">
-          <VerbClassName>Verb_BeatFire</VerbClassName>
-          <baseXP>.5</baseXP>
-        </li>
-      </experienceTypes>
-    </experienceGainSettings>
+    <styleBarColor>(0.545, 0.271, 0.075)</styleBarColor>
+    <maxStat>BeastBreath</maxStat>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>BreathingTechnique</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <exhaustionPerTick>0.0006</exhaustionPerTick>
+    <exhaustionHediff>BeastBreathing_Fatigue</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2000</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1200</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3500</exhausationCooldownTicks>
+    <regenTicks>BeastBreath_RegenTicks</regenTicks>
+    <regenStat>BeastBreath_RegenAmount</regenStat>
+    <regenSpeedStat>BeastBreath_RegenRate</regenSpeedStat>
+    <costMult>BeastBreath_Cost</costMult>
 
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
@@ -116,8 +42,25 @@
         </targetBodyParts>
         <damageOnHit>true</damageOnHit>
       </li>
+
       <li Class="DeathTimerExtension">
-        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <hediffsToWatch>
+          <li>BreathingMarkApply</li>
+          <li>BreathingMarkApplyMastery</li>
+          <li>BreathingMarkApplyTranscendence</li>
+          <li>BreathingMarkApplyTanjiro</li>
+          <li>BreathingMarkApplyTanjiroMastery</li>
+          <li>BreathingMarkApplyTanjiroTranscendence</li>
+          <li>BreathingMarkApplySanemi</li>
+          <li>BreathingMarkApplySanemiMastery</li>
+          <li>BreathingMarkApplySanemiTranscendence</li>
+          <li>BreathingMarkApplyMuichiro</li>
+          <li>BreathingMarkApplyMuichiroMastery</li>
+          <li>BreathingMarkApplyMuichiroTranscendence</li>
+          <li>BreathingMarkApplyGiyu</li>
+          <li>BreathingMarkApplyGiyuMastery</li>
+          <li>BreathingMarkApplyGiyuTranscendence</li>
+        </hediffsToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
         <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
         <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>
@@ -132,28 +75,32 @@
         <createCurseHediff>true</createCurseHediff>
         <activateOnGeneAdd>false</activateOnGeneAdd>
       </li>
+
+      <li Class="AnimeArsenal.BreathingProgressionExtension">
+        <killsRequiredPerLevel>
+          <li>5</li>
+          <li>15</li>
+          <li>30</li>
+          <li>60</li>
+        </killsRequiredPerLevel>
+        <demonKillsRequiredPerLevel>
+          <li>2</li>
+          <li>8</li>
+          <li>20</li>
+          <li>40</li>
+        </demonKillsRequiredPerLevel>
+        <levelUpMode>AnyPawn</levelUpMode>
+        <breathRestoredPerKill>10</breathRestoredPerKill>
+        <breathRestoredPerDemonKill>25</breathRestoredPerDemonKill>
+        <killsRequiredForSpecialization>30</killsRequiredForSpecialization>
+        <demonKillsRequiredForSpecialization>10</demonKillsRequiredForSpecialization>
+        <specializationUnlockMode>AnyPawn</specializationUnlockMode>
+        <unlockSpecializationsProgressively>false</unlockSpecializationsProgressively>
+        <abilityUnlocks>
+
+        </abilityUnlocks>
+      </li>
+
     </modExtensions>
-    <maxStat>BeastBreath</maxStat>
-    <biostatCpx>2</biostatCpx>
-    <biostatMet>1</biostatMet>
-    <resourceGizmoThresholds>
-      <li>0.25</li>
-      <li>0.5</li>
-      <li>0.75</li>
-    </resourceGizmoThresholds>
-    <displayCategory>BreathingTechnique</displayCategory>
-    <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(139, 69, 19)</barColor>
-    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <exhaustionPerTick>0.0006</exhaustionPerTick>
-    <exhaustionHediff>BeastBreathing_Fatigue</exhaustionHediff>
-    <ticksBeforeExhaustionStart>2000</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1200</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>3500</exhausationCooldownTicks>
-    <TabLabel>Talents</TabLabel>
-    <regenTicks>BeastBreath_RegenTicks</regenTicks>
-    <regenStat>BeastBreath_RegenAmount</regenStat>
-    <regenSpeedStat>BeastBreath_RegenRate</regenSpeedStat>
-    <costMult>BeastBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
 </Defs>

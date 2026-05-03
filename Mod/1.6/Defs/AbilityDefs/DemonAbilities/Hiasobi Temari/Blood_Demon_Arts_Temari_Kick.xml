@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Temari_Kick</defName>
+    <label>Temari Kick</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>A precise kick empowered by Hiasobi Temari's combat style. Each upgrade adds another hit.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>16</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1.5</range>
+      <warmupTime>0</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+        <baseDamage>18</baseDamage>
+        <damageDef>Blunt</damageDef>
+        <armorPen>0.1</armorPen>
+        <repeatAmount>1</repeatAmount>
+        <damageInterval>6</damageInterval>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>18 Blunt x1. Instant cast.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.907</cooldownMultiplier>
+        <resourceCostMultiplier>1.125</resourceCostMultiplier>
+        <description>14 Blunt x2 = 28 total.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>14</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>2</repeatAmount>
+            <damageInterval>6</damageInterval>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.813</cooldownMultiplier>
+        <resourceCostMultiplier>1.313</resourceCostMultiplier>
+        <description>12 Blunt x3 = 36 total.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>12</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>3</repeatAmount>
+            <damageInterval>6</damageInterval>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.720</cooldownMultiplier>
+        <resourceCostMultiplier>1.500</resourceCostMultiplier>
+        <description>11 Blunt x4 = 44 total.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>11</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>4</repeatAmount>
+            <damageInterval>6</damageInterval>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.627</cooldownMultiplier>
+        <resourceCostMultiplier>1.688</resourceCostMultiplier>
+        <description>10 Blunt x5 = 50 total.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>10</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>6</damageInterval>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.533</cooldownMultiplier>
+        <resourceCostMultiplier>1.875</resourceCostMultiplier>
+        <description>Perfected. 9 Blunt x5 + 14 Blunt final hit (x1.5). Total ~59. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_StatScaledDamage">
+            <baseDamage>9</baseDamage>
+            <damageDef>Blunt</damageDef>
+            <armorPen>0.1</armorPen>
+            <repeatAmount>5</repeatAmount>
+            <damageInterval>6</damageInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <damage>14</damage>
+            <damageDef>Blunt</damageDef>
+            <radius>0</radius>
+            <affectCaster>false</affectCaster>
+            <onlyAffectHostiles>true</onlyAffectHostiles>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

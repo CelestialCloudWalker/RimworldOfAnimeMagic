@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>DS_ArrowDown_L1</defName>
+    <label>arrow down</label>
+    <description>Pinned in place by chakra force. Cannot move.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.6, 1.0)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowDown_L2</defName>
+    <label>arrow down</label>
+    <description>Pinned in place by chakra force. Cannot move.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.6, 1.0)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>700</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowDown_L3</defName>
+    <label>arrow down</label>
+    <description>Pinned in place by chakra force. Cannot move.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.6, 1.0)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowDown_L4</defName>
+    <label>arrow down</label>
+    <description>Pinned in place by chakra force. Cannot move.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.35, 0.55, 1.0)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1100</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowDown_L5</defName>
+    <label>arrow down</label>
+    <description>Pinned in place by overwhelming chakra force. Cannot move and barely conscious.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.3, 0.5, 1.0)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowDown_L6</defName>
+    <label>arrow down</label>
+    <description>Crushed into the ground by immense chakra pressure. Cannot move and barely conscious.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.25, 0.45, 1.0)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowSlam_LandingIncap</defName>
+    <label>slam impact</label>
+    <description>Stunned by the impact of a brutal landing. Briefly unable to move.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.8)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>300</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowDown_Finale</defName>
+    <label>arrow down</label>
+    <description>The impact pins the target. They cannot move.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.6, 1.0)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>300</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>DS_ArrowGuidance_L1</defName>
+    <label>arrow guidance</label>
+    <description>Koketsu arrow-reading instincts flow through the body. Ranged accuracy greatly improved.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.9, 0.5)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.20</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowGuidance_L2</defName>
+    <label>arrow guidance</label>
+    <description>Koketsu arrow-reading instincts flow through the body. Ranged accuracy greatly improved.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.9, 0.5)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1700</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowGuidance_L3</defName>
+    <label>arrow guidance</label>
+    <description>Refined arrow-reading. Ranged accuracy significantly improved.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.75, 0.88, 0.4)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.30</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowGuidance_L4</defName>
+    <label>arrow guidance</label>
+    <description>Deep arrow-reading. Ranged accuracy and aimed shot speed both improved.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.85, 0.35)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.38</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.75</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowGuidance_L5</defName>
+    <label>arrow guidance</label>
+    <description>Master arrow-reading. Ranged accuracy and shot speed greatly improved.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.65, 0.82, 0.30)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.46</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.70</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_ArrowGuidance_L6</defName>
+    <label>arrow guidance</label>
+    <description>Perfect arrow-reading. All attacks feel slow and predictable. Ranged accuracy, shot speed, and melee precision all greatly improved.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.80, 0.25)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.55</ShootingAccuracyPawn>
+          <MeleeHitChance>0.15</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.65</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_GroundShaker_Dust_L4</defName>
+    <label>dust cloud</label>
+    <description>A thick cloud of debris obscures sight and clogs the throat.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.65, 0.5)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>300</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_GroundShaker_Dust_L5</defName>
+    <label>choking dust cloud</label>
+    <description>A dense cloud of debris and rock dust chokes the area, heavily impairing sight and movement.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.65, 0.60, 0.45)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

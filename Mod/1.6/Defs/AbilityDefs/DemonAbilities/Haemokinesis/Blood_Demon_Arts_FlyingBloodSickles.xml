@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_BloodSickle_Projectile_Two</defName>
+    <label>Blood Sickle</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.5</drawSize>
+      <shaderParameters>
+        <_Color>(200, 50, 50, 255)</_Color>
+        <_brightnessMultiplier>1.1</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <ExplosionRadius>2.2</ExplosionRadius>
+      <stoppingPower>1</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>27</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>9</aoeDamage>
+      <scaleStat>ShootingAccuracyPawn</scaleStat>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(200, 50, 50, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.23</MoteInterval>
+        <MoteDuration>30</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_BloodSickle_Projectile_Four</defName>
+    <label>Blood Sickle</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.8</drawSize>
+      <shaderParameters>
+        <_Color>(220, 40, 40, 255)</_Color>
+        <_brightnessMultiplier>1.2</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+      <ExplosionRadius>2.5</ExplosionRadius>
+      <stoppingPower>1.2</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>30</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>13</aoeDamage>
+      <scaleStat>ShootingAccuracyPawn</scaleStat>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(220, 40, 40, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.20</MoteInterval>
+        <MoteDuration>35</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Blood_Demon_Arts_BloodSickle_Projectile_Six</defName>
+    <label>Blood Sickle</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.2</drawSize>
+      <shaderParameters>
+        <_Color>(240, 30, 30, 255)</_Color>
+        <_brightnessMultiplier>1.4</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Blood_Slash</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.4</armorPenetrationBase>
+      <ExplosionRadius>3</ExplosionRadius>
+      <stoppingPower>1.5</stoppingPower>
+      <ExplosionEffect>DemonBreathingExplosionEffect</ExplosionEffect>
+      <speed>35</speed>
+      <CanHitFriendly>true</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>20</aoeDamage>
+      <scaleStat>ShootingAccuracyPawn</scaleStat>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>22</glowRadius>
+        <glowColor>(240, 30, 30, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Demon_Projectile_Mote</TrailMote>
+        <MoteInterval>0.15</MoteInterval>
+        <MoteDuration>40</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Gyutaro_FlyingBloodSickles</defName>
+    <label>Flying Blood Sickles</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Launch blood sickles as high-speed ranged projectiles that carry Blood Poisoning to distant targets.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>0.3</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+        <projectileDef>Blood_Demon_Arts_BloodSickle_Projectile</projectileDef>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>BloodPoison_Hediff</hediffDef>
+        <severityAdjustment>0.04</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Ranged projectile. Blood Poisoning +0.04 on hit.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.91</cooldownMultiplier>
+        <resourceCostMultiplier>1.05</resourceCostMultiplier>
+        <description>Improved projectile. Blood Poisoning +0.04.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_BloodSickle_Projectile_Two</projectileDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.04</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>Improved projectile. Blood Poisoning +0.04. Chains to a second target (requires code).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_BloodSickle_Projectile_Two</projectileDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.04</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.73</cooldownMultiplier>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <description>Heavier projectile. Blood Poisoning +0.06.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_BloodSickle_Projectile_Four</projectileDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.64</cooldownMultiplier>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <description>Blood Poisoning +0.09. Chains to a third target (requires code).</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_BloodSickle_Projectile_Four</projectileDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.09</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.55</cooldownMultiplier>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <description>Perfected. Blood Poisoning +0.09. Chains to a fourth target (requires code). Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLaunchScalingProjectile">
+            <projectileDef>Blood_Demon_Arts_BloodSickle_Projectile_Six</projectileDef>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.09</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

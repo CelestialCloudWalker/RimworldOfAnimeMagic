@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Beast_Breathing_Sixth_Fang_Pounce</defName>
+    <label>Sixth Fang: Pounce</label>
+    <description>A technique that dashes to a target and strikes them.</description>
+    <iconPath>UI/Abilities/AbilityDash</iconPath>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+        <damageAmount>8</damageAmount>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <damageType>Beast_Breathing_Damage</damageType>
+        <armorPenetration>0.3</armorPenetration>
+        <additionalDamageFactorFromMeleeSkill>0.12</additionalDamageFactorFromMeleeSkill>
+        <stunDuration>1</stunDuration>
+        <effectRadius>0</effectRadius>
+        <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A technique that dashes to a target and strikes them.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.0</rangeMultiplier>
+        <description>11 damage. Armor penetration increased.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>11</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <armorPenetration>0.35</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.15</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>1</stunDuration>
+            <effectRadius>0</effectRadius>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>280</experienceRequired>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <cooldownMultiplier>0.833</cooldownMultiplier>
+        <description>15 damage. Stun increased. Shockwave radius on impact.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>15</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <armorPenetration>0.43</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.18</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>2</stunDuration>
+            <effectRadius>1</effectRadius>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>480</experienceRequired>
+        <resourceCostMultiplier>2.4</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <description>19 damage. High armor penetration. Extended range.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>19</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <armorPenetration>0.53</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.18</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>2</stunDuration>
+            <effectRadius>1</effectRadius>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>720</experienceRequired>
+        <resourceCostMultiplier>2.4</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <description>24 damage. Wider shockwave. Longer stun duration.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>24</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <armorPenetration>0.65</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.22</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>3</stunDuration>
+            <effectRadius>2</effectRadius>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <resourceCostMultiplier>2.4</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <description>Perfected. 30 damage, near-full armor penetration, wide stun shockwave. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_TeleportMeleeAttack">
+            <damageAmount>30</damageAmount>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <armorPenetration>0.8</armorPenetration>
+            <additionalDamageFactorFromMeleeSkill>0.33</additionalDamageFactorFromMeleeSkill>
+            <stunDuration>4</stunDuration>
+            <effectRadius>3</effectRadius>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

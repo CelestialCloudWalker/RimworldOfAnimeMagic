@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>AA_FlashyRisingKick</defName>
+    <label>Flashy Rising Kick</label>
+    <description>An upward kick that staggers the target. Does not require a blade — raw, flamboyant power.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>4</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>2</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityDamage">
+        <damageAmount>12</damageAmount>
+        <damageDef>Blunt</damageDef>
+        <armorPenetration>0.15</armorPenetration>
+        <applyToTarget>true</applyToTarget>
+        <meleeSkillFactor>0.3</meleeSkillFactor>
+        <stunTicks>180</stunTicks>
+        <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>12 damage. Stuns for 3 seconds.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <description>16 damage. Stuns for 4 seconds.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDamage">
+            <damageAmount>16</damageAmount>
+            <damageDef>Blunt</damageDef>
+            <armorPenetration>0.2</armorPenetration>
+            <applyToTarget>true</applyToTarget>
+            <meleeSkillFactor>0.3</meleeSkillFactor>
+            <stunTicks>240</stunTicks>
+            <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>280</experienceRequired>
+        <description>20 damage. Stuns for 5 seconds.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDamage">
+            <damageAmount>20</damageAmount>
+            <damageDef>Blunt</damageDef>
+            <armorPenetration>0.25</armorPenetration>
+            <applyToTarget>true</applyToTarget>
+            <meleeSkillFactor>0.3</meleeSkillFactor>
+            <stunTicks>300</stunTicks>
+            <casterEffecter>AnimeArsenal_SoundJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_SoundHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

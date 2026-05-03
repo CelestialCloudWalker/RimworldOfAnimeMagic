@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>DS_Kokushibo_Suppressed</defName>
+    <label>essence divided</label>
+    <description>Kokushibo's soul is fragmented. His physical form diminishes as his power walks apart from him.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li><label>diminished</label></li>
+    </stages>
+    <modExtensions>
+      <li Class="AnimeArsenal.HediffExtension_RenderScale">
+        <bodyScaleFactor>0.45</bodyScaleFactor>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EmotionClone_Lifespan</defName>
+    <label>emotion manifestation</label>
+    <description>A demon clone born from raw emotion. Its form will fade when its essence runs dry.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay"><severityPerDay>-720</severityPerDay></li>
+      <li Class="HediffCompProperties_Disappears"><showRemainingTime>true</showRemainingTime></li>
+      <li Class="AnimeArsenal.HediffCompProperties_NotifyCasterOnRemoved">
+        <watchedPawnKindDefNames>
+          <li>DS_Sekido_Entity</li>
+          <li>DS_Karaku_Entity</li>
+          <li>DS_Aizetsu_Entity</li>
+          <li>DS_Urogi_Entity</li>
+          <li>DS_Zohakuten_Entity</li>
+        </watchedPawnKindDefNames>
+        <casterHediffToRemove>DS_Kokushibo_Suppressed</casterHediffToRemove>
+      </li>
+    </comps>
+    <stages><li><label>active</label></li></stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EmotionClone_Lifespan_Extended</defName>
+    <label>emotion manifestation</label>
+    <description>A demon clone born from raw emotion. This one lingers longer.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay"><severityPerDay>-480</severityPerDay></li>
+      <li Class="HediffCompProperties_Disappears"><showRemainingTime>true</showRemainingTime></li>
+      <li Class="AnimeArsenal.HediffCompProperties_NotifyCasterOnRemoved">
+        <watchedPawnKindDefNames>
+          <li>DS_Sekido_Entity</li>
+          <li>DS_Karaku_Entity</li>
+          <li>DS_Aizetsu_Entity</li>
+          <li>DS_Urogi_Entity</li>
+          <li>DS_Zohakuten_Entity</li>
+        </watchedPawnKindDefNames>
+        <casterHediffToRemove>DS_Kokushibo_Suppressed</casterHediffToRemove>
+      </li>
+    </comps>
+    <stages><li><label>active</label></li></stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EmotionClone_Lifespan_Max</defName>
+    <label>emotion manifestation</label>
+    <description>A demon clone born from raw emotion. Perfected — this one endures far longer.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay"><severityPerDay>-411</severityPerDay></li>
+      <li Class="HediffCompProperties_Disappears"><showRemainingTime>true</showRemainingTime></li>
+      <li Class="AnimeArsenal.HediffCompProperties_NotifyCasterOnRemoved">
+        <watchedPawnKindDefNames>
+          <li>DS_Sekido_Entity</li>
+          <li>DS_Karaku_Entity</li>
+          <li>DS_Aizetsu_Entity</li>
+          <li>DS_Urogi_Entity</li>
+          <li>DS_Zohakuten_Entity</li>
+        </watchedPawnKindDefNames>
+        <casterHediffToRemove>DS_Kokushibo_Suppressed</casterHediffToRemove>
+      </li>
+    </comps>
+    <stages><li><label>active</label></li></stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Zohakuten_Lifespan</defName>
+    <label>hatred incarnate</label>
+    <description>Zohakuten exists as a vessel of pure undiluted hatred. Its form cannot sustain itself for long.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay"><severityPerDay>-960</severityPerDay></li>
+      <li Class="HediffCompProperties_Disappears"><showRemainingTime>true</showRemainingTime></li>
+      <li Class="AnimeArsenal.HediffCompProperties_NotifyCasterOnRemoved">
+        <watchedPawnKindDefNames>
+          <li>DS_Zohakuten_Entity</li>
+        </watchedPawnKindDefNames>
+        <casterHediffToRemove>DS_Kokushibo_Suppressed</casterHediffToRemove>
+      </li>
+    </comps>
+    <stages><li><label>active</label></li></stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Zohakuten_Lifespan_Extended</defName>
+    <label>hatred incarnate</label>
+    <description>Zohakuten's form has grown more stable. It lingers longer.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay"><severityPerDay>-576</severityPerDay></li>
+      <li Class="HediffCompProperties_Disappears"><showRemainingTime>true</showRemainingTime></li>
+      <li Class="AnimeArsenal.HediffCompProperties_NotifyCasterOnRemoved">
+        <watchedPawnKindDefNames>
+          <li>DS_Zohakuten_Entity</li>
+        </watchedPawnKindDefNames>
+        <casterHediffToRemove>DS_Kokushibo_Suppressed</casterHediffToRemove>
+      </li>
+    </comps>
+    <stages><li><label>active</label></li></stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>DS_Sekido_Rage</defName>
+    <label>boiling rage</label>
+    <description>Sekido's anger manifests as relentless fury. It moves faster and strikes harder, ignoring its own safety.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <label>enraged</label>
+        <painFactor>0.0</painFactor>
+        <statOffsets>
+          <MeleeHitChance>0.15</MeleeHitChance>
+          <MeleeDodgeChance>-0.1</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Karaku_Euphoria</defName>
+    <label>idle euphoria</label>
+    <description>Karaku's pleasure gives it a languid but resilient nature. It heals slowly and shrugs off pain.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <label>euphoric</label>
+        <painFactor>0.3</painFactor>
+        <statOffsets>
+          <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Aizetsu_Grief</defName>
+    <label>hollow grief</label>
+    <description>Aizetsu's sorrow radiates despair that saps the will of nearby enemies.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AuraPulseHediff">
+        <hediffDef>DS_Aizetsu_DepressiveAura</hediffDef>
+        <radius>8</radius>
+        <intervalTicks>120</intervalTicks>
+        <severityPerPulse>0.1</severityPerPulse>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>sorrowful</label>
+        <painFactor>0.5</painFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Aizetsu_DepressiveAura</defName>
+    <label>crushing despair</label>
+    <description>An overwhelming sorrow has taken hold. All motivation to fight drains away.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <initialSeverity>0.1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay"><severityPerDay>-1.5</severityPerDay></li>
+    </comps>
+    <stages>
+      <li>
+        <label>melancholy</label>
+        <minSeverity>0.0</minSeverity>
+        <statOffsets>
+          <MoveSpeed>-0.1</MoveSpeed>
+          <MeleeHitChance>-0.05</MeleeHitChance>
+        </statOffsets>
+      </li>
+      <li>
+        <label>despairing</label>
+        <minSeverity>0.5</minSeverity>
+        <statOffsets>
+          <MoveSpeed>-0.25</MoveSpeed>
+          <MeleeHitChance>-0.15</MeleeHitChance>
+          <ShootingAccuracyPawn>-0.15</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Urogi_Elation</defName>
+    <label>manic elation</label>
+    <description>Urogi's joy makes it unpredictable and nearly impossible to pin down.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <label>elated</label>
+        <painFactor>0.1</painFactor>
+        <statOffsets>
+          <MoveSpeed>0.4</MoveSpeed>
+          <MeleeDodgeChance>0.15</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_Zohakuten_HatredCore</defName>
+    <label>hatred incarnate</label>
+    <description>Zohakuten is the amalgamation of all four emotions distilled into pure hatred. Burns through the caster's resource while active.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="AnimeArsenal.HediffCompProperties_DrainResource">
+        <resourceDef>BloodDemonArts_Resource</resourceDef>
+        <resourceCostPerInterval>3</resourceCostPerInterval>
+        <intervalTicks>60</intervalTicks>
+        <removeOnEmpty>true</removeOnEmpty>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>hateful</label>
+        <painFactor>0.0</painFactor>
+        <statOffsets>
+          <MoveSpeed>0.5</MoveSpeed>
+          <MeleeHitChance>0.25</MeleeHitChance>
+          <MeleeDodgeChance>0.15</MeleeDodgeChance>
+          <ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

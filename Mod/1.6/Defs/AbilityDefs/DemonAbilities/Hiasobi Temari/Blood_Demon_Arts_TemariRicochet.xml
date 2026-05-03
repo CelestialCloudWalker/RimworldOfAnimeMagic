@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Susamaru_TemariRicochet</defName>
+    <label>BDA: Temari Ricochet</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Susamaru throws a temari ball with such terrifying precision that it ricochets between enemies on its own, shattering bones with every thunderous impact.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>26</resourceCost>
+    <baseExperienceGain>70</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BaseStance">
+        <maxJumps>2</maxJumps>
+        <ticksBetweenJumps>8</ticksBetweenJumps>
+        <jumpDistance>8</jumpDistance>
+        <targetSearchRadius>12</targetSearchRadius>
+        <jumpDamageDef>Blunt</jumpDamageDef>
+        <jumpDamage>16~20</jumpDamage>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+        <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Ball ricochets to 2 targets within range 8. Hits for 16~20 Blunt per hop.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>70</experienceRequired>
+        <cooldownMultiplier>0.907</cooldownMultiplier>
+        <resourceCostMultiplier>1.038</resourceCostMultiplier>
+        <description>18~23 Blunt. Ricochets to 3 targets.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>3</maxJumps>
+            <ticksBetweenJumps>8</ticksBetweenJumps>
+            <jumpDistance>8</jumpDistance>
+            <targetSearchRadius>12</targetSearchRadius>
+            <jumpDamageDef>Blunt</jumpDamageDef>
+            <jumpDamage>18~23</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>160</experienceRequired>
+        <cooldownMultiplier>0.813</cooldownMultiplier>
+        <resourceCostMultiplier>1.115</resourceCostMultiplier>
+        <description>20~26 Blunt. Ricochets to 4 targets. Search radius widened to 14.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>4</maxJumps>
+            <ticksBetweenJumps>7</ticksBetweenJumps>
+            <jumpDistance>8</jumpDistance>
+            <targetSearchRadius>14</targetSearchRadius>
+            <jumpDamageDef>Blunt</jumpDamageDef>
+            <jumpDamage>20~26</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>290</experienceRequired>
+        <cooldownMultiplier>0.720</cooldownMultiplier>
+        <resourceCostMultiplier>1.231</resourceCostMultiplier>
+        <description>23~29 Blunt. Ricochets to 5 targets. Jump distance and search radius expand. Ball moves faster.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>5</maxJumps>
+            <ticksBetweenJumps>6</ticksBetweenJumps>
+            <jumpDistance>10</jumpDistance>
+            <targetSearchRadius>16</targetSearchRadius>
+            <jumpDamageDef>Blunt</jumpDamageDef>
+            <jumpDamage>23~29</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>460</experienceRequired>
+        <cooldownMultiplier>0.627</cooldownMultiplier>
+        <resourceCostMultiplier>1.385</resourceCostMultiplier>
+        <description>27~34 Blunt. Ricochets to 6 targets. Jump distance 10, search 16.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>6</maxJumps>
+            <ticksBetweenJumps>6</ticksBetweenJumps>
+            <jumpDistance>10</jumpDistance>
+            <targetSearchRadius>16</targetSearchRadius>
+            <jumpDamageDef>Blunt</jumpDamageDef>
+            <jumpDamage>27~34</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>710</experienceRequired>
+        <cooldownMultiplier>0.533</cooldownMultiplier>
+        <resourceCostMultiplier>1.538</resourceCostMultiplier>
+        <description>Perfected. 32~40 Blunt. 8 targets. Jump dist 10, search 18. Ball reaches terrifying speed. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BaseStance">
+            <maxJumps>8</maxJumps>
+            <ticksBetweenJumps>5</ticksBetweenJumps>
+            <jumpDistance>10</jumpDistance>
+            <targetSearchRadius>18</targetSearchRadius>
+            <jumpDamageDef>Blunt</jumpDamageDef>
+            <jumpDamage>32~40</jumpDamage>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <casterEffecter>AnimeArsenal_BeastJump</casterEffecter>
+            <impactEffecter>AnimeArsenal_BeastHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

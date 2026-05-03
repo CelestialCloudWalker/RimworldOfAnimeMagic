@@ -8,6 +8,9 @@
     <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
     <inheritable>true</inheritable>
     <genes>
+      <li>AA_DemonHorn_Curved</li>
+      <li>AA_DemonHorn_Swept</li>
+      <li>AA_DemonHorn_Devil</li>
       <li>BloodDemonArt</li>
       <li>MeleeDamage_Strong</li>
       <li>Aggression_Aggressive</li>

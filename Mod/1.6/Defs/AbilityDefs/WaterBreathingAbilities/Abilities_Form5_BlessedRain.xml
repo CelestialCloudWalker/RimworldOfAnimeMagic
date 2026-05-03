@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Water_Breathing_BlessedRain</defName>
+    <label>Water Breathing: Blessed Rain After the Drought</label>
+    <category>WaterBreathing_Ability_Catergory</category>
+    <description>A single, decisive slash aimed at the neck of a humanoid enemy. If the strike connects with sufficient force, it kills instantly. Can fail if the blow is deflected or fails to deal lethal damage.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>240</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>80</resourceCost>
+    <baseExperienceGain>60</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>1.2</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <dashSpeed>3.0</dashSpeed>
+        <initialStrikeDamage>8</initialStrikeDamage>
+        <initialStrikeArmorPen>0.20</initialStrikeArmorPen>
+        <damageType>Water_Breathing_Damage</damageType>
+        <targetBodyParts>
+          <li>Neck</li>
+        </targetBodyParts>
+        <vitalOrganDamage>120</vitalOrganDamage>
+        <vitalOrganArmorPen>0.35</vitalOrganArmorPen>
+        <vitalOrganDamageType>Water_Breathing_Damage</vitalOrganDamageType>
+        <effectRadius>0</effectRadius>
+        <stunDuration>0</stunDuration>
+        <vitalStrikeBaseChance>0.55</vitalStrikeBaseChance>
+        <vitalStrikeMinChance>0.10</vitalStrikeMinChance>
+        <vitalStrikeMaxChance>0.90</vitalStrikeMaxChance>
+        <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+        <showMissMessage>true</showMissMessage>
+        <missMessage>{INSTIGATOR}'s slash misses the neck — the strike fails to land.</missMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A swift dash and neck slash. Risky — only a 55% base chance to land the killing blow.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>The blade bites deeper. More reliable lethal damage.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>3.2</dashSpeed>
+            <initialStrikeDamage>10</initialStrikeDamage>
+            <initialStrikeArmorPen>0.25</initialStrikeArmorPen>
+            <damageType>Water_Breathing_Damage</damageType>
+            <targetBodyParts>
+              <li>Neck</li>
+            </targetBodyParts>
+            <vitalOrganDamage>150</vitalOrganDamage>
+            <vitalOrganArmorPen>0.40</vitalOrganArmorPen>
+            <vitalOrganDamageType>Water_Breathing_Damage</vitalOrganDamageType>
+            <effectRadius>0</effectRadius>
+            <stunDuration>0</stunDuration>
+            <vitalStrikeBaseChance>0.70</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.15</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.90</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <missMessage>{INSTIGATOR}'s strike glances off — the neck blow fails to connect cleanly.</missMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Perfected. An 85% base chance to kill instantly — still not guaranteed. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>3.5</dashSpeed>
+            <initialStrikeDamage>12</initialStrikeDamage>
+            <initialStrikeArmorPen>0.30</initialStrikeArmorPen>
+            <damageType>Water_Breathing_Damage</damageType>
+            <targetBodyParts>
+              <li>Neck</li>
+            </targetBodyParts>
+            <vitalOrganDamage>200</vitalOrganDamage>
+            <vitalOrganArmorPen>0.50</vitalOrganArmorPen>
+            <vitalOrganDamageType>Water_Breathing_Damage</vitalOrganDamageType>
+            <effectRadius>0</effectRadius>
+            <stunDuration>0</stunDuration>
+            <vitalStrikeBaseChance>0.85</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.20</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.90</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <missMessage>{INSTIGATOR}'s blade finds no opening — the killing stroke is turned aside.</missMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Frost_Breathing_ColdShiveringChatters</defName>
+    <label>Frost Breathing: Cold, Shivering Chatters</label>
+    <description>The user launches into the air and crashes down onto a single target with a heavy frost-laced slash, the impact sending a shockwave of biting cold outward. The strike is brutal enough to stagger the target completely — for a moment, they can do nothing but shiver.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>420</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>18</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <strikeDamage>35</strikeDamage>
+        <strikeDamageDef>Frost_Breathing_Damage</strikeDamageDef>
+        <strikeRadius>1.0</strikeRadius>
+        <armorPen>0.20</armorPen>
+        <strikeEffecter>AnimeArsenal_FrostHit</strikeEffecter>
+        <burstDamage>12</burstDamage>
+        <burstRadius>3.5</burstRadius>
+        <burstDamageDef>Frost_Breathing_Damage</burstDamageDef>
+        <burstRepeatCount>1</burstRepeatCount>
+        <burstInterval>0</burstInterval>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>1</rectWidth>
+        <rectLength>1</rectLength>
+        <damageAmount>0</damageAmount>
+        <damageType>Frost_Breathing_Damage</damageType>
+        <stunChance>1.0</stunChance>
+        <stunDuration>90</stunDuration>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+        <severityAdjustment>0.40</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>35 damage leap slash. Stuns target for ~1.5 seconds. Small frost burst (12 damage) on landing. Applies ChillingSting.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>170</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>43 damage. Burst hits harder. Stun duration unchanged — reliability improves.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>43</strikeDamage>
+            <strikeDamageDef>Frost_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>1.0</strikeRadius>
+            <armorPen>0.23</armorPen>
+            <strikeEffecter>AnimeArsenal_FrostHit</strikeEffecter>
+            <burstDamage>16</burstDamage>
+            <burstRadius>3.5</burstRadius>
+            <burstDamageDef>Frost_Breathing_Damage</burstDamageDef>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>1</rectWidth>
+            <rectLength>1</rectLength>
+            <damageAmount>0</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <stunChance>1.0</stunChance>
+            <stunDuration>90</stunDuration>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.48</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <cooldownMultiplier>0.92</cooldownMultiplier>
+        <description>52 damage. Burst radius widens. ChillingSting deepens — Frost Bitten stage reliable.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>52</strikeDamage>
+            <strikeDamageDef>Frost_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>1.0</strikeRadius>
+            <armorPen>0.27</armorPen>
+            <strikeEffecter>AnimeArsenal_FrostHit</strikeEffecter>
+            <burstDamage>20</burstDamage>
+            <burstRadius>4.0</burstRadius>
+            <burstDamageDef>Frost_Breathing_Damage</burstDamageDef>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>1</rectWidth>
+            <rectLength>1</rectLength>
+            <damageAmount>0</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <stunChance>1.0</stunChance>
+            <stunDuration>100</stunDuration>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.56</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>630</experienceRequired>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>62 damage. Armor penetration grows. Burst catches more enemies. Deep Freeze within reach on a combo.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>62</strikeDamage>
+            <strikeDamageDef>Frost_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>1.5</strikeRadius>
+            <armorPen>0.32</armorPen>
+            <strikeEffecter>AnimeArsenal_FrostHit</strikeEffecter>
+            <burstDamage>24</burstDamage>
+            <burstRadius>4.0</burstRadius>
+            <burstDamageDef>Frost_Breathing_Damage</burstDamageDef>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>1</rectWidth>
+            <rectLength>1</rectLength>
+            <damageAmount>0</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <stunChance>1.0</stunChance>
+            <stunDuration>100</stunDuration>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.65</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>930</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>74 damage. Wide burst catches a full group. Stun edges toward 2 full seconds. Deep Freeze reliable on combo.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>74</strikeDamage>
+            <strikeDamageDef>Frost_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>1.5</strikeRadius>
+            <armorPen>0.37</armorPen>
+            <strikeEffecter>AnimeArsenal_FrostHit</strikeEffecter>
+            <burstDamage>29</burstDamage>
+            <burstRadius>4.5</burstRadius>
+            <burstDamageDef>Frost_Breathing_Damage</burstDamageDef>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>1</rectWidth>
+            <rectLength>1</rectLength>
+            <damageAmount>0</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <stunChance>1.0</stunChance>
+            <stunDuration>110</stunDuration>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.75</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1380</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 88 damage. The landing shakes the ground — wide frost burst, full 2-second stun, Frozen Through on a combo. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+            <strikeDamage>88</strikeDamage>
+            <strikeDamageDef>Frost_Breathing_Damage</strikeDamageDef>
+            <strikeRadius>1.5</strikeRadius>
+            <armorPen>0.42</armorPen>
+            <strikeEffecter>AnimeArsenal_FrostHit</strikeEffecter>
+            <burstDamage>35</burstDamage>
+            <burstRadius>5.0</burstRadius>
+            <burstDamageDef>Frost_Breathing_Damage</burstDamageDef>
+            <burstRepeatCount>1</burstRepeatCount>
+            <burstInterval>0</burstInterval>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>1</rectWidth>
+            <rectLength>1</rectLength>
+            <damageAmount>0</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <stunChance>1.0</stunChance>
+            <stunDuration>120</stunDuration>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.88</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

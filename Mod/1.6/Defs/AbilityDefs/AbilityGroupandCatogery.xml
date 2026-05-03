@@ -5,71 +5,59 @@
     <label>Beast Breathing</label>
     <displayOrder>10007</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>BloodDemonArts_AbilityCaterogry</defName>
     <label>Blood Demon Arts</label>
     <displayOrder>10005</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>FlameBreathing_Ability_Catergory</defName>
     <label>Flame Breathing</label>
     <displayOrder>10004</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>FlowerBreathing_Ability_Catergory</defName>
     <label>Flower Breathing</label>
     <displayOrder>10002</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
-    <defName>ForestsBreathing_Ability_Catergory</defName>
-    <label>Forests Breathing</label>
+    <defName>ForestBreathing_Ability_Catergory</defName>
+    <label>Forest Breathing</label>
     <displayOrder>10001</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityGroupDef>
-    <defName>ForestsBreathing_FifthForm_Group</defName>
-    <label>Fifth Form Group</label>
+    <defName>ForestBreathing_Ability_Group</defName>
+    <label>Forest Breathing</label>
   </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>FrostBreathing_Ability_Catergory</defName>
     <label>Frost Breathing</label>
     <displayOrder>10008</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>InsectBreathing_Ability_Catergory</defName>
     <label>Insect Breathing</label>
     <displayOrder>10009</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>LoveBreathing_Ability_Catergory</defName>
     <label>Love Breathing</label>
     <displayOrder>10010</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityGroupDef>
     <defName>LoveBreathing_EightForm_Group</defName>
     <label>Eight Form Group</label>
   </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>MistBreathing_Ability_Catergory</defName>
     <label>Mist Breathing</label>
     <displayOrder>10011</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>SerpentBreathing_Ability_Catergory</defName>
     <label>Serpent Breathing</label>
     <displayOrder>10011</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityGroupDef>
     <defName>SerpentBreathing_FifthForm_Group</defName>
     <label>Fifth Form Group</label>
@@ -79,54 +67,43 @@
     <label>Sound Breathing</label>
     <displayOrder>10012</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>StoneBreathing_Ability_Catergory</defName>
     <label>Stone Breathing</label>
     <displayOrder>10013</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityGroupDef>
     <defName>StoneBreathing_EightForm_Group</defName>
     <label>Eight Form Group</label>
   </AbilityGroupDef>
-
   <AbilityCategoryDef>
     <defName>ThunderBreathing_Ability_Catergory</defName>
     <label>Thunder Breathing</label>
     <displayOrder>10014</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>WaterBreathing_Ability_Catergory</defName>
     <label>Water Breathing</label>
     <displayOrder>10015</displayOrder>
   </AbilityCategoryDef>
-
-
   <AbilityCategoryDef>
     <defName>WindBreathing_Ability_Catergory</defName>
     <label>Wind Breathing</label>
     <displayOrder>10016</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>SlayerCorp_Ability_Catergory</defName>
     <label>Slayer Corp</label>
     <displayOrder>10017</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>MoonBreathing_Ability_Catergory</defName>
     <label>Moon Breathing</label>
     <displayOrder>10018</displayOrder>
   </AbilityCategoryDef>
-
   <AbilityCategoryDef>
     <defName>SunBreathing_Ability_Catergory</defName>
     <label>Sun Breathing</label>
-    <displayOrder>10018</displayOrder>
+    <displayOrder>10019</displayOrder>
   </AbilityCategoryDef>
-
-
 </Defs>

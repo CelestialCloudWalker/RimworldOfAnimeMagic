@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Beast_Breathing_SecondFang_Projectile_LOne</defName>
+    <label>beast X-slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.0</drawSize>
+      <shaderParameters>
+        <_Color>(77, 153, 230, 255)</_Color>
+        <_brightnessMultiplier>1.3</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Beast_Breathing_Damage</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationBase>0.20</armorPenetrationBase>
+      <ExplosionRadius>1.4</ExplosionRadius>
+      <stoppingPower>1.1</stoppingPower>
+      <ExplosionEffect>BeastBreathingExplosionEffect</ExplosionEffect>
+      <speed>28</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>4</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(77, 153, 230, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Beast_Projectile_Mote</TrailMote>
+        <MoteInterval>0.20</MoteInterval>
+        <MoteDuration>32</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Beast_Breathing_SecondFang_Projectile_LTwo</defName>
+    <label>beast X-slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.3</drawSize>
+      <shaderParameters>
+        <_Color>(95, 175, 255, 255)</_Color>
+        <_brightnessMultiplier>1.45</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Beast_Breathing_Damage</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <armorPenetrationBase>0.26</armorPenetrationBase>
+      <ExplosionRadius>1.7</ExplosionRadius>
+      <stoppingPower>1.2</stoppingPower>
+      <ExplosionEffect>BeastBreathingExplosionEffect</ExplosionEffect>
+      <speed>31</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>5</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(95, 175, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Beast_Projectile_Mote</TrailMote>
+        <MoteInterval>0.17</MoteInterval>
+        <MoteDuration>36</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Beast_Breathing_SecondFang_Projectile_LThree</defName>
+    <label>beast X-slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.6</drawSize>
+      <shaderParameters>
+        <_Color>(120, 200, 255, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Beast_Breathing_Damage</damageDef>
+      <damageAmountBase>19</damageAmountBase>
+      <armorPenetrationBase>0.34</armorPenetrationBase>
+      <ExplosionRadius>2.0</ExplosionRadius>
+      <stoppingPower>1.4</stoppingPower>
+      <ExplosionEffect>BeastBreathingExplosionEffect</ExplosionEffect>
+      <speed>34</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>7</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(120, 200, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Beast_Projectile_Mote</TrailMote>
+        <MoteInterval>0.14</MoteInterval>
+        <MoteDuration>40</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Beast_Breathing_SecondFang_Projectile_LFour</defName>
+    <label>beast X-slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>2.9</drawSize>
+      <shaderParameters>
+        <_Color>(140, 215, 255, 255)</_Color>
+        <_brightnessMultiplier>1.75</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Beast_Breathing_Damage</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <armorPenetrationBase>0.44</armorPenetrationBase>
+      <ExplosionRadius>2.4</ExplosionRadius>
+      <stoppingPower>1.7</stoppingPower>
+      <ExplosionEffect>BeastBreathingExplosionEffect</ExplosionEffect>
+      <speed>37</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>9</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>22</glowRadius>
+        <glowColor>(140, 215, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Beast_Projectile_Mote</TrailMote>
+        <MoteInterval>0.11</MoteInterval>
+        <MoteDuration>46</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Beast_Breathing_SecondFang_Projectile_LFive</defName>
+    <label>beast X-slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.2</drawSize>
+      <shaderParameters>
+        <_Color>(150, 220, 255, 255)</_Color>
+        <_brightnessMultiplier>1.9</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Beast_Breathing_Damage</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <armorPenetrationBase>0.56</armorPenetrationBase>
+      <ExplosionRadius>2.8</ExplosionRadius>
+      <stoppingPower>2.0</stoppingPower>
+      <ExplosionEffect>BeastBreathingExplosionEffect</ExplosionEffect>
+      <speed>41</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>11</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>24</glowRadius>
+        <glowColor>(150, 220, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Beast_Projectile_Mote</TrailMote>
+        <MoteInterval>0.09</MoteInterval>
+        <MoteDuration>52</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Beast_Breathing_SecondFang_Projectile_LSix</defName>
+    <label>beast X-slash</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.6</drawSize>
+      <shaderParameters>
+        <_Color>(180, 235, 255, 255)</_Color>
+        <_brightnessMultiplier>2.2</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Beast_Breathing_Damage</damageDef>
+      <damageAmountBase>38</damageAmountBase>
+      <armorPenetrationBase>0.72</armorPenetrationBase>
+      <ExplosionRadius>3.4</ExplosionRadius>
+      <stoppingPower>2.5</stoppingPower>
+      <ExplosionEffect>BeastBreathingExplosionEffect</ExplosionEffect>
+      <speed>46</speed>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>14</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>28</glowRadius>
+        <glowColor>(180, 235, 255, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Beast_Projectile_Mote</TrailMote>
+        <MoteInterval>0.07</MoteInterval>
+        <MoteDuration>62</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

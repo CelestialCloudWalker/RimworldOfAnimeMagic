@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseFleshbeast">
+    <defName>DS_EnmuTentacle_Entity_Armed</defName>
+    <label>flesh eye tendril (armed)</label>
+    <description>A writhing tendril of flesh conjured by Enmu's demon blood art. At higher mastery it has grown long whipping appendages that lash out at nearby enemies.</description>
+    <statBases>
+      <MoveSpeed>0.5</MoveSpeed>
+      <ToxicResistance>1.0</ToxicResistance>
+    </statBases>
+    <race>
+      <body>Fingerspike</body>
+      <baseBodySize>0.8</baseBodySize>
+      <lifeExpectancy>1</lifeExpectancy>
+      <hasGenders>false</hasGenders>
+      <bloodDef>Filth_Blood</bloodDef>
+      <trainability>None</trainability>
+      <deathAction>
+        <workerClass>DeathActionWorker_SmallExplosion</workerClass>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>tendril lash</label>
+        <labelNoLocation>tendril</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <extraMeleeDamages>
+          <li>
+            <def>DS_EnmuSleepTouch_Damage</def>
+            <amount>1</amount>
+          </li>
+        </extraMeleeDamages>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>flesh whip</label>
+        <labelNoLocation>whip</labelNoLocation>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <extraMeleeDamages>
+          <li>
+            <def>DS_EnmuSleepTouch_Damage</def>
+            <amount>2</amount>
+          </li>
+        </extraMeleeDamages>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>flesh slam</label>
+        <labelNoLocation>slam</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.2</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.5</chanceFactor>
+        <extraMeleeDamages>
+          <li>
+            <def>DS_EnmuSleepTouch_Damage</def>
+            <amount>3</amount>
+          </li>
+        </extraMeleeDamages>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

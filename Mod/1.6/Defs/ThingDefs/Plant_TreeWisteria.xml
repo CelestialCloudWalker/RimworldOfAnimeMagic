@@ -50,6 +50,19 @@
       <leaflessGraphicPath>Wisteria/WisteriaB</leaflessGraphicPath>
     </plant>
     <comps>
+      <li Class="AnimeArsenal.CompProperties_AuraPulse">
+        <intervalTicks>120</intervalTicks>
+        <radius>9</radius>
+        <hediffDef>WisteriaToxin_Hediff</hediffDef>
+        <severityPerPulse>0.02</severityPerPulse>
+        <maxSeverity>1.0</maxSeverity>
+        <affectAllies>true</affectAllies>
+        <affectNeutrals>true</affectNeutrals>
+        <affectDowned>true</affectDowned>
+        <requiredGenes>
+          <li>BloodDemonArt</li>
+        </requiredGenes>
+      </li>
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal>
       </li>

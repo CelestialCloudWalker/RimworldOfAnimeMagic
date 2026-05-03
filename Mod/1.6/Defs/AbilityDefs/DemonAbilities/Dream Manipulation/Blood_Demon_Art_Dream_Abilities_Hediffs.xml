@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>NightmareTrauma</defName>
+    <label>nightmare trauma</label>
+    <description>Psychological trauma from experiencing nightmares.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.2</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <label>mild</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <label>severe</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>PleasantDream</defName>
+    <label>pleasant dream afterglow</label>
+    <description>A lingering sense of peace and warmth from a beautiful dream. The mind feels clear and the body moves with ease.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.9, 0.5)</defaultLabelColor>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.3</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.08</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.05</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DreamBliss</defName>
+    <label>dream bliss</label>
+    <description>A state of well-being from pleasant dreams.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.8, 0.4)</defaultLabelColor>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.3</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.10</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MemoryConfusion</defName>
+    <label>memory confusion</label>
+    <description>Confusion and disorientation from having memories extracted.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 0.8)</defaultLabelColor>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.25</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MemoryDisorientation</defName>
+    <label>memory disorientation</label>
+    <description>Disorientation from having false memories implanted.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.6, 0.8)</defaultLabelColor>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.15</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.08</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>MemoryConfusion_L3</defName>
+    <label>deep memory confusion</label>
+    <description>Severe confusion from having deeper memories extracted. The mind struggles to form coherent thoughts.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <initialSeverity>0.6</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.20</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.18</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MemoryConfusion_L5</defName>
+    <label>total memory confusion</label>
+    <description>Near-total confusion from catastrophic memory extraction. The victim can barely function.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.4, 1.0)</defaultLabelColor>
+    <initialSeverity>0.7</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.15</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MemoryDisorientation_L3</defName>
+    <label>deep memory disorientation</label>
+    <description>Severe disorientation from deep false memory implantation. The victim can barely distinguish their real memories from fabricated ones.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.5, 0.9)</defaultLabelColor>
+    <initialSeverity>0.6</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.12</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.18</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.12</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MemoryDisorientation_L5</defName>
+    <label>total memory disorientation</label>
+    <description>Total disorientation from masterful false memory implantation. The victim has lost the ability to trust their own mind.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.4, 1.0)</defaultLabelColor>
+    <initialSeverity>0.7</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.09</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.22</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DreamBliss_L3</defName>
+    <label>deep dream bliss</label>
+    <description>A profound sense of well-being from vivid pleasant dreams.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.85, 0.5)</defaultLabelColor>
+    <initialSeverity>0.6</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.25</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.14</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.08</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.08</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DreamBliss_L5</defName>
+    <label>transcendent dream bliss</label>
+    <description>An almost supernatural sense of well-being from dreams that felt more real than waking life.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 1.0, 0.6)</defaultLabelColor>
+    <initialSeverity>0.7</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.20</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.18</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.10</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.12</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FleshHands_Hediff_L1</defName>
+    <label>flesh hands</label>
+    <description>Flesh hands have erupted from the ground and seized this pawn. They cannot move and are slowly being crushed.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.25, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>4</damageAmount>
+        <intervalTicks>1</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FleshHands_Hediff_L2</defName>
+    <label>flesh hands</label>
+    <description>Flesh hands have erupted from the ground and seized this pawn. They cannot move and are slowly being crushed.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.25, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>5</damageAmount>
+        <intervalTicks>1</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FleshHands_Hediff_L3</defName>
+    <label>flesh hands</label>
+    <description>Flesh hands have erupted from the ground and seized this pawn. They cannot move and are slowly being crushed.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.25, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1100</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>6</damageAmount>
+        <intervalTicks>1</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FleshHands_Hediff_L4</defName>
+    <label>flesh hands</label>
+    <description>Flesh hands have erupted from the ground and seized this pawn. They cannot move and are slowly being crushed.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.25, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>8</damageAmount>
+        <intervalTicks>1</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FleshHands_Hediff_L5</defName>
+    <label>flesh hands</label>
+    <description>Flesh hands have erupted from the ground and seized this pawn. They cannot move and are slowly being crushed. The pressure numbs the mind.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.25, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1700</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>10</damageAmount>
+        <intervalTicks>1</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_FleshHands_Hediff_L6</defName>
+    <label>flesh hands</label>
+    <description>Flesh hands have erupted from the ground and seized this pawn. They cannot move and are slowly being crushed. The pressure numbs the mind entirely.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.25, 0.3)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2200</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_DamagePerInterval">
+        <damageAmount>13</damageAmount>
+        <intervalTicks>1</intervalTicks>
+        <damageDef>Blunt</damageDef>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>DS_SweetDreams_Buff_L1</defName>
+    <label>sweet dreams</label>
+    <description>A lingering warmth from blissful sleep granted by Enmu's dream art. The mind and body feel refreshed.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.88, 0.5)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.10</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_SweetDreams_Buff_L3</defName>
+    <label>sweet dreams</label>
+    <description>A lingering warmth from blissful sleep granted by Enmu's dream art. The mind and body feel refreshed.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.88, 0.5)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_SweetDreams_Buff_L4</defName>
+    <label>sweet dreams</label>
+    <description>A lingering warmth from blissful sleep granted by Enmu's dream art. The mind and body feel deeply refreshed.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.88, 0.5)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.20</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_SweetDreams_Buff_L6</defName>
+    <label>sweet dreams</label>
+    <description>A lingering warmth from blissful sleep granted by Enmu's dream art. The mind and body feel completely restored.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.88, 0.5)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>WoOUM_Disorientation</defName>
+    <label>disorientation</label>
+    <description>The mind has been lulled by dream-laced whispers. Thoughts scatter and focus slips away.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.55, 0.45, 0.75)</defaultLabelColor>
+    <initialSeverity>0.1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.5</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <label>mild</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.40</minSeverity>
+        <label>moderate</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.70</minSeverity>
+        <label>severe</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>WoOUM_Disorientation_Nightmare</defName>
+    <label>nightmare disorientation</label>
+    <description>Waking nightmares shred the mind's coherence. The victim can barely distinguish reality from dream.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.35, 0.10, 0.55)</defaultLabelColor>
+    <initialSeverity>0.3</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.35</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <label>waking nightmare</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>DS_EnmuTentacle_Lifespan_L1</defName>
+    <label>flesh tendril lifespan</label>
+    <description>This tendril will dissolve after its duration ends.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.15, 0.25)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_AddHediffAOEPerInterval">
+        <hediff>DS_EnmuSleepTouch</hediff>
+        <radius>8</radius>
+        <intervalTicks>120</intervalTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EnmuTentacle_Lifespan_L2</defName>
+    <label>flesh tendril lifespan</label>
+    <description>This tendril will dissolve after its duration ends.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.15, 0.25)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_AddHediffAOEPerInterval">
+        <hediff>DS_EnmuSleepTouch</hediff>
+        <radius>8</radius>
+        <intervalTicks>120</intervalTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EnmuTentacle_Lifespan_L3</defName>
+    <label>flesh tendril lifespan</label>
+    <description>This tendril will dissolve after its duration ends.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.15, 0.25)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_AddHediffAOEPerInterval">
+        <hediff>DS_EnmuSleepTouch</hediff>
+        <radius>10</radius>
+        <intervalTicks>120</intervalTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EnmuTentacle_Lifespan_L4</defName>
+    <label>flesh tendril lifespan</label>
+    <description>This tendril will dissolve after its duration ends.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.15, 0.25)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_AddHediffAOEPerInterval">
+        <hediff>DS_EnmuSleepTouch</hediff>
+        <radius>10</radius>
+        <intervalTicks>90</intervalTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EnmuTentacle_Lifespan_L5</defName>
+    <label>flesh tendril lifespan</label>
+    <description>This tendril will dissolve after its duration ends.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.15, 0.25)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_AddHediffAOEPerInterval">
+        <hediff>DS_EnmuSleepTouch</hediff>
+        <radius>10</radius>
+        <intervalTicks>90</intervalTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EnmuTentacle_Lifespan_L6</defName>
+    <label>flesh tendril lifespan</label>
+    <description>This tendril will dissolve after its duration ends.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.15, 0.25)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="EMF.HediffCompProperties_AddHediffAOEPerInterval">
+        <hediff>DS_EnmuSleepTouch</hediff>
+        <radius>12</radius>
+        <intervalTicks>90</intervalTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

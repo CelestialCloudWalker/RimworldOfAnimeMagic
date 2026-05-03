@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Nezuko_DemonicTransformation</defName>
+    <label>Demonic Transformation</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Nezuko's demon blood surges to the surface. Her body grows, her strength multiplies, and regeneration accelerates dramatically.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>6000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+        <hediffDef>DS_Nezuko_DemonicTransformation_L1</hediffDef>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Toggle. Regen +200%, melee damage +10%, resistance +10%. Flowery tattoo overlay.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.917</cooldownMultiplier>
+        <resourceCostMultiplier>1.071</resourceCostMultiplier>
+        <description>Regen +250%, damage +10%, resistance +10%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_DemonicTransformation_L2</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.833</cooldownMultiplier>
+        <resourceCostMultiplier>1.143</resourceCostMultiplier>
+        <description>Regen +250%, damage +15%, resistance +10%. Tattoo overlay enhanced.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_DemonicTransformation_L3</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.750</cooldownMultiplier>
+        <resourceCostMultiplier>1.214</resourceCostMultiplier>
+        <description>Regen +250%, damage +15%, resistance +15%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_DemonicTransformation_L4</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.667</cooldownMultiplier>
+        <resourceCostMultiplier>1.286</resourceCostMultiplier>
+        <description>Regen +400%, damage +20%, resistance +15%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_DemonicTransformation_L5</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.583</cooldownMultiplier>
+        <resourceCostMultiplier>1.357</resourceCostMultiplier>
+        <description>Perfected. All stats x1.1 from L5. Regen +440%, damage +22%, resistance +16.5%. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_ToggleHediff">
+            <hediffDef>DS_Nezuko_DemonicTransformation_L6</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

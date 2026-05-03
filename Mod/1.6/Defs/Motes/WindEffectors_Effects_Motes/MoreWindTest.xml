@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_BladeSpinSteady</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.0</fadeInTime>
+      <solidTime>0.12</solidTime>
+      <fadeOutTime>0.08</fadeOutTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.82, 1.0, 0.78, 0.85)</color>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_BladeSpinGrow</defName>
+    <thingClass>MoteThrown</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.05</fadeInTime>
+      <solidTime>0.1</solidTime>
+      <fadeOutTime>0.55</fadeOutTime>
+      <growthRate>6.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.82, 1.0, 0.78, 0.9)</color>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_BladeSpinAmbient</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <moteDef>RimKetsu_Mote_BladeSpinSteady</moteDef>
+        <chancePerTick>1.0</chancePerTick>
+        <scale>1.0~1.0</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_WindSlice</fleckDef>
+        <chancePerTick>0.06</chancePerTick>
+        <positionRadius>0.5</positionRadius>
+        <speed>1.2~2.8</speed>
+        <scale>0.1~0.22</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_BladeSpinBurst</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_BladeSpinGrow</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.8~1.2</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_BladeSpinGrow</moteDef>
+        <burstCount>1~2</burstCount>
+        <scale>0.4~0.65</scale>
+        <positionRadius>0.15</positionRadius>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_WindAirPuff</fleckDef>
+        <burstCount>5~9</burstCount>
+        <speed>0.8~1.8</speed>
+        <scale>0.6~1.2</scale>
+        <positionRadius>0.3</positionRadius>
+        <angle>0~360</angle>
+        <color>(0.82, 1.0, 0.78, 0.65)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_BladeSpinAmbient_Clean</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <moteDef>RimKetsu_Mote_BladeSpinSteady</moteDef>
+        <chancePerTick>1.0</chancePerTick>
+        <scale>1.0~1.0</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_BladeSpinBurstA</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_BladeSpinGrow</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.8~1.2</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_BladeRingSpin</defName>
+    <thingClass>MoteThrown</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.02</fadeInTime>
+      <solidTime>0.08</solidTime>
+      <fadeOutTime>0.35</fadeOutTime>
+      <growthRate>0.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.82, 1.0, 0.78, 0.9)</color>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_BladeRingSpinGrow</defName>
+    <thingClass>MoteThrown</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.02</fadeInTime>
+      <solidTime>0.08</solidTime>
+      <fadeOutTime>0.55</fadeOutTime>
+      <growthRate>5.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Animations/1024BLUR</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.82, 1.0, 0.78, 0.9)</color>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_BladeSpinBurst_Spin</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_BladeRingSpin</moteDef>
+        <burstCount>6~8</burstCount>
+        <speed>1.5~2.5</speed>
+        <scale>0.7~1.0</scale>
+        <angle>0~360</angle>
+        <positionRadius>0.1</positionRadius>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_BladeSpinBurst_SpinGrow</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_BladeRingSpinGrow</moteDef>
+        <burstCount>6~8</burstCount>
+        <speed>1.5~3.0</speed>
+        <scale>0.7~1.2</scale>
+        <angle>0~360</angle>
+        <positionRadius>0.1</positionRadius>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+</Defs>

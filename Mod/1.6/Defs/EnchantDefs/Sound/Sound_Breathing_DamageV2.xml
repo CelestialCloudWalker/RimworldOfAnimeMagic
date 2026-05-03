@@ -1,52 +1,123 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Sound_Breathing_Damage</defName>
     <label>sonic blast</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} was shattered by sound waves.</deathMessage>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <makesBlood>true</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <deathMessage>{0} was shattered apart by devastating sound waves.</deathMessage>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <defaultStoppingPower>0.7</defaultStoppingPower>
+    <stabChanceOfForcedInternal>0.10</stabChanceOfForcedInternal>
     <hediff>RipplesOfSound</hediff>
     <hediffSkin>RipplesOfSound</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Blunt</armorCategory>
     <impactSoundType>Blunt</impactSoundType>
-    <harmsHealth>true</harmsHealth>
-    <isExplosive>true</isExplosive>
-    <explosionColorCenter>(0.9, 0.9, 1.0)</explosionColorCenter>
-    <explosionColorEdge>(0.7, 0.8, 1.0)</explosionColorEdge>
-    <soundExplosion>Thunder_OnMap</soundExplosion>
-    <causeStun>true</causeStun>
-    <constantStunDurationTicks>600</constantStunDurationTicks>
-    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <minDamageToFragment>10</minDamageToFragment>
+    <defaultDamage>10</defaultDamage>
+    <defaultArmorPenetration>0.2</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0.25</overkillPctToDestroyPart>
+    <bluntInnerHitChance>0.4</bluntInnerHitChance>
+    <bluntInnerHitDamageFractionToConvert>0.1~0.3</bluntInnerHitDamageFractionToConvert>
+    <bluntInnerHitDamageFractionToAdd>0.05~0.15</bluntInnerHitDamageFractionToAdd>
+    <bluntStunDuration>1.5</bluntStunDuration>
+    <additionalHediffs>
+      <li>
+        <hediff>HearingLoss</hediff>
+        <severityPerDamageDealt>0.07</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>1.2</buildingDamageFactor>
+    <plantDamageFactor>0.8</plantDamageFactor>
+    <corpseDamageFactor>1.0</corpseDamageFactor>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>RipplesOfSound</defName>
     <label>sonic blast</label>
     <labelNoun>a sonic blast</labelNoun>
-    <description>Tissue battered by sound waves. Severe concussive trauma.</description>
+    <description>Tissue battered by concentrated sound waves. Severe concussive trauma that rattles bone and bursts vessels.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
         <labelTendedWellInner>treated</labelTendedWellInner>
         <labelSolidTendedWell>set</labelSolidTendedWell>
-        <severityPerDayTended>-0.75</severityPerDayTended>
+        <severityPerDayTended>-0.50</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
-        <infectionChance>0.25</infectionChance>
+        <infectionChance>0.20</infectionChance>
       </li>
       <li Class="HediffCompProperties_GetsPermanent">
         <permanentLabel>sonic blast scar</permanentLabel>
       </li>
     </comps>
+    <stages>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.06</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.14</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.12</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.18</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
     <injuryProps>
       <painPerSeverity>0.045</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
       <bleedRate>0.05</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Shattered</destroyedLabel>
-      <destroyedOutLabel>Blown apart</destroyedOutLabel>
+      <destroyedLabel>shattered</destroyedLabel>
+      <destroyedOutLabel>blown apart</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
 </Defs>

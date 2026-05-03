@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Beast_Breathing_EighthForm_ExplosiveRush</defName>
+    <label>Beast Breathing: Eighth Form — Explosive Rush</label>
+    <description>The user explodes forward at blinding speed, crashing through everything in their path. Before the charge begins, the body moves faster than incoming fire can track — attacks glance off as the rush tears through. Raw, savage, unstoppable momentum.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>620</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>460</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>36</resourceCost>
+    <baseExperienceGain>22</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>16</range>
+      <warmupTime>0.3</warmupTime>
+      <noiseRadius>3</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>BeastBreathing_ExplosiveRush_Deflect_LOne</hediffDef>
+        <applyToTarget>false</applyToTarget>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>2</rectWidth>
+        <rectLength>16</rectLength>
+        <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+        <damageType>Beast_Breathing_Damage</damageType>
+        <damageAmount>22</damageAmount>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Explosive charge through enemies for 22 damage across a 16-tile path. Deflects up to 6 shots during the rush.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>160</experienceRequired>
+        <resourceCostMultiplier>1.14</resourceCostMultiplier>
+        <rangeMultiplier>1.12</rangeMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>28 damage per target. Path extends. Deflects up to 8 shots.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_ExplosiveRush_Deflect_LTwo</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>18</rectLength>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <damageAmount>28</damageAmount>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>360</experienceRequired>
+        <resourceCostMultiplier>1.26</resourceCostMultiplier>
+        <rangeMultiplier>1.22</rangeMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>35 damage per target. Path widens slightly. Deflects up to 10 shots.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_ExplosiveRush_Deflect_LThree</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>2</rectWidth>
+            <rectLength>20</rectLength>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <damageAmount>35</damageAmount>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <resourceCostMultiplier>1.36</resourceCostMultiplier>
+        <rangeMultiplier>1.32</rangeMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>43 damage per target. Path widens to 3 tiles. Deflects up to 13 shots. The rush is nearly impossible to stop.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_ExplosiveRush_Deflect_LFour</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>3</rectWidth>
+            <rectLength>21</rectLength>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <damageAmount>43</damageAmount>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>890</experienceRequired>
+        <resourceCostMultiplier>1.46</resourceCostMultiplier>
+        <rangeMultiplier>1.40</rangeMultiplier>
+        <cooldownMultiplier>0.78</cooldownMultiplier>
+        <description>52 damage per target. Long path, wide sweep. Deflects up to 16 shots. Anything in the way gets carved through.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_ExplosiveRush_Deflect_LFive</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>3</rectWidth>
+            <rectLength>22</rectLength>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <damageAmount>52</damageAmount>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1300</experienceRequired>
+        <resourceCostMultiplier>1.54</resourceCostMultiplier>
+        <rangeMultiplier>1.48</rangeMultiplier>
+        <cooldownMultiplier>0.75</cooldownMultiplier>
+        <description>Perfected. 63 damage per target across a wide, extended path. Deflects up to 20 shots during the charge. An unstoppable wall of speed and steel. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BeastBreathing_ExplosiveRush_Deflect_LSix</hediffDef>
+            <applyToTarget>false</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityForwardDash" />
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>3</rectWidth>
+            <rectLength>24</rectLength>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+            <damageType>Beast_Breathing_Damage</damageType>
+            <damageAmount>63</damageAmount>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

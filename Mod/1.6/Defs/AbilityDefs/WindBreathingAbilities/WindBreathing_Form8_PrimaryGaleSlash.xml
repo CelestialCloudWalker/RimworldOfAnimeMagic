@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>WindBreathing_Form8_PrimaryGaleSlash</defName>
+    <label>Eighth Form: Primary Gale Slash</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>The pinnacle of Wind Breathing's offensive forms. The user releases a massive fan of piercing wind slashes that tear through everything in their path, leaving behind howling gale zones that shred any who dare to stand in them.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>210</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>45</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>22</range>
+      <warmupTime>0.8</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+        <projectileDef>WindForm8_Slash_Projectile_LOne</projectileDef>
+        <projectileCount>3</projectileCount>
+        <spreadAngle>25</spreadAngle>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Releases three piercing wind slashes in a wide fan. Each slash leaves a brief gale zone on impact.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <cooldownMultiplier>0.95</cooldownMultiplier>
+        <description>Four slashes tear outward. The gale zones linger longer and bite harder.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>WindForm8_Slash_Projectile_LTwo</projectileDef>
+            <projectileCount>4</projectileCount>
+            <spreadAngle>30</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>450</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Five slashes sweep across a devastating arc. Gale zones now cover a broader area.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>WindForm8_Slash_Projectile_LThree</projectileDef>
+            <projectileCount>5</projectileCount>
+            <spreadAngle>35</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <cooldownMultiplier>0.88</cooldownMultiplier>
+        <description>The technique grows more efficient. Each slash hits with greater force and the gale zones intensify.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>WindForm8_Slash_Projectile_LFour</projectileDef>
+            <projectileCount>5</projectileCount>
+            <spreadAngle>35</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Six slashes of pure wind fury. The gale zones become walls of storm that punish any movement through them.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>WindForm8_Slash_Projectile_LFive</projectileDef>
+            <projectileCount>6</projectileCount>
+            <spreadAngle>40</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1600</experienceRequired>
+        <resourceCostMultiplier>1.05</resourceCostMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. Seven massive gale slashes consume the horizon. Nothing survives the storm. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>WindForm8_Slash_Projectile_LSix</projectileDef>
+            <projectileCount>7</projectileCount>
+            <spreadAngle>45</spreadAngle>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

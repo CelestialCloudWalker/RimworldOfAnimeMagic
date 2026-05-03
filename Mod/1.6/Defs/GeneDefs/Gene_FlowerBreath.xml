@@ -1,159 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_FlowerBreath</defName>
     <label>Flower Breath</label>
     <prerequisite>Gene_BreathingPotential</prerequisite>
-    <resourceName>Flower Breath</resourceName>
     <description>Flower Breathing Gene.</description>
     <iconPath>UI/Icons/Genes/flower</iconPath>
     <resourceLabel>Flower Breath</resourceLabel>
     <resourceDescription>Current stored Breath.</resourceDescription>
-    <TalentTrees>
-      <li>Flower_BreathingStyleBlankTree</li>
-    </TalentTrees>
-    <experienceFormula>Basic_LinearXP</experienceFormula>
-    <experienceGainSettings>
-      <experienceTypes>
-        <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>5</baseXP>
-          <damageFactor>0.1</damageFactor>
-        </li>
-        <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>14</baseXP>
-          <damageFactor>0.18</damageFactor>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Melee</SkillDef>
-          <baseXP>3</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Artistic</SkillDef>
-          <baseXP>3.5</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Plants</SkillDef>
-          <baseXP>2.5</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Social</SkillDef>
-          <baseXP>2</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Medicine</SkillDef>
-          <baseXP>1.5</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>AttackMelee</SkillDef>
-          <baseXP>16</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>ViewArt</SkillDef>
-          <baseXP>12</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>DoBill</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Harvest</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>HarvestDesignated</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Sow</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>PlantSeed</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>SocialRelax</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Dance</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Play_MusicalInstrument</SkillDef>
-          <baseXP>12</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>MarryAdjacentPawn</SkillDef>
-          <baseXP>25</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>SpectateCeremony</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>StandAndBeSociallyActive</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>GotoAndBeSociallyActive</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>TryRomance</SkillDef>
-          <baseXP>16</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Rescue</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>OfferHelp</SkillDef>
-          <baseXP>12</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>TradeWithPawn</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>PrisonerAttemptRecruit</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>PrisonerConvert</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>SlaveEmancipation</SkillDef>
-          <baseXP>16</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Breastfeed</SkillDef>
-          <baseXP>12</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>BottleFeedBaby</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>BringBabyToSafety</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>TendPatient</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>VisitSickPawn</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Lovin</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-      </experienceTypes>
-    </experienceGainSettings>
+    <styleBarColor>(1.0, 0.714, 0.757)</styleBarColor>
+    <regenTicks>FlowerBreath_RegenTicks</regenTicks>
+    <regenStat>FlowerBreath_RegenAmount</regenStat>
+    <regenSpeedStat>FlowerBreath_RegenRate</regenSpeedStat>
+    <costMult>FlowerBreath_Cost</costMult>
+    <maxStat>FlowerBreath</maxStat>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <exhaustionPerTick>0.0004</exhaustionPerTick>
+    <exhaustionHediff>FlowerBreathing_Fatigue</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2500</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1750</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3000</exhausationCooldownTicks>
 
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
@@ -171,7 +37,23 @@
         <applyOnGeneRemove>false</applyOnGeneRemove>
       </li>
       <li Class="DeathTimerExtension">
-        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <hediffsToWatch>
+          <li>BreathingMarkApply</li>
+          <li>BreathingMarkApplyMastery</li>
+          <li>BreathingMarkApplyTranscendence</li>
+          <li>BreathingMarkApplyTanjiro</li>
+          <li>BreathingMarkApplyTanjiroMastery</li>
+          <li>BreathingMarkApplyTanjiroTranscendence</li>
+          <li>BreathingMarkApplySanemi</li>
+          <li>BreathingMarkApplySanemiMastery</li>
+          <li>BreathingMarkApplySanemiTranscendence</li>
+          <li>BreathingMarkApplyMuichiro</li>
+          <li>BreathingMarkApplyMuichiroMastery</li>
+          <li>BreathingMarkApplyMuichiroTranscendence</li>
+          <li>BreathingMarkApplyGiyu</li>
+          <li>BreathingMarkApplyGiyuMastery</li>
+          <li>BreathingMarkApplyGiyuTranscendence</li>
+        </hediffsToWatch>
         <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
         <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
         <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>
@@ -186,30 +68,18 @@
         <createCurseHediff>true</createCurseHediff>
         <activateOnGeneAdd>false</activateOnGeneAdd>
       </li>
+      <li Class="AnimeArsenal.BreathingProgressionExtension">
+        <killsRequiredPerLevel><li>5</li><li>15</li><li>30</li><li>60</li></killsRequiredPerLevel>
+        <demonKillsRequiredPerLevel><li>2</li><li>8</li><li>20</li><li>40</li></demonKillsRequiredPerLevel>
+        <levelUpMode>AnyPawn</levelUpMode>
+        <breathRestoredPerKill>10</breathRestoredPerKill>
+        <breathRestoredPerDemonKill>25</breathRestoredPerDemonKill>
+        <killsRequiredForSpecialization>30</killsRequiredForSpecialization>
+        <demonKillsRequiredForSpecialization>10</demonKillsRequiredForSpecialization>
+        <specializationUnlockMode>AnyPawn</specializationUnlockMode>
+        <unlockSpecializationsProgressively>false</unlockSpecializationsProgressively>
+        <abilityUnlocks/>
+      </li>
     </modExtensions>
-    <maxStat>FlowerBreath</maxStat>
-    <biostatCpx>2</biostatCpx>
-    <biostatMet>1</biostatMet>
-    <resourceGizmoThresholds>
-      <li>0.25</li>
-      <li>0.5</li>
-      <li>0.75</li>
-    </resourceGizmoThresholds>
-    <displayCategory>BreathingTechnique</displayCategory>
-    <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(255, 182, 193)</barColor>
-    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <exhaustionPerTick>0.0005</exhaustionPerTick>
-    <exhaustionHediff>FlowerBreathing_Fatigue</exhaustionHediff>
-    <ticksBeforeExhaustionStart>2200</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1600</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>3500</exhausationCooldownTicks>
-    <TabLabel>Talents</TabLabel>
-    <regenTicks>FlowerBreath_RegenTicks</regenTicks>
-    <regenStat>FlowerBreath_RegenAmount</regenStat>
-    <regenSpeedStat>FlowerBreath_RegenRate</regenSpeedStat>
-    <costMult>FlowerBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
-
-
 </Defs>

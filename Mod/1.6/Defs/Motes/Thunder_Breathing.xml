@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Static">
+    <defName>RimKetsu_Fleck_ThunderSparkFlash</defName>
+    <graphicData>
+      <texPath>Things/Mote/ExplosionFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(1.0, 0.98, 0.35, 0.9)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.04</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="RimKetsu_FleckBase_Thrown">
+    <defName>RimKetsu_Fleck_LightningBolt</defName>
+    <graphicData>
+      <texPath>Things/Mote/LongSparkThrown</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(1.0, 0.98, 0.5, 1.0)</color>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <fadeInTime>0.01</fadeInTime>
+    <solidTime>0.03</solidTime>
+    <fadeOutTime>0.18</fadeOutTime>
+  </FleckDef>
+
+  <ThingDef ParentName="RimKetsu_MoteAttachedBase">
+    <defName>RimKetsu_Mote_ThunderBreathingAura</defName>
+    <mote>
+      <fadeInTime>0.2</fadeInTime>
+      <solidTime>999999</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_PawnBodySilhouette</graphicClass>
+      <color>(1.0, 0.95, 0.2, 0.8)</color>
+      <shaderType>MoteMultiplyAddScroll</shaderType>
+      <texPath>Things/Mote/Transparent</texPath>
+      <shaderParameters>
+        <_MultiplyTexA>/Things/Mote/Cloudy_B</_MultiplyTexA>
+        <_MultiplyTexB>/Things/Mote/Cloudy_C</_MultiplyTexB>
+        <_DetailTex>/Things/Mote/Speckles</_DetailTex>
+        <_detailIntensity>2.0</_detailIntensity>
+        <_texAScale>0.6</_texAScale>
+        <_texBScale>0.5</_texBScale>
+        <_DetailScale>1.5</_DetailScale>
+        <_texAScrollSpeed>(0, 0.5, 0)</_texAScrollSpeed>
+        <_texBScrollSpeed>(0.4, 0, 0)</_texBScrollSpeed>
+        <_detailScrollSpeed>(0.4, 0.4, 0)</_detailScrollSpeed>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_ThunderAfterimage</defName>
+    <thingClass>MoteThrown</thingClass>
+    <altitudeLayer>MoteOverheadLow</altitudeLayer>
+    <mote>
+      <fadeInTime>0.01</fadeInTime>
+      <solidTime>0.04</solidTime>
+      <fadeOutTime>0.3</fadeOutTime>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(1.0, 1.0, 0.4, 0.6)</color>
+      <shaderType>MoteGlow</shaderType>
+      <texPath>Things/Mote/BrightFlash</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_ThunderShockwave</defName>
+    <thingClass>Mote</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.02</fadeInTime>
+      <solidTime>0.0</solidTime>
+      <fadeOutTime>0.35</fadeOutTime>
+      <growthRate>14.0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/RadiationDistortion_A</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <color>(1.0, 0.95, 0.3, 1.0)</color>
+      <shaderType>MoteMultiplyAddCircularGrayscale</shaderType>
+      <shaderParameters>
+        <_MultiplyTex>/Things/Mote/RadiationDistortion_B</_MultiplyTex>
+        <_texAScale>0.2</_texAScale>
+        <_texBScale>0.2</_texBScale>
+        <_texAScrollSpeed>3.0</_texAScrollSpeed>
+        <_texBScrollSpeed>-2.0</_texBScrollSpeed>
+        <_Intensity>15</_Intensity>
+      </shaderParameters>
+      <drawSize>(1.2, 1.2)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_ThunderBreathingAmbient</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_LightningBolt</fleckDef>
+        <chancePerTick>0.15</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>1.0~3.0</speed>
+        <scale>0.15~0.35</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_ThunderSparkFlash</fleckDef>
+        <chancePerTick>0.04</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <scale>0.8~1.8</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_Exhaustion_Thunder</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_ThunderSparkFlash</fleckDef>
+        <chancePerTick>0.02</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <scale>0.3~0.6</scale>
+        <color>(0.7, 0.65, 0.15, 0.4)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_EnchantAmbient_Thunder</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_LightningBolt</fleckDef>
+        <chancePerTick>0.30</chancePerTick>
+        <positionRadius>0.45</positionRadius>
+        <speed>1.5~4.0</speed>
+        <scale>0.22~0.5</scale>
+        <angle>0~360</angle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_ThunderSparkFlash</fleckDef>
+        <chancePerTick>0.12</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <scale>1.2~2.5</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_ThunderBreathingHit</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_ThunderShockwave</moteDef>
+        <burstCount>1~1</burstCount>
+        <scale>0.8~1.2</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.05</positionRadius>
+        <fleckDef>SparkFlash</fleckDef>
+        <burstCount>3~4</burstCount>
+        <scale>3.0~5.0</scale>
+        <color>(1.0, 0.98, 0.4, 0.9)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.05</positionRadius>
+        <moteDef>Mote_SparkThrownFast</moteDef>
+        <burstCount>10~16</burstCount>
+        <speed>4.0~8.0</speed>
+        <scale>0.12~0.22</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.3</positionRadius>
+        <fleckDef>AirPuff</fleckDef>
+        <burstCount>3~5</burstCount>
+        <speed>0.8~1.5</speed>
+        <scale>0.5~0.9</scale>
+        <color>(1.0, 1.0, 0.6, 0.5)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_ThunderGodspeedDash</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_ThunderAfterimage</moteDef>
+        <burstCount>3~5</burstCount>
+        <scale>0.8~1.2</scale>
+        <positionRadius>0.25</positionRadius>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>AirPuff</fleckDef>
+        <positionRadius>0.2</positionRadius>
+        <burstCount>6~10</burstCount>
+        <speed>1.0~2.5</speed>
+        <scale>0.4~0.8</scale>
+        <color>(1.0, 0.98, 0.5, 0.6)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>ExplosionFlash</fleckDef>
+        <burstCount>1~1</burstCount>
+        <scale>1.5~2.5</scale>
+        <color>(1.0, 1.0, 0.6, 0.5)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

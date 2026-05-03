@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_IceBreath</defName>
+    <label>Rime: Ice Breath</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Rime exhales a continuous torrent of frozen air in a directed beam. No line of sight required. Rapidly builds Hypothermia in all targets hit.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>4000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_BeamDamageInRect">
+        <damageAmount>6</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>2</rectWidth>
+        <rectLength>10</rectLength>
+        <beamWidth>2</beamWidth>
+        <beamDurationTicks>150</beamDurationTicks>
+        <damageInterval>30</damageInterval>
+        <repeatAmount>5</repeatAmount>
+        <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>Hypothermia</hediffDef>
+        <severityAdjustment>0.08</severityAdjustment>
+        <effectRadius>10</effectRadius>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Channeled beam: 6 Blunt per tick over 5 ticks. Applies Hypothermia +0.08.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.91</cooldownMultiplier>
+        <resourceCostMultiplier>1.071</resourceCostMultiplier>
+        <description>8 Blunt per tick. Hypothermia buildup increased to +0.13.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BeamDamageInRect">
+            <damageAmount>8</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>2</rectWidth>
+            <rectLength>10</rectLength>
+            <beamWidth>2</beamWidth>
+            <beamDurationTicks>150</beamDurationTicks>
+            <damageInterval>30</damageInterval>
+            <repeatAmount>5</repeatAmount>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.13</severityAdjustment>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <resourceCostMultiplier>1.143</resourceCostMultiplier>
+        <description>10 Blunt per tick. Beam width increased. Hypothermia +0.13.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BeamDamageInRect">
+            <damageAmount>10</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>3</rectWidth>
+            <rectLength>10</rectLength>
+            <beamWidth>3</beamWidth>
+            <beamDurationTicks>150</beamDurationTicks>
+            <damageInterval>30</damageInterval>
+            <repeatAmount>5</repeatAmount>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.13</severityAdjustment>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.73</cooldownMultiplier>
+        <resourceCostMultiplier>1.214</resourceCostMultiplier>
+        <description>13 Blunt per tick. 15% chance to apply Frostbite per hit. Hypothermia +0.13.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BeamDamageInRect">
+            <damageAmount>13</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>3</rectWidth>
+            <rectLength>10</rectLength>
+            <beamWidth>3</beamWidth>
+            <beamDurationTicks>150</beamDurationTicks>
+            <damageInterval>30</damageInterval>
+            <repeatAmount>5</repeatAmount>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.13</severityAdjustment>
+            <effectRadius>10</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Frostbite</hediffDef>
+            <severityAdjustment>0.2</severityAdjustment>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.64</cooldownMultiplier>
+        <resourceCostMultiplier>1.286</resourceCostMultiplier>
+        <description>16 Blunt per tick. Hypothermia doubled to +0.26. 15% Frostbite chance retained.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BeamDamageInRect">
+            <damageAmount>16</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>3</rectWidth>
+            <rectLength>10</rectLength>
+            <beamWidth>3</beamWidth>
+            <beamDurationTicks>150</beamDurationTicks>
+            <damageInterval>30</damageInterval>
+            <repeatAmount>5</repeatAmount>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.26</severityAdjustment>
+            <effectRadius>10</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Frostbite</hediffDef>
+            <severityAdjustment>0.2</severityAdjustment>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.55</cooldownMultiplier>
+        <resourceCostMultiplier>1.357</resourceCostMultiplier>
+        <description>Perfected. 20 Blunt per tick. Beam wider and longer. Hypothermia +0.26. 15% Frostbite chance. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_BeamDamageInRect">
+            <damageAmount>20</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>12</rectLength>
+            <beamWidth>4</beamWidth>
+            <beamDurationTicks>150</beamDurationTicks>
+            <damageInterval>30</damageInterval>
+            <repeatAmount>5</repeatAmount>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.26</severityAdjustment>
+            <effectRadius>12</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Frostbite</hediffDef>
+            <severityAdjustment>0.2</severityAdjustment>
+            <effectRadius>12</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

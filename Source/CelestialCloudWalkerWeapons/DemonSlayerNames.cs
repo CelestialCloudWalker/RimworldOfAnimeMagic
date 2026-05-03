@@ -156,7 +156,7 @@ namespace AnimeArsenal
                 string lastName = string.IsNullOrEmpty(forcedLastName) ?
                     DemonSlayerNameInjector.GetRandomLastName() : forcedLastName;
                 string nickName = DemonSlayerNameInjector.GetRandomNickName(pawn.gender);
-                
+
                 if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName))
                 {
                     __result = new NameTriple(firstName, nickName ?? firstName, lastName);
@@ -186,57 +186,6 @@ namespace AnimeArsenal
         {
             string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
             return $"Colony_{timestamp}";
-        }
-    }
-
-    public class AnimeArsenalSettings : ModSettings
-    {
-        public static float demonSlayerNameChance = 0.25f;
-        public static bool enableDemonSlayerNames = true;
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref demonSlayerNameChance, "demonSlayerNameChance", 0.25f);
-            Scribe_Values.Look(ref enableDemonSlayerNames, "enableDemonSlayerNames", true);
-        }
-    }
-
-    public class AnimeArsenalMod : Mod
-    {
-        private AnimeArsenalSettings settings;
-
-        public AnimeArsenalMod(ModContentPack content) : base(content)
-        {
-            this.settings = GetSettings<AnimeArsenalSettings>();
-        }
-
-        public override string SettingsCategory()
-        {
-            return "Anime Arsenal";
-        }
-
-        public override void DoSettingsWindowContents(UnityEngine.Rect inRect)
-        {
-            Listing_Standard listingStandard = new Listing_Standard();
-            listingStandard.Begin(inRect);
-
-            listingStandard.CheckboxLabeled("Enable Demon Slayer Names", ref AnimeArsenalSettings.enableDemonSlayerNames,
-                "When enabled, pawns will randomly receive Demon Slayer character names based on the frequency setting below.");
-
-            listingStandard.Gap();
-
-            listingStandard.Label($"Name Frequency: {AnimeArsenalSettings.demonSlayerNameChance:P0}");
-            AnimeArsenalSettings.demonSlayerNameChance = listingStandard.Slider(AnimeArsenalSettings.demonSlayerNameChance, 0f, 1f);
-
-            listingStandard.Gap(6f);
-
-            Text.Font = GameFont.Tiny;
-            listingStandard.Label("0% = No Demon Slayer names, 100% = Always Demon Slayer names");
-            Text.Font = GameFont.Small;
-
-            listingStandard.End();
-            base.WriteSettings();
         }
     }
 }

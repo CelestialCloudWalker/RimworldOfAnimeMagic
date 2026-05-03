@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Akaza_FlyingPlanet</defName>
+    <label>Leg Type: Flying Planet Thousand Wheels</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Strike the opponent and launch them across the battlefield like a cannonball.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>80</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1.5</range>
+      <warmupTime>0.7</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+        <effectRadius>1.5</effectRadius>
+        <maxTargets>1</maxTargets>
+        <affectCaster>false</affectCaster>
+        <affectDowned>true</affectDowned>
+        <onlyAffectHostiles>false</onlyAffectHostiles>
+        <damage>18</damage>
+        <armorPenetration>0.15</armorPenetration>
+        <flingDistance>12</flingDistance>
+        <stunHediff>PsychicShock</stunHediff>
+        <stunSeverity>0.1</stunSeverity>
+        <showMessages>true</showMessages>
+        <groundEffecter>DS_Effecter_AkazaShockwaveCast</groundEffecter>
+        <hitEffecter>DS_Effecter_AkazaShockwaveImpact</hitEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>18 Blunt damage. Launches the target 12 cells across the battlefield.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>80</experienceRequired>
+        <cooldownMultiplier>0.914</cooldownMultiplier>
+        <resourceCostMultiplier>1.033</resourceCostMultiplier>
+        <description>22 Blunt damage. Throw range increased to 14 cells.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>1.5</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>false</onlyAffectHostiles>
+            <damage>22</damage>
+            <armorPenetration>0.15</armorPenetration>
+            <flingDistance>14</flingDistance>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>0.1</stunSeverity>
+            <showMessages>true</showMessages>
+            <groundEffecter>DS_Effecter_AkazaShockwaveCast</groundEffecter>
+            <hitEffecter>DS_Effecter_AkazaShockwaveImpact</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <cooldownMultiplier>0.829</cooldownMultiplier>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <description>26 Blunt damage. Landing creates a radius-2 AoE dealing 10 Blunt.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>1.5</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>false</onlyAffectHostiles>
+            <damage>26</damage>
+            <armorPenetration>0.15</armorPenetration>
+            <flingDistance>14</flingDistance>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>0.1</stunSeverity>
+            <showMessages>true</showMessages>
+            <groundEffecter>DS_Effecter_AkazaShockwaveCast</groundEffecter>
+            <hitEffecter>DS_Effecter_AkazaShockwaveImpact</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>10</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>4</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <delayTicks>30</delayTicks>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <cooldownMultiplier>0.743</cooldownMultiplier>
+        <resourceCostMultiplier>1.167</resourceCostMultiplier>
+        <description>32 Blunt damage. Landing AoE radius increased. 15 Blunt in a wider area.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>1.5</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>false</onlyAffectHostiles>
+            <damage>32</damage>
+            <armorPenetration>0.15</armorPenetration>
+            <flingDistance>14</flingDistance>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>0.1</stunSeverity>
+            <showMessages>true</showMessages>
+            <groundEffecter>DS_Effecter_AkazaShockwaveCast</groundEffecter>
+            <hitEffecter>DS_Effecter_AkazaShockwaveImpact</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>15</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <delayTicks>30</delayTicks>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <cooldownMultiplier>0.657</cooldownMultiplier>
+        <resourceCostMultiplier>1.233</resourceCostMultiplier>
+        <description>38 Blunt damage. Landing AoE stuns all caught pawns for 120 ticks. 22 Blunt AoE damage.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>1.5</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>false</onlyAffectHostiles>
+            <damage>38</damage>
+            <armorPenetration>0.15</armorPenetration>
+            <flingDistance>14</flingDistance>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>0.1</stunSeverity>
+            <showMessages>true</showMessages>
+            <groundEffecter>DS_Effecter_AkazaShockwaveCast</groundEffecter>
+            <hitEffecter>DS_Effecter_AkazaShockwaveImpact</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>22</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <delayTicks>30</delayTicks>
+            <stunChance>1.0</stunChance>
+            <stunDuration>120</stunDuration>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>750</experienceRequired>
+        <cooldownMultiplier>0.571</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <description>Perfected. 46 Blunt damage. Throw range extended to 17 cells. 30 Blunt stun AoE on landing. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_GroundFling">
+            <effectRadius>1.5</effectRadius>
+            <maxTargets>1</maxTargets>
+            <affectCaster>false</affectCaster>
+            <affectDowned>true</affectDowned>
+            <onlyAffectHostiles>false</onlyAffectHostiles>
+            <damage>46</damage>
+            <armorPenetration>0.15</armorPenetration>
+            <flingDistance>17</flingDistance>
+            <stunHediff>PsychicShock</stunHediff>
+            <stunSeverity>0.1</stunSeverity>
+            <showMessages>true</showMessages>
+            <groundEffecter>DS_Effecter_AkazaShockwaveCast</groundEffecter>
+            <hitEffecter>DS_Effecter_AkazaShockwaveImpact</hitEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>30</damageAmount>
+            <damageType>Blunt</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>6</rectLength>
+            <useOriginAsCenter>true</useOriginAsCenter>
+            <delayTicks>30</delayTicks>
+            <stunChance>1.0</stunChance>
+            <stunDuration>120</stunDuration>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>DS_Effecter_AkazaShockwaveImpact</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

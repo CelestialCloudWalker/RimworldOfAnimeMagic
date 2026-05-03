@@ -11,11 +11,12 @@
     <degreeDatas>
       <li>
         <label>feral instincts</label>
-        <description>[PAWN_nameDef] possesses animalistic instincts that enhance [PAWN_possessive] combat prowess and connection with beasts, but make [PAWN_objective] unsuited for civilized discourse.</description>
+        <description>[PAWN_nameDef] moves and fights like a cornered animal — fast, instinct-driven, and impossible to reason with. Beasts respond to [PAWN_objective] as they would one of their own. Civilised company mostly just responds with discomfort.</description>
         <degree>1</degree>
+
         <statOffsets>
-          <MeleeHitChance>8</MeleeHitChance>
-          <MeleeDodgeChance>4</MeleeDodgeChance>
+          <MeleeHitChance>0.08</MeleeHitChance>
+          <MeleeDodgeChance>0.04</MeleeDodgeChance>
           <MoveSpeed>0.3</MoveSpeed>
           <SocialImpact>-0.25</SocialImpact>
           <NegotiationAbility>-0.4</NegotiationAbility>
@@ -25,13 +26,17 @@
           <TameAnimalChance>0.25</TameAnimalChance>
           <TrainAnimalChance>0.2</TrainAnimalChance>
         </statOffsets>
+
         <skillGains>
           <Animals>6</Animals>
           <Melee>4</Melee>
           <Social>-3</Social>
         </skillGains>
+
+        <marketValueFactorOffset>-0.05</marketValueFactorOffset>
       </li>
     </degreeDatas>
+
     <conflictingTraits>
       <li>Beauty</li>
       <li>ShootingAccuracy</li>
@@ -40,6 +45,7 @@
       <li>Violent</li>
     </requiredWorkTags>
   </TraitDef>
+
 
   <TraitDef>
     <defName>PackHunter</defName>
@@ -51,26 +57,32 @@
     <degreeDatas>
       <li>
         <label>pack hunter</label>
-        <description>[PAWN_nameDef] fights with the coordination of a pack predator. [PAWN_pronoun] excels in group combat and prefers fresh meat over cooked meals.</description>
+        <description>[PAWN_nameDef] is built for coordinated predation — reading allies, flanking instinctively, closing fast. [PAWN_pronoun] eats raw meat without complaint; [PAWN_possessive] gut handles what others' can't. Simmering something for an hour is another matter entirely.</description>
         <degree>1</degree>
+
         <statOffsets>
-          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
-          <MeleeHitChance>5</MeleeHitChance>
+          <ShootingAccuracyPawn>0.03</ShootingAccuracyPawn>
+          <MeleeHitChance>0.05</MeleeHitChance>
           <CookSpeed>-0.5</CookSpeed>
           <ButcheryFleshSpeed>0.4</ButcheryFleshSpeed>
           <ButcheryFleshEfficiency>0.2</ButcheryFleshEfficiency>
         </statOffsets>
+
         <skillGains>
           <Shooting>3</Shooting>
           <Melee>2</Melee>
-          <Cooking>-4</Cooking>
+          <Cooking>-3</Cooking>
         </skillGains>
+
         <disallowedThoughts>
           <li>AteRawFood</li>
         </disallowedThoughts>
+
+        <marketValueFactorOffset>-0.03</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>WildSenses</defName>
@@ -82,21 +94,24 @@
     <degreeDatas>
       <li>
         <label>wild senses</label>
-        <description>[PAWN_nameDef] has heightened senses like those of a wild animal. [PAWN_pronoun] can detect danger before others but requires more food to sustain [PAWN_possessive] LevelTwo metabolism.</description>
+        <description>[PAWN_nameDef] perceives the world through a sharper filter — the snap of a twig, a scent on the wind, movement at the edge of vision. [PAWN_pronoun] almost never springs a trap. The cost is metabolic: those senses burn fuel, and [PAWN_pronoun] eats accordingly.</description>
         <degree>1</degree>
         <statOffsets>
           <TrapSpringChance>-0.6</TrapSpringChance>
           <HuntingStealth>0.4</HuntingStealth>
-          <RestRateMultiplier>1.15</RestRateMultiplier>
-          <BedHungerRateFactor>1.25</BedHungerRateFactor>
+          <RestRateMultiplier>-0.1</RestRateMultiplier>
         </statOffsets>
+
         <skillGains>
           <Shooting>2</Shooting>
           <Animals>3</Animals>
         </skillGains>
+
+        <marketValueFactorOffset>0.02</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>Territorial</defName>
@@ -108,26 +123,30 @@
     <degreeDatas>
       <li>
         <label>territorial</label>
-        <description>[PAWN_nameDef] has a strong territorial instinct. [PAWN_pronoun] fights fiercely when defending [PAWN_possessive] home and builds formidable fortifications, but doesn't play well with strangers.</description>
+        <description>[PAWN_nameDef] builds walls the way other people breathe — constantly, compulsively, and better than anyone else. Cross into [PAWN_possessive] space uninvited and [PAWN_pronoun] will make you regret it. Diplomacy, recruitment, and the basic social courtesies are largely beyond [PAWN_objective].</description>
         <degree>1</degree>
+
         <statOffsets>
           <ConstructionSpeed>0.25</ConstructionSpeed>
           <ConstructSuccessChance>0.15</ConstructSuccessChance>
           <SocialImpact>-0.4</SocialImpact>
-          <MeleeHitChance>6</MeleeHitChance>
+          <MeleeHitChance>0.06</MeleeHitChance>
         </statOffsets>
+
         <skillGains>
           <Construction>4</Construction>
           <Melee>3</Melee>
           <Social>-2</Social>
         </skillGains>
-        <marketValueFactorOffset>-0.05</marketValueFactorOffset>
+        <marketValueFactorOffset>-0.10</marketValueFactorOffset>
       </li>
     </degreeDatas>
+
     <conflictingTraits>
       <li>Beauty</li>
     </conflictingTraits>
   </TraitDef>
+
 
   <TraitDef>
     <defName>PrimalRage</defName>
@@ -138,25 +157,31 @@
     <degreeDatas>
       <li>
         <label>primal rage</label>
-        <description>[PAWN_nameDef] channels primal fury when wounded. Pain only makes [PAWN_objective] more dangerous in combat, though [PAWN_possessive] wild nature makes delicate work nearly impossible.</description>
+        <description>Pain doesn't slow [PAWN_nameDef] down — it focuses [PAWN_objective]. The worse the wound, the more dangerous [PAWN_pronoun] becomes. The same wiring that makes [PAWN_objective] terrifying in a brawl makes surgery, fine crafting, and anything requiring a steady hand an exercise in frustration for everyone involved.</description>
         <degree>1</degree>
+
         <statOffsets>
           <PainShockThreshold>0.25</PainShockThreshold>
-          <MeleeHitChance>4</MeleeHitChance>
-          <MeleeDPS>0.15</MeleeDPS>
+          <MeleeHitChance>0.04</MeleeHitChance>
           <SurgerySuccessChanceFactor>-0.6</SurgerySuccessChanceFactor>
-          <FixBrokenDownBuildingSuccessChance>-0.4</FixBrokenDownBuildingSuccessChance>
           <CookSpeed>-0.5</CookSpeed>
           <GeneralLaborSpeed>-0.3</GeneralLaborSpeed>
         </statOffsets>
+
+        <statFactors>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+        </statFactors>
+
         <skillGains>
           <Melee>5</Melee>
           <Medicine>-4</Medicine>
           <Crafting>-3</Crafting>
         </skillGains>
-        <marketValueFactorOffset>-0.1</marketValueFactorOffset>
+
+        <marketValueFactorOffset>-0.10</marketValueFactorOffset>
       </li>
     </degreeDatas>
+
     <conflictingTraits>
       <li>ShootingAccuracy</li>
     </conflictingTraits>

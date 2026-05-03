@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>AA_FifthForm_StringPerformance</defName>
+    <label>Fifth Form: String Performance</label>
+    <description>Long-range rhythmic strikes pulse outward from the user, shredding every hostile in a wide radius. A perfect light show.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>55</resourceCost>
+    <baseExperienceGain>12</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StringPerformance">
+        <hediffDef>AA_StringPerformance_Hediff</hediffDef>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>~3 seconds of pulses. 12-tile radius. 6-10 damage per pulse.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>280</experienceRequired>
+        <description>Same power — unlocks the path to Level 3.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <description>Max rank. Full duration, full damage. Max level.</description>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>AA_FifthForm_StringPerformance_LightShow</defName>
+    <label>Fifth Form: String Performance (Light Show)</label>
+    <description>An eruption of rhythmic strikes laced with wisteria explosions. Each pulse detonates on every demon in range. An overwhelming spectacle of sound and destruction.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>75</resourceCost>
+    <baseExperienceGain>18</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_StringPerformance">
+        <hediffDef>AA_StringPerformance_Improved_Hediff</hediffDef>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>~5 seconds. 14-tile radius. 8-13 damage per pulse + ADB on each hit demon.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>350</experienceRequired>
+        <description>Same power — unlocks the path to Level 3.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>700</experienceRequired>
+        <description>Max rank. A perfect light show. Max level.</description>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

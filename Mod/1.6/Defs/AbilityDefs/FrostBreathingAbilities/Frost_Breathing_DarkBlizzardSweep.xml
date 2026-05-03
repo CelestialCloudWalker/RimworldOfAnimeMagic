@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Frost_Breathing_DarkBlizzardSweep</defName>
+    <label>Frost Breathing: Dark Blizzard Sweep</label>
+    <description>A low sweeping slash drives a wave of frost across the ground in a wide arc, biting into the legs of anyone caught in its path. Those struck find their steps growing heavier, their movement sluggish and stiff — the cold doesn't just wound, it roots.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>480</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>400</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>22</resourceCost>
+    <baseExperienceGain>16</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>0.35</warmupTime>
+      <noiseRadius>2</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>7</rectWidth>
+        <rectLength>4</rectLength>
+        <damageAmount>12</damageAmount>
+        <damageType>Frost_Breathing_Damage</damageType>
+        <impactEffecter>AnimeArsenal_FrostHit</impactEffecter>
+        <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+        <hediffSeverity>0.45</hediffSeverity>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+        <severityAdjustment>0.45</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>12 damage in a wide low sweep. Applies Chilled Legs — Frost Nip stage. Movement noticeably hindered.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>130</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>15 damage. Sweep widens. Chilled Legs severity increased — Frozen Stride within reach on a clean hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>8</rectWidth>
+            <rectLength>4</rectLength>
+            <damageAmount>15</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FrostHit</impactEffecter>
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <hediffSeverity>0.55</hediffSeverity>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.55</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>290</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <cooldownMultiplier>0.92</cooldownMultiplier>
+        <description>18 damage. Faster draw. Frozen Stride reliable on a direct hit. Targets visibly stumble.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>8</rectWidth>
+            <rectLength>5</rectLength>
+            <damageAmount>18</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FrostHit</impactEffecter>
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <hediffSeverity>0.65</hediffSeverity>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.65</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>490</experienceRequired>
+        <resourceCostMultiplier>1.5</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>22 damage. Extended sweep. Glacial Legs within reach — targets may barely crawl.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>9</rectWidth>
+            <rectLength>5</rectLength>
+            <damageAmount>22</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FrostHit</impactEffecter>
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <hediffSeverity>0.75</hediffSeverity>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.75</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>740</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>27 damage. Wide frost wave. Glacial Legs reliable — most targets nearly rooted on a clean sweep.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>10</rectWidth>
+            <rectLength>5</rectLength>
+            <damageAmount>27</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FrostHit</impactEffecter>
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <hediffSeverity>0.88</hediffSeverity>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>0.88</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>Perfected. 33 damage across a massive low arc. Glacial Legs guaranteed — the ground itself seems to freeze underfoot. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>11</rectWidth>
+            <rectLength>6</rectLength>
+            <damageAmount>33</damageAmount>
+            <damageType>Frost_Breathing_Damage</damageType>
+            <impactEffecter>AnimeArsenal_FrostHit</impactEffecter>
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <hediffSeverity>1.0</hediffSeverity>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

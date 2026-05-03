@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>DS_ConquerorsHaki</defName>
+    <label>Conqueror's Haki</label>
+    <description>Unleashes an overwhelming burst of supreme will, instantly knocking out all weak-willed enemies nearby. Those with strong enough will may resist.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <selfCentered>true</selfCentered>
+        <areaOfEffect>true</areaOfEffect>
+        <areaRadius>999</areaRadius>
+        <maxTargets>999</maxTargets>
+        <onlyWeakWilled>false</onlyWeakWilled>
+        <willThreshold>0.3</willThreshold>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <useSleepHediff>true</useSleepHediff>
+        <sleepSeverity>1.8</sleepSeverity>
+        <sleepDurationHours>8</sleepDurationHours>
+        <deepSleep>true</deepSleep>
+        <wakeResistance>1.0</wakeResistance>
+        <showMessage>true</showMessage>
+        <overrideMessage>{pawn} was overwhelmed by {caster}'s Conqueror's Haki!</overrideMessage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+</Defs>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Daki_LastChoice</defName>
+    <label>Last Choice</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Offer the final mercy — or curse — of demonification. The target is transformed into a demon under your influence.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>15000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>60</resourceCost>
+    <baseExperienceGain>100</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave">
+        <successChance>0.70</successChance>
+        <successChance>0.70</successChance>
+        <requiresDowned>true</requiresDowned>
+        <nearDeathHealthThreshold>0.25</nearDeathHealthThreshold>
+        <nearDeathSuccessBonus>0.20</nearDeathSuccessBonus>
+        <failureHediff>DS_ConversionTrauma</failureHediff>
+        <failureHediffSeverity>1.0</failureHediffSeverity>
+        <convertOnly>true</convertOnly>
+        <removeExistingEndogenes>true</removeExistingEndogenes>
+        <convertedXenotypeName>AA_DemonBloodArts_User</convertedXenotypeName>
+        <resourceStartPercent>0.50</resourceStartPercent>
+        <joinColony>true</joinColony>
+        <aoeRadius>5</aoeRadius>
+        <maxTargets>3</maxTargets>
+        <giveHediffsOnSuccess>
+          <li>TotalConcentrationBreathingEffect</li>
+        </giveHediffsOnSuccess>
+        <successMessage>{0} has accepted the demon blood. They are yours now.</successMessage>
+        <failureMessage>{0} rejected the demonification — their will held.</failureMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Converts target to a demon. 70% success chance. Produces a weaker demon.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>100</experienceRequired>
+        <cooldownMultiplier>0.920</cooldownMultiplier>
+        <resourceCostMultiplier>1.033</resourceCostMultiplier>
+        <description>72% success. Demon +5% stronger.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave">
+            <successChance>0.72</successChance>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>220</experienceRequired>
+        <cooldownMultiplier>0.840</cooldownMultiplier>
+        <resourceCostMultiplier>1.083</resourceCostMultiplier>
+        <description>75% success. Demon +10% stronger.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave">
+            <successChance>0.75</successChance>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <cooldownMultiplier>0.760</cooldownMultiplier>
+        <resourceCostMultiplier>1.150</resourceCostMultiplier>
+        <description>80% success (+5% conversion bonus). Demon +10% stronger.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave">
+            <successChance>0.80</successChance>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>620</experienceRequired>
+        <cooldownMultiplier>0.680</cooldownMultiplier>
+        <resourceCostMultiplier>1.233</resourceCostMultiplier>
+        <description>85% success. Demon +15% stronger.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave">
+            <successChance>0.85</successChance>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>900</experienceRequired>
+        <cooldownMultiplier>0.600</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <description>Perfected. 90% success. Demon +20% stronger. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityDemonifyWorkSlave">
+            <successChance>0.90</successChance>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

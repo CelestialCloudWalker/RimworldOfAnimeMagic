@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Flame_Breathing_Set_Your_Hearts_Ablaze</defName>
+    <label>Set Your Hearts Ablaze!</label>
+    <description>The user cries out, igniting the hearts of all nearby allies. Grants a temporary boost to manipulation and breathing potential to every ally in range, including the user.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>70</resourceCost>
+    <baseExperienceGain>10</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+        <radius>10</radius>
+        <damage>0</damage>
+        <repeatCount>1</repeatCount>
+        <hediff>Flame_Breathing_HeartsAblaze</hediff>
+        <hediffSeverity>1.0</hediffSeverity>
+        <affectCaster>true</affectCaster>
+        <onlyAffectHostiles>false</onlyAffectHostiles>
+        <effecter>AnimeArsenal_FlameJump</effecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Ignite the hearts of nearby allies. Grants a manipulation and breathing boost in a 10-cell radius.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>200</experienceRequired>
+        <resourceCostMultiplier>1.0</resourceCostMultiplier>
+        <description>The call reaches further. More allies are touched by the flame.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>14</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_HeartsAblaze</hediff>
+            <hediffSeverity>1.0</hediffSeverity>
+            <affectCaster>true</affectCaster>
+            <onlyAffectHostiles>false</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FlameJump</effecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <resourceCostMultiplier>0.9</resourceCostMultiplier>
+        <description>The fire in their hearts burns longer and brighter. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityAoEBurst">
+            <radius>18</radius>
+            <damage>0</damage>
+            <repeatCount>1</repeatCount>
+            <hediff>Flame_Breathing_HeartsAblaze</hediff>
+            <hediffSeverity>1.0</hediffSeverity>
+            <affectCaster>true</affectCaster>
+            <onlyAffectHostiles>false</onlyAffectHostiles>
+            <effecter>AnimeArsenal_FlameJump</effecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_VitalShot</defName>
+    <label>Vital Shot</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>A precisely aimed strike targeting vital organs.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>15</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <dashSpeed>2.0</dashSpeed>
+        <damageType>Cut</damageType>
+        <initialStrikeDamage>9</initialStrikeDamage>
+        <initialStrikeArmorPen>0.25</initialStrikeArmorPen>
+        <scaleStat>MeleeDamageFactor</scaleStat>
+        <additionalDamageFactorFromMeleeSkill>0.08</additionalDamageFactorFromMeleeSkill>
+        <targetVitalOrgans>true</targetVitalOrgans>
+        <vitalOrganDefNames>
+          <li>Heart</li>
+          <li>Brain</li>
+        </vitalOrganDefNames>
+        <vitalOrganDamage>14</vitalOrganDamage>
+        <vitalOrganArmorPen>0.8</vitalOrganArmorPen>
+        <stunDuration>120</stunDuration>
+        <effectRadius>0</effectRadius>
+        <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+        <requiredHediffs>
+          <li>Compass_Needle_Hedif_One</li>
+          <li>Compass_Needle_Hedif_Two</li>
+          <li>Compass_Needle_Hedif_Four</li>
+          <li>Compass_Needle_Hedif_Six</li>
+        </requiredHediffs>
+        <minimumSeverity>0</minimumSeverity>
+        <failMessage>Requires Compass Needle to be active.</failMessage>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>14 Cut damage. Strikes the Heart and Brain directly. Requires Compass Needle.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.911</cooldownMultiplier>
+        <description>17 Cut damage. Strikes the Heart and Brain directly.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>11</initialStrikeDamage>
+            <initialStrikeArmorPen>0.25</initialStrikeArmorPen>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <additionalDamageFactorFromMeleeSkill>0.08</additionalDamageFactorFromMeleeSkill>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Brain</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>17</vitalOrganDamage>
+            <vitalOrganArmorPen>0.8</vitalOrganArmorPen>
+            <stunDuration>120</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.822</cooldownMultiplier>
+        <resourceCostMultiplier>1.067</resourceCostMultiplier>
+        <description>21 Cut damage. Now also targets Spine and Neck.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>14</initialStrikeDamage>
+            <initialStrikeArmorPen>0.25</initialStrikeArmorPen>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <additionalDamageFactorFromMeleeSkill>0.08</additionalDamageFactorFromMeleeSkill>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Brain</li>
+              <li>Spine</li>
+              <li>Neck</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>21</vitalOrganDamage>
+            <vitalOrganArmorPen>0.8</vitalOrganArmorPen>
+            <stunDuration>120</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.733</cooldownMultiplier>
+        <resourceCostMultiplier>1.133</resourceCostMultiplier>
+        <description>28 Cut damage. Armor penetration increased. Targets Heart, Brain, Spine, Neck.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>18</initialStrikeDamage>
+            <initialStrikeArmorPen>0.45</initialStrikeArmorPen>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <additionalDamageFactorFromMeleeSkill>0.08</additionalDamageFactorFromMeleeSkill>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Brain</li>
+              <li>Spine</li>
+              <li>Neck</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>28</vitalOrganDamage>
+            <vitalOrganArmorPen>1.0</vitalOrganArmorPen>
+            <stunDuration>120</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.644</cooldownMultiplier>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>35 Cut damage. Now also targets Liver and Lung.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>23</initialStrikeDamage>
+            <initialStrikeArmorPen>0.45</initialStrikeArmorPen>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <additionalDamageFactorFromMeleeSkill>0.08</additionalDamageFactorFromMeleeSkill>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Brain</li>
+              <li>Spine</li>
+              <li>Neck</li>
+              <li>Liver</li>
+              <li>Lung</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>35</vitalOrganDamage>
+            <vitalOrganArmorPen>1.0</vitalOrganArmorPen>
+            <stunDuration>120</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.556</cooldownMultiplier>
+        <resourceCostMultiplier>1.267</resourceCostMultiplier>
+        <description>Perfected. 44 Cut damage. Ignores armor entirely. Strikes all major organs. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <dashSpeed>2.0</dashSpeed>
+            <damageType>Cut</damageType>
+            <initialStrikeDamage>29</initialStrikeDamage>
+            <initialStrikeArmorPen>1.0</initialStrikeArmorPen>
+            <scaleStat>MeleeDamageFactor</scaleStat>
+            <additionalDamageFactorFromMeleeSkill>0.08</additionalDamageFactorFromMeleeSkill>
+            <targetVitalOrgans>true</targetVitalOrgans>
+            <vitalOrganDefNames>
+              <li>Heart</li>
+              <li>Brain</li>
+              <li>Spine</li>
+              <li>Neck</li>
+              <li>Liver</li>
+              <li>Lung</li>
+              <li>Stomach</li>
+              <li>Kidney</li>
+            </vitalOrganDefNames>
+            <vitalOrganDamage>44</vitalOrganDamage>
+            <vitalOrganArmorPen>1.0</vitalOrganArmorPen>
+            <stunDuration>120</stunDuration>
+            <effectRadius>0</effectRadius>
+            <castEffecter>DS_Effecter_AkazaShockwaveCast</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_AkazaDestructiveDeath</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_RequiresHediff">
+            <requiredHediffs>
+              <li>Compass_Needle_Hedif_One</li>
+              <li>Compass_Needle_Hedif_Two</li>
+              <li>Compass_Needle_Hedif_Four</li>
+              <li>Compass_Needle_Hedif_Six</li>
+            </requiredHediffs>
+            <minimumSeverity>0</minimumSeverity>
+            <failMessage>Requires Compass Needle to be active.</failMessage>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

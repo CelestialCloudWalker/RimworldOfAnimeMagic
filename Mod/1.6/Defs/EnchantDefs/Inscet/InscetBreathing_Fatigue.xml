@@ -2,7 +2,7 @@
 <Defs>
   <HediffDef>
     <defName>InsectBreathing_Fatigue</defName>
-    <label>Inscet Breathing Fatigue</label>
+    <label>Insect Breathing Fatigue</label>
     <description>The strain of repeated technique use leaves the body drained and unsteady.</description>
     <displayWound>false</displayWound>
     <hediffClass>HediffWithComps</hediffClass>

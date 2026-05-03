@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AnimeArsenal.TalentedLevelingAbilityDef>
+  <EMF.LevelingResourceAbilityDef>
     <defName>Sound_Breathing_Slash</defName>
     <label>Sound Breathing: Slash</label>
-    <category>SoundBreathing_Ability_Catergory</category>
     <description>A ranged technique that sends a slash toward targets.</description>
     <iconPath>UI/Abilities/AbilityProjectile</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
-    <targetRequired>true</targetRequired>
-    <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>200</displayOrder>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-
-    <requiredGeneDefName>Gene_SoundBreath</requiredGeneDefName>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
     <resourceCost>20</resourceCost>
     <baseExperienceGain>10</baseExperienceGain>
     <showExperienceInTooltip>true</showExperienceInTooltip>
+
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>20</range>
       <warmupTime>0.5</warmupTime>
-      <soundCast>FireSpew_Resolve</soundCast>
       <targetParams>
         <canTargetPawns>true</canTargetPawns>
         <canTargetLocations>true</canTargetLocations>
@@ -33,6 +33,7 @@
         <projectileDef>Sound_Breath_Slice_Projectile</projectileDef>
       </li>
     </comps>
+
     <levels>
 
       <li>
@@ -44,10 +45,10 @@
       <li>
         <labelSuffix> (Level 2)</labelSuffix>
         <experienceRequired>100</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets.</description>
-        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
         <rangeMultiplier>1.2</rangeMultiplier>
         <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>Faster, longer-range slash.</description>
         <levelComps>
           <li Class="CompProperties_AbilityLaunchProjectile">
             <projectileDef>Sound_Breath_Slice_Projectile_LevelTwo</projectileDef>
@@ -58,10 +59,10 @@
       <li>
         <labelSuffix> (Level 3)</labelSuffix>
         <experienceRequired>250</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets.</description>
-        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
         <rangeMultiplier>1.3</rangeMultiplier>
         <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>Heavier slash with increased range.</description>
         <levelComps>
           <li Class="CompProperties_AbilityLaunchProjectile">
             <projectileDef>Sound_Breath_Slice_Projectile_LevelThree</projectileDef>
@@ -72,10 +73,10 @@
       <li>
         <labelSuffix> (Level 4)</labelSuffix>
         <experienceRequired>450</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets.</description>
-        <resourceCostMultiplier>1.6</resourceCostMultiplier>
-        <rangeMultiplier>2</rangeMultiplier>
+        <resourceCostMultiplier>2.0</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Powerful slash at extended range.</description>
         <levelComps>
           <li Class="CompProperties_AbilityLaunchProjectile">
             <projectileDef>Sound_Breath_Slice_Projectile_LevelFour</projectileDef>
@@ -86,10 +87,10 @@
       <li>
         <labelSuffix> (Level 5)</labelSuffix>
         <experienceRequired>700</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets.</description>
-        <resourceCostMultiplier>1.6</resourceCostMultiplier>
-        <rangeMultiplier>2</rangeMultiplier>
+        <resourceCostMultiplier>2.0</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Devastating slash with refined technique.</description>
         <levelComps>
           <li Class="CompProperties_AbilityLaunchProjectile">
             <projectileDef>Sound_Breath_Slice_Projectile_LevelFive</projectileDef>
@@ -100,16 +101,17 @@
       <li>
         <labelSuffix> (Level 6)</labelSuffix>
         <experienceRequired>1050</experienceRequired>
-        <description>A ranged technique that sends a slash toward targets.</description>
-        <resourceCostMultiplier>1.6</resourceCostMultiplier>
-        <rangeMultiplier>2</rangeMultiplier>
+        <resourceCostMultiplier>2.0</resourceCostMultiplier>
+        <rangeMultiplier>1.5</rangeMultiplier>
         <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. A razor slash of pure beast breathing at maximum range. Max Level.</description>
         <levelComps>
           <li Class="CompProperties_AbilityLaunchProjectile">
             <projectileDef>Sound_Breath_Slice_Projectile_LevelSix</projectileDef>
           </li>
         </levelComps>
       </li>
+
     </levels>
-  </AnimeArsenal.TalentedLevelingAbilityDef>
+  </EMF.LevelingResourceAbilityDef>
 </Defs>

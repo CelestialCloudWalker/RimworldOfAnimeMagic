@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_TemariBall_Kick</defName>
+    <label>Temari Kick Loop</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>The Temari Ball loops a kick attack on nearby enemies.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>0</resourceCost>
+    <baseExperienceGain>0</baseExperienceGain>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>7</damageAmount>
+        <damageType>Blunt</damageType>
+        <rectWidth>4</rectWidth>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>7 Blunt AoE kick. Loops every 600 ticks.</description>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+  <PawnKindDef>
+    <defName>DS_TemariBall_Entity</defName>
+    <label>Temari Ball</label>
+    <race>DS_TemariBall_Race</race>
+    <combatPower>30</combatPower>
+    <isFighter>true</isFighter>
+    <startingHediffs>
+      <li>
+        <def>DS_EntityLifespan_5000_Hediff</def>
+      </li>
+    </startingHediffs>
+    <abilities>
+      <li>DS_TemariBall_Kick</li>
+    </abilities>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Ball</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(0.5, 0.5)</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Ball</texPath>
+          <drawSize>(0.5, 0.5)</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BasePawn">
+    <defName>DS_TemariBall_Race</defName>
+    <label>Temari Ball</label>
+    <description>A spinning orb of compressed demonic energy that kicks enemies on a loop.</description>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <drawerType>RealtimeOnly</drawerType>
+    <graphicData>
+      <texPath>Things/Ball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.5, 0.5)</drawSize>
+    </graphicData>
+    <statBases>
+      <MoveSpeed>3.5</MoveSpeed>
+      <MarketValue>0</MarketValue>
+    </statBases>
+    <race>
+      <intelligence>Animal</intelligence>
+      <baseBodySize>0.5</baseBodySize>
+      <baseHealthScale>0.05</baseHealthScale>
+      <baseHungerRate>0</baseHungerRate>
+      <needsRest>false</needsRest>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0</minAge>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DS_EntityLifespan_3000_Hediff</defName>
+    <label>summoned form</label>
+    <description>This entity will fade after its summoning period expires.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <tendable>false</tendable>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li><minSeverity>0.0</minSeverity></li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EntityLifespan_5000_Hediff</defName>
+    <label>summoned form</label>
+    <description>This entity will fade after its summoning period expires.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <tendable>false</tendable>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li><minSeverity>0.0</minSeverity></li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EntityLifespan_7500_Hediff</defName>
+    <label>summoned form</label>
+    <description>This entity will fade after its summoning period expires.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <tendable>false</tendable>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li><minSeverity>0.0</minSeverity></li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>7500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EntityLifespan_8000_Hediff</defName>
+    <label>summoned form</label>
+    <description>This entity will fade after its summoning period expires.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <tendable>false</tendable>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li><minSeverity>0.0</minSeverity></li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>8000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DS_EntityLifespan_10000_Hediff</defName>
+    <label>summoned form</label>
+    <description>This entity will fade after its summoning period expires.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <tendable>false</tendable>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li><minSeverity>0.0</minSeverity></li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Beast_Breathing_FirstFangPierce</defName>
+    <label>Beast Breathing: First Fang — Pierce</label>
+    <description>The user closes in a wild, unpredictable lunge and drives both blades into the target's neck simultaneously. There is no hesitation, no flourish — just the savage instinct to pierce the throat before the enemy can react.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>480</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>400</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>15</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>6</range>
+      <warmupTime>0.25</warmupTime>
+      <noiseRadius>2</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+        <damageType>Beast_Breathing_Damage</damageType>
+        <initialStrikeDamage>12</initialStrikeDamage>
+        <vitalOrganDamage>18</vitalOrganDamage>
+        <vitalOrganArmorPen>0.20</vitalOrganArmorPen>
+        <targetVitalOrgans>false</targetVitalOrgans>
+        <targetBodyParts>
+          <li>Neck</li>
+          <li>Head</li>
+        </targetBodyParts>
+        <vitalStrikeBaseChance>0.85</vitalStrikeBaseChance>
+        <vitalStrikeMinChance>0.55</vitalStrikeMinChance>
+        <vitalStrikeMaxChance>0.95</vitalStrikeMaxChance>
+        <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+        <showMissMessage>true</showMissMessage>
+        <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Dash to target and stab the neck/head. 12 initial damage + 18 vital strike damage. High armor penetration on the thrust.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>140</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>15 initial + 23 vital strike damage. The thrust finds the gap in armor more reliably.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>15</initialStrikeDamage>
+            <vitalOrganDamage>23</vitalOrganDamage>
+            <vitalOrganArmorPen>0.25</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.87</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.57</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.95</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>300</experienceRequired>
+        <resourceCostMultiplier>1.28</resourceCostMultiplier>
+        <cooldownMultiplier>0.92</cooldownMultiplier>
+        <description>18 initial + 29 vital strike damage. The dash covers ground faster. Armor pen continues to climb.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>18</initialStrikeDamage>
+            <vitalOrganDamage>29</vitalOrganDamage>
+            <vitalOrganArmorPen>0.30</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.88</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.60</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.96</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>500</experienceRequired>
+        <resourceCostMultiplier>1.40</resourceCostMultiplier>
+        <cooldownMultiplier>0.85</cooldownMultiplier>
+        <description>22 initial + 36 vital strike damage. The thrust pierces deep. Near-guaranteed hit on the neck.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>22</initialStrikeDamage>
+            <vitalOrganDamage>36</vitalOrganDamage>
+            <vitalOrganArmorPen>0.36</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.90</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.63</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.97</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>740</experienceRequired>
+        <resourceCostMultiplier>1.50</resourceCostMultiplier>
+        <cooldownMultiplier>0.80</cooldownMultiplier>
+        <description>27 initial + 44 vital strike damage. The dash is nearly instant. The blades find the throat with brutal efficiency.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>27</initialStrikeDamage>
+            <vitalOrganDamage>44</vitalOrganDamage>
+            <vitalOrganArmorPen>0.42</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.92</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.67</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.97</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1100</experienceRequired>
+        <resourceCostMultiplier>1.55</resourceCostMultiplier>
+        <cooldownMultiplier>0.78</cooldownMultiplier>
+        <description>Perfected. 33 initial + 55 vital strike damage. A single, flawless lunge — both blades into the throat before the target can react. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DashVitalStrike">
+            <damageType>Beast_Breathing_Damage</damageType>
+            <initialStrikeDamage>33</initialStrikeDamage>
+            <vitalOrganDamage>55</vitalOrganDamage>
+            <vitalOrganArmorPen>0.50</vitalOrganArmorPen>
+            <targetVitalOrgans>false</targetVitalOrgans>
+            <targetBodyParts>
+              <li>Neck</li>
+              <li>Head</li>
+            </targetBodyParts>
+            <vitalStrikeBaseChance>0.95</vitalStrikeBaseChance>
+            <vitalStrikeMinChance>0.72</vitalStrikeMinChance>
+            <vitalStrikeMaxChance>0.99</vitalStrikeMaxChance>
+            <scaleChanceByMeleeSkill>true</scaleChanceByMeleeSkill>
+            <showMissMessage>true</showMissMessage>
+            <impactEffecter>AnimeArsenal_BeastHit2</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

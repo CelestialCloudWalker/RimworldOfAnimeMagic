@@ -9,6 +9,11 @@
     <resourceGene>Gene_FrostBreath</resourceGene>
     <ticksBetweenCost>480</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FrostBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FrostBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Frost</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Frost</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FrostHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -20,6 +25,11 @@
     <resourceGene>Gene_FrostBreath</resourceGene>
     <ticksBetweenCost>440</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FrostBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FrostBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Frost</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Frost</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FrostHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -31,6 +41,11 @@
     <resourceGene>Gene_FrostBreath</resourceGene>
     <ticksBetweenCost>400</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FrostBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FrostBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Frost</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Frost</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FrostHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -42,6 +57,11 @@
     <resourceGene>Gene_FrostBreath</resourceGene>
     <ticksBetweenCost>360</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FrostBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FrostBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Frost</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Frost</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FrostHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -53,6 +73,11 @@
     <resourceGene>Gene_FrostBreath</resourceGene>
     <ticksBetweenCost>320</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FrostBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FrostBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Frost</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Frost</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FrostHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
 
@@ -64,5 +89,10 @@
     <resourceGene>Gene_FrostBreath</resourceGene>
     <ticksBetweenCost>280</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FrostBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FrostBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Frost</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Frost</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_FrostHit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

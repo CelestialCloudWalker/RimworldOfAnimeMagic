@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Blood_Demon_Arts_Graviton_Crush</defName>
+    <label>Blood Demon Arts: Graviton Crush</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>A blood demon art that alters gravity to crush targets.</description>
+    <iconPath>UI/Abilities/CrushAbilityIcon</iconPath>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <displayOrder>10</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>12</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>20</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Crush">
+        <baseDamage>8</baseDamage>
+        <maxTargets>4</maxTargets>
+        <radius>7</radius>
+        <armorPenetration>0</armorPenetration>
+        <range>20</range>
+        <stunChance>0</stunChance>
+        <stunDuration>1</stunDuration>
+        <canCrushBuildings>false</canCrushBuildings>
+        <buildingDamage>0</buildingDamage>
+        <knockdownChance>0</knockdownChance>
+        <instantKillChance>0</instantKillChance>
+        <createCrater>false</createCrater>
+        <blackHoleEffect>false</blackHoleEffect>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A blood demon art that alters gravity to crush targets.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>65</experienceRequired>
+        <description>A blood demon art that alters gravity to crush targets.</description>
+        <resourceCostMultiplier>1.05</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Crush">
+            <baseDamage>12</baseDamage>
+            <maxTargets>5</maxTargets>
+            <radius>8</radius>
+            <stunChance>0.15</stunChance>
+            <stunDuration>2</stunDuration>
+            <canCrushBuildings>false</canCrushBuildings>
+            <armorPenetration>0.1</armorPenetration>
+            <range>22</range>
+            <buildingDamage>0</buildingDamage>
+            <knockdownChance>0</knockdownChance>
+            <instantKillChance>0</instantKillChance>
+            <createCrater>false</createCrater>
+            <blackHoleEffect>false</blackHoleEffect>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <description>A blood demon art that alters gravity to crush targets.</description>
+        <resourceCostMultiplier>1.1</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Crush">
+            <baseDamage>18</baseDamage>
+            <maxTargets>7</maxTargets>
+            <radius>9</radius>
+            <stunChance>0.3</stunChance>
+            <stunDuration>3</stunDuration>
+            <canCrushBuildings>false</canCrushBuildings>
+            <armorPenetration>0.2</armorPenetration>
+            <range>25</range>
+            <buildingDamage>0</buildingDamage>
+            <knockdownChance>0.3</knockdownChance>
+            <instantKillChance>0</instantKillChance>
+            <createCrater>false</createCrater>
+            <blackHoleEffect>false</blackHoleEffect>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>270</experienceRequired>
+        <description>A blood demon art that alters gravity to crush targets.</description>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Crush">
+            <baseDamage>26</baseDamage>
+            <maxTargets>10</maxTargets>
+            <radius>11</radius>
+            <stunChance>0.45</stunChance>
+            <stunDuration>4</stunDuration>
+            <canCrushBuildings>true</canCrushBuildings>
+            <buildingDamage>20</buildingDamage>
+            <armorPenetration>0.35</armorPenetration>
+            <range>28</range>
+            <knockdownChance>0.5</knockdownChance>
+            <instantKillChance>0</instantKillChance>
+            <createCrater>false</createCrater>
+            <blackHoleEffect>false</blackHoleEffect>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>430</experienceRequired>
+        <description>A blood demon art that alters gravity to crush targets.</description>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Crush">
+            <baseDamage>38</baseDamage>
+            <maxTargets>14</maxTargets>
+            <radius>13</radius>
+            <stunChance>0.65</stunChance>
+            <stunDuration>5</stunDuration>
+            <canCrushBuildings>true</canCrushBuildings>
+            <buildingDamage>35</buildingDamage>
+            <armorPenetration>0.5</armorPenetration>
+            <range>32</range>
+            <knockdownChance>0.7</knockdownChance>
+            <instantKillChance>0.03</instantKillChance>
+            <createCrater>true</createCrater>
+            <blackHoleEffect>false</blackHoleEffect>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>680</experienceRequired>
+        <description>A blood demon art that alters gravity to crush targets. Max Level.</description>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Crush">
+            <baseDamage>55</baseDamage>
+            <maxTargets>20</maxTargets>
+            <radius>15</radius>
+            <stunChance>0.85</stunChance>
+            <stunDuration>7</stunDuration>
+            <canCrushBuildings>true</canCrushBuildings>
+            <buildingDamage>50</buildingDamage>
+            <armorPenetration>0.7</armorPenetration>
+            <range>37</range>
+            <knockdownChance>0.9</knockdownChance>
+            <instantKillChance>0.08</instantKillChance>
+            <createCrater>true</createCrater>
+            <blackHoleEffect>true</blackHoleEffect>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

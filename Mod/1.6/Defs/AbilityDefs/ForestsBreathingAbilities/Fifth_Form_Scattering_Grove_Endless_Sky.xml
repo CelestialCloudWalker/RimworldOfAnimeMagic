@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Fifth_Form_Scattering_Grove_Endless_Sky</defName>
+    <label>Fifth Form: Scattering Grove, Endless Sky</label>
+    <description>Plants a burst of concentrated breath energy that detonates moments later, scattering enemies outward like seeds on the wind.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>25</resourceCost>
+    <baseExperienceGain>30</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.8</warmupTime>
+      <noiseRadius>6</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+        <delayTicks>25</delayTicks>
+        <radius>4</radius>
+        <maxTargets>6</maxTargets>
+        <damageAmount>18</damageAmount>
+        <damageDef>Forest_Breathing_Damage</damageDef>
+        <armourPen>0.25</armourPen>
+        <canHitFriendly>false</canHitFriendly>
+        <waveCount>1</waveCount>
+        <burstEffecter>AnimeArsenal_WindJump</burstEffecter>
+        <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Plants a delayed burst at target location. 18 damage in a 4-tile radius after a brief delay.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>180</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.1</rangeMultiplier>
+        <description>22 damage. Radius increased to 5.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>5</radius>
+            <maxTargets>7</maxTargets>
+            <damageAmount>22</damageAmount>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <armourPen>0.28</armourPen>
+            <canHitFriendly>false</canHitFriendly>
+            <waveCount>1</waveCount>
+            <burstEffecter>AnimeArsenal_WindJump</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>400</experienceRequired>
+        <resourceCostMultiplier>1.8</resourceCostMultiplier>
+        <rangeMultiplier>1.25</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>28 damage. Radius 6. Two waves.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>6</radius>
+            <maxTargets>8</maxTargets>
+            <damageAmount>28</damageAmount>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <armourPen>0.32</armourPen>
+            <canHitFriendly>false</canHitFriendly>
+            <waveCount>2</waveCount>
+            <ticksBetweenWaves>15</ticksBetweenWaves>
+            <damageDecayPerWave>0.75</damageDecayPerWave>
+            <burstEffecter>AnimeArsenal_WindJump</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>650</experienceRequired>
+        <resourceCostMultiplier>2.2</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>35 damage. Range doubled. Two waves, growing radius.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>6</radius>
+            <maxTargets>9</maxTargets>
+            <damageAmount>35</damageAmount>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <armourPen>0.36</armourPen>
+            <canHitFriendly>false</canHitFriendly>
+            <waveCount>2</waveCount>
+            <ticksBetweenWaves>15</ticksBetweenWaves>
+            <radiusGrowthPerWave>1</radiusGrowthPerWave>
+            <damageDecayPerWave>0.8</damageDecayPerWave>
+            <burstEffecter>AnimeArsenal_WindJump</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>950</experienceRequired>
+        <resourceCostMultiplier>2.2</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>43 damage. Three waves. Each wave grows in radius.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>6</radius>
+            <maxTargets>10</maxTargets>
+            <damageAmount>43</damageAmount>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <armourPen>0.4</armourPen>
+            <canHitFriendly>false</canHitFriendly>
+            <waveCount>3</waveCount>
+            <ticksBetweenWaves>15</ticksBetweenWaves>
+            <radiusGrowthPerWave>1</radiusGrowthPerWave>
+            <damageDecayPerWave>0.8</damageDecayPerWave>
+            <burstEffecter>AnimeArsenal_WindJump</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1350</experienceRequired>
+        <resourceCostMultiplier>2.2</resourceCostMultiplier>
+        <rangeMultiplier>2</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. 52 damage. Three expanding waves scatter enemies across the grove. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DelayedAoEBurst">
+            <delayTicks>25</delayTicks>
+            <radius>7</radius>
+            <maxTargets>12</maxTargets>
+            <damageAmount>52</damageAmount>
+            <damageDef>Forest_Breathing_Damage</damageDef>
+            <armourPen>0.45</armourPen>
+            <canHitFriendly>false</canHitFriendly>
+            <waveCount>3</waveCount>
+            <ticksBetweenWaves>15</ticksBetweenWaves>
+            <radiusGrowthPerWave>1.5</radiusGrowthPerWave>
+            <damageDecayPerWave>0.8</damageDecayPerWave>
+            <burstEffecter>AnimeArsenal_WindJump</burstEffecter>
+            <hitEffecter>AnimeArsenal_WindHit</hitEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

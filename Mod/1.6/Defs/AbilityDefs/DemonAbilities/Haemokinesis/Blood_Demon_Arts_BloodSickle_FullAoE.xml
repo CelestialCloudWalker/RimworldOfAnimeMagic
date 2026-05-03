@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Gyutaro_BloodSickle_FullAoE</defName>
+    <label>Blood Sickle Slash: Full Arc</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Spin and release blood sickles in every direction simultaneously, hitting all nearby enemies with Blood Poisoning.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>24</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>1</range>
+      <warmupTime>0.4</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Cleave">
+        <BaseDamage>12</BaseDamage>
+        <DamageDef>Cut</DamageDef>
+        <NumberOfCuts>1</NumberOfCuts>
+        <TicksBetweenCuts>0</TicksBetweenCuts>
+        <radius>5</radius>
+        <maxTargets>20</maxTargets>
+        <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>BloodPoison_Hediff</hediffDef>
+        <severityAdjustment>0.04</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+        <effectRadius>5</effectRadius>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>12 Cut in a 360° AoE radius 5. Blood Poisoning +0.04 to all hit.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.042</resourceCostMultiplier>
+        <description>15 Cut radius 6. Blood Poisoning +0.04.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>15</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>1</NumberOfCuts>
+            <TicksBetweenCuts>0</TicksBetweenCuts>
+            <radius>6</radius>
+            <maxTargets>20</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.04</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>6</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.125</resourceCostMultiplier>
+        <description>18 Cut radius 7. Blood Poisoning +0.06.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>18</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>1</NumberOfCuts>
+            <TicksBetweenCuts>0</TicksBetweenCuts>
+            <radius>7</radius>
+            <maxTargets>20</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>7</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.208</resourceCostMultiplier>
+        <description>23 Cut radius 8. Blood Poisoning +0.06.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>23</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>1</NumberOfCuts>
+            <TicksBetweenCuts>0</TicksBetweenCuts>
+            <radius>8</radius>
+            <maxTargets>20</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.06</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>8</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <description>29 Cut radius 9. Blood Poisoning +0.10.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>29</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>1</NumberOfCuts>
+            <TicksBetweenCuts>0</TicksBetweenCuts>
+            <radius>9</radius>
+            <maxTargets>20</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.10</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>9</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.56</cooldownMultiplier>
+        <resourceCostMultiplier>1.458</resourceCostMultiplier>
+        <description>Perfected. 36 Cut radius 10. Blood Poisoning +0.10. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <BaseDamage>36</BaseDamage>
+            <DamageDef>Cut</DamageDef>
+            <NumberOfCuts>1</NumberOfCuts>
+            <TicksBetweenCuts>0</TicksBetweenCuts>
+            <radius>10</radius>
+            <maxTargets>20</maxTargets>
+            <CleaveDamageEffecter>AA_BloodSlashEffect</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>BloodPoison_Hediff</hediffDef>
+            <severityAdjustment>0.10</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <effectRadius>10</effectRadius>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

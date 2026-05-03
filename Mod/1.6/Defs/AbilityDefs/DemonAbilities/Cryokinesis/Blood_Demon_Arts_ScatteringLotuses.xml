@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Doma_ScatteringLotuses</defName>
+    <label>Scattering Lotuses</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Doma sweeps his fans in a wide arc, sending frozen lotus petals slashing through everything in front of him and leaving a trail of frozen air in their wake.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>28</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Melee_Punch_HitPawn</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <damageAmount>14</damageAmount>
+        <damageType>Cut</damageType>
+        <rectWidth>4</rectWidth>
+        <rectLength>8</rectLength>
+        <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+        <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>Hypothermia</hediffDef>
+        <severityAdjustment>0.05</severityAdjustment>
+        <effectRadius>8</effectRadius>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+        <gasDef>DS_CrystalizedAir_Gas</gasDef>
+        <gasLifetimeTicks><min>400</min><max>400</max></gasLifetimeTicks>
+        <angle>30</angle>
+        <range>8</range>
+        <numCellsToHit>20</numCellsToHit>
+        <gasSpawnChance>0.75</gasSpawnChance>
+        <affectHostile>true</affectHostile>
+        <affectFriendly>false</affectFriendly>
+        <affectAnimals>true</affectAnimals>
+        <affectMechanoids>false</affectMechanoids>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>14 Cut in a forward arc. Applies Hypothermia +0.05. Leaves a 400t Crystalized Air trail.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.036</resourceCostMultiplier>
+        <description>17 Cut in a forward arc. Hypothermia +0.05. Trail duration increased to 600t.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>17</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>8</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.05</severityAdjustment>
+            <effectRadius>8</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>30</angle>
+            <range>8</range>
+            <numCellsToHit>20</numCellsToHit>
+            <gasSpawnChance>0.75</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.107</resourceCostMultiplier>
+        <description>21 Cut in a forward arc. Hypothermia +0.05. Trail duration 600t.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>21</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>8</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.05</severityAdjustment>
+            <effectRadius>8</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>30</angle>
+            <range>8</range>
+            <numCellsToHit>20</numCellsToHit>
+            <gasSpawnChance>0.75</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.179</resourceCostMultiplier>
+        <description>27 Cut in a forward arc. Hypothermia increased to +0.08. Trail 600t.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>27</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>4</rectWidth>
+            <rectLength>8</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.08</severityAdjustment>
+            <effectRadius>8</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>30</angle>
+            <range>8</range>
+            <numCellsToHit>20</numCellsToHit>
+            <gasSpawnChance>0.75</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.286</resourceCostMultiplier>
+        <description>33 Cut in a wider forward arc. Trail radius increased. Hypothermia +0.08. Trail 600t.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>33</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>8</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.08</severityAdjustment>
+            <effectRadius>9</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>30</angle>
+            <range>9</range>
+            <numCellsToHit>26</numCellsToHit>
+            <gasSpawnChance>0.75</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.56</cooldownMultiplier>
+        <resourceCostMultiplier>1.393</resourceCostMultiplier>
+        <damageMultiplier>1.1</damageMultiplier>
+        <description>Perfected. 42 Cut in a wide forward arc. Hypothermia +0.08. Trail radius extended. Trail 600t. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <damageAmount>42</damageAmount>
+            <damageType>Cut</damageType>
+            <rectWidth>6</rectWidth>
+            <rectLength>8</rectLength>
+            <castEffecter>RimKetsu_Effecter_DomaIceAmbient</castEffecter>
+            <impactEffecter>RimKetsu_Effecter_DomaIceSpray</impactEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>Hypothermia</hediffDef>
+            <severityAdjustment>0.08</severityAdjustment>
+            <effectRadius>9</effectRadius>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityGasSpray">
+            <gasDef>DS_CrystalizedAir_Gas</gasDef>
+            <gasLifetimeTicks><min>600</min><max>600</max></gasLifetimeTicks>
+            <angle>30</angle>
+            <range>9</range>
+            <numCellsToHit>26</numCellsToHit>
+            <gasSpawnChance>0.75</gasSpawnChance>
+            <affectHostile>true</affectHostile>
+            <affectFriendly>false</affectFriendly>
+            <affectAnimals>true</affectAnimals>
+            <affectMechanoids>false</affectMechanoids>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>

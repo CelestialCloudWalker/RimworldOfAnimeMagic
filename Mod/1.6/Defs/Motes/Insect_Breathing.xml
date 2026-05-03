@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef ParentName="RimKetsu_MoteAttachedBase">
+    <defName>RimKetsu_Mote_InsectBreathingAura</defName>
+    <mote>
+      <fadeInTime>0.35</fadeInTime>
+      <solidTime>999999</solidTime>
+      <fadeOutTime>0.35</fadeOutTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_PawnBodySilhouette</graphicClass>
+      <color>(0.3, 0.85, 0.35, 0.65)</color>
+      <shaderType>MoteMultiplyAddScroll</shaderType>
+      <texPath>Things/Mote/Transparent</texPath>
+      <shaderParameters>
+        <_MultiplyTexA>/Things/Mote/Cloudy_B</_MultiplyTexA>
+        <_MultiplyTexB>/Things/Mote/Cloudy_C</_MultiplyTexB>
+        <_DetailTex>/Things/Mote/Speckles</_DetailTex>
+        <_detailIntensity>1.6</_detailIntensity>
+        <_texAScale>0.5</_texAScale>
+        <_texBScale>0.42</_texBScale>
+        <_DetailScale>1.4</_DetailScale>
+        <_texAScrollSpeed>(0.08, 0.3, 0)</_texAScrollSpeed>
+        <_texBScrollSpeed>(0.25, 0.06, 0)</_texBScrollSpeed>
+        <_detailScrollSpeed>(0.22, 0.22, 0)</_detailScrollSpeed>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RimKetsu_MoteBase">
+    <defName>RimKetsu_Mote_InsectPoisonMist</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverheadLow</altitudeLayer>
+    <mote>
+      <fadeInTime>0.4</fadeInTime>
+      <solidTime>1.0</solidTime>
+      <fadeOutTime>1.2</fadeOutTime>
+      <growthRate>1.2</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/AirPuff</texPath>
+      <shaderType>Transparent</shaderType>
+      <color>(0.2, 0.9, 0.3, 0.5)</color>
+      <drawSize>(2.0, 2.0)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_Exhaustion_Insect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_DemonEssencePuff</fleckDef>
+        <chancePerTick>0.03</chancePerTick>
+        <positionRadius>0.25</positionRadius>
+        <speed>0.05~0.18</speed>
+        <scale>0.3~0.5</scale>
+        <color>(0.15, 0.5, 0.2, 0.35)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_EnchantAmbient_Insect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_DemonEssencePuff</fleckDef>
+        <chancePerTick>0.16</chancePerTick>
+        <positionRadius>0.4</positionRadius>
+        <speed>0.3~0.9</speed>
+        <scale>0.6~1.1</scale>
+        <color>(0.3, 0.85, 0.35, 0.9)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RimKetsu_Fleck_WaterDroplet</fleckDef>
+        <chancePerTick>0.08</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <speed>0.5~1.2</speed>
+        <scale>0.08~0.14</scale>
+        <color>(0.2, 0.9, 0.3, 1.0)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RimKetsu_Effecter_InsectBreathingHit</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>RimKetsu_Mote_InsectPoisonMist</moteDef>
+        <burstCount>1~2</burstCount>
+        <scale>0.7~1.1</scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.25</positionRadius>
+        <fleckDef>AirPuff</fleckDef>
+        <burstCount>4~6</burstCount>
+        <speed>0.6~1.2</speed>
+        <scale>0.5~0.8</scale>
+        <color>(0.25, 0.85, 0.3, 0.6)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.0</positionRadius>
+        <fleckDef>BodyImpact</fleckDef>
+        <burstCount>1</burstCount>
+        <scale>0.5</scale>
+        <color>(80, 200, 80, 60)</color>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+    <positionRadius>0.1</positionRadius>
+  </EffecterDef>
+
+</Defs>

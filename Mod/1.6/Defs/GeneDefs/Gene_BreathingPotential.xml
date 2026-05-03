@@ -1,83 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <AnimeArsenal.BreathingTechniqueGeneDef Name="AA_BaseBreathingGene" Abstract="True">
+    <geneClass>AnimeArsenal.BreathingTechniqueGene</geneClass>
+    <resourceGizmoType>AnimeArsenal.GeneGizmoBreath</resourceGizmoType>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <displayCategory>BreathingTechnique</displayCategory>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <scaleWithBreathing>true</scaleWithBreathing>
+  </AnimeArsenal.BreathingTechniqueGeneDef>
+
   <AnimeArsenal.BreathingTechniqueGeneDef ParentName="AA_BaseBreathingGene">
     <defName>Gene_BreathingPotential</defName>
     <label>Breathing Potential</label>
-    <prerequisite>Gene_BreathingPotential</prerequisite>
-    <resourceName>Breath</resourceName>
     <description>Basic breathing potential - the foundation for all breathing techniques.</description>
     <iconPath>UI/Icons/Genes/breathing_potential</iconPath>
-    <resourceLabel>Breath</resourceLabel>
+    <resourceLabel>Breathing Potential</resourceLabel>
+    <resourceDescription>Current stored Breath.</resourceDescription>
     <exclusionTags>
       <li>BloodDemonArt</li>
     </exclusionTags>
-    <resourceDescription>Current stored Breath.</resourceDescription>
-    <TalentTrees>
-      <li>BreathingPotentialTreee3</li>
-    </TalentTrees>
-    <experienceFormula>Basic_LinearXP</experienceFormula>
-    <experienceGainSettings>
-      <experienceTypes>
-        <li Class="Talented.DamageTakenExperienceTypeDef">
-          <baseXP>8</baseXP>
-          <damageFactor>0.14</damageFactor>
-        </li>
-        <li Class="Talented.DamageDealtExperienceTypeDef">
-          <baseXP>16</baseXP>
-          <damageFactor>0.21</damageFactor>
-        </li>
-        <li Class="Talented.VerbExperienceTypeDef">
-          <VerbClassName>Verb_CastAbility</VerbClassName>
-          <baseXP>16</baseXP>
-        </li>
-        <li Class="Talented.VerbExperienceTypeDef">
-          <VerbClassName>Verb_MeleeAttack</VerbClassName>
-          <baseXP>13</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Melee</SkillDef>
-          <baseXP>3.8</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Medicine</SkillDef>
-          <baseXP>2</baseXP>
-        </li>
-        <li Class="Talented.SkillExperienceTypeDef">
-          <SkillDef>Shooting</SkillDef>
-          <baseXP>1.5</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>AttackMelee</SkillDef>
-          <baseXP>18</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>AttackStatic</SkillDef>
-          <baseXP>15</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Meditate</SkillDef>
-          <baseXP>14</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Hunt</SkillDef>
-          <baseXP>12</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Clean</SkillDef>
-          <baseXP>8</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>TendPatient</SkillDef>
-          <baseXP>10</baseXP>
-        </li>
-        <li Class="Talented.JobExperienceTypeDef">
-          <SkillDef>Wait_Combat</SkillDef>
-          <baseXP>5</baseXP>
-        </li>
-      </experienceTypes>
-    </experienceGainSettings>
 
+    <primaryResourceDef>BreathingPotential_Resource</primaryResourceDef>
+
+    <maxStat>BreathingPotential</maxStat>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <displayCategory>BreathingTechnique</displayCategory>
+    <resourceLossPerDay>0</resourceLossPerDay>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+    <exhaustionPerTick>0.0005</exhaustionPerTick>
+    <exhaustionHediff>Breathing_Fatigue</exhaustionHediff>
+    <ticksBeforeExhaustionStart>2200</ticksBeforeExhaustionStart>
+    <ticksPerExhaustionIncrease>1600</ticksPerExhaustionIncrease>
+    <exhausationCooldownTicks>3500</exhausationCooldownTicks>
+    <scaleWithBreathing>true</scaleWithBreathing>
+    <canCoexistWithDemon>false</canCoexistWithDemon>
+    <regenTicks>BreathingPotential_RegenTicks</regenTicks>
+    <regenStat>BreathingPotential_RegenAmount</regenStat>
+    <regenSpeedStat>BreathingPotential_RegenRate</regenSpeedStat>
+    <costMult>BreathingPotential_Cost</costMult>
     <modExtensions>
       <li Class="AnimeArsenal.GeneDamageModExtension">
         <damageType>Cut</damageType>
@@ -93,30 +61,76 @@
         <applyOnGeneAdd>false</applyOnGeneAdd>
         <applyOnGeneRemove>false</applyOnGeneRemove>
       </li>
+      <li Class="AnimeArsenal.BreathingProgressionExtension">
+        <killsRequiredPerLevel>
+          <li>5</li><li>15</li><li>30</li><li>60</li>
+        </killsRequiredPerLevel>
+        <demonKillsRequiredPerLevel>
+          <li>2</li><li>8</li><li>20</li><li>40</li>
+        </demonKillsRequiredPerLevel>
+        <levelUpMode>AnyPawn</levelUpMode>
+        <breathRestoredPerKill>10</breathRestoredPerKill>
+        <breathRestoredPerDemonKill>25</breathRestoredPerDemonKill>
+        <maxBreathIncreasePerKill>1</maxBreathIncreasePerKill>
+        <maxBreathIncreasePerDemonKill>2</maxBreathIncreasePerDemonKill>
+        <maxBreathCap>500</maxBreathCap>
+        <killsRequiredForSpecialization>20</killsRequiredForSpecialization>
+        <demonKillsRequiredForSpecialization>8</demonKillsRequiredForSpecialization>
+        <specializationUnlockMode>AnyPawn</specializationUnlockMode>
+        <unlockSpecializationsProgressively>true</unlockSpecializationsProgressively>
+        <availableSpecializations>
+          <li>Gene_WaterBreath</li>
+          <li>Gene_WindBreath</li>
+          <li>Gene_FlameBreath</li>
+          <li>Gene_StoneBreath</li>
+          <li>Gene_ThunderBreath</li>
+          <li>Gene_MistBreath</li>
+          <li>Gene_FlowerBreath</li>
+          <li>Gene_SerpentBreath</li>
+          <li>Gene_SoundBreath</li>
+          <li>Gene_InsectBreath</li>
+          <li>Gene_LoveBreath</li>
+          <li>Gene_FrostBreath</li>
+          <li>Gene_ForestBreath</li>
+          <li>Gene_BeastBreath</li>
+        </availableSpecializations>
+        <specializationUnlockThresholds>
+          <li>20</li><li>25</li><li>30</li><li>35</li><li>40</li>
+          <li>45</li><li>50</li><li>55</li><li>55</li><li>60</li>
+          <li>60</li><li>65</li><li>65</li><li>70</li>
+        </specializationUnlockThresholds>
+        <abilityUnlocks>
+          <li>
+            <killsRequired>10</killsRequired>
+            <demonKillsRequired>5</demonKillsRequired>
+            <ability>AA_ForwardDash</ability>
+            <unlockMessage>{0} has awakened {1}!</unlockMessage>
+          </li>
+          <li>
+            <killsRequired>10</killsRequired>
+            <demonKillsRequired>5</demonKillsRequired>
+            <ability>AA_RetreatDash</ability>
+            <unlockMessage>{0} has awakened {1}!</unlockMessage>
+          </li>
+        </abilityUnlocks>
+      </li>
+      <li Class="DeathTimerExtension">
+        <hediffToWatch>BreathingMarkApply</hediffToWatch>
+        <activationMessage>"{0} has awakened the Slayer Mark, flooding their body with power... but at a terrible cost. Their time has begun to run out.</activationMessage>
+        <deathMessage>{0} paid their lifespan in advance, trading years for strength—and the cost has come due..</deathMessage>
+        <curseHediffLabel>Breathing Mark Curse</curseHediffLabel>
+        <curseHediffDescription>Grants immense power in exchange for a shortened lifespan. Their body burns with strength, but their time is now limited—death before the age of 25 is inevitable.</curseHediffDescription>
+        <curseStageLabel>Breathing Mark Curse</curseStageLabel>
+        <deathCause>OrganFailure</deathCause>
+        <maxAgeInYears>25</maxAgeInYears>
+        <minDaysEarlyDeath>1</minDaysEarlyDeath>
+        <maxDaysEarlyDeath>365</maxDaysEarlyDeath>
+        <immediateDeathMinDays>1</immediateDeathMinDays>
+        <immediateDeathMaxDays>30</immediateDeathMaxDays>
+        <createCurseHediff>true</createCurseHediff>
+        <activateOnGeneAdd>false</activateOnGeneAdd>
+      </li>
     </modExtensions>
-    <maxStat>BreathingPotential</maxStat>
-    <biostatCpx>2</biostatCpx>
-    <biostatMet>1</biostatMet>
-    <resourceGizmoThresholds>
-      <li>0.25</li>
-      <li>0.5</li>
-      <li>0.75</li>
-    </resourceGizmoThresholds>
-    <displayCategory>BreathingTechnique</displayCategory>
-    <resourceLossPerDay>0</resourceLossPerDay>
-    <barColor>(200, 200, 200)</barColor>
-    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
-    <exhaustionPerTick>0.0005</exhaustionPerTick>
-    <exhaustionHediff>Breathing_Fatigue</exhaustionHediff>
-    <ticksBeforeExhaustionStart>2200</ticksBeforeExhaustionStart>
-    <ticksPerExhaustionIncrease>1600</ticksPerExhaustionIncrease>
-    <exhausationCooldownTicks>3500</exhausationCooldownTicks>
-    <TabLabel>Talents</TabLabel>
-    <regenTicks>FlowerBreath_RegenTicks</regenTicks>
-    <regenStat>FlowerBreath_RegenAmount</regenStat>
-    <regenSpeedStat>FlowerBreath_RegenRate</regenSpeedStat>
-    <costMult>FlowerBreath_Cost</costMult>
   </AnimeArsenal.BreathingTechniqueGeneDef>
-
 
 </Defs>

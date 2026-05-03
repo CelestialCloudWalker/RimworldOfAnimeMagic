@@ -9,6 +9,11 @@
     <resourceGene>Gene_SunBreath</resourceGene>
     <ticksBetweenCost>450</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -19,6 +24,11 @@
     <resourceGene>Gene_SunBreath</resourceGene>
     <ticksBetweenCost>400</ticksBetweenCost>
     <resourceCostPerTick>5</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -29,6 +39,11 @@
     <resourceGene>Gene_SunBreath</resourceGene>
     <ticksBetweenCost>350</ticksBetweenCost>
     <resourceCostPerTick>4</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -39,6 +54,11 @@
     <resourceGene>Gene_SunBreath</resourceGene>
     <ticksBetweenCost>300</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -49,6 +69,11 @@
     <resourceGene>Gene_SunBreath</resourceGene>
     <ticksBetweenCost>300</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 
   <AnimeArsenal.EnchantDef>
@@ -59,5 +84,10 @@
     <resourceGene>Gene_SunBreath</resourceGene>
     <ticksBetweenCost>300</ticksBetweenCost>
     <resourceCostPerTick>3</resourceCostPerTick>
+    <activateEffecter>RimKetsu_Effecter_FlameBreathingHit</activateEffecter>
+    <deactivateEffecter>RimKetsu_Effecter_FlameBreathingAmbient</deactivateEffecter>
+    <ambientEffecter>RimKetsu_Effecter_EnchantAmbient_Flame</ambientEffecter>
+    <exhaustionEffecter>RimKetsu_Effecter_Exhaustion_Flame</exhaustionEffecter>
+    <hitEffecter>AnimeArsenal_Flamehit2</hitEffecter>
   </AnimeArsenal.EnchantDef>
 </Defs>

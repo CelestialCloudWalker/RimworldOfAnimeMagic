@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>LoveBreathing_ThirdForm_CatloveShower</defName>
+    <label>Third Form: Catlove Shower</label>
+    <description>Mitsuri leaps into the air and unleashes a rapid shower of arcing blade slashes in every direction — striking enemies at range while deflecting incoming attacks mid-flight. Graceful and lethal, like a cat shaking rain from its fur.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>520</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>120</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>30</resourceCost>
+    <baseExperienceGain>18</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>3</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+        <projectileDef>LoveBreathing_CatloveSlash_Projectile_LOne</projectileDef>
+        <projectileCount>5</projectileCount>
+        <spreadAngle>60</spreadAngle>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+        <radius>4</radius>
+        <TicksActive>300</TicksActive>
+        <MaxShotsToReflect>6</MaxShotsToReflect>
+        <effecterDef>AnimeArsenal_Deflect</effecterDef>
+        <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Leaps and fires 5 arching slashes in a wide fan. Deflects up to 6 incoming shots during the form. Ranged threat at mid distance.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.12</resourceCostMultiplier>
+        <description>6 slashes. Wider arc. Deflects up to 8 shots. Slashes hit harder.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>LoveBreathing_CatloveSlash_Projectile_LTwo</projectileDef>
+            <projectileCount>6</projectileCount>
+            <spreadAngle>65</spreadAngle>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>4</radius>
+            <TicksActive>380</TicksActive>
+            <MaxShotsToReflect>8</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_Deflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>330</experienceRequired>
+        <resourceCostMultiplier>1.22</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>6 slashes. Deflects up to 11 shots over a longer window. Slashes penetrate armor better.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>LoveBreathing_CatloveSlash_Projectile_LThree</projectileDef>
+            <projectileCount>6</projectileCount>
+            <spreadAngle>70</spreadAngle>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>5</radius>
+            <TicksActive>460</TicksActive>
+            <MaxShotsToReflect>11</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_Deflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>570</experienceRequired>
+        <resourceCostMultiplier>1.30</resourceCostMultiplier>
+        <cooldownMultiplier>0.88</cooldownMultiplier>
+        <description>7 slashes. Deflects up to 15 shots. The rain of blades becomes hard to escape or shoot through.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>LoveBreathing_CatloveSlash_Projectile_LFour</projectileDef>
+            <projectileCount>7</projectileCount>
+            <spreadAngle>75</spreadAngle>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>5</radius>
+            <TicksActive>560</TicksActive>
+            <MaxShotsToReflect>15</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_Deflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>860</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <cooldownMultiplier>0.84</cooldownMultiplier>
+        <description>8 slashes in a near-full arc. Deflects up to 20 shots. Slashes arrive faster. Approaching or shooting becomes extremely dangerous.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>LoveBreathing_CatloveSlash_Projectile_LFive</projectileDef>
+            <projectileCount>8</projectileCount>
+            <spreadAngle>80</spreadAngle>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>6</radius>
+            <TicksActive>660</TicksActive>
+            <MaxShotsToReflect>20</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_Deflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1250</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <cooldownMultiplier>0.84</cooldownMultiplier>
+        <description>Perfected. 9 slashes sweep a near-complete arc. Deflects up to 28 shots. A downpour of blades with total defensive coverage — nothing reaches her, nothing escapes. Max Level.</description>
+        <cumulativeEffects>false</cumulativeEffects>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityFanProjectile">
+            <projectileDef>LoveBreathing_CatloveSlash_Projectile_LSix</projectileDef>
+            <projectileCount>9</projectileCount>
+            <spreadAngle>90</spreadAngle>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_DeflectProjectiles">
+            <radius>6</radius>
+            <TicksActive>800</TicksActive>
+            <MaxShotsToReflect>28</MaxShotsToReflect>
+            <effecterDef>AnimeArsenal_Deflect</effecterDef>
+            <hediffDef>AnimeArsenal_DeflectionField</hediffDef>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

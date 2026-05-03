@@ -38,7 +38,7 @@
       <HintPath>D:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="EMF">
-      <HintPath>D:\SteamLibrary\steamapps\common\RimWorld\Mods\RimKetsu\1.6\Assemblies\EMF.dll</HintPath>
+      <HintPath>..\..\Mod\1.6\Assemblies\EMF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -77,28 +77,57 @@
   <ItemGroup>
     <Compile Include="AbilityLevelData.cs" />
     <Compile Include="AbilityUnlock.cs" />
-    <Compile Include="BreathingPotentialGene.cs" />
-    <Compile Include="BreathingPotentialGeneDef.cs" />
+    <Compile Include="AnimeArsenalSettings.cs" />
+    <Compile Include="BreathingProgressionExtension.cs" />
     <Compile Include="Building_TrainingItem.cs" />
+    <Compile Include="CompAbilityEffect_FanProjectile.cs" />
     <Compile Include="CompAbilityEffect_GeneDamage.cs" />
     <Compile Include="CompAbilityEffect_StatScaledDamage.cs" />
     <Compile Include="CompAbilityStealBite.cs" />
+    <Compile Include="CompGaleHazard.cs" />
+    <Compile Include="CompProperties_AbilityAoEBurst.cs" />
+    <Compile Include="CompProperties_AbilityDashPathDamage.cs" />
     <Compile Include="CompProperties_AbilityGasSpray.cs" />
+    <Compile Include="CompProperties_AbilityLeapStrike.cs" />
+    <Compile Include="CompProperties_AuraPulse.cs" />
+    <Compile Include="CompProperties_AuraPulseHediff.cs" />
+    <Compile Include="CompProperties_CloneSummon.cs" />
+    <Compile Include="CompProperties_ConstantResoundingSlashes.cs" />
     <Compile Include="CompProperties_DashVitalStrike.cs" />
+    <Compile Include="CompProperties_DeflectProjectilesPassive.cs" />
+    <Compile Include="CompProperties_DelayedAoEBurst.cs" />
+    <Compile Include="CompProperties_FireworksShow.cs" />
+    <Compile Include="CompProperties_FrozenLotusRanged.cs" />
+    <Compile Include="CompProperties_ManifestWeapon.cs" />
+    <Compile Include="CompProperties_MultiCloneSummon.cs" />
+    <Compile Include="CompProperties_RequireAlivePawns.cs" />
+    <Compile Include="CompProperties_RequiresHediff.cs" />
     <Compile Include="CompProperties_UseEffect_StartQuest.cs" />
+    <Compile Include="CompProperties_WintryIcicles.cs" />
     <Compile Include="CompUseEffect_BlueSpiderLily.cs" />
+    <Compile Include="Comp_AntiDemonExplosion.cs" />
     <Compile Include="DamageScalingUtility.cs" />
     <Compile Include="DemonProgressionExtension.cs" />
     <Compile Include="DemonRank.cs" />
     <Compile Include="DemonSanityExtension.cs" />
     <Compile Include="DemonSlayerNames.cs" />
     <Compile Include="DemonStateTransfer.cs" />
+    <Compile Include="Dialog_BreathingSpecialization.cs" />
     <Compile Include="Dialog_DemonSpecialization.cs" />
     <Compile Include="ForceXenotypeExtension.cs" />
+    <Compile Include="GameComponent_DemonRaidScheduler.cs" />
     <Compile Include="GeneEffect.cs" />
     <Compile Include="GeneEffectDef.cs" />
+    <Compile Include="HediffCompProperties_BlindEyeAtThreshold.cs" />
+    <Compile Include="HediffCompProperties_BloodPoisonProgression.cs" />
+    <Compile Include="HediffCompProperties_DrainResource.cs" />
+    <Compile Include="HediffCompProperties_RegenSuppression.cs" />
     <Compile Include="HediffCompProperties_SelflessState.cs" />
+    <Compile Include="HediffCompProperties_SeverityOnMeleeHitDealt.cs" />
+    <Compile Include="HediffCompProperties_StringPerformance.cs" />
     <Compile Include="HediffComp_TransparentWorld.cs" />
+    <Compile Include="HediffExtension_RenderScale.cs" />
+    <Compile Include="HybridDemonBreathGene.cs" />
     <Compile Include="IncidentWorker_RaidNightOnly.cs" />
     <Compile Include="IngestionOutcomeDoer_BlueSpiderLily.cs" />
     <Compile Include="JobDriver_UseTrainingItem.cs" />
@@ -131,6 +160,7 @@
     <Compile Include="Misc\PawnRenderNodeWorker_WeaponOverlay.cs" />
     <Compile Include="Misc\Projectile_SleepEffect _ScalingStatDamageProjectile.cs" />
     <Compile Include="Misc\RegenerationExtension.cs" />
+    <Compile Include="Projectile_AntiDemonBomb.cs" />
     <Compile Include="QuestNode_ConfigurableReward.cs" />
     <Compile Include="QuestNode_GetGene.cs" />
     <Compile Include="Resource Gene\BloodDemonArtsGene.cs" />
@@ -193,9 +223,9 @@
     <Compile Include="Misc\TrackedMotePos.cs" />
     <Compile Include="Misc\Verb_ExtendedMeleeAttack.cs" />
     <Compile Include="StatPart_DemonSanityDamage.cs" />
-    <Compile Include="TalentedLevelingAbilityDef.cs" />
     <Compile Include="TrainingComp.cs" />
     <Compile Include="TrainingItemExtension.cs" />
+    <Compile Include="Verb_ThrowAntiDemonBomb.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony">

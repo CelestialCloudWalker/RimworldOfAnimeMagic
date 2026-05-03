@@ -1,45 +1,160 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <DamageDef>
     <defName>Beast_Breathing_Damage</defName>
     <label>beast maul</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0}'s flesh was torn apart.</deathMessage>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <makesBlood>true</makesBlood>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <deathMessage>{0}'s flesh was torn apart by savage force.</deathMessage>
+    <defaultStoppingPower>0.5</defaultStoppingPower>
+    <damageEffecter>AnimeArsenal_BeastHit2</damageEffecter>
+    <stabChanceOfForcedInternal>0.08</stabChanceOfForcedInternal>
     <hediff>RampageofBeast</hediff>
     <hediffSkin>RampageofBeast</hediffSkin>
     <hediffSolid>Crack</hediffSolid>
     <armorCategory>Sharp</armorCategory>
     <impactSoundType>Slice</impactSoundType>
-    <harmsHealth>true</harmsHealth>
+    <minDamageToFragment>12</minDamageToFragment>
+    <defaultDamage>9</defaultDamage>
+    <defaultArmorPenetration>0.15</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0.4</overkillPctToDestroyPart>
+    <additionalHediffs>
+      <li>
+        <hediff>BloodLoss</hediff>
+        <severityPerDamageDealt>0.012</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>0.4</buildingDamageFactor>
+    <plantDamageFactor>1.2</plantDamageFactor>
+    <corpseDamageFactor>1.8</corpseDamageFactor>
+    <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
   </DamageDef>
 
   <HediffDef ParentName="InjuryBase">
     <defName>RampageofBeast</defName>
     <label>beast maul</label>
     <labelNoun>a beast maul</labelNoun>
-    <description>Flesh torn apart. Heavy bleeding and tissue damage.</description>
+    <description>Flesh torn open by savage claws and force. Deep lacerations with heavy bleeding and risk of permanent tissue loss.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
         <labelTendedWellInner>sutured</labelTendedWellInner>
         <labelSolidTendedWell>set</labelSolidTendedWell>
-        <severityPerDayTended>-0.68</severityPerDayTended>
+        <severityPerDayTended>-0.45</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Infecter">
-        <infectionChance>0.45</infectionChance>
+        <infectionChance>0.30</infectionChance>
       </li>
       <li Class="HediffCompProperties_GetsPermanent">
         <permanentLabel>beast maul scar</permanentLabel>
       </li>
     </comps>
+    <stages>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.35</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.12</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.65</minSeverity>
+        <painOffset>0.10</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.22</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.18</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
     <injuryProps>
-      <painPerSeverity>0.06</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.00825</averagePainPerSeverityPermanent>
-      <bleedRate>0.09</bleedRate>
+      <painPerSeverity>0.07</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.009</averagePainPerSeverityPermanent>
+      <bleedRate>0.10</bleedRate>
       <canMerge>true</canMerge>
-      <destroyedLabel>Mauled off</destroyedLabel>
-      <destroyedOutLabel>Mauled apart</destroyedOutLabel>
+      <destroyedLabel>mauled off</destroyedLabel>
+      <destroyedOutLabel>mauled apart</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+
+  <RulePackDef>
+    <defName>DamageEvent_BeastMaul</defName>
+    <include>
+      <li>DamageEvent_Include</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+
+        <li>r_logentry->[beast_source] [RECIPIENT_nameDef], [destroyed_present] [RECIPIENT_possessive] [destroyed_targets].</li>
+        <li>r_logentry->[beast_source] [RECIPIENT_nameDef], [destroyed_present] [RECIPIENT_possessive] [destroyed_targets] and [damaged_present] [RECIPIENT_possessive] [damaged_targets].</li>
+        <li>r_logentry(recipient_part_destroyed_count==0)->[beast_source] [RECIPIENT_nameDef], [damaged_present] [RECIPIENT_possessive] [damaged_targets].</li>
+        <li>r_logentry(p=0.1)->[beast_source] [RECIPIENT_nameDef].</li>
+
+        <li>damage_source->[beast_source]</li>
+
+        <li>beast_source(p=3)->a [beast_form] [bit] through</li>
+        <li>beast_source(p=3)->a [beast_form] [bit] into</li>
+        <li>beast_source(p=2)->a [beast_form] [bit] open</li>
+        <li>beast_source->the [beast_form] [bit] across</li>
+
+        <li>beast_form->Beast Breathing strike</li>
+        <li>beast_form->wild blade form</li>
+        <li>beast_form->frenzied sword technique</li>
+        <li>beast_form->Beast Breathing form</li>
+        <li>beast_form->chaotic blade flurry</li>
+        <li>beast_form->savage sword form</li>
+
+        <li>bit->tore</li>
+        <li>bit->ripped</li>
+        <li>bit->shredded</li>
+        <li>bit->cut</li>
+        <li>bit->slashed</li>
+        <li>bit->carved</li>
+
+        <li>damaged_present->lacerating</li>
+        <li>damaged_present->gouging into</li>
+        <li>damaged_present->raking across</li>
+        <li>damaged_present->tearing into</li>
+        <li>damaged_present->carving through</li>
+
+        <li>destroyed_present->shredding</li>
+        <li>destroyed_present->tearing off</li>
+        <li>destroyed_present->ripping apart</li>
+        <li>destroyed_present->severing</li>
+        <li>destroyed_present->cleaving through</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
 </Defs>

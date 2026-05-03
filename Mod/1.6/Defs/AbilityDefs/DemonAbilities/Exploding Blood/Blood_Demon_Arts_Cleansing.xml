@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Nezuko_BDADleansing</defName>
+    <label>Blood Demon Art: Cleansing</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Nezuko briefly ignites a target in painless pink demon fire, burning away Blood Demon Art debuffs. The fire does not harm allies.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>3500</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>18</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5</range>
+      <warmupTime>0.3</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>DS_Nezuko_CleansingFlame_L1</hediffDef>
+        <severityAdjustment>1.0</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+        <hediffsToRemove>
+          <li>DS_BloodMarked_Hediff</li>
+        </hediffsToRemove>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Brief painless fire on target. Cleanses DS_BloodMarked_Hediff. Range 5.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.914</cooldownMultiplier>
+        <resourceCostMultiplier>1.111</resourceCostMultiplier>
+        <description>Cleanses 2 BDA debuffs.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_Nezuko_CleansingFlame_L1</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <hediffsToRemove>
+              <li>DS_BloodMarked_Hediff</li>
+              <li>DS_RegenDown_2000</li>
+            </hediffsToRemove>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.829</cooldownMultiplier>
+        <resourceCostMultiplier>1.222</resourceCostMultiplier>
+        <description>Cleanses all BDA debuffs including regen-down variants.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_Nezuko_CleansingFlame_L1</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <hediffsToRemove>
+              <li>DS_BloodMarked_Hediff</li>
+              <li>DS_RegenDown_2000</li>
+              <li>DS_RegenDown_4000</li>
+              <li>WoOUM_Disorientation</li>
+              <li>WoOUM_Disorientation_Nightmare</li>
+            </hediffsToRemove>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.743</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <description>Cleanses all BDA debuffs. Range extended to 8.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_Nezuko_CleansingFlame_L1</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <hediffsToRemove>
+              <li>DS_BloodMarked_Hediff</li>
+              <li>DS_RegenDown_2000</li>
+              <li>DS_RegenDown_4000</li>
+              <li>WoOUM_Disorientation</li>
+              <li>WoOUM_Disorientation_Nightmare</li>
+            </hediffsToRemove>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.657</cooldownMultiplier>
+        <resourceCostMultiplier>1.444</resourceCostMultiplier>
+        <description>AoE cleanse. Applies brief fire and cleanses all BDA debuffs on all allies within radius 5 of target.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_Nezuko_CleansingFlame_L1</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <hediffsToRemove>
+              <li>DS_BloodMarked_Hediff</li>
+              <li>DS_RegenDown_2000</li>
+              <li>DS_RegenDown_4000</li>
+              <li>WoOUM_Disorientation</li>
+              <li>WoOUM_Disorientation_Nightmare</li>
+            </hediffsToRemove>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.571</cooldownMultiplier>
+        <resourceCostMultiplier>1.556</resourceCostMultiplier>
+        <description>Perfected. Wide AoE cleanse. All allies in radius 7. All BDA debuffs removed. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_Nezuko_CleansingFlame_L1</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+            <hediffsToRemove>
+              <li>DS_BloodMarked_Hediff</li>
+              <li>DS_RegenDown_2000</li>
+              <li>DS_RegenDown_4000</li>
+              <li>WoOUM_Disorientation</li>
+              <li>WoOUM_Disorientation_Nightmare</li>
+            </hediffsToRemove>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+
+</Defs>

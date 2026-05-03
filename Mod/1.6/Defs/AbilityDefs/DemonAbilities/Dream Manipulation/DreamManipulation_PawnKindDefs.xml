@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef>
+    <defName>DS_EnmuTentacle_Entity</defName>
+    <label>flesh eye tendril</label>
+    <race>DS_EnmuTentacle_Entity</race>
+    <combatPower>80</combatPower>
+    <isFighter>true</isFighter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_EnmuTentacle_Entity_L1</defName>
+    <label>flesh eye tendril</label>
+    <race>DS_EnmuTentacle_Entity</race>
+    <combatPower>80</combatPower>
+    <isFighter>true</isFighter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_EnmuTentacle_Entity_L2</defName>
+    <label>flesh eye tendril</label>
+    <race>DS_EnmuTentacle_Entity</race>
+    <combatPower>100</combatPower>
+    <isFighter>true</isFighter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_EnmuTentacle_Entity_L3</defName>
+    <label>flesh eye tendril</label>
+    <race>DS_EnmuTentacle_Entity</race>
+    <combatPower>120</combatPower>
+    <isFighter>true</isFighter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_EnmuTentacle_Entity_L4</defName>
+    <label>flesh eye tendril</label>
+    <race>DS_EnmuTentacle_Entity</race>
+    <combatPower>140</combatPower>
+    <isFighter>true</isFighter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_EnmuTentacle_Entity_Armed_L5</defName>
+    <label>armed flesh eye tendril</label>
+    <race>DS_EnmuTentacle_Entity_Armed</race>
+    <combatPower>150</combatPower>
+    <isFighter>true</isFighter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>3.0</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>DS_EnmuTentacle_Entity_Armed_L6</defName>
+    <label>armed flesh eye tendril</label>
+    <race>DS_EnmuTentacle_Entity_Armed</race>
+    <combatPower>180</combatPower>
+    <isFighter>true</isFighter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>3.0</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/EnmuTendril/EnmuTendril</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

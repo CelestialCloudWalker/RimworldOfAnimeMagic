@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>DS_Enmu_SweetDreamstwo</defName>
+    <label>Sweet Dreams</label>
+    <category>BloodDemonArts_AbilityCaterogry</category>
+    <description>Enmu turns his dream manipulation to a gentler purpose, sending colonists into a blissful restorative sleep that refreshes mind and body.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <resourceDef>BloodDemonArts_Resource</resourceDef>
+    <resourceCost>18</resourceCost>
+    <baseExperienceGain>50</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>0.3</warmupTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+        <useSleepHediff>false</useSleepHediff>
+        <forceImmediateSleep>true</forceImmediateSleep>
+        <showMessage>true</showMessage>
+        <sleepDurationHours>4</sleepDurationHours>
+        <maxTargets>1</maxTargets>
+        <range>10</range>
+
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>DS_SweetDreams_Buff_L1</hediffDef>
+        <severityAdjustment>1.0</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+        <dreamEffectType>PleasantDream</dreamEffectType>
+        <effectSeverity>0.3</effectSeverity>
+        <pleasantDreamThought>SweetDreams_Mood_L1</pleasantDreamThought>
+        <pleasantDreamHediff>PleasantDream</pleasantDreamHediff>
+        <showMessage>false</showMessage>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>Puts target to sleep for 4 hours. On wake: mood +8, work speed +10%, consciousness +10%, manipulation +10%.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>50</experienceRequired>
+        <cooldownMultiplier>0.912</cooldownMultiplier>
+        <resourceCostMultiplier>1.111</resourceCostMultiplier>
+        <description>Sleep 4h. On wake: mood +8, buffs +12%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>10</range>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_SweetDreams_Buff_L1</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.3</effectSeverity>
+            <pleasantDreamThought>SweetDreams_Mood_L1</pleasantDreamThought>
+            <pleasantDreamHediff>PleasantDream</pleasantDreamHediff>
+            <showMessage>false</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>120</experienceRequired>
+        <cooldownMultiplier>0.824</cooldownMultiplier>
+        <resourceCostMultiplier>1.222</resourceCostMultiplier>
+        <description>Sleep 4h. On wake: mood +12, buffs +15%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>10</range>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_SweetDreams_Buff_L3</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.3</effectSeverity>
+            <pleasantDreamThought>SweetDreams_Mood_L3</pleasantDreamThought>
+            <pleasantDreamHediff>PleasantDream</pleasantDreamHediff>
+            <showMessage>false</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>230</experienceRequired>
+        <cooldownMultiplier>0.736</cooldownMultiplier>
+        <resourceCostMultiplier>1.333</resourceCostMultiplier>
+        <description>Sleep 4h. On wake: mood +12, buffs +20%, buff duration extended.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>10</range>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_SweetDreams_Buff_L4</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.3</effectSeverity>
+            <pleasantDreamThought>SweetDreams_Mood_L3</pleasantDreamThought>
+            <pleasantDreamHediff>PleasantDream</pleasantDreamHediff>
+            <showMessage>false</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>380</experienceRequired>
+        <cooldownMultiplier>0.648</cooldownMultiplier>
+        <resourceCostMultiplier>1.444</resourceCostMultiplier>
+        <description>Sleep 4h. Range increased to 13. On wake: mood +12, buffs +20%.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>13</range>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_SweetDreams_Buff_L4</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.3</effectSeverity>
+            <pleasantDreamThought>SweetDreams_Mood_L3</pleasantDreamThought>
+            <pleasantDreamHediff>PleasantDream</pleasantDreamHediff>
+            <showMessage>false</showMessage>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>600</experienceRequired>
+        <cooldownMultiplier>0.56</cooldownMultiplier>
+        <resourceCostMultiplier>1.556</resourceCostMultiplier>
+        <description>Perfected. Sleep 4h. Range 13. On wake: mood +16, buffs +25%, extended duration. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_CauseSleep">
+            <useSleepHediff>false</useSleepHediff>
+            <forceImmediateSleep>true</forceImmediateSleep>
+            <showMessage>true</showMessage>
+            <sleepDurationHours>4</sleepDurationHours>
+            <maxTargets>1</maxTargets>
+            <range>13</range>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>DS_SweetDreams_Buff_L6</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_AbilityEffect_DreamManipulation">
+            <dreamEffectType>PleasantDream</dreamEffectType>
+            <effectSeverity>0.3</effectSeverity>
+            <pleasantDreamThought>SweetDreams_Mood_L6</pleasantDreamThought>
+            <pleasantDreamHediff>PleasantDream</pleasantDreamHediff>
+            <showMessage>false</showMessage>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

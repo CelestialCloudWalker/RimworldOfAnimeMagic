@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+
   <TraitDef>
     <defName>InnerFire</defName>
     <commonality>0</commonality>
@@ -10,14 +11,13 @@
     <degreeDatas>
       <li>
         <label>inner fire</label>
-        <description>[PAWN_nameDef] burns with an inner flame that protects [PAWN_objective] from cold but increases [PAWN_possessive] appetite. [PAWN_pronoun] excels at cooking and working with heat.</description>
+        <description>[PAWN_nameDef] runs hot — literally. Cold that grounds others [PAWN_pronoun] barely notices; ovens and forges feel like home. [PAWN_possessive] appetite is the price: [PAWN_pronoun] eats more than [PAWN_possessive] share, and never apologises for it.</description>
         <degree>1</degree>
         <statOffsets>
           <ComfyTemperatureMin>-25</ComfyTemperatureMin>
           <ComfyTemperatureMax>10</ComfyTemperatureMax>
           <CookSpeed>0.4</CookSpeed>
           <SmeltingSpeed>0.3</SmeltingSpeed>
-          <BedHungerRateFactor>1.3</BedHungerRateFactor>
         </statOffsets>
         <skillGains>
           <Cooking>4</Cooking>
@@ -26,6 +26,7 @@
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>BurningPassion</defName>
@@ -37,11 +38,10 @@
     <degreeDatas>
       <li>
         <label>burning passion</label>
-        <description>[PAWN_nameDef]'s passionate nature drives [PAWN_objective] to excel at creative work, but [PAWN_pronoun] requires more recreation to maintain [PAWN_possessive] intense focus.</description>
+        <description>[PAWN_nameDef] does nothing halfway. Creative work absorbs [PAWN_objective] completely — the quality shows, and so does the cost. [PAWN_pronoun] needs to decompress more than most, and skips it less gracefully than most.</description>
         <degree>1</degree>
         <statOffsets>
           <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
-          <JoyFallRateFactor>1.4</JoyFallRateFactor>
         </statOffsets>
         <skillGains>
           <Crafting>3</Crafting>
@@ -50,6 +50,7 @@
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>ForgeMaster</defName>
@@ -61,22 +62,25 @@
     <degreeDatas>
       <li>
         <label>forge master</label>
-        <description>[PAWN_nameDef] is a master of flame and forge. [PAWN_pronoun] works metal with unmatched skill and builds with the precision of a true craftsman.</description>
+        <description>[PAWN_nameDef] speaks in metal and mortar. Give [PAWN_objective] a forge and stand back. [PAWN_pronoun] doesn't explain [PAWN_possessive] process, doesn't invite feedback, and has very little patience for people who've never built anything.</description>
         <degree>1</degree>
         <statOffsets>
           <SmeltingSpeed>0.5</SmeltingSpeed>
           <ConstructionSpeed>0.25</ConstructionSpeed>
           <ConstructSuccessChance>0.2</ConstructSuccessChance>
           <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+          <SocialImpact>-0.15</SocialImpact>
         </statOffsets>
         <skillGains>
           <Crafting>5</Crafting>
           <Construction>3</Construction>
+          <Social>-1</Social>
         </skillGains>
         <marketValueFactorOffset>0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>BlazingSpirit</defName>
@@ -87,13 +91,12 @@
     <degreeDatas>
       <li>
         <label>blazing spirit</label>
-        <description>[PAWN_nameDef] has an unbreakable spirit that inspires others. [PAWN_possessive] fiery determination makes [PAWN_objective] nearly immune to despair, though [PAWN_pronoun] needs constant activity.</description>
+        <description>[PAWN_nameDef] doesn't really do despair. [PAWN_pronoun] leads, lifts, and pushes forward, and others tend to follow whether they planned to or not. The catch is that [PAWN_pronoun] needs to keep moving — idle time hits [PAWN_objective] harder than it hits most.</description>
         <degree>1</degree>
         <statOffsets>
           <SocialImpact>0.4</SocialImpact>
           <NegotiationAbility>0.3</NegotiationAbility>
           <MentalBreakThreshold>-0.15</MentalBreakThreshold>
-          <JoyFallRateFactor>1.3</JoyFallRateFactor>
         </statOffsets>
         <skillGains>
           <Social>4</Social>
@@ -105,17 +108,18 @@
     </degreeDatas>
   </TraitDef>
 
+
   <TraitDef>
     <defName>PhoenixHeart</defName>
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>phoenix heart</label>
-        <description>[PAWN_nameDef] possesses remarkable regenerative abilities. Wounds heal faster and infections rarely take hold, as if [PAWN_possessive] body burns away impurities.</description>
+        <description>[PAWN_nameDef]'s body treats injury as a temporary state. Cuts close. Fevers break fast. [PAWN_pronoun] has been through things that should have left lasting damage, and mostly hasn't let them.</description>
         <degree>1</degree>
         <statOffsets>
-          <InjuryHealingFactor>1.5</InjuryHealingFactor>
-          <ImmunityGainSpeed>1.3</ImmunityGainSpeed>
+          <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+
           <ComfyTemperatureMin>-30</ComfyTemperatureMin>
           <ComfyTemperatureMax>15</ComfyTemperatureMax>
         </statOffsets>
@@ -126,6 +130,7 @@
       </li>
     </degreeDatas>
   </TraitDef>
+
 
   <TraitDef>
     <defName>CombustiveTemper</defName>
@@ -139,15 +144,17 @@
     <degreeDatas>
       <li>
         <label>combustive temper</label>
-        <description>[PAWN_nameDef] has a volatile temperament that ignites into fury. When enraged, [PAWN_pronoun] becomes a devastating combatant but struggles with delicate work and has an unhealthy fascination with fire.</description>
+        <description>[PAWN_nameDef] has a short fuse and knows it. [PAWN_pronoun] doesn't always go looking for a fight, but [PAWN_pronoun] finds one reliably. In the middle of one, [PAWN_pronoun] is devastating. Anything requiring patience or a steady hand, [PAWN_pronoun] is not your first choice.</description>
         <degree>1</degree>
         <statOffsets>
           <MentalBreakThreshold>0.1</MentalBreakThreshold>
-          <MeleeHitChance>8</MeleeHitChance>
-          <MeleeDPS>0.2</MeleeDPS>
+          <MeleeHitChance>0.08</MeleeHitChance>
           <SurgerySuccessChanceFactor>-0.5</SurgerySuccessChanceFactor>
           <GeneralLaborSpeed>-0.2</GeneralLaborSpeed>
         </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.2</MeleeDamageFactor>
+        </statFactors>
         <skillGains>
           <Melee>4</Melee>
           <Medicine>-3</Medicine>

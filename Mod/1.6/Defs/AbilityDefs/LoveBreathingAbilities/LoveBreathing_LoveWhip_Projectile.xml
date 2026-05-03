@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_LoveWhip_Projectile_LOne</defName>
+    <label>love whip</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.0</drawSize>
+      <shaderParameters>
+        <_Color>(190, 255, 175, 255)</_Color>
+        <_brightnessMultiplier>1.5</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <armorPenetrationBase>0.28</armorPenetrationBase>
+      <ExplosionRadius>0</ExplosionRadius>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>52</speed>
+      <arcHeightFactor>0</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>0</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(190, 255, 175, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.12</MoteInterval>
+        <MoteDuration>22</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_LoveWhip_Projectile_LTwo</defName>
+    <label>love whip</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.2</drawSize>
+      <shaderParameters>
+        <_Color>(215, 255, 165, 255)</_Color>
+        <_brightnessMultiplier>1.6</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <armorPenetrationBase>0.34</armorPenetrationBase>
+      <ExplosionRadius>0</ExplosionRadius>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>58</speed>
+      <arcHeightFactor>0</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>0</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>13</glowRadius>
+        <glowColor>(215, 255, 165, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.10</MoteInterval>
+        <MoteDuration>24</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_LoveWhip_Projectile_LThree</defName>
+    <label>love whip</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.4</drawSize>
+      <shaderParameters>
+        <_Color>(255, 240, 145, 255)</_Color>
+        <_brightnessMultiplier>1.7</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>27</damageAmountBase>
+      <armorPenetrationBase>0.42</armorPenetrationBase>
+      <ExplosionRadius>0</ExplosionRadius>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>64</speed>
+      <arcHeightFactor>0</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>0</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(255, 240, 145, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.09</MoteInterval>
+        <MoteDuration>26</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_LoveWhip_Projectile_LFour</defName>
+    <label>love whip</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.5</drawSize>
+      <shaderParameters>
+        <_Color>(255, 185, 175, 255)</_Color>
+        <_brightnessMultiplier>1.85</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>33</damageAmountBase>
+      <armorPenetrationBase>0.52</armorPenetrationBase>
+      <ExplosionRadius>0</ExplosionRadius>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>70</speed>
+      <arcHeightFactor>0</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>0</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(255, 185, 175, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.08</MoteInterval>
+        <MoteDuration>28</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_LoveWhip_Projectile_LFive</defName>
+    <label>love whip</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.6</drawSize>
+      <shaderParameters>
+        <_Color>(255, 130, 200, 255)</_Color>
+        <_brightnessMultiplier>2.0</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <armorPenetrationBase>0.63</armorPenetrationBase>
+      <ExplosionRadius>0</ExplosionRadius>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>78</speed>
+      <arcHeightFactor>0</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>0</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>18</glowRadius>
+        <glowColor>(255, 130, 200, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.07</MoteInterval>
+        <MoteDuration>30</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>LoveBreathing_LoveWhip_Projectile_LSix</defName>
+    <label>love whip</label>
+    <thingClass>AnimeArsenal.Projectile_ImpactAOE</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Slash3_Up1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>3.8</drawSize>
+      <shaderParameters>
+        <_Color>(255, 75, 190, 255)</_Color>
+        <_brightnessMultiplier>2.3</_brightnessMultiplier>
+      </shaderParameters>
+    </graphicData>
+    <projectile Class="AnimeArsenal.ProjectileProperties_ImpactAOE">
+      <damageDef>Love_Breathing_Damage</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <armorPenetrationBase>0.76</armorPenetrationBase>
+      <ExplosionRadius>0</ExplosionRadius>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>88</speed>
+      <arcHeightFactor>0</arcHeightFactor>
+      <CanHitFriendly>false</CanHitFriendly>
+      <CanHitCaster>false</CanHitCaster>
+      <aoeDamage>0</aoeDamage>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(255, 75, 190, 255)</glowColor>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_BeamEffect">
+        <TrailMote>Wind_Projectile_Mote</TrailMote>
+        <MoteInterval>0.06</MoteInterval>
+        <MoteDuration>32</MoteDuration>
+        <AlignWithMovement>true</AlignWithMovement>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

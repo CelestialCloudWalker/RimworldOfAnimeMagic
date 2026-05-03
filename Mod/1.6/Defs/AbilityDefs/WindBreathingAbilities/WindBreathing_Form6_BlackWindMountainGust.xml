@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>WindBreathing_Form6_BlackWindMountainGust</defName>
+    <label>Sixth Form: Black Wind Mountain Gust</label>
+    <category>WindBreathing_Ability_Catergory</category>
+    <description>The user plunges earthward with devastating force. Those directly beneath are struck by a killing blow; the black wind that erupts on landing tears forward in a narrow, blade-like gust that shreds everything in its path.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>55</resourceCost>
+    <baseExperienceGain>12</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.8</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_AbilityLeapStrike">
+        <landingRadius>2.0</landingRadius>
+        <landingEffecterDef>AnimeArsenal_WindHit</landingEffecterDef>
+        <castEffecter>AnimeArsenal_WindJump</castEffecter>
+        <strikeDamage>55</strikeDamage>
+        <strikeDamageDef>Cut</strikeDamageDef>
+        <strikeRadius>2.0</strikeRadius>
+        <strikeEffecter>AnimeArsenal_WindHit</strikeEffecter>
+        <hasCone>true</hasCone>
+        <coneDamage>30</coneDamage>
+        <coneLength>14</coneLength>
+        <coneWidth>3</coneWidth>
+        <coneForward>true</coneForward>
+        <coneEffecter>AnimeArsenal_WindHit</coneEffecter>
+        <coneHitEffecter>AnimeArsenal_WindHit</coneHitEffecter>
+      </li>
+    </comps>
+
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A plunging strike. The black wind erupts forward in a thin, lethal gust.</description>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

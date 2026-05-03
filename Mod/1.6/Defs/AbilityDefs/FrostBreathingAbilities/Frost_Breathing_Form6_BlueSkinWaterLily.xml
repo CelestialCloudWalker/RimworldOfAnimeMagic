@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Frost_Breathing_Form6_BlueSkinWaterLily</defName>
+    <label>Sixth Form: Blue Skin Water Lily</label>
+    <description>The user drives a relentless barrage of shallow frost-laced strikes into a single target — not to wound, but to saturate. Each blow drives cold deeper into the flesh. By the end, the target's skin is pale as water lily petals, their body seized entirely by frost.</description>
+    <iconPath>UI/Icons/ComingSoon</iconPath>
+    <cooldownTicksRange>580</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayOrder>417</displayOrder>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>38</resourceCost>
+    <baseExperienceGain>17</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>4</range>
+      <warmupTime>0.4</warmupTime>
+      <noiseRadius>2</noiseRadius>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_Cleave">
+        <NumberOfCuts>12</NumberOfCuts>
+        <BaseDamage>4</BaseDamage>
+        <TicksBetweenCuts>8</TicksBetweenCuts>
+        <DamageDef>Frost_Breathing_Damage</DamageDef>
+        <radius>0.5</radius>
+        <maxTargets>1</maxTargets>
+        <CleaveDamageEffecter>AnimeArsenal_FrostHit</CleaveDamageEffecter>
+      </li>
+      <li Class="AnimeArsenal.CompProperties_GiveHediff">
+        <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+        <severityAdjustment>1.0</severityAdjustment>
+        <applyToTarget>true</applyToTarget>
+      </li>
+    </comps>
+
+    <levels>
+
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>12 hits of 4 damage (48 total). Slow barrage but guaranteed Frozen Through on every use.</description>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>240</experienceRequired>
+        <resourceCostMultiplier>1.15</resourceCostMultiplier>
+        <description>12 hits of 5 damage (60 total). Strikes come slightly faster.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>12</NumberOfCuts>
+            <BaseDamage>5</BaseDamage>
+            <TicksBetweenCuts>7</TicksBetweenCuts>
+            <DamageDef>Frost_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_FrostHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>510</experienceRequired>
+        <resourceCostMultiplier>1.25</resourceCostMultiplier>
+        <cooldownMultiplier>0.93</cooldownMultiplier>
+        <description>14 hits of 6 damage (84 total). More strikes, faster cadence. Cooldown begins to drop.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>14</NumberOfCuts>
+            <BaseDamage>6</BaseDamage>
+            <TicksBetweenCuts>6</TicksBetweenCuts>
+            <DamageDef>Frost_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_FrostHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>830</experienceRequired>
+        <resourceCostMultiplier>1.35</resourceCostMultiplier>
+        <cooldownMultiplier>0.87</cooldownMultiplier>
+        <description>14 hits of 8 damage (112 total). Each strike bites harder — the damage adds up.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>14</NumberOfCuts>
+            <BaseDamage>8</BaseDamage>
+            <TicksBetweenCuts>5</TicksBetweenCuts>
+            <DamageDef>Frost_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_FrostHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>1200</experienceRequired>
+        <resourceCostMultiplier>1.45</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>16 hits of 10 damage (160 total). The barrage blurs. Frozen Through lands before the target can react.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>16</NumberOfCuts>
+            <BaseDamage>10</BaseDamage>
+            <TicksBetweenCuts>4</TicksBetweenCuts>
+            <DamageDef>Frost_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_FrostHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1750</experienceRequired>
+        <resourceCostMultiplier>1.45</resourceCostMultiplier>
+        <cooldownMultiplier>0.82</cooldownMultiplier>
+        <description>Perfected. 16 hits of 13 damage (208 total). A pale blur of frost strikes. The target is Frozen Through instantly. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_Cleave">
+            <NumberOfCuts>16</NumberOfCuts>
+            <BaseDamage>13</BaseDamage>
+            <TicksBetweenCuts>3</TicksBetweenCuts>
+            <DamageDef>Frost_Breathing_Damage</DamageDef>
+            <radius>0.5</radius>
+            <maxTargets>1</maxTargets>
+            <CleaveDamageEffecter>AnimeArsenal_FrostHit</CleaveDamageEffecter>
+          </li>
+          <li Class="AnimeArsenal.CompProperties_GiveHediff">
+            <hediffDef>FrostBreathing_ChillingSting</hediffDef>
+            <severityAdjustment>1.0</severityAdjustment>
+            <applyToTarget>true</applyToTarget>
+          </li>
+        </levelComps>
+      </li>
+
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+
+</Defs>

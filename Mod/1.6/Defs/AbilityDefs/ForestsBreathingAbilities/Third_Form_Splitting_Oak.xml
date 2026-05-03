@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EMF.LevelingResourceAbilityDef>
+    <defName>Third_Form_Splitting_Oak</defName>
+    <label>Third Form: Splitting Oak</label>
+    <description>A wide sweeping slash that cleaves through multiple enemies like an axe felling an ancient tree.</description>
+    <iconPath>UI/Abilities/AbilitySlash</iconPath>
+    <cooldownTicksRange>450</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <resourceDef>BreathingPotential_Resource</resourceDef>
+    <resourceCost>20</resourceCost>
+    <baseExperienceGain>20</baseExperienceGain>
+    <showExperienceInTooltip>true</showExperienceInTooltip>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>0.6</warmupTime>
+      <noiseRadius>5</noiseRadius>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AnimeArsenal.CompProperties_DamageInRect">
+        <rectWidth>6</rectWidth>
+        <rectLength>3</rectLength>
+        <damageType>Forest_Breathing_Damage</damageType>
+        <damageAmount>12</damageAmount>
+        <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+      </li>
+    </comps>
+    <levels>
+      <li>
+        <labelSuffix> (Level 1)</labelSuffix>
+        <experienceRequired>0</experienceRequired>
+        <description>A wide sweeping slash through multiple enemies. 12 damage in a broad arc.</description>
+      </li>
+      <li>
+        <labelSuffix> (Level 2)</labelSuffix>
+        <experienceRequired>150</experienceRequired>
+        <resourceCostMultiplier>1.2</resourceCostMultiplier>
+        <description>15 damage. Arc width increased.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>7</rectWidth>
+            <rectLength>3</rectLength>
+            <damageType>Forest_Breathing_Damage</damageType>
+            <damageAmount>15</damageAmount>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 3)</labelSuffix>
+        <experienceRequired>320</experienceRequired>
+        <resourceCostMultiplier>1.4</resourceCostMultiplier>
+        <rangeMultiplier>1.2</rangeMultiplier>
+        <cooldownMultiplier>0.9</cooldownMultiplier>
+        <description>19 damage. Deeper reach. Range extended.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>8</rectWidth>
+            <rectLength>4</rectLength>
+            <damageType>Forest_Breathing_Damage</damageType>
+            <damageAmount>19</damageAmount>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 4)</labelSuffix>
+        <experienceRequired>550</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>24 damage. Wide and deep arc. Chance to stun.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>9</rectWidth>
+            <rectLength>4</rectLength>
+            <damageType>Forest_Breathing_Damage</damageType>
+            <damageAmount>24</damageAmount>
+            <stunChance>0.3</stunChance>
+            <stunDuration>60</stunDuration>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 5)</labelSuffix>
+        <experienceRequired>800</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>30 damage. Stun chance increased. Knockback on hit.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>10</rectWidth>
+            <rectLength>5</rectLength>
+            <damageType>Forest_Breathing_Damage</damageType>
+            <damageAmount>30</damageAmount>
+            <stunChance>0.45</stunChance>
+            <stunDuration>80</stunDuration>
+            <knockbackDistance>2</knockbackDistance>
+            <knockbackDirectional>true</knockbackDirectional>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+      <li>
+        <labelSuffix> (Level 6)</labelSuffix>
+        <experienceRequired>1200</experienceRequired>
+        <resourceCostMultiplier>1.6</resourceCostMultiplier>
+        <rangeMultiplier>1.4</rangeMultiplier>
+        <cooldownMultiplier>0.8</cooldownMultiplier>
+        <description>Perfected. 38 damage in a massive arc. High stun chance, strong knockback. Max Level.</description>
+        <levelComps>
+          <li Class="AnimeArsenal.CompProperties_DamageInRect">
+            <rectWidth>12</rectWidth>
+            <rectLength>5</rectLength>
+            <damageType>Forest_Breathing_Damage</damageType>
+            <damageAmount>38</damageAmount>
+            <stunChance>0.6</stunChance>
+            <stunDuration>100</stunDuration>
+            <knockbackDistance>3</knockbackDistance>
+            <knockbackDirectional>true</knockbackDirectional>
+            <impactEffecter>AnimeArsenal_WindHit</impactEffecter>
+          </li>
+        </levelComps>
+      </li>
+    </levels>
+  </EMF.LevelingResourceAbilityDef>
+</Defs>
